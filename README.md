@@ -25307,7 +25307,7 @@ Summing took 384416 nanoseconds
 <p>Now, let&apos;s do the same but with only integers:</p>
 <pre>
 <b>var</b> N = 12345, 
-    arr = &lbrack;&rbrack;;
+  arr = &lbrack;&rbrack;;
 <b>for</b> (<b>var</b> i = 0; i &lt; N; i++) arr&lbrack;i&rbrack; = Math.round(1000 &ast; Math.random());
 </pre>
 <p>Result:</p>
