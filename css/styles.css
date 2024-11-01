@@ -88,7 +88,7 @@
 
 details {
   font: 13px Inter, sans-serif, Bahnschrift, Calibri;
-  width: 65%;
+  width: min-content;  /* 65%; */
 }
 summary {
   font: 13px Inter, sans-serif, Bahnschrift, Calibri;
@@ -96,7 +96,7 @@ summary {
 }
 details > summary {
   padding: 2px 6px;
-  width: 15em;  /* 12em */
+  width: max-content;  /* 15em, 12em */
   background-color: #eee;  /* very light gray */
   border: none;
   box-shadow: 3px 3px 4px #00008b;  /* dark blue */
@@ -111,7 +111,7 @@ details > p {
   box-shadow: 3px 3px 4px #00008b;  /* dark blue*/
 }
 details[open] > summary {
-  background-color: yellow;
+  background-color: #ffff00;  /* yellow */
 }
 
 background: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%)
@@ -142,7 +142,17 @@ body {
   border-radius: 1px;
 }
 #myBtn:hover {
-  background-color: #555;  /* very dark gray */
+  background-color: #004d9b;  /* dark blue - was 555, very dark gray */
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  padding: 3px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
 .dropbtn {
