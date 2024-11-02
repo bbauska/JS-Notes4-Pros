@@ -1,12 +1,93 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~ index.html of JS-Notes4-Pros.bauska.org ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
+  <link rel="shortcut icon" type="image/jpg" href="/images/favicon.ico">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>readme</title>
+  <meta name="author" content="Brian Bauska (bbauska)" />
+  <meta name="title" content="JS Notes 4 Pros" />
+  <meta name="description" content="JS Notes for Professionals - " />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>CSS Notes 4 Pros</title>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 </head>
 <body>
+  <script src="./js/lazysizes.min.js" async=""></script>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ script function: scrollFunction() ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <script>
+  <!-- get the button -->
+  var mybutton = document.getElementById("myBtn");
+
+  <!-- when the user scrolls down 10px from the top of the document, show the button -->
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  <!-- when the user clicks on the button, scroll to the top of the document. 0,0 or -->
+  <!-- to table of contents (approx ###), if applicable was; 315 -->
+
+  // when the user clicks on the button, scroll to the table of contents near top of document.
+  function topFunction() {
+    document.getElementById('ch1').scrollIntoView();
+  }
+</script>
+  <!-- jQuery -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h1 align="center">Advanced JS Notes for Professionals</h1>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h6 align="center">(by web@petercs.com, lecturer - PDF <span class='citation'
+data-cites="https://goalkicker.com">@https://goalkicker.com</span>)</h6>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>JS Notes For Professionals - intermediate level JS learning course.<br/>
+All on-line. No money, unless you’d like to donate. I’m an old programmer from 
+the late 70's without retirement. So, would greatly appreciate any donations to paypal 
+@brianbauska@gmail.com or @Brian-Bauska with Venmo.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01/02. javascript/js logos (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p align="center" width="100%">
+<img src="./images/image001.jpg"
+  style="width:20%"
+  title="JavaScript coffee cup logo version"
+  alt="JavaScript coffee cup logo version." />
+&nbsp;&nbsp;&nbsp;
+<img src="./images/image002.jpg"
+  style="width:20%"
+  title="JS logo"
+  alt="JS logo." />
+</p>
+
+<h2 id="about">About</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 01. javascript notes 4 pros logo (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -17,60 +98,40 @@
   title="JavaScript Notes 4 Professionals logo"
   alt="JavaScript Notes 4 Professionals logo."
   style="border: 2px solid #000000; width:4in;" /></p>
-<!--{width="8.25in" height="11.663194444444445in"}-->
 <!-- As our processes become more agile,
 our coding MUST be more resilient. -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- always use curly braces around if...statements, always. Don't assume logic  -->
-<h4>
-Contents
-</h4>
-<p>
-See end of document.
-</p>
-<h4>
-About
-</h4>
-<p>
-Please feel free to share this PDF with anyone for free, latest version
-of this book can be downloaded from:
-</p>
-<p>
-<a href="https://goalkicker.com/JavaScriptBook" target="_blank" rel="noreferrer noopener">
-JS Notes 4 Pros</a>
-</p>
-<p>
-This <i>JavaScript® Notes for Professionals</i> book is compiled from
-<a href="https://archive.org/details/documentation-dump.7z" 
-target="_blank" rel="noreferrer noopener">Stack Overflow</a>.
-</p>
-<p>
-<a href="https://archive.org/details/documentation-dump.7z" 
+<h4>Contents</h4>
+<p>See end of document.</p>
+<h4>About</h4>
+
+<p>Please feel free to share this PDF with anyone for free, latest version of this book 
+can be downloaded from:</p>
+
+<p><a href="https://goalkicker.com/JavaScriptBook" target="_blank" rel="noreferrer noopener">
+JS Notes 4 Pros</a></p>
+
+<p>This <i>JavaScript® Notes for Professionals</i> book is compiled from
+<a href="https://archive.org/details/documentation-dump.7z" target="_blank" 
+rel="noreferrer noopener">Stack Overflow</a>.</p>
+
+<p><a href="https://archive.org/details/documentation-dump.7z" 
 target="_blank" rel="noreferrer noopener">Documentation</a>, the content
-is written by the beautiful people at Stack Overflow.
-</p>
-<p>
-Text content is released under Creative Commons BY-SA, see credits at
+is written by the beautiful people at Stack Overflow.</p>
+<p>Text content is released under Creative Commons BY-SA, see credits at
 the end of this book whom contributed to the various chapters. Images
-may be copyright of their respective owners unless otherwise specified.
-</p>
-<p>
-This is an unofficial free book created for educational purposes and is
+may be copyright of their respective owners unless otherwise specified.</p>
+<p>This is an unofficial free book created for educational purposes and is
 not affiliated with official JavaScript® group(s) or company(s) nor
 Stack Overflow. All trademarks and registered trademarks are the
-property of their respective company owners.
-</p>
-<p>
-The information presented in this book is not guaranteed to be correct
-nor accurate, use at your own risk.
-</p>
-<p>
-Please send feedback and corrections to [web@petercv.com].
-</p>
+property of their respective company owners.</p>
+<p>The information presented in this book is not guaranteed to be correct
+nor accurate, use at your own risk.</p>
+<p>Please send feedback and corrections to [web@petercv.com].</p>
 <!--page 2-->
-<h2 id="ch1">
-Chapter 1: Getting started with JavaScript
-</h2>
+<h2 id="ch1">Chapter 1: Getting started with JavaScript</h2>
+
 <h5>
 Version Release Date
 </h5>
