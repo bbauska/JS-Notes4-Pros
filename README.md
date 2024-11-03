@@ -19,7 +19,7 @@ our coding MUST be more resilient. -->
 
 <h4>About</h4>
 
-<p>Please feel free to share this PDF with anyone for free, latest 
+<p>Please `feel` 'free' to share this PDF with anyone for free, latest 
 version of this book can be downloaded from:</p>
 
 <p><a href="https://goalkicker.com/JavaScriptBook" target="_blank" rel="noreferrer noopener">
