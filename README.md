@@ -23,7 +23,7 @@ our coding MUST be more resilient. -->
 version of this book can be downloaded from:</p>
 
 <p><a href="https://goalkicker.com/JavaScriptBook" target="_blank" rel="noreferrer noopener">
-JS Notes 4 Pros</a></p>
+<em>JS Notes 4 Pros</em></a></p>
 
 <p>This <i>JavaScript® Notes for Professionals</i> book is compiled from 
 <a href="https://archive.org/details/documentation-dump.7z" 
