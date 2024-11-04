@@ -103,7 +103,7 @@ our coding MUST be more resilient. -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- always use curly braces around if...statements, always. Don't assume logic  -->
 <h4>Contents</h4>
-<p>See "toc.html" for Table of Contents:</p>
+<p>See other document for Table of Contents:</p>
 
 <h4>About</h4>
 
@@ -157,11 +157,11 @@ console.log("Hello, World!");
 </pre>
 <p>This will log the following to the console:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 02.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 02. console.log('Hello, World!'); (02) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image002.jpg"
-  title=""
-  alt="."
+  title="console.log('Hello, World!');"
+  alt="console.log('Hello, World!');"
   style="border: 2px solid #000000; width:3.89in;" />
 </p>
 <!--{width="3.8916666666666666in" height="1.4236111111111112in"}-->
@@ -183,7 +183,7 @@ console.log(foo);
 <p>This will log the following to the console:</p>
 <!-- page 2 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 03. example foobar console (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 03. example foobar console (02) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image003.jpg"
   title="foobar console example."
@@ -200,12 +200,10 @@ var thisVar = 'first value';
 var thatVar = 'second value';
 console.log("thisVar:", thisVar, "and thatVar:", thatVar);
 </pre>
-<p>
-This will log the following to the console:
-</p>
+<p>This will log the following to the console:</p>
 <!-- page 3 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 04. thisVar and thatVar (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 04. thisVar and thatVar, console.log (03) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image004.jpg"
   title="thisVar and thatVar"
@@ -213,21 +211,15 @@ This will log the following to the console:
   style="border: 2px solid #000000; width:7.47in;" />
 </p>
 <!-- {width="7.477777777777778in" height="0.9729166666666667in"} -->
-<h4>
-Placeholders
-</h4>
-<p>
-You can use console.log() in combination with placeholders:
-</p>
+<h4>Placeholders</h4>
+<p>You can use console.log() in combination with placeholders:</p>
 <pre>
 <b>var</b> greet = "Hello", who = "World";
 console.log ("%s, %s!", greet, who);
 </pre>
-<p>
-This will log the following to the console:
-</p>
+<p>This will log the following to the console:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 05. greet Hello, World (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 05. greet Hello, World (03) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image005.jpg"
   title="greet Hello, World"
@@ -235,13 +227,9 @@ This will log the following to the console:
   style="border: 2px solid #000000; width:7in;" />
 </p>
 <!--{width="6.990972222222222in" height="1.4868055555555555in"}-->
-<h4>
-Logging Objects
-</h4>
-<p>
-Below we see the result of logging an object. This is often useful for
-logging JSON responses from API calls.
-</p>
+<h4>Logging Objects</h4>
+<p>Below we see the result of logging an object. This is often useful for
+logging JSON responses from API calls.</p>
 <pre>
 console.log ( { 
   'Email': '', 
@@ -255,51 +243,37 @@ console.log ( {
 } );
 </pre>
 <!-- page 4 -->
-<p>
-This will log the following to the console:
-</p>
+<p>This will log the following to the console:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 06.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 06. json logging from api calls (04) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <p><img src="./images/image006.jpg"
-  title=" "
-  alt="."
+  title="JSON logging from API call"
+  alt="JSON logging from API call."
   style="border: 2px solid #000000; width:6.73in;" />
 <!--{width="6.738888888888889in" height="1.7208333333333334in"}--></p>
-<h4>
-Logging HTML elements
-</h4>
-<p>
-You have the ability to log any element which exists within the
+
+<h4>Logging HTML elements</h4>
+<p>You have the ability to log any element which exists within the
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" 
 target="_blank" rel="noreferrer noopener"><i>DOM</i></a>. In this case
-we log the body element:
-</p>
+we log the body element:</p>
 <pre>
 console.log(document.body);
 </pre>
-<p>
-This will log the following to the console:
-</p>
+<p>This will log the following to the console:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07. document.body information (04) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <p><img src="./images/image007.jpg"
   title=" "
   alt="."
   style="border: 2px solid #000000; width:6.52in;" />
 <!--{width="6.522222222222222in" height="2.3784722222222223in"}--></p>
-<h4>
-End Note
-</h4>
-<p>
-For more information on the capabilities of the console, see the Console
-topic.
-</p>
+<h4>End Note</h4>
+<p>For more information on the capabilities of the console, see the Console topic.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch1-2">
-Section 1.2: Using the DOM API
-</h3>
+<h3 id="ch1-2">Section 1.2: Using the DOM API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>
 DOM stands for <b>D</b>ocument <b>O</b>bject <b>M</b>odel. It is an
@@ -2339,9 +2313,7 @@ displays:
   style="border: 2px solid #000000; width:6.5in;" />
 <!-- ![](./images/image022.jpg){width="6.504166666666666in" height="2.6486111111111112in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch5-9">
-Section 5.9: Debugging with assertions - console.assert()
-</h3>
+<h3 id="ch5-9">Section 5.9: Debugging with assertions - console.assert()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>
 Writes an error message to the console if the assertion is <b>false</b>.
@@ -2357,12 +2329,12 @@ Otherwise, if the assertion is <b>true</b>, this does nothing.
   style="border: 2px solid #000000; width:6.5in;" />
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>
-Multiple arguments can be provided after the assertionthese can be
-strings or other objectsthat will only be printed if the assertion is
+Multiple arguments can be provided after the assertion. These can be
+strings or other objects that will only be printed if the assertion is
 <b>false</b>:
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 24.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 24. console.assert...testing assertion (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <p><img src="./images/image024.jpg"
   title=" "
@@ -2377,22 +2349,17 @@ this method is incompatible with most testing frameworks and that code
 execution will not break on a failed assertion.
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch6">
-Chapter 6: Datatypes in JavaScript
-</h2>
+<h2 id="ch6">Chapter 6: Datatypes in JavaScript</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch6-1">
-Section 6.1: typeof
-</h3>
+<h3 id="ch6-1">Section 6.1: typeof</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>
 <b>typeof</b> is the 'official' function that one uses to get the type
 in JavaScript, however in certain cases it might yield some unexpected
-results …
-</p>
+results …</p>
+
 <ol type="1" start="1">
-<li>
-<b>Strings</b><br/> <b>typeof</b> "String" or <b>typeof</b>
+<li><b>Strings</b><br/> <b>typeof</b> "String" or <b>typeof</b>
 Date(2011,01,01)
 <blockquote>
 "string"
@@ -2418,8 +2385,7 @@ Date(2011,01,01)
 "object"
 </blockquote>
 </li>
-<li>
-<b>Function</b><br/> <b>typeof</b> <b>function</b>(){}
+  <li><b>Function</b><br/> <b>typeof</b> <b>function</b>(){}
 <blockquote>
 "function"
 </blockquote>
@@ -9094,9 +9060,7 @@ an error in such cases.
   style="border: 2px solid #000000; width:7.48in;" />
 <!-- ![](./images/image026.png){width="7.486805555555556in" height="7.639583333333333in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch13-4">
-Section 13.4: Object properties iteration
-</h3>
+<h3 id="ch13-4">Section 13.4: Object properties iteration</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>
 You can access each property that belongs to an object with this loop
@@ -13880,20 +13844,18 @@ obj.<b>set</b>.apply(myObj, &lbrack;5, 4&rbrack;); // <i>same as above; note the
 
 console.log(myObj); // <i>prints { a: 3, b: 5 }</i>
 </pre>
-<h5>
-Version ≥ 5
-</h5>
+<h5>Version ≥ 5</h5>
+
 <p><b>bind</b> <b>()</b> in addition to call() and apply</p>
 ECMAScript 5 introduced another method called bind() in addition to
 call() and apply() set <b>this</b> value of the function to specific
-object.
-</p>
-<p>
-It behaves quite differently than the other two. The first argument to
+object.</p>
+
+<p>It behaves quite differently than the other two. The first argument to
 bind() is the <b>this</b> value for the new function. All other
 arguments represent named parameters that should be permanently set in
-the new function.
-</p>
+the new function.</p>
+
 <pre>
 <b>function</b> showName(label) {
   console.log(label &plus; &quot;:&quot; &plus; <b>this</b>.name);
@@ -13915,30 +13877,24 @@ student2.sayName = showNameStudent1;
 student2.sayName(&quot;student2&quot;);  // <i>outputs &quot;student2:Ravi&quot;</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch19-10">
-Section 19.10: Partial Application
-</h3>
+<h3 id="ch19-10">Section 19.10: Partial Application</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Similar to currying, partial application is used to reduce the number of
+<p>Similar to currying, partial application is used to reduce the number of
 arguments passed to a function. Unlike currying, the number need not go
-down by one.
-</p>
-<p>
-Example:
-</p>
-<p>
-This function …
-</p>
+down by one.</p>
+<p>Example:</p>
+
+<p>This function …</p>
+
 <pre>
 <b>function</b> multiplyThenAdd(a, b, c) {
   <b>return</b> a &ast; b &plus; c;
 }
 </pre>
-<p>
-… can be used to create another function that will always multiply by 2
-and then add 10 to the passed value;
-</p>
+
+<p>… can be used to create another function that will always multiply by 2
+and then add 10 to the passed value;</p>
+
 <pre>
 <b>function</b> reversedMultiplyThenAdd(c, b, a) {
   <b>return</b> a &ast; b &plus; c;
@@ -13950,20 +13906,13 @@ and then add 10 to the passed value;
 multiplyTwoThenAddTen(10);  // <i>30</i>
 </pre>
 <!-- page 178 -->
-<p>
-The "application" part of partial application simply means fixing
-parameters of a function.
-</p>
+<p>The "application" part of partial application simply means fixing parameters of a function.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch19-11">
-Section 19.11: Passing arguments by reference or value
-</h3>
+<h3 id="ch19-11">Section 19.11: Passing arguments by reference or value</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-In JavaScript all arguments are passed by value. When a function assigns
-a new value to an argument variable, that change will not be visible to
-the caller:
-</p>
+<p>In JavaScript all arguments are passed by value. When a function assigns a new value 
+to an argument variable, that change will not be visible to the caller:</p>
+
 <pre>
 <b>var</b> obj = {a: 2};
 <b>function</b> yfunc(arg) {
@@ -13972,10 +13921,10 @@ the caller:
 myfunc(obj);
 console.log(obj.a); // <i>2</i>
 </pre>
-<p>
-However, changes made to (nested) properties <i>of</i> such arguments,
-will be visible to the caller:
-</p>
+
+<p>However, changes made to (nested) properties <i>of</i> such arguments, will be visible 
+to the caller:</p>
+
 <pre>
 <b>var</b> obj = {a: 2};
 <b>function</b> myfunc(arg) {
@@ -13984,15 +13933,13 @@ will be visible to the caller:
 myfunc(obj);
 console.log(obj.a);  // <i>5</i>
 </pre>
-<p>
-This can be seen as a <i>call by reference</i>: although a function
-cannot change the caller's object by assigning a new value to it, it
-could <i>mutate</i> the caller's object.
-</p>
-<p>
-As primitive valued arguments, like numbers or strings, are immutable,
-there is no way for a function to mutate them:
-</p>
+
+<p>This can be seen as a <i>call by reference</i>: although a function cannot change the 
+caller's object by assigning a new value to it, it could <i>mutate</i> the caller's object.</p>
+
+<p>As primitive valued arguments, like numbers or strings, are immutable, there is no way 
+for a function to mutate them:</p>
+
 <pre>
 <b>var</b> s = &apos;say&apos;;
 <b>function</b> myfunc(arg) {
@@ -14001,14 +13948,12 @@ there is no way for a function to mutate them:
 myfunc(s);
 console.log(s);  // <i>&apos;say&apos;</i>
 </pre>
-<p>
-When a function wants to mutate an object passed as argument, but does
-not want to actually mutate the caller's object, the argument variable
-should be reassigned:
-</p>
-<h5>
-Version ≥ 6
-</h5>
+
+<p>When a function wants to mutate an object passed as argument, but does not want to 
+actually mutate the caller's object, the argument variable should be reassigned:</p>
+
+<h5>Version ≥ 6</h5>
+
 <pre>
 <b>var</b> obj = {a: 2, b: 3};
 <b>function</b> myfunc(arg) {
@@ -14018,12 +13963,11 @@ Version ≥ 6
 myfunc(obj);
 console.log(obj.a);  // <i>2</i>
 </pre>
-<p>
-As an alternative to in-place mutation of an argument, functions can
-create a new value, based on the argument, and return it. The caller can
-then assign it, even to the original variable that was passed as
-argument:
-</p>
+
+<p>As an alternative to in-place mutation of an argument, functions can create a new 
+value, based on the argument, and return it. The caller can then assign it, even to the 
+original variable that was passed as argument:</p>
+
 <!-- page 179 -->
 <pre>
 <b>var</b> a = 2;
@@ -14035,61 +13979,54 @@ a = myfunc(a);
 console.log(obj.a);  // <i>3</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch19-12">
-Section 19.12: Function Arguments, "arguments" object, rest and spread
-parameters
-</h3>
+<h3 id="ch19-12">Section 19.12: Function Arguments, "arguments" object, rest and spread parameters</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Functions can take inputs in form of variables that can be used and
-assigned inside their own scope. The following function takes two
-numeric values and returns their sum:
-</p>
+<p>Functions can take inputs in form of variables that can be used and assigned inside 
+their own scope. The following function takes two numeric values and returns their sum:</p>
+
 <pre>
 <b>function</b> addition (argument1, argument2) {
   <b>return</b> argument1 &plus; argument2;
 }
 console.log(addition(2, 3));  // <i>-&gt; 5</i>
 </pre>
-<p>
-<b>arguments object</b>
-<p>
-<p>
-The arguments object contains all the function's parameters that contain
+
+<h4>arguments object</h4>
+
+<p>The arguments object contains all the function's parameters that contain
 a non-default value. It can also be used even if the parameters are not
-explicitly declared:
-</p>
+explicitly declared:</p>
+
 <pre>
 (<b>function</b>() { console.log(arguments) })(0,&apos;str&apos;, &lbrack;2,{3}&rbrack;) // <i>-&amp;lbrack;0, &quot;str&quot;, Array&lbrack;2&rbrack;&rbrack;</i>
 </pre>
-<p>
-Although when printing arguments the output resembles an Array, it is in
-fact an object:
-</p>
+
+<p>Although when printing arguments the output resembles an Array, it is in fact an object:</p>
+
 <pre>
 (<b>function</b>() { console.log(<b>typeof</b>arguments) })();  // <i>-&bsol;object</i>
 </pre>
-<p>
-<b>Rest parameters: function ( … parm) {}</b>
-</p>
-<p>
-In ES6, the…syntax when used in the declaration of a function's
+
+<h4>Rest parameters: function ( … parm) {}</h4>
+
+<p>In ES6, the…syntax when used in the declaration of a function's
 parameters transforms the variable to its right into a single object
 containing all the remaining parameters provided after the declared
 ones. This allows the function to be invoked with an unlimited number of
 arguments, which will become part of this variable:
 </p>
+
 <pre>
 (</b>function</b>(a, &hellip;b){console.log(<b>typeof</b> b&plus;&apos;: &apos; &plus;b&lbrack;0&rbrack;&plus;b&lbrack;1&rbrack;&plus;b&lbrack;2&rbrack;) })(0, 1, &apos;2&apos;, &lbrack;3&rbrack;,{i:4});
 // <i>&minus&gt; object: 123</i>
 </pre>
-<p>
-<b>Spread parameters: function_name(…varb);</b>
-</p>
-<p>
-In ES6, the … syntax can also be used when invoking a function by
+
+<h4>Spread parameters: function_name(…varb);</h4>
+
+<p>In ES6, the … syntax can also be used when invoking a function by
 placing an object/variable to its right. This allows that object's
-elements to be passed into that function as a single object:
+elements to be passed into that function as a single object:</p>
+
 <pre>
 </b>let</b> nums = lbrack;2, 42, -1&rbrack;;
 console.log(&hellip;&lbrack;&apos;a&apos;, &apos;b&apos;, &apos;c&apos;&rbrack;, Math.max(&hellip;nums)); // <i>-&gt;a b c 42</i>
@@ -14097,54 +14034,40 @@ console.log(&hellip;&lbrack;&apos;a&apos;, &apos;b&apos;, &apos;c&apos;&rbrack;,
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch19-13">Section 19.13: Function Composition</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Composing multiple functions into one is a functional programming common
-practice;
-</p>
-<p>
+<p>Composing multiple functions into one is a functional programming common practice;<br/>
 composition makes a pipeline through which our data will transit and get
 modified simply working on the functioncomposition (just like snapping
-pieces of a track together)…
-</p>
-<p>
-you start out with some single responsibility functions:
-</p>
-<h5>
-Version ≥ 6
-</h5>
+pieces of a track together)…<br/>
+you start out with some single responsibility functions:</p>
+
+<h5>Version ≥ 6</h5>
+
 <pre>
 <b>const</b> capitalize = x =&bsol;x.replace(*/&Hat;&bsol;&bsol;w/, m =&gt; m.toUpperCase());
 <b>const</b> sign = x =&bsol;x + &apos;,<b>&bsol;n</b>made with love&apos;;
 </pre>
+
 <!-- page 180 -->
-<p>
-and easily create a transformation track:
-</p>
-<h5>
-Version ≥ 6
-</h5>
+<p>and easily create a transformation track:</p>
+
+<h5>Version ≥ 6</h5>
+
 <pre>
 <b>const</b> formatText = compose(capitalize, sign);
 formatText(&apos;this is an example&apos;)
 // <i>This is an example,</i>
 // <i>made with love</i>
 </pre>
-<p>
-N.B. Composition is achieved through a utility function usually called
-compose as in our example.
-</p>
-<p>
-Implementation of compose are present in many JavaScript utility
-libraries
+
+<p>N.B. Composition is achieved through a utility function usually called
+compose as in our example.<br/>
+Implementation of compose are present in many JavaScript utility libraries 
 (<a href="https://lodash.com/docs#flow" target="_blank" rel="noopener noreferrer">
-lodash</a>,
-<a href="http://ramdajs.com/" target="_blank" rel="noopener noreferrer">
-rambda</a>/ etc.) but you can also start out with a simple
-implementation such as:
-</p>
-<h5>
-Version ≥ 6
-</h5>
+lodash</a>, <a href="http://ramdajs.com/" target="_blank" rel="noopener noreferrer">
+rambda</a>/ etc.) but you can also start out with a simple implementation such as:</p>
+
+<h5>Version ≥ 6</h5>
+
 <pre>
 <b>const</b> compose = (&hellip;funs) =&gt;
   x =&gt;
@@ -14153,29 +14076,24 @@ Version ≥ 6
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch19-14">Section 19.14: Get the name of a function object</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>
-Version ≥ 6
-</h5>
-<p>
-<b>ES6</b>:
-</h5>
+<h5>Version ≥ 6</h5>
+
+<h4>ES6:</h4>
+
 <pre>
 myFunction.name
 </pre>
-<p>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name" 
-target="_blank" rel="noopener noreferrer">Explanation on MDN</a>. As of
-2015 works in Node.js and all major browsers except IE.
-</p>
-<h5>
-Version ≥ 5
-</h5>
-<p>
-<b>ES5</b>:
-</p>
-<p>
-If you have a reference to the function, you can do:
-</p>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name" 
+target="_blank" rel="noopener noreferrer">Explanation on MDN</a>. As of 2015 works in 
+Node.js and all major browsers except IE.</p>
+
+<h5>Version ≥ 5</h5>
+
+<h4>ES5:</h4>
+
+<p>If you have a reference to the function, you can do:</p>
+
 <pre>
 <b>function</b> functionName( func )
 {
@@ -14193,9 +14111,8 @@ If you have a reference to the function, you can do:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch19-15">Section 19.15: Recursive Function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-A recursive function is simply a function, that would call itself.
-</p>
+<p>A recursive function is simply a function, that would call itself.</p>
+
 <!-- page 181 -->
 <pre>
 <b>function</b> factorial (n) {
@@ -14205,14 +14122,12 @@ A recursive function is simply a function, that would call itself.
 <b>return</b> n &ast; factorial(n &minus; 1);
 }
 </pre>
-<p>
-The above function shows a basic example of how to perform a recursive
-function to return a factorial.
-</p>
-<p>
+
+<p>The above function shows a basic example of how to perform a recursive
+function to return a factorial.<br/>
 Another example, would be to retrieve the sum of even numbers in an
-array.
-</p>
+array.</p>
+
 <pre>
 <b>function</b> countEvenNumbers (arr) {
   // <i>Sentinel value. Recursion stops on empty array.</i>
@@ -14228,22 +14143,18 @@ array.
 <b>return</b> ((value &percnt; 2 === 0) ? 1 : 0) &plus; countEvens(arr);
 }
 </pre>
-<p>
-It is important that such functions make some sort of sentinel value
+
+<p>It is important that such functions make some sort of sentinel value
 check to avoid infinite loops. In the first example above, when n is
 less than or equal to 1, the recursion stops, allowing the result of
-each call to be returned back up the call stack.
-</p>
+each call to be returned back up the call stack.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch19-16">
-Section 19.16: Using the Return Statement
-</h3>
+<h3 id="ch19-16">Section 19.16: Using the Return Statement</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The return statement can be a useful way to create output for a
+<p>The return statement can be a useful way to create output for a
 function. The return statement is especially useful if you do not know
-in which context the function will be used yet.
-</p>
+in which context the function will be used yet.</p>
+
 <pre>
 // <i>An example function that will take a string as input and return</i>
 // <i>the first character of the string.</i>
@@ -14251,30 +14162,28 @@ in which context the function will be used yet.
   <b>return</b> stringIn.charAt(0);
 }
 </pre>
-<p>
-Now to use this function, you need to put it in place of a variable
-somewhere else in your code:
-</p>
-<p>
-<b>Using the function result as an argument for another function:</b>
-</p>
+
+<p>Now to use this function, you need to put it in place of a variable
+somewhere else in your code:</p>
+
+<h4>Using the function result as an argument for another function:</h4>
+
 <pre>
 console.log(firstChar(&quot;Hello world&quot;));
 </pre>
-<p>
-<i>Console output will be:</i>
-</p>
+
+<p><i>Console output will be:</i></p>
+
 <pre>
 &gt; H
 </pre>
-<p>
-<b>The return statement ends the function</b>
-</p>
-<p>
-If we modify the function in the beginning, we can demonstrate that the
-return statement ends the function.
-</p>
+
+<h4>The return statement ends the function</h4>
+
+<p>If we modify the function in the beginning, we can demonstrate that the
+return statement ends the function.</p>
 <!-- page 182 -->
+
 <pre>
 <b>function</b> firstChar (stringIn){
   console.log(&quot;The first action of the first char function&quot;);
@@ -14282,75 +14191,70 @@ return statement ends the function.
   console.log(&quot;The last action of the first char function&quot;);
 }
 </pre>
-<p>
-Running this function like so will look like this:
-</p>
+
+<p>Running this function like so will look like this:</p>
+
 <pre>
 console.log(firstChar(&quot;JS&quot;));
 </pre>
-<p>
-<i>Console output:</i>
-</p>
+
+<p><i>Console output:</i></p>
+
 <pre>
 &gt; The first action of the first char <b>function</b>
 &gt; J
 </pre>
-<p>
-It will not print the message after the return statement, as the
-function has now been ended.
-</p>
-<p>
-<b>Return statement spanning multiple lines:</b>
-</p>
-<p>
-In JavaScript, you can normally split up a line of code into many lines
-for readability purposes or organization. This is valid JavaScript:
-</p>
+
+<p>It will not print the message after the return statement, as the
+function has now been ended.</p>
+
+<h4>Return statement spanning multiple lines:</h4>
+
+<p>In JavaScript, you can normally split up a line of code into many lines
+for readability purposes or organization. This is valid JavaScript:</p>
+
 <pre>
 <b>var</b>
   name = &quot;bob&quot;,
   age = 18;
 </pre>
-<p>
-When JavaScript sees an incomplete statement like <b>var</b> it looks to
+
+<p>When JavaScript sees an incomplete statement like <b>var</b> it looks to
 the next line to complete itself. However, if you make the same mistake
-with the <b>return</b> statement, you will not get what you expected.
-</p>
+with the <b>return</b> statement, you will not get what you expected.</p>
+
 <pre>
 <b>return</b>
   &quot;Hi, my name is &quot; &plus; name &plus; &quot;. &quot; &plus;
   &quot;I&apos;m &quot; &plus; age &plus; &quot; years old.&quot;;
 </pre>
-<p>
-This code will return <b>undefined</b> because <b>return</b> by itself
+
+<p>This code will return <b>undefined</b> because <b>return</b> by itself
 is a complete statement in JavaScript, so it will not look to the next
 line to complete itself. If you need to split up a <b>return</b>
 statement into multiple lines, put a value next to return before you
-split it up, like so.
-</p>
+split it up, like so.</p>
+
 <pre>
 <b>return</b> &quot;Hi, my name is &quot; &plus; name &plus; &quot;. &quot; &plus;
   &quot;I&apos;m &quot; &plus; age &plus; &quot; years old.&quot;;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch19-17">
-Section 19.17: Functions as a variable
-</h3>
+<h3 id="ch19-17">Section 19.17: Functions as a variable</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-A normal function declaration looks like this:
-</p>
+<p>A normal function declaration looks like this:</p>
+
 <pre>
 <b>function</b> foo() {
 }
 </pre>
-<p>
-A function defined like this is accessible from anywhere within its
+
+<p>A function defined like this is accessible from anywhere within its
 context by its name. But sometimes it can be useful to treat function
 references like object references. For example, you can assign an object
 to a variable based on some set of conditions and then later retrieve a
-property from one or the other object:
-</p>
+property from one or the other object:</p>
+
 <pre>
 <b>var</b> name = &apos;Cameron&apos;;
 <b>var</b> spouse;
@@ -14358,10 +14262,10 @@ property from one or the other object:
 <b>else if</b> ( name === &apos;Cameron&apos; ) spouse = { name: &apos;Casey&apos; };
 <b>var</b> spouseName = spouse.name;
 </pre>
+
 <!-- page 183 -->
-<p>
-In JavaScript, you can do the same thing with functions:
-</p>
+<p>In JavaScript, you can do the same thing with functions:</p>
+
 <pre>
 // <i>Example 1</i>
 <b>var</b> hashAlgorithm = &apos;sha1&apos;;
@@ -14370,16 +14274,15 @@ In JavaScript, you can do the same thing with functions:
 <b>else if</b> ( hashAlgorithm === &apos;md5&apos; ) hash = md5Hash;
 hash(&apos;Fred&apos;);
 </pre>
-<p>
-In the example above, hash is a normal variable. It is assigned a
+
+<p>In the example above, hash is a normal variable. It is assigned a
 reference to a function, after which the function it references can be
-invoked using parentheses, just like a normal function declaration.
-</p>
-<p>
-The example above references anonymous functions… functions that do not
+invoked using parentheses, just like a normal function declaration.</p>
+
+<p>The example above references anonymous functions… functions that do not
 have their own name. You can also use variables to refer to named
-functions. The example above could be rewritten like so:
-</p>
+functions. The example above could be rewritten like so:</p>
+
 <pre>
 // <i>Example 2</i>
 var hashAlgorithm = &apos;ha1&apos;;
@@ -14393,9 +14296,9 @@ var hash;
   // ...
 }
 </pre>
-<p>
-Or, you can assign function references from object properties:
-</p>
+
+<p>Or, you can assign function references from object properties:</p>
+
 <pre>
 // <i>Example 3</i>
 <b>var</b> hashAlgorithms = {
@@ -14408,13 +14311,13 @@ Or, you can assign function references from object properties:
 <b>else</b> <b>if</b> (  hashAlgorithm === &apos;md5&apos; ) hash = hashAlgorithms.md5;
 hash(&apos;Fred&apos;);
 </pre>
-<p>
-You can assign the reference to a function held by one variable to
+
+<p>You can assign the reference to a function held by one variable to
 another by omitting the parentheses. This can result in an easy-to-make
 mistake: attempting to assign the return value of a function to another
-variable, but accidentally assigning the reference to the function.
-</p>
+variable, but accidentally assigning the reference to the function.</p>
 <!-- page 184 -->
+
 <pre>
 // <i>Example 4</i>
 <b>var</b> a = getValue;
@@ -14424,15 +14327,15 @@ variable, but accidentally assigning the reference to the function.
   <b>return</b> 41;
 }
 </pre>
+
 <!-- page 184 -->
-<p>
-A reference to a function is like any other value. As you've seen, a
+<p>A reference to a function is like any other value. As you've seen, a
 reference can be assigned to a variable, and that variable's reference
 value can be subsequently assigned to other variables. You can pass
 around references to functions like any other value, including passing a
 reference to a function as the return value of another function. For
-example:
-</p>
+example:</p>
+
 <pre>
 // <i>Example 5</i>
 // <i>getHashingFunction returns a function, which is assigned</i>
@@ -14451,28 +14354,27 @@ hash(&apos;Fred&apos;);
   // <i>&hellip;</i>
 }
 </pre>
-<p>
-You don't need to assign a function reference to a variable in order to
+
+<p>You don't need to assign a function reference to a variable in order to
 invoke it. This example, building off example 5, will call
 getHashingFunction and then immediately invoke the returned function and
-pass its return value to hashedValue.
-</p>
+pass its return value to hashedValue.</p>
+
 <pre>
 // <i>Example 6</i>
 <b>var</b> hashedValue = getHashingFunction( &apos;sha1&apos; )( &apos;Fred&apos; );
 </pre>
-<p>
-<b>A Note on Hoisting</b>
-</p>
-<p>
-Keep in mind that, unlike normal function declarations, variables that
+
+<h4>A Note on Hoisting</h4>
+
+<p>Keep in mind that, unlike normal function declarations, variables that
 reference functions are not "hoisted". In example 2, the md5Hash and
 sha1Hash functions are defined at the bottom of the script, but are
 available everywhere immediately. No matter where you define a function,
 the interpreter "hoists" it to the top of its scope, making it
 immediately available. This is <b>not</b> the case for variable
-definitions, so code like the following will break:
-</p>
+definitions, so code like the following will break:</p>
+
 <pre>
 <b>var</b> functionVariable;
 hoistedFunction();  // <i>works, because the function is &quot;hoisted&quot; to the top of its scope</i>
@@ -14480,26 +14382,21 @@ functionVariable();  // <i>error: undefined is not a function.</i>
 <b>function</b> hoistedFunction(){}
 functionVariable = <b>function</b>(){};
 </pre>
+
 <!-- page 185 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch20">
-Chapter 20: Functional JavaScript
-</h2>
+<h2 id="ch20">Chapter 20: Functional JavaScript</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch20-1">
-Section 20.1: Higher-Order Functions
-</h3>
+<h3 id="ch20-1">Section 20.1: Higher-Order Functions</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-In general, functions that operate on other functions, either by taking
+<p>In general, functions that operate on other functions, either by taking
 them as arguments or by returning them (or both), are called
-higher-order functions.
-</p>
-<p>
-A higher-order function is a function that can take another function as
+higher-order functions.</p>
+
+<p>A higher-order function is a function that can take another function as
 an argument. You are using higher-order functions when passing
-callbacks.
-</p>
+callbacks.</p>
+
 <pre>
 <b>function</b> iAmCallbackFunction() {
   console.log(&quot;callback has been invoked&quot;);
@@ -14512,10 +14409,9 @@ callbacks.
 // <i>invoke your higher-order function with a callback function.</i>
 iAmJustFunction(iAmCallbackFunction);
 </pre>
-<p>
-A higher-order function is also a function that returns another function
-as its result.
-</p>
+
+<p>A higher-order function is also a function that returns another function as its result.</p>
+
 <pre>
 <b>function</b> iAmJustFunction() {
   // <i>do some stuff &hellip;</i>
@@ -14528,29 +14424,24 @@ as its result.
 iAmJustFunction()();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch20-2">
-Section 20.2: Identity Monad
-</h3>
+<h3 id="ch20-2">Section 20.2: Identity Monad</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-This is an example of an implementation of the identity monad in
-JavaScript, and could serve as a starting point to create other monads.
-</p>
-<p>
-Based on the <a href="https://www.youtube.com/watch?v=b0EF0VTs9Dc" 
+<p>This is an example of an implementation of the identity monad in
+JavaScript, and could serve as a starting point to create other monads.</p>
+
+<p>Based on the <a href="https://www.youtube.com/watch?v=b0EF0VTs9Dc" 
 target="_blank" rel="noopener noreferrer"> conference by Douglas
-Crockford on monads and gonads</a>
-</p>
-<p>
-Using this approach reusing your functions will be easier because of the
-flexibility this monad provides, and composition nightmares:
-</p>
+Crockford on monads and gonads</a></p>
+
+<p>Using this approach reusing your functions will be easier because of the
+flexibility this monad provides, and composition nightmares:</p>
+
 <pre>
 f(g(h(i(j(k(value), j1), i2), h1, h2), g1, g2), f1, f2)
 </pre>
-<p>
-readable, nice and clean:
-</p>
+
+<p>readable, nice and clean:</p>
+
 <pre>
 identityMonad(value)
   .bind(k)
@@ -14560,6 +14451,7 @@ identityMonad(value)
   .bind(g, g1, g2)
   .bind(f, f1, f2);
 </pre>
+
 <pre>
 <b>function</b> identityMonad(value) {
   <b>var</b> monad = Object.create(<b>null</b>);
@@ -14583,9 +14475,9 @@ identityMonad(value)
   <b>return</b> monad;
 };
 </pre>
-<p>
-It works with primitive values
-</p>
+
+<p>It works with primitive values</p>
+
 <pre>
 <b>var</b> value = &apos;foo&apos;,
   f = x =&gt; x &plus; &apos; changed&apos;,
@@ -14595,9 +14487,9 @@ identityMonad(value)
   .apply(g)
   .bind(alert);  // <i>Alerts &apos;foo changed again&apos;</i>
 </pre>
-<p>
-And also with objects
-</p>
+
+<p>And also with objects</p>
+
 <pre>
 <b>var</b> value = { foo: &apos;foo&apos; },
   f = x =&gt; identityMonad(Object.assign(x, { foo: &apos;bar&apos;})),
@@ -14608,9 +14500,9 @@ identityMonad(value)
   .apply(g)
   .bind(h);  // <i>Logs &apos;foo: bar, bar: foo&apos;</i>
 </pre>
-<p>
-Let's try everything:
-</p>
+
+<p>Let's try everything:</p>
+
 <!-- page 187 -->
 <pre>
 <b>var</b> add = (x, &hellip;args) =&bsol;x + args.reduce((r, n) =&bsol;r + n, 0),
@@ -14629,38 +14521,28 @@ identityMonad(100)
   .call(log);  // <i>Logs 29</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch20-3">
-Section 20.3: Pure Functions
-</h3>
+<h3 id="ch20-3">Section 20.3: Pure Functions</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-A basic principle of functional programming is that it <b>avoids
+<p>A basic principle of functional programming is that it <b>avoids
 changing</b> the application state (statelessness) and variables outside
-its scope (immutability).
-</p>
-<p>
-Pure functions are functions that:
-</p>
+its scope (immutability).</p>
+
+<p>Pure functions are functions that:</p>
+
 <ul>
-<li>
-with a given input, always return the same output
-</li>
-<li>
-they do not rely on any variable outside their scope
-</li>
-<li>
-they do not modify the state of the application (<b>no side effects</b>)
-</li>
+  <li>with a given input, always return the same output</li>
+  <li>they do not rely on any variable outside their scope</li>
+  <li>they do not modify the state of the application (<b>no side effects</b>)</li>
 </ul>
-<p>
-Let's take a look at some examples:
-</p>
+
+<p>Let's take a look at some examples:</p>
+
 <blockquote>
 Pure functions must not change any variable outside their scope
 </blockquote>
-<p>
-<b>Impure function</b>
-</p>
+
+<h4>Impure function</h4>
+
 <pre>
 <b>let</b> obj = { a: 0 }
 <b>const</b> impure = (input) =&gt; {
@@ -14672,12 +14554,11 @@ Pure functions must not change any variable outside their scope
 console.log(obj)  // <i>Logs { &quot;a&quot;: 1 }</i>
 console.log(b)    // <i>Logs 1</i>
 </pre>
-<p>
-The function changed the obj.a value that is outside its scope.
-</p>
-<p>
-<b>Pure function</b>
-</p>
+
+<p>The function changed the obj.a value that is outside its scope.</p>
+
+<h4>Pure function</h4>
+
 <pre>
 <b>let</b> obj = { a: 0 }
 <b>const</b> pure = (input) =&gt; {
@@ -14689,15 +14570,15 @@ The function changed the obj.a value that is outside its scope.
 console.log(b) // <i>Logs 1</i>
 </pre>
 <!-- page 188 -->
-<p>
-The function did not change the object obj values
-</p>
+
+<p>The function did not change the object obj values</p>
+
 <blockquote>
 Pure functions must not rely on variables outside their scope
 </blockquote>
-<p>
-<b>Impure function</b>
-</p>
+
+<h4>Impure function</h4>
+
 <pre>
 <b>let</b> a = 1;
 <b>let</b> impure = (input) =&gt; {
@@ -14709,14 +14590,13 @@ console.log(impure(2))  // <i>Logs 2</i>
 a++; // <i>a becomes equal to 2</i>
 console.log(impure(2))  // <i>Logs 4</i>
 </pre>
-<p>
-This <b>impure</b> function rely on variable a that is defined outside
+
+<p>This <b>impure</b> function rely on variable a that is defined outside
 its scope. So, if a is modified, impure's function result will be
-different.
-</p>
-<p>
-<b>Pure function</b>
-</p>
+different.</p>
+
+<h4>Pure function</h4>
+
 <pre>
 <b>let</b> pure = (input) =&gt; {
   <b>let</b> a = 1;
@@ -14726,71 +14606,70 @@ different.
 }
 console.log(pure(2))  // <i>Logs 2</i>
 </pre>
-<p>
-The pure's function result <b>does not rely</b> on any variable outside
-its scope.
-</p>
+
+<p>The pure's function result <b>does not rely</b> on any variable outside its scope.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch20-4">
-Section 20.4: Accepting Functions as Arguments
-</h3>
+<h3 id="ch20-4">Section 20.4: Accepting Functions as Arguments</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<b>function</b> transform(fn, arr) { <b>let</b> result = []; <b>for</b>
-(<b>let</b> el of arr) { result.push(fn(el)); // <i>We push the result
-of the transformed item to result</i> } <b>return</b> result; }
+<pre>
+<b>function</b> transform(fn, arr) { 
+  <b>let</b> result = [];
+  <b>for</b> (<b>let</b> el of arr) { 
+    result.push(fn(el)); // <i>We push the result of the transformed item to result</i> 
+  } 
+  <b>return</b> result; 
+}
 console.log(transform(x=&gt; x * 2, [1,2,3,4])); // <i>[2, 4, 6, 8]</i>
 </pre>
-<p>
-As you can see, our transform function accepts two parameters, a
+
+<p>As you can see, our transform function accepts two parameters, a
 function and a collection. It will then iterate the collection, and push
-values onto the result, calling fn on each of them.
-</p>
-<p>
-Looks familiar? This is very similar to how Array.prototype.map() works!
-</p>
+values onto the result, calling fn on each of them.</p>
+
+<p>Looks familiar? This is very similar to how Array.prototype.map() works!</p>
 <!-- page 189 -->
+
 <pre>
 console.log(&lbrack;1, 2, 3, 4&rbrack;.map(x =&gt; x &ast; 2));  // <i>&lbrack;2, 4, 6, 8&rbrack;</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch21">
-Chapter 21: Prototypes, objects
-</h2>
+<h2 id="ch21">Chapter 21: Prototypes, objects</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-In the conventional JS there are no class instead we have prototypes.
+<p>In the conventional JS there are no class instead we have prototypes.
 Like the class, prototype inherits the properties including the methods
 and the variables declared in the class. We can create the new instance
 of the object whenever it is necessary by, Object.create(PrototypeName);
-(we can give the value for the constructor as well)
-</p>
+(we can give the value for the constructor as well).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch21-1">
-Section 21.1: Creation and initialising Prototype
-</h3>
+<h3 id="ch21-1">Section 21.1: Creation and initialising Prototype</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<b>var</b> Human = <b>function</b>() { <b>this</b>.canWalk =
-<b>true</b>; <b>this</b>.canSpeak = <b>true</b>; <i>//</i> };
-Person.<b>prototype</b>.greet = <b>function</b>() { <b>if</b>
-(<b>this</b>.canSpeak) { // <i>checks whether this prototype has
-instance of speak</i> <b>this</b>.name = "Steve" console.log('Hi, I am '
-+ <b>this</b>.name); } <b>else</b> { console.log('Sorry i can not
-speak'); } };
+<pre>
+<b>var</b> Human = <b>function</b>() { 
+  <b>this</b>.canWalk = <b>true</b>;
+  <b>this</b>.canSpeak = <b>true</b>; <i>//</i>
+};<br>
+Person.<b>prototype</b>.greet = <b>function</b>() { 
+  <b>if</b> (<b>this</b>.canSpeak) { // <i>checks whether this prototype has instance of speak</i> 
+    <b>this</b>.name = "Steve" 
+	console.log('Hi, I am ' + <b>this</b>.name); 
+  } <b>else</b> { 
+  console.log('Sorry i can not speak');
+  }
+};
 </pre>
-<p>
-The prototype can be instantiated like this
-</p>
+
+<p>The prototype can be instantiated like this</p>
+
 <pre>
 obj = Object.create(Person.<b>prototype</b>);
 ob.greet();
 </pre>
-<p>
-We can pass value for the constructor and make the boolean true and
-false based on the requirement.
-</p>
-<p>
-Detailed Explanation
-</p>
+
+<p>We can pass value for the constructor and make the boolean true and
+false based on the requirement.</p>
+
+<p>Detailed Explanation</p>
+
 <pre>
 <b>var</b> Human = <b>function</b>() {
   <b>this</b>.canSpeak = <b>true</b>;
@@ -14833,23 +14712,17 @@ virat.greet();
 </pre>
 <!-- page 192 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch22">
-Chapter 22: Classes
-</h2>
+<h2 id="ch22">Chapter 22: Classes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch22-1">
-Section 22.1: Class Constructor
-</h3>
+<h3 id="ch22-1">Section 22.1: Class Constructor</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The fundamental part of most classes is its constructor, which sets up
+<p>The fundamental part of most classes is its constructor, which sets up
 each instance's initial state and handles any parameters that were
-passed when calling <b>new</b>.
-</p>
-<p>
-It's defined in a class block as though you're defining a method named
-constructor, though it's actually handled as a special case.
-</p>
+passed when calling <b>new</b>.</p>
+
+<p>It's defined in a class block as though you're defining a method named
+constructor, though it's actually handled as a special case.</p>
+
 <pre>
 class MyClass {
   constructor(option) {
@@ -14858,30 +14731,24 @@ class MyClass {
   }
 }
 </pre>
-<p>
-Example usage:
-</p>
+
+<p>Example usage:</p>
+
 <pre>
 <b>const</b> foo = <b>new</b> MyClass(&apos;speedy&apos;); // <i>logs: &quot;Creating instance using speedy option&quot;</i>
 </pre>
-<p>
-A small thing to note is that a class constructor cannot be made static
-via the <b>static</b> keyword, as described below for other methods.
-</p>
+
+<p>A small thing to note is that a class constructor cannot be made static
+via the <b>static</b> keyword, as described below for other methods.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch22-2">
-Section 22.2: Class Inheritance
-</h3>
+<h3 id="ch22-2">Section 22.2: Class Inheritance</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Inheritance works just like it does in other object-oriented languages:
+<p>Inheritance works just like it does in other object-oriented languages:
 methods defined on the superclass are accessible in the extending
-subclass.
-</p>
-<p>
-If the subclass declares its own constructor then it must invoke the
-parents constructor via () before it can access <b>this</b>.
-</p>
+subclass.</p>
+<p>If the subclass declares its own constructor then it must invoke the
+parents constructor via () before it can access <b>this</b>.</p>
+
 <pre>
 class SuperClass {
   constructor() {
@@ -14902,15 +14769,12 @@ subClass.log();  // <i>logs: &quot;Hello subclass&quot;</i>
 </pre>
 <!-- page 193 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch22-3">
-Section 22.3: Static Methods
-</h3>
+<h3 id="ch22-3">Section 22.3: Static Methods</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Static methods and properties are defined on <i>the class/constructor
+<p>Static methods and properties are defined on <i>the class/constructor
 itself</i>, not on instance objects. These are specified in a class
-definition by using the <b>static</b> keyword.
-</p>
+definition by using the <b>static</b> keyword.</p>
+
 <pre>
 class MyClass {
   <b>static</b> myStaticMethod() {
@@ -14923,45 +14787,40 @@ class MyClass {
 console.log(MyClass.myStaticMethod());  // <i>logs: &quot;Hello&quot;</i>
 console.log(MyClass.myStaticProperty);  // <i>logs: &quot;Goodbye&quot;</i>
 </pre>
-<p>
-We can see that static properties are not defined on object instances:
-</p>
+
+<p>We can see that static properties are not defined on object instances:</p>
+
 <pre>
 <b>const</b> myClassInstance = <b>new</b> MyClass();
 console.log(myClassInstance.myStaticProperty);  // <i>logs: undefined</i>
 </pre>
-<p>
-However, they <i>are</i> defined on subclasses:
-</p>
+
+<p>However, they <i>are</i> defined on subclasses:</p>
+
 <pre>
 class MySubClass extends MyClass {};
 console.log(MySubClass.myStaticMethod());  // <i>logs: &quot;Hello&quot;</i>
 console.log(MySubClass.myStaticProperty);  // <i>logs: &quot;Goodbye&quot;</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch22-4">
-Section 22.4: Getters and Setters
-</h3>
+<h3 id="ch22-4">Section 22.4: Getters and Setters</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Getters and setters allow you to define custom behaviour for reading and
+<p>Getters and setters allow you to define custom behaviour for reading and
 writing a given property on your class. To the user, they appear the
 same as any typical property. However, internally a custom function you
 provide is used to determine the value when the property is accessed
 (the getter), and to perform any necessary changes when the property is
-assigned (the setter).
-</p>
-<p>
-In a class definition, a getter is written like a no-argument method
+assigned (the setter).</p>
+
+<p>In a class definition, a getter is written like a no-argument method
 prefixed by the <b>get</b> keyword. A setter is similar, except that it
 accepts one argument (the new value being assigned) and the <b>set</b>
-keyword is used instead.
-</p>
-<p>
-Here's an example class which provides a getter and setter for its .
+keyword is used instead.</p>
+
+<p>Here's an example class which provides a getter and setter for its .
 property. Each time it's assigned, we'll record the new name in an
-internal . array. Each time it's accessed, we'll return the latest name.
-</p>
+internal . array. Each time it's accessed, we'll return the latest name.</p>
+
 <pre>
 class MyClass {
   constructor() {
@@ -14980,10 +14839,10 @@ myClassInstance.name = &apos;Bob&apos;;
 console.log(myClassInstance.name);  // <i>logs: &quot;Bob&quot;</i>
 console.log(myClassInstance.names&lowbar;);  // <i>logs: &lbrack;&quot;Joe&quot;, &quot;Bob&quot;&rbrack;</i>
 </pre>
-<p>
-If you only define a setter, attempting to access the property will
-always return <b>undefined</b>.
-</p>
+
+<p>If you only define a setter, attempting to access the property will
+always return <b>undefined</b>.</p>
+
 <pre>
 <b>const</b> classInstance = <b>new</b> class {
   <b>set</b> prop(value) {
@@ -14993,10 +14852,10 @@ always return <b>undefined</b>.
 classInstance.prop = 10;  // <i>logs: &quot;setting&quot;, 10</i>
 console.log(classInstance.prop);  // <i>logs: undefined</i>
 </pre>
-<p>
-If you only define a getter, attempting to assign the property will have
-no effect.
-</p>
+
+<p>If you only define a getter, attempting to assign the property will have
+no effect.</p>
+
 <pre>
 <b>const</b> classInstance = <b>new</b> class {
   <b>get</b> prop() {
@@ -15007,23 +14866,19 @@ classInstance.prop = 10;
 console.log(classInstance.prop);  // <i>logs: 5</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch22-5">
-Section 22.5: Private Members
-</h3>
+<h3 id="ch22-5">Section 22.5: Private Members</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-JavaScript does not technically support private members as a language
+<p>JavaScript does not technically support private members as a language
 feature. Privacy -
 <a href="http://javascript.crockford.com/private.html" 
 target="_blank" rel="noopener noreferrer">described by Douglas
 Crockford</a> - gets emulated instead via closures (preserved function
 scope) that will be generated each with every instantiation call of a
-constructor function.
-</p>
-<p>
-The Queue example demonstrates how, with constructor functions, local
-state can be preserved and made accessible too via privileged methods.
-</p>
+constructor function.</p>
+
+<p>The Queue example demonstrates how, with constructor functions, local
+state can be preserved and made accessible too via privileged methods.</p>
+
 <pre>
 class Queue {
   constructor () {                // <i>- does generate a closure with each instantiation.</i>
@@ -15051,32 +14906,25 @@ class Queue {
   console.log(q);                     // <i>{}</i>
   console.log(Object.keys(q));        // <i>&lbrack;&quot;enqueue&quot;,&quot;dequeue&quot;&rbrack;</i>
 </pre>
-<p>
-With every instantiation of a Queue type the constructor generates a
-closure.
-</p>
-<p>
-Thus both of a Queue type's own methods enqueue and dequeue (see
+
+<p>With every instantiation of a Queue type the constructor generates a closure.</p>
+
+<p>Thus both of a Queue type's own methods enqueue and dequeue (see
 Object.kes(q)) still do have access to list that continues to
 <i>live</i> in its enclosing scope that, at construction time, has been
-preserved.
-</p>
-<p>
-Making use of this pattern - emulating private members via privileged
+preserved.</p>
+
+<p>Making use of this pattern - emulating private members via privileged
 public methods - one should keep in mind that, with every instance,
 additional memory will be consumed for every <i>own property</i> method
 (for it is code that can't be shared/reused). The same is true for the
-amount/size of state that is going to be stored within such a closure.
-</p>
+amount/size of state that is going to be stored within such a closure.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch22-6">
-Section 22.6: Methods
-</h3>
+<h3 id="ch22-6">Section 22.6: Methods</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Methods can be defined in classes to perform a function and optionally
-return a result. They can receive arguments from the caller.
-</p>
+<p>Methods can be defined in classes to perform a function and optionally
+return a result. They can receive arguments from the caller.</p>
+
 <pre>
 class Something {
   constructor(data) {
@@ -15093,16 +14941,13 @@ class Something {
 s&period;doSomething(&quot;hi&quot;) // <i>returns: { data: {}, text: &quot;hi&quot; }</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch22-7">
-Section 22.7: Dynamic Method Names
-</h3>
+<h3 id="ch22-7">Section 22.7: Dynamic Method Names</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-There is also the ability to evaluate expressions when naming methods
+<p>There is also the ability to evaluate expressions when naming methods
 similar to how you can access an objects' properties with []. This can
 be useful for having dynamic property names, however is often used in
-conjunction with Symbols.
-</p>
+conjunction with Symbols.</p>
+
 <pre>
 <b>let</b> METADATA = Symbol(&apos;metadata&apos;);
 class Car {
@@ -15132,36 +14977,29 @@ MazdaMPV&lbrack;3&rbrack;();  // <i>&quot;three&quot;</i>
 MazdaMPV&lbrack;METADATA&rbrack;();  // <i>{ make: &quot;Mazda&quot;, model: &quot;MPV&quot; }</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch22-8">
-Section 22.8: Managing Private Data with Classes
-</h3>
+<h3 id="ch22-8">Section 22.8: Managing Private Data with Classes</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-One of the most common obstacles using classes is finding the proper
+<p>One of the most common obstacles using classes is finding the proper
 approach to handle private states. There are 4 common solutions for
-handling private states:
-</p>
-<p>
-<b>Using Symbols</b>
-</p>
-<p>
-Symbols are new primitive type introduced on in ES2015, as defined at
+handling private states:</p>
+
+<h4>Using Symbols</h4>
+
+<p>Symbols are new primitive type introduced on in ES2015, as defined at
 <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Symbol" 
-target="_blank" rel="noopener noreferrer">MDN</a>
-</p>
+target="_blank" rel="noopener noreferrer">MDN</a></p>
+
 <blockquote>
 A symbol is a unique and immutable data type that may be used as an
 identifier for object properties.
 </blockquote>
-<p>
-When using symbol as a property key, it is not enumerable.
-</p>
-<p>
-As such, they won't be revealed using far var in or Object.keys.
-</p>
-<p>
-Thus we can use symbols to store private data.
-</p>
+
+<p>When using symbol as a property key, it is not enumerable.</p>
+
+<p>As such, they won't be revealed using far var in or Object.keys.</p>
+
+<p>Thus we can use symbols to store private data.</p>
+
 <pre>
 <b>const</b> topSecret = Symbol(&apos;topSecret&apos;);  // <i>our private key; will only be accessible on the scope of</i>
 <i>the module file</i>
@@ -15175,10 +15013,10 @@ export class SecretAgent {
   }
 }
 </pre>
-<p>
-Because symbols are unique, we must have reference to the original
-symbol to access the private property.
-</p>
+
+<p>Because symbols are unique, we must have reference to the original
+symbol to access the private property.</p>
+
 <!-- page 197 -->
 <pre>
 import {SecretAgent} from &apos;SecretAgent.js&apos;
@@ -15188,52 +15026,47 @@ Object.keys(agent); // <i>&lbrack;&apos;coverStory&apos;&rbrack; only cover stor
 agent&lbrack;Symbol(&apos;topSecret&apos;)&rbrack;; // <i>undefined, as we said, symbols are always unique, so only the 
 original symbol will help us to get the data.</i>
 </pre>
-<p>
-But it's not 100% private; let's break that agent down! We can use the
-method to get the object symbols.
-</p>
+
+<p>But it's not 100% private; let's break that agent down! We can use the
+method to get the object symbols.</p>
+
 <pre>
 <b>const</b> secretKeys = Object.getOwnPropertySymbols(agent);
 agent&lbrack;secretKeys&lbrack;0&rbrack;&rbrack; // <i>&apos;steal all the ice cream&apos; , we got the secret.</i>
 </pre>
-<p>
-<b>Using WeakMaps</b>
-</p>
-<p>
-WeakMap is a new type of object that have been added for es6.
-</p>
-<p>
-As defined on
+
+<h4>Using WeakMaps</h4>
+
+<p>WeakMap is a new type of object that have been added for es6.</p>
+
+<p>As defined on
 <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Symbolhttps:/developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/WeakMap" 
-target="_blank" rel="noopener noreferrer">MDN</a>
-</p>
+target="_blank" rel="noopener noreferrer">MDN</a></p>
+
 <blockquote>
 The WeakMap object is a collection of key/value pairs in which the keys
 are weakly referenced. The keys must be objects and the values can be
 arbitrary values.
 </blockquote>
-<p>
-Another important feature of WeakMap is, as defined on
+
+<p>Another important feature of WeakMap is, as defined on
 <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/WeakMap" 
-target="_blank" rel="noopener noreferrer">MDN</a>.
-</p>
+target="_blank" rel="noopener noreferrer">MDN</a>.</p>
+
 <blockquote>
 The key in a WeakMap is held weakly. What this means is that, if there
 are no other strong references to the key, the entire entry will be
 removed from the WeakMap by the garbage collector.
 </blockquote>
-<p>
-The idea is to use the WeakMap, as a static map for the whole class, to
+
+<p>The idea is to use the WeakMap, as a static map for the whole class, to
 hold each instance as key and keep the private data as a value for that
-instance key.
-</p>
-<p>
-Thus only inside the class will we have access to the WeakMap
-collection.
-</p>
-<p>
-Let's give our agent a try, with WeakMap:
-</p>
+instance key.</p>
+
+<p>Thus only inside the class will we have access to the WeakMap collection.</p>
+
+<p>Let's give our agent a try, with WeakMap:</p>
+
 <pre>
 <b>const</b> topSecret = <b>new</b> WeakMap();  // <i>will hold all private data of all instances.</i>
 export class SecretAgent {
@@ -15247,19 +15080,19 @@ export class SecretAgent {
   }
 }
 </pre>
-<p>
-Because the const topSecret is defined inside our module closure, and
+
+<p>Because the const topSecret is defined inside our module closure, and
 since we didn't bind it to our instance properties, this approach is
-totally private, and we can't reach the agent topSecret.
-</p>
-<p>
-<b>Define all methods inside the constructor</b>
-</p>
+totally private, and we can't reach the agent topSecret.</p>
+
+<h4>Define all methods inside the constructor</h4>
+
 <p>
 The idea here is simply to define all our methods and members inside the
 constructor and use the closure to access private members without
 assigning them to <b>this</b>.
 </p>
+
 <!-- page 198 -->
 <pre>
 export class SecretAgent {
@@ -15272,19 +15105,16 @@ export class SecretAgent {
   }
 }
 </pre>
-<p>
-In this example as well the data is 100% private and can't be reached
-outside the class, so our agent is safe.
-</p>
-<p>
-<b>Using naming conventions</b>
-</p>
-<p>
-We will decide that any property who is private will be prefixed with _.
-</p>
-<p>
-Note that for this approach the data isn't really private.
-</p>
+
+<p>In this example as well the data is 100% private and can't be reached
+outside the class, so our agent is safe.</p>
+
+<h4>Using naming conventions</h4>
+
+<p>We will decide that any property who is private will be prefixed with _.</p>
+
+<p>Note that for this approach the data isn't really private.</p>
+
 <pre>
 export class SecretAgent {
   constructor(secret) {
@@ -15297,31 +15127,24 @@ export class SecretAgent {
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch22-9">
-Section 22.9: Class Name binding
-</h3>
+<h3 id="ch22-9">Section 22.9: Class Name binding</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-ClassDeclaration's Name is bound in different ways in different scopes -
-</p>
+<p>ClassDeclaration's Name is bound in different ways in different scopes -</p>
+
 <ol type="1" start="1">
-<li>
-The scope in which the class is defined - <b>let</b> binding
-</li>
-<li>
-The scope of the class itself - within { and } in class {} -
-<b>const</b> binding
-</li>
+  <li>The scope in which the class is defined - <b>let</b> binding</li>
+  <li>The scope of the class itself - within { and } in class {} - <b>const</b> binding</li>
 </ol>
+
 <pre>
 class Foo {
   // <i>Foo inside this block is a const binding</i>
 }
 // <i>Foo here is a let binding</i>
 </pre>
-<p>
-For example,
-</p>
+
+<p>For example,</p>
+
 <pre>
 class A {
   foo() {
@@ -15330,9 +15153,9 @@ class A {
 }
 A = <b>null</b>;  // <i>will NOT throw as A here is a &grave;let&grave; binding</i>
 </pre>
-<p>
-This is not the same for a Function -
-</p>
+
+<p>This is not the same for a Function -</p>
+
 <pre>
 <b>function</b> A() {
   A = <b>null</b>;  // <i>works</i>
@@ -15342,15 +15165,12 @@ A.<b>prototype</b>.foo = <b>function</b> foo() {
 }
 A = <b>null</b>;  // <i>works</i>
 </pre>
+
 <!-- page 199 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch23">
-Chapter 23: Namespacing
-</h2>
+<h2 id="ch23">Chapter 23: Namespacing</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch23-1">
-Section 23.1: Namespace by direct assignment
-</h3>
+<h3 id="ch23-1">Section 23.1: Namespace by direct assignment</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // <i>Before: antipattern 3 global variables</i>
@@ -15364,17 +15184,14 @@ Section 23.1: Namespace by direct assignment
   NavigationNs.redirection = <b>function</b>() {}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch23-2">
-Section 23.2: Nested Namespaces
-</h3>
+<h3 id="ch23-2">Section 23.2: Nested Namespaces</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-When multiple modules are involved, avoid proliferating global names by
+<p>When multiple modules are involved, avoid proliferating global names by
 creating a single global namespace. From there, any sub-modules can be
 added to the global namespace. (Further nesting will slow down
 performance and add unnecessary complexity.) Longer names can be used if
-name clashes are an issue:
-</p>
+name clashes are an issue:</p>
+
 <pre>
 <b>var</b> NavigationNs = NavigationNs &vert;&vert; {};
   NavigationNs.active = {};
@@ -15387,13 +15204,9 @@ name clashes are an issue:
 </pre>
 <!-- page 200 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch24">
-Chapter 24: Context (this)
-</h2>
+<h2 id="ch24">Chapter 24: Context (this)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch24-1">
-Section 24.1: this with simple objects
-</h3>
+<h3 id="ch24-1">Section 24.1: this with simple objects</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 <b>var</b> person = {
@@ -15408,25 +15221,20 @@ person.bio();  // <i>logs &quot;My name is John Doe&quot;</i>
 <b>var</b> bio = person.bio;
 bio();  // <i>logs &quot;My name is undefined&quot;</i>
 </pre>
-<p>
-In the above code, person.bio makes use of the context(this). When the
+
+<p>In the above code, person.bio makes use of the context(this). When the
 function is called as person.bio(), the context gets passed
 automatically, and so it correctly logs "My name is John Doe". When
-assigning the function to a variable though, it loses its context.
-</p>
-<p>
-In non-strict mode, the default context is the global object (window).
-In strict mode it is <b>undefined</b>.
-</p>
+assigning the function to a variable though, it loses its context.</p>
+
+<p>In non-strict mode, the default context is the global object (window).
+In strict mode it is <b>undefined</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch24-2">
-Section 24.2: Saving this for use in nested functions / objects
-</h3>
+<h3 id="ch24-2">Section 24.2: Saving this for use in nested functions / objects</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-One common pitfall is to try and use <b>this</b> in a nested function or
-an object, where the context has been lost.
-</p>
+<p>One common pitfall is to try and use <b>this</b> in a nested function or
+an object, where the context has been lost.</p>
+
 <pre>
 document.getElementById(&apos;myAJAXButton&apos;).onclick = <b>function</b>() {
   makeAJAXRequest(<b>function</b>(result) {
@@ -15436,10 +15244,10 @@ document.getElementById(&apos;myAJAXButton&apos;).onclick = <b>function</b>() {
   })
 }
 </pre>
-<p>
-Here the context (<b>this</b>) is lost in the inner callback function.
-To correct this, you can save the value of <b>this</b> in a variable:
-</p>
+
+<p>Here the context (<b>this</b>) is lost in the inner callback function.
+To correct this, you can save the value of <b>this</b> in a variable:</p>
+
 <pre>
 document.getElementById(&apos;myAJAXButton&apos;).onclick = <b>function</b>() {
   <b>var</b> self = <b>this</b>;
@@ -15450,13 +15258,12 @@ document.getElementById(&apos;myAJAXButton&apos;).onclick = <b>function</b>() {
   })
 }
 </pre>
-<h5>
-Version ≥ 6
-</h5>
-<p>
-ES6 introduced arrow functions which include lexical <b>this</b>
-binding. The above example could be written like this:
-</p>
+
+<h5>Version ≥ 6</h5>
+
+<p>ES6 introduced arrow functions which include lexical <b>this</b>
+binding. The above example could be written like this:</p>
+
 <pre>
 document.getElementById(&apos;myAJAXButton&apos;).onclick = <b>function</b>() {
   makeAJAXRequest(result =&gt; {
@@ -15468,18 +15275,14 @@ document.getElementById(&apos;myAJAXButton&apos;).onclick = <b>function</b>() {
 </pre>
 <!-- page 201 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch24-3">
-Section 24.3: Binding function context
-</h3>
+<h3 id="ch24-3">Section 24.3: Binding function context</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>
-Version ≥ 5.1
-</h5>
-<p>
-Every function has a bind method, which will create a wrapped function
+<h5>Version ≥ 5.1</h5>
+
+<p>Every function has a bind method, which will create a wrapped function
 that will call it with the correct context. See here for more
-information.
-</p>
+information.</p>
+
 <pre>
 <b>var</b> monitor = {
   threshold: 5,
@@ -15501,22 +15304,15 @@ check(15);  // <i>This value of &grave;this&grave; was explicitly bound, the fun
 <b>var</b> check8 = monitor.check.bind(monitor, 8);
 check8();  // <i>We also bound the argument to &grave;8&grave; here. It can&apos;t be re-specified.</i>
 </pre>
-<p>
-<b>Hard binding</b>
-</p>
+
+<h4>Hard binding</h4>
+
 <ul>
-<li>
-The object of <i>hard binding</i> is to "hard" link a reference to
-<b>this</b>.
-</li>
-<li>
-Advantage: It's useful when you want to protect particular objects from
-being lost.
-</li>
-<li>
-Example:
-</li>
+  <li>The object of <i>hard binding</i> is to "hard" link a reference to <b>this</b>.</li>
+  <li>Advantage: It's useful when you want to protect particular objects from being lost.</li>
+  <li>Example:</li>
 </ul>
+
 <pre>
 <b>function</b> Person() {
   console.log(&quot;I&apos;m &quot; &plus; <b>this</b>.name);
@@ -15538,23 +15334,18 @@ Person.apply(person2);
 Person.call(person3);
 // <i>outputs: I&apos;m Stackoverflow</i>
 </pre>
+
 <!-- page 202 -->
 <ul>
-<li>
-So, as you can remark in the example above, whatever object you pass to
-<i>Person</i>, it'll always use <i>person() object</i> <b>it's hard
-binded.</b>
-</li>
+  <li>So, as you can remark in the example above, whatever object you pass to
+    <i>Person</i>, it'll always use <i>person() object</i> <b>it's hard binded.</b></li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch24-4">
-Section 24.4: this in constructor functions
-</h3>
+<h3 id="ch24-4">Section 24.4: this in constructor functions</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-When using a function as a constructor, it has a special <b>this</b>
-binding, which refers to the newly created object:
-</p>
+<p>When using a function as a constructor, it has a special <b>this</b>
+binding, which refers to the newly created object:</p>
+
 <pre>
 <b>function</b> Cat(name) {
   <b>this</b>.name = name;
@@ -15568,18 +15359,12 @@ cat2.name;  // <i>error! cannot access property of undefined</i>
 </pre>
 <!-- page 203 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch25">
-Chapter 25: Setters and Getters
-</h2>
+<h2 id="ch25">Chapter 25: Setters and Getters</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Setters and getters are object properties that call a function when they
-are set/gotten.
-</p>
+<p>Setters and getters are object properties that call a function when they
+are set/gotten.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch25-1">
-Section 25.1: Defining a Setter/Getter Using Object.defineProperty
-</h3>
+<h3 id="ch25-1">Section 25.1: Defining a Setter/Getter Using Object.defineProperty</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 <b>var</b> setValue;
@@ -15594,14 +15379,11 @@ Object.defineProperty(obj, &quot;objProperty&quot;, {
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch25-2">
-Section 25.2: Defining an Setter/Getter in a Newly Created Object
-</h3>
+<h3 id="ch25-2">Section 25.2: Defining an Setter/Getter in a Newly Created Object</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-JavaScript allows us to define getters and setters in the object literal
-syntax. Here's an example:
-</p>
+<p>JavaScript allows us to define getters and setters in the object literal
+syntax. Here's an example:</p>
+
 <pre>
 <b>var</b> date = {
   year: &apos;2017&apos;,
@@ -15627,17 +15409,14 @@ syntax. Here's an example:
   }
 };
 </pre>
-<p>
-Accessing the date.date property would return the value 2017-02-27.
+
+<p>Accessing the date.date property would return the value 2017-02-27.
 Setting date.date = ‘2018-1-02’ would call the setter function, which
 would then parse the string and set date.year = ‘2018’, date.month =
 ‘01, and date.day = ’02’. Trying to pass an incorrectly formateed string
-(such as “hello”) would throw an error.
-</p>
+(such as “hello”) would throw an error.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch25-3">
-Section 25.3: Defining getters and setters in ES6 class
-</h3>
+<h3 id="ch25-3">Section 25.3: Defining getters and setters in ES6 class</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 class Person {
@@ -15666,22 +15445,16 @@ console.log(person.firstname, person.lastname);  // <i>Foo Bar</i>
 </pre>
 <!-- page 205 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch26">
-Chapter 26: Events
-</h2>
+<h2 id="ch26">Chapter 26: Events</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch26-1">
-Section 26.1: Page, DOM and Browser loading
-</h3>
+<h3 id="ch26-1">Section 26.1: Page, DOM and Browser loading</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-This is an example to explain the variations of load events.
-</p>
+<p>This is an example to explain the variations of load events.</p>
+
 <ol type="1" start="1">
-<li>
-<b>onload event</b>
-</li>
+  <li><b>onload event</b></li>
 </ol>
+
 <pre>
 <b>&lt;body</b> onload=&quot;someFunction()&quot;<b>&gt;</b>
 <b>&lt;img</b> src=&quot;image1&quot; <b>/&gt;</b>
@@ -15693,83 +15466,72 @@ This is an example to explain the variations of load events.
   }
   <b>&lt;/script&gt;</b>
 </pre>
-<p>
-In this case, the message is logged once <i>all the contents of the page
-including the images and stylesheets(if any)</i> are completely loaded.
-</p>
+
+<p>In this case, the message is logged once <i>all the contents of the page
+including the images and stylesheets(if any)</i> are completely loaded.</p>
+
 <ol type="1" start="2">
-<li>
-<b>DOMContentLoaded event</b>
-</li>
+  <li><b>DOMContentLoaded event</b></li>
 </ol>
+
 <pre>
 document.addEventListener(&quot;DOMContentLoaded&quot;, <b>function</b>(event) {
   console.log(&quot;Hello! I am loaded&quot;);
   });
 </pre>
-<p>
-In the above code, the message is logged only after the DOM/document is
-loaded (<i>ie:once the DOM is constructed</i>).
-</p>
+
+<p>In the above code, the message is logged only after the DOM/document is
+loaded (<i>ie:once the DOM is constructed</i>).</p>
+
 <ol type="1" start="3">
-<li>
-<b>Self-invoking anonymous function</b>
-</li>
+  <li><b>Self-invoking anonymous function</b></li>
 </ol>
+
 <pre>
 (<b>function</b>() {
   console.log(&quot;Hi I am an anonymous function! I am loaded&quot;);
 })();
 </pre>
-<p>
-Here, the message gets logged as soon as the browser interprets the
+
+<p>Here, the message gets logged as soon as the browser interprets the
 anonymous function. It means, this function can get executed even before
-the DOM is loaded.
-</p>
+the DOM is loaded.</p>
 <!-- page 206 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch27">
-Chapter 27: Inheritance
-</h2>
+<h2 id="ch27">Chapter 27: Inheritance</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch27-1">
-Section 27.1: Standard function prototype
-</h3>
+<h3 id="ch27-1">Section 27.1: Standard function prototype</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Start by defining a Foo function that we'll use as a constructor.
-</p>
+<p>Start by defining a Foo function that we'll use as a constructor.</p>
+
 <pre>
 <b>function</b> Foo (){}
 </pre>
-<p>
-By editing Foo.prototype, we can define properties and methods that will
-be shared by all instances of Foo.
-</p>
+
+<p>By editing Foo.prototype, we can define properties and methods that will
+be shared by all instances of Foo.</p>
+
 <pre>
 Foo.<b>prototype</b>.bar = <b>function</b>() {
   <b>return</b> &apos;I am bar&apos;;
 };
 </pre>
-<p>
-We can then create an instance using the <b>new</b> keyword, and call
-the method.
-</p>
+
+<p>We can then create an instance using the <b>new</b> keyword, and call
+the method.</p>
+
 <pre>
 <b>var</b> foo = <b>new</b> Foo();
 console.log(foo.bar());  // <i>logs &grave;I am bar&grave;</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch27-2">
-Section 27.2: Difference between Object.key and Object.prototype.key
-</h3>
+<h3 id="ch27-2">Section 27.2: Difference between Object.key and Object.prototype.key</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Unlike in languages like Python, static properties of the constructor
+<p>Unlike in languages like Python, static properties of the constructor
 function are <i>not</i> inherited to instances. Instances only inherit
 from their prototype, which inherits from the parent type's prototype.
-Static properties are never inherited.
-</p>
+Static properties are never inherited.</p>
+
 <pre>
 <b>function</b> Foo() {};
 Foo.style = &apos;bold&apos;;
@@ -15782,102 +15544,93 @@ console.log(foo.style);  // <i>&apos;italic&apos;</i>
 </pre>
 <!-- thru 27.2 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch27-3">
-Section 27.3: Prototypal inheritance
-</h3>
+<h3 id="ch27-3">Section 27.3: Prototypal inheritance</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Suppose we have a plain object called <b>prototype</b>:
-</p>
+<p>Suppose we have a plain object called <b>prototype</b>:</p>
+
 <pre>
 <b>var prototype</b> = { foo: &apos;foo&apos;, bar: <b>function</b> () { <b>return this</b>.foo; } };
 </pre>
-<p>
-Now we want another object called obj that inherits from
+
+<p>Now we want another object called obj that inherits from
 <b>prototype</b>, which is the same as saying that <b>prototype</b> is
-the prototype of obj
-</p>
+the prototype of obj</p>
+
 <pre>
 <b>var</b> obj = Object.create(<b>prototype</b>);
 </pre>
-<p>
-Now all the properties and methods from <b>prototype</b> will be
-available to obj
-</p>
+
+<p>Now all the properties and methods from <b>prototype</b> will be
+available to obj</p>
+
 <!-- page 207 -->
 <pre>
 console.log(obj.foo);
 console.log(obj.bar());
 </pre>
-<p>
-Console output
-</p>
+
+<p>Console output</p>
+
 <pre>
 &quot;foo&quot;
 &quot;foo&quot;
 </pre>
-<p>
-Prototypal inheritance is made through object references internally and
+
+<p>Prototypal inheritance is made through object references internally and
 objects are completely mutable. This means any change you make on a
 prototype will immediately affect every other object that prototype is
-prototype of.
-</p>
+prototype of.</p>
+
 <pre>
 <b>prototype</b>.foo = &quot;bar&quot;;
 console.log(obj.foo);
 </pre>
-<p>
-Console output
-</p>
+
+<p>Console output</p>
+
 <pre>
 &quot;bar&quot;
 </pre>
-<p>
-Object.<b>prototype</b> is the prototype of every object, so it's
+
+<p>Object.<b>prototype</b> is the prototype of every object, so it's
 strongly recommended you don't mess with it, especially if you use any
-third party library, but we can play with it a little bit.
-</p>
+third party library, but we can play with it a little bit.</p>
+
 <pre>
 Object.<b>prototype</b>.breakingLibraries = &apos;foo&apos;;
 console.log(obj.breakingLibraries);
 console.log(<b>prototype</b>.breakingLibraries);
 </pre>
-<p>
-Console output
-</p>
+
+<p>Console output</p>
+
 <pre>
 &quot;foo&quot;
 &quot;foo&quot;
 </pre>
-<p>
-<b>Fun fact</b> I've used the browser console to make these examples and
-broken this page by adding that breakingLibraries property.
-</p>
+
+<p><b>Fun fact</b> I've used the browser console to make these examples and
+broken this page by adding that breakingLibraries property.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch27-4">
-Section 27.4: Pseudo-classical inheritance
-</h3>
+<h3 id="ch27-4">Section 27.4: Pseudo-classical inheritance</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-It's an emulation of classical inheritance using prototypical
+<p>It's an emulation of classical inheritance using prototypical
 inheritance which shows how powerful prototypes are. It was made to make
-the language more attractive to programmers coming from other languages.
-</p>
-<h5>
-Version &lt; 6
-</h5>
-<p>
-<b>IMPORTANT NOTE</b>: Since ES6 it doesn't make sense to use
+the language more attractive to programmers coming from other languages.</p>
+
+<h5>Version &lt; 6</h5>
+
+<p><b>IMPORTANT NOTE</b>: Since ES6 it doesn't make sense to use
 pseudo-classical inheritance since the language simulates conventional
 classes. If you're not using ES6, <a
 href="http://www.2ality.com/2015/08/getting-started-es6.html">you
 should</a>. If you still want to use the classical inheritance pattern
 and you're in a ECMAScript 5 or lower environment, then pseudo-classical
-is your best bet.
-<p>
-A "class" is just a function that is made to be called with the
-<b>new</b> operand and it's used as a constructor.
-</p>
+is your best bet.</p>
+
+<p>A "class" is just a function that is made to be called with the
+<b>new</b> operand and it's used as a constructor.</p>
+
 <pre>
 <b>function</b> Foo(id, name) {
   <b>this</b>.id = id;
@@ -15886,81 +15639,81 @@ A "class" is just a function that is made to be called with the
 <b>var</b> foo = <b>new</b>Foo(1, &apos;foo&apos;);
 console.log(foo.id);
 </pre>
+
 <!-- page 208 -->
-<p>
-Console output
-</p>
+<p>Console output</p>
+
 <blockquote>
 1
 </blockquote>
-<p>
-foo is an instance of Foo. The JavaScript coding convention says if a
+
+<p>foo is an instance of Foo. The JavaScript coding convention says if a
 function begins with a capital letter case it can be called as a
-constructor (with the <b>new</b> operand).
-</p>
-<p>
-To add properties or methods to the "class" you have to add them to its
+constructor (with the <b>new</b> operand).</p>
+
+<p>To add properties or methods to the "class" you have to add them to its
 prototype, which can be found in the <b>prototype</b> property of the
-constructor.
-</p>
+constructor.</p>
+
 <pre>
 Foo.<b>prototype</b>.bar = &apos;bar&apos;;
 console.log(foo.bar);
 </pre>
-<p>
-Console output
-</p>
+
+<p>Console output</p>
+
 <blockquote>
 bar
 </blockquote>
-Foo.<b>prototype</b>
-<p>
-In fact what Foo is doing as a "constructor" is just creating objects
-with Foo.<b>prototype</b> as it's prototype.
-</p>
-<p>
-You can find a reference to its constructor on every object
-</p>
+
+<p>In fact what Foo is doing as a "constructor" is just creating objects
+with Foo.<b>prototype</b> as it's prototype.</p>
+
+<p>You can find a reference to its constructor on every object</p>
+
 <pre>
 console.log(foo.constructor);
 </pre>
+
 <blockquote>
 function Foo(id, name) { …
 </blockquote>
+
 <pre>
 console.log({ }.constructor);
 </pre>
+
 <blockquote>
 function Object() {[native code]}
 </blockquote>
-<p>
-And also check if an object is an instance of a given class with the
-<b>instanceof</b> operator
-</p>
+
+<p>And also check if an object is an instance of a given class with the
+<b>instanceof</b> operator</p>
+
 <pre>
 console.log(foo <b>instanceof</b> Foo);
 </pre>
+
 <blockquote>
 true
 </blockquote>
+
 <pre>
 console.log(foo <b>instanceof</b> Object);
 </pre>
+
 <blockquote>
 true
 </blockquote>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch27-5">
-Section 27.5: Setting an Object's prototype
-</h3>
+<h3 id="ch27-5">Section 27.5: Setting an Object's prototype</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>
-Version ≥ 5
-</h5>
+<h5>Version ≥ 5</h5>
+
 <p>
 With ES5+, the function can be used to create an Object with any other
-Object as it's prototype.
-</p>
+Object as it's prototype.</p>
+
 <!-- page 209 -->
 <pre>
 <b>const</b> anyObj = {
@@ -15972,47 +15725,42 @@ Object as it's prototype.
 objWithProto.foo = &apos;bar&apos;;
 objWithProto.hello();  // <i>&quot;this.foo is bar&quot;</i>
 </pre>
-<p>
-To explicitly create an Object without a prototype, use <b>null</b> as
+
+<p>To explicitly create an Object without a prototype, use <b>null</b> as
 the prototype. This means the Object will not inherit from either
 Object.<b>prototype</b> either and is useful for Objects used for
-existence checking dictionaries, e.g.
-</p>
+existence checking dictionaries, e.g.</p>
+
 <pre>
 <b>let</b> objInheritingObject = {};
 <b>let</b> objInheritingNull = Object.create(<b>null</b>);
 &apos;toString&apos; <b>in</b> objInheritingObject;  // <i>true</i>
 &apos;toString&apos; <b>in</b> objInheritingNull;    // <i>false</i>
 </pre>
-<h5>
-Version ≥ 6
-</h5>
-<p>
-From ES6, the prototype of an existing Object can be changed using
-Object.<b>setPrototypeOf</b>, for example
-</p>
+
+<h5>Version ≥ 6</h5>
+
+<p>From ES6, the prototype of an existing Object can be changed using
+Object.<b>setPrototypeOf</b>, for example</p>
+
 <pre>
 <b>let</b> obj = Object.create({foo: &apos;foo&apos;});
 obj = Object.setPrototypeOf(obj, {bar: &apos;bar&apos;});
 obj.foo;  // <i>undefined</i>
 obj.bar;  // <i>&quot;bar&quot;</i>
 </pre>
-<p>
-This can be done almost anywhere, including on a <b>this</b> object or
-in a constructor.
-</p>
-<p>
-<b>Note:</b> This process is very slow in current browsers and should be
-used sparingly, try to create the Object with the desired prototype
-instead.
-</p>
-<h5>
-Version &lt; 5
-</h5>
-<p>
-Before ES5, the only way to create an Object with a manually defined
-prototype was to construct it with <b>new</b>, for example
-</p>
+
+<p>This can be done almost anywhere, including on a <b>this</b> object or
+in a constructor.</p>
+
+<p><b>Note:</b> This process is very slow in current browsers and should be used 
+sparingly, try to create the Object with the desired prototype instead.</p>
+
+<h5>Version &lt; 5</h5>
+
+<p>Before ES5, the only way to create an Object with a manually defined
+prototype was to construct it with <b>new</b>, for example</p>
+
 <pre>
 <b>var</b> proto = {fizz: &apos;buzz&apos;};
 <b>function</b> ConstructMyObj() {}
@@ -16020,40 +15768,32 @@ ConstructMyObj.<b>prototype</b> = proto;
 <b>var</b> objWithProto = <b>new</b> ConstructMyObj();
 objWithProto.fizz;  // <i>&quot;buzz&quot;</i>
 </pre>
-<p>
-This behaviour is close enough to Object.create that it is possible to
-write a polyfill.
-</p>
+
+<p>This behaviour is close enough to Object.create that it is possible to
+write a polyfill.</p>
 <!-- page 210 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch28">
-Chapter 28: Method Chaining
-</h2>
+<h2 id="ch28">Chapter 28: Method Chaining</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch28-1">
-Section 28.1: Chainable object design and chaining
-</h3>
+<h3 id="ch28-1">Section 28.1: Chainable object design and chaining</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Chaining and Chainable is a design methodology used to design object
+<p>Chaining and Chainable is a design methodology used to design object
 behaviors so that calls to object functions return references to self,
 or another object, providing access to additional function calls
 allowing the calling statement to chain together many calls without the
-need to reference the variable holding the objects.
-</p>
-<p>
-Objects that can be chained are said to be chainable. If you call an
+need to reference the variable holding the objects.</p>
+
+<p>Objects that can be chained are said to be chainable. If you call an
 object chainable, you should ensure that all returned objects /
 primitives are of the correct type. It only takes one time for your
 chainable object to not return the correct reference (easy to forget to
 add <b>return this</b>) and the person using your API will lose trust
 and avoid chaining. Chainable objects should be all or nothing (not a
 chainable object even if parts are). An object should not be called
-chainable if only some of its functions are.
-</p>
-<p>
-<b>Object designed to be chainable</b>
-</p>
+chainable if only some of its functions are.</p>
+
+<h4>Object designed to be chainable</h4>
+
 <pre>
 <b>function</b> Vec(x = 0,y = 0) {
   <b>this</b>.x = x;
@@ -16081,9 +15821,9 @@ Vec.<b>prototype</b> = {
   }
 }
 </pre>
-<p>
-<b>Chaining example</b>
-</p>
+
+<h4>Chaining example</h4>
+
 <pre>
 <b>var</b> vec = <b>new</b> Vec();
 vec.add({x:10, y:10})
@@ -16096,20 +15836,17 @@ vec.add({x:10, y:10})
    .scale(2)           // <i>from which you can continue chaining</i>
    .log()
 </pre>
-<p>
-<b>Don't create ambiguity in the return type</b>
-</p>
-<p>
-Not all function calls return a useful chainable type, nor do they
+
+<h4>Don't create ambiguity in the return type</h4>
+
+<p>Not all function calls return a useful chainable type, nor do they
 always return a reference to self. This is where common sense use of
 naming is important. In the above example the function call .() is
 unambiguous. Other examples are .<b>toString</b>() implies a string is
-returned.
-</p>
+returned.</p>
 <!-- page 211 -->
-<p>
-An example of an ambiguous function name in a chainable object.
-</p>
+<p>An example of an ambiguous function name in a chainable object.</p>
+
 <pre>
 // <i>line object represents a line</i>
 line.rotate(1)
@@ -16120,27 +15857,25 @@ line.rotate(1)
 // <i>toVec is just as good as long as the programmer can use the naming</i>
 // <i>to infer the return type</i>
 </pre>
-<p>
-<b>Syntax convention</b>
-</p>
-<p>
-There is no formal usage syntax when chaining. The convention is to
+
+<h4>Syntax convention</h4>
+
+<p>There is no formal usage syntax when chaining. The convention is to
 either chain the calls on a single line if short or to chain on the new
 line indented one tab from the referenced object with the dot on the new
 line. Use of the semicolon is optional but does help by clearly denoting
-the end of the chain.
-</p>
+the end of the chain.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 29. image029 goes here ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 29. example syntax conventions (211) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image029.png"
   title=" "
-  alt="."
+  alt="Syntax conventions."
   style="border: 2px solid #000000; width:7.486in;" />
-<p>
-<b>A bad syntax</b>
-</p>
+
+<h4>A bad syntax</h4>
+
 <pre>
 vec            // <i>new line before the first function call</i>
 .scale()       // <i>can make it unclear what the intention is</i>
@@ -16150,47 +15885,39 @@ vec.           // <i>the dot on the end of the line</i>
    scale(1/2); // <i>and will likely frustrate as can easily be missed</i>
                // <i>when trying to locate bugs</i>
 </pre>
-<p>
-<b>Left hand side of assignment</b>
-</p>
+
+<h4>Left hand side of assignment</h4>
 <!-- page 212 -->
-<p>
-When you assign the results of a chain the last returning call or object
-reference is assigned.
-</p>
+<p>When you assign the results of a chain the last returning call or object
+reference is assigned.</p>
+
 <pre>
 <b>var</b> vec2 = vec.scale(2)
   .add(x:1,y:10)
   .clone(); // <i>the last returned result is assigned</i>
   // <i>vec2 is a clone of vec after the scale and add</i>
 </pre>
-<p>
-In the above example vec2 is assigned the value returned from the last
+
+<p>In the above example vec2 is assigned the value returned from the last
 call in the chain. In this case, that would be a copy of vec after the
-scale and add.
-</p>
-<p>
-<b>Summary</b>
-</p>
-<p>
-The advantage of changing is clearer more maintainable code. Some people
+scale and add.</p>
+
+<h4>Summary</h4>
+
+<p>The advantage of changing is clearer more maintainable code. Some people
 prefer it and will make chainable a requirement when selecting an API.
 There is also a performance benefit as it allows you to avoid having to
 create variables to hold interim results. With the last word being that
 chainable objects can be used in a conventional way as well so you don't
-enforce chaining by making an object chainable.
-</p>
+enforce chaining by making an object chainable.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch28-2">
-Section 28.2: Method Chaining
-</h3>
+<h3 id="ch28-2">Section 28.2: Method Chaining</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Method chaining is a programming strategy that simplifies your code and
+<p>Method chaining is a programming strategy that simplifies your code and
 beautifies it. Method chaining is done by ensuring that each method on
 an object returns the entire object, instead of returning a single
-element of that object. For example:
-</p>
+element of that object. For example:</p>
+
 <pre>
 <b>function</b> Door() {
   <b>this</b>.height = &apos;&apos;;
@@ -16217,30 +15944,23 @@ Door.<b>prototype</b>.doorStatus = <b>function</b>() {
 <b>var</b> smallDoor = <b>new</b> Door();
 smallDoor.setParams(20, 100).open().doorStatus().close().doorStatus();
 </pre>
-<p>
-Note that each method in Door.<b>prototype</b> returns <b>this</b>,
-which refers to the entire instance of that Door object.
-</p>
+
+<p>Note that each method in Door.<b>prototype</b> returns <b>this</b>,
+which refers to the entire instance of that Door object.</p>
 <!-- page 213 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch29">
-Chapter 29: Callbacks
-</h2>
+<h2 id="ch29">Chapter 29: Callbacks</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch29-1">
-Section 29.1: Simple Callback Usage Examples
-</h3>
+<h3 id="ch29-1">Section 29.1: Simple Callback Usage Examples</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Callbacks offer a way to extend the functionality of a function (or
+<p>Callbacks offer a way to extend the functionality of a function (or
 method) </i><b>without changing</b></i> its code. This approach is often
 used in modules (libraries / plugins), the code of which is not supposed
-to be changed.
-</p>
-<p>
-Suppose we have written the following function, calculating the sum of a
-given array of values:
-</p>
+to be changed.</p>
+
+<p>Suppose we have written the following function, calculating the sum of a
+given array of values:</p>
+
 <pre>
 <b>function</b> foo(array) {
   <b>var</b> sum = 0;
@@ -16250,11 +15970,11 @@ given array of values:
   <b>return</b> sum;
 }
 </pre>
-<p>
-Now suppose that we want to do something with each value of the array,
+
+<p>Now suppose that we want to do something with each value of the array,
 e.g. display it using <span id="emphasize">alert()</span>. We could make
-the appropriate changes in the code of foo, like this:
-</p>
+the appropriate changes in the code of foo, like this:</p>
+
 <pre>
 <b>function</b> foo(array) {
   <b>var</b> sum = 0;
@@ -16265,14 +15985,14 @@ the appropriate changes in the code of foo, like this:
   <b>return</b> sum;
 }
 </pre>
-<p>
-But what if we decide to use <span id="emphasize">console.log()</span>?
+
+<p>But what if we decide to use <span id="emphasize">console.log()</span>?
 Obviously changing the code of foo, whenever we decide to do something
 else with each value, is not a good idea. It is much better to have the
 option to change our mind without changing the code of foo. That's
 exactly the use case for callbacks. We only have to slightly change
-foo's signature and body:
-</p>
+foo's signature and body:</p>
+
 <pre>
 <b>function</b> foo(array, callback) {
   <b>var</b> sum = 0;
@@ -16283,10 +16003,10 @@ foo's signature and body:
   <b>return</b> sum;
 }
 </pre>
-<p>
-And now we are able to change the behaviour of foo just by changing its
-parameters:
-</p>
+
+<p>And now we are able to change the behaviour of foo just by changing its
+parameters:</p>
+
 <pre>
 <b>var</b> array =&lbrack;&rbrack;;
 foo(array, alert);
@@ -16294,83 +16014,76 @@ foo(array, <b>function</b>(x) {
   console.log(x);
 });
 </pre>
-<p>
-<b>Examples with Asynchronous Functions</b>
-</p>
-<p>
-In jQuery, the <b>$getJSON()</b> method to fetch JSON data is
-asynchronous. Therefore, passing code in a callback makes sure that the
-code is called </i>after</i> the JSON is fetched.
-</p>
+
+<h4>Examples with Asynchronous Functions</h4>
+
+<p>In jQuery, the <b>$getJSON()</b> method to fetch JSON data is asynchronous. Therefore, 
+passing code in a callback makes sure that the code is called </i>after</i> the JSON is 
+fetched.</p>
+
 <!-- page 214 -->
-<p>
-$.getJSON () syntax:
-</p>
+<p>$.getJSON () syntax:</p>
+
 <pre>
 &dollar;.getJSON( url, dataObject, successCallback);
 </pre>
-<p>
-Example of <b>$.getJSON</b>() code:
-</p>
+
+<p>Example of <b>$.getJSON</b>() code:</p>
+
 <pre>
 &dollar;.getJSON(&quot;foo.json&quot;, {}, <b>function</b>(data) {
   // <i>data handling code</i>
 });
 </pre>
-<p>
-The following would <i>not</i> work, because the data-handling code
+
+<p>The following would <i>not</i> work, because the data-handling code
 would likely be called <i>before</i> the data is actually received,
 because the <b>$.getJSON</b> function takes an unspecified length of
-time and does not hold up the call stack as it waits for the JSON.
-</p>
+time and does not hold up the call stack as it waits for the JSON.</p>
+
 <pre>
 &dollar;.getJSON(&quot;foo.json&quot;, {});
 // <i>data handling code</i>
 </pre>
-<p>
-Another example of an asynchronous function is jQuery's <b>animate</b>()
+
+<p>Another example of an asynchronous function is jQuery's <b>animate</b>()
 function. Because it takes a specified time to run the animation,
 sometimes it is desirable to run some code directly following the
-animation.
-</p>
-<p>
-<b>.animate</b>() syntax:
-</p>
+animation.</p>
+
+<p><b>.animate</b>() syntax:</p>
+
 <pre>
 jQueryElement.animate( properties, duration, callback );
 </pre>
-<p>
-For example, to create a fading-out animation after which the element
+
+<p>For example, to create a fading-out animation after which the element
 completely disappears, the following code can be run. Note the use of
-the callback.
-</p>
+the callback.</p>
+
 <pre>
 elem.animate( { opacity: 0 }, 5000, <b>function</b>() {
   elem.hide();
 });
 </pre>
-<p>
-This allows the element to be hidden right after the function has
-finished execution. This differs from:
-</p>
+
+<p>This allows the element to be hidden right after the function has
+finished execution. This differs from:</p>
+
 <pre>
 elem.animate( { opacity: 0 }, 5000 );
 elem.hide();
 </pre>
-<p>
-because the latter does not wait for <b>animate</b>() (an asynchronous
+
+<p>because the latter does not wait for <b>animate</b>() (an asynchronous
 function) to complete, and therefore the element is hidden right away,
-producing an undesirable effect.
-</p>
+producing an undesirable effect.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch29-2">
-Section 29.2: Continuation (synchronous and asynchronous)
-</h3>
+<h3 id="ch29-2">Section 29.2: Continuation (synchronous and asynchronous)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Callbacks can be used to provide code to be executed after a method has
-completed:
-</p>
+<p>Callbacks can be used to provide code to be executed after a method has
+completed:</p>
+
 <pre>
 <i>/&ast;&ast;</i>
   <i>&ast; &commat;arg {Function} then continuation callback</i>
@@ -16389,15 +16102,13 @@ console.log(&apos;Doing something else&apos;);
 //   <i>&quot;Done&quot;</i>
 //   <i>&quot;Doing something else&quot;</i>
 </pre>
+
 <!-- page 215 -->
-<p>
-The <b>doSomething</b>() method above executes synchronously with the
+<p>The <b>doSomething</b>() method above executes synchronously with the
 callback - execution blocks until <b>doSomething</b>() returns, ensuring
-that the callback is executed before the interpreter moves on.
-</p>
-<p>
-Callbacks can also be used to execute code asynchronously:
-</p>
+that the callback is executed before the interpreter moves on.</p>
+<p>Callbacks can also be used to execute code asynchronously:</p>
+
 <pre>
 doSomethingAsync(then) {
   setTimeout(then, 1000);
@@ -16412,61 +16123,50 @@ console.log(&apos;Doing something else&apos;);
 // <i>&quot;Doing something else&quot;</i>
 // <i>&quot;Done&quot;</i>
 </pre>
-<p>
-The <b>then</b> callbacks are considered continuations of the
+
+<p>The <b>then</b> callbacks are considered continuations of the
 <b>doSomething</b>() methods. Providing a callback as the last
 instruction in a function is called a
 <a href="https://en.wikipedia.org/wiki/Tail_call" 
 target="_blank" rel="noopener noreferrer">tail-call</a>, which is
 <a href="http://www.2ality.com/2015/06/tail-call-optimization.html" 
 target="_blank" rel="noopener noreferrer">optimized by ES2015
-interpreters</a>.
-</p>
+interpreters</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch29-3">
-Section 29.3: What is a callback?
-</h3>
+<h3 id="ch29-3">Section 29.3: What is a callback?</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-This is a normal function call:
-</p>
+<p>This is a normal function call:</p>
+
 <pre>
 console.log(&quot;Hello World!&quot;);
 </pre>
-<p>
-When you call a normal function, it does its job and then returns
-control back to the caller.
-</p>
-<p>
-However, sometimes a function needs to return control back to the
-<i>caller</i> in order to do its job:
-</p>
+
+<p>When you call a normal function, it does its job and then returns
+control back to the caller.</p>
+<p>However, sometimes a function needs to return control back to the
+<i>caller</i> in order to do its job:</p>
+
 <pre>
 &lbrack;1, 2, 3&rbrack;.map(<b>function</b> double(x) {
   <b>return</b> 2 &ast; x;
 });
 </pre>
-<p>
-In the above example, the function <b>double</b> is a callback for the
-function <b>map</b> because:
-</p>
+
+<p>In the above example, the function <b>double</b> is a callback for the
+function <b>map</b> because:</p>
+
 <ol type="1" start="1">
-<li>
-The function <b>double</b> is given to the function map by the caller.
-</li>
-<li>
-The function <b>map</b> needs to call the function <b>double</b> zero or
-more times in order to do its job.
-</li>
+  <li>The function <b>double</b> is given to the function map by the caller.</li>
+  <li>The function <b>map</b> needs to call the function <b>double</b> zero or
+    more times in order to do its job.</li>
 </ol>
-<p>
-Thus, the function <b>map</b> is essentially returning control back to
+
+<p>Thus, the function <b>map</b> is essentially returning control back to
 the caller every time it calls the function double. Hence, the name
-“callback”.
-</p>
-<p>
-Functions may accept more than one callback:
-</p>
+“callback”.</p>
+
+<p>Functions may accept more than one callback:</p>
+
 <pre>
 promise.then(<b>function</b>onFulfilled(value) {
   console.log(&quot;Fulfilled with value &quot; &plus; value);
@@ -16502,14 +16202,13 @@ Often when using a callback you want access to a specific context.
 }
 <b>var</b> s = <b>new</b> SomeClass(&quot;hello&quot;, someElement);
 </pre>
-<p>
-<b>Solutions</b>
-</p>
+
+<h4>Solutions</h4>
+
 <ul>
-<li>
-Use bind<br/> <b>bind</b> effectively generates a new function that sets
-<b>this</b> to whatever was passed to <b>bind</b> then calls the
-original function.<br/>
+  <li>Use bind<br/> <b>bind</b> effectively generates a new function that sets
+    <b>this</b> to whatever was passed to <b>bind</b> then calls the
+	original function.<br/>
 <pre>
 <b>function</b> SomeClass(msg, elem) {
   <b>this</b>.msg = msg;
@@ -16518,10 +16217,9 @@ original function.<br/>
   } .bind(<b>this</b>));  // <i>&lt;=- bind the function to &grave;this&grave;</i>
 }
 </pre>
-</li>
-<li>
-Use arrow functions<br/> Arrow functions automatically bind the current
-<b>this</b> context.
+  </li>
+  <li>Use arrow functions<br/> Arrow functions automatically bind the current
+    <b>this</b> context.
 <pre>
 <b>function</b> SomeClass(msg, elem) {
   <b>this</b>.msg = msg;
@@ -16530,18 +16228,15 @@ Use arrow functions<br/> Arrow functions automatically bind the current
   });
 }
 </pre>
-</li>
+  </li>
 </ul>
-<p>
-Often you'd like to call a member function, ideally passing any
-arguments that were passed to the event on to the function.
-</p>
-<p>
-<b>Solutions:</b>
-</p>
+
+<p>Often you'd like to call a member function, ideally passing any
+arguments that were passed to the event on to the function.</p>
+<h4>Solutions:</h4>
+
 <ul>
-<li>
-Use bind<br/>
+  <li>Use bind<br/>
 <pre>
   <b>function</b> SomeClass(msg, elem) {
     <b>this</b>.msg = msg;
@@ -16551,12 +16246,10 @@ Use bind<br/>
     console.log(event.type, this.msg);
   };
   </pre>
-</li>
-<li>
-For DOM event listeners in particular you can implement the
-<a href="https://www.w3schools.com/jsref/met_document_addeventlistener.asp" 
-    target="_blank" rel="noopener noreferrer">EventListener
-interface</a>
+  </li>
+  <li>For DOM event listeners in particular you can implement the
+    <a href="https://www.w3schools.com/jsref/met_document_addeventlistener.asp" 
+    target="_blank" rel="noopener noreferrer">EventListener interface</a>
 <pre>
   function SomeClass(msg, elem} {
     this.msg = msg;
@@ -16571,8 +16264,8 @@ interface</a>
   SomeClass.prototype.click = function(event) {
     console.log(this.msg);
   };
-  </pre>
-</li>
+</pre>
+  </li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- <p align="left">
@@ -16582,53 +16275,42 @@ interface</a>
   style="border: 2px solid #000000; width:7.197in;" />
 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch29-5">
-Section 29.5: Callback using Arrow function
-</h3>
+<h3 id="ch29-5">Section 29.5: Callback using Arrow function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<b>Using arrow function as callback function can reduce lines of
-code.</b>
-</p>
-<p>
-The default syntax for arrow function is
-</p>
+<h4>Using arrow function as callback function can reduce lines of code.</h4>
+<p>The default syntax for arrow function is</p>
+
 <pre>
 () =&gt; {}
 </pre>
-<p>
-This can be used as callbacks
-</p>
-<p>
-For example if we want to print all elements in an array [1,2,3,4,5]
-without arrow function, the code will look like this [
-</p>
+
+<p>This can be used as callbacks</p>
+
+<p>For example if we want to print all elements in an array [1,2,3,4,5]
+without arrow function, the code will look like this</p>
+
 <pre>
 &lbrack;1,2,3,4,5&rbrack;.forEach(<b>function</b>(x) {
   console.log(x);
 }
 </pre>
-<p>
-With arrow function, it can be reduced to
-</p>
+
+<p>With arrow function, it can be reduced to</p>
 <!-- page 218 -->
+
 <pre>
 &lbrack;1,2,3,4,5&rbrack;.forEach(x =&gt; console.log(x));
 </pre>
-<p>
-Here the callback function <b>function(x){console.log(x))</b> is reduced
-to <b>x=&gt;console.log(x)</b>.
-</p>
+
+<p>Here the callback function <b>function(x){console.log(x))</b> is reduced
+to <b>x=&gt;console.log(x)</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch29-6">
-Section 29.6: Error handling and control-flow branching
-</h3>
+<h3 id="ch29-6">Section 29.6: Error handling and control-flow branching</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Callbacks are often used to provide error handling. This is a form of
+<p>Callbacks are often used to provide error handling. This is a form of
 control flow branching, where some instructions are executed only when
-an error occurs:
-</p>
+an error occurs:</p>
+
 <pre>
 <b>const</b> expected = <b>true</b>;
 <b>function</b> compare(actual, success, failure) {
@@ -16650,12 +16332,12 @@ compare(<b>false</b>, onSuccess, onFailure);
 // <i>&quot;Value was expected&quot;</i>
 // <i>&quot;Value was unexpected/exceptional&quot;</i>
 </pre>
-<p>
-Code execution in <b>compare</b>() above has two possible branches:
+
+<p>Code execution in <b>compare</b>() above has two possible branches:
 success when the expected and actual values are the same, and error when
 they are different. This is especially useful when control flow should
-branch after some asynchronous instruction:
-</p>
+branch after some asynchronous instruction:</p>
+
 <pre>
 <b>function</b> compareAsync(actual, success, failure) {
   setTimeout(<b>function</b> () {
@@ -16670,29 +16352,23 @@ console.log(&apos;Doing something else&apos;);
 // <i>&quot;Value was expected&quot;</i>
 // <i>&quot;Value was unexpected/exceptional&quot;</i>
 </pre>
-<p>
-It should be noted, multiple callbacks do not have to be mutually
+
+<p>It should be noted, multiple callbacks do not have to be mutually
 exclusive - both methods could be called. Similarly, the
 <b>compare</b>() could be written with callbacks that are optional (by
 using a <a href="https://en.wikipedia.org/wiki/NOP" 
 target="_blank" rel="noopener noreferrer">noop</a> as the default value
 - see <a href="https://en.wikipedia.org/wiki/Null_Object_pattern" 
-target="_blank" rel="noopener noreferrer"> Null Object pattern</a>).
-</p>
+target="_blank" rel="noopener noreferrer"> Null Object pattern</a>).</p>
 <!-- page 219 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch30">
-Chapter 30: Intervals and Timeouts
-</h2>
+<h2 id="ch30">Chapter 30: Intervals and Timeouts</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch30-1">
-Section 30.1: Recursive setTimeout
-</h3>
+<h3 id="ch30-1">Section 30.1: Recursive setTimeout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-To repeat a function indefinitely, <b>setTimeout</b> can be called
-recursively:
-</p>
+<p>To repeat a function indefinitely, <b>setTimeout</b> can be called
+recursively:</p>
+
 <pre>
 <b>function</b> repeatingFunc() {
   console.log(&quot;It&apos;s been 5 seconds. Execute the function again.&quot;);
@@ -16700,19 +16376,16 @@ recursively:
 }
 setTimeout(repeatingFunc, 5000);
 </pre>
-<p>
-Unlike <b>setInterval</b>, this ensures that the function will execute
+
+<p>Unlike <b>setInterval</b>, this ensures that the function will execute
 even if the function's running time is longer than the specified delay.
 However, it does not guarantee a regular interval between function
 executions. This behaviour also varies because an exception before the
 recursive call to <b>setTimeout</b> will prevent it from repeating
 again, while <b>setInterval</b> would repeat indefinitely regardless of
-exceptions.
-</p>
+exceptions.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch30-2">
-Section 30.2: Intervals
-</h3>
+<h3 id="ch30-2">Section 30.2: Intervals</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 <b>function</b> waitFunc() {
@@ -16721,35 +16394,28 @@ Section 30.2: Intervals
 window.setInterval(waitFunc, 5000);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch30-3">
-Section 30.3: Intervals
-</h3>
+<h3 id="ch30-3">Section 30.3: Intervals</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<b>Standard</b>
-</p>
-<p>
-You don't need to create the variable, but it's a good practice as you
-can use that variable with clearInterval to stop the currently running
-interval.
-</p>
+<h4>Standard</h4>
+
+<p>You don't need to create the variable, but it's a good practice as you can use that 
+variable with clearInterval to stop the currently running interval.</p>
+
 <pre>
 <b>var</b> int = setInterval(&quot;doSomething()&quot;, 5000 ); <i>/&ast; 5 seconds &ast;/</i>
 <b>var</b> int = setInterval(doSomething, 5000 ); <i>/&ast; same thing, no quotes, no parens &ast;/</i>
 </pre>
-<p>
-If you need to pass parameters to the doSomething function, you can pass
-them as additional parameters beyond the first two to setInterval.
-</p>
-<p>
-<b>Without overlapping</b>
-</p>
-<p>
-setInterval, as above, will run every 5 seconds (or whatever you set it
+
+<p>If you need to pass parameters to the doSomething function, you can pass
+them as additional parameters beyond the first two to setInterval.</p>
+
+<h4>Without overlapping</h4>
+
+<p>setInterval, as above, will run every 5 seconds (or whatever you set it
 to) no matter what. Even if the function doSomething takes long than 5
 seconds to run. That can create issues. If you just want to make sure
-there is that pause in between runnings of doSomething, you can do this:
-</p>
+there is that pause in between runnings of doSomething, you can do this:</p>
+
 <pre>
 (<b>function</b>() {
   doSomething();
@@ -16757,16 +16423,13 @@ there is that pause in between runnings of doSomething, you can do this:
 })()
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch30-4">
-Section 30.4: Removing intervals
-</h3>
+<h3 id="ch30-4">Section 30.4: Removing intervals</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-window.setInterval() returns an IntervalID, which can be used to stop
+<p>window.setInterval() returns an IntervalID, which can be used to stop
 that interval from continuing to run. To do this, store the return value
 of window.setInterval() in a variable and call clearInterval() with that
-variable as the only argument:
-</p>
+variable as the only argument:</p>
+
 <pre>
 <b>function</b> waitFunc() {
   console.log(&quot;This will be logged every 5 seconds&quot;);
@@ -16776,21 +16439,17 @@ window.setTimeout(<b>function</b>() {
   clearInterval(interval);
 },32000);
 </pre>
-<p>
-This will log “This will be logged every 5 seconds” every 5 seconds, but
-will stop it after 32 seconds. So it will log the message 6 times.
-</p>
+
+<p>This will log “This will be logged every 5 seconds” every 5 seconds, but
+will stop it after 32 seconds. So it will log the message 6 times.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch30-5">
-Section 30.5: Removing timeouts
-</h3>
+<h3 id="ch30-5">Section 30.5: Removing timeouts</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-window.setTimout () returns a TimeoutID, which can be used to stop that
+<p>window.setTimout () returns a TimeoutID, which can be used to stop that
 timeout from running. To do this, store the return value of
 window.setTimeout() in a variable and call clearTimeout() with that
-variable as the only argument.
-</p>
+variable as the only argument.</p>
+
 <pre>
 <b>function</b> waitFunc() {
   console.log(&quot;This will not be logged after 5 seconds&quot;);
@@ -16801,46 +16460,35 @@ variable as the only argument.
 <b>var</b> timeout = window.setTimeout(waitFunc, 5000);
 window.setTimeout(stopFunc, 3000);
 </pre>
-<p>
-This will not log the message because the timer is stopped after 3
-seconds.
-</p>
+
+<p>This will not log the message because the timer is stopped after 3 seconds.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch30-6">
-Section 30.6: setTimeout, order of operations, clearTimeout
-</h3>
+<h3 id="ch30-6">Section 30.6: setTimeout, order of operations, clearTimeout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<b>setTimeout</b>
-</p>
+<h4>setTimeout</h4>
+
 <ul>
-<li>
-Executes a function, after waiting a specified number of milliseconds.
-</li>
-<li>
-Used to delay the execution of a function.
-</li>
+  <li>Executes a function, after waiting a specified number of milliseconds.</li>
+  <li>Used to delay the execution of a function.</li>
 </ul>
-<p>
-<b>Syntax:</b> setTimeout ( <b>function</b>, milliseconds) or
-window.setTimeout(<b>function</b>, milliseconds)
-</p>
-<p>
-<b>Example :</b> This example outputs "hello" to the console after 1
+
+<p><b>Syntax:</b> setTimeout ( <b>function</b>, milliseconds) or
+window.setTimeout(<b>function</b>, milliseconds)</p>
+
+<p><b>Example :</b> This example outputs "hello" to the console after 1
 second. The second parameter is in milliseconds, so 1000 = 1 sec, 250 =
-0.25 sec, etc.
-</p>
+0.25 sec, etc.</p>
+
 <pre>
 setTimeout(<b>function</b>() {
   console.log(&apos;hello&apos;);
 }, 1000);
 </pre>
-<p>
-<b>Problems with setTimeout</b>
-</p>
-<p>
-if you're using the setTimeout method in a for loop:
-</p>
+
+<h4>Problems with setTimeout</h4>
+
+<p>if you're using the setTimeout method in a for loop:</p>
+
 <!-- page 221 -->
 <pre>
 <b>for</b> (i = 0; i &lt; 3; ++i) {
@@ -16849,12 +16497,11 @@ if you're using the setTimeout method in a for loop:
   }, 500);
 }
 </pre>
-<p>
-This will output the value 3 times, which is not correct.
-</p>
-<p>
-Workaround of this problem :
-</p>
+
+<p>This will output the value 3 times, which is not correct.</p>
+
+<p>Workaround of this problem:</p>
+
 <pre>
 <b>for</b> (i = 0; i &lt; 3; ++i) {
   setTimeout(<b>function</b>(j) {
@@ -16862,51 +16509,46 @@ Workaround of this problem :
   } (i), 1000);
 }
 </pre>
-<p>
-It will output the value 0,1,2. Here, we’re passing the i into the
-function as a parameter(j).
-</p>
-<p>
-<b>Order of operations</b>
-</p>
-<p>
-Additionally though, due to the fact that JavaScript is single threaded
+
+<p>It will output the value 0,1,2. Here, we’re passing the i into the
+function as a parameter(j).</p>
+
+<h4>Order of operations</h4>
+
+<p>Additionally though, due to the fact that JavaScript is single threaded
 and uses a global event loop, setTimeout can be used to add an item to
 the end of the execution queue by calling setTimeout with zero delay.
-For example:
-</p>
+For example:</p>
+
 <pre>
 setTimeout(<b>function</b>() {
   console.log(&apos;world&apos;);
 }, 0);
 console.log(&apos;hello&apos;);
 </pre>
-<p>
-Will actually output:
-</p>
+
+<p>Will actually output:</p>
+
 <pre>
 hello
 world
 </pre>
-<p>
-Also, zero milliseconds here does not mean the function inside the
+
+<p>Also, zero milliseconds here does not mean the function inside the
 setTimeout will execute immediately. It will take slightly more than
 that depending upon the items to be executed remaining in the execution
-queue. This one is just pushed to the end of the queue.
-</p>
-<p>
-<b>Cancelling a timeout</b>
-</p>
-<p>
-<b>clearTimeout():</b> stops the execution of the function specified in
-setTimeout()
-</p>
-<b>Syntax:</b> clearTimeout(timeoutVariable) or
-window.clearTimeout(timeoutVariable)
-</p>
-<p>
-<b>Example:</b>
-</p>
+queue. This one is just pushed to the end of the queue.</p>
+
+<h4>Cancelling a timeout</h4>
+
+<p><b>clearTimeout():</b> stops the execution of the function specified in
+setTimeout()</p>
+
+<p><b>Syntax:</b> clearTimeout(timeoutVariable) or
+window.clearTimeout(timeoutVariable)</p>
+
+<h4>Example:</h4>
+
 <pre>
 <b>var</b> timeout = setTimeout(<b>function</b>() {
   console.log(&apos;hello&apos;);
@@ -16914,163 +16556,114 @@ window.clearTimeout(timeoutVariable)
 clearTimeout(timeout);  // <i>The timeout will no longer be executed</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch31">
-Chapter 31: Regular expressions
-</h2>
+<h2 id="ch31">Chapter 31: Regular expressions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <table border="1" style="width:200px">
-<thead>
-<tr>
-<th>
-Flags
-</th>
-<th>
-Details
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-g
-</td>
-<td>
-<b>g</b>lobal. All matches (don’t return on the first match).
-</td>
-</tr>
-<tr>
-<td>
-m
-</td>
-<td>
-<b>m</b>ulti-line. Causes ^&amp;$ to match the begin/end of each line
-(not only begin/end of string).
-</td>
-</tr>
-<tr>
-<td>
-i
-</td>
-<td>
-<b>i</b>nsensitive: Case insensitive match (ignores case of [a-zA-Z]).
-</td>
-</tr>
-<tr>
-<td>
-u
-</td>
-<td>
-<b>u</b>nicode: Pattern strings are treated as <b>UTF-16</b>. Also
-causes escape sequences to match Unicode characters.
-</td>
-</tr>
-<tr>
-<td>
-y
-</td>
-<td>
-stick<b>y</b>: matches only from the index indicated by the lastIndex
-property of this regular expression in the target string (and does not
-attempt to match from any later indexes).
-</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Flags</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>g</td>
+      <td><b>g</b>lobal. All matches (don’t return on the first match).</td>
+    </tr>
+    <tr>
+      <td>m</td>
+      <td><b>m</b>ulti-line. Causes ^&amp;$ to match the begin/end of each line(not only begin/end of string).</td>
+    </tr>
+    <tr>
+      <td>i</td>
+      <td><b>i</b>nsensitive: Case insensitive match (ignores case of [a-zA-Z]).</td>
+    </tr>
+    <tr>
+      <td>u</td>
+      <td><b>u</b>nicode: Pattern strings are treated as <b>UTF-16</b>. Also causes escape sequences 
+	    to match Unicode characters.</td>
+    </tr>
+    <tr>
+      <td>y</td>
+      <td>stick<b>y</b>: matches only from the index indicated by the lastIndex property of this 
+	    regular expression in the target string (and does not attempt to match from any later indexes).</td>
+    </tr>
+  </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch31-1">
-Section 31.1: Creating a RegExp Object
-</h3>
+<h3 id="ch31-1">Section 31.1: Creating a RegExp Object</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<b>Standard Creation</b>
-</p>
-<p>
-It is recommended to use this form only when creating regex from dynamic
-variables.
-</p>
-<p>
-Use when the expression may change or the expression is user generated.
-</p>
+<h4>Standard Creation</h4>
+
+<p>It is recommended to use this form only when creating regex from dynamic
+variables.</p>
+
+<p>Use when the expression may change or the expression is user generated.</p>
+
 <pre>
 <b>var</b> re = <b>new</b> RegExp(&quot;.&ast;&quot;);
 </pre>
-<p>
-With flags:
-</p>
+
+<p>With flags:</p>
+
 <pre>
 <b>var</b> re = <b>new</b> RegExp(&quot;.&ast;&quot;, &quot;gmi&quot;);
 </pre>
-<p>
-With a backslash: (this must be escaped because the regex is specified
-with a string)
-</p>
+
+<p>With a backslash: (this must be escaped because the regex is specified
+with a string)</p>
+
 <pre>
 <b>var</b> re = <b>new</b> RegExp(&quot;<b>&bsol;&bsol;</b>w&ast;&quot;);
 </pre>
-<p>
-<b>Static initialization</b>
-</p>
-<p>
-Use when you know the regular expression will not change, and you know
-what the expression is before runtime.
-</p>
+
+<h4>Static initialization</h4>
+
+<p>Use when you know the regular expression will not change, and you know
+what the expression is before runtime.</p>
+
 <pre>
 <b>var</b> re = <i>/.&ast;/</i>;
 </pre>
-<p>
-With flags:
-</p>
+
+<p>With flags:</p>
+
 <pre>
 <b>var</b> re = <i>/.&ast;/gmi</i>;
 </pre>
-<p>
-With a backslash: (this should not be escaped because the regex is
-specified in a literal)
-</p>
+
+<p>With a backslash: (this should not be escaped because the regex is
+specified in a literal)</p>
+
 <pre>
 <b>var</b> re = <i>/&bsol;&bsol;w&ast;/</i>;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch31-2">
-Section 31.2: RegExp Flags
-</h3>
+<h3 id="ch31-2">Section 31.2: RegExp Flags</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-There are several flags you can specify to alter the RegEx behaviour.
+<p>There are several flags you can specify to alter the RegEx behaviour.
 Flags may be appended to the end of a regex literal, such as specifying
 gi in test/gi, or they may be specified as the second argument to the
-RegExp constructor, as in <b>new</b> RegExp('test', 'gi').
-</p>
+RegExp constructor, as in <b>new</b> RegExp('test', 'gi').</p>
+
 <ul>
-<li>
-g - Global. Finds all matches instead of stopping after the first.
-</li>
-<li>
-i - Ignore case. /[a-z]/i is equivalent to /[a\Z]/.
-</li>
-<li>
-m - Multiline. ^ and $ match the beginning and end of each line
-respectively treating \\n and \\r as delimiters instead of simply the
-beginning and end of the entire string.
-</li>
+  <li>g - Global. Finds all matches instead of stopping after the first.</li>
+  <li>i - Ignore case. /[a-z]/i is equivalent to /[a\Z]/.</li>
+  <li>m - Multiline. ^ and $ match the beginning and end of each line
+    respectively treating \\n and \\r as delimiters instead of simply the
+	beginning and end of the entire string.</li>
 </ul>
-<h5>
-Version ≥ 6
-</h5>
+
+<h5>Version ≥ 6</h5>
+
 <ul>
-<li>
-u - Unicode. If this flag is not supported you must match specific
-Unicode characters with \\uXXXX where XXXX is the character's value in
-hexadecimal.
-</li>
-<li>
-y - Finds all consecutive/adjacent matches.
-</li>
+  <li>u - Unicode. If this flag is not supported you must match specific
+    Unicode characters with \\uXXXX where XXXX is the character's value in
+	hexadecimal.</li>
+  <li>y - Finds all consecutive/adjacent matches.</li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch31-3">
-Section 31.3: Check if string contains pattern using .test()
-</h3>
+<h3 id="ch31-3">Section 31.3: Check if string contains pattern using .test()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 <b>var</b> re = <i>/&lbrack;a-z&rbrack;+/</i>;
@@ -17078,41 +16671,33 @@ Section 31.3: Check if string contains pattern using .test()
   console.log(&quot;Match exists.&quot;);
 }
 </pre>
-<p>
-The test method performs a search to see if a regular expression matches
+
+<p>The test method performs a search to see if a regular expression matches
 a string. The regular expression [a-z]+ will search for one or more
 lowercase letters. Since the pattern matches the string, “match exists”
-will be logged to the console.
-</p>
+will be logged to the console.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch31-4">
-Section 31.4: Matching With .exec()
-</h3>
+<h3 id="ch31-4">Section 31.4: Matching With .exec()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<b>Match Using .exec()</b>
-</p>
-<p>
-RegExp.<b>prototype</b> . exec (string) returns an array of captures, or
-<b>null</b> if there was no match.
-</p>
+<h4>Match Using .exec()</h4>
+
+<p>RegExp.<b>prototype</b> . exec (string) returns an array of captures, or
+<b>null</b> if there was no match.</p>
+
 <pre>
 <b>var</b> re = <i>/(&lbrack;0-9&rbrack;+)&lbrack;a-z&rbrack;+/</i>;
 <b>var</b> match = re.exec(&quot;foo123bar&quot;);
 </pre>
-<p>
-match.index is 3, the (zero-based) location of the match.
-</p>
-<p>
-match[0] is the full match string.
-</p>
-<p>
-match[1] is the text corresponding to the first captured group.match[n]
-would be the value of the <i>n</i>th captured group.
-</p>
-<p>
-<b>Loop Through Matches Using .exec()</b>
-</p>
+
+<p>match.index is 3, the (zero-based) location of the match.</p>
+
+<p>match[0] is the full match string.</p>
+
+<p>match[1] is the text corresponding to the first captured group.match[n] 
+would be the value of the <i>n</i>th captured group.</p>
+
+<h4>Loop Through Matches Using .exec()</h4>
+
 <pre>
 <b>var</b> re = <i>/a/g</i>;
 <b>var</b> result;
@@ -17120,9 +16705,9 @@ while ((result = re.exec(&apos;barbatbaz&apos;)) !== <b>null</b>) {
   console.log(&quot;found &apos;&quot; &plus; result&lbrack;0&rbrack; &plus; &quot;&apos;, next exec starts at index &apos;&quot; &plus; re.lastIndex &plus; &quot;&apos;&quot;);
 }
 </pre>
-<p>
-Expected output
-</p>
+
+<p>Expected output</p>
+
 <blockquote>
 found 'a', next exec starts at index '2' found 'a', next exec starts at
 index '5' found 'a', next exec starts at index '8'
@@ -17132,120 +16717,97 @@ index '5' found 'a', next exec starts at index '8'
 Section 31.5: Using RegExp With Strings
 </h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The String object has the following methods that accept regular
-expressions as arguments.
-</p>
+<p>The String object has the following methods that accept regular expressions as arguments.</p>
+
 <ul>
-<li>
-"string".match(…
-</li>
-<li>
-"string".replace(…
-</li>
-<li>
-"string".split(…
-</li>
-<li>
-"string".search(…
-</li>
+  <li>"string".match(…</li>
+  <li>"string".replace(…</li>
+  <li>"string".split(…</li>
+  <li>"string".search(…</li>
 </ul>
-<p>
-<b>Match with RegExp</b>
-</p>
+
+<h4>Match with RegExp</h4>
+
+<pre>
 console.log("string".match(<i>/[i-n]+/</i>));
 console.log("string".match(<i>/(r)[i-n]+/</i>));
 </pre>
-<p>
-Expected output
-</p>
+
+<p>Expected output</p>
+
 <blockquote>
 Array ["in"] Array ["rin", "r"]
 </blockquote>
-<p>
-<b>Replace with RegExp</b>
-</p>
+
+<h4>Replace with RegExp</h4>
+
 <pre>
 console.log(&quot;string&quot;.replace(<i>/&lbrack;i-n&rbrack;+/</i>,&quot;foo&quot;));
 </pre>
-<p>
-Expected output
-</p>
+
+<p>Expected output</p>
+
 <blockquote>
 strfoog
 </blockquote>
-<p>
-<b>Split with RegExp</b>
-</p>
+
+<h4>Split with RegExp</h4>
+
 <pre>
 console.log(&quot;stringstring&quot;.split(<i>/&lbrack;i-n&rbrack;+/</i>));
 </pre>
-<p>
-Expected output
-</p>
+
+<p>Expected output</p>
+
 <blockquote>
 Array ["str", "gstr", "g"]
 </blockquote>
-<p>
-<b>Search with RegExp</b>
-</p>
-<p>
-search.() returns the index at which a match is found or -1.
-</p>
+
+<h4>Search with RegExp</h4>
+
+<p>search.() returns the index at which a match is found or -1.</p>
+
 <pre>
 console.log(&quot;string&quot;.search(<i>/&lbrack;i-n&rbrack;+/</i>));
 console.log(&quot;string&quot;.search(<i>/&lbrack;o-q&rbrack;+/</i>));
 </pre>
-<p>
-Expected output
-</p>
+
+<p>Expected output</p>
+
 <blockquote>
 3<br/> -1
 </blockquote>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch31-6">
-Section 31.6: RegExp Groups
-</h3>
+<h3 id="ch31-6">Section 31.6: RegExp Groups</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-JavaScript supports several types of group in its Regular Expressions,
+<p>JavaScript supports several types of group in its Regular Expressions,
 <i>capture groups</i>, <i>non-capture groups</i> and <i>lookaheads</i>.
-Currently, there is no <i>look-behind</i> support.
-</p>
-<p>
-<b>Capture</b>
-</p>
-<p>
-Sometimes the desired match relies on its context. This means a simple
+Currently, there is no <i>look-behind</i> support.</p>
+
+<h4>Capture</h4>
+
+<p>Sometimes the desired match relies on its context. This means a simple
 <i>RegExp</i> will over-find the piece of the <i>String</i> that is of
 interest, so the solution is to write a capture group (pattern). The
-captured data can then be referenced as…
-</p>
+captured data can then be referenced as…</p>
+
 <!-- page 225 -->
 <ul>
-<li>
-String replacement "$n" where n is the <i>n th</i> capture group
-(starting from 1)
-</li>
-<li>
-The <i>n th</i> argument in a callback function
-</li>
-<li>
-If the <i>RegExp</i> is not flagged g, the <i>n+1 th</i> item in a
-returned <i>Array</i>
-</li>
-<li>
-If the <i>RegExp</i> is flagged g, str.match discards capters, use
-re.exec instead
-</li>
+  <li>String replacement "$n" where n is the <i>n th</i> capture group
+    (starting from 1)</li>
+  <li>The <i>n th</i> argument in a callback function</li>
+  <li>If the <i>RegExp</i> is not flagged g, the <i>n+1 th</i> item in a
+    returned <i>Array</i></li>
+  <li>If the <i>RegExp</i> is flagged g, str.match discards capters, use
+    re.exec instead</li>
 </ul>
-<p>
-Say there is a <i>String</i> where all + signs need to be replaced with
+
+<p>Say there is a <i>String</i> where all + signs need to be replaced with
 a space, but only if they follow a letter character. This means a simple
 match would include that letter character and it would also be removed.
 Capturing it is the solution as it means the matched letter can be
-preserved.
-</p>
+preserved.</p>
+
 <pre>
 <b>let</b> str = &quot;aa+b+cc+1+2&quot;,
   re = <i>/(&lbrack;a-z&rbrack;)&amp;plus;/g</i>;
@@ -17254,49 +16816,43 @@ str.replace(re, &apos;&dollar;1 &apos;);  // <i>&quot;aa b cc 1+2&quot;</i>
 // <i>Function replacement</i>
 str.replace(re, (m, &dollar;1) =&gt; &dollar;1 &plus; &apos; &apos;);  // <i>&quot;aa b cc 1+2&quot;</i>
 </pre>
-<p>
-<b>Non-Capture</b>
-</p>
-<p>
-Using the form (?:pattern), these work in a similar way to capture
+
+<h4>Non-Capture</h4>
+
+<p>Using the form (?:pattern), these work in a similar way to capture
 groups, except they do not store the contents of the group after the
-match.
-</p>
-<p>
-They can be particularly useful if other data is being captured which
+match.</p>
+
+<p>They can be particularly useful if other data is being captured which
 you don't want to move the indices of, but need to do some advanced
-pattern matching such as an OR
-</p>
+pattern matching such as an OR</p>
+
 <pre>
 <b>let</b> str = &quot;aa+b+cc+1+2&quot;,
   re = <i>/(?:&bsol;&bsol;b&vert;c)(&lbrack;a-z&rbrack;)&amp;plus;/g</i>;
 str.replace(re, &apos;&dollar;1 &apos;); // <i>&quot;aa+b c 1+2&quot;</i>
 </pre>
-<p>
-<b>Look-Ahead</b>
-</p>
-<p>
-If the desired match relies on something which follows it, rather than
+
+<h4>Look-Ahead</h4>
+
+<p>If the desired match relies on something which follows it, rather than
 matching that and capturing it, it is possible to use a look-ahead to
 test for it but not include it in the match. A positive look-ahead has
 the form (), a negative look-ahead (where the expression match only
 happens if the look-ahead pattern did not match) has the form
-(?!pattern)
-</p>
+(?!pattern)</p>
+
 <pre>
 <b>let</b> str = &quot;aa+b+cc+1+2&quot;,
   re = <i>/\&plus;(?=&lbrack;a-z&rbrack;)/g</i>;
 str.replace(re, &apos; &apos;);  // <i>&quot;aa b cc+1+2&quot;</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch31-7">
-Section 31.7: Replacing string match with a callback function
-</h3>
+<h3 id="ch31-7">Section 31.7: Replacing string match with a callback function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-String#replace can have a function as its second argument so you can
-provide a replacement based on some logic.
-</p>
+<p>String#replace can have a function as its second argument so you can
+provide a replacement based on some logic.</p>
+
 <pre>
 &quot;Some string Some&quot;.replace(/Some/g, (match, startIndex, wholeString) =&gt; {
   <b>if</b>(startIndex == 0) {
@@ -17307,35 +16863,29 @@ provide a replacement based on some logic.
   });
 // <i>will return Start string End</i>
 </pre>
+
 <!-- page 226 -->
-<p>
-One line template library
-</p>
+<p>One line template library</p>
+
 <pre>
 <b>let</b> data = {name: &apos;John&apos;, surname: &apos;Doe&apos;}
 &quot;My name is {surname}, {name} {surname}&quot;.replace(<i>/(?:{(.+?)})/g</i>, x =&gt;data&lbrack;x&period;slice(1,-1)&rbrack;);
 // <i>&quot;My name is Doe, John Doe&quot;</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch31-8">
-Section 31.8: Using Regex.exec() with parentheses regex to extract
-matches of a string
-</h3>
+<h3 id="ch31-8">Section 31.8: Using Regex.exec() with parentheses regex to extract matches of a string</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Sometimes you doesn't want to simply replace or remove the string.
+<p>Sometimes you doesn't want to simply replace or remove the string.
 Sometimes you want to extract and process matches. Here an example of
-how you manipulate matches.
-</p>
-<p>
-What is a match ? When a compatible substring is found for the entire
+how you manipulate matches.</p>
+
+<p>What is a match ? When a compatible substring is found for the entire
 regex in the string, the exec command produce a match. A match is an
 array compose by firstly the whole substring that matched and all the
-parenthesis in the match.
-</p>
-<p>
-Imagine a html string:
-</p>
+parenthesis in the match.</p>
+
+<p>Imagine a html string:</p>
+
 <pre>
 <b>&lt;html&gt;</b>
 <b>&lt;head&gt;&lt;/head&gt;</b>
@@ -17346,18 +16896,18 @@ http://anotherlinkoutsideatag<b>&lt;/p&gt;</b>
 Copyright <b>&lt;a</b> href=&quot;https://stackoverflow.com&quot;<b>&gt;</b>Stackoverflow<b>&lt;/a&gt;&lt;</b>
 <b>/body&gt;</b>
 </pre>
-<p>
-You want to extract and get all the links inside an a tag. At first,
-here the regex you write:
-</p>
+
+<p>You want to extract and get all the links inside an a tag. At first,
+here the regex you write:</p>
+
 <pre>
 <b>var</b> re = <i>/&lt;a&lbrack;&Hat;&gt;&rbrack;&ast;href=&quot;https?:&bsol;/&bsol;/.&ast;&quot;&lbrack;&Hat;&gt;&rbrack;&ast;&gt;&lbrack;&Hat;&lt;&rbrack;&ast;&lt;&bsol;/a&gt;/g</i>;
 </pre>
-<p>
-But now, imagine you want the href and the anchor of each link. And you
+
+<p>But now, imagine you want the href and the anchor of each link. And you
 want it together. You can simply add a new regex in for each match
-<b>OR</b> you can use parentheses:
-</p>
+<b>OR</b> you can use parentheses:</p>
+
 <pre>
 <b>var</b> re = <i>/&lt;a&lbrack;&Hat;&gt;&rbrack;&ast;href=&quot;(https?:&bsol;&bsol;/&bsol;&bsol;/.&ast;)&quot;&lbrack;&Hat;&gt;&rbrack;&ast;&gt;(&lbrack;&Hat;&lt;&rbrack;&ast;)&lt;&bsol;&bsol;/a&gt;/g</i>;
 <b>var</b> str = &apos;&lt;html&gt;<b>&bsol;n</b> &lt;head&gt;&lt;/head&gt;<b>&bsol;n</b> &lt;body&gt;<b>&bsol;n</b> &lt;h1&gt;Example&lt;/h1&gt;<b>&bsol;n</b> &lt;p&gt;Look at this
@@ -17379,56 +16929,46 @@ while ((m = re.exec(str)) !== <b>null</b>) {
   });
 }
 </pre>
+
 <!-- page 227 -->
-<p>
-At the end of the loop, you have an array of link with anchor and href
-and you can use it to write markdown for example:
-</p>
+<p>At the end of the loop, you have an array of link with anchor and href
+and you can use it to write markdown for example:</p>
+
 <pre>
 links.forEach(<b>function</b>(link) {
   console.log(&apos;&lbrack;%s&rbrack;(%s)&apos;, link.anchor, link.href);
 });
 </pre>
-<p>
-To go further:
-</p>
+
+<p>To go further:</p>
+
 <ul>
-<li>
-Nested parenthesis
-</li>
+  <li>Nested parenthesis</li>
 </ul>
+<!-- page 228 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch32">
-Chapter 32: Cookies
-</h2>
+<h2 id="ch32">Chapter 32: Cookies</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch32-1">
-Section 32.1: Test if cookies are enabled
-</h3>
+<h3 id="ch32-1">Section 32.1: Test if cookies are enabled</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-If you want to make sure cookies are enabled before using them, you can
-use navigator.cookieEnabled:
-</p>
+<p>If you want to make sure cookies are enabled before using them, you can
+use navigator.cookieEnabled:</p>
+
 <pre>
 <b>if</b> (navigator.cookieEnabled === <b>false</b>)
 {
   alert(&quot;Error: cookies not enabled!&quot;);
 }
 </pre>
-<p>
-Note that on older browsers navigator.cookieEneabled may not exist and
+
+<p>Note that on older browsers navigator.cookieEneabled may not exist and
 be undefined. In those cases you won't detect that cookies are not
-enabled.
-</p>
+enabled.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch32-2">
-Section 32.2: Adding and Setting Cookies
-</h3>
+<h3 id="ch32-2">Section 32.2: Adding and Setting Cookies</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The following variables set up the below example:
-</p>
+<p>The following variables set up the below example:</p>
+
 <pre>
 <b>var</b> COOKIE_NAME = &quot;Example Cookie&quot;; <i>/&ast; The cookie&apos;s name. &ast;/</i> 
 <b>var</b> COOKIE_VALUE = &quot;Hello, world!&quot;; <i>/&ast; The cookie&apos;s value. &ast;/</i>
@@ -17442,9 +16982,7 @@ document.cookie += COOKIE_NAME
 &plus; &quot;; path=&quot; + COOKIE_PATH;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch32-3">
-Section 32.3: Reading cookies
-</h3>
+<h3 id="ch32-3">Section 32.3: Reading cookies</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 <b>var</b> name = name &plus; &quot;=&quot;,
@@ -17458,56 +16996,60 @@ Section 32.3: Reading cookies
       cookie_value = cookie.substring(name.length, cookie.length);
 }
 </pre>
-<p>
-This will set cookie_value to the value of the cookie, if it exists. If
-the cookie is not set, it will set cookie_value to <b>null</b>
-</p>
+
+<p>This will set cookie_value to the value of the cookie, if it exists. If
+the cookie is not set, it will set cookie_value to <b>null</b></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch32-4">
-Section 32.4: Removing cookies
-</h3>
+<h3 id="ch32-4">Section 32.4: Removing cookies</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 <b>var</b> expiry = <b>new</b> Date();
 expiry.setTime(expiry.getTime() &minus; 3600);
 document.cookie = name &plus; &quot;=; expires=&quot; &plus; expiry.toGMTString() &plus; &quot;; path=/&quot;
 </pre>
-<p>
-This will remove the cookie with a given name.
-</p>
+
+<p>This will remove the cookie with a given name.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch33">
-Chapter 33: Web Storage
-</h2>
+<h2 id="ch33">Chapter 33: Web Storage</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<b>Parameter Description</b>
-</p>
-<pre>
-<i>name</i> The key/name of the item 
-<i>value</i> The value of the item
-</pre>
+<table border="1" style="width:200px">
+  <thead>
+    <tr>
+      <th><b>Parameter</b></th>
+      <th><b>Description</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><i>name</i></td>
+      <td>The key/name of the item</td>
+	</tr>
+    <tr>
+      <td><i>value</i></td>
+      <td>The value of the item</td>
+	</tr>
+  </tbody>
+</table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch33-1">
-Section 33.1: Using localStorage
-</h3>
+<h3 id="ch33-1">Section 33.1: Using localStorage</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The localStorage object provides persistent (but not permanent - see
+<p>The localStorage object provides persistent (but not permanent - see
 limits below) key-value storage of strings. Any changes are immediately
 visible in all other windows/frames from the same origin. The stored
 values persistent indefinitely unless the user clears saved data or
 configures an expiration limit. localStorage uses a map-like interface
-for getting and setting values.
-</p>
+for getting and setting values.</p>
+
+<pre>
 localStorage.setItem('name', "John Smith");
 console.log(localStorage.getItem('name')); // <i>"John Smith"</i>
 localStorage.removeItem('name');
 console.log(localStorage.getItem('name')); // <i>null</i>
-<p>
-If you want to store simple structured data, you can use JSON to
-serialize it to and from strings for storage.
-</p>
+</pre>
+
+<p>If you want to store simple structured data, you can use JSON to
+serialize it to and from strings for storage.</p>
+
 <pre>
 <b>var</b> players = &lbrack;{name: &quot;Tyler&quot;, score: 22}, {name: &quot;Ryan&quot;, score: 41}&rbrack;;
 localStorage.setItem(&apos;players&apos;, JSON.stringify(players));
@@ -17515,68 +17057,37 @@ localStorage.setItem(&apos;players&apos;, JSON.stringify(players));
 console.log(JSON.parse(localStorage.getItem(&apos;players&apos;)));
 // <i>&lbrack; Object { name: &quot;Tyler&quot;, score: 22 }, Object { name: &quot;Ryan&quot;, score: 41 } &rbrack;</i>
 </pre>
-<p>
-<b>localStorage limits in browsers</b>
-</p>
-<p>
-Mobile browsers:
-</p>
+
+<h4>localStorage limits in browsers</h4>
+
+<p>Mobile browsers:</p>
+
 <table border="1" style="width:200px">
-<thead>
-<tr>
-<th>
-<b>Browser</b>
-</th>
-<th>
-<b>Google Chrome</b>
-</th>
-<th>
-<b>Android Browser</b>
-</th>
-<th>
-<b>Firefox</b>
-</th>
-<th>
-<b>iOS Safari</b>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-Version
-</td>
-<td>
-40
-</td>
-<td>
-4.3
-</td>
-<td>
-34
-</td>
-<td>
-6-8
-</td>
-</tr>
-<tr>
-<td>
-Space available
-</td>
-<td>
-10MB
-</td>
-<td>
-2MB
-</td>
-<td>
-10MB
-</td>
-<td>
-5MB
-</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th><b>Browser</b></th>
+      <th><b>Google Chrome</b></th>
+      <th><b>Android Browser</b></th>
+      <th><b>Firefox</b></th>
+      <th><b>iOS Safari</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Version</td>
+      <td>40</td>
+      <td>4.3</td>
+      <td>34</td>
+      <td>6-8</td>
+    </tr>
+    <tr>
+      <td>Space available</td>
+      <td>10MB</td>
+      <td>2MB</td>
+      <td>10MB</td>
+      <td>5MB</td>
+    </tr>
+  </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch33-2">
@@ -21364,58 +20875,37 @@ request.onerror = <b>function</b>() {
 Chapter 43: Set
 </h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
 <table border="1" style="width:200px">
-<thead>
-<tr>
-<th>
-<b>Parameter</b>
-</th>
-<th>
-<b>Details</b>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-Iterable
-</td>
-<td>
-If an iterable object is passed, all of its elements will be added to
-the new Set. null is treated as undefined.
-</td>
-</tr>
-<tr>
-<td>
-value
-</td>
-<td>
-The value of the element to add to the Set object.
-</td>
-</tr>
-<tr>
-<td>
-callback
-</td>
-<td>
-Function to execute for each element.
-</td>
-</tr>
-<tr>
-<td>
-thisArg
-</td>
-<td>
-Optional. Value to use as this when executing callback.
-</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th><b>Parameter</b></th>
+      <th><b>Details</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Iterable</td>
+      <td>If an iterable object is passed, all of its elements will be added to
+	    the new Set. null is treated as undefined.</td>
+    </tr>
+    <tr>
+      <td>value</td>
+      <td>The value of the element to add to the Set object.</td>
+    </tr>
+    <tr>
+      <td>callback</td>
+      <td>Function to execute for each element.</td>
+    </tr>
+    <tr>
+      <td>thisArg</td>
+      <td>Optional. Value to use as this when executing callback.</td>
+    </tr>
+  </tbody>
 </table>
-<p>
-The Set object lets you store unique values of any type, whether
-primitive values or object references.
-</p>
+
+<p>The Set object lets you store unique values of any type, whether
+primitive values or object references.</p>
+
 <p>
 Set objects are collections of values. You can iterate through the
 elements of a set in insertion order. A value in the Set may only occur
@@ -22314,13 +21804,9 @@ HTMLTable editing etc. a rule of thumbs is to look for an <b>already
 existent</b> and robust <b>Rich-Text</b> editor.
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch45-3">
-Section 45.3: Copy to clipboard from textarea using execCommand("copy")
-</h3>
+<h3 id="ch45-3">Section 45.3: Copy to clipboard from textarea using execCommand("copy")</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Example:
-</p>
+<p>Example:</p>
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
@@ -22348,9 +21834,7 @@ document.execCommand("copy") copies the current selection to the
 clipboard
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch45-4">
-Section 45.4: Formatting
-</h3>
+<h3 id="ch45-4">Section 45.4: Formatting</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>
 Users can add formatting to contenteditable documents or elements using
@@ -22369,9 +21853,7 @@ document.execCommand(&apos;underline&apos;, <b>false</b>, <b>null</b>); // <i>to
 </pre>
 <!-- page 287 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch46">
-Chapter 46: History
-</h2>
+<h2 id="ch46">Chapter 46: History</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- page 287 -->
 <table border="1" style="width:200px">
@@ -22413,12 +21895,9 @@ The path to update to
 </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch46-1">
-Section 46.1: history.pushState()
+<h3 id="ch46-1">Section 46.1: history.pushState()
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Syntax:
-</p>
+<p>Syntax:</p>
 <pre>
 history.pushState(state object, title, url)
 </pre>
@@ -22442,9 +21921,7 @@ Note this is different from the (). Which updates the current history
 entry, rather than adding a new one.
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch46-2">
-Section 46.2: history.replaceState()
-</h3>
+<h3 id="ch46-2">Section 46.2: history.replaceState()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>
 <b>Syntax:</b>
@@ -22468,33 +21945,30 @@ Note this is different from the history.pushState(). Which inserts a new
 history entry, rather than replacing the current one.
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch46-3">
-Section 46.3: Load a specific URL from the history list
-</h3>
+<h3 id="ch46-3">Section 46.3: Load a specific URL from the history list</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<b>go() method</b>
-</p>
-<p>
-The go() method loads a specific URL from the history list. The
+<p><b>go() method</b></p>
+<p>The go() method loads a specific URL from the history list. The
 parameter can either be a number which goes to the URL within the
 specific position (-1 goes back one page, 1 goes forward one page), or a
 string. The string must be a partial or full URL, and the function will
-go to the first URL that matches the string.
-</p>
+go to the first URL that matches the string.</p>
+
 <blockquote>
 Syntax
 </blockquote>
+
 <!-- page 288 -->
 <pre>
 history.go(number&vert;URL)
 </pre>
+
 <blockquote>
 Example
 </blockquote>
-<p>
-Click on the button to go back two pages:
-</p>
+
+<p>Click on the button to go back two pages:</p>
+
 <pre>
 <b>&lt;html&gt;</b>
   <b>&lt;head&gt;</b>
@@ -22512,13 +21986,9 @@ Click on the button to go back two pages:
 </pre>
 <!-- page 289 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch47">
-Chapter 47: Navigator Object
-</h2>
+<h2 id="ch47">Chapter 47: Navigator Object</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch47-1">
-Section 47.1: Get some basic browser data and return it as a JSON object
-</h3>
+<h3 id="ch47-1">Section 47.1: Get some basic browser data and return it as a JSON object</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>
 The following function can be used to get some basic information about
@@ -22560,13 +22030,9 @@ the current browser and return it in JSON format.
 </pre>
 <!-- page 290 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch48">
-Chapter 48: BOM (Browser Object Model)
-</h2>
+<h2 id="ch48">Chapter 48: BOM (Browser Object Model)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch48-1">
-Section 48.1: Introduction
-</h3>
+<h3 id="ch48-1">Section 48.1: Introduction</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>
 The BOM (Browser Object Model) contains objects that represent the
@@ -23927,9 +23393,7 @@ pattern.exec(message);
 &lbrack;&quot;Welcome, John!&quot;, &quot;John&quot;&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch54-4">
-Section 54.4: Templating HTML With Template Strings
-</h3>
+<h3 id="ch54-4">Section 54.4: Templating HTML With Template Strings</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>
 You can create an HTML`…` template string tag function to automatically
