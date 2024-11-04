@@ -50,20 +50,6 @@ nor accurate, use at your own risk.</p>
 <!--page 2-->
 
 <h2 id="ch1">Chapter 1: Getting started with JavaScript</h2>
-
-<h5>Version Release Date</h5>
-
-1.  1997-06-01
-2.  1998-06-01
-3.  1998-12-01
-<a href="http://www-archive.mozilla.org/js/language/ECMA-357.pdf" target="_blank" rel="noreferrer noopener">E4X</a> 2004-06-01<br>
-<a href="http://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262%205th%20edition%20December%202009.pdf" 
-target="_blank" rel="noreferrer noopener">5</a> 2009-12-01<br>
-<a href="http://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262%205.1%20edition%20June%202011.pdf" 
-target="_blank" rel="noreferrer noopener">5.1</a> 2011-06-01<br>
-6.  2015-06-01
-7.  2016-06-14
-8.  2017-06-27
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ readme.md of js-notes4-pros.org ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
