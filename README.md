@@ -7221,6 +7221,7 @@ Object.defineProperties(obj, {
 <h3 id="ch13-8">Section 13.8: Accesor properties (get and set)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>Version ≥ 5</h5>
+
 <p>Treat a property as a combination of two functions, one to get the
 value from it, and another one to set the value in it.</p>
 <p>The <b>get</b> property of the property descriptor is a function that
@@ -7229,7 +7230,8 @@ will be called to retrieve the value from the property.</p>
 property has been assigned a value, and the new value will be passed
 as an argument.</p>
 <p>You cannot assign a value or writable to a descriptor that has <b>get</b>
-or <b>set</h4>
+or <b>set</b></p>
+
 <pre>
 <b>var</b> person = { name: &quot;John&quot;, surname: &quot;Doe&quot;};
 Object.defineProperty(person, &apos;fullName&apos;, {
