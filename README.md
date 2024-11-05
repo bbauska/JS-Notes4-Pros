@@ -4,7 +4,7 @@ title: |
   JavaScript ® JS-Notes4Pros.bauska.org
   by web@petercv.com, PDF https://goalkicker.com/CSSBook
 author: "bbauska"
-date last editted: "11/04/2024 Mon 1+am"
+date last editted: "11/05/2024 Tue 110+am"
 ---
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -25381,7 +25381,7 @@ they have changed in different versions of the language.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><b>JavaScript has a predefined collection of <i>reserved keywords</i> which
 you cannot use as variables, labels, or function names.</b></p>
-<p><b>ECMAScript 1</b>
+<h4>ECMAScript 1</h4>
 <h5>Version = 1</h5>
 <table border="1" style="width:200px">
   <thead>
@@ -25458,32 +25458,154 @@ you cannot use as variables, labels, or function names.</b></p>
 <p>Added <b>24</b> additional reserved keywords. (New additions in bold).</p>
 
 <h5>Version = 3 Version = E4X</h5>
-<!--
-| <b><i>A</i></b>  <b><i>F F</i></b>  <b><i>P</i></b>     | <b><i>P</i></b>  <b><i>Z</i></b>    |
-| <b>abstractfinal</b>     | <b>public</b>   |
-| <b>boolean finally</b>       | <b>return</b>   |
-| <b>break float</b>       | <b>short</b>    |
-| <b>byte for</b>      | <b>static</b>   |
-| <b>case function</b>     | super    |
-| <b>catch goto</b>        | <b>switch</b>   |
-| <b>char</b> if       | <b>synchronized</b>     |
-class <b>implementsthis const</b> import <b>throw continue</b>in <b>throws</b>
-debugger<b>instanceoftransient</b>
-  <b>default</b>    <b>int</b>     <b>true</b>
-  <b>delete</b>     <b>interface</b>   <b>try</b>
-  do     <b>long</b>    <b>typeof</b>
-  <b>double</b>     <b>native</b>      <b>var</b>
-  <b>else</b>   <b>new</b>     <b>void</b>
-  enum       <b>null</b>    <b>volatile</b>
-  export     <b>package</b>     while
-  extends    <b>private</b>     with
-<b>false</b> protected
-<b>ECMAScript 5 / 5.1</b>
-There was no change since <i>ECMAScript 3</i>.
+<table border="1" style="width:200px">
+  <thead>
+    <tr>
+      <th><b>A-F</b></th>
+      <th><b>F-P</b></th>
+      <th><b>P-Z</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>abstract</b></td>
+      <td>final</td>
+      <td><b>public</b></td>
+    </tr>
+    <tr>
+      <td>boolean</td>
+      <td><b>finally</b></td>
+      <td><b>return</b></td>
+    </tr>
+    <tr>
+      <td><b>break</b></td>
+      <td>float</td>
+      <td>short</td>
+    </tr>
+    <tr>
+      <td>byte</td>
+      <td><b>for</b></td>
+      <td><b>static</b></td>
+    </tr>
+    <tr>
+      <td><b>case</b></td>
+      <td><b>function</b></td>
+      <td>super</td>
+    </tr>
+    <tr>
+      <td><b>catch</b></td>
+      <td><b>goto</b></td>
+      <td><b>switch</b></td>
+    </tr>
+    <tr>
+      <td><b>char</b></td>
+      <td>if</td>
+      <td><b>synchronized</b></td>
+    </tr>
+    <tr>
+      <td>class</td>
+      <td>implements</td>
+      <td><b>this</b></td>
+    </tr>
+    <tr>
+      <td><b>const</b></td>
+      <td><b>import</b></td>
+      <td><b>throw</b></td>
+    </tr>
+    <tr>
+      <td><b>continue</b></td>
+      <td>in</td>
+      <td><b>throws</b></td>
+    </tr>
+    <tr>
+      <td><b>debugger</b></td>
+      <td><b>instanceof</b></td>
+      <td><b>transient</b></td>
+    </tr>
+    <tr>
+      <td><b>default</b></td>
+      <td><b>int</b></td>
+      <td><b>true</b></td>
+    </tr>
+    <tr>
+      <td><b>delete</b></td>
+      <td><b>interface</b></td>
+      <td><b>try</b></td>
+    </tr>
+    <tr>
+      <td><b>do</b></td>
+      <td><b>long</b></td>
+      <td><b>typeof</b></td>
+    </tr>
+    <tr>
+      <td><b>double</b></td>
+      <td><b>native</b></td>
+      <td><b>var</b></td>
+    </tr>
+    <tr>
+      <td><b>else</b></td>
+      <td><b>new</b></td>
+      <td><b>void</b></td>
+    </tr>
+    <tr>
+      <td><b>enum</b></td>
+      <td><b>null</b></td>
+      <td><b>volatile</b></td>
+    </tr>
+    <tr>
+      <td><b>export</b></td>
+      <td><b>package</b></td>
+      <td><b>while</b></td>
+    </tr>
+    <tr>
+      <td><b>extends</b></td>
+      <td><b>private</b></td>
+      <td><b>with</b></td>
+    </tr>
+    <tr>
+      <td><b>false</b></td>
+      <td><b>protected</b></td>
+      <td></td>
+    </tr>
+  </thead>
+</table>
+<h4>ECMAScript 5 / 5.1</h4>
+<p>There was no change since <i>ECMAScript 3</i>.</p>
 
-<i>ECMAScript 5</i> removed int, byte, char, <b>goto</b>, long, final, float,
+<p><i>ECMAScript 5</i> removed int, byte, char, <b>goto</b>, long, final, float,
 short, double, native, throws, boolean, abstract, volatile, transient,
-and synchronized; it added <b>let</b> and yield.
+and synchronized; it added <b>let</b> and yield.</p>
+
+<table border="1" style="width:200px">
+  <thead>
+    <tr>
+      <th><b>A-F</b></th>
+      <th><b>F-P</b></th>
+      <th><b>P-Z</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>break</b></td>
+      <td><b>finally</b></td>
+      <td><b>public</b></td>
+    </tr>
+    <tr>
+      <td><b>case</b></td>
+      <td><b>for</b></td>
+      <td><b>return</b></td>
+    </tr>
+    <tr>
+      <td><b>catch</b></td>
+      <td><b>function</b></td>
+      <td><b>static</b></td>
+    </tr>
+    <tr>
+      <td>class</td>
+      <td>if</td>
+      <td>super</td>
+    </tr>
+    <tr>
 
 | <b><i>A</i></b>  <b><i>F</i></b> | <b><i>F</i></b>  <b><i>P</i></b>     | <b><i>P</i></b>   |
        |         | <b><i>Z</i></b>  |
