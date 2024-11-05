@@ -5120,7 +5120,7 @@ realArray.forEach(value =&gt; {/&ast; Do something &ast;/}); // <i>Works</i>
   .map((key) =&gt; arrayLike&lbrack;key&rbrack;);
 </pre>
   
-<h4>Convert Array-like Objects to Arrays in</b> ≤ <b>ES5</h4>
+<h4>Convert Array-like Objects to Arrays in ≤ ES5</h4>
 
 <p>Use Array.prototype.slice like so:</p>
 
@@ -5134,9 +5134,12 @@ realArray.forEach(value =&gt; {/&ast; Do something &ast;/}); // <i>Works</i>
 realArray = &lbrack;&rbrack;.slice.call(arrayLike); // <i>Shorter version</i>
 realArray.indexOf(&apos;Value 1&apos;); // <i>Wow! this works</i>
 </pre>
+
 <p>You can also use Function.<b>prototype</b>.call to call Array.<b>prototype</b> methods
 on Array-like objects directly, without converting them:</p>
+
 <h5>Version ≥ 5.1</h5>
+
 <pre>
 <b>var</b> domList = document.querySelectorAll(&apos;#myDropdown option&apos;);
 domList.forEach (<b>function</b>() {
@@ -5147,9 +5150,12 @@ Array.<b>prototype</b>forEach.call(domList, <b>function</b>() {
   // <i>Do stuff</i>
 }); // <i>Wow! this works</i>
 </pre>
+
 <p>You can also use &lbrack;&rbrack;.method.bind( arrayLikeObject ) to borrow array 
 methods and glom them on to your object:</p>
+
 <h5>Version ≥ 5.1</h5>
+
 <pre>
 <b>var</b> arrayLike = {
   0: &apos;Value 0&apos;,
@@ -5163,11 +5169,16 @@ arrayLike.forEach(<b>function</b>() {
 // <i>Do stuff with val</i>
 }); // <i>Wow! this works</i>
 </pre>
+
 <!-- page 82 -->
+
 <h4>Modifying Items During Conversion</h4>
+
 <p>In ES6, while using Array.from, we can specify a map function that returns a
 mapped value for the new array being created.</p>
+
 <h5>Version ≥ 6</h5>
+
 <pre>
 Array.from(domList, element =&bsol;element.tagName); // <i>Creates an array of tagName&apos;s</i>
 </pre>
