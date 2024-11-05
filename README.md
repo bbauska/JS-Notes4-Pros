@@ -8045,6 +8045,7 @@ fraction = myNum &percnt; 1;        // <i>-0.857142857142857</i>
 <h3 id="ch14-3">Section 14.3: Rounding</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Rounding</h4>
+
 <p>Math.round() will round the value to the closest integer using <i>half round up</i>
 to break ties.</p>
 <pre>
@@ -8052,27 +8053,37 @@ to break ties.</p>
 <b>var</b> b = Math.round(2.7);  // <i>b is now 3</i>
 <b>var</b> c = Math.round(2.5);  // <i>c is now 3</i>
 </pre>
+
 <p>But</p>
+
 <pre>
 <b>var</b> c = Math.round(&minus;2.7);  // <i>c is now -3</i>
 <b>var</b> c = Math.round(&minus;2.5);  // <i>c is now -2</i>
 </pre>
+
 <p>Note how -2.5 is rounded to -2. This is because half-way values are always rounded 
 up, that is they&apos;re rounded to the integer with the next higher value.</p>
 <!-- page 131 -->
 
 <h4>Rounding up</h4>
+
 <p>Math.ceil() will round the value up.</p>
+
 <pre>
 <b>var</b> a = Math.ceil(2.3);  // <i>a is now 3</i>
 <b>var</b> b = Math.ceil(2.7);  // <i>b is now 3</i>
 </pre>
+
 <p>ceiling a negative number will round towards zero</p>
+
 <pre>
 <b>var</b> c = Math.ceil(&minus;1.1);  // <i>c is now 1</i>
 </pre>
+
 <h4>Rounding down</h4>
+
 <p>Math.floor() will round the value down.</p>
+
 <pre>
 <b>var</b> a = Math.floor(2.3);  // <i>a is now 2</i>
 <b>var</b> b = Math.floor(2.7);  // <i>b is now 2</i>
@@ -8081,6 +8092,7 @@ up, that is they&apos;re rounded to the integer with the next higher value.</p>
 <pre>
 <b>var</b> c = Math.floor(&minus;1.1);  // <i>c is now -1</i>
 </pre>
+
 <h4>Truncating</h4>
 
 <p><b>Caveat</b>: using bitwise operators (except &gt;&gt;&gt;) only applies to
@@ -8094,6 +8106,7 @@ numbers between &minus;2147483649 and 2147483648.</p>
 <h5>Version ≥ 6</h5>
 
 <p>Math.trunc()</p>
+
 <pre>
 Math.trunc(2.3);           // <i>2 (floor)</i>
 Math.trunc(-2.3);          // <i>-2 (ceil)</i>
@@ -8101,11 +8114,13 @@ Math.trunc(2147483648.1);  // <i>2147483648 (floor)</i>
 Math.trunc(-2147483649.1); // <i>-2147483649 (ceil)</i>
 Math.trunc(<b>NaN</b>);    // <i>NaN</i>
 </pre>
-<p><b>Rounding to decimal places</h4>
+
+<h4>Rounding to decimal places</h4>
+
 <p>Math.floor, Math.ceil(), and Math.round() () can be used to round to a number of 
 decimal places</p>
-
 <p>To round to 2 decimal places:</p>
+
 <pre>
 <b>var</b> myNum = 2/3;    // <i>0.6666666666666666</i>
 <b>var</b> multiplier = 100;
@@ -8113,7 +8128,9 @@ decimal places</p>
 <b>var</b> b = Math.ceil (myNum &ast; multiplier) / multiplier; // <i>0.67</i>
 <b>var</b> c = Math.floor(myNum &ast; multiplier) / multiplier; // <i>0.66</i>
 </pre>
+
 <p>You can also round to a number of digits:</p>
+
 <pre>
 <b>var</b> myNum = 10000/3;  // <i>3333.3333333333335</i>
 <b>var</b> multiplier = 1/100;
@@ -8121,8 +8138,10 @@ decimal places</p>
 <b>var</b> b = Math.ceil (myNum &ast; multiplier) / multiplier; // <i>3400</i>
 <b>var</b> c = Math.floor(myNum &ast; multiplier) / multiplier; // <i>3300</i>
 </pre>
+
 <!-- page 132 -->
 <p>As a more usable function:</p>
+
 <pre>
 // <i>value is the value to round</i>
 // <i>places if positive the number of decimal places to round to</i>
@@ -8136,7 +8155,9 @@ roundTo(myNum, 2);  // <i>3333.33</i>
 roundTo(myNum, 0);  // <i>3333</i>
 roundTo(myNum, &minus;2);  // <i>3300</i>
 </pre>
+
 <p>And the variants for ceil and floor:</p>
+
 <pre>
 <b>function</b> ceilTo(value, places) {
   <b>var</b> power = Math.pow(10, places);
@@ -8152,50 +8173,73 @@ roundTo(myNum, &minus;2);  // <i>3300</i>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>All angles below are in radians. An angle r in radians has measure 180 &ast; r / Math.PI 
 in degrees.</p>
+
 <h4>Sine</h4>
+
 <pre>
 Math.sin(r);
 </pre>
+
 <p>This will return the sine of r, a value between -1 and 1.</p>
+
 <pre>
 Math.asin(r);
 </pre>
+
 <p>This will return the arcsine (the reverse of the sine) of r.</p>
+
 <pre>
 Math.asinh(r);
 </pre>
+
 <p>This will return the hyperbolic arcsine of r.</p>
+
 <h4>Cosine</h4>
+
 <pre>
 Math.cos(r);
 </pre>
+
 <p>This will return the cosine of r, a value between -1 and 1</p>
+
 <pre>
 Math.acos(r);
 </pre>
+
 <p>This will return the arccosine (the reverse of the cosine) of r.</p>
+
 <pre>
 Math.acosh(r);
 </pre>
+
 <!-- page 133 -->
 <p>This will return the hyperbolic arccosine of r.</p>
+
 <h4>Tangent</h4>
+
 <pre>
 Math.tan(r);
 </pre>
+
 <p>This will return the tangent of r.</p>
+
 <pre>
 Math.atan(r);
 </pre>
+
 <p>This will return the arctangent (the reverse of the tangent) of r. Note that it will 
 return an angle in radians between &minus;π/2 and π/2.</p>
+
 <pre>
 Math.atanh(r);
 </pre>
+
 <p>This will return the hyperbolic arctangent of r.</p>
+
 <pre>
 Math.atan2(x, y);
 </pre>
+
 <p>This will return the value of an angle from (0, 0) to (x, y) in radians. It will 
 return a value between &minus;π and π, not including π.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8204,7 +8248,9 @@ return a value between &minus;π and π, not including π.</p>
 <p>Note that all bitwise operations operate on 32-bit integers by passing
 any operands to the internal function <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-toint32">
 ToInt32</a>.
+
 <h4>Bitwise or</h4>
+
 <pre>
 <b>var</b> a;
 a = 0b0011 &vert; 0b1010;  // <i>a === 0b1011</i>
@@ -8213,7 +8259,9 @@ a = 0b0011 &vert; 0b1010;  // <i>a === 0b1011</i>
 // <i>0011</i>
 // <i>1011 (result)</i>
 </pre>
+
 <h4>Bitwise and</h4>
+
 <pre>
 a = 0b0011 &amp; 0b1010;  // <i>a === 0b0010</i>
 // <i>truth table</i>
@@ -8221,14 +8269,18 @@ a = 0b0011 &amp; 0b1010;  // <i>a === 0b0010</i>
 // <i>0011</i>
 // <i>0010 (result)</i>
 </pre>
+
 <h4>Bitwise not</h4>
+
 <pre>
 a = &bsol;0b0011;  // <i>a === 0b1100</i>
 // <i>truth table</i>
 // <i>10 &bsol;~(not)</i>
 // <i>01 (result)</i>
 </pre>
+
 <h4>Bitwise xor (exclusive or)</h4>
+
 <pre>
 a = 0b1010 &Hat; 0b0011;  // <i>a === 0b1001</i>
 // <i>truth table</i>
@@ -8236,7 +8288,9 @@ a = 0b1010 &Hat; 0b0011;  // <i>a === 0b1001</i>
 // <i>0011</i>
 // <i>1001 (result)</i>
 </pre>
+
 <h4>Bitwise left shift</h4>
+
 <pre>
 a = 0b0001 &lt;&lt; 1;  // <i>a === 0b0010</i>
 a = 0b0001 &lt;&lt; 2;  // <i>a === 0b0100</i>
@@ -8246,6 +8300,7 @@ a = 0b0001 &lt;&lt; 3;  // <i>a === 0b1000</i>
 
 <p>Shift left is equivalent to integer multiply by Math.pow (2, n). When doing integer
 math, shift can significantly improve the speed of some math operations.</p>
+
 <pre>
 <b>var</b> n = 2;
 <b>var</b> a = 5.4;
@@ -8253,8 +8308,10 @@ math, shift can significantly improve the speed of some math operations.</p>
 // <i>result is true</i>
 a = 5.4 &lt;&lt; n;  // <i>20</i>
 </pre>
+
 <h4>Bitwise right shift &gt;&lpar;Sign-propagating shift) &gt;&gt;&lpar;Zero-fill
 right shift)</h4>
+
 <pre>
 a = 0b1001 &gt;&gt; 1;  // <i>a === 0b0100</i>
 a = 0b1001 &gt;&gt; 2;  // <i>a === 0b0010</i>
@@ -8264,7 +8321,9 @@ a = 0b1001 &gt;&gt;&gt; 1;  // <i>a === 0b0100</i>
 a = 0b1001 &gt;&gt;&gt; 2;  // <i>a === 0b0010</i>
 a = 0b1001 &gt;&gt;&gt; 3;  // <i>a === 0b0001</i>
 </pre>
+
 <p>A negative 32bit value always has the left most bit on:</p>
+
 <pre>
 a = 0b11111111111111111111111111110111 &vert; 0;
 console.log(a); // <i>-9</i>
@@ -8273,11 +8332,13 @@ console.log(b); // <i>-3</i>
 b = a &gt;&gt;&bsol;2; // <i>leftmost bit is shifted 1 to the right. the new left most bit is set to off (0)</i>
 console.log(b); // <i>2147483643</i>
 </pre>
+
 <p>The result of a &gt;&gt;&bsol;operation is always positive.</p>
 <p>The result of a &gt;&bsol;is always the same sign as the shifted value.</p>
 
 <p>Right shift on positive numbers is the equivalent of dividing by the Math.pow(2,n) 
 and flooring the result:</p>
+
 <pre>
 a = 256.67;
 n = 4;
@@ -8293,14 +8354,18 @@ a = a &gt;&gt;&gt; n;  // <i>16</i>
 <p>Right shift zero fill (&gt;&gt;&gt;) on negative numbers is different. As
 JavaScript does not convert to unsigned ints when doing bit operations
 there is no operational equivalent:</p>
+
 <pre>
 a = &minus;256.67;
 result = (a &gt;&gt;&gt; n) === Math.floor( Math.floor(a) / Math.pow(2, n) );
 // <i>result is false</i>
 </pre>
+
 <h4>Bitwise assignment operators</h4>
+
 <p>With the exception of not (&bsol;~) all the above bitwise operators can be
 used as assignment operators:</p>
+
 <pre>
 a &vert;= b;  // <i>same as: a = a &vert; b;</i>
 a &Hat;= b;   // <i>same as: a = a &Hat; b;</i>
@@ -8325,32 +8390,39 @@ incorrect results if used as logical operators. The &Hat; operator is
 <h3 id="ch14-6">Section 14.6: Incrementing (++)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Increment operator (++) increments its operand by one.</p>
+
 <ul>
   <li>If used as a postfix, then it returns the value before incrementing.</li>
   <li>If used as a prefix, then it returns the value after incrementing.</li>
 </ul>
+
 <pre>
 // <i>postfix</i>
 <b>var</b> a = 5,  // <i>5</i>
     b = a ++,      // <i>5</i>
     c = a          // <i>6</i>
 </pre>
+
 <p>In this case, a is incremented after setting b. So, b will be 5, and c will be 6.</p>
+
 <pre>
 // <i>prefix</i>
 <b>var</b> a = 5,  // <i>5</i>
     b = ++a,       // <i>6</i>
     c = a          // <i>6</i>
 </pre>
+
 <p>In this case, a is incremented before setting b. So, b will be 6, and 
 c will be 6.</p>
 <p>The increment and decrement operators are commonly used in <b>for</b> loops, for example:</p>
+
 <pre>
 <b>for</b> (<b>var</b> i = 0; i &lt; 42; ++i)
 {
   // <i>do something awesome!</i>
 }
 </pre>
+
 <p>Notice how the <i>prefix</i> variant is used. This ensures that a
 temporarily variable isn&apos;t needlessly created (to return the value
 prior to the operation).</p>
@@ -8358,25 +8430,33 @@ prior to the operation).</p>
 <h3 id="ch14-7">Section 14.7: Exponentiation (Math.pow() or &ast;&ast;)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Exponentiation makes the second operand the power of the first operand (ab).</p>
+
 <pre>
 <b>var</b> a = 2,
     b = 3,
     c = Math.pow(a, b);
 </pre>
+
 <p>c will now be 8</p>
 
 <h5>Version &gt; 6</h5>
+
 <p>Stage 3 ES2016 (ECMAScript 7) Proposal:</p>
+
 <pre>
 <b>let</b> a = 2,
     b = 3,
     c = a &ast;&ast; b;
 </pre>
+
 <!-- page 136 -->
 <p>c will now be 8</p>
+
 <h4>Use Math.pow to find the nth root of a number.</h4>
+
 <p>Finding the nth roots is the inverse of raising to the nth power. For
 example 2 to the power of 5 is 32. The 5th root of 32 is 2.</p>
+
 <pre>
 Math.pow(v, 1 / n); // <i>where v is any positive real number</i> 
                     // <i>and n is any positive integer</i>
@@ -8391,36 +8471,45 @@ Math.pow(v, 1 / n); // <i>where v is any positive real number</i>
 <pre>
 <b>var</b> a = Math.random();
 </pre>
+
 <p>Sample value of a: 0.21322848065742162</p>
 <p>Math.random() returns a random number between 0 (inclusive) and 1 (exclusive)</p>
+
 <pre>
 <b>function</b> getRandom() {
   <b>return</b> Math.random();
 }
 </pre>
+
 <p>To use Math.random() to get a number from an arbitrary range (not &lbrack;0,1)) use
 this function to get a random number between min (inclusive) and max (exclusive): interval of &lbrack;)</p>
+
 <pre>
 <b>function</b> getRandomArbitrary(min, max) {
   <b>return</b> Math.random() &ast; (max &minus; min) &plus; min;
 }
 </pre>
+
 <p>To use Math.random() to get an integer from an arbitrary range (not &lbrack;0,1)) use
 this function to get a random number between min (inclusive) and max(exclusive): interval 
 of &lbrack;)</p>
+
 <pre>
 <b>function</b> getRandomInt(min, max) {
   <b>return</b> Math.floor(Math.random() &ast; (max &minus; min)) &plus; min;
 }
 </pre>
+
 <p>To use Math.random() to get an integer from an arbitrary range (not &lbrack;0,1)) use
 this function to get a random number between min (inclusive) and max (inclusive): 
 interval of &lbrack;&rbrack;</p>
+
 <pre>
 <b>function</b> getRandomIntInclusive(min, max) {
   <b>return</b> Math.floor(Math.random() &ast; (max &minus; min &plus; 1)) &plus; min;
 }
 </pre>
+
 <p>Functions taken from 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">
 Mozilla Global Objects: Math.random</a>.</p>
@@ -8429,48 +8518,59 @@ Mozilla Global Objects: Math.random</a>.</p>
 <h3 id="ch14-9">Section 14.9: Addition (+)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The addition operator (+) adds numbers.</p>
+
 <pre>
 <b>var</b> a = 9,
     b = 3,
     c = a &plus; b;
 </pre>
+
 <p>c will now be 12</p>
 
 <p>This operand can also be used multiple times in a single assignment:</p>
+
 <pre>
 <b>var</b> a = 9,
     b = 3,
     c = 8,
     d = a &plus; b &plus; c;
 </pre>
+
 <p>d will now be 20.</p>
 
 <p>Both operands are converted to primitive types. Then, if either one is
 a string, they&apos;re both converted to strings and concatenated.
 Otherwise, they&apos;re both converted to numbers and added.</p>
+
 <pre>
 <b>null</b> &plus; <b>null</b>;      // <i>0</i>
 <b>null</b> &plus; <b>undefined</b>; // <i>NaN</i>
 <b>null</b> &plus; {};          // <i>&quot;null&lbrack;object Object&rbrack;&quot;</i>
 <b>null</b> &plus; &apos;&apos;;       // <i>&quot;null&quot;</i>
 </pre>
+
 <p>If the operands are a string and a number, the number is converted to
 a string and then they&apos;re concatenated, which may lead to unexpected
 results when working with strings that look numeric.</p>
+
 <pre>
 &quot;123&quot; &plus; 1;  // <i>&quot;1231&quot; (not 124)</i>
 </pre>
+
 <p>If a boolean value is given in place of any of the number values, the
 boolean value is converted to a number (0 for <b>false</b>, 1 for
 <b>true</b>) before the sum is calculated:</p>
+
 <pre>
 <b>true</b> &plus; 1;       // <i>2</i>
 <b>false</b> &plus; 5;      // <i>5</i>
 <b>null</b> &plus; 1;       // <i>1</i>
 <b>undefined</b> &plus; 1;  // <i>NaN</i>
 </pre>
+
 <p>If a boolean value is given alongside a string value, the boolean
 value is converted to a string instead:</p>
+
 <pre>
 <b>true</b> &plus; &quot;1&quot;;     // <i>&quot;true1&quot;</i>
 <b>false</b> &plus; &quot;bar&quot;;  // <i>&quot;falsebar&quot;</i>
@@ -8479,6 +8579,7 @@ value is converted to a string instead:</p>
 <h3 id="ch14-10">Section 14.10: Little / Big endian for typed arrays when using bitwise operators</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To detect the endian of the device</p>
+
 <pre>
 <b>var</b> isLittleEndian = <b>true</b>;
 (()=&gt;{
@@ -8491,9 +8592,11 @@ value is converted to a string instead:</p>
   }
 })();
 </pre>
+
 <!-- page 138 -->
 <p>Little-Endian stores most significant bytes from right to left.</p>
 <p>Big-Endian stores most significant bytes from left to right.</p>
+
 <pre>
 <b>var</b> myNum = 0x11223344 &vert; 0;  // <i>32 bit signed integer</i>
 <b>var</b> buf = <b>new</b> ArrayBuffer(4);
@@ -8501,21 +8604,27 @@ value is converted to a string instead:</p>
 <b>var</b> data32 = <b>new</b> Uint32Array(buf);
 data32&lbrack;0&rbrack; = myNum; // <i>store number in 32Bit array</i>
 </pre>
+
 <p>If the system uses Little-Endian, then the 8bit byte values will be console.</p>
+
 <pre>
 console.log(data8&lbrack;0&rbrack;.toString(16));  // <i>0x44</i>
 console.log(data8&lbrack;1&rbrack;.toString(16));  // <i>0x33</i>
 console.log(data8&lbrack;2&rbrack;.toString(16));  // <i>0x22</i>
 console.log(data8&lbrack;3&rbrack;.toString(16));  // <i>0x11</i>
 </pre>
+
 <p>If the system uses Big-Endian, then the 8bit byte values will be console.</p>
+
 <pre>
 console.log(data8&lbrack;0&rbrack;.toString(16));  // <i>0x11</i>
 console.log(data8&lbrack;1&rbrack;.toString(16));  // <i>0x22</i>
 console.log(data8&lbrack;2&rbrack;.toString(16));  // <i>0x33</i>
 console.log(data8&lbrack;3&rbrack;.toString(16));  // <i>0x44</i>
 </pre>
+
 <p>Example where Endian type is important</p>
+
 <pre>
 <b>var</b> canvas = document.createElement(&quot;canvas&quot;);
 <b>var</b> ctx = canvas.getContext(&quot;2d&quot;);
@@ -8539,13 +8648,16 @@ ctx.putImageData(imgData);
 <h3 id="ch14-11">Section 14.11: Get Random Between Two Numbers</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Returns a random integer between min and max:</p>
+
 <pre>
 <b>function</b> randomBetween(min, max) {
   <b>return</b> Math.floor(Math.random() &ast; (max &minus; min &plus; 1) &plus; min);
 }
 </pre>
+
 <!-- page 139 -->
 <p>Examples:</p>
+
 <pre>
 // <i>randomBetween(0, 10);</i>
 Math.floor(Math.random() &ast; 11);
@@ -8575,11 +8687,13 @@ six equally probable outcomes. This is quite simple.</p>
 // <i>simulate fair die</i>
 console.log(&quot;Rolled a &quot; &plus; (simulateEvent(6)&plus;1));  // <i>Rolled a 2</i>
 </pre>
+
 <p>However, you may not want equally probable outcomes. Say you had a
 list of three outcomes represented as an array of probabilities in
 percents or multiples of likelihood. Such an example might be a
 weighted die. You could rewrite the previous function to simulate such
 an event.</p>
+
 <pre>
 <b>function</b> simulateEvent(chances) {
   <b>var</b> sum = 0;
@@ -8606,6 +8720,7 @@ console.log(&quot;Rolled a &quot; &plus; (simulateEvent(&lbrack;1,1,1,1,1,2&rbra
 // <i>using probabilities</i>
 console.log(&quot;Rolled a &quot;&plus;(simulateEvent(&lbrack;1/7,1/7,1/7,1/7,1/7,2/7&rbrack;) &plus; 1)); // <i>Rolled a 6</i>
 </pre>
+
 <!-- page 140 -->
 <p>As you probably noticed, these functions return an index, so you could
 have more descriptive outcomes stored in an array. Here&apos;s an example.</p>
@@ -8624,22 +8739,27 @@ console.log(&quot;You get a &quot;+rewards&lbrack;simulateEvent(likelihoods)&rbr
 <h3 id="ch14-13">Section 14.13: Subtraction (-)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The subtraction operator (-) subtracts numbers.</p>
+
 <pre>
 <b>var</b> a = 9;
 <b>var</b> b = 3;
 <b>var</b> c = a &minus; b;
 </pre>
+
 <p>c will now be 6</p>
 <p>If a string or boolean is provided in place of a number value, it gets
 converted to a number before the difference is calculated (0 for
 <b>false</b>, 1 for <b>true</b>):</p>
+
 <pre>
 &quot;5&quot; &minus;1;  // <i>4</i>
 7 &minus; &quot;3&quot;; // <i>4</i>
 &quot;5&quot; &minus; <b>true</b>; // <i>4</i>
 </pre>
+
 <p>If the string value cannot be converted into a Number, the result will
 be <b>NaN</b>:</p>
+
 <pre>
 &quot;foo&quot; &minus;1;    // <i>NaN</i>
 100 &minus; &quot;bar&quot;; // <i>NaN</i>
@@ -8649,6 +8769,7 @@ be <b>NaN</b>:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The multiplication operator (&ast;) perform arithmetic multiplication on
 numbers (literals or variables).</p>
+
 <pre>
 console.log( 3 &ast;  5);  // <i>15</i>
 console.log(&minus; 3 &ast;  5); // <i>-15</i>
@@ -8659,17 +8780,23 @@ console.log(&minus; 3 &ast; &minus;5); // <i>15</i>
 <h3 id="ch14-15">Section 14.15: Getting maximum and minimum</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Math.max() function returns the largest of zero or more numbers.</p>
+
 <pre>
 Math.max( 4, 12 ); // <i>12</i>
 Math.max(&minus;1, &minus;15); // <i>-1</i>
 </pre>
+
 <p>The Math.min() function returns the smallest of zero or more numbers.</p>
+
 <pre>
 Math.min( 4, 12 );  // <i>4</i>
 Math.min(&minus;1, &minus;15); // <i>-15</i>
 </pre>
+
 <!-- page 140 -->
+
 <h4>Getting maximum and minimum from an array:</h4>
+
 <pre>
 <b>var</b> arr = &lbrack;1, 2, 3, 4, 5, 6, 7, 8, 9&rbrack;,
 max = Math.max.apply(Math, arr),
@@ -8677,8 +8804,10 @@ min = Math.min.apply(Math, arr);
 console.log(max);  // <i>Logs: 9</i>
 console.log(min);  // <i>Logs: 1</i>
 </pre>
+
 <p>ECMAScript 6 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">
 spread operator</a>, getting the maximum and minimum of an array:</p>
+
 <pre>
 <b>var</b> arr = &lbrack;1, 2, 3, 4, 5, 6, 7, 8, 9&rbrack;,
   max = Math.max(&hellip;arr),
@@ -8690,6 +8819,7 @@ console.log(min); // <i>Logs: 1</i>
 <h3 id="ch14-16">Section 14.16: Restrict Number to Min/Max Range</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>If you need to clamp a number to keep it inside a specific range boundary</p>
+
 <pre>
 <b>function</b> clamp(min, max, val) {
   <b>return</b> Math.min(Math.max(min, &plus;val), max);
@@ -8700,19 +8830,24 @@ console.log(clamp(&minus;10, 10, &minus;8));     // <i>-8</i>
 console.log(clamp(&minus;10, 10, 12));     // <i>10</i>
 console.log(clamp(&minus;10, 10, &minus;15));    // <i>-10</i>
 </pre>
+
 <p><a href="https://jsfiddle.net/RokoCB/8drqL3vo/">Use-case example (jsFiddle)</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-17">Section 14.17: Ceiling and Floor</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>ceil()</h4>
+
 <p>The ceil() method rounds a number </i>upwards</i> to the nearest integer, and
 returns the result.</p>
 
 <h4>Syntax:</h4>
+
 <pre>
 Math.ceil(n);
 </pre>
+
 <h4>Example:</h4>
+
 <pre>
 console.log(Math.ceil(0.60)); // <i>1</i>
 console.log(Math.ceil(0.40)); // <i>1</i>
@@ -8720,14 +8855,19 @@ console.log(Math.ceil(5.1));  // <i>6</i>
 console.log(Math.ceil(&minus;5.1)); // <i>-5</i>
 console.log(Math.ceil(&minus;5.9)); // <i>-5</i>
 </pre>
+
 <p>The floor() method rounds a number </i>downwards</i> to the nearest integer, and
 returns the result.</p>
+
 <h4>Syntax:</h4>
 <!-- page 142 -->
+
 <pre>
 Math.floor(n);
 </pre>
+
 <h4>Example:</h4>
+
 <pre>
 console.log(Math.ceil(0.60)); // <i>0</i>
 console.log(Math.ceil(0.40)); // <i>0</i>
@@ -8739,18 +8879,27 @@ console.log(Math.ceil(&minus;5.9)); // <i>-6</i>
 <h3 id="ch14-18">Section 14.18: Getting roots of a number</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Square Root</h4>
+
 <p>Use Math.sqrt() to find the square root of a number</p>
+
 <pre>
 Math.sqrt(16)  #=&gt; 4
 </pre>
+
 <h4>Cube Root</h4>
+
 <p>To find the cube root of a number, use the Math.cbrt() function</p>
+
 <h5>Version ≥ 6</h5>
+
 <pre>
 Math.cbrt(27) #=&gt; 3
 </pre>
+
 <h4>Finding nth-roots</h4>
+
 <p>To find the nth-root, use the Math.pow() function and pass in a fractional exponent.</p>
+
 <pre>
 Math.pow(64, 1/6) #=&gt; 2
 </pre>
@@ -8771,12 +8920,14 @@ on a graph you get the classical bell curve or gaussian distribution.</p>
 <b>var</b> randNum = (Math.random() + Math.random() + Math.random()) / 3;
 <b>var</b> randNum = (Math.random() + Math.random() + Math.random() + Math.random()) / 4;
 </pre>
+
 <p>Adding a random value to the last increases the variance of the random
 numbers. Dividing by the number of times you add normalises the result
 to a range of 0-1</p>
 
 <p>As adding more than a few randoms is messy a simple function will
 allow you to select a variance you want.</p>
+
 <pre>
 // <i>v is the number of times random is summed and should be over &gt;= 1</i>
 // <i>return a random number between 0-1 exclusive</i>
@@ -8815,7 +8966,9 @@ Math.PI(- 180 within the range of ?? to 180 deg)</p>
 <b>var</b> vec = {x : 4, y : 3};
 <b>var</b> dir = Math.atan2(vec.y, vec.x); // <i>0.6435011087932844</i>
 </pre>
+
 <h4>Direction of a line</h4>
+
 <pre>
 <b>var</b> line = {
   p1 : { x : 100, y : 128},
@@ -8824,13 +8977,16 @@ Math.PI(- 180 within the range of ?? to 180 deg)</p>
 // <i>get the direction from p1 to p2</i>
 <b>var</b> dir = Math.atan2(line.p2.y &minus; line.p1.y, line.p2.x &minus; line.p1.x);  // <i>0.5269432271894297</i>
 </pre>
+
 <h4>Direction from a point to another point</h4>
+
 <pre>
 <b>var</b> point1 = { x: 123, y : 294};
 <b>var</b> point2 = { x: 354, y : 284};
 // <i>get the direction from point1 to point2</i>
 <b>var</b> dir = Math.atan2(point2.y - point1.y, point2.x - point1.x); // <i>-0.04326303140726714</i>
 </pre>
+
 <!-- thru 14.20 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-21">Section 14.21: Sin & Cos to create a vector given direction & distance</h3>
@@ -8840,6 +8996,7 @@ want to convert it to a cartesian vector with a x and y component. For
 reference the screen coordinate system has directions as 0 deg points
 from left to right, 90 (PI/2) point down the screen, and so on in a
 clock wise direction.</p>
+
 <pre>
 <b>var</b> dir = 1.4536; // <i>direction in radians</i>
 <b>var</b> dist = 200;  // <i>distance</i>
@@ -8847,17 +9004,21 @@ clock wise direction.</p>
 vec.x = Math.cos(dir) &ast; dist;  // <i>get the x component</i>
 vec.y = Math.sin(dir) &ast; dist;  // <i>get the y component</i>
 </pre>
+
 <p>You can also ignore the distance to create a normalised (1 unit long)
 vector in the direction of dir</p>
+
 <pre>
 <b>var</b> dir = 1.4536;  // <i>direction in radians</i>
 <b>var</b> vec = {};
 vec.x = Math.cos(dir); // <i>get the x component</i>
 vec.y = Math.sin(dir); // <i>get the y component</i>
 </pre>
+
 <p>If your coordinate system has y as up then you need to switch cos and
 sin. In this case a positive direction is in a counterclockwise
 direction from the x axis.</p>
+
 <pre>
 // <i>get the directional vector where y points up</i>
 <b>var</b> dir = 1.4536;  // <i>direction in radians</i>
@@ -8871,6 +9032,7 @@ vec.y = Math.cos(dir);  // <i>get the y component</i>
 <p>To find the distance between two points we use pythagoras to get the
 square root of the sum of the square of the component of the vector
 between them.</p>
+
 <pre>
 <b>var</b> v1 = {x : 10, y : 5};
 <b>var</b> v2 = {x : 20, y : 10};
@@ -8878,7 +9040,9 @@ between them.</p>
 <b>var</b> y = v2.y &minus; v1.y;
 <b>var</b> distance = Math.sqrt(x &ast; x &plus; y &ast; y); // <i>11.180339887498949</i>
 </pre>
+
 <p>With ECMAScript 6 came Math.hypot which does the same thing</p>
+
 <pre>
 <b>var</b> v1 = {x : 10, y : 5};
 <b>var</b> v2 = {x : 20, y : 10};
@@ -8886,14 +9050,18 @@ between them.</p>
 <b>var</b> y = v2.y &minus; v1.y;
 <b>var</b> distance = Math.hypot(x, y);  // <i>11.180339887498949</i>
 </pre>
+
 <p>Now you don&apos;t have to hold the interim vars to stop the code becoming
 a mess of variables</p>
+
 <pre>
 <b>var</b> v1 = {x : 10, y : 5};
 <b>var</b> v2 = {x : 20, y : 10};
 <b>var</b> distance = Math.hypot(v2.x &minus; v1.x, v2.y &minus; v1.y);  // <i>11.180339887498949</i>
 </pre>
+
 <p>Math.hypot can take any number of dimensions</p>
+
 <pre>
 // <i>find distance in 3D</i>
 <b>var</b> v1 = {x : 10, y : 5, z : 7};
@@ -8938,6 +9106,7 @@ The most simple form with control over frequency only.</p>
   <b>return</b> Math.sin(time &ast; 2 &ast; Math.PI &ast; frequency);
 }
 </pre>
+
 <p>In almost all cases you will want to make some changes to the value
 returned. The common terms for modifications</p>
 <ul>
@@ -8953,6 +9122,7 @@ returned. The common terms for modifications</p>
 
 <p>To include all these in the function:</p>
 <!-- page 146 -->
+
 <pre>
 <b>function</b> oscillator(time, frequency = 1, amplitude = 1, phase = 0, offset = 0) {
   <b>var</b> t = time &ast; frequency &ast; Math.PI &ast; 2; // <i>get phase at time</i>
@@ -8963,7 +9133,9 @@ returned. The common terms for modifications</p>
   <b>return</b> v;
 }
 </pre>
+
 <p>Or in a more compact (and slightly quicker form):</p>
+
 <pre>
 <b>function</b> oscillator(time, frequency = 1, amplitude = 1, phase = 0, offset = 0) { 
   <b>return</b> Math.sin(time &ast; frequency &ast; Math.PI &ast; 2 + phase &ast; Math.PI &ast; 2) &ast; amplitude + offset; 
@@ -8974,6 +9146,7 @@ returned. The common terms for modifications</p>
 <h3 id="ch14-24">Section 14.24: Division (/)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The division operator (/) perform arithmetic division on numbers (literals or variables).</p>
+
 <pre>
 console.log(15 / 3);  // <i>5</i>
 console.log(15 / 4);  // <i>3.75</i>
@@ -8982,34 +9155,43 @@ console.log(15 / 4);  // <i>3.75</i>
 <h3 id="ch14-25">Section 14.25: Decrementing (&rpar;</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The decrement operator (&rpar; decrements numbers by one.</p>
+
 <ul>
   <li>If used as a postfix to n, the operator returns the current n and <i>then</i> assigns 
     the decremented the value.</li>
   <li>If used as a prefix to n, the operator assigns the decremented n and <i>then</i> returns 
     the changed value.</li>
 </ul>
+
 <pre>
 <b>var</b> a = 5,     // <i>5</i>
     b = a&minus;&minus;,   // <i>5</i>
     c = a      // <i>4</i>
 </pre>
+
 <p>In this case, b is set to the initial value of a. So, b will be 5, and c will be 4.</p>
 <pre>
 <b>var</b> a = 5,     // <i>5</i>
     b = &minus;&minus;a,   // <i>4</i>
     c = a      // <i>4</i>
 </pre>
+
 <p>In this case, b is set to the new value of a. So, b will be 4, and c will be 4.</p>
+
 <h4>Common Uses</h4>
+
 <p>The decrement and increment operators are commonly used in <b>for</b> loops, for example:</p>
+
 <pre>
 <b>for</b> (<b>var</b> i = 42; i &gt; 0; &minus;i) {
   console.log (i)
 }
 </pre>
+
 <p>Notice how the <i>prefix</i> variant is used. This ensures that a temporarily variable isn&apos;t 
 needlessly created (to return the value prior to the operation).</p>
 <!-- page 147 -->
+
 <blockquote>
 <b>Note:</b> Neither &minus;&minus; nor ++ are like normal mathematical operators, but rather they are 
 very concise operators for <i>assignment</i>. Notwithstanding the return value, both
@@ -9019,6 +9201,7 @@ and
 &minus;&minus;x
 reassign to x such that x = x &minus; 1.
 </blockquote>
+
 <pre>
 <b>const</b> x = 1;
 console.log(x&minus;)  // <i>TypeError: Assignment to constant variable.</i>
@@ -9035,27 +9218,35 @@ console.log(3&minus;)  // <i>ReferenceError: Invalid left-hand side expression i
 <p>Bitwise operators perform operations on bit values of data. These
 operators convert operands to signed 32-bit integers in <a href="http://stackoverflow.com/questions/1049722/what-is-2s-complement">two&apos;s
 complement</a>.</p>
+
 <h4>Conversion to 32-bit integers</h4>
+
 <p>Numbers with more than 32 bits discard their most significant bits.
 For example, the following integer with more than 32 bits is converted
 to a 32-bit integer:</p>
+
 <pre>
 Before: 10100110111110100000000010000011110001000001
 After: 10100000000010000011110001000001
 </pre>
+
 <h4>Two&apos;s Complement</h4>
+
 <p>In normal binary we find the binary value by adding the 1&apos;s based on
 their position as powers of 2 - The rightmost bit being 2&Hat;0 to the
 leftmost bit being 2&Hat;n-1 where n is the number of bits. For example,
 using 4 bits:</p>
+
 <pre>
 // <i>Normal Binary</i>
 // <i>8 4 2 1</i>
    0 1 1 0 =&gt; 0 &plus; 4 &plus; 2 &plus; 0 =&gt; 6
 </pre>
+
 <p>>Two complement&apos;s format means that the number&apos;s negative counterpart
 (6 vs -6) is all the bits for a number inverted, plus one. The
 inverted bits of 6 would be:</p>
+
 <pre>
 // <i>Normal binary</i>
    0 1 1 0
@@ -9064,14 +9255,17 @@ inverted bits of 6 would be:</p>
 // <i>Two&apos;s complement (add 1 to one&apos;s complement)</i>
    1 0 1 0 =&gt; &minus;8 &plus; 0 &plus; 2 &plus; 0 =&gt; &minus;6
 </pre>
+
 <p><i>Note:</i> Adding more 1&apos;s to the left of a binary number does not
 change its value in two&apos;s compliment. The value 1010 and
 1111111111010 are both -6.</p>
 
 <h4>Bitwise AND</h4>
+
 <p>The bitwise AND operation a &amp; b returns the binary value with a 1 where both
 binary operands have 1&apos;s in a specific position, and 0 in all other
 positions. For example:</p>
+
 <pre>
 13 & 7 =&gt; 5
 // <i>13: 0..01101</i>
@@ -9079,10 +9273,13 @@ positions. For example:</p>
 //<i>&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&ast;</i>
 // <i>5: 0..00101 (0 + 0 + 4 + 0 + 1)</i>
 </pre>
+
 <h4>Real world example: Number&apos;s Parity Check</h4>
+
 <p>Instead of this &quot;masterpiece&quot; (unfortunately too often seen in many
 real code parts):</p>
 <!-- page 149 -->
+
 <pre>
 <b>function</b> isEven (n) {
   <b>return</b> n &percnt; 2 == 0;
@@ -9095,8 +9292,10 @@ real code parts):</p>
   }
 }
 </pre>
+
 <p>You can check the (integer) number&apos;s parity in much more effective
 and simple manner:</p>
+
 <pre>
 <b>if</b> (n & 1) {
   console.log(&quot;ODD!&quot;);
@@ -9104,10 +9303,13 @@ and simple manner:</p>
   console.log(&quot;EVEN!&quot;);
 }
 </pre>
+
 <h4>Bitwise OR</h4>
+
 <p>The bitwise OR operation returns the binary value with a 1 where
 either operands or both operands have 1&apos;s in a specific position, and
 0 when both values have 0 in a position. For example:</p>
+
 <pre>
 13 &vert; 7 =&gt; 15
 // <i>13: 0..01101</i>
@@ -9137,7 +9339,9 @@ not both</i>.</p>
 //<i>&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&ast;</i>
 // <i>10: 0..01010 (0 + 8 + 0 + 2 + 0)</i>
 </pre>
+
 <h4>Real world example: swapping two integer values without additional memory allocation</h4>
+
 <pre>
 <b>var</b> a = 11, b = 22;
 a = a &Hat; b;
@@ -9151,14 +9355,18 @@ console.log(&quot;a = &quot; &plus; a &plus; &quot;; b = &quot; &plus; b); // <i
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Bitwise shifting can be thought as &quot;moving&quot; the bits either left or
 right, and hence changing the value of the data operated on.</p>
+
 <h4>Left Shift</h4>
+
 <p>The left shift operator (value) &lt;&lt; (shift amount) will shift the bits to the left
 by (shift amount) bits; the new bits coming in from the right will be 0&apos;s:</p>
+
 <pre>
 5 &lt;&lt; 2 =&gt; 20
 // <i>5: 0..000101</i>
 // <i>20: 0..010100 &lt;= adds two 0&apos;s to the right</i>
 </pre>
+
 <h4>Right Shift (<i>Sign-propagating</i>)</h4>
 
 <p>The right shift operator (value) &gt;&gt; (shift amount) is also known as the 
@@ -9167,6 +9375,7 @@ operand. The right shift operator shifts the value the specified shift amount of
 bits to the right. Excess bits shifted off the right are discarded. The new bits 
 coming in from the left will be based on the sign of the initial operand. If the
 left-most bit was 1 then the new bits will all be 1 and vice-versa for 0&apos;s.</p>
+
 <pre>
 20 &gt;&gt; 2 =&gt; 5
 // <i>20: 0..010100</i>
@@ -9176,16 +9385,19 @@ left-most bit was 1 then the new bits will all be 1 and vice-versa for 0&apos;s.
 // <i>-5: 1..111011</i>
 // <i>-2: 1..111111 &lt;= added three 1&apos;s from the left and chopped off 011 from the right</i>
 </pre>
+
 <h4>Right Shift (<i>Zero fill</i>)</h4>
 
 <p>The zero-fill right shift operator (value) &gt;&gt;&gt; (shift amount) will move the bits to the right,
 and the new bits will be 0&apos;s. The 0&apos;s are shifted in from the left, and excess bits to the
 right are shifted off and discarded. This means it can make negative numbers into positive ones.</p>
+
 <pre>
 &minus;30 &gt;&gt;&gt; 2 =&gt; 1073741816
 // <i>-30: 111..1100010</i>
 // <i>1073741816: 001..1111000</i>
 </pre>
+
 <p>Zero-fill right shift and sign-propagating right shift yield the same
 result for non negative numbers.</p>
 <!-- page 151 -->
@@ -9198,20 +9410,25 @@ result for non negative numbers.</p>
 object. Within a constructor function, the keyword <b>this</b> refers to
 a newly created object which values can be assigned to. Constructor
 functions &quot;return&quot; this new object automatically.</p>
+
 <pre>
 <b>function</b> Cat(name) {
   <b>this</b>.name = name;
   <b>this</b>.sound = &quot;Meow&quot;;
 }
 </pre>
+
 <p>Constructor functions are invoked using the <b>new</b> keyword:</p>
+
 <pre>
 <b>let</b> cat = <b>new</b>Cat(&quot;Tom&quot;);
 cat.sound;  // <i>Returns &quot;Meow&quot;</i>
 </pre>
+
 <p>Constructor functions also have a <b>prototype</b> property which points
 to an object whose properties are automatically inherited by all
 objects created with that constructor:</p>
+
 <pre>
 Cat.<b>prototype</b>.speak = <b>function</b>() {
   console.log(<b>this</b>.sound);
@@ -9219,15 +9436,19 @@ Cat.<b>prototype</b>.speak = <b>function</b>() {
 
 cat.speak();  // <i>Outputs &quot;Meow&quot; to the console</i>
 </pre>
+
 <p>Objects created by constructor functions also have a special property
 on their prototype called constructor, which points to the function
 used to create them:</p>
+
 <pre>
 cat.constructor  // <i>Returns the &grave;Cat&grave; function</i>
 </pre>
+
 <p>Objects created by constructor functions are also considered to be
 &quot;instances&quot; of the constructor function by the <b>instanceof</b>
 operator:</p>
+
 <pre>
 cat <b>instanceof</b> Cat  // <i>Returns &quot;true&quot;</i>
 </pre>
@@ -9237,12 +9458,13 @@ cat <b>instanceof</b> Cat  // <i>Returns &quot;true&quot;</i>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch17-1">Section 17.1: Modifying constants</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Declaring a variable <b>const</b> only prevents its value from being
+<p>Declaring a variable <b>const</b> only prevents its value from being
 <i>replaced</i> by a new value. <b>const</b> does not put any restrictions on
 the internal state of an object. The following example shows that a
 value of a property of a <b>const</b> object can be changed, and even new
 properties can be added, because the object that is assigned to person
 is modified, but not <i>replaced</i>.</p>
+
 <pre>
 <b>const</b> person = {
   name: &quot;John&quot;
@@ -9254,18 +9476,22 @@ console.log(&apos;The name of the person is&apos;, person.name);
 person.surname = &quot;Fox&quot;;
 console.log(&apos;The name of the person is&apos;, person.name, &apos;and the surname is&apos;, person.surname);
 </pre>
+
 <h4>Result:</h4>
+
 <pre>
 The name of the person is John
 The name of the person is Steve
 The name of the person is Steve and the surname is Fox
 </pre>
+
 <p>In this example we&apos;ve created constant object called person and
 we&apos;ve reassigned property and created new property.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch17-2">Section 17.2: Declaring and initializing constants</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can initialize a constant by using the <b>const</b> keyword.</p>
+
 <pre>
 <b>const</b> foo = 100;
 <b>const</b> bar = <b>false</b>;
@@ -9273,7 +9499,9 @@ we&apos;ve reassigned property and created new property.</p>
 <b>const</b> fun = <b>function</b> () = { /&ast; &hellip; &ast;/};
 <b>const</b> arrowFun = () =&gt; /&ast; &hellip; &ast;/;
 </pre>
+
 <h4>Important</h4>
+
 <p>You must declare and initialize a constant in the same statement.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch17-3">Section 17.3: Declaration</h3>
@@ -9283,36 +9511,45 @@ using the <b>var</b>, <b>let</b> or <b>const</b> keywords, or without a keyword
 at all (&quot;bare&quot; declaration). The method used determines the
 resulting scope of the variable, or reassignability in the case of
 <b>const</b>.</p>
+
 <ul>
   <li>The <b>var</b> keyword creates a function-scope variable.</li>
   <li>The <b>let</b> keyword creates a block-scope variable.</li>
   <li>The <b>const</b> keyword creates a block-scope variable that cannot be reassigned.</li>
   <li>A bare declaration creates a global variable.</li>
 </ul>
+
 <!-- page 153 -->
+
 <pre>
 <b>var</b> a = &apos;foo&apos;;  // <i>Function-scope</i>
 <b>let</b> b = &apos;foo&apos;;  // <i>Block-scope</i>
 <b>const</b> c = &apos;foo&apos;; // <i>Block-scope & immutable reference</i>
 </pre>
+
 <p>Keep in mind that you can&apos;t declare constants without initializing
 them at the same time.</p>
+
 <pre>
 <b>const</b> foo; // <i>&quot;Uncaught SyntaxError: Missing initializer in const declaration&quot;</i>
 </pre>
+
 <p>(An example of keyword-less variable declaration is not included above
 for technical reasons. Continue reading to see an example.)</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch17-4">Section 17.4: Undefined</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Declared variable without a value will have the value <b>undefined</h4>
+
 <pre>
 <b>var</b> a;
 console.log(a);  // <i>logs: undefined</i>
 </pre>
+
 <p>Trying to retrieve the value of undeclared variables results in a
 ReferenceError. However, both the type of undeclared and unitialized
 variables is &quot;undefined&quot;:</p>
+
 <pre>
 <b>var</b> a;
 console.log(<b>typeof</b> a === &quot;undefined&quot;);  // <i>logs: true</i>
@@ -9323,6 +9560,7 @@ console.log(<b>typeof</b> variableDoesNotExist === &quot;undefined&quot;); // <i
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JavaScript variables can hold many data types: numbers, strings,
 arrays, objects and more:</p>
+
 <pre>
 // <i>Number</i>
 <b>var</b> length = 16;
@@ -9339,8 +9577,10 @@ arrays, objects and more:</p>
   lastName: &quot;Doe&quot;
 };
 </pre>
+
 <p>JavaScript has dynamic types. This means that the same variable can be
 used as different types:</p>
+
 <pre>
 <b>var</b> a;                     // <i>a is undefined</i>
 <b>var</b> a = 5;                 // <i>a is a Number</i>
@@ -9350,58 +9590,78 @@ used as different types:</p>
 <h3 id="ch17-6">Section 17.6: Mathematic operations and assignment</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Increment by</h4>
+
 <pre>
 <b>var</b> a = 9,
 b = 3;
 b += a;
 </pre>
+
 <p>b will now be 12</p>
 <p>This is functionally the same as</p>
+
 <pre>
 b = b &plus; a;
 </pre>
+
 <h4>Decrement by</h4>
+
 <pre>
 <b>var</b> a = 9,
 b = 3;
 b -= a;
 </pre>
+
 <p>b will now be 6</p>
 <p>This is functionally the same as</p>
+
 <pre>
 b = b &minus; a;
 </pre>
+
 <h4>Multiply by</h4>
+
 <pre>
 <b>var</b> a = 5,
 b = 3;
 b &ast;= a;
 </pre>
+
 <p>b will now be 15</p>
 <p>This is functionally the same as</p>
+
 <pre>
 b = b &ast; a;
 </pre>
+
 <h4>Divide by</h4>
+
 <pre>
 </b>var</b> a = 3,
 b = 15;
 b /= a;
 </pre>
+
 <p>b will now be 5</p>
 <p>This is functionally the same as</p>
+
 <pre>
 b = b / a;
 </pre>
+
 <h5>Version ≥ 7</h5>
+
 <h4>Raised to the power of</h4>
+
 <pre>
 <b>var</b> a = 3,
 b = 15;
 b &ast;&ast;= a;
 </pre>
+
 <p>b will now be 3375</p>
 <p>This is functionally the same as</p>
+
 <pre>
 b = b &ast;&ast; a;
 </pre>
@@ -9410,25 +9670,31 @@ b = b &ast;&ast; a;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To assign a value to a previously declared variable, use the
 assignment operator, =:</p>
+
 <pre>
 a = 6;
 b = &quot;Foo&quot;;
 </pre>
+
 <p>As an alternative to independent declaration and assignment, it is
 possible to perform both steps in one statement:</p>
+
 <pre>
 <b>var</b> a = 6;
 <b>let</b> b = &quot;Foo&quot;;
 </pre>
+
 <p>It is in this syntax that global variables may be declared without a
 keyword; if one were to declare a bare variable without an assignment
 immediately afterword, the interpreter would not be able to
 differentiate global declarations a; from references to variables a;.</p>
+
 <pre>
 c = 5;
 c = &quot;Now the value is a String.&quot;;
 myNewGlobal;  // <i>ReferenceError</i>
 </pre>
+
 <p>Note, however, that the above syntax is generally discouraged and is
 not strict-mode compliant. This is to avoid the scenario in which a
 programmer inadvertently drops a <b>let</b> or <b>var</b> keyword from their
@@ -9442,6 +9708,7 @@ that the intent is explicitly stated.</p>
 separating each declaration (and optional value assignment) with a
 comma. Using this syntax, the var and let keywords need only be used
 once at the beginning of each statement.</p>
+
 <pre>
 globalA = &quot;1&quot;, globalB = &quot;2&quot;;
 <b>let</b> x, y = 5;
@@ -9450,6 +9717,7 @@ globalA = &quot;1&quot;, globalB = &quot;2&quot;;
    age = 14,
    date = <b>new</b> Date();
 </pre>
+
 <p>Notice in the preceding code snippet that the order in which declaration
 and assignment expressions occur (var a, b, c = 2, d:) does not matter. You may freely intermix the two.</p>
 <p>Function declaration effectively creates variables, as well.</p>
@@ -9459,39 +9727,51 @@ and assignment expressions occur (var a, b, c = 2, d:) does not matter. You may 
 <h3 id="ch18-1">Section 18.1: Standard &quot;for&quot; loops</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Standard usage</h4>
+
 <pre>
 <b>for</b> (<b>var</b> i = 0; i &lt; 100; i++) {
   console.log(i);
 }
 </pre>
+
 <p>Expected output:</p>
+
 <blockquote>
 0<br/>
 1<br/>
 &hellip;<br/>
 99
 </blockquote>
+
 <h4>Multiple declarations</h4>
+
 <p>Commonly used to cache the length of an array.</p>
+
 <pre>
 <b>var</b> array = &lbrack;&apos;a&apos;, &apos;b&apos;, &apos;c&apos;&rbrack;;
 <b>for</b> (<b>var</b> i = 0; i &lt; array.length; i++) {
   console.log(array&lbrack;i&rbrack;);
 }
 </pre>
+
 <p>Expected output:</p>
+
 <blockquote>
 &apos;a&apos;<br/>
 &apos;b&apos;<br/>
 &apos;c&apos;
 </blockquote>
+
 <h4>Changing the increment</h4>
+
 <pre>
 <b>for</b> (<b>var</b> i = 0; i &lt; 100; i += 2 /&ast; Can also be: i = i + 2 &ast;/ ) {
   console.log(i);
 }
 </pre>
+
 <p>Expected output:</p>
+
 <blockquote>
 0<br/>
 2<br/>
@@ -9499,14 +9779,18 @@ and assignment expressions occur (var a, b, c = 2, d:) does not matter. You may 
 &hellip;<br/>
 98
 </blockquote>
+
 <h4>Decremented loop</h4>
+
 <pre>
 <b>for</b> (<b>var</b> i = 100; i &gt;=0; i&bsol;) {
   console.log(i);
 }
 </pre>
+
 <!-- page 157 -->
 <p>Expected output:</p>
+
 <blockquote>
 100<br/>
 99<br/>
@@ -9518,47 +9802,64 @@ and assignment expressions occur (var a, b, c = 2, d:) does not matter. You may 
 <h3 id="ch18-2">Section 18.2: &quot;for &hellip; of&quot; loop</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>Version ≥ 6</h5>
+
 <pre>
 <b>const</b> iterable = &lbrack;0, 1, 2&rbrack;;
 <b>for</b> (<b>let</b> i of iterable) {
   console.log(i);
 }
 </pre>
+
 <p>Expected output:</p>
+
 <blockquote>
 0<br/>
 1<br/>
 2
 </blockquote>
+
 <p>The advantages from the for&hellip;of loop are:</p>
+
 <ul>
   <li>This is the most concise, direct syntax yet for looping through array elements</li>
   <li>It avoids all the pitfalls of for&hellip;in</li>
   <li>nlike (), it works with break, continue, and return</li>
 </ul>
+
 <h4>Support of for&hellip;of in other collections</h4>
+
 <h4>Strings</h4>
+
 <p>for&hellip;of will treat a string as a sequence of Unicode characters:</p>
+
 <pre>
 <b>const</b> string = &quot;abc&quot;;
 <b>for</b> (<b>let</b> chr of string) {
   console.log(chr);
 }
 </pre>
+
 <p>Expected output:</p>
+
 <blockquote>
 a b c
 </blockquote>
+
 <h4>Sets</h4>
+
 <p>for&hellip;of works on Set objects.</p>
+
 <h4>Note</b>:</p>
+
 <ul>
   <li>A Set object will eliminate duplicates.</li>
   <li>Please <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Set#Browser_compatibility" 
     target="_blank" rel="noopener noreferrer">check this reference</a>
     for () browser support.</li>
 </ul>
+
 <!-- page 158 -->
+
 <pre>
 <b>const</b> names = &lbrack;&apos;bob&apos;, &apos;alejandro&apos;, &apos;zandra&apos;, &apos;anna&apos;, &apos;bob&apos;&rbrack;;
 <b>const</b> uniqueNames = <b>new</b> Set(names);
@@ -9566,6 +9867,8 @@ a b c
   console.log(name);
 }
 </pre>
+
+
 <p>Expected output:</p>
 <blockquote>
 bob<br/>
@@ -9584,7 +9887,9 @@ similarly to arrays and sets, except the iteration variable stores both a key an
   console.log(iteration)  //<i>will log &lbrack;&apos;abc&apos;, 1&rbrack; and then &lbrack;&apos;def&apos;, 2&rbrack;</i>
 }
 </pre>
+
 <p>You can use destructuring assignment to capture the key and the value separately:</p>
+
 <pre>
 <b>const</b> map = <b>new</b> Map()
   .<b>set</b>(&apos;abc&apos;, 1)
@@ -9597,20 +9902,26 @@ similarly to arrays and sets, except the iteration variable stores both a key an
   <i>def is mapped to 2</i>
 <i>&ast;/</i>
 </pre>
+
 <h4>Objects</h4>
+
 <p>for&hellip;of loops <i>do not</i> work directly on plain Objects; but, it is
 possible to iterate over an object's properties by switching to a
 for&hellip;in loop, or using Object.keys():</p>
+
 <pre>
 <b>const</b> someObject = { name: &apos;Mike&apos; };
 <b>for</b> (<b>let</b> key of Object.keys(someObject)) {
   console.log(key &plus; &quot;: &quot; &plus; someObject&lbrack;key&rbrack;);
 }
 </pre>
+
 <p>Expected output:</p>
+
 <blockquote>
 name: Mike
 </blockquote>
+
 <!-- page 159 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch18-3">Section 18.3: &quot;for &hellip; in&quot; loop</h3>
@@ -9625,6 +9936,7 @@ from the prototype, so it may be necessary to check if the key is within the obj
 hasOwnProperty/defineProperties method and set the param enumerable: false, those attributes
 will be inaccessible.
 </blockquote>
+
 <pre>
 var object = {&quot;a&quot;:&quot;foo&quot;, &quot;b&quot:&quot;bar&quot;, &quot;c&quot:&quot;baz&quot;);
 // <i>&grave;a&grave; is inaccessible</i>
@@ -9637,7 +9949,9 @@ Object.defineProperty(object, &apos;a&apos;, {
   }
 }
 </pre>
+
 <p>Expected output:</p>
+
 <blockquote>
 object.b, bar 
 object.c, baz
@@ -9646,7 +9960,9 @@ object.c, baz
 <h3 id="ch18-4">Section 18.4: &quot;while&quot; Loops</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Standard While Loop</h4>
+
 <p>A standard while loop will execute until the condition given is false:</p>
+
 <pre>
 <b>var</b> i = 0;
 while (i &lt; 100) {
@@ -9654,14 +9970,18 @@ while (i &lt; 100) {
   i++;
 }
 </pre>
+
 <p>Expected output:</p>
+
 <blockquote>
 0<br/>
 1<br/>
 &hellip;<br/>
 99
 </blockquote>
+
 <h4>Decremented loop</h4>
+
 <pre>
 <b>var</b> i = 100;
 while (i &gt; 0) {
@@ -9669,7 +9989,9 @@ while (i &gt; 0) {
   i&bsol;; /&ast; equivalent to i=i-1 &ast;/
 }
 </pre>
+
 <!-- page 160 -->
+
 <p>Expected output:</p>
 <blockquote>
 100<br/>
@@ -9678,16 +10000,21 @@ while (i &gt; 0) {
 &hellip;<br/>
 1
 </blockquote>
+
 <h4>Do&hellip;while Loop</h4>
+
 <p>A do&hellip;while loop will always execute at least once, regardless of
 whether the condition is true or false:</p>
+
 <pre>
 <b>var</b> i = 101;
 <b>do</b> {
   console.log(i);
 } while (i &lt; 100);
 </pre>
+
 <p>Expected output:</p>
+
 <blockquote>
 101
 </blockquote>
@@ -9695,8 +10022,10 @@ whether the condition is true or false:</p>
 <h3 id="ch18-5">Section 18.5: &quot;continue&quot; a loop</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Continuing a &quot;for&quot; Loop</h4>
+
 <p>When you put the <b>continue</b> keyword in a for loop, execution jumps
 to the update expression (i in the example):</p>
+
 <pre>
 <b>for</b> (<b>var</b> i = 0; i &lt; 3; i++) {
   <b>if</b> (i === 1) {
@@ -9705,14 +10034,19 @@ to the update expression (i in the example):</p>
   console.log(i);
 }
 </pre>
+
 <p>Expected output:</p>
+
 <blockquote>
 0<br/>
 2
 </blockquote>
+
 <h4>Continuing a While Loop</h4>
+
 <p>When you <b>continue</b> in a while loop, execution jumps to the condition (i &lt; 3 
 in the example):</p>
+
 <pre>
 <b>var</b> i = 0;
 while (i &lt; 3) {
@@ -9724,6 +10058,7 @@ while (i &lt; 3) {
   i++;
 }
 </pre>
+
 <p>Expected output:</p>
 <blockquote>
 0<br/>
@@ -9733,6 +10068,7 @@ while (i &lt; 3) {
 <h3 id="ch18-6">Section 18.6: Break specific nested loops</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>We can name our loops and break the specific one when necessary.</p>
+
 <pre>
 outerloop:
 <b>for</b> (<b>var</b> i = 0;i&lt;3;i++) {
@@ -9746,7 +10082,9 @@ outerloop:
   }
 }
 </pre>
+
 <p>Output:</p>
+
 <pre>
 0
 0
@@ -9762,6 +10100,7 @@ outerloop:
   availableName = getRandomName();
 } while (isNameUsed(name));
 </pre>
+
 <p>A <b>do</b> while loop is guaranteed to run at least once as it&apos;s condition 
 is only checked at the end of an iteration. A traditional while loop may run
 zero or more times as its condition is checked at the beginning of an
@@ -9772,6 +10111,7 @@ iteration.</p>
 <p>Break and continue statements can be followed by an optional label
 which works like some kind of a goto statement, resumes execution from
 the label referenced position</p>
+
 <pre>
 <b>for</b>(<b>var</b> i = 0; i &lt; 5; i++) {
   nextLoop2Iteration:
@@ -9781,7 +10121,9 @@ the label referenced position</p>
   }
 }
 </pre>
+
 <!-- page 162 -->
+
 <blockquote>
 <i><b>i=0 j=0 skips rest of j values</b></i><br/>
 1 0<br/>
@@ -9798,6 +10140,7 @@ the label referenced position</p>
 4 3<br/>
 <i><b>i=4 j=4 does not log and loops are done</b></i>
 </blockquote>
+
 <!-- page 163 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch19">Chapter 19: Functions</h2>
@@ -9822,7 +10165,9 @@ defined inside the scope.</p>
 }
 console.log(a);    // <i>reference error</i>
 </pre>
+
 <p>Nested functions are possible in JavaScript and the same rules apply.</p>
+
 <pre>
 <b>function</b> foo() {
   <b>var</b> a = &apos;hello&apos;;
@@ -9837,12 +10182,14 @@ console.log(a);    // <i>reference error</i>
 console.log(a);  // <i>reference error</i>
 console.log(b);  // <i>reference error</i>
 </pre>
+
 <p>When JavaScript tries to resolve a reference or variable, it starts
 looking for it in the current scope. If it cannot find that
 declaration in the current scope, it climbs up one scope to look for
 it. This process repeats until the declaration has been found. If the
 JavaScript parser reaches the global scope and still cannot find the
 reference, a reference error will be thrown.</p>
+
 <pre>
 <b>var</b> a = &apos;hello&apos;;
 <b>function</b> foo() {
@@ -9856,8 +10203,10 @@ reference, a reference error will be thrown.</p>
   }
 }
 </pre>
+
 <p>This climbing behavior can also mean that one reference may &quot;shadow&quot;
 over a similarly named reference in the outer scope since it gets seen first.</p>
+
 <pre>
 <b>var</b> a = &apos;hello&apos;;
 <b>function</b> foo() {
@@ -9867,11 +10216,14 @@ over a similarly named reference in the outer scope since it gets seen first.</p
   }
 }
 </pre>
+
 <h5>Version ≥ 6</h5>
+
 <p>The way JavaScript resolves scoping also applies to the <b>const</b>
 keyword. Declaring a variable with the <b>const</b> keyword implies that
 you are not allowed to reassign the value, but declaring it in a
 function will create a new scope and with that a new variable.</p>
+
 <pre>
 <b>function</b> foo () {
   <b>const</b> a = <b>true</b>;
@@ -9884,6 +10236,7 @@ function will create a new scope and with that a new variable.</p>
   console.log(a);   // <i>true</i>
 }
 </pre>
+
 <p>However, functions are not the only blocks that create a scope (if you
 are using <b>let</b> or <b>const</b>). <b>let</b> and <b>const</b> declarations
 have a scope of the nearest block statement. See here for a more
@@ -9891,7 +10244,7 @@ detailed description.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch19-2">Section 19.2: Currying</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<a href="https://en.wikipedia.org/wiki/Currying" 
+<p><a href="https://en.wikipedia.org/wiki/Currying" 
 target="_blank" rel="noopener noreferrer">Currying</a> is the
 transformation of a function of n arity or arguments into a sequence
 of n functions taking only one argument.</p>
@@ -9899,6 +10252,7 @@ of n functions taking only one argument.</p>
 others, you can use currying to decompose a function into a series of
 functions that complete the work in stages, as each value arrives.
 This can be useful:</p>
+
 <ul>
   <li>When the value of an argument almost never changes (e.g., a conversion factor), but 
     you need to maintain the flexibility of setting that value (rather than hard-coding it 
@@ -9907,14 +10261,18 @@ This can be useful:</p>
     have run.</li>
   <li>To validate the arrival of the functions in a specific sequence.</li>
 </ul>
+
 <p>For example, the volume of a rectangular prism can be explained by a
 function of three factors: length (l), width (w), and height (h):</p>
+
 <pre>
 <b>var</b> prism = <b>function</b>(l, w, h) {
   <b>return</b> l &ast; w &ast; h;
   }
 </pre>
+
 <p>A curried version of this function would look like:</p>
+
 <pre>
 <b>function</b> prism(l) {
   <b>return</b> <b>function</b>(w) {
@@ -9924,11 +10282,14 @@ function of three factors: length (l), width (w), and height (h):</p>
   }
 }
 </pre>
+
 <h5>Version ≥ 6</h5>
+
 <pre>
 // <i>alternatively, with concise ECMAScript 6+ syntax:</i>
 <b>var</b> prism = l =&gt; w =&gt; h =&gt; l &ast; w &ast; h;
 </pre>
+
 <p>You can call these sequence of functions with (2)(3)(5), which should
 evaluate to 30.</p>
 <p>Without some extra machinery (like with libraries), currying is of
@@ -9948,27 +10309,34 @@ function itself and any internal variables will be inaccessible from
 outside. An important thing to note about IIFE is that even if you
 name your function, IIFE are not hoisted like standard functions are
 and cannot be called by the function name they are declared with.</p>
+
 <pre>
 (<b>function</b>() {
   alert(&quot;I&apos;ve run - but can&apos;t be run again because I&apos;m immediately invoked at runtime,
   leaving behind only the result I generate&quot;);
 }());
 </pre>
+
 <p>This is another way to write IIFE. Notice that the closing parenthesis
 before the semicolon was moved and placed right after the closing
 curly bracket:</p>
+
 <pre>
 (<b>function</b>() {
   alert(&quot;This is IIFE too.&quot;);
 })();
 </pre>
+
 <p>You can easily pass parameters into an IIFE:</p>
+
 <pre>
 (<b>function</b>(message) {
   alert(message);
 }(&quot;Hello World!&quot;));
 </pre>
+
 <p>Additionally, you can return values to the surrounding scope:</p>
+
 <pre>
 <b>var</b> example = (<b>function</b>() {
   <b>return</b> 42;
@@ -9985,16 +10353,21 @@ the name is included in the callstack.</p>
   <b>throw</b> error; // <i>We can now see the error thrown in &apos;namedIIFE()&apos;</i>
 }());
 </pre>
+
 <p>While wrapping a function in parenthesis is the most common way to
 denote to the JavaScript parser to expect an expression, in places
 where an expression is already expected, the notation can be made more
 concise:</p>
+
 <pre>
 <b>var</b> a = <b>function</b>() { <b>return</b> 42 }();
 console.log(a)  // <i>=&bsol;42</i>
 </pre>
+
 <p>Arrow version of immediately invoked function:</p>
+
 <h5>Version ≥ 6</h5>
+
 <pre>
 (() =&gt; console.log(&quot;Hello!&quot;))(); // <i>=&bsol;Hello!</i>
 </pre>
@@ -10002,6 +10375,7 @@ console.log(a)  // <i>=&bsol;42</i>
 <h3 id="ch19-4">Section 19.4: Named Functions</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Functions can either be named or unnamed (anonymous functions):</p>
+
 <pre>
 <b>var</b> namedSum = <b>function</b> sum (a, b) { // <i>named</i>
   <b>return</b> a &plus; b;
@@ -10012,21 +10386,27 @@ console.log(a)  // <i>=&bsol;42</i>
 namedSum(1, 3);
 anonSum(1, 3);
 </pre>
+
 <blockquote>
 4
 4
 </blockquote>
+
 <p>But their names are private to their own scope:</p>
+
 <pre>
 <b>var</b> sumTwoNumbers = <b>function</b> sum (a, b) {
   <b>return</b> a &plus; b;
 }
 sum(1, 3);
 </pre>
+
 <blockquote>
 Uncaught ReferenceError: sum is not defined
 </blockquote>
+
 <p>Named functions differ from the anonymous functions in multiple scenarios:</p>
+
 <ul>
   <li>When you are debugging, the name of the function will appear in the error/stack trace</li>
   <li>Named functions are hoisted while anonymous functions are not</li>
@@ -10034,31 +10414,40 @@ Uncaught ReferenceError: sum is not defined
   <li>Depending on ECMAScript version, named and anonymous functions may treat the function 
     name property differently</li>
 </ul>
+
 <h4>Named functions are hoisted</h4>
 <!-- page 167 -->
+
 <p>When using an anonymous function, the function can only be called
 after the line of declaration, whereas a named function can be called
 before declaration. Consider</p>
+
 <pre>
 foo();
 <b>var</b> foo = <b>function</b> () {  // <i>using an anonymous function</i>
   console.log(&apos;bar&apos;);
 }
 </pre>
+
 <blockquote>
 Uncaught TypeError: foo is not a function
 </blockquote>
+
 <pre>
 foo();
 <b>function</b> foo () { // <i>using a named function</i>
 console.log(&apos;bar&apos;);
 }
 </pre>
+
 <blockquote>
 bar
 </blockquote>
+
 <h4>Named Functions in a recursive scenario</h4>
+
 <p>A recursive function can be defined as:</p>
+
 <pre>
 <b>var</b> say = <b>function</b> (times) {
   <b>if</b> (times &gt; 0) {
@@ -10071,11 +10460,14 @@ bar
 <b>var</b> sayHelloTimes = say;
 sayHelloTimes(2);
 </pre>
+
 <blockquote>
 Hello!
 Hello!
 </blockquote>
+
 <p>What if somewhere in your code the original function binding gets redefined?</p>
+
 <pre>
 <b>var</b> say = <b>function</b> (times) {
   <b>if</b> (times &gt; 0) {
@@ -10087,12 +10479,15 @@ Hello!
 say = &quot;oops&quot;;
 sayHelloTimes(2);
 </pre>
+
 <!-- page 168 -->
 <blockquote>
 Hello!
 Uncaught TypeError: say is not a function
 </blockquote>
+
 <p>This can be solved using a named function</p>
+
 <pre>
 // <i>The outer variable can even have the same name as the function</i>
 // <i>as they are contained in different scopes</i>
@@ -10107,12 +10502,16 @@ Uncaught TypeError: say is not a function
 <b>var</b> sayHelloTimes = say;
 say = &quot;oops&quot;;
 sayHelloTimes(2);
+
 </pre>
+
 <blockquote>
 Hello!
 Hello!
 </blockquote>
+
 <p>And as bonus, the named function can&apos;t be set to <b>undefined</b>, even from inside:</p>
+
 <pre>
 <b>var</b> say = <b>function</b> say (times) {
   // <i>this does nothing</i>
@@ -10128,24 +10527,32 @@ Hello!
 say = &quot;oops&quot;;
 sayHelloTimes(2);
 </pre>
+
 <blockquote>
 Hello!
 Hello!
 </blockquote>
+
 <h4>The name property of functions</h4>
+
 <p>Before ES6, named functions had their name properties set to their
 function names, and anonymous functions had their name properties set
 to the empty string.</p>
 <!-- page 169 -->
+
 <h5>Version ≤ 5</h5>
+
 <pre>
 <b>var</b> foo = <b>function</b> () {}
 console.log(foo.name);  // <i>outputs &apos;&apos;</i>
 <b>function</b> foo () {}
 console.log(foo.name);  // <i>outputs &apos;foo&apos;</i>
 </pre>
+
 <p>Post ES6, named and unnamed functions both set their name properties:</p>
+
 <h5>Version ≥ 6</h5>
+
 <pre>
 <b>var</b> foo = <b>function</b> () {}
 console.log(foo.name);  // <i>outputs &apos;foo&apos;</i>
@@ -10158,6 +10565,7 @@ console.log(foo.name);  // <i>outputs &apos;bar&apos;</i>
 <h3 id="ch19-5">Section 19.5: Binding &grave;this&grave; and arguments</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>Version ≥ 5.1</h5>
+
 <p>When you take a reference to a method (a property which is a function)
 in JavaScript, it usually doesn&apos;t remember the object it was
 originally attached to. If the method needs to refer to that object as
@@ -10165,6 +10573,7 @@ originally attached to. If the method needs to refer to that object as
 crash.</p>
 <p>You can use the .bind() method on a function to create a wrapper that 
 includes the value of <b>this</b> and any number of leading arguments.</p>
+
 <pre>
 <b>var</b> monitor = {
   threshold: 5,
@@ -10187,10 +10596,12 @@ check(15);
 <b>var</b> check8 = monitor.check.bind(monitor, 8);
 check8();  // <i>We also bound the argument to &grave;8&grave; here. It can&apos;t be re-specified.</i>
 </pre>
+
 <p>When not in strict mode, a function uses the global object (window in the browser) as 
 <b>this</b>, unless the function is called as a method, bound, or called with the method 
 .call syntax.</p>
 <!-- page 170 -->
+
 <pre>
 window.x = 12;
 <b>function</b> example() {
@@ -10198,6 +10609,7 @@ window.x = 12;
 }
 console.log(example());  // <i>12</i>
 </pre>
+
 <p>In strict mode <b>this</b> is <b>undefined</b> by default</p>
 <pre>
 window.x = 12;
@@ -10207,9 +10619,13 @@ window.x = 12;
 }
 console.log(example());  // <i>Uncaught TypeError: Cannot read property &apos;x&apos; of undefined(</i>...)
 </pre>
+
 <h5>Version ≥ 7</h5>
+
 <h4>Bind Operator</h4>
+
 <p>The double colon <b>bind operator</b> can be used as a shortened syntax for the concept explained above:</p>
+
 <pre>
 <b>var</b> log = console.log.bind(console);  // <i>long version</i>
 <b>const</b> log = ::console.log;  // <i>short version</i>
@@ -10220,21 +10636,31 @@ foo::bar(arg1, arg2, arg3);  // <i>short version</i>
 foo.bar.apply(foo, args);  // <i>long version</i>
 foo::bar(&hellip;args);  // <i>short version</i>
 </pre>
+
 <p>This syntax allows you to write normally, without worrying about binding <b>this</b> everywhere.</p>
+
 <h4>Binding console functions to variables var</h4>
+
 <pre>
 var log = console.log.bind(console);
 </pre>
+
 <h4>Usage:</h4>
+
 <pre>
 log(&apos;one&apos;, &apos;2&apos;, 3, &lbrack;4&rbrack;, {5: 5});
 </pre>
+
 <h4>Output:</h4>
+
 <pre>
 one 2 3 &lbrack;4&rbrack; Object {5: 5}
 </pre>
+
 <h4>Why would you do that?</h4>
+
 <p>One use case can be when you have custom logger and you want to decide on runtime which one to use.</p>
+
 <pre>
 <b>var</b> logger = require(&apos;appLogger&apos;);
 <b>var</b> log = logToServer ? logger.log : console.log.bind(console);
@@ -10244,12 +10670,15 @@ one 2 3 &lbrack;4&rbrack; Object {5: 5}
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To create a function which accepts an undetermined number of
 arguments, there are two methods depending on your environment.</p>
+
 <h5>Version ≤ 5</h5>
+
 <p>Whenever a function is called, it has an Array-like
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments" 
 target="_blank" rel="noopener noreferrer">
 arguments</a> object in its scope, containing all the arguments passed to the function. 
 Indexing into or iterating over this will give access to the arguments, for example</p>
+
 <pre>
 <b>function</b> logSomeThings() {
   <b>for</b> (<b>var</b> i = 0; i &lt; arguments.length; ++i) {
@@ -10260,12 +10689,16 @@ logSomeThings(&apos;hello&apos;, &apos;world&apos;);
 // <i>logs &quot;hello&quot;</i>
 // <i>logs &quot;world&quot;</i>
 </pre>
+
 <p>Note that you can convert arguments to an actual Array if need-be; see: Converting Array-like Objects to Arrays</p>
+
 <h5>Version ≥ 6</h5>
+
 <p>From ES6, the function can be declared with its last parameter using the 
 <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/rest_parameters" 
 target="_blank" rel="noopener noreferrer">
 rest operator</a> (&hellip;). This creates an Array which holds the arguments from that point onwards</p>
+
 <pre>
 <b>function</b> personLogsSomeThings(person, &hellip;msg) {
   msg.forEach(arg =&gt; {
@@ -10276,17 +10709,21 @@ personLogsSomeThings(&apos;John&apos;, &apos;hello&apos;, &apos;world&apos;);
 // <i>logs &quot;John says hello&quot;</i>
 // <i>logs &quot;John says world&quot;</i>
 </pre>
+
 <p>Functions can also be called with similar way, the 
 <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_operator" 
 target="_blank" rel="noopener noreferrer">spread syntax</a></p>
+
 <pre>
 <b>const</b> logArguments = (&hellip;args) =&gt; console.log(args)
 <b>const</b> list = &lbrack;1, 2, 3&rbrack;
 logArguments(&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &hellip;list)
 // <i>output: Array &lbrack; &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, 1, 2, 3 &rbrack;</i>
 </pre>
+
 <p>This syntax can be used to insert arbitrary number of arguments to any
 position, and can be used with any iterable(apply accepts only array-like objects).</p>
+
 <pre>
 <b>const</b> logArguments = (&hellip;args) =&gt; console.log(args)
 <b>function</b> &ast;generateNumbers() {
@@ -10297,30 +10734,36 @@ position, and can be used with any iterable(apply accepts only array-like object
 logArguments(&apos;a&apos;, &hellip;generateNumbers(), &hellip;&apos;pqr&apos;, &apos;b&apos;)
 // <i>output: Array &lbrack; &quot;a&quot;, 6, 5, 4, &quot;p&quot;, &quot;q&quot;, &quot;r&quot;, &quot;b&quot; &rbrack;</i>
 </pre>
+
 <!-- page 172 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch19-7">Section 19.7: Anonymous Function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Defining an Anonymous Function</h4>
+
 <p>When a function is defined, you often give it a name and then invoke
 it using that name, like so:</p>
+
 <pre>
 foo();
 <b>function</b> foo() {
   // <i>&hellip;</i>
 }
 </pre>
+
 <p>When you define a function this way, the JavaScript runtime stores
 your function in memory and then creates a reference to that function,
 using the name you&apos;ve assigned it. That name is then accessible
 within the current scope. This can be a very convenient way to create
 a function, but JavaScript does not require you to assign a name to a
 function. The following is also perfectly legal:</p>
+
 <pre>
 <b>function</b>() {
   // <i>&hellip;</i>
 }
 </pre>
+
 <p>When a function is defined without a name, it&apos;s known as an anonymous
 function. The function is stored in memory, but the runtime doesn&apos;t
 automatically create a reference to it for you. At first glance, it
@@ -10328,12 +10771,15 @@ may appear as if such a thing would have no use, but there are several
 scenarios where anonymous functions are very convenient.</p>
 
 <h4>Assigning an Anonymous Function to a Variable</h4>
+
 <p>A very common use of anonymous functions is to assign them to a
 variable:</p>
+
 <pre>
 <b>var</b> foo = <b>function</b>(){ /&ast;&hellip;&ast;/ };
 foo();
 </pre>
+
 <p>This use of anonymous functions is covered in more detail in Functions
 as a variable</p>
 
@@ -10349,6 +10795,7 @@ a new array by applying a transform function to each element.</p>
 <b>var</b> nums = &lbrack;0, 1, 2&rbrack;;
 <b>var</b> doubledNums = nums.map( <b>function</b>(element){ <b>return</b> element &ast; 2; }); // <i>&lbrack;0,2,4&rbrack;</i>
 </pre>
+
 <p>It would be tedious, sloppy and unnecessary to create a named
 function, which would clutter your scope with a function only needed
 in this one place and break the natural flow and reading of your code
@@ -10356,9 +10803,11 @@ in this one place and break the natural flow and reading of your code
 understand what&apos;s going on).</p>
 
 <h4>Returning an Anonymous Function From Another Function</h4>
+
 <p>Sometimes it&apos;s useful to return a function as the result of another
 function. For example:</p>
 <!-- page 173 -->
+
 <pre>
 <b>var</b> hash = getHashFunction( &apos;sha1&apos; );
 <b>var</b> hashValue = hash( &apos;Secret Value&apos; );
@@ -10367,7 +10816,9 @@ function. For example:</p>
   <b>else if</b> ( algorithm === &apos;md5&apos; ) <b>return function</b>( value ){ /&ast;&hellip;&ast;/ };
 }
 </pre>
+
 <h4>Immediately Invoking an Anonymous Function</h4>
+
 <p>Unlike many other languages, scoping in JavaScript is function-level,
 not block-level. (See Function Scoping ). In some cases, however,
 it&apos;s necessary to create a new scope. For example, it&apos;s common to
@@ -10379,6 +10830,7 @@ function and then immediately invoke it, safely hiding you variables
 within the scope of the anonymous function and without making your
 code accessible to third-parties via a leaked function name. For
 example:</p>
+
 <pre>
 &lt;!&minus;&minus; My Script &minus;&minus;&gt;
 <b>&lt;script&gt;</b>
@@ -10400,6 +10852,7 @@ initialize();
 }()) // &lt;&minus;&minus; the parentheses invokes the function immediately
 <b>&lt;/script&gt;</b>
 </pre>
+
 <h4>Self-Referential Anonymous Functions</h4>
 
 <p>Sometimes it&apos;s useful for an anonymous function to be able to refer
@@ -10408,6 +10861,7 @@ itself or add properties to itself. If the function is anonymous,
 though, this can be very difficult as it requires knowledge of the
 variable that the function has been assigned to. This is the less than
 ideal solution:</p>
+
 <pre>
 <b>var</b> foo = <b>function</b>(callAgain) {
   console.log( &apos;Whassup?&apos; );
@@ -10428,12 +10882,14 @@ bar(<b>true</b>);
 // <i>Whassup?</i>
 // <i>Bad.</i>
 </pre>
+
 <!-- page 174 -->
 <p>The intent here was for the anonymous function to recursively call
 itself, but when the value of foo changes, you end up with a
 potentially difficult to trace bug.</p>
 <p>Instead, we can give the anonymous function a reference to itself by
 giving it a private name, like so:</p>
+
 <pre>
 <b>var</b> foo = <b>function</b> myself(callAgain) {
   console.log( &apos;Whassup?&apos; );
@@ -10454,14 +10910,19 @@ bar(<b>true</b>);
 // <i>Whassup?</i>
 // <i>Whassup?</i>
 </pre>
+
 <p>Note that the function name is scoped to itself. The name has not
 eaked into the outer scope:</p>
+
 <pre>
 myself(<b>false</b>); // <i>ReferenceError: myself is not defined</i>
 </pre>
+
 <p>This technique is especially useful when dealing with recursive
 anonymous functions as callback parameters:</p>
+
 <h5>Version ≥ 5</h5>
+
 <pre>
 // <i>Calculate the Fibonacci value for each number in an array:</i>
 <b>var</b> fib = <b>false</b>,
@@ -10477,6 +10938,7 @@ anonymous functions as callback parameters:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Before ECMAScript 2015 (ES6), a parameter&apos;s default value could be
 assigned in the following way:</p>
+
 <pre>
 <b>function</b> printMsg(msg) {
 msg = <b>typeof</b> msg !== &apos;undefined&apos; ? // <i>if a value was provided</i>
@@ -10485,9 +10947,12 @@ msg = <b>typeof</b> msg !== &apos;undefined&apos; ? // <i>if a value was provide
 console.log(msg); 
 }
 </pre>
+
 <p>ES6 provided a new syntax where the condition and reassignment
 depicted above is no longer necessary:</p>
+
 <h5>Version ≥ 6</h5>
+
 <pre>
 <b>function</b> printMsg(msg=&apos;Default value for msg.&apos;) {
   console.log(msg);
@@ -10496,10 +10961,13 @@ printMsg();  // <i>-&amp;quot;Default value for msg.&quot;</i>
 printMsg(<b>undefined</b>);  // <i>-&amp;quot;Default value for msg.&quot;</i>
 printMsg(&apos;Now my msg in different!&apos;); // <i>-&amp;quot;Now my msg in different!&quot;</i>
 </pre>
+
 <p>This also shows that if a parameter is missing when the function is
 invoked, its value is kept as <b>undefined</b>, as it can be confirmed by
 explicitly providing it in the following example (using an arrow function):</p>
+
 <h5>Version ≥ 6</h5>
+
 <pre>
 <b>let</b> param_check = (p = &apos;str&apos;) =&gt; console.log(p &plus; &apos; is of type: &apos; &plus; <b>typeof</b> p);
 param_check();  // <i>-&amp;quot;str is of type: string&quot;</i>
@@ -10507,7 +10975,9 @@ param_check(<b>undefined</b>);  // <i>-&amp;quot;str is of type: string&quot;</i
 param_check(1);  // <i>-&amp;quot;1 is of type: number&quot;</i>
 param_check(<b>this</b>);  // <i>-&amp;quot;&lbrack;object Window&rbrack; is of type: object&quot;</i>
 </pre>
+
 <h4>Functions/variables as default values and reusing parameters</h4>
+
 <p>The default parameters&apos; values are not restricted to numbers, strings
 or simple objects. A function can also be set as the default value callback = function(){}:</p>
 <h5>Version ≥ 6</h5>
@@ -10522,8 +10992,10 @@ foo(<b>function</b>() {
 foo();
 // <i>default</i>
 </pre>
+
 <p>There are certain characteristics of the operations that can be
 performed through default values:</p>
+
 <ul>
   <li>A previously declared parameter can be reused as a default value for
     the upcoming parameters&apos; values.</li>
@@ -10532,7 +11004,9 @@ performed through default values:</p>
     used in its default values.</li>
   <li>Functions can be invoked in order to provide their return value into a default value.</li>
 </ul>
+
 <h5>Version ≥ 6</h5>
+
 <pre>
 <b>let</b> zero = 0; 
 <b>function</b> multiply(x) { <b>return</b> x &ast; 2;}
@@ -10545,8 +11019,11 @@ add(2, 7);              // <i>18, 18</i>
 add(1, 2, 5);           // <i>8, 10</i>
 add(1, 2, 5, 10);       // <i>8, 20</i>
 </pre>
+
 <h4>Reusing the function&apos;s return value in a new invocation&apos;s default value:</h4>
+
 <h5>Version ≥ 6</h5>
+
 <pre>
 <b>let</b> array = &lbrack;1&rbrack;;  // <i>meaningless: this will be overshadowed in the function&apos;s scope</i>
 <b>function</b> add(value, array = &lbrack;&rbrack;) {
@@ -10557,11 +11034,15 @@ add(5);     // <i>&lbrack;5&rbrack;</i>
 add(6);     // <i>&lbrack;6&rbrack;, not &lbrack;5, 6&rbrack;</i>
 add(6, add(5));  // <i>&lbrack;5, 6&rbrack;</i>
 </pre>
+
 <h4>arguments value and length when lacking parameters in invocation</h4>
+
 <p>The arguments array object only retains the parameters whose values
 are not default, i.e. those that are explicitly provided when the
 function is invoked:</p>
+
 <h5>Version ≥ 6</h5>
+
 <pre>
 <b>function</b> foo(a = 1, b = a &plus; 1) {
   console.info(arguments.length, arguments);
@@ -10602,6 +11083,7 @@ obj.<b>set</b>.apply(myObj, &lbrack;5, 4&rbrack;); // <i>same as above; note the
 
 console.log(myObj); // <i>prints { a: 3, b: 5 }</i>
 </pre>
+
 <h5>Version ≥ 5</h5>
 
 <b>bind</b>   <b>()</b> in addition to call() and apply
@@ -10612,6 +11094,7 @@ ECMAScript 5 introduced another method called bind() in addition to call() and a
 <p>It behaves quite differently than the other two. The first argument to
 bind() is the <b>this</b> value for the new function. All other arguments
 represent named parameters that should be permanently set in the new function.</p>
+
 <pre>
 <b>function</b> showName(label) {
   console.log(label &plus; &quot;:&quot; &plus; <b>this</b>.name);
@@ -10639,13 +11122,16 @@ student2.sayName(&quot;student2&quot;);  // <i>outputs &quot;student2:Ravi&quot;
 passed to a function. Unlike currying, the number need not go down by one.</p>
 <p>Example:</p>
 <p>This function &hellip;</p>
+
 <pre>
 <b>function</b> multiplyThenAdd(a, b, c) {
   <b>return</b> a &ast; b &plus; c;
 }
 </pre>
+
 <p>&hellip; can be used to create another function that will always multiply
 by 2 and then add 10 to the passed value;</p>
+
 <pre>
 <b>function</b> reversedMultiplyThenAdd(c, b, a) {
   <b>return</b> a &ast; b &plus; c;
@@ -10656,6 +11142,7 @@ by 2 and then add 10 to the passed value;</p>
 <b>var</b> multiplyTwoThenAddTen = factory(2, 10);
 multiplyTwoThenAddTen(10);  // <i>30</i>
 </pre>
+
 <!-- page 178 -->
 <p>The &quot;application&quot; part of partial application simply means fixing
 parameters of a function.</p>
@@ -10665,6 +11152,7 @@ parameters of a function.</p>
 <p>In JavaScript all arguments are passed by value. When a function
 assigns a new value to an argument variable, that change will not be
 visible to the caller:</p>
+
 <pre>
 <b>var</b> obj = {a: 2};
 <b>function</b> yfunc(arg) {
@@ -10673,8 +11161,10 @@ visible to the caller:</p>
 myfunc(obj);
 console.log(obj.a); // <i>2</i>
 </pre>
+
 <p>However, changes made to (nested) properties <i>of</i> such arguments, will
 be visible to the caller:</p>
+
 <pre>
 <b>var</b> obj = {a: 2};
 <b>function</b> myfunc(arg) {
@@ -10683,11 +11173,13 @@ be visible to the caller:</p>
 myfunc(obj);
 console.log(obj.a);  // <i>5</i>
 </pre>
+
 <p>This can be seen as a <i>call by reference</i>: although a function cannot
 change the caller&apos;s object by assigning a new value to it, it could
 <i>mutate</i> the caller&apos;s object.</p>
 <p>As primitive valued arguments, like numbers or strings, are immutable,
 there is no way for a function to mutate them:</p>
+
 <pre>
 <b>var</b> s = &apos;say&apos;;
 <b>function</b> myfunc(arg) {
@@ -10696,10 +11188,13 @@ there is no way for a function to mutate them:</p>
 myfunc(s);
 console.log(s);  // <i>&apos;say&apos;</i>
 </pre>
+
 <p>When a function wants to mutate an object passed as argument, but does
 not want to actually mutate the caller&apos;s object, the argument
 variable should be reassigned:</p>
+
 <h5>Version ≥ 6</h5>
+
 <pre>
 <b>var</b> obj = {a: 2, b: 3};
 <b>function</b> myfunc(arg) {
@@ -10709,11 +11204,13 @@ variable should be reassigned:</p>
 myfunc(obj);
 console.log(obj.a);  // <i>2</i>
 </pre>
+
 <p>As an alternative to in-place mutation of an argument, functions can
 create a new value, based on the argument, and return it. The caller
 can then assign it, even to the original variable that was passed as
 argument:</p>
 <!-- page 179 -->
+
 <pre>
 <b>var</b> a = 2;
 <b>function</b> myfunc(arg) {
@@ -10729,30 +11226,38 @@ console.log(obj.a);  // <i>3</i>
 <p>Functions can take inputs in form of variables that can be used and
 assigned inside their own scope. The following function takes two
 numeric values and returns their sum:</p>
+
 <pre>
 <b>function</b> addition (argument1, argument2) {
   <b>return</b> argument1 &plus; argument2;
 }
 console.log(addition(2, 3));  // <i>-&gt; 5</i>
 </pre>
+
 <h4>arguments object</b><p>
 
 <p>The arguments object contains all the function&apos;s parameters that
 contain a non-default value. It can also be used even if the
 parameters are not explicitly declared:</p>
+
 <pre>
 (<b>function</b>() { console.log(arguments) })(0,&apos;str&apos;, &lbrack;2,{3}&rbrack;) // <i>-&amp;lbrack;0, &quot;str&quot;, Array&lbrack;2&rbrack;&rbrack;</i>
 </pre>
+
 <p>Although when printing arguments the output resembles an Array, it is in fact an object:</p>
+
 <pre>
 (<b>function</b>() { console.log(<b>typeof</b>arguments) })();  // <i>-&bsol;object</i>
 </pre>
+
 <h4>Rest parameters: function ( &hellip; parm) {}</h4>
+
 <p>In ES6, the&hellip;syntax when used in the declaration of a function&apos;s
 parameters transforms the variable to its right into a single object
 containing all the remaining parameters provided after the declared
 ones. This allows the function to be invoked with an unlimited number
 of arguments, which will become part of this variable:</p>
+
 <pre>
 (</b>function</b>(a, &hellip;b){console.log(<b>typeof</b> b&plus;&apos;: &apos; &plus;b&lbrack;0&rbrack;&plus;b&lbrack;1&rbrack;&plus;b&lbrack;2&rbrack;) })(0, 1, &apos;2&apos;, &lbrack;3&rbrack;,{i:4});
 // <i>&minus&gt; object: 123</i>
@@ -10763,6 +11268,7 @@ of arguments, which will become part of this variable:</p>
 <p>In ES6, the &hellip; syntax can also be used when invoking a function by
 placing an object/variable to its right. This allows that object&apos;s
 elements to be passed into that function as a single object:
+
 <pre>
 </b>let</b> nums = lbrack;2, 42, -1&rbrack;;
 console.log(&hellip;&lbrack;&apos;a&apos;, &apos;b&apos;, &apos;c&apos;&rbrack;, Math.max(&hellip;nums)); // <i>-&gt;a b c 42</i>
@@ -10783,15 +11289,19 @@ simply working on the functioncomposition (just like snapping pieces of a track 
 <b>const</b> capitalize = x =&bsol;x.replace(*/&Hat;&bsol;&bsol;w/, m =&gt; m.toUpperCase());
 <b>const</b> sign = x =&bsol;x + &apos;,<b>&bsol;n</b>made with love&apos;;
 </pre>
+
 <!-- page 180 -->
 <p>and easily create a transformation track:</p>
+
 <h5>Version ≥ 6</h5>
+
 <pre>
 <b>const</b> formatText = compose(capitalize, sign);
 formatText(&apos;this is an example&apos;)
 // <i>This is an example,</i>
 // <i>made with love</i>
 </pre>
+
 <p>N.B. Composition is achieved through a utility function usually called compose 
 as in our example.</p>
 
@@ -10799,7 +11309,9 @@ as in our example.</p>
 (<a href="https://lodash.com/docs#flow" target="_blank" rel="noopener noreferrer">
 lodash</a>, <a href="http://ramdajs.com/" target="_blank" rel="noopener noreferrer">
 rambda</a>/ etc.) but you can also start out with a simple implementation such as:</p>
+
 <h5>Version ≥ 6</h5>
+
 <pre>
 <b>const</b> compose = (&hellip;funs) =&gt;
   x =&gt;
@@ -10825,6 +11337,7 @@ As of 2015 works in Node.js and all major browsers except IE.</p>
 <h5>ES5</h5>
 
 <p>If you have a reference to the function, you can do:</p>
+
 <pre>
 <b>function</b> functionName( func )
 {
@@ -10844,6 +11357,7 @@ As of 2015 works in Node.js and all major browsers except IE.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A recursive function is simply a function, that would call itself.</p>
 <!-- page 181 -->
+
 <pre>
 <b>function</b> factorial (n) {
   <b>if</b> (n &lt;= 1) {
@@ -10852,10 +11366,12 @@ As of 2015 works in Node.js and all major browsers except IE.</p>
 <b>return</b> n &ast; factorial(n &minus; 1);
 }
 </pre>
+
 <p>The above function shows a basic example of how to perform a recursive function 
 to return a factorial.</p>
 
 <p>Another example, would be to retrieve the sum of even numbers in an array.</p>
+
 <pre>
 <b>function</b> countEvenNumbers (arr) {
   // <i>Sentinel value. Recursion stops on empty array.</i>
@@ -10871,6 +11387,7 @@ to return a factorial.</p>
 <b>return</b> ((value &percnt; 2 === 0) ? 1 : 0) &plus; countEvens(arr);
 }
 </pre>
+
 <p>It is important that such functions make some sort of sentinel value
 check to avoid infinite loops. In the first example above, when n is
 less than or equal to 1, the recursion stops, allowing the result of
@@ -10881,6 +11398,7 @@ each call to be returned back up the call stack.</p>
 <p>The return statement can be a useful way to create output for a
 function. The return statement is especially useful if you do not know
 in which context the function will be used yet.</p>
+
 <pre>
 // <i>An example function that will take a string as input and return</i>
 // <i>the first character of the string.</i>
@@ -10888,20 +11406,28 @@ in which context the function will be used yet.</p>
   <b>return</b> stringIn.charAt(0);
 }
 </pre>
+
 <p>Now to use this function, you need to put it in place of a variable
 somewhere else in your code:</p>
+
 <h4>Using the function result as an argument for another function:</h4>
+
 <pre>
 console.log(firstChar(&quot;Hello world&quot;));
 </pre>
+
 <p><i>Console output will be:</i></p>
+
 <pre>
 &gt; H
 </pre>
+
 <h4>The return statement ends the function</h4>
+
 <p>If we modify the function in the beginning, we can demonstrate that the return 
 statement ends the function.</p>
 <!-- page 182 -->
+
 <pre>
 <b>function</b> firstChar (stringIn){
   console.log(&quot;The first action of the first char function&quot;);
@@ -10909,37 +11435,49 @@ statement ends the function.</p>
   console.log(&quot;The last action of the first char function&quot;);
 }
 </pre>
+
 <p>Running this function like so will look like this:</p>
+
 <pre>
 console.log(firstChar(&quot;JS&quot;));
 </pre>
-<p><i>Console output:</i></p>
+
+<h4>Console output:</h4>
+
 <pre>
 &gt; The first action of the first char <b>function</b>
 &gt; J
 </pre>
+
 <p>It will not print the message after the return statement, as the function has now been ended.</p>
+
 <h4>Return statement spanning multiple lines:</h4>
+
 <p>In JavaScript, you can normally split up a line of code into many lines for readability 
 purposes or organization. This is valid JavaScript:</p>
+
 <pre>
 <b>var</b>
   name = &quot;bob&quot;,
   age = 18;
 </pre>
+
 <p>When JavaScript sees an incomplete statement like <b>var</b> it looks to the next line to 
 complete itself. However, if you make the same mistake with the <b>return</b> statement, you 
 will not get what you expected.</p>
+
 <pre>
 <b>return</b>
   &quot;Hi, my name is &quot; &plus; name &plus; &quot;. &quot; &plus;
   &quot;I&apos;m &quot; &plus; age &plus; &quot; years old.&quot;;
 </pre>
+
 <p>This code will return <b>undefined</b> because <b>return</b> by itself is a
 complete statement in JavaScript, so it will not look to the next line
 to complete itself. If you need to split up a <b>return</b> statement
 into multiple lines, put a value next to return before you split it
 up, like so.</p>
+
 <pre>
 <b>return</b> &quot;Hi, my name is &quot; &plus; name &plus; &quot;. &quot; &plus;
   &quot;I&apos;m &quot; &plus; age &plus; &quot; years old.&quot;;
@@ -10948,15 +11486,18 @@ up, like so.</p>
 <h3 id="ch19-17">Section 19.17: Functions as a variable</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A normal function declaration looks like this:</p>
+
 <pre>
 <b>function</b> foo() {
 }
 </pre>
+
 <p>A function defined like this is accessible from anywhere within its
 context by its name. But sometimes it can be useful to treat function
 references like object references. For example, you can assign an
 object to a variable based on some set of conditions and then later
 retrieve a property from one or the other object:</p>
+
 <pre>
 <b>var</b> name = &apos;Cameron&apos;;
 <b>var</b> spouse;
@@ -10964,6 +11505,7 @@ retrieve a property from one or the other object:</p>
 <b>else if</b> ( name === &apos;Cameron&apos; ) spouse = { name: &apos;Casey&apos; };
 <b>var</b> spouseName = spouse.name;
 </pre>
+
 <!-- page 183 -->
 <p>In JavaScript, you can do the same thing with functions:</p>
 <pre>
@@ -10974,12 +11516,14 @@ retrieve a property from one or the other object:</p>
 <b>else if</b> ( hashAlgorithm === &apos;md5&apos; ) hash = md5Hash;
 hash(&apos;Fred&apos;);
 </pre>
+
 <p>In the example above, hash is a normal variable. It is assigned a
 reference to a function, after which the function it references can be
 invoked using parentheses, just like a normal function declaration.</p>
 <p>The example above references anonymous functions&hellip; functions that do
 not have their own name. You can also use variables to refer to named
 functions. The example above could be rewritten like so:</p>
+
 <pre>
 // <i>Example 2</i>
 var hashAlgorithm = &apos;ha1&apos;;
@@ -10993,7 +11537,9 @@ var hash;
   // ...
 }
 </pre>
+
 <p>Or, you can assign function references from object properties:</p>
+
 <pre>
 // <i>Example 3</i>
 <b>var</b> hashAlgorithms = {
@@ -11006,12 +11552,14 @@ var hash;
 <b>else</b> <b>if</b> (  hashAlgorithm === &apos;md5&apos; ) hash = hashAlgorithms.md5;
 hash(&apos;Fred&apos;);
 </pre>
+
 <p>You can assign the reference to a function held by one variable to
 another by omitting the parentheses. This can result in an
 easy-to-make mistake: attempting to assign the return value of a
 function to another variable, but accidentally assigning the reference
 to the function.</p>
 <!-- page 184 -->
+
 <pre>
 // <i>Example 4</i>
 <b>var</b> a = getValue;
@@ -11021,6 +11569,7 @@ to the function.</p>
   <b>return</b> 41;
 }
 </pre>
+
 <!-- page 184 -->
 <p>A reference to a function is like any other value. As you&apos;ve seen, a
 reference can be assigned to a variable, and that variable&apos;s
@@ -11028,6 +11577,7 @@ reference value can be subsequently assigned to other variables. You
 can pass around references to functions like any other value,
 including passing a reference to a function as the return value of
 another function. For example:</p>
+
 <pre>
 // <i>Example 5</i>
 // <i>getHashingFunction returns a function, which is assigned</i>
@@ -11046,14 +11596,18 @@ hash(&apos;Fred&apos;);
   // <i>&hellip;</i>
 }
 </pre>
+
 <p>You don&apos;t need to assign a function reference to a variable in order to invoke it. 
 This example, building off example 5, will call getHashingFunction and then immediately 
 invoke the returned function and pass its return value to hashedValue.</p>
+
 <pre>
 // <i>Example 6</i>
 <b>var</b> hashedValue = getHashingFunction( &apos;sha1&apos; )( &apos;Fred&apos; );
 </pre>
+
 <h4>A Note on Hoisting</h4>
+
 <p>Keep in mind that, unlike normal function declarations, variables that
 reference functions are not &quot;hoisted&quot;. In example 2, the md5Hash and
 sha1Hash functions are defined at the bottom of the script, but are
@@ -11061,6 +11615,7 @@ available everywhere immediately. No matter where you define a
 function, the interpreter &quot;hoists&quot; it to the top of its scope,
 making it immediately available. This is <b>not</b> the case for variable
 definitions, so code like the following will break:</p>
+
 <pre>
 <b>var</b> functionVariable;
 hoistedFunction();  // <i>works, because the function is &quot;hoisted&quot; to the top of its scope</i>
@@ -11080,6 +11635,7 @@ higher-order functions.</p>
 <p>A higher-order function is a function that can take another function
 as an argument. You are using higher-order functions when passing
 callbacks.</p>
+
 <pre>
 <b>function</b> iAmCallbackFunction() {
   console.log(&quot;callback has been invoked&quot;);
@@ -11092,7 +11648,9 @@ callbacks.</p>
 // <i>invoke your higher-order function with a callback function.</i>
 iAmJustFunction(iAmCallbackFunction);
 </pre>
+
 <p>A higher-order function is also a function that returns another function as its result.</p>
+
 <pre>
 <b>function</b> iAmJustFunction() {
   // <i>do some stuff &hellip;</i>
