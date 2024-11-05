@@ -541,13 +541,13 @@ document.body.appendChild(img);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch2">Chapter 2: JavaScript Variables</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>variable_name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Required} The name of the variable: used when calling it.</h4>
-<p>= &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&lbrack;Optional&rbrack;</b> Assignment (defining the variable)</p>
-<p>value &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<b>{Required when using Assignment}</b> The value of a variable
-<b>&lbrack;default: undefined&rbrack;</h4>
-<p>Variables are what make up most of JavaScript. These variables make up
-things from numbers to objects, which are all over JavaScript to make
-one's life much easier.</p>
+<p>variable_name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Required} The name of the variable: used when calling it.
+= &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&lbrack;Optional&rbrack;</b> Assignment (defining the variable)
+value &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<b>{Required when using Assignment}</b> The value of a variable
+&lbrack;default: undefined&rbrack;</p>
+
+<p>Variables are what make up most of JavaScript. These variables make up things from 
+numbers to objects, which are all over JavaScript to make one's life much easier.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch2-1">Section 2.1: Defining a Variable</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2911,78 +2911,106 @@ date1.toString();
 <blockquote>
 Returns: &quot;Fri Apr 15 2016 07:48:48 GMT-0400 (Eastern Daylight Time)&quot;
 </blockquote>
+
 <h4>Convert to Time String</h4>
+
 <pre>
 <b>var</b> date1 = <b>new</b> Date();
 date1.toTimeString();
 </pre>
+
 <blockquote>
 Returns: &quot;07:48:48 GMT-0400 (Eastern Daylight Time)&quot;
 </blockquote>
+
 <h4>Convert to Date String</h4>
+
 <pre>
 <b>var</b> date1 = <b>new</b> Date();
 date1.toDateString();
 </pre>
+
 <blockquote>
 Returns: &quot;Thu Apr 14 2016&quot;
 </blockquote>
+
 <h4>Convert to UTC String</h4>
+
 <pre>
 <b>var</b> date1 = <b>new</b> Date ();
 date1.toUTCString ();
 </pre>
+
 <blockquote>
 Returns: &quot;Fri, 15 Apr 2016 11:48:48 GMT&quot;
 </blockquote>
+
 <h4>Convert to ISO String</h4>
+
 <pre>
 <b>var</b> date1 = <b>new</b> Date ();
 date1.toISOString ();
 </pre>
+
 <blockquote>
 Returns: &quot;2016-04-14T23:49:08.596Z&quot;
 </blockquote>
+
 <h4>Convert to GMT String</h4>
+
 <pre>
 <b>var</b> date1 = <b>new</b> Date ( ) ;
 date1.toGMTString ( ) ;
 </pre>
+
 <blockquote>
 <p>Returns: &quot;Thu, 14 Apr 2016 23:49:08 GMT&quot;
 </blockquote>
+
 <p>This function has been marked as deprecated so some browsers may not
 support it in the future. It is suggested to use toUTCString()
 instead.</p>
+
 <h4>Convert to Locale Date String</h4>
+
 <pre>
 <b>var</b> date1 = <b>new</b> Date ( ) ;
 date1.toLocaleDateString ( ) ;
 </pre>
+
 <blockquote>
 <p>Returns: &quot;4/14/2016&quot;</p>
 </blockquote>
+
 <p>This function returns a locale sensitive date string based upon the
 user&apos;s location by default.</p>
+
 <pre>
 date1.toLocaleDateString(&lbrack;locales&lbrack;, options &rbrack;&rbrack;)
 </pre>
+
 <p>can be used to provide specific locales but is browser implementation
 specific. For example,</p>
+
 <pre>
 date1.toLocaleDateString(&lbrack; &quot;zh&quot; , &quot;en-US&quot; &rbrack; );
 </pre>
+
 <p>would attempt to print the string in the Chinese locale using United
 States English as a fallback. The options parameter can be used to
 provide specific formatting. For example:</p>
+
 <pre>
 <b>var</b> options = { weekday: &apos;long&apos;, year: &apos;numeric&apos;, month: &apos;long&apos;, day: &apos;numeric&apos; }; 
 date1.toLocaleDateString(&lbrack;&rbrack;, options);
 </pre>
+
 <p>would result in</p>
+
 <pre>
 &quot;Thursday, April 14, 2016&quot;.
 </pre>
+
 <p>See <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString#Example:_Checking_for_support_for_locales_and_options_arguments" 
 target="_blank" rel="noreferrer noopener">the MDN</a> for more details.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3003,6 +3031,7 @@ implementation uses UTC dates to avoid timezones where they are not
 needed.</p>
 
 <h4>Naive approach with WRONG results</h4>
+
 <!-- page 51 -->
 <pre>
 <b>function</b> formatDate(dayOfWeek, day, month, year) {
@@ -3022,6 +3051,7 @@ sendToBar(birthday.getTime());
 Sample output:<br/><br/>
 Foo was born on: Sat Jan 1 2000
 </blockquote>
+
 <pre>
 // <i>Meanwhile somewhere else&hellip;</i>
 // <i>Bar lives in a country with timezone GMT - 1</i>
@@ -3029,10 +3059,12 @@ Foo was born on: Sat Jan 1 2000
 console.log(&quot;Foo was born on: &quot; &plus; formatDate(birthday.getDay(), birthday.getDate(),
   birthday.getMonth(), birthday.getFullYear()));
 </pre>
+
 <blockquote>
 Sample output:<br/><br/>
 Foo was born on: Fri Dec 31 1999
 </blockquote>
+
 <p>And thus, Bar would always believe Foo was born on the last day of 1999.</p>
 
 <h4>Correct approach</h4>
@@ -3049,10 +3081,12 @@ console.log(&quot;Foo was born on: &quot; &plus; formatDate(birthday.getUTCDay()
   birthday.getUTCMonth(), birthday.getUTCFullYear()));
 sendToBar (birthday.getTime());
 </pre>
+
 <blockquote>
 Sample output:<br/><br/>
 Foo was born on: Sat Jan 1 2000
 </blockquote>
+
 <pre>
 // <i>Meanwhile somewhere else&hellip;</i>
 // <i>Bar lives in a country with timezone GMT - 1</i>
@@ -3060,6 +3094,7 @@ Foo was born on: Sat Jan 1 2000
 console.log(&quot;Foo was born on: &quot;&plus;formatDate(birthday.getUTCDay(), birthday.getUTCDate(),
   birthday.getUTCMonth(), birthday.getUTCFullYear()));
 </pre>
+
 <!-- page 52 -->
 <blockquote>
 Sample output:<br/><br/>
@@ -3072,28 +3107,35 @@ Foo was born on: Sat Jan 1 2000
 can be used. It uses the same arguments as the longest Date
 constructor. This method will return a number representing the time
 that has passed since January 1, 1970, 00:00:00 UTC.</p>
+
 <pre>
 console.log(Date.UTC(2000,0,31,12));
 </pre>
+
 <blockquote>
 Sample output:<br/><br/>
 949320000000
 </blockquote>
+
 <pre>
 <b>var</b> utcDate = <b>new</b> Date(Date.UTC(2000,0,31,12));
 console.log(utcDate);
 </pre>
+
 <blockquote>
 Sample output:<br/><br/>
 Mon Jan 31 2000 13:00:00 GMT+0100 (West-Europa (standaardtijd))
 </blockquote>
+
 <p>Unsurprisingly, the difference between UTC time and local time is, in
 fact, the timezone offset converted to milliseconds.</p>
+
 <pre>
 <b>var</b> utcDate = <b>new</b> Date ( Date.UTC(2000,0,31,12));
 <b>var</b> localDate = <b>new</b> Date(2000,0,31,12);
 console.log(localDate&minus; utcDate === utcDate.getTimezoneOffset()&ast;60&ast;1000);
 </pre>
+
 <blockquote>
 Sample output: <b>true</b>
 </blockquote>
@@ -3102,16 +3144,19 @@ Sample output: <b>true</b>
 
 <p>All Date object modifiers, such as ) have an equivalent takes an argument in UTC time 
 rather than in local time.</p>
+
 <pre>
 <b>var</b> date = <b>new</b> Date();
 date.setUTCFullYear (2000, 0, 31);
 date.setUTCHours ( 12 , 0 , 0 , 0);
 console.log ( date );
 </pre>
+
 <blockquote>
 Sample output:<br/><br/>
 Mon Jan 31 2000 13:00:00 GMT+0100 (West-Europa (standaardtijd))
 </blockquote>
+
 <p>The other UTC-specific modifiers are .setUTCMonth(), .setUTCDate() (for the day of the month), 
 setUTCMinutes(), .setUTCSeconds() and .setUTCMilliseconds().</p>
 
