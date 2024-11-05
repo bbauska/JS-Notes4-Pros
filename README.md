@@ -1362,7 +1362,7 @@ Wed Dec 31 1969 19:00:00 GMT &minus; 0500 (Eastern Standard Time)
 
 <pre>console.timeStamp('msg');</pre>
 
-<h4>Displays:</h4>
+<p>Displays:</p>
 
 <pre>00:00:00.001 msg</pre>
 
@@ -1392,7 +1392,7 @@ sec
 (anonymous <b>function</b>)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 17.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~ 17. console.log, info, debug,  warn, error, trace (26) ~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image017.jpg"
   title=" "
@@ -1442,7 +1442,7 @@ console.log(e&period;stack);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>In most environments, () can be used to display objects and arrays in a tabular format.</p>
 
-<p><b>For example:</b></p>
+<h4>For example:</h4>
 <!-- page 27 -->
 
 <pre>console.table(&lbrack;&apos;Hello&apos;,&apos;world&apos;&rbrack;);</pre>
@@ -1493,7 +1493,7 @@ console.log(e&period;stack);
 <p>displays like:</p>
 <!-- page 28 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 18.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 18. index, name & personId (28) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image018.jpg"
   title=" "
@@ -1651,7 +1651,7 @@ console.dir (myObject);
 
 <p>displays:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 19.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 19. console.dir (myObject) (30) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image019.jpg"
   title=" "
@@ -1670,7 +1670,7 @@ and XML elements is equivalent to calling console.log().</p>
 
 <p>displays:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 20.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 20. console.dirxml (document) (31) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image020.jpg"
   title=" "
@@ -1686,7 +1686,7 @@ console.log(document)
 
 <p>displays:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21. console.log(document) (31) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image021.jpg"
   title=" "
@@ -1708,11 +1708,11 @@ console.dirxml ( myObject );
 
 <p>displays:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 22.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 22. console.dirxml(myObject) (32) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image022.jpg"
-  title=" "
-  alt="."
+  title="console.dirxml(myObject)"
+  alt="console.dirxml(myObject)."
   style="border: 2px solid #000000; width:6.5in;" />
 <!-- ![](./images/image022.jpg){width="6.504166666666666in" height="2.6486111111111112in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1723,18 +1723,18 @@ Otherwise, if the assertion is <b>true</b>, this does nothing.</p>
 
 <pre>console.assert ( &apos;one&apos; === 1 );</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 23.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 23. console.assert - false assertion (32) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image023.png"
   title=" "
   alt="."
   style="border: 2px solid #000000; width:6.5in;" />
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Multiple arguments can be provided after the assertionthese can be
+<p>Multiple arguments can be provided after the assertion--these can be
 strings or other objectsthat will only be printed if the assertion
 is <b>false</b>:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 24.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 24. console.assert - true (32) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image024.jpg"
   title=" "
@@ -2041,7 +2041,9 @@ combining marks and surrogate pairs in order to perform the reversing perfectly.
     </tr>
   </tbody>
 </table>
-<p><b>Using spread operator</b></p>
+
+<h4>Using spread operator</h4>
+
 <h5>Version ≥ 6</h5>
 <!-- page 39 -->
 <pre>
@@ -2229,7 +2231,7 @@ s&period;split(&quot;, &quot;).join(&quot;&minus;&minus;&quot;);  // <i>&quot;on
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch7-9">Section 7.9: Strings are unicode</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>All JavaScript strings are unicode!</b></p>
+<h4>All JavaScript strings are unicode!</h4>
 <pre>
 <b>var</b> s = &quot;some ∆≈ƒ unicode ¡™£¢¢¢&quot;;
 s&period;charCodeAt(5);  // <i>8710</i>
