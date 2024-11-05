@@ -687,7 +687,8 @@ target="_blank" rel="noreferrer noopener">ECMA-262 20.1.2.4</a>:</p>
 2.  If number is <b>NaN</b>, return <b>true</b>.
 3.  Otherwise, return <b>false</b>.
 </blockquote>
-<p>Some examples:</p>
+
+<h4>Some examples:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 11. examples: Number.isNaN (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
@@ -815,8 +816,11 @@ JavaScript, there is Infinity!</p>
 than any other value.</p>
 <p>To get <b>-Infinity</b> you negate <b>Infinity</b>, or get a reference to it in 
 <b>Number.NEGATIVE_INFINITY</b>.
-<pre>- <b>Infinity</b>; // <i>-Infinity</i></pre>
+<pre>- <b>Infinity</b>; // <i>-Infinity</i>
+</pre>
+
 <p>Now let's have some fun with examples:</p>
+
 <pre>
 <b>Infinity</b> &gt; 123192310293;  // <i>true</i>
 <b>-Infinity</b> &lt; -123192310293;  // <i>true</i>
@@ -855,6 +859,7 @@ Number.NEGATIVE_INFINITY;  // <i>-Infinity</i>
 
 Number.<b>NaN</b>;  // <i>NaN</i>
 </pre>
+
 <p>In many cases the various operators in JavaScript will break with
 values outside the range of (Number.MIN_SAFE_INTEGER,Number.MAX_SAFE_INTEGER)</p>
 <p>Note that represents the different between one and the smallest Number
@@ -866,17 +871,25 @@ of two numbers.</p>
 <h3 id="ch3-7">Section 3.7: Operations that return NaN</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Mathematical operations on values other than numbers return NaN.</p>
+
 <pre>
 "b" &ast; 3
 "cde" - "e"
 &lbrack;1, 2, 3&rbrack; &ast; 2
 </pre>
+
 <p>An exception: Single-number arrays.</p>
+
 <pre>&lbrack;2&rbrack; &ast; &lbrack;3&rbrack;  // <i>Returns 6</i></pre>
+
 <p>Also, remember that the + operator concatenates strings.</p>
+
 <pre>"a" + "b"  // <i>Returns "ab"</i></pre>
+
 <p>Dividing zero by zero returns <b>NaN</b>.</p>
+
 <pre>0 / 0  // <i>NaN</i></pre>
+
 <p>Note: In mathematics generally (unlike in JavaScript programming),
 dividing by zero is not possible.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -884,12 +897,15 @@ dividing by zero is not possible.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Generally, Math functions that are given non-numeric arguments will
 return NaN.</p>
+
 <pre>Math.floor("a")</pre>
+
 <p>The square root of a negative number returns NaN, because does not
 support <a href="https://en.wikipedia.org/wiki/Imaginary_number" 
 target="_blank" rel="noreferrer noopener">imaginary</a> or
 <a href="https://en.wikipedia.org/wiki/Complex_number" 
 target="_blank" rel="noreferrer noopener">complex</a> numbers.</p>
+
 <pre>Math.sqrt(-1)</pre>
 <!-- page 17 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -899,8 +915,11 @@ target="_blank" rel="noreferrer noopener">complex</a> numbers.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To add annotations, hints, or exclude some code from being executed
 JavaScript provides two ways of commenting code lines.</p>
+
 <h4>Single line Comment //</h4>
+
 <p>Everything after the // until the end of the line is excluded from execution.</p>
+
 <pre>
 <b>function</b> elementAt( event ) {
 // <i>Gets the element from Event coordinates</i>
@@ -908,10 +927,13 @@ JavaScript provides two ways of commenting code lines.</p>
 }
 &ast;// <i>TODO: write more cool stuff!</i>
 </pre>
+
 <h4>Multi-line Comment /&ast;&ast;/</h4>
+
 <p>Everything between the opening /&ast; and the closing &ast;/ is excluded
 from execution, even if the opening and closing are on different
 lines.</p>
+
 <pre>
 /&ast;
    <i>Gets the element from Event coordinates.
@@ -929,17 +951,21 @@ lines.</p>
 <p>HTML comments (optionally preceded by whitespace) will cause code (on
 the same line) to be ignored by the browser also, though this is
 considered <b>bad practice</b>.</p>
-<p>One-line comments with the HTML comment opening sequence (&lt;!-&dash;):
+<p>One-line comments with the HTML comment opening sequence (&lt;!-&dash;):</p>
+
 <blockquote>
 <b>Note:</b> the JavaScript interpreter ignores the closing characters of HTML comments (&dash;-&gt;) here.
 </blockquote>
+
 <pre>
 &lt;!-- A single-line comment.
 &lt;!-- --&gt; Identical to using `//` since
 &lt;!-- --&gt; the closing '--&gt;' is ignored.
 </pre>
+
 <p>This technique can be observed in legacy code to hide JavaScript from
 browsers that didn't support it:</p>
+
 <pre>
 <b>script</b> type="text/javascript" language="JavaScript"<b>&gt;</b>
 &lt;!-&dash;
@@ -949,14 +975,18 @@ browsers that didn't support it:</p>
 // --&gt;
 &lt;/script&gt;
 </pre>
+
 <!-- page 18 -->
 <p>An HTML closing comment can also be used in JavaScript (independent of
 an opening comment) at the beginning of a line (optionally preceded by
 whitespace) in which case it too causes the rest of the line to be
 ignored:</p>
+
 <pre>&dash;-&gt; Unreachable JS code</pre>
+
 <p>These facts have also been exploited to allow a page to call itself
 first as HTML and secondly as JavaScript. For example:</p>
+
 <pre>
 &lt;!-&dash;
  self.postMessage('reached JS "file"');
@@ -973,6 +1003,7 @@ w1.onmessage = function (e) {
 &ast;/
 &dash;-&gt;
 </pre>
+
 <p>When run a HTML, all the multiline text between the &lt;!-&dash; and &dash;-&gt;
 comments are ignored, so the JavaScript contained therein is ignored
 when run as HTML.</p>
@@ -1099,33 +1130,42 @@ first enable the develop menu in Safari&apos;s Preferences</p>
 <!-- page 21 image012 -->
 <p>Then you can either pick &quot;Develop-&gt;Show Error Console&quot; from the menus or press ⌘
 &plus; Option &plus; C</p>
+
 <h4>Opera</h4>
+
 <p>Opening the "Console" in opera:</p>
+
 <ul>
   <li>Ctrl + Shift + I ,then click on the "Console" tab</li>
 </ul>
+
 <h4>Compatibility</h4>
+
 <p>When using or emulating Internet Explorer 8 or earlier versions (e.g.
 through Compatibility View / Enterprise Mode) the console will
 <b>only</b> be defined when the Developer Tools are active, so console.log ()
 statements can cause an exception and prevent code from executing. To
 mitigate this, you can check to see if the console is available before
 you log:</p>
+
 <pre>
 <b>if</b> (<b>typeof</b> window.console !== &apos;undefined&apos;)
 {
   console.log(&quot;Hello World&quot;);
 }
 </pre>
+
 <p>Or at the start of your script you can identify if the console is available and if not, define a null function to catch all of your
 references and prevent exceptions.</p>
 <!-- page 22 -->
+
 <pre>
 <b>if</b> (!window.console)
 {
   console = {log: <b>function</b>() {}};
 }
 </pre>
+
 <p>Note this second example will stop <b>all</b> console logs even if the developer window has been opened.</p>
 <p>Using this second example will preclude use of other functions such as console.dir(obj) unless that is specifically added.</p>
 <p>A browser&apos;s debugging console or <a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console" 
@@ -1145,7 +1185,9 @@ target="_blank" rel="noreferrer noopener">console.timeEnd(&lbrack;label&rbrack;)
 called, the elapsed time, in milliseconds, Since the original .time() call is calculated 
 and logged. Because of this behavior, you can call .timeEnd() multiple times with the same 
 label to log the elapsed time since the original .time() call was made.</p>
-<p><b>Example 1:</b></p>
+
+<h4>Example 1:</h4>
+
 <pre>
 console.time(&apos;response in&apos;);
 
@@ -1160,7 +1202,9 @@ console.timeEnd(&apos;response in&apos;);
 response <b>in</b>: 774.967ms
 response <b>in</b>: 1402.199ms
 </pre>
-<p><b>Example 2:</b></p>
+
+<h4>Example 2:</h4>
+
 <pre><b>var</b> elms = document.getElementsByTagName(&apos;&ast;&apos;); // <i>select all elements on the page</i>
 console.time(&apos;Loop time&apos;);
 
@@ -1171,7 +1215,9 @@ console.time(&apos;Loop time&apos;);
 } 
 console.timeEnd(&apos;Loop time&apos;);
 </pre>
+
 <p>will output:</p>
+
 <pre>
 Loop time: 40.716ms
 </pre>
@@ -1181,11 +1227,14 @@ Loop time: 40.716ms
 <!-- page 23 -->
 <p>Many of the console&apos;s print methods can also handle C-like string
 formatting, using % tokens:</p>
+
 <pre>
 console.log(&apos;%s has %d points&apos;,&apos;Sam&apos;, 100);
 </pre>
+
 <p>Display Sam has 100 points.</p>
 <p>The full list of format specifiers in JavaScript is:</p>
+
 <table border="1" style="width:200px">
   <thead>
     <tr>
@@ -1220,11 +1269,15 @@ console.log(&apos;%s has %d points&apos;,&apos;Sam&apos;, 100);
     </tr>
   </tbody>
 </table>
+
 <h4>Advanced styling</h4>
+
 <p>When the CSS format specifier (%c) is placed at the left side of the
 string, the print method will accept a second parameter with CSS rules
 which allow fine-grained control over the formatting of that string:</p>
+
 <pre>console.log(&apos;%cHello world!&apos;, &apos;color: blue; font-size: xx-large&apos;);</pre>
+
 <p>Displays:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 13.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1247,6 +1300,7 @@ which allow fine-grained control over the formatting of that string:</p>
   <li>if three %c format specifiers are found, then the 1st, 2nd and 3rd substrings will 
     have their rules defined in the 2nd , 3rd and 4th parameter respectively, and so on&hellip;</li>
 </ul>
+
 <pre>
 console.log("%cHello %cWorld%c!!", // <i>string to be printed</i>
             "color: blue;", // <i>applies color formatting to the 1st substring</i>
@@ -1254,6 +1308,7 @@ console.log("%cHello %cWorld%c!!", // <i>string to be printed</i>
             &quot;/&ast; no CSS rule &ast;/&quot; // <i>does not apply any rule to the remaining substring</i>
 );
 </pre>
+
 <p>Displays:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 14.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1264,9 +1319,12 @@ console.log("%cHello %cWorld%c!!", // <i>string to be printed</i>
   style="border: 2px solid #000000; width:7.477in;" />
 <!-- (./images/image014.jpg){width="7.477777777777778in" height="0.6395833333333333in"} -->
 <!-- page 24 -->
+
 <h4>Using groups to indent output</h4>
+
 <p>Output can be indented and enclosed in a collapsible group in the
 debugging console with the following methods:</p>
+
 <ul>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/groupCollapsed" 
     target="_blank" rel="noreferrer noopener">console.groupCollapsed()</a>: creates a collapsed 
@@ -1276,12 +1334,15 @@ debugging console with the following methods:</p>
     target="_blank" rel="noreferrer noopener">console.group()</a>: creates an expanded group 
     of entries that can be collapsed in order to hide the entries after this method is invoked.</li>
 </ul>
+
 <p>The indentation can be removed for posterior entries by using the following method:</p>
+
 <ul>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/groupEnd" 
     target="_blank" rel="noreferrer noopener">console.groupEnd()</a>: exits the current group, 
     allowing newer entries to be printed in the parent group after this method is invoked.</li>
 </ul>
+
 <p>Groups can be cascaded to allow multiple indented output or collapsible layers within each other:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 15/16.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1306,10 +1367,13 @@ messages. This debugging or <a href="https://developer.mozilla.org/en-US/docs/To
 target="_blank" rel="noreferrer noopener">web console</a> can be directly opened in the 
 browser (F12 key in most browsers see <i>Remarks</i> below for further information) and 
 the log method of the console JavaScript object can be invoked by typing the following:</p>
+
 <pre>console.log('My message');</pre>
+
 <p>Then, by pressing Enter, this will display "My message" in the debugging console.
 <p>console.log() can be called with any number of arguments and variables available in
 the current scope. Multiple arguments will be printed in one line with a small space between them.</p>
+
 <pre>
 <b>var</b> obj = {test: 1};
 console.log(&lbrack;'string'&rbrack;, 1, obj, window);
@@ -1321,27 +1385,38 @@ console.log(&lbrack;'string'&rbrack;, 1, obj, window);
 console.log(&lbrack;0, 3, 32, 'a string' &rbrack;);
 console.log({key1: 'value', key2: 'another value'});
 </pre>
+
 <p>Displays:</p>
+
 <pre>
 Array &lbrack;0, 3, 32, 'a string'&rbrack;
 Object { key1: 'value', key2: 'another value'}
 </pre>
+
 <p>Nested objects may be collapsed:</p>
+
 <pre>console.log({ key1: 'val', key2: &lbrack;'one', 'two'&rbrack;, key3: { a: 1, b: 2 } });</pre>
+
 <p>Displays:</p>
 <pre>Object { key1: 'val', key2: Array &lbrack;2&rbrack;, key3: Object }</pre>
 <p>Certain types such as Date objects and <b>function</b>s may be displayed differently:</p>
+
 <pre>
 console.log(<b>new</b> Date(0));
 console.log(<b>function</b> test(a, b) { <b>return</b> c; });
 </pre>
+
 <p>Displays:</p>
+
 <pre>
 Wed Dec 31 1969 19:00:00 GMT &minus; 0500 (Eastern Standard Time)
 <b>function</b> test (a , b) { <b>return</b> c; }
 </pre>
+
 <h4>Other print methods</h4>
+
 <p>In addition to the log method, modern browsers also support similar methods:</p>
+
 <ul>
   <li><a href="https://developer.mozilla.org/es/docs/Web/API/Console/info" 
     target="_blank" rel="noreferrer noopener">
@@ -1456,12 +1531,15 @@ console.log(e&period;stack);
 </pre>
 
 <pre>console.table({foo: &apos;bar&apos;, bar: &apos;baz&apos;});</pre>
+
 <p>displays like:</p>
+
 <pre>
 <b>(index) value</b>
 &quot;foo&quot;   &quot;bar&quot;
 &quot;bar&quot;   &quot;baz&quot;
 </pre>
+
 <pre>
 <b>var</b> personArr = &lbrack;
 { 
@@ -1490,6 +1568,7 @@ console.log(e&period;stack);
 &rbrack;;
   console.table(personArr, &lbrack;&apos;name&apos;, &apos;personId&apos;&rbrack;);
 </pre>
+
 <p>displays like:</p>
 <!-- page 28 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1557,7 +1636,9 @@ console.count(&apos;42.3&apos;);
 42.3: 2
 42.3: 3
 </pre>
+
 <p>Functions point always to the global Function object:</p>
+
 <pre>
 console.count(console.constructor);
 console.count(<b>function</b>(){});
@@ -1566,7 +1647,9 @@ console.count(Object);
 console.count(fn1);
 console.count(Number);
 </pre>
+
 <p>Displays:</p>
+
 <pre>
 &lbrack;object Function&rbrack;: 1
 &lbrack;object Function&rbrack;: 2
@@ -1574,7 +1657,9 @@ console.count(Number);
 &lbrack;object Function&rbrack;: 4
 &lbrack;object Function&rbrack;: 5
 </pre>
+
 <p>Certain objects get specific counters associated to the type of object they refer to:</p>
+
 <pre>
 console.count(<b>undefined</b>);
 console.count(document.Batman);
@@ -1614,10 +1699,13 @@ console.count(<b>null</b>);
 &lbrack;object Object&rbrack;: 5
 <b>null</b>: 1
 </pre>
+
 <!-- page 30 -->
-<p><b>Empty string or absence of argument</b></p>
+<h4>Empty string or absence of argument</h4>
+
 <p>If no argument is provided while <b>sequentially inputting the count
 method in the debugging console</b>, an empty string is assumed as parameter, i.e.:
+
 <pre>
 &gt; console.count();
   : 1
@@ -1664,7 +1752,7 @@ possible, or the JavaScript representation if not. Calling console.dirxml() on H
 and XML elements is equivalent to calling console.log().</p>
 <!-- page 31 -->
 
-<p><b>Example 1:</b></p>
+<p><b>Example 1:</h4>
 
 <pre>console.dirxml ( document )</pre>
 
@@ -1678,7 +1766,7 @@ and XML elements is equivalent to calling console.log().</p>
   style="border: 2px solid #000000; width:7.477in;" />
 <!-- ![](./images/image020.jpg){width="7.477777777777778in" height="1.6847222222222222in"} -->
 
-<p><b>Example 2:</b></p>
+<p><b>Example 2:</h4>
 
 <pre>
 console.log(document)
@@ -1694,7 +1782,7 @@ console.log(document)
   style="border: 2px solid #000000; width:7.477in;" />
 <!-- ![](./images/image021.jpg){width="7.477777777777778in" height="1.8020833333333333in"} -->
 
-<p><b>Example 3:</b></p>
+<h4>Example 3:</h4>
 
 <pre>
 <b>var</b> myObject = {
@@ -1944,7 +2032,7 @@ it behaves like Objects unlike primitive strings.</p>
 <b>typeof</b> objectString; // <i>&quot;object&quot;</i>
 <b>typeof</b> objectString.valueOf(); // <i>&quot;string&quot;</i>
 </pre>
-<p><b>Concatenating Strings</b></p>
+<h4>Concatenating Strings</h4>
 <p>String concatenation can be done with the + concatenation operator, or with the built-in concat() 
 method on the String object prototype.</p>
 <pre>
@@ -1962,7 +2050,7 @@ foo.concat(bar)               // <i>=&gt;&quot;FooBar&quot;</i>
 <b>var</b> boolean = <b>true</b>;
 console.log(string &plus; number &plus; boolean); // <i>&quot;string32true&quot;</i>
 </pre>
-<p><b>String Templates</b></p>
+<h4>String Templates</h4>
 <!-- page 38 -->
 <h5>Version ≥ 6</h5>
 <p>Strings can be created using template literals (<i>backticks</i>) &grave;hello&grave;.</p>
@@ -2006,7 +2094,7 @@ algorithm for string reversal is slightly more involved. One such implementation
 library called <a href="https://github.com/mathiasbynens/esreverwhich" 
 target="_blank" rel="noreferrer noopener">Esrever</a> uses regular expressions for matching 
 combining marks and surrogate pairs in order to perform the reversing perfectly.</p>
-<p><b>Explanation</b></p>
+<h4>Explanation</h4>
 <table border="1" style="width:500px">
   <thead>
     <tr>
@@ -2054,7 +2142,7 @@ console.log(reverseString(&apos;stackoverflow&apos;));  // <i>&quot;wolfrevokcat
 console.log(reverseString(1337));             // <i>&quot;7331&quot;</i>
 console.log(reverseString(&lbrack;1, 2, 3&rbrack;));       // <i>&quot;3,2,1&quot;</i>
 </pre>
-<p><b>Custom reverse() function</b></p>
+<h4>Custom reverse() function</h4>
 <pre>
 <b>function</b> reverse(string) {
   <b>var</b> strRev = &quot;&quot;;
@@ -2423,7 +2511,7 @@ console.log( string ); // <i>&quot;Bye, Universe!&quot;</i>
 <p>replaceFunction can be used for conditional replacements for regular
 expression objects (i.e., with use with regexp). The parameters are in
 the following order:</p>
-<p><b>Parameter Meaning</b></p>
+<h4>Parameter Meaning</h4>
 <table border="1" style="width:200px">
   <thead>
     <tr>
@@ -2586,7 +2674,7 @@ can repeat n times the string myString:</p>
     in JavaScript, so 0 means January and 11 means December. Example: new Date(2017, 5, 1) gives 
     <i>June 1st, 2017</i>.<br/></li>
 </ul>
-<p><b>Exploring dates</b></p>
+<h4>Exploring dates</h4>
 <p>Note that these examples were generated on a browser in the Central
 Time Zone of the US, during Daylight Time, Date.<b>prototype</b>.toISOString
 as evidenced by the code. Where comparison with UTC was instructive, 
@@ -2659,7 +2747,7 @@ special1.toString() === &apos;Sun Jan 01    12 00:00:00 GMT-0600 (Central Standa
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-2">Section 8.2: Convert to a string format</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Convert to String</b></p>
+<h4>Convert to String</h4>
 <pre>
 <b>var</b> date1 = <b>new</b> Date();
 date1.toString();
@@ -2667,7 +2755,7 @@ date1.toString();
 <blockquote>
 Returns: &quot;Fri Apr 15 2016 07:48:48 GMT-0400 (Eastern Daylight Time)&quot;
 </blockquote>
-<p><b>Convert to Time String</b></p>
+<h4>Convert to Time String</h4>
 <pre>
 <b>var</b> date1 = <b>new</b> Date();
 date1.toTimeString();
@@ -2675,7 +2763,7 @@ date1.toTimeString();
 <blockquote>
 Returns: &quot;07:48:48 GMT-0400 (Eastern Daylight Time)&quot;
 </blockquote>
-<p><b>Convert to Date String</b></p>
+<h4>Convert to Date String</h4>
 <pre>
 <b>var</b> date1 = <b>new</b> Date();
 date1.toDateString();
@@ -2683,7 +2771,7 @@ date1.toDateString();
 <blockquote>
 Returns: &quot;Thu Apr 14 2016&quot;
 </blockquote>
-<p><b>Convert to UTC String</b></p>
+<h4>Convert to UTC String</h4>
 <pre>
 <b>var</b> date1 = <b>new</b> Date ();
 date1.toUTCString ();
@@ -2691,7 +2779,7 @@ date1.toUTCString ();
 <blockquote>
 Returns: &quot;Fri, 15 Apr 2016 11:48:48 GMT&quot;
 </blockquote>
-<p><b>Convert to ISO String</b></p>
+<h4>Convert to ISO String</h4>
 <pre>
 <b>var</b> date1 = <b>new</b> Date ();
 date1.toISOString ();
@@ -2699,7 +2787,7 @@ date1.toISOString ();
 <blockquote>
 Returns: &quot;2016-04-14T23:49:08.596Z&quot;
 </blockquote>
-<p><b>Convert to GMT String</b></p>
+<h4>Convert to GMT String</h4>
 <pre>
 <b>var</b> date1 = <b>new</b> Date ( ) ;
 date1.toGMTString ( ) ;
@@ -2710,7 +2798,7 @@ date1.toGMTString ( ) ;
 <p>This function has been marked as deprecated so some browsers may not
 support it in the future. It is suggested to use toUTCString()
 instead.</p>
-<p><b>Convert to Locale Date String</b></p>
+<h4>Convert to Locale Date String</h4>
 <pre>
 <b>var</b> date1 = <b>new</b> Date ( ) ;
 date1.toLocaleDateString ( ) ;
@@ -2749,13 +2837,16 @@ desirable, for example when communicating a date between a server and
 a client that do not reside in the same timezone. In this scenario,
 one doesn&apos;t want to worry about timezones at all until the date needs
 to be displayed in local time, if that is even required at all.</p>
-<p><b>The problem</b></p>
+
+<h4>The problem</h4>
+
 <p>In this problem we want to communicate a specific date (day, month,
 year) with someone in a different timezone. The first implementation
 naively uses local times, which results in wrong results. The second
 implementation uses UTC dates to avoid timezones where they are not
 needed.</p>
-<p><b>Naive approach with WRONG results</b></p>
+
+<h4>Naive approach with WRONG results</h4>
 <!-- page 51 -->
 <pre>
 <b>function</b> formatDate(dayOfWeek, day, month, year) {
@@ -2787,7 +2878,9 @@ Sample output:<br/><br/>
 Foo was born on: Fri Dec 31 1999
 </blockquote>
 <p>And thus, Bar would always believe Foo was born on the last day of 1999.</p>
-<p><b>Correct approach</b></p>
+
+<h4>Correct approach</h4>
+
 <pre>
 <b>function</b> formatDate(dayOfWeek, day, month, year) {
   <b>var</b> daysOfWeek = &lbrack;&quot;Sun&quot;,&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;,&quot;Sat&quot;&rbrack;;
@@ -2816,7 +2909,9 @@ console.log(&quot;Foo was born on: &quot;&plus;formatDate(birthday.getUTCDay(), 
 Sample output:<br/><br/>
 Foo was born on: Sat Jan 1 2000
 </blockquote>
-<p><b>Creating a Date from UTC</b></p>
+
+<h4>Creating a Date from UTC</h4>
+
 <p>If one wants to create a Date object based on UTC or GMT, the ) method
 can be used. It uses the same arguments as the longest Date
 constructor. This method will return a number representing the time
@@ -2846,7 +2941,9 @@ console.log(localDate&minus; utcDate === utcDate.getTimezoneOffset()&ast;60&ast;
 <blockquote>
 Sample output: <b>true</b>
 </blockquote>
-<p><b>Changing a Date object</b></p>
+
+<h4>Changing a Date object</h4>
+
 <p>All Date object modifiers, such as ) have an equivalent takes an argument in UTC time 
 rather than in local time.</p>
 <pre>
@@ -2861,7 +2958,9 @@ Mon Jan 31 2000 13:00:00 GMT+0100 (West-Europa (standaardtijd))
 </blockquote>
 <p>The other UTC-specific modifiers are .setUTCMonth(), .setUTCDate() (for the day of the month), 
 setUTCMinutes(), .setUTCSeconds() and .setUTCMilliseconds().</p>
-<p><b>Avoiding ambiguity with getTime() and setTime()</b></p>
+
+<h4>Avoiding ambiguity with getTime() and setTime()</h4>
+
 <p>Where the methods above are required to differentiate between
 ambiguity in dates, it is usually easier to communicate a date as the
 amount of time that has passed since January 1, 1970, 00:00:00 UTC.
@@ -2896,7 +2995,8 @@ Mon Jan 31 2000 13:00:00 GMT+0100 (West-Europa (standaardtijd))
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-4">Section 8.4: Formatting a JavaScript date</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Formatting a JavaScript date in modern browsers</b></p>
+<h4>Formatting a JavaScript date in modern browsers</h4>
+
 <p>In modern browsers (&ast;), <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString" 
 target="_blank" rel="noreferrer noopener">Date.prototype.toLocalDateString()</a> 
 allows you to define the formatting of a Date in a convenient manner.</p>
@@ -2926,7 +3026,9 @@ dateObj.toLocaleDateString(&lbrack; locales &lbrack;, options &rbrack; &rbrack;)
   <li><b>second</b>:possible values are &quot;numeric&quot; & &quot;2-digit&quot;</li>
   <li><b>timeZoneName</b>:possible values are &quot;short&quot; & &quot;long&quot;</li>
 </ul>
-<p><b>How to use</b></p>
+
+<h4>How to use</h4>
+
 <pre>
 <b>var</b> today = <b>new</b> Date().toLocaleDateString(&apos;en-GB&apos;,{
   day   : &apos;numeric&apos;,
@@ -2938,8 +3040,9 @@ dateObj.toLocaleDateString(&lbrack; locales &lbrack;, options &rbrack; &rbrack;)
 <pre>
 &apos;24 Jan 2036&apos;
 </pre>
-<p><b>Going custom</b></p>
-Date.<b>prototype</b>.toLocaleDateString
+
+<h4>Going custom</h4>
+
 <p>If Date.prototype.toLocalDateString() isn&apos;t flexible enough to fulfill whatever need you may have,
 you might want to consider creating a custom Date object that looks like this:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2998,64 +3101,84 @@ console.log((<b>new</b> Date ( ) ) .getTime ());</pre>
 <p>Once you have a date object, you can apply any of the several available methods to extract 
 its properties (e.g. getFullYear() to get the 4-digits year).</p>
 <p>Below are some common date methods.</p>
-<p><b>Get the current year</b></p>
+
+<h4>Get the current year</h4>
+
 <pre>
 <b>var</b> year = (<b>new</b> Date()).getFullYear();
 console.log(year);
 // <i>Sample output: 2016</i>
 </pre>
 <!-- page 56 -->
-<p><b>Get the current month</b></p>
+
+<h4>Get the current month</h4>
+
 <pre>
 <b>var</b> month = (<b>new</b> Date()).getMonth();
 console.log(month);
 // <i>Sample output: 0</i>
 </pre>
+
 <p>Please note that 0 = January. This is because months range from <i>0</i> to
 <i>11</i>, so it is often desirable to add +1 to the index.</p>
-<p><b>Get the current day</b></p>
+
+<h4>Get the current day</h4>
+
 <pre>
 <b>var</b> day = (<b>new</b> Date()).getDate();
 console.log(day);
 // <i>Sample output: 31</i>
 </pre>
-<p><b>Get the current hour</b></p>
+
+<h4>Get the current hour</h4>
+
 <pre>
 <b>var</b> hours = (<b>new</b> Date()).getHours();
 console.log(hours);
 // <i>Sample output: 10</i>
 </pre>
-<p><b>Get the current minutes</b></p>
+
+<h4>Get the current minutes</h4>
+
 <pre>
 <b>var</b> minutes = (<b>new</b> Date()).getMinutes();
 console.log(minutes);
 // <i>Sample output: 39</i>
 </pre>
-<p><b>Get the current seconds</b></p>
+
+<h4>Get the current seconds</h4>
+
 <pre>
 <b>var</b> seconds = (<b>new</b> Date()).getSeconds();
 console.log(second);
 // <i>Sample output: 48</i>
 </pre>
-<p><b>Get the current milliseconds</b></p>
+
+<h4>Get the current milliseconds</h4>
+
 <p>To get the milliseconds (ranging from 0 to 999) of an instance of a
 Date object, use its getMilliseconds method.</p>
+
 <pre>
 <b>var</b> milliseconds = (<b>new</b> Date()).getMilliseconds();
 console.log(milliseconds);
 // <i>Output: milliseconds right now</i>
 </pre>
-<p><b>Convert the current time and date to a human-readable string</b></p>
+
+<h4>Convert the current time and date to a human-readable string</h4>
+
 <pre>
 <b>var</b> now = <b>new</b> Date();
 // <i>convert date to a string in UTC timezone format:</i>
 console.log(now.toUTCString());
 // <i>Output: Wed, 21 Jun 2017 09:13:01 GMT</i>
 </pre>
+
 <p>The static method Date.now() returns the number of milliseconds that have
 elapsed since 1 January 1970 00:00:00 UTC. To get the number of
 milliseconds that have elapsed since that time using an instance of a
 Date object, use its getTime method.</p>
+
 <pre>
 // <i>get milliseconds using static method now of Date</i>
 console.log(Date.now());
@@ -3082,11 +3205,14 @@ checkoutDate.setDate( checkoutDate.getDate() + 12 );
 console.log(checkoutDate); // <i>Tue Aug 02 2016 10:05:13 GMT-0400 (EDT)</i>
 </pre>
 <p>The same applies to other methods such as getHours(), getMonth(),etc.</p>
-<p><b>Adding Work Days</b></p>
+
+<h4>Adding Work Days</h4>
+
 <p>If you wish to add work days (in this case I am assuming Monday -
 Friday) you can use the setDate function although you need a little
 extra logic to account for the weekends (obviously this will not take
 account of national holidays)</p>
+
 <pre>
 <b>function</b> addWorkDays(startDate, days) {
   // <i>Get the day of the week as a number (0 = Sunday, 1 = Monday, &hellip;. 6 = Saturday)</i>
@@ -3121,9 +3247,11 @@ account of national holidays)</p>
 <b>var</b> date1 = <b>new</b> Date();
 date1.toJSON();
 </pre>
+
 <blockquote>
 Returns: &quot;2016-04-14T23:49:08.596Z&quot;
 </blockquote>
+
 <!-- page 58 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch9">Chapter 9: Date Comparison</h2>
@@ -3131,34 +3259,42 @@ Returns: &quot;2016-04-14T23:49:08.596Z&quot;
 <h3 id="ch9-1">Section 9.1: Comparing Date values</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To check the equality of Date values:</p>
+
 <pre>
 <b>var</b> date1 = <b>new</b> Date();
 <b>var</b> date2 = <b>new</b> Date(date1.valueOf() &plus; 10);
 console.log(date1.valueOf() === date2.valueOf());
 </pre>
+
 <blockquote>
 Sample output: <b>false</b>
 </blockquote>
 <p>Note that you must use () to compare the values of Date objects
 because the equality operator will compare if two object references
 are the same. For example:</p>
+
 <pre>
 <b>var</b> date1 = <b>new</b> Date();
 <b>var</b> date2 = <b>new</b> Date();
 console.log(date1 === date2);
 </pre>
+
 <blockquote>
 Sample output: <b>false</b>
 </blockquote>
+
 <p>Whereas if the variables point to the same object:</p>
+
 <pre>
 <b>var</b> date1 = <b>new</b> Date();
 <b>var</b> date2 = date1;
 console.log(date1 === date2);
 </pre>
+
 <blockquote>
 Sample output: <b>true</b>
 </blockquote>
+
 <p>However, the other comparison operators will work as usual and you can
 use &lt; and &bsol;to compare that one date is earlier or later than the
 other. For example:</p>
@@ -3190,6 +3326,7 @@ Sample output: <b>true</b>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To compare the difference of two dates, we can do the comparison based
 on the timestamp.</p>
+
 <pre>
 <b>var</b> date1 = <b>new</b> Date();
 <b>var</b> date2 = <b>new</b> Date(date1.valueOf() &plus; 5000);<br>
@@ -3203,7 +3340,8 @@ console.log( &quot;Date difference in years : &quot; &plus; dateDiffInYears);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-1">Section 10.1: Abstract equality / inequality and type conversion</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>The Problem</b></p>
+<h4>The Problem</h4>
+
 <p>The abstract equality and inequality operators (== and !=) convert
 their operands if the operand types do not match. This type coercion
 is a common source of confusion about the results of these operators,
@@ -3232,7 +3370,7 @@ Number( &quot;0&quot; );    // <i>0</i>
 Number( <b>false</b> );  // <i>0</i>
 </pre>
 
-<p><b>The Solution</b></p>
+<h4>The Solution</h4>
 
 <p>In the statement <b>false B</b>, both the operands are strings (&quot;&quot; and &quot;0&quot;),
 hence there will be <b>no type conversion</b> and since &quot;&quot; and &quot;0&quot;
@@ -3263,6 +3401,7 @@ test(&quot;&quot;, &quot;0&quot;);  // <i>false;</i>
 While the former performs a type conversion, the latter will create a new object. Objects are 
 compared by reference and not by value which explains the results below.</p>
 <!-- page 61 -->
+
 <pre>
 Number(&quot;0&quot;) == Number(&quot;0&quot;);           // <i>true;</i>
 <b>new</b> Number(&quot;0&quot;) == <b>new</b> Number (&quot;0&quot;);  // <i>false</i>
@@ -3318,7 +3457,7 @@ Number.<b>NaN</b> === <b>NaN</b>;  // <i>false</i>
 <b>NaN</b> !== <b>NaN</b>; // <i>true</i>
 </pre>
 
-<p><b>Checking if a value is NaN</b></p>
+<h4>Checking if a value is NaN</h4>
 
 <h5>Version ≥ 6</h5>
 
@@ -3405,7 +3544,8 @@ target="_blank" rel="noopener noreferrer">MDN</a>):</p>
 }
 </pre>
 
-<p><b>Points to note</b></p>
+<h4>Points to note</h4>
+
 <p>NaN itself is a number, meaning that it does not equal to the string
 &quot;NaN&quot;, and most importantly (though perhaps unintuitively):</p>
 <!-- page 63 -->
@@ -3426,7 +3566,7 @@ guaranteed to be <b>false</b>.</p>
 <p>In x &vert;&vert; y, y will not be evaluated if x evaluated to <b>true</b>, because the whole expression 
 is guaranteed to be <b>true</b>.</p>
 
-<p><b>Example with functions</b></p>
+<p><b>Example with functions</h4>
 
 <p>Take the following two functions:</p>
 
@@ -3442,7 +3582,7 @@ is guaranteed to be <b>true</b>.</p>
 }
 </pre>
 
-<p><i><b>Example 1</b></i></p>
+<h4><i>Example 1</i></h4>
 
 <pre>
 T ( ) && F ( );  // <i>false</i>
@@ -3455,7 +3595,7 @@ T ( ) && F ( );  // <i>false</i>
 &apos;F&apos;
 </blockquote>
 
-<p><i><b>Example 2</b></i></p>
+<h4><i>Example 2</i></h4>
 
 <pre>
 F () && T (); // <i>false</i>
@@ -3467,7 +3607,7 @@ F () && T (); // <i>false</i>
 &apos;F&apos;
 </blockquote>
 
-<p><i><b>Example 3</b></i></p>
+<h4><i>Example 3</i></h4>
 
 <pre>
 T () &vert;&vert; F ();  // <i>true</i>
@@ -3479,7 +3619,7 @@ T () &vert;&vert; F ();  // <i>true</i>
 &apos;T&apos;
 </blockquote>
 
-<p><i><b>Example 4</b></i></p>
+<h4><i>Example 4</i></h4>
 
 <!-- page 64 -->
 <pre>
@@ -3492,7 +3632,7 @@ F () &vert;&vert; T (); // <i>true</i>
 &apos;T&apos;
 </blockquote>
 
-<p><b>Short-circuiting to prevent errors</b></p>
+<h4>Short-circuiting to prevent errors</h4>
 
 <pre>
 <b>var</b> obj; // <i>object has value of undefined</i>
@@ -3514,7 +3654,7 @@ by not executing it if it would throw the error.</p>
 <b>if</b>(<b>typeof</b> obj === &quot;object&quot; && obj.property){}; // <i>safe option but slower</i>
 </pre>
 
-<p><b>Short-circuiting to provide a default value</b></p>
+<h4>Short-circuiting to provide a default value</h4>
 
 <p>The &vert;&vert; operator can be used to select either a &quot;truthy&quot; value, or the default value.</p>
 
@@ -3541,7 +3681,7 @@ by not executing it if it would throw the error.</p>
 envVariable &vert;&vert; configValue &vert;&vert; defaultConstValue // <i>select the first &quot;truthy&quot; of these</i>
 </pre>
 
-<p><b>Short-circuiting to call an optional function</b></p>
+<h4>Short-circuiting to call an optional function</h4>
 
 <p>The && operator can be used to evaluate a callback, only if it is passed:</p>
 
@@ -3556,12 +3696,13 @@ envVariable &vert;&vert; configValue &vert;&vert; defaultConstValue // <i>select
 }
 </pre>
 <!-- page 65 -->
+
 <p>Of course, the test above does not validate that cb is in fact a
 <b>function</b> and not just an Object/Array/String/Number.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-4">Section 10.4: Null and Undefined</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>The differences between null and undefined</b></p>
+<h4>The differences between null and undefined</h4>
 
 <p>null</b> and <b>undefined</b> share abstract equality == but not strict equality ===,</p>
 
@@ -3589,7 +3730,7 @@ envVariable &vert;&vert; configValue &vert;&vert; defaultConstValue // <i>select
     and attempting to do so will throw an <i>Error</i>.</li>
 </ul>
 
-<p><b>The similarities between null and undefined</b></p>
+<h4>The similarities between null and undefined</h4>
 
 <p><b>null</b> and <b>undefined</b> are both falsy.</p>
 
@@ -3609,7 +3750,7 @@ target="_blank" rel="noopener noreferrer">this question</a>).</p>
 <b>false</b> === <b>null</b>      // <i>false</i>
 </pre>
 
-<p><b>Using undefined</b></p>
+<h4>Using undefined</h4>
 
 <ul>
   <li>If the current scope can&apos;t be trusted, use something which evaluates
@@ -3658,7 +3799,7 @@ comparison is performed as follows:
 </ol>
 </blockquote>
 
-<b>Examples:</b>
+<h4>Examples:</h4>
 
 <pre>
 1 == 1;                      // <i>true</i>
@@ -3681,7 +3822,7 @@ comparison is performed as follows:
    y = <b>false</b>;
 </pre>
 
-<p><b>AND</b></p>
+<h4>AND</h4>
 
 <p>This operator will return true if both of the expressions evaluate to
 true. This boolean operator will employ shortcircuiting and will not
@@ -3693,7 +3834,7 @@ x && y;
 
 <p>This will return false, because y is false.</p>
 
-<p><b>OR</b></p>
+<h4>OR</h4>
 
 <p>This operator will return true if one of the two expressions evaluate
 to true. This boolean operator will employ short-circuiting and y will
@@ -3706,7 +3847,7 @@ x &vert;&vert; y;
 
 <p>This will return true, because x is true.</p>
 
-<p><b>NOT</b></p>
+<h4>NOT</h4>
 
 <p>This operator will return false if the expression on the right
 evaluates to true, and return true if the expression on the right
@@ -4064,7 +4205,7 @@ The JavaScript engine will try and convert both operands to matching
 types if they aren&apos;t of the same type. <b>Note:</b> if the two operands
 have different internal references in memory, then <b>false</b> will be returned.</p>
 
-<p><b>Sample:</b></p>
+<h4>Sample:</h4>
 
 <pre>
 1 != &apos;1&apos;  // <i>false</i>
@@ -4205,7 +4346,7 @@ window.onkeydown = window.onkeyup = <b>function</b> (e) {
 }
 </pre>
 <!-- page 73 -->
-<p><b>Example reading as an array</b></p>
+<h4>Example reading as an array</h4>
 
 <pre>
 <b>var</b> directionState = &lbrack;<b>false</b>,<b>false</b>,<b>false</b>,<b>false</b>&rbrack;;
@@ -4474,7 +4615,7 @@ as case values.</p>
 }
 </pre>
 
-<p><b>Multiple Inclusive Criteria for Cases</b></p>
+<h4>Multiple Inclusive Criteria for Cases</h4>
 
 <p>Since cases &quot;fall through&quot; without a <b>break</b> or <b>return</b>
 statement, you can use this to create multiple inclusive criteria:</p>
@@ -4667,7 +4808,7 @@ x == 10 &vert;&vert; alert(&quot;x is not 10&quot;)
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-1">Section 12.1: Converting Array-like Objects to Arrays</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>What are Array-like Objects?</b></p>
+<h4>What are Array-like Objects?</h4>
 <p>JavaScript has &quot;Array-like Objects&quot;, which are Object
 representations of Arrays with a length property. For example:</p>
 <pre>
@@ -4722,7 +4863,7 @@ domList.forEach(<b>function</b>() {
 }
 func (1, 2, 3); // <i>→ &lbrack;1, 2, 3&rbrack;</i>
 </pre>
-<p><b>Convert Array-like Objects to Arrays in ES6</b></p>
+<h4>Convert Array-like Objects to Arrays in ES6</h4>
 <ol type="1" start="1">
   <li>Array.from:</li>
 </ol>
@@ -4774,7 +4915,7 @@ realArray.forEach(value =&gt; {/&ast; Do something &ast;/}); // <i>Works</i>
   .map((key) =&gt; arrayLike&lbrack;key&rbrack;);
 </pre>
   
-<p><b>Convert Array-like Objects to Arrays in</b> ≤ <b>ES5</b></p>
+<h4>Convert Array-like Objects to Arrays in</b> ≤ <b>ES5</h4>
 
 <p>Use Array.prototype.slice like so:</p>
 
@@ -4818,7 +4959,7 @@ arrayLike.forEach(<b>function</b>() {
 }); // <i>Wow! this works</i>
 </pre>
 <!-- page 82 -->
-<p><b>Modifying Items During Conversion</b></p>
+<h4>Modifying Items During Conversion</h4>
 <p>In ES6, while using Array.from, we can specify a map function that returns a
 mapped value for the new array being created.</p>
 <h5>Version ≥ 6</h5>
@@ -4833,7 +4974,7 @@ Array.from(domList, element =&bsol;element.tagName); // <i>Creates an array of t
 <p>The reduce() method applies a function against an accumulator and each value
 of the array (from left-to-right) to reduce it to a single value.</p>
 
-<p><b>Array Sum</b></p>
+<h4>Array Sum</h4>
 
 <p>This method can be used to condense all values of an array into a single value:</p>
 
@@ -4858,7 +4999,7 @@ callback (specified as function(a, b))).</p>
 
 <h5>Version ≥ 5.1</h5>
 
-<p><b>Flatten Array of Objects</b></p>
+<h4>Flatten Array of Objects</h4>
 
 <p>The example below shows how to flatten an array of objects into a single object.</p>
 
@@ -4921,7 +5062,7 @@ to support it.</p>
 
 <h5>Version ≥ 5.1</h5>
 
-<p><b>Map Using Reduce</b></p>
+<h4>Map Using Reduce</h4>
 
 <p>As another example of using the <i>initial value</i> parameter, consider
 the task of calling a function on an array of items, returning the
@@ -4947,7 +5088,7 @@ Mapping values for the details).</p>
 
 <h5>Version ≥ 5.1</h5>
 
-<p><b>Find Min or Max Value</b></p>
+<h4>Find Min or Max Value</h4>
 
 <p>We can use the accumulator to keep track of an array element as well.
 Here is an example leveraging this to find the min value:</p>
@@ -4963,7 +5104,7 @@ arr.reduce(<b>function</b>(a, b) {
 
 <h5>Version ≥ 6</h5>
 
-<p><b>Find Unique Values</b></p>
+<h4>Find Unique Values</h4>
 
 <p>Here is an example that uses reduce to return the unique numbers to an
 array. An empty array is passed as the second argument and is
@@ -5125,7 +5266,7 @@ method needs to have a compareFunction passed to it.</p>
 i.e., instead of creating a sorted copy of the original array, it will re-order the
 original array and return it.
 </blockquote>
-<p><b>Default Sort</b></p>
+<h4>Default Sort</h4>
 <p>Sorts the array in UNICODE order.</p>
 <pre>
 &lbrack;&apos;s&apos;, &apos;t&apos;, &apos;a&apos;, 34, &apos;K&apos;, &apos;o&apos;, &apos;v&apos;, &apos;E&apos;, &apos;r&apos;, &apos;2&apos;, &apos;4&apos;, &apos;o&apos;, &apos;W&apos;, -1, &apos;-4&apos;&rbrack;.sort();
@@ -5138,7 +5279,7 @@ original array and return it.
 <b>Note:</b> The uppercase characters have moved above lowercase. The array is not in
 alphabetical order, and numbers are not in numerical order.
 </blockquote>
-<p><b>Alphabetical Sort</b></p>
+<h4>Alphabetical Sort</h4>
 <pre>
 &lbrack;&apos;s&apos;, &apos;t&apos;, &apos;a&apos;, &apos;c&apos;, &apos;K&apos;, &apos;o&apos;, &apos;v&apos;, &apos;E&apos;, &apos;r&apos;, &apos;f&apos;, &apos;l&apos;, &apos;W&apos;, &apos;2&apos;, &apos;1&apos;&rbrack;.sort((a, b) =&gt; {
   <b>return</b> a&period;localeCompare(b);
@@ -5158,7 +5299,7 @@ If you know that the array may contain items that are not strings use the safe v
 });
 </pre>
 <!-- page 87 -->
-<p><b>String sorting by length (longest first)</b></p>
+<h4>String sorting by length (longest first)</h4>
 <pre>
 &lbrack;&quot;zebras&quot;, &quot;dogs&quot;, &quot;elephants&quot;, &quot;penguins&quot;&rbrack;.sort(<b>function</b>(a, b) {
   <b>return</b> b&period;length &minus; a&period;length;
@@ -5168,7 +5309,7 @@ If you know that the array may contain items that are not strings use the safe v
 <pre>
 &lbrack;&quot;elephants&quot;, &quot;penguins&quot;, &quot;zebras&quot;, &quot;dogs&quot;&rbrack;;
 </pre>
-<p><b>String sorting by length (shortest first)</b></p>
+<h4>String sorting by length (shortest first)</h4>
 <pre>
 &lbrack;&quot;zebras&quot;, &quot;dogs&quot;, &quot;elephants&quot;, &quot;penguins&quot;&rbrack;.sort(<b>function</b>(a, b) {
   <b>return</b> a&period;length &minus; b&period;length;
@@ -5178,7 +5319,7 @@ If you know that the array may contain items that are not strings use the safe v
 <pre>
 &lbrack;&quot;dogs&quot;, &quot;zebras&quot;, &quot;penguins&quot;, &quot;elephants&quot;&rbrack;;
 </pre>
-<p><b>Numerical Sort (ascending)</b></p>
+<h4>Numerical Sort (ascending)</h4>
 <pre>
 &lbrack;100, 1000, 10, 10000, 1&rbrack;.sort(<b>function</b>(a, b) {
   <b>return</b> a &minus; b;
@@ -5188,7 +5329,7 @@ If you know that the array may contain items that are not strings use the safe v
 <pre>
 &lbrack;1, 10, 100, 1000, 10000&rbrack;
 </pre>
-<p><b>Numerical Sort (descending)</b></p>
+<h4>Numerical Sort (descending)</h4>
 <pre>&lbrack;100, 1000, 10, 10000, 1&rbrack;.sort(<b>function</b>(a, b) {
   <b>return</b> b &minus; a;
 });
@@ -5197,7 +5338,7 @@ If you know that the array may contain items that are not strings use the safe v
 <pre>
 &lbrack;10000, 1000, 100, 10, 1&rbrack;
 </pre>
-<p><b>Sorting array by even and odd numbers</b></p>
+<h4>Sorting array by even and odd numbers</h4>
 <pre>
 &lbrack;10, 21, 4, 15, 7, 99, 0, 12&rbrack;.sort(<b>function</b>(a, b) {
   <b>return</b> (a & 1) &minus; (b & 1) &vert;&vert; a &minus; b;
@@ -5207,7 +5348,7 @@ If you know that the array may contain items that are not strings use the safe v
 <pre>
 &lbrack;0, 4, 10, 12, 7, 15, 21, 99&rbrack;
 </pre>
-<p><b>Date Sort (descending)</b></p>
+<h4>Date Sort (descending)</h4>
 <!-- page 88 -->
 <pre>
 <b>var</b> dates = &lbrack;
@@ -5239,7 +5380,7 @@ dates.sort(<b>function</b>(a, b) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-6">Section 12.6: Iteration</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>A traditional for-loop</b></p>
+<h4>A traditional for-loop</h4>
 
 <p>A traditional <b>for</b> loop has three components:</p>
 <ol type="1" start="1">
@@ -5269,7 +5410,7 @@ is used to increment the index:</p>
   console.log(i);
 }
 </pre>
-<p><b>Using a traditional for loop to loop through an array</b></p>
+<h4>Using a traditional for loop to loop through an array</h4>
 <p>The traditional way to loop through an array, is this:</p>
 <!-- page 89 -->
 <pre>
@@ -5309,7 +5450,7 @@ myArray&lbrack;++key&rbrack;) {
 the specific use case you&apos;re implementing.</p>
 <p>Note that each of these variations is supported by all browsers, including very very 
 old ones!</p>
-<p><b>A while loop</b></p>
+<h4>A while loop</h4>
 <p>One alternative to a <b>for</b> loop is a while loop. To loop through an
 array, you could do this:</p>
 <pre>
@@ -5328,7 +5469,7 @@ this <b>for</b>-loop:</p>
   console.log(value);
 }
 </pre>
-<p><b>for&hellip;in</b></p>
+<h4>for&hellip;in</h4>
 <p>In JavaScript, you can also do this:</p>
 <!-- page 90 -->
 <pre>
@@ -5343,7 +5484,7 @@ side-effects that need to be considered. See
 target="_blank" rel="noopener noreferrer">
 <b>Why is using &quot;for&hellip;in&quot; with array iteration a bad</b> <b>idea?</b></a>
 for more details.</p>
-<p><b>for&hellip;of</b></p>
+<h4>for&hellip;of</h4>
 <p>In ES 6, the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of" 
 target="_blank" rel="noopener noreferrer">for-of</a> loop is the recommended way of iterating over a the values of an array:</p>
 <h5>Version ≥ 6</h5>
@@ -5366,7 +5507,7 @@ myArray.foo = &quot;hello&quot;;
   console.log(i);  // <i>logs 3, 5, 7</i>
 }
 </pre>
-<p><b>Array.prototype.keys</b></p>
+<h4>Array.prototype.keys</h4>
 <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/keys" 
 target="_blank" rel="noopener noreferrer">Array.prototype.keys()</a> method can be used to iterate over indices like this:</p>
 <h5>Version ≥ 6</h5>
@@ -5377,7 +5518,7 @@ target="_blank" rel="noopener noreferrer">Array.prototype.keys()</a> method can 
   console.log(&quot;2 &ast; value is: %d&quot;, twoValue);
 }
 </pre>
-<p><b>Array.prototype.forEach()</b></p>
+<h4>Array.prototype.forEach()</h4>
 <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" 
 target="_blank" rel="noopener noreferrer">forEach(...)</a> method is an option in ES 5 and above. It is supported 
 by all modern browsers, as well as Internet Explorer 9 and later.</p>
@@ -5411,7 +5552,7 @@ while(i++ &lt; myArray.length) {
 }
 console.log(sum);
 </pre>
-<p><b>Array.prototype.every</b></p>
+<h4>Array.prototype.every</h4>
 <p>Since ES5, if you want to iterate over a portion of an array, you can
 use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every" 
 target="_blank" rel="noopener noreferrer">
@@ -5452,7 +5593,7 @@ target="_blank" rel="noopener noreferrer"><b>Array.prototype.some</b></a> iterat
 }
 </pre>
 <!-- page 92 -->
-<p><b>Libraries</b><p>
+<h4>Libraries</b><p>
 <p>Finally, many utility libraries also have their own foreach variation.
 Three of the most popular ones are these:</p>
 <p><a href="http://api.jquery.com/jquery.each/" target="_blank" rel="noopener noreferrer">
@@ -5672,7 +5813,7 @@ clone2 = &lbrack;&rbrack;.slice.call(arrayToClone);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-12">Section 12.12: Concatenating Arrays</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Two Arrays</b></p>
+<h4>Two Arrays</h4>
 <pre>
 <b>var</b> array1 = &lbrack;1, 2&rbrack;;
 <b>var</b> array2 = &lbrack;3, 4, 5&rbrack;;
@@ -5689,7 +5830,7 @@ clone2 = &lbrack;&rbrack;.slice.call(arrayToClone);
 <pre>
 &lbrack;1, 2, 3, 4, 5&rbrack;
 </pre>
-<p><b>Multiple Arrays</b></p>
+<h4>Multiple Arrays</h4>
 <pre>
 <b>var</b> array1 = &lbrack;&quot;a&quot;, &quot;b&quot;&rbrack;,
     array2 = &lbrack;&quot;c&quot;, &quot;d&quot;&rbrack;,
@@ -5711,7 +5852,7 @@ clone2 = &lbrack;&rbrack;.slice.call(arrayToClone);
 <pre>
 &lbrack;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;, &quot;g&quot;, &quot;h&quot;&rbrack;
 </pre>
-<p><b>Without Copying the First Array</b></p>
+<h4>Without Copying the First Array</h4>
 <pre>
 <b>var</b> longArray = &lbrack;1, 2, 3, 4, 5, 6, 7, 8&rbrack;,
   shortArray = &lbrack;9, 10&rbrack;;
@@ -5737,7 +5878,7 @@ shortArray.forEach(<b>function</b> (elem) {
   longArray.push(elem);
 });
 </pre>
-<p><b>Array and non-array values</b></p>
+<h4>Array and non-array values</h4>
 <pre>
 <b>var</b> array = &lbrack;&quot;a&quot;, &quot;b&quot;&rbrack;;
 </pre>
@@ -5791,7 +5932,7 @@ console.log(result);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-14">Section 12.14: Array spread / rest</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Spread operator</b></p>
+<h4>Spread operator</h4>
 <h5>Version ≥ 6</h5>
 <p>With ES6, you can use spreads to separate individual elements into a comma-separated syntax:</p>
 <pre>
@@ -5826,7 +5967,7 @@ myFunction(&hellip;args);
 // <i>in ES &lt; 6, this would be equivalent to:</i>
 myFunction.apply(<b>null</b>, args);
 </pre>
-<p><b>Rest operator</b></p>
+<h4>Rest operator</h4>
 <p>The rest operator does the opposite of the spread operator by coalescing several elements 
 into a single one</p>
 <pre>
@@ -5856,7 +5997,7 @@ as a function.</p>
 <pre>
 &lbrack;3, 4, 5&rbrack;
 </pre>
-<p><b>Filter falsy values</b></p>
+<h4>Filter falsy values</h4>
 <h5>Version ≥ 5.1</h5>
 <pre>
 <b>var</b> filtered = &lbrack; 0, <b>undefined</b>, {}, <b>null</b>, &apos;&apos;, <b>true</b>, 5&rbrack;.filter(Boolean);
@@ -5878,7 +6019,7 @@ item as parameter, you could read it like the following:</p>
 <pre>
 &lbrack; {}, <b>true</b>, 5 &rbrack;
 </pre>
-<p><b>Another simple example</b></p>
+<h4>Another simple example</h4>
 <p>This example utilises the same concept of passing a function that takes one argument</p>
 <h5>Version ≥ 5.1</h5>
 <pre>
@@ -5919,7 +6060,7 @@ target="_blank" rel="noopener noreferrer">Array.prototype.find</a>:</p>
   }
 }
 </pre>
-<p><b>FindIndex</b></p>
+<h4>FindIndex</h4>
 <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex" 
 target="_blank" rel="noopener noreferrer">findIndex()</a> method returns an index in the array, if an element in 
 the array satisfies the provided testing function. Otherwise -1 is returned.</p>
@@ -5960,7 +6101,7 @@ characters, ) will separate them.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-18">Section 12.18: Removing items from an array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Shift</b></p>
+<h4>Shift</h4>
 <p>Use .shift to remove the first item of an array.</p>
 <p>For example:</p>
 <pre>
@@ -5971,7 +6112,7 @@ array.shift();
 <pre>
 &lbrack;2, 3, 4&rbrack;
 </pre>
-<p><b>Pop</b></p>
+<h4>Pop</h4>
 <p>Further .pop is used to remove the last item from an array.</p>
 <p>For example:</p>
 <pre>
@@ -5983,7 +6124,7 @@ array.pop();
 &lbrack;1, 2&rbrack;
 </pre>
 <p>Both methods return the removed item;</p>
-<p><b>Splice</b></p>
+<h4>Splice</h4>
 <!-- page 101 -->
 <p>Use .splice() to remove a series of elements from an array..splice() accepts two 
 parameters, the starting splice index, and an optional number of elements to delete. If 
@@ -6010,7 +6151,7 @@ two arrays, with the original ending before the index specified:</p>
 array.splice(2);
 </pre>
 <p>&hellip;leaves array containing &lbrack;1, 2&rbrack; and returns &lbrack;3, 4&rbrack;.</p>
-<p><b>Delete</b></p>
+<h4>Delete</h4>
 <p>Use <b>delete</b> to remove item from array without changing the length of array:</p>
 <pre>
 <b>var</b> array = &lbrack;1, 2, 3, 4, 5&rbrack;;
@@ -6019,7 +6160,7 @@ console.log(array.length);  // <i>5</i>
 console.log(array);  // <i>&lbrack;1, 2, undefined, 4, 5&rbrack;</i>
 console.log(array.length);  // <i>5</i>
 </pre>
-<p><b>Array.prototype.length</b></p>
+<h4>Array.prototype.length</h4>
 <p>Assigning value to length of array changes the length to given value.
 If new value is less than array length items will be removed from the
 end of value.</p>
@@ -6032,7 +6173,7 @@ var arr = &lbrack;1, 2, 3, 4&rbrack;;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-19">Section 12.19: Removing all elements</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Method 1</b></p>
+<h4>Method 1</h4>
 <p>Creates a new array and overwrites the existing array reference with a new one.</p>
 <pre>
 arr = &lbrack;&rbrack;;
@@ -6066,7 +6207,7 @@ while (i &gt; 0) {
 </pre>
 <p>To prevent the risk of a memory leak use the one of the following 2
 methods to empty the array in the above example&apos;s while loop.</p>
-<p><b>Method 2</b></p>
+<h4>Method 2</h4>
 <p>Setting the length property deletes all array element from the new
 array length to the old array length. It is the most efficient way to
 remove and dereference all items in the array. Keeps the reference to
@@ -6074,7 +6215,7 @@ the original array</p>
 <pre>
 arr.length = 0;
 </pre>
-<p><b>Method 3</b></p>
+<h4>Method 3</b></p>
 <p>Similar to method 2 but returns a new array containing the removed
 items. If you do not need the items this method is inefficient as the
 new array is still created only to be immediately dereferenced.</p>
@@ -6290,7 +6431,7 @@ while(index = array.indexOf(3) !== -1) { array.splice(index, 1); }
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-26">Section 12.26: Flattening Arrays</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>2 Dimensional arrays</b></p>
+<h4>2 Dimensional arrays</h4>
 <h5>Version ≥ 6</h5>
 <p>In ES6, we can flatten the array by the spread operator
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator" 
@@ -6306,24 +6447,32 @@ console.log(flattenES6(arrL1));  // <i>&lbrack;1, 2, 3, 4&rbrack;</i>
 <p>In ES5, we can achieve that by
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" 
 target="_blank" rel="noopener noreferrer">.apply()</a>:</p>
+
 <pre>
-<b>function</b></p> flatten(arr) {
+<b>function</b> flatten(arr) {
   <b>return</b> &lbrack;&rbrack;.concat.apply(&lbrack;&rbrack;, arr);
 }
 <b>var</b> arrL1 = &lbrack;1, 2, &lbrack;3, 4&rbrack;&rbrack;;
 console.log(flatten(arrL1));  // <i>&lbrack;1, 2, 3, 4&rbrack;</i>
 </pre>
+
 <p><b>Higher Dimension Arrays</b></p>
+
 <p>Given a deeply nested array like so</p>
+
 <pre>
 <b>var</b> deeplyNested = &lbrack;4, &lbrack;5, 6, &lbrack;7, 8&rbrack;, 9&rbrack;&rbrack;;
 </pre>
+
 <p>It can be flattened with this magic</p>
+
 <pre>
 console.log(String(deeplyNested).split(&apos;,&apos;).map(Number);
 &bsol;#=&gt; &lbrack;4, 5, 6, 7, 8, 9&rbrack;
 </pre>
+
 <p>Or</p>
+
 <pre>
 <b>const</b> flatten = deeplyNested.toString().split(&apos;,&apos;).map(Number)
 console.log(flatten);
