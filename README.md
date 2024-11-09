@@ -12904,7 +12904,7 @@ vec.add({x:10, y:10})
    .scale(2)           // <i>from which you can continue chaining</i>
    .log()
 </pre>
-<p><b>Don&apos;t create ambiguity in the return type</h4>
+<h4>Don&apos;t create ambiguity in the return type</h4>
 <p>Not all function calls return a useful chainable type, nor do they
 always return a reference to self. This is where common sense use of
 naming is important. In the above example the function call .() is
@@ -12928,10 +12928,11 @@ new line indented one tab from the referenced object with the dot on
 the new line. Use of the semicolon is optional but does help by
 clearly denoting the end of the chain.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 29. chaining with dot objects (211) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image029.png"
-  title=" "
-  alt="."
+  title="Chaining with dot objects"
+  alt="Chaining with dot objects."
   style="border: 2px solid #000000; width:7.486in;" />
 <h4>A bad syntax</h4>
 <pre>
@@ -13263,6 +13264,7 @@ arguments that were passed to the event on to the function.</p>
   </li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 31.  (2xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- <p align="left">
   <img src="./images/image031.png"
   title=" "
@@ -20879,12 +20881,14 @@ exposing an interface we wish other parts of our application to use.</p>
 <b>var</b> Module = (<b>function</b>( <i>/&ast; pass initialization data if necessary &ast;/</i>) {
 // <i>Private data is stored within the closure</i>
 <b>var</b> privateData = 1;
+
 // <i>Because the function is immediately invoked,</i>
 // <i>the return value becomes the public API</i>
 <b>var</b> api = {
   getPrivateData: <b>function</b>() {
     <b>return</b> privateData;
   },
+  
   getDoublePrivateData: <b>function</b>() {
     <b>return</b> api.getPrivateData() &ast; 2;
   }
@@ -20892,24 +20896,30 @@ exposing an interface we wish other parts of our application to use.</p>
 <b>return</b> api;
 })( <i>/&ast; pass initialization data if necessary &ast;/</i>);
 </pre>
+
 <h4>Revealing Module Pattern</h4>
+
 <p>The Revealing Module pattern is a variant in the Module pattern. The
 key differences are that all members (private and public) are defined
 within the closure, the return value is an object literal containing
 no function definitions, and all references to member data are done
 through direct references rather than through the returned object.</p>
+
 <pre>
 <b>var</b> Module = (<b>function</b>( <i>/&ast; pass initialization data if necessary &ast;/</i>) {
   // <i>Private data is stored just like before</i>
   <b>var</b> privateData = 1;
+
 // <i>All functions must be declared outside of the returned object</i>
 <b>var</b> getPrivateData = <b>function</b>() {
   <b>return</b> privateData;
 };
+
 <b>var</b> getDoublePrivateData = <b>function</b>() {
   // <i>Refer directly to enclosed members rather than through the returned object</i>
   <b>return</b> getPrivateData() &ast; 2;
 };
+
   // <i>Return an object literal with no function definitions</i>
   <b>return</b> {
     getPrivateData: getPrivateData,
@@ -20917,17 +20927,65 @@ through direct references rather than through the returned object.</p>
     };
 })(  <i>/&ast; pass initialization data if necessary &ast;/</i>);
 </pre>
+
 <h4>Revealing Prototype Pattern</h4>
+
 <p>This variation of the revealing pattern is used to separate the
 constructor to the methods. This pattern allow us to use the
 javascript language like a objected oriented language:</p>
+<pre>
+// <i>Namespace setting</i>
+var NavigationsNs = NavigationNs || {};
+
+// <i>This is used as a class constructor</i>
+NavigationNs.active = <b>function</b>(current, length) {
+  <b>this</b>.current = current;
+  <b>this</b>.length = length;
+ }
+ 
+// <i>The prototype is used to separate the construct and the methods</i>
+NavigationNs.active.<b>prototype</b> = <b>function</b>() {
+  // <i>It is an example of a public method because is releaved in the return statement</i>
+  var setCurrent = <b>function</b>() {
+    // <i>Here the variables current and length are used as private class properties</i>
+	<b>for (var</b> i = 0; i < <b>this</b>.lenth; i++) {
+	  $(this.current).addClass('active');
+	  }
+	}
+	return { setCurrent: setCurrent };
+}();
+
+// <i>Example of paramaterless constructor</i>
+NavigationNs.pagination = function() {}
+
+NavigationNs.pagination.prototype = function() {
+// <i>It is a example of an private method because is not revealed in the return statement</i>
+  var reload = function(date) {
+    // <i>do something</i>
+  }
+  // <i>It the only public method, because it the only function referenced in the return statement</i>
+    getPage = function(link);
+	  var a = $(link);
+	  
+	  var options = {url: a.attr('href'). type: 'get'}
+	  $.ajax(options).done(function(data) {
+	    // <i>after the ajax call is done, it calls private method
+		reload(data);
+	  });
+	  
+	  return false;
+	}
+	return (getPage : getPage)
+}();
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 38.  (315) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="left">
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 38.  (351) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!-- <p align="left">
   <img src="/images/image038.png"
   title=""
   alt=""
   style="border: 2px solid #000000; width:5.5in;" />
+-->
 <!-- ![](./images/image038.png){width="7.486805555555556in" height="7.459722222222222in"} -->
 <p>This code above should be in a separated file .js to be referenced in
 any page that is needed. It can be used like this:</p>
