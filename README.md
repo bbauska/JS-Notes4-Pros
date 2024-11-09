@@ -20881,14 +20881,12 @@ exposing an interface we wish other parts of our application to use.</p>
 <b>var</b> Module = (<b>function</b>( <i>/&ast; pass initialization data if necessary &ast;/</i>) {
 // <i>Private data is stored within the closure</i>
 <b>var</b> privateData = 1;
-
 // <i>Because the function is immediately invoked,</i>
 // <i>the return value becomes the public API</i>
 <b>var</b> api = {
   getPrivateData: <b>function</b>() {
     <b>return</b> privateData;
   },
-  
   getDoublePrivateData: <b>function</b>() {
     <b>return</b> api.getPrivateData() &ast; 2;
   }
@@ -20914,18 +20912,16 @@ through direct references rather than through the returned object.</p>
 <b>var</b> getPrivateData = <b>function</b>() {
   <b>return</b> privateData;
 };
-
 <b>var</b> getDoublePrivateData = <b>function</b>() {
   // <i>Refer directly to enclosed members rather than through the returned object</i>
   <b>return</b> getPrivateData() &ast; 2;
 };
-
   // <i>Return an object literal with no function definitions</i>
   <b>return</b> {
     getPrivateData: getPrivateData,
     getDoublePrivateData: getDoublePrivateData
     };
-})(  <i>/&ast; pass initialization data if necessary &ast;/</i>);
+})(  /&ast; <i>pass initialization data if necessary</i> &ast;/);
 </pre>
 
 <h4>Revealing Prototype Pattern</h4>
@@ -20942,17 +20938,16 @@ NavigationNs.active = <b>function</b>(current, length) {
   <b>this</b>.current = current;
   <b>this</b>.length = length;
  }
- 
 // <i>The prototype is used to separate the construct and the methods</i>
 NavigationNs.active.<b>prototype</b> = <b>function</b>() {
   // <i>It is an example of a public method because is releaved in the return statement</i>
   var setCurrent = <b>function</b>() {
     // <i>Here the variables current and length are used as private class properties</i>
-	<b>for (var</b> i = 0; i < <b>this</b>.lenth; i++) {
-	  $(this.current).addClass('active');
-	  }
-	}
-	return { setCurrent: setCurrent };
+    <b>for (var</b> i = 0; i < <b>this</b>.lenth; i++) {
+      $(this.current).addClass('active');
+      }
+    }
+    return { setCurrent: setCurrent };
 }();
 
 // <i>Example of paramaterless constructor</i>
@@ -20965,17 +20960,15 @@ NavigationNs.pagination.prototype = function() {
   }
   // <i>It the only public method, because it the only function referenced in the return statement</i>
     getPage = function(link);
-	  var a = $(link);
-	  
-	  var options = {url: a.attr('href'). type: 'get'}
-	  $.ajax(options).done(function(data) {
-	    // <i>after the ajax call is done, it calls private method
-		reload(data);
-	  });
-	  
-	  return false;
-	}
-	return (getPage : getPage)
+      var a = $(link);
+      var options = {url: a.attr('href'). type: 'get'}
+      $.ajax(options).done(function(data) {
+        // <i>after the ajax call is done, it calls private method</i>
+        reload(data);
+      });
+      return false;
+    }
+    return (getPage : getPage)
 }();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -24912,8 +24905,8 @@ XSS.&quot;
 <ul>
   <li><b>Use JSON.parse instead of eval to get JSON.</b> In general, don&apos;t use
     eval, and definitely don&apos;t use eval with something a user could
-	control. Eval <a href="http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/">
-	creates a new execution context</a>, creating a <b>performance hit</b>.</li>
+    control. Eval <a href="http://dmitrysoshnikov.com/ecmascript/chapter-1-execution-contexts/">
+    creates a new execution context</a>, creating a <b>performance hit</b>.</li>
   <li>Properly escape &quot; and &bsol; in user data before putting it in JSON. 
     If you just escape the &quot;, than this will happen:
 <pre>
@@ -25384,15 +25377,15 @@ window.onerror = <b>function</b> (eventOrMessage, url, lineNumber, colNumber, er
   hasLoggedOnce = <b>true</b>;
   <b>if</b> (<b>typeof</b> eventOrMessage !== &apos;string&apos;) {
     error = eventOrMessage.error;
-	url = eventOrMessage.filename &vert;&vert; eventOrMessage.fileName;
-	lineNumber = eventOrMessage.lineno &vert;&vert; eventOrMessage.lineNumber;
-	colNumber = eventOrMessage.colno &vert;&vert; eventOrMessage.columnNumber;
-	eventOrMessage = eventOrMessage.message &vert;&vert; eventOrMessage.name &vert;&vert; error.message &vert;&vert; error.name; 
+    url = eventOrMessage.filename &vert;&vert; eventOrMessage.fileName;
+    lineNumber = eventOrMessage.lineno &vert;&vert; eventOrMessage.lineNumber;
+    colNumber = eventOrMessage.colno &vert;&vert; eventOrMessage.columnNumber;
+    eventOrMessage = eventOrMessage.message &vert;&vert; eventOrMessage.name &vert;&vert; error.message &vert;&vert; error.name; 
   } 
   <b>if</b> (error && error.stack) {
     eventOrMessage = &lbrack;eventOrMessage, &apos;; Stack: &apos;, error.stack, &apos;.&apos;&rbrack;.join(&apos;&apos;); }
     <b>var</b> jsFile = (/&lbrack;&Hat;/&rbrack;+&amp;period;js/i.exec(url &vert;&vert; &apos;&apos;) &vert;&vert; &lbrack;&rbrack;)&lbrack;0&rbrack; &vert;&vert; &apos;inlineScriptOrDynamicEvalCode&apos;, 
-	stack = &lbrack;eventOrMessage, &apos; Occurred in &apos;, jsFile, &apos;:&apos;, lineNumber &vert;&vert; &apos;?&apos;, &apos;:&apos;, colNumber &vert;&vert; &apos;?&apos;&rbrack;.join(&apos;&apos;);
+    stack = &lbrack;eventOrMessage, &apos; Occurred in &apos;, jsFile, &apos;:&apos;, lineNumber &vert;&vert; &apos;?&apos;, &apos;:&apos;, colNumber &vert;&vert; &apos;?&apos;&rbrack;.join(&apos;&apos;);
 &nbsp;
   // <i>shortening the message a bit so that it is more likely to fit into browser&apos;s URL length limit</i>
     <i>(which is 2,083 in some browsers)</i>
@@ -25435,7 +25428,7 @@ is essentially a shortcut for document.querySelectorAll.</p>
 <table border="1" style="width:200px">
   <thead>
     <tr>
-	  <th></th>
+      <th></th>
       <th><b>&dollar;&lowbar;</b></th>
       <th><b>&dollar;()¹</b></th>
       <th><b>&dollar;&dollar;()</b></th>
@@ -25450,13 +25443,13 @@ is essentially a shortcut for document.querySelectorAll.</p>
     <tr>
       <td>Opera</td>
       <td>15&plus;</td>
-	  <td>11&plus;
-	  <td>11&plus;
-	  <td>11&plus;
-	  <td>11&plus;
-	  <td>15&plus;
-	  <td>15&plus;
-	  <td>15&plus;
+      <td>11&plus;
+      <td>11&plus;
+      <td>11&plus;
+      <td>11&plus;
+      <td>15&plus;
+      <td>15&plus;
+      <td>15&plus;
     </tr>
     <tr>
       <td>Chrome</td>
@@ -25475,10 +25468,10 @@ is essentially a shortcut for document.querySelectorAll.</p>
       <td>✔</td>
       <td>✔</td>
       <td>✔</td>
-	  <td>×</td>
-	  <td>×</td>
-	  <td>×</td>
-	  <td>×</td>
+      <td>×</td>
+      <td>×</td>
+      <td>×</td>
+      <td>×</td>
     </tr>
     <tr>
       <td>IE</td>
@@ -25494,13 +25487,13 @@ is essentially a shortcut for document.querySelectorAll.</p>
     <tr>
       <td>Safari</td>
       <td>6.1&plus;</td>
-	  <td>4&plus;</td>
-	  <td>4&plus;</td>
-	  <td>4&plus;</td>
-	  <td>4&plus;</td>
-	  <td>4&plus;</td>
-	  <td>4&plus;</td>
-	  <td>4&plus;</td>
+      <td>4&plus;</td>
+      <td>4&plus;</td>
+      <td>4&plus;</td>
+      <td>4&plus;</td>
+      <td>4&plus;</td>
+      <td>4&plus;</td>
+      <td>4&plus;</td>
     </tr>
   </tbody>
 </table>
@@ -26122,14 +26115,14 @@ errors and potential problems in JavaScript code.</p>
     on line text editor</li>
   <li>Install <a href="http://jshint.com/install/">JSHint in your IDE</a>.
     <ul>
-	  <li>Atom: <a href="https://github.com/AtomLinter/linter-jshint">linter-jshint</a>
-	    (must have <a href="https://github.com/steelbrain/linter">Linter</a> plugin installed)</li>
-	  <li>Sublime Text: <a href="https://github.com/victorporof/Sublime-JSHint">
-	    JSHint Gutter</a> and/or <a href="https://github.com/SublimeLinter/SublimeLinter-for-ST2">Sublime Linter</a></li>
-	  <li>Vim: <a href="https://github.com/walm/jshint.vim">jshint.vim</a> or
-	    <a href="https://github.com/Shutnik/jshint2.vim">jshint2.vim</a></li>
-	</ul>
-	</li>
+      <li>Atom: <a href="https://github.com/AtomLinter/linter-jshint">linter-jshint</a>
+        (must have <a href="https://github.com/steelbrain/linter">Linter</a> plugin installed)</li>
+      <li>Sublime Text: <a href="https://github.com/victorporof/Sublime-JSHint">
+        JSHint Gutter</a> and/or <a href="https://github.com/SublimeLinter/SublimeLinter-for-ST2">Sublime Linter</a></li>
+      <li>Vim: <a href="https://github.com/walm/jshint.vim">jshint.vim</a> or
+        <a href="https://github.com/Shutnik/jshint2.vim">jshint2.vim</a></li>
+    </ul>
+    </li>
 </ol>
 <p>A benefit of adding it to your IDE is that you can create a JSON
 configuration file named .jshintrc that will be used when linting your
@@ -26686,7 +26679,7 @@ array always processes better even if it&apos;s doing extra statement.</p>
   </thead>
   <tbody>
     <tr>
-	  <td>f1</td>
+      <td>f1</td>
       <td>6,400</td>
       <td>11,400</td>
     </tr>
@@ -26694,7 +26687,7 @@ array always processes better even if it&apos;s doing extra statement.</p>
       <td>f2</td>
       <td>1,700</td>
       <td>9,600</td>
-	</tr>
+    </tr>
   </tbody>
 </table>
 <p>As we can see, the performance improvements are very different between the two.</p>
