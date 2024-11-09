@@ -38,6 +38,7 @@ our coding MUST be more resilient. -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- always use curly braces around if...statements, always. Don't assume logic  -->
 <h4>Contents (table of contents) and index</h4>  <!-- 105 chapters -->
+
 <p>See end of document.</p>
 
 <h4>About</h4>
@@ -330,6 +331,7 @@ method parameter is displayed to the user in <b>plain</b> text:</p>
 <!--{width="5.225in" height="2.3152777777777778in"}-->
 
 <h4>Notes</h4>
+
 <blockquote>
   The alert method is technically a property of window object, but since
   all window properties are automatically global variables, we can use
@@ -2830,13 +2832,16 @@ can repeat n times the string myString:</p>
     in JavaScript, so 0 means January and 11 means December. Example: new Date(2017, 5, 1) gives 
     <i>June 1st, 2017</i>.<br/></li>
 </ul>
+
 <h4>Exploring dates</h4>
+
 <p>Note that these examples were generated on a browser in the Central
 Time Zone of the US, during Daylight Time, Date.<b>prototype</b>.toISOString
 as evidenced by the code. Where comparison with UTC was instructive, 
 Date.prototype.toISOString() was used to show the date and time in UTC 
 (the Z in the formatted string denotes UTC).</p>
 <!-- page 48 -->
+
 <pre>
 // <i>Creates a Date object with the current date and time from the</i>
 // <i>user&apos;s browser</i>
@@ -2904,10 +2909,12 @@ special1.toString() === &apos;Sun Jan 01    12 00:00:00 GMT-0600 (Central Standa
 <h3 id="ch8-2">Section 8.2: Convert to a string format</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Convert to String</h4>
+
 <pre>
 <b>var</b> date1 = <b>new</b> Date();
 date1.toString();
 </pre>
+
 <blockquote>
 Returns: &quot;Fri Apr 15 2016 07:48:48 GMT-0400 (Eastern Daylight Time)&quot;
 </blockquote>
@@ -13056,7 +13063,9 @@ foo(array, <b>function</b>(x) {
   console.log(x);
 });
 </pre>
-<p><b>Examples with Asynchronous Functions</h4>
+
+<h4>Examples with Asynchronous Functions</h4>
+
 <p>In jQuery, the <b>&dollar;getJSON()</b> method to fetch JSON data is asynchronous.
 Therefore, passing code in a callback makes sure that the code is called </i>after</i> 
 the JSON is fetched.</p>
@@ -14003,7 +14012,7 @@ window.addEventListener(&apos;storage&apos;, <b>function</b>(event) {
   }
 });
 </pre>
-<h4>Notes</b><p>
+<h4>Notes</h4>
 <!-- page 231 -->
 <p>Event is not fired or catchable under Chrome, Edge and Safari if
 domain was modified through script.</p>
@@ -15182,7 +15191,9 @@ can not be overridden and therefore their functionality is guaranteed.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The <b>typeof</b> operator returns the data type of the unevaluated operand as a string.</p>
 <h4>Syntax:</h4>
-<h4>typeof</b> operand</p>
+
+<p><b>typeof</b> operand</p>
+
 <h4>Returns:</h4>
 
 <p>These are the possible return values from <b>typeof</b>:</p>
@@ -17947,6 +17958,7 @@ be reflected.</p>
 unchanged.</p>
 
 <h4>Strict mode</h4>
+
 <pre>
 <b>function</b> add(a, b) {
   &apos;use strict&apos;;
@@ -17963,7 +17975,9 @@ add(1)
 // <i>1, undefined</i>
 // <i>1, undefined</i>
 </pre>
+
 <h4>Non-Strict Mode</h4>
+
 <pre>
 <b>function</b> add(a, b) {
   console.log(arguments&lbrack;0&rbrack;, arguments&lbrack;1&rbrack;);
@@ -18254,7 +18268,9 @@ fixed-length) binary data which you can directly manipulate. Blobs
 contain immutable binary data which can only be accessed through the
 asynchronous File interface.</p>
 <!-- page 303 -->
+
 <h4>Convert a Blob to an ArrayBuffer (asynchronous)</h4>
+
 <pre>
 <b>var</b> blob = <b>new</b> Blob(&lbrack;&quot;<b>&bsol;x</b>01<b>&bsol;x</b>02<b>&bsol;x</b>03<b>&bsol;x</b>04&quot;&rbrack;),
   fileReader = <b>new</b> FileReader(),
@@ -18265,8 +18281,11 @@ fileReader.onload = <b>function</b>() {
 };
 fileReader.readAsArrayBuffer(blob);
 </pre>
+
 <h5>Version ≥ 6</h5>
+
 <h4>Convert a Blob to an ArrayBuffer using a Promise (asynchronous)</h4>
+
 <pre>
 <b>var</b> blob = <b>new</b> Blob(&lbrack;&quot;<b>&bsol;x</b>01<b>&bsol;x</b>02<b>&bsol;x</b>03<b>&bsol;x</b>&quot;04&rbrack;);
 <b>var</b> arrayPromise = <b>new</b> Promise(<b>function</b>(resolve) {
@@ -18280,7 +18299,9 @@ arrayPromise.then(<b>function</b>(array) {
   console.log(&quot;Array contains&quot;, array.byteLength, &quot;bytes.&quot;);
 });
 </pre>
+
 <h4>Convert an ArrayBuffer or typed array to a Blob</h4>
+
 <pre>
 <b>var</b> array = <b>new</b> Uint8Array(&lbrack;0x04, 0x06, 0x07, 0x08&rbrack;);
 <b>var</b> blob = <b>new</b> Blob(&lbrack;array&rbrack;);
@@ -18292,6 +18313,7 @@ arrayPromise.then(<b>function</b>(array) {
 instead of viewing the entire thing as an array of a single type. Here we set two bytes 
 individually then interpret them together as a 16-bit unsigned integer, first big-endian 
 then little-endian.</p>
+
 <pre>
 <b>var</b> buffer = <b>new</b> ArrayBuffer(2);
 <b>var</b> view = <b>new</b> DataView(buffer);
@@ -18630,6 +18652,7 @@ fetch(&apos;/example.json&apos;, {
 <h3 id="ch55-3">Section 55.3: POST Data</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Posting form data</p>
+
 <pre>
 fetch(&grave;/example/submit&grave;, {
   method: &apos;POST&apos;,
@@ -18650,17 +18673,21 @@ fetch(&grave;/example/submit.json&grave;, {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The fetch function does not send cookies by default. There are two
 possible ways to send cookies:</p>
+
 <ol type = "1">
   <li>Only send cookies if the URL is on the same origin as the calling script.</li>
 </ol>
+
 <pre>
 fetch(&apos;/login&apos;, {
   credentials: &apos;same-origin&apos;
 })
 </pre>
+
 <ol type = "1" start = "2">
   <li>Always send cookies, even for cross-origin calls.</li>
 </ol>
+
 <pre>
 fetch(&apos;https://otherdomain.com/login&apos;, {
   credentials: &apos;include&apos;
@@ -18717,6 +18744,7 @@ responseData.then(({items, has_more, quota_max, quota_remaining}) =&gt; {
 <i>declaration</i> are captured in its scope. For example, in the code
 below, the variable x is bound to a value in the outer scope, and then
 the reference to x is captured in the context of bar:</p>
+
 <pre>
 <b>var</b> x = 4;  // <i>declaration in outer scope</i>
 <b>function</b> bar() {
@@ -18724,12 +18752,15 @@ the reference to x is captured in the context of bar:</p>
 }
 bar();  // <i>prints 4 to console</i>
 </pre>
+
 <blockquote>
 Sample output: 4
 </blockquote>
+
 <p>This concept of &quot;capturing&quot; scope is interesting because we can use
 and modify variables from an outer scope even after the outer scope
 exits. For example, consider the following:</p>
+
 <pre>
 <b>function</b> foo() {
   <b>var</b> x = 4;  // <i>declaration in outer scope</i>
@@ -18742,18 +18773,22 @@ exits. For example, consider the following:</p>
 <b>var</b> barWithX = foo();
 barWithX();  // <i>we can still access x</i>
 </pre>
+
 <blockquote>
 Sample output: 4
 </blockquote>
+
 <p>In the above example, when foo is called, its context is captured in
 the function bar. So even after it returns, bar can still access and
 modify the variable x. The function foo, whose context is captured in
 another function, is said to be a <i>closure</i>.</p>
 
 <h4>Private data</h4>
+
 <p>This lets us do some interesting things, such as defining &quot;private&quot;
 variables that are visible only to a specific function or set of
 functions. A contrived (but popular) example:</p>
+
 <pre>
 <b>function</b> makeCounter() {
   <b>var</b> counter = 0;
@@ -18772,15 +18807,19 @@ a&period;increment();
 console.log(a&period;value());
 console.log(b&period;value());
 </pre>
+
 <blockquote>
 Sample output:
 &nbsp;
 10
 </blockquote>
+
 <p>When makeCounter() is called, a snapshot of the context of that function is saved.
 All code inside makeCountre() will use that snapshot in their execution. Two calls of 
 makeCounter() will thus create two different snapshots, with their own copy of counter.</p>
+
 <h4>Immediately-invoked function expressions (IIFE)</h4>
+
 <p>Closures are also used to prevent global namespace pollution, often
 through the use of immediately-invoked function expressions.</p>
 <p><i>Immediately-invoked function expressions</i> (or, perhaps more
@@ -18946,11 +18985,14 @@ y = 4;
 <h3 id="ch56-3">Section 56.3: Difference between var and let</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><i>(Note: All examples using <b>let</b> are also valid for <b>const</b>)</i></p>
-<h4>var</b> is available in all versions of JavaScript, while <b>let</b> and
+
+<p><b>var</b> is available in all versions of JavaScript, while <b>let</b> and
 <b>const</b> are part of ECMAScript 6 and <a href="http://caniuse.com/#search=block%20level" 
 target="_blank" rel="noopener noreferrer">only available in some newer browsers</a>.</p>
+
 <p><b>var</b> is scoped to the containing function or the global space, depending when it is
 declared:</p>
+
 <pre>
 <b>var</b> x = 4;  // <i>global scope</i>
 <b>function</b> DoThings() {
@@ -18961,7 +19003,9 @@ console.log(x);  // <i>&gt;&bsol;4</i>
 DoThings();      // <i>&gt;&bsol;7</i>
 console.log(x);  // <i>&gt;&bsol;4</i>
 </pre>
+
 <p>That means it &quot;escapes&quot; if statements and all similar block constructs:</p>
+
 <pre>
 <b>var</b> x = 4;
 <b>if</b> (<b>true</b>) {
@@ -18974,7 +19018,9 @@ console.log(x);  // <i>&gt;&gt; 7</i>
 console.log(i);  // <i>&gt;&gt; 4</i>
 console.log(j);  // <i>&gt;&gt; 10</i>
 </pre>
+
 <p>By comparison, <b>let</b> is block scoped:</p>
+
 <pre>
 <b>let</b> x = 4;
 <b>if</b> (<b>true</b>) {
@@ -18988,44 +19034,58 @@ console.log(x);    // <i>&gt;&gt; 4</i>
 console.log(i);  // <i>&gt;&gt; &quot;ReferenceError: i is not defined&quot;</i>
 console.log(j);  // <i>&gt;&gt; &quot;ReferenceError: j is not defined&quot;</i>
 </pre>
+
 <p>Note that i and j are only declared in the <b>for</b> loop and are
 therefore undeclared outside of it.</p>
 
 <p>There are several other crucial differences:</p>
 
 <h4>Global variable declaration</h4>
+
 <p>In the top scope (outside any functions and blocks), <b>var</b>
 declarations put an element in the global object. <b>let</b> does not:</p>
+
 <pre>
 <b>var</b> x = 4;
 <b>let</b> y = 7;
 console.log(<b>this</b>.x);  // <i>&gt;&gt;4</i>
 console.log(<b>this</b>.y);  // <i>&gt;&gt;undefined</i>
 </pre>
+
 <h4>Re-declaration</h4>
+
 <p>Declaring a variable twice using <b>var</b> doesn&apos;t produce an error
 (even though it&apos;s equivalent to declaring it once):</p>
+
 <pre>
 <b>var</b> x = 4;
 <b>var</b> x = 7;
 </pre>
+
 <p>With <b>let</b>, this produces an error:</p>
+
 <pre>
 <b>let</b> x = 4;
 <b>let</b> x = 7;
 </pre>
+
 <blockquote>
 TypeError: Identifier x has already been declared
 </blockquote>
+
 <p>The same is true when y is declared with <b>var</b>:</p>
+
 <pre>
 <b>var</b> y = 4;
 <b>let</b> y = 7;
 </pre>
+
 <blockquote>
 TypeError: Identifier y has already been declared
 </blockquote>
+
 <p>However variables declared with let can be reused (not re-declared) in a nested block</p>
+
 <pre>
 <b>let</b> i = 5;
 {
@@ -19034,9 +19094,11 @@ TypeError: Identifier y has already been declared
 }
 console.log(i);   // <i>&gt;&gt; 5</i>
 </pre>
+
 <p>Within the block the outer i can be accessed, but if the within block
 has a <b>let</b> declaration for i, the outer i can not be accessed and
 will throw a ReferenceError if used before the second is declared.</p>
+
 <pre>
 <b>let</b> i = 5;
 {
@@ -19044,15 +19106,19 @@ will throw a ReferenceError if used before the second is declared.</p>
   <b>let</b> i;
 }
 </pre>
+
 <blockquote>
 ReferenceError: i is not defined
 </blockquote>
+
 <h4>Hoisting</h4>
+
 <p>Variables declared both with <b>var</b> and <b>let</b> are hoisted. The
 difference is that a variable declared with <b>var</b> can be referenced
 before its own assignment, since it gets automatically assigned (with
 <b>undefined</b> as its value), but <b>let</b> cannotit specifically
 requires the variable to be declared before being invoked:</p>
+
 <pre>
 console.log(x);  // <i>&gt;&gt; undefined</i>
 console.log(y);  // <i>&gt;&gt; &quot;ReferenceError: &grave;y&grave; is not defined&quot;</i>
@@ -19060,16 +19126,19 @@ console.log(y);  // <i>&gt;&gt; &quot;ReferenceError: &grave;y&grave; is not def
 <b>var</b> x = 4;
 <b>let</b> y = 7;
 </pre>
+
 <p>The area between the start of a block and a <b>let</b> or <b>const</b>
 declaration is known as the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let" 
 target="_blank" rel="noopener noreferrer">Temporal Dead Zone</a>, and any references 
 to the variable in this area will cause a ReferenceError. This happens even if the 
 <a href="http://stackoverflow.com/questions/41451181/does-let-override-a-global-declaration-and-throws-a-referenceerror" 
 target="_blank" rel="noopener noreferrer">variable is assigned before being declared</a>:</p>
+
 <pre>
 y=7;  // <i>&gt;&gt; &quot;ReferenceError: &grave;y&grave; is not defined&quot;</i>
 <b>let</b> y;
 </pre>
+
 <p>In non-strict-mode, assigning a value to a variable without any
 declaration, automatically declares the variable in the global scope.
 In this case, instead of y being automatically declared in the global
@@ -19080,6 +19149,7 @@ declared/initialized.</p>
 <h3 id="ch56-4">Section 56.4: Apply and Call syntax and invocation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The apply and call methods in every function allow it to provide a custom value for <b>this</b>.</p>
+
 <pre>
 <b>function</b> print() {
   console.log(<b>this</b>.toPrint);
@@ -19087,6 +19157,7 @@ declared/initialized.</p>
 print.apply({ toPrint: &quot;Foo&quot; });  // <i>&gt;&gt; &quot;Foo&quot;</i>
 print.call({ toPrint: &quot;Foo&quot; });   // <i>&gt;&gt; &quot;Foo&quot;</i>
 </pre>
+
 <p>You might notice that the syntax for both the invocations used above
 are the same. i.e. The signature looks similar.</p>
 
@@ -19094,6 +19165,7 @@ are the same. i.e. The signature looks similar.</p>
 with functions and changing their scopes, we still need to maintain
 the original arguments passed to the function. Both apply and call
 support passing arguments to the target function as follows:</p>
+
 <pre>
 <b>function</b> speak() {
   <b>var</b> sentences = Array.<b>prototype</b>.slice.call(arguments);
@@ -19103,6 +19175,7 @@ support passing arguments to the target function as follows:</p>
 speak.apply(person, &lbrack;&quot;I&quot;, &quot;Code&quot;, &quot;Startups&quot;&rbrack;);  // <i>&gt;&gt; &quot;Sunny: I Code Startups&quot;</i>
 speak.call(person, &quot;I&quot;, &quot;&lt;3&quot;, &quot;Javascript&quot;); // <i>&gt;&gt; &quot;Sunny: I &lt;3 Javascript&quot;</i>
 </pre>
+
 <!-- page 318 -->
 <p>Notice that apply allows you to pass an Array or the arguments object
 (array-like) as the list of arguments, whereas, call needs you to pass
@@ -19112,6 +19185,7 @@ each argument separately.</p>
 like implementing a poor version of the ECMAScript&apos;s native bind to
 create a function that will always be called as a method of an object
 from an original function.</p>
+
 <pre>
 <b>function</b> bind (func, obj) {
   <b>return</b> <b>function</b> () {
@@ -19125,11 +19199,15 @@ from an original function.</p>
 printObj = bind(print, obj);
 printObj();
 </pre>
+
 <p>This will log</p>
+
 <blockquote>
 &quot;Foo&quot;
 </blockquote>
+
 <p>The bind function has a lot going on</p>
+
 <ol type="1">
   <li>obj will be used as the value of <b>this</b></li>
   <li>forward the arguments to the function</li>
@@ -19139,6 +19217,7 @@ printObj();
 <h3 id="ch56-5">Section 56.5: Arrow function invocation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>Version ≥ 6</h5>
+
 <p>When using arrow functions <b>this</b> takes the value from the enclosing
 execution context&apos;s <b>this</b> (that is, <b>this</b> in arrow functions
 has lexical scope rather than the usual dynamic scope). In global code
@@ -19146,6 +19225,7 @@ has lexical scope rather than the usual dynamic scope). In global code
 object. And it keeps that way, even if you invoke the function
 declared with the arrow notation from any of the others methods here
 described.</p>
+
 <pre>
 <b>var</b> globalThis = <b>this</b>; // <i>&quot;window&quot; in a browser, or &quot;global&quot; in Node.js</i>
 <b>var</b> foo = (() =&gt; <b>this</b>);
@@ -19153,9 +19233,11 @@ console.log(foo() === globalThis);  // <i>true</i>
 <b>var</b> obj = { name: &quot;Foo&quot; };
 console.log(foo.call(obj) === globalThis);  // <i>true</i>
 </pre>
+
 <p>See how <b>this</b> inherits the context rather than referring to the
 object the method was called on.</p>
 <!-- page 319 -->
+
 <pre>
 <b>var</b> globalThis = <b>this</b>;
 <b>var</b> obj = {
@@ -19178,6 +19260,7 @@ console.log(fn2() === globalThis); // <i>true</i>
 that function with the context strictly bound to a specific object. It
 is especially useful to force a function to be called as a method of
 an object.</p>
+
 <pre>
 <b>var</b> obj = { foo: &apos;bar&apos; };
 <b>function</b> foo() {
@@ -19186,7 +19269,9 @@ an object.</p>
 fooObj = foo.bind(obj);
 fooObj();
 </pre>
+
 <p>This will log:</p>
+
 <blockquote>
 bar
 </blockquote>
@@ -19195,6 +19280,7 @@ bar
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Invoking a function as a method of an object the value of <b>this</b>
 will be that object.</p>
+
 <pre>
 <b>var</b> obj = {
   name: &quot;Foo&quot;,
@@ -19203,11 +19289,15 @@ will be that object.</p>
   }
 }
 </pre>
+
 <p>We can now invoke print as a method of obj. <b>this</b> will be obj</p>
+
 <pre>
 obj.print();
 </pre>
+
 <p>This will thus log:</p>
+
 <blockquote>
 Foo
 </blockquote>
@@ -19217,13 +19307,16 @@ Foo
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Invoking a function as an anonymous function, <b>this</b> will be the
 global object (self in the browser).</p>
+
 <pre>
 <b>function</b> func() {
   <b>return</b> <b>this</b>;
 }
 func() === window;  // <i>true</i>
 </pre>
+
 <h5>Version = 5</h5>
+
 <p>In ECMAScript 5&apos;s strict mode, <b>this</b> will be <b>undefined</b> if the
 function is invoked anonymously.</p>
 <pre>
@@ -19232,16 +19325,18 @@ function is invoked anonymously.</p>
   func();
 }())
 </pre>
+
 <p>This will output</p>
+
 <blockquote>
 <b>undefined</b>
 </blockquote>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch56-9">Section 56.9: Constructor invocation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-When a function is invoked as a constructor with the <b>new</b> keyword
+<p>When a function is invoked as a constructor with the <b>new</b> keyword
 <b>this</b> takes the value of the object being constructed</p>
+
 <pre>
 <b>function</b> Obj(name) {
   <b>this</b>.name = name;
@@ -19249,7 +19344,9 @@ When a function is invoked as a constructor with the <b>new</b> keyword
 <b>var</b> obj = <b>new</b> Obj(&quot;Foo&quot;);
 console.log(obj);
 </pre>
+
 <p>This will log</p>
+
 <blockquote>
 {name: &quot;Foo&quot;}
 </blockquote>
@@ -19902,7 +19999,9 @@ Math.round(3.6);  // <i>4</i>
 <pre>
 Math.trunc(3.7);  // <i>3</i>
 </pre>
+
 <p>Notice the difference between truncation (trunc) and floor:</p>
+
 <pre>
 Math.floor(&minus;3.1); // <i>-4</i>
 Math.trunc(&minus;3.1); // <i>-3</i>
@@ -19910,8 +20009,8 @@ Math.trunc(&minus;3.1); // <i>-3</i>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch59-13">Section 59.13: Convert string to float</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>parseFloat accepts a string as an argument which it converts to a
-float/</p>
+<p>parseFloat accepts a string as an argument which it converts to a float/</p>
+
 <pre>
 parseFloat(&quot;10.01&quot;)  // <i>= 10.01</i>
 </pre>
@@ -19921,16 +20020,18 @@ parseFloat(&quot;10.01&quot;)  // <i>= 10.01</i>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Destructuring is a <b>pattern matching</b> technique that is added to
 JavaScript recently in ECMAScript 6.</p>
+
 <p>It allows you to bind a group of variables to a corresponding set of
 values when their pattern matches to the right hand-side and the left
 hand-side of the expression.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch60-1">Section 60.1: Destructuring Objects</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Destructuring is a convenient way to extract properties from objects
+<p>Destructuring is a convenient way to extract properties from objects
 into variables.</p>
+
 <p>Basic syntax:</p>
+
 <pre>
 <b>let</b> person = {
   name: &apos;Bob&apos;,
@@ -19941,7 +20042,9 @@ into variables.</p>
 <b>let</b> name = person.name;  // <i>&apos;Bob&apos;</i>
 <b>let</b> age = person.age;    // <i>25</i>
 </pre>
+
 <p>Destructuring and renaming:</p>
+
 <pre>
 <b>let</b> person = {
   name: &apos;Bob&apos;,
@@ -19951,7 +20054,9 @@ into variables.</p>
 // <i>Is equivalent to</i>
 <b>let</b> firstName = person.name; // <i>&apos;Bob&apos;</i>
 </pre>
+
 <p>Destructuring with default values:</p>
+
 <pre>
 <b>let</b> person = {
   name: &apos;Bob&apos;,
@@ -19961,7 +20066,9 @@ into variables.</p>
 // <i>Is equivalent to</i>
 <b>let</b> phone = person.hasOwnProperty(&apos;phone&apos;) ? person.phone : &apos;123-456-789&apos;; // <i>&apos;123-456-789&apos;</i>
 </pre>
+
 <p>Destructuring and renaming with default values</p>
+
 <pre>
 <b>let</b> person = {
   name: &apos;Bob&apos;,
@@ -19977,6 +20084,7 @@ into variables.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Pull properties from an object passed into a function. This pattern
 simulates named parameters instead of relying on argument position.</p>
+
 <pre>
 <b>let</b> user = {
   name: &apos;Jill&apos;,
@@ -19988,7 +20096,9 @@ simulates named parameters instead of relying on argument position.</p>
 }
 greeting(user)
 </pre>
+
 <p>This also works for arrays:</p>
+
 <pre>
 <b>let</b> parts = &lbrack;&quot;Hello&quot;, &quot;World!&quot;&rbrack;;
 <b>function</b> greeting(&lbrack;first, second&rbrack;) {
@@ -20000,7 +20110,9 @@ greeting(user)
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>We are not limited to destructuring an object/array, we can
 destructure a nested object/array.</p>
+
 <h4><i>Nested Object Destructuring</i></h4>
+
 <pre>
 <b>var</b> obj = {
   a: {
@@ -20018,17 +20130,22 @@ destructure a nested object/array.</p>
 } = obj;
 console.log(x, y, z);  // <i>1,3,2</i>
 </pre>
+
 <h4><i>Nested Array Destructuring</i></h4>
+
 <pre>
 <b>var</b> arr = &lbrack;1, 2, &lbrack;3, 4&rbrack;, 5&rbrack;;
 <b>var</b> &lbrack;a, , &lbrack;b, c&rbrack;, d&rbrack; = arr;
 console.log(a, b, c, d);  // <i>1 3 4 5</i>
 </pre>
+
 <!-- page 333 -->
 <p>Destructuring is not just limited to a single pattern, we can have
 arrays in it, with n-levels of nesting. Similarly we can destructure
 arrays with objects and vice-versa.</p>
-<h4><i>Arrays Within Object</i></h4>
+
+<h4>Arrays Within Object</h4>
+
 <pre>
 <b>var</b> obj = {
   a: 1,
@@ -20040,7 +20157,9 @@ arrays with objects and vice-versa.</p>
 } = obj;
 console.log(x1, x2, x3);  // <i>1 2 3</i>
 </pre>
-<b><i>Objects Within Arrays</i></b>
+
+<h4>Objects Within Arrays</h4>
+
 <pre>
 <b>var</b> arr = &lbrack;1, 2, {a: 3}, 4&rbrack;;
 <b>var</b> &lbrack;x1, x2, {a: x3}, x4&rbrack; = arr;
@@ -20054,16 +20173,20 @@ console.log(x1, x2, x3, x4);
 <b>const</b> &lbrack; a, b, c &rbrack; = myArr
 // <i>a = &apos;one&apos;, b = &apos;two, c = &apos;three&apos;</i>
 </pre>
+
 <p>We can set default value in destructuring array, see the example of
 Default Value While Destructuring.</p>
 <p>With destructuring array, we can swap the values of 2 variables easily:</p>
+
 <pre>
 <b>var</b> a = 1;
 <b>var</b> b = 3;
 &lbrack;a, b&rbrack; = &lbrack;b, a&rbrack;;
 // <i>a = 3, b = 1</i>
 </pre>
+
 <p>We can specify empty slots to skip unneeded values:</p>
+
 <pre>
 &lbrack;a, , b&rbrack; = &lbrack;1, 2, 3&rbrack;  // <i>a = 1, b = 3</i>
 </pre>
@@ -20072,6 +20195,7 @@ Default Value While Destructuring.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Aside from destructuring objects into function arguments, you can use
 them inside variable declarations as follows:</p>
+
 <pre>
 <b>const</b> person = {
   name: &apos;John Doe&apos;,
@@ -20082,6 +20206,7 @@ them inside variable declarations as follows:</p>
 console.log(&apos;I am &apos; + name + &apos;, aged &apos; + age + &apos; and living in &apos; + location + &apos;.&apos;);
 // <i>-&gt; &quot;I am John Doe aged 45 and living in Paris, France.&quot;</i>
 </pre>
+
 <p>As you can see, three new variables were created: name, age and
 location and their values were grabbed from the object person if they
 matched key names.</p>
@@ -20093,6 +20218,7 @@ extract doesn&apos;t exist in the object/array, resulting in a TypeError
 (while destructuring nested objects) or being set to <b>undefined</b>.
 While destructuring we can set a default value, which it will fallback
 to, in case of it not being found in the object.</p>
+
 <pre>
 <b>var</b> obj = {a : 1};
 <b>var</b> {a: x, b: x1 = 10} = obj;
@@ -20107,6 +20233,7 @@ console.log(a, b, c);  // <i>5, 10, undefined</i>
 <p>Destructuring allows us to refer to one key in an object, but declare
 it as a variable with a different name. The syntax looks like the
 key-value syntax for a normal JavaScript object.</p>
+
 <pre>
 <b>let</b> user = {
   name: &apos;John Smith&apos;,
@@ -20117,6 +20244,7 @@ key-value syntax for a normal JavaScript object.</p>
 console.log(userName)  // <i>John Smith</i>
 console.log(userId)    // <i>10</i>
 </pre>
+
 <!-- page 335 -->
 <!-- end of chapter 60 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20144,13 +20272,16 @@ console.log(userId)    // <i>10</i>
     </tr>
   </tbody>
 </table>
+
 <p>WebSocket is protocol, which enables two-way communication between a
 client and server:</p>
+
 <p>The goal WebSocket is to provide a mechanism for browser-based
 applications that need two-way communication with servers that does
 not rely on opening multiple HTTP connections. (<a href="https://tools.ietf.org/html/rfc6455" 
 target="_blank" rel="noopener noreferrer">
 RFC 6455)</p>
+
 <p>WebSocket works over HTTP protocol.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch61-1">Section 61.1: Working with string messages</h3>
@@ -20209,6 +20340,7 @@ ws.onopen = <b>function</b>() {
 <b>var</b> sck = &quot;wss://site.com/wss-handler&quot;;
 <b>var</b> wss = <b>new</b> WebSocket(sck);
 </pre>
+
 <p>This uses the wss instead of ws to make a secure web socket connection
 which make use of HTTPS instead of HTTP</p>
 <!-- end chapter 61 -->
@@ -20227,41 +20359,53 @@ target="_blank" rel="noopener noreferrer">ECMAScript 2015 (ES6)</a>).</p>
 expression</i> due to Common Lisp similarities.</p>
 <p>The simplest form of an arrow function has its arguments on the left
 side of =&bsol;and the return value on the right side:</p>
+
 <pre>
 item =&gt; item &plus; 1 // <i>-&gt; function(item){return item + 1}</i>
 </pre>
+
 <p>This function can be immediately invoked by providing an argument to the expression:</p>
+
 <pre>
 (item =&gt; item &plus; 1)(41) // <i>-&gt; 42</i>
 </pre>
+
 <p>If an arrow function takes a single parameter, the parentheses around
 that parameter are optional. For example, the following expressions
 assign the same type of function into constant variables:</p>
+
 <pre>
 <b>const</b> foo = bar =&gt; bar &plus; 1;
 <b>const</b> bar = (baz) =&gt; baz &plus; 1;
 </pre>
+
 <p>However, if the arrow function takes no parameters, or more than one
 parameter, a new set of parentheses <i>must</i> encase all the arguments:</p>
+
 <pre>
 (() =&gt; &quot;foo&quot;)() // <i>-&amp;quot;foo&quot;</i>
 ((bow, arrow) =&gt; bow &plus; arrow)(&apos;I took an arrow &apos;, &apos;to the knee&hellip;&apos;)
 // <i>-&gt; quot;I took an arrow to the knee&hellip;&quot;</i>
 </pre>
+
 <p>If the function body doesn&apos;t consist of a single expression, it must
 be surrounded by brackets and use an explicit <b>return</b> statement for
 providing a result:</p>
+
 <pre>
 (bar =&gt; {
   <b>const</b> baz = 41;
   <b>return</b> bar &plus; baz;
 })(1);  // <i>-&gt; 42</i>
 </pre>
+
 <p>If the arrow function&apos;s body consists only of an object literal, this
 object literal has to be enclosed in parentheses:</p>
+
 <pre>
 (bar =&gt; ({ baz: 1 }))();  // <i>-&bsol;Object {baz: 1}</i>
 </pre>
+
 <p>The extra parentheses indicate that the opening and closing brackets
 are part of the object literal, i.e. they are not delimiters of the
 function body.</p>
@@ -20269,12 +20413,13 @@ function body.</p>
 <h3 id="ch62-2">Section 62.2: Lexical Scoping & Binding (Value of &quot;this&quot;)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Arrow functions are <a href="http://stackoverflow.com/questions/1047454/what-is-lexical-scope" 
- target="_blank" rel="noopener noreferrer">
+target="_blank" rel="noopener noreferrer">
 lexically scoped</a>; this means that their <b>this</b> Binding is bound to the context 
 of the surrounding scope. That is to say, whatever <b>this</b> refers to can be preserved 
 by using an arrow function. Take a look at the following example. The class Cow has a method 
 that allows for it to print out the sound it makes after 1 second.</p>
 <!-- page 338 -->
+
 <pre>
 class Cow {
   constructor() {
@@ -20287,6 +20432,7 @@ class Cow {
 <b>const</b> betsy = <b>new</b> Cow();
 betsy.makeSoundLater();
 </pre>
+
 <p>In the makeSoundLater() method, the <b>this</b> context refers to the current instance
 of the Cow object, so in the case where I call .makeSoundLater(), the <b>this</b>
 context refers to betsy.</p>
@@ -20301,14 +20447,17 @@ directly access the sound property.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Arrow functions do not expose an arguments object; therefore,
 arguments would simply refer to a variable in the current scope.</p>
+
 <pre>
 <b>const</b> arguments = &lbrack;<b>true</b>&rbrack;;
 <b>const</b> foo = x =&gt; console.log(arguments&lbrack;0&rbrack;);
 foo(<b>false</b>);  // <i>-&gt; true</i>
 </pre>
+
 <p>Due to this, arrow functions are also <b>not</b> aware of their caller/callee.</p>
 <p>While the lack of an arguments object can be a limitation in some edge
 cases, rest parameters are generally a suitable alternative.</p>
+
 <pre>
 <b>const</b> arguments = &lbrack;<b>true</b>&rbrack;;
 <b>const</b> foo = (&hellip;arguments) =&gt; console.log(arguments&lbrack;0&rbrack;);
@@ -20320,14 +20469,17 @@ foo(<b>false</b>);  // <i>-&gt; false</i>
 <p>Arrow functions may implicitly return values by simply omitting the
 curly braces that traditionally wrap a function&apos;s body if their body
 only contains a single expression.</p>
+
 <pre>
 <b>const</b> foo = x =&gt; x &plus; 1;
 foo(1);  // <i>-&gt; 2</i>
 </pre>
+
 <p>When using implicit returns, object literals must be wrapped in
 parenthesis so that the curly braces are not mistaken for the opening
 of the function&apos;s body.</p>
 <!-- page 339 -->
+
 <pre>
 <b>const</b> foo = () =&gt; { bar: 1 } // <i>foo() returns undefined</i>
 <b>const</b> foo = () =&gt; { bar: 1 }) // <i>foo() returns {bar: 1}</i>
@@ -20336,6 +20488,7 @@ of the function&apos;s body.</p>
 <h3 id="ch62-5">Section 62.5: Arrow functions as a constructor</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Arrow functions will throw a TypeError when used with the <b>new</b> keyword.</p>
+
 <pre>
 <b>const</b> foo = <b>function</b>() {
   <b>return</b> &apos;foo&apos;;
@@ -20352,6 +20505,7 @@ of the function&apos;s body.</p>
 <p>Arrow functions can behave very similar to classic functions in that you may 
 explicitly return a value from them using the <b>return</b> keyword; simply wrap 
 your function&apos;s body in curly braces, and return a value:</p>
+
 <pre>
 <b>const</b> foo = x =&gt; {
   <b>return</b> x &plus; 1;
@@ -20373,17 +20527,22 @@ created, a worker can send messages which can be different data types
 messages to an event handler specified by that code (and vice versa.)</p>
 <p>Workers can be created in a few ways.</p>
 <p>The most common is from a simple URL:</p>
+
 <pre>
 <b>var</b> webworker = <b>new</b> Worker(&quot;./path/to/webworker.js&quot;);
 </pre>
+
 <p>It&apos;s also possible to create a Worker dynamically from a string using URL.createObjectURL():</p>
+
 <pre>
 <b>var</b> workerData = &quot;function someFunction() {}; console.log(&apos;More code&apos;);&quot;;
 <b>var</b> blobURL = URL.createObjectURL(<b>new</b> Blob(&lbrack;&quot;(&quot; &plus; workerData &plus; &quot;)&quot;&rbrack;, { type: &quot;text/javascript&quot; }));
 <b>var</b>  webworker = <b>new</b> Worker(blobURL);
 </pre>
+
 <p>The same method can be combined with Function.toString() to create a worker from an
 existing function:</p>
+
 <pre>
 <b>var</b> workerFn = <b>function</b>() {
   console.log(&quot;I was run&quot;);
@@ -20396,6 +20555,7 @@ existing function:</p>
 <h3 id="ch63-2">Section 63.2: A simple service worker</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>main.js</h4>
+
 <blockquote>
 A service worker is an event-driven worker registered against an
 origin and a path. It takes the form of a JavaScript file that can
@@ -20405,9 +20565,12 @@ very granular fashion to give you complete control over how your app
 behaves in certain situations (the most obvious one being when the
 network is not available.)
 </blockquote>
+
 <p>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API" 
 target="_blank" rel="noopener noreferrer">MDN</a></p>
+
 <h4>Few Things:</h4>
+
 <ol type="1" start="1">
   <li>It&apos;s a JavaScript Worker, so it can&apos;t access the DOM directly</li>
   <li>It&apos;s a programmable network proxy</li>
@@ -20418,6 +20581,7 @@ target="_blank" rel="noopener noreferrer">MDN</a></p>
 <!-- page 341 -->
 <p>This code that will be executed in the Document context, (or) this 
 JavaScript will be included in your page via a <b>&lt;script&gt;</b> tag.</p>
+
 <pre>
 // <i>we check if the browser supports ServiceWorkers</i>
 <b>if</b> (&apos;serviceWorker&apos; <b>in</b> navigator) {
@@ -20433,6 +20597,7 @@ JavaScript will be included in your page via a <b>&lt;script&gt;</b> tag.</p>
     });
 }
 </pre>
+
 <h4>sw.js</h4>
 <p>This is the service worker code and is executed in the 
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope" 
@@ -20457,6 +20622,7 @@ self.addEventListener(&apos;fetch&apos;, <b>function</b>(event) {
   });
 }
 </pre>
+
 <ul>
   <li>You can call register() on every page load. If the SW is already registered, 
     the browser provides you with instance that is already running</li>
@@ -20478,6 +20644,7 @@ most places possible: worker.postMessage = (worker.webkitPostMessage
 &vert;&vert; worker.postMessage);</p>
 <p>From the main thread (parent window):</p>
 <!-- page 342 -->
+
 <pre>
 // <i>Create a worker</i>
 <b>var</b> webworker = <b>new</b> Worker(&quot;./path/to/webworker.js&quot;);
@@ -20489,7 +20656,9 @@ webworker.addEventListener(&quot;message&quot;, <b>function</b>(event) {
     console.log(&quot;Message from worker:&quot;, event.data); // <i>&lbrack;&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;&rbrack;</i>
   });
 </pre>
+
 <p>From the worker, in webworker.js:</p>
+
 <pre>
 // <i>Send information to the main thread (parent window)</i>
 self.postMessage(&lbrack;&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;&rbrack;);
@@ -20499,8 +20668,10 @@ self.addEventListener(&quot;message&quot;, <b>function</b>(event) {
   console.log(&quot;Message from parent:&quot;, event.data);  // <i>&quot;Sample message&quot;</i>
 });
 </pre>
+
 <p>Alternatively, you can also add event listeners using onmessage:</p>
 <p>From the main thread (parent window):</p>
+
 <pre>
 webworker.onmessage = <b>function</b>(event) {
   console.log(&quot;Message from worker:&quot;, event.data); // <i>&lbrack;&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;&rbrack;</i>
@@ -21008,24 +21179,31 @@ Welcome.<b>prototype</b>.sayHello = <b>function</b>() {
 welcome.sayHello();
 // <i>=&bsol;Hello, John!</i>
 </pre>
+
 <h4>Prototypal Inheritance</h4>
+
 <p>Inheriting from a &apos;parent object&apos; is relatively easy via the
 following pattern</p>
+
 <pre>
 ChildObject.<b>prototype</b> = Object.create(ParentObject.<b>prototype</b>);
 ChildObject.<b>prototype</b>.constructor = ChildObject;
 </pre>
+
 <p>Where ParentObject is the object you wish to inherit the prototyped
 functions from, and ChildObject is the new Object you wish to put them on.</p>
 <p>If the parent object has values it initializes in its constructor you
 need to call the parents constructor when initializing the child.</p>
 <p>You do that using the following pattern in the ChildObject constructor.</p>
+
 <pre>
 <b>function</b> ChildObject(value) {
   ParentObject.call(<b>this</b>, value);
 }
 </pre>
+
 <p>A complete example where the above is implemented</p>
+
 <pre>
 <b>function</b> RoomService(name, order) {
   // <i>this.name will be set and made available on the scope of this function</i>
@@ -21059,6 +21237,7 @@ delivery.deliverOrder();
 instantiation of a class to one object. After the first object is
 created, it will return the reference to the same one whenever called
 for an object.</p>
+
 <pre>
 <b>var</b> Singleton = (<b>function</b>() {
   // <i>instance stores a reference to the Singleton</i>
@@ -21089,7 +21268,9 @@ for an object.</p>
   };
 })();
 </pre>
+
 <h4>Usage:</h4>
+
 <pre>
 // <i>there is no existing instance of Singleton, so it will create one</i>
 <b>var</b> instance1 = Singleton.getInstance();
@@ -21285,33 +21466,42 @@ them into the <b>target</b> language of JavaScript.</p>
 <h3 id="ch68-1">Section 68.1: Introduction to Transpiling</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Examples</h4>
+
 <p><b>ES6/ES2015 to ES5 (via <a href="https://babeljs.io/" target="_blank" rel="noopener noreferrer">
 Babel</a>)</b>:</p>
 <p>This ES2015 syntax</p>
+
 <pre>
 // <i>ES2015 arrow function syntax</i>
 &lbrack;1, 2, 3&rbrack;.map(n =&gt; n &plus; 1);
 </pre>
 <p>is interpreted and translated to this ES5 syntax:</p>
+
 <pre>
 // <i>Conventional ES5 anonymous function syntax</i>
 &lbrack;1, 2, 3&rbrack;.map(<b>function</b>(n) {
   <b>return</b> n &plus; 1;
 });
 </pre>
+
 <p><b>CoffeeScript to JavaScript (via built-in CoffeeScript compiler)</b>:</p>
 <p>This CoffeeScript</p>
+
 <pre>
 &pound; Existence:
 alert &quot;I knew it!&quot; <b>if</b> elvis?
 </pre>
+
 <p>is interpreted and translated to JavaScript:</p>
+
 <pre>
 <b>if</b> (<b>typeof</b> elvis !== &quot;undefined&quot; && elvis !== <b>null</b>) {
   alert(&quot;I knew it!&quot;);
 }
 </pre>
+
 <h4>How do I transpile?</h4>
+
 <p>Most compile-to-JavaScript languages have a transpiler <b>built-in</b>
 (like in CoffeeScript or TypeScript). In this case, you may just need
 to enable the language&apos;s transpiler via config settings or a
@@ -21320,8 +21510,11 @@ transpiler.</p>
 <p>For <b>ES6/ES2016-to-ES5 transpiling</b>, the most prominent transpiler
 being used is <a href="https://babeljs.io/" target="_blank" rel="noopener noreferrer">
 Babel</a>.</p>
+
 <h4>Why should I transpile?</h4>
+
 <p>The most cited benefits include:</p>
+
 <ul>
   <li>The ability to use newer syntax reliably</li>
   <li>Compatibility among most, if not all browsers</li>
@@ -21345,36 +21538,43 @@ worry about compatibility, you can use <a href="https://nodejs.org/en/">Node</a>
 and <a href="https://babeljs.io/docs/usage/cli/" target="_blank" rel="noopener noreferrer">Babel CLI</a></p>
 
 <h4>Quick setup of a project with Babel for ES6/7 support</h4>
+
 <ol type="1" start="1">
   <li><a href="https://nodejs.org/en/download/" 
     target="_blank" rel="noopener noreferrer">Download</a> and install Node</li>
   <li>Go to a folder and create a project using your favourite command line tool</li>
 </ol>
+
 <pre>
 ~ npm init
 </pre>
 <ol type="1" start="3">
   <li>Install Babel CLI</li>
 </ol>
+
 <pre>
 ~ npm <b>install</b> &bsol;save-dev babel-cli
 ~ npm <b>install</b> &bsol;save-dev babel-preset-es2015
 </pre>
+
 <ol type="1" start="4">
   <li>Create a scripts folder to store your .js files, and then a dist/scripts 
     folder where the transpiled fully compatible files will be stored.</li>
   <li>Create a .babelrc file in the root folder of your project, and write this
     on it</li>
 </ol>
+
 <pre>
 {
   &quot;presets&quot;: &lbrack;&quot;es2015&quot;&rbrack;
 }
 </pre>
+
 <ol type="1" start="6">
   <li>Edit your package.json file (created when you ran npm init) and add the build
     script to the scripts property:</li>
 </ol>
+
 <pre>
 {
   &hellip;
@@ -21385,14 +21585,17 @@ and <a href="https://babeljs.io/docs/usage/cli/" target="_blank" rel="noopener n
   &hellip;
 }
 </pre>
+
 <ol type="1" start="7">
   <li>Enjoy <a href="https://babeljs.io/docs/learn-es2015/" 
     target="_blank" rel="noopener noreferrer">programming in ES6/7</a></li>
   <li>Run the following to transpile all your files to ES5</li>
 </ol>
+
 <pre>
 ~ npm run build
 </pre
+
 <p>For more complex projects you might want to take a look at
 <a href="http://gulpjs.com/" target="_blank" rel="noopener noreferrer">
 Gulp</a> or <a href="https://webpack.github.io/" 
@@ -21498,11 +21701,13 @@ Specification:</a></b></p>
   <li><b>return</b> statement</li>
   <li><b>throw</b> statement</li>
 </ul>
+
 <h4>Examples:</h4>
 <p>When the end of the input stream of tokens is encountered and the
 parser is unable to parse the input token stream as a single complete
 Program, then a semicolon is automatically inserted at the end of the
 input stream.</p>
+
 <pre>
 a = b
 ++c
@@ -21516,15 +21721,20 @@ y
 x;
 ++y;
 </pre>
+
 <h4>Array indexing/literals</h4>
+
 <!-- page 363 -->
+
 <pre>
 console.log(&quot;Hello, World&quot;)
 &lbrack;1, 2, 3&rbrack;.join()
 // <i>is transformed to:</i>
 console.log(&quot;Hello, World&quot;)&lbrack;(1, 2, 3)&rbrack;.join();
 </pre>
+
 <h4>Return statement:</h4>
+
 <pre>
 <b>return</b>
   &quot;something&quot;;
@@ -22512,6 +22722,7 @@ character code U+000A.</p>
 <h3 id="ch78-2">Section 78.2: Escape sequence types</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Single character escape sequences</h4>
+
 <p>Some escape sequences consist of a backslash followed by a single character.</p>
 <p>For example, in alert("Hello&absol;n&absol;World");, the escape sequence 
 &bsol;n is used to introduce a newline in the string parameter, so that the 
@@ -22885,6 +23096,7 @@ aCommand.Execute();
 </pre>
 
 <p>Can invoke:</p>
+
 <ul>
   <li>immediately</li>
   <li>in response to an event</li>
@@ -22893,6 +23105,7 @@ aCommand.Execute();
   <li>at the end of an event loop</li>
   <li>in any other needed way to invoke a method</li>
 </ul>
+
 <h4>Receiver</h4>
 
 <pre>
@@ -25024,7 +25237,9 @@ the browser will allow establishing AJAX connections.</p>
 
 <p>However, because developers cannot change other servers&apos; response
 headers, this method can&apos;t always be relied on.</p>
+
 <h4>Method 2: JSONP</h4>
+
 <p><b>JSON</b> with <b>P</b>adding is commonly blamed to be a workaround. It is
 not the most straightforward method, but it still gets the job done.
 This method takes advantage of the fact that script files can be
@@ -25555,6 +25770,7 @@ the browser&apos;s Developer Tools.</p>
 </ol>
 
 <h4>Adding a breakpoint from the Developer Tools</h4>
+
 <p>Once you have your JavaScript file open in Developer Tools, you can
 click a line number to place a breakpoint. The next time your program
 runs, it will pause there.</p>
@@ -25648,6 +25864,7 @@ at MDN for more information.</p>
 <p>Browser support for setters/getters:</p>
 
 <h4>Chrome Firefox IE Opera Safari Mobile</h4>
+
 <p>Version 1 2.0 9 9.5 3 all</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch99-4">Section 99.4: Using the console</h3>
@@ -26724,6 +26941,7 @@ created object is discarded every iteration, Loop B calls test1() that
 requires the object returns to be supplied. It thus uses the same
 object and avoids allocation of a new object, and excessive GC hits.
 (GC were not included in the performance test)</p>
+
 <h4>Example B</h4>
 
 <pre>
@@ -26839,7 +27057,9 @@ Summing took 384416 nanoseconds
 <pre>
 Summing took 180520 nanoseconds
 </pre>
+
 <h4>Summing integers took half the time here.</h4>
+
 <p>Engines don&apos;t use the same types you have in JavaScript. As you
 probably know, all numbers in JavaScript are IEEE754 double precision
 floating point numbers, there&apos;s no specific available representation
@@ -26894,8 +27114,11 @@ they have changed in different versions of the language.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JavaScript has a predefined collection of <i>reserved keywords</i> which
 you cannot use as variables, labels, or function names.</h4>
+
 <h4>ECMAScript 1</h4>
+
 <h5>Version = 1</h5>
+
 <table border="1" style="width:200px">
   <thead>
     <tr>
@@ -26967,10 +27190,13 @@ you cannot use as variables, labels, or function names.</h4>
     </tr>
   </tbody>
 </table>
+
 <h4>ECMAScript 2</h4>
+
 <p>Added <b>24</b> additional reserved keywords. (New additions in bold).</p>
 
 <h5>Version = 3 Version = E4X</h5>
+
 <table border="1" style="width:200px">
   <thead>
     <tr>
@@ -27084,6 +27310,7 @@ you cannot use as variables, labels, or function names.</h4>
 </table>
 
 <h4>ECMAScript 5 / 5.1</h4>
+
 <p>There was no change since <i>ECMAScript 3</i>.</p>
 
 <p><i>ECMAScript 5</i> removed int, byte, char, <b>goto</b>, long, final, float,
