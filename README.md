@@ -18519,13 +18519,13 @@ function HTML(strings, ...substitutions) {
 const title = "Hello World";
 const iconSrc = "/images/logo.png";
 const names = &lbrack;&quot;John&quot;, &quot;Jane&quot;, &quot;Joe&quot;, &quot;Jill&quot;&rbrack;;
-document.body.innerHTML = HTML`
-  <h1><img src="&dollar;{iconSrc}" /&gt; &dollar;{title}</h1>
-  <ul> &dollar;(names.map(name =&gt; HTML `
-    <li>?&dollar;{name}</li>
-  </ul>
-  `)} 
-`;
+document.body.innerHTML = HTML&grave;
+  &lt;h1&gt;&lt;img src="&dollar;{iconSrc}" /&gt; &dollar;{title}&lt;/h1&gt;
+  &lt;ul&gt; &dollar;(names.map(name =&gt; HTML &grave;
+    &lt;li&gt;?&dollar;{name}&lt;/li&gt;
+  &lt;/ul&gt;
+  &grave;)} 
+&grave;;
 </pre>
 <!-- ![](./images/image036.png){width="7.486805555555556in" height="5.666666666666667in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
