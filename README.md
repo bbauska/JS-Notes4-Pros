@@ -20937,7 +20937,8 @@ var NavigationsNs = NavigationNs || {};
 NavigationNs.active = <b>function</b>(current, length) {
   <b>this</b>.current = current;
   <b>this</b>.length = length;
- }
+}
+
 // <i>The prototype is used to separate the construct and the methods</i>
 NavigationNs.active.<b>prototype</b> = <b>function</b>() {
   // <i>It is an example of a public method because is releaved in the return statement</i>
