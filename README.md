@@ -93,7 +93,9 @@ debugging purposes.</p>
 <p>Open up the JavaScript Console in your browser, type the following,
 and press Enter:</p>
 
-<pre>console.log("Hello, World!");</pre>
+<pre>
+console.log("Hello, World!");
+</pre>
 
 <p>This will log the following to the console:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -159,8 +161,10 @@ console.log("thisVar:", thisVar, "and thatVar:", thatVar);
 
 <p>You can use console.log() in combination with placeholders:</p>
 
-<pre><b>var</b> greet = "Hello", who = "World";
-console.log ("%s, %s!", greet, who);</pre>
+<pre>
+<b>var</b> greet = "Hello", who = "World";
+console.log ("%s, %s!", greet, who);
+</pre>
 
 <p>This will log the following to the console:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -178,7 +182,8 @@ console.log ("%s, %s!", greet, who);</pre>
 <p>Below we see the result of logging an object. This is often useful for 
 logging JSON responses from API calls.</p>
 
-<pre>console.log ( { 
+<pre>
+console.log ( { 
   'Email': '', 
   'Groups': {}, 
   'Id': 33, 
@@ -187,7 +192,8 @@ logging JSON responses from API calls.</p>
   'LoginName': 'i:0#.w|virtualdomain&bsol;&bsol;user2',
   'PrincipalType': 1, 
   'Title': 'user2' 
-} );</pre>
+} );
+</pre>
 
 <!-- page 4 -->
 <p>This will log the following to the console:</p>
@@ -206,7 +212,9 @@ logging JSON responses from API calls.</p>
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" 
 target="_blank" rel="noreferrer noopener"><i>DOM</i></a>. In this case we log the body element:</p>
 
-<pre>console.log(document.body);</pre>
+<pre>
+console.log(document.body);
+</pre>
 
 <p>This will log the following to the console:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -233,18 +241,24 @@ text on a web page.</p>
 
 <p>For example, consider the following HTML tag:</p>
 
-<pre><b>&lt;p</b> id="paragraph"<b>&gt;&lt;/p&gt;</b></pre>
+<pre>
+<b>&lt;p</b> id="paragraph"<b>&gt;&lt;/p&gt;</b>
+</pre>
 
 <p>To change its textContent property, we can run the following JavaScript:</p>
 
 <!-- page 5 -->
 
-<pre>document.getElementById("paragraph").textContent = "Hello, World";</pre>
+<pre>
+document.getElementById("paragraph").textContent = "Hello, World";
+</pre>
 
 <p>This will select the element that with the id paragraph and set its
 text content to "Hello, World":</p>
 
-<pre><b>&lt;p</b> id="paragraph"&gt;Hello, World<b>&lt;/p&gt;</b></pre>
+<pre>
+<b>&lt;p</b> id="paragraph"&gt;Hello, World<b>&lt;/p&gt;</b>
+</pre>
 
 <p><a href="http://jsbin.com/fuzijox/edit?html,js,console,output" 
 target="_blank" rel="noreferrer noopener">(See also this demo)</a></p>
@@ -252,23 +266,29 @@ target="_blank" rel="noreferrer noopener">(See also this demo)</a></p>
 <p>You can also use JavaScript to create a new HTML element programmatically. For example, 
 consider an HTML document with the following body:</p>
 
-<pre><b>&lt;body&gt;</b>
+<pre>
+<b>&lt;body&gt;</b>
   <b>&lt;h1&gt;</b>Adding an element<b>&lt;/h1&gt;</b>
-<b>&lt;/body&gt;</b></pre>
+<b>&lt;/body&gt;</b>
+</pre>
 
 <p>In our JavaScript, we create a new <b>&lt;p&gt;</b>tag with a textContent property of 
 and add it at the end of the html body:</p>
 
-<pre><b>var</b> element = document.createElement('p');
+<pre>
+<b>var</b> element = document.createElement('p');
 element.textContent = "Hello, World";
-document.body.appendChild(element); //<i>add the newly created element to the DOM</i></pre>
+document.body.appendChild(element); //<i>add the newly created element to the DOM</i>
+</pre>
 
 <p>That will change your HTML body to the following:</p>
 
-<pre><b>&lt;body&gt;</b>
+<pre>
+<b>&lt;body&gt;</b>
   <b>&lt;h1&gt;</b>Adding an element<b>&lt;/h1&gt;</b>
   <b>&lt;p&gt;</b>Hello, World<b>&lt;/p&gt;</b>
-<b>&lt;/body&gt;</b></pre>
+<b>&lt;/body&gt;</b>
+</pre>
 
 <p>Note that in order to manipulate elements in the DOM using JavaScript,
 the JavaScript code must be run <i>after</i> the relevant element has been
@@ -294,11 +314,15 @@ been waiting to finish before attending to this new piece of JavaScript.</p>
 <p>The alert method displays a visual alert box on screen. The alert
 method parameter is displayed to the user in <b>plain</b> text:</p>
 
-<pre>window.alert(message);</pre>
+<pre>
+window.alert(message);
+</pre>
 
 <p>Because window is the global object, you can call also use the following shorthand:</p>
 
-<pre>alert(message);</pre>
+<pre>
+alert(message);
+</pre>
 
 <p>So what does window.alert() do? Well, let's take the following example:</p>
 
@@ -2620,17 +2644,23 @@ bases in the range.</p>
 hexadecimal (base 16) <i>String representation</i> the <i>toString</i> method
 can be used with <i>radix 16</i>.</p>
 
-<pre>// <i>base 10 Number</i>
+<pre>
+// <i>base 10 Number</i>
 <b>var</b> b10 = 12;
 // <i>base 16 String representation</i>
-<b>var</b> b16 = b10.toString(16); // <i>&quot;c&quot;</i></pre>
+<b>var</b> b16 = b10.toString(16); // <i>&quot;c&quot;</i>
+</pre>
+
 <p>If the number represented is an integer, the inverse operation for
 this can be done with parseInt and the <i>radix 16</i> again.</p>
 <!-- page 44 -->
-<pre>// <i>base 16 String representation</i>
+
+<pre>
+// <i>base 16 String representation</i>
 <b>var</b> b16 = &apos;c&apos;;
 // <i>base 10 Number</i>
-<b>var</b> b10 = parseInt(b16, 16); // <i>12</i></pre>
+<b>var</b> b10 = parseInt(b16, 16); // <i>12</i>
+</pre>
 
 <p>To convert an arbitrary number (i.e. non-integer) from its <i>String
 representation</i> into a <i>Number</i>, the operation must be split into two
@@ -2638,7 +2668,8 @@ parts; the integer part and the fraction part.</p>
 
 <h5>Version ≥ 6</h5>
 
-<pre><b>let</b> b16 = &apos;3.243f3e0370cdc&apos;;
+<pre>
+<b>let</b> b16 = &apos;3.243f3e0370cdc&apos;;
 // <i>Split into integer and fraction parts</i>
 <b>let</b> &lbrack;i16, f16&rbrack; = b16.split(&apos;.&apos;);
 // <i>Calculate base 10 integer part</i>
@@ -2646,7 +2677,8 @@ parts; the integer part and the fraction part.</p>
 // <i>Calculate the base 10 fraction part</i>
 <b>let</b> f10 = parseInt(f16, 16) / Math.pow(16, f16.length); // <i>0.14158999999999988</i>
 // <i>Put the base 10 parts together to find the Number</i>
-<b>let</b> b10 = i10 &plus; f10; // <i>3.14159</i></pre>
+<b>let</b> b10 = i10 &plus; f10; // <i>3.14159</i>
+</pre>
 
 <p><b>Note 1:</b> Be careful as small errors may be in the result due to
 differences in what is possible to be represented in different bases.
@@ -2664,16 +2696,20 @@ indexOf( searchString ) <b>and</b> lastIndexOf( searchString )</a></p>
 <p>indexOf() will return the index of the first occurrence of searchString in
 the string. If searchString is not found, then -1 is returned.</p>
 
-<pre><b>var</b> string = &quot;Hello, World!&quot;;
+<pre>
+<b>var</b> string = &quot;Hello, World!&quot;;
 console.log( string.indexOf(&quot;o&quot;));  // <i>4</i>
-console.log( string.indexOf(&quot;foo&quot;) ); // <i>-1</i></pre>
+console.log( string.indexOf(&quot;foo&quot;) ); // <i>-1</i>
+</pre>
 
 <p>Similarly, lastIndexOf() will return the index of the last occurrence of
 searchstring or -1 if not found.</p>
 
-<pre><b>var</b> string = &quot;Hello, World!&quot;; 
+<pre>
+<b>var</b> string = &quot;Hello, World!&quot;; 
 console.log( string.lastIndexOf(&quot;o&quot;));    // <i>8</i>
-console.log( string.lastIndexOf(&quot;foo&quot;));  // <i>-1</i></pre>
+console.log( string.lastIndexOf(&quot;foo&quot;));  // <i>-1</i>
+</pre>
 
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes" 
  target="_blank" rel="noopener noreferrer">includes( searchString, start )</a></p>
@@ -2681,9 +2717,11 @@ console.log( string.lastIndexOf(&quot;foo&quot;));  // <i>-1</i></pre>
 string, starting from index start (defaults to 0). This is better than
 () if you simply need to test for existence of a substring.</p>
 
-<pre><b>var</b> string = &quot;Hello, World!&quot;;
+<pre>
+<b>var</b> string = &quot;Hello, World!&quot;;
 console.log( string.includes(&quot;Hello&quot;) ); // <i>true</i>
-console.log( string.includes(&quot;foo&quot;));   // <i>false</i></pre>
+console.log( string.includes(&quot;foo&quot;));   // <i>false</i>
+</pre>
 
 <!-- page 45 -->
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace" 
@@ -2696,11 +2734,13 @@ replacement or the returned value of replaceFunction.</p>
 <p>Note that this does not modify the string in place, but returns the
 string with replacements.</p>
 
-<pre><b>var</b> string = &quot;Hello, World!&quot;;
+<pre>
+<b>var</b> string = &quot;Hello, World!&quot;;
 string = string.replace( &quot;Hello&quot;, &quot;Bye&quot; );
 console.log( string ); // <i>&quot;Bye, World!&quot;</i>
 string = string.replace( <i>/W.{3}d/g</i>, &quot;Universe&quot; );
-console.log( string ); // <i>&quot;Bye, Universe!&quot;</i></pre>
+console.log( string ); // <i>&quot;Bye, Universe!&quot;</i>
+</pre>
 
 <p>replaceFunction can be used for conditional replacements for regular
 expression objects (i.e., with use with regexp). The parameters are in
@@ -2735,35 +2775,52 @@ the following order:</p>
   </tbody>
 </table>
 <p>Note that all parameters are optional.</p>
-<pre><b>var</b> string = &quot;heLlo, woRlD!&quot;;
+<pre>
+<b>var</b> string = &quot;heLlo, woRlD!&quot;;
 string = string.replace( <i>/(&lbrack;a-zA-Z&rbrack;)(&lbrack;a-zA-Z&rbrack;+)/g</i>, <b>function</b>(match, g1, g2) {
   <b>return</b> g1.toUpperCase() &plus; g2.toLowerCase();
 });
-console.log( string );  // <i>&quot;Hello, World!&quot;</i></pre>
+console.log( string );  // <i>&quot;Hello, World!&quot;</i>
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch7-15">Section 7.15: Find the index of a substring inside a string</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The .indexOf method returns the index of a substring inside another string (if exists, 
 or -1 if otherwise)</p>
-<pre>&apos;Hellow World&apos;.indexOf(&apos;Wor&apos;);  // <i>7</i></pre>
+
+<pre>
+&apos;Hellow World&apos;.indexOf(&apos;Wor&apos;);  // <i>7</i>
+</pre>
+
 <p>.indexOf also accepts an additional numeric argument that indicates on what index 
 should the function start looking</p>
-<pre>&quot;harr dee harr dee harr&quot; .indexOf(&quot;dee&quot;, 10); // <i>14</i></pre>
+
+<pre>
+&quot;harr dee harr dee harr&quot; .indexOf(&quot;dee&quot;, 10); // <i>14</i>
+</pre>
+
 <p>You should note that .indexOf is case sensitive</p>
-<pre>&apos;Hellow World&apos; .indexOf(&apos;WOR&apos;);  // <i>-1</i></pre>
+
+<pre>
+&apos;Hellow World&apos; .indexOf(&apos;WOR&apos;);  // <i>-1</i>
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch7-16">Section 7.16: String to Upper Case</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <blockquote>
 String.prototype.toUpperCase():
 </blockquote>
-<pre>console.log(&apos;qwerty&apos;.toUpperCase()); // <i>&apos;QWERTY&apos;</i></pre>
+<pre>
+console.log(&apos;qwerty&apos;.toUpperCase()); // <i>&apos;QWERTY&apos;</i>
+</pre>
 <!-- page 46 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch7-17">Section 7.17: String to Lower Case</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>String.prototype.toLowerCase()</p>
-<pre>console.log(&apos;QWERTY&apos;.toLowerCase());  // <i>&apos;qwerty&apos;</i></pre>
+<pre>
+console.log(&apos;QWERTY&apos;.toLowerCase());  // <i>&apos;qwerty&apos;</i>
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch7-18">Section 7.18: Repeat a String</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2772,18 +2829,24 @@ String.prototype.toUpperCase():
 <p>This can be done using the <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.repeat" 
 target="_blank" rel="noreferrer noopener">.repeat()</a> method:</p>
 
-<pre>&quot;abc&quot;.repeat(3);   // <i>Returns &quot;abcabcabc&quot;</i>
+<pre>
+&quot;abc&quot;.repeat(3);   // <i>Returns &quot;abcabcabc&quot;</i>
 &quot;abc&quot;.repeat(0);   // <i>Returns &quot;&quot;</i>
-&quot;abc&quot;.repeat(&minus;1);  // <i>Throws a RangeError</i></pre>
+&quot;abc&quot;.repeat(&minus;1);  // <i>Throws a RangeError</i>
+</pre>
+
 <h5>Version &lt; 6</h5>
 <p>In the general case, this should be done using a correct polyfill for
 the ES6 <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-string.prototype.repeat" 
 target="_blank" rel="noreferrer noopener">
 String.prototype.repeat()</a> method. Otherwise, the idiom <b>new</b> Array(n &plus; 1).join(myString) 
 can repeat n times the string myString:</p>
-<pre><b>var</b> myString = &quot;abc&quot;;
+
+<pre>
+<b>var</b> myString = &quot;abc&quot;;
 <b>var</b> n = 3;
-<b>new</b> Array(n &plus; 1).join(myString);  // <i>Returns &quot;abcabcabc&quot;</i></pre>
+<b>new</b> Array(n &plus; 1).join(myString);  // <i>Returns &quot;abcabcabc&quot;</i>
+</pre>
 <!-- page 47 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch8">Chapter 8: Date</h2>
@@ -2864,7 +2927,8 @@ Date.prototype.toISOString() was used to show the date and time in UTC
 (the Z in the formatted string denotes UTC).</p>
 <!-- page 48 -->
 
-<pre>// <i>Creates a Date object with the current date and time from the</i>
+<pre>
+// <i>Creates a Date object with the current date and time from the</i>
 // <i>user&apos;s browser</i>
 <b>var</b> now = <b>new</b> Date();
 now.toString() === &apos;Mon Apr 11 2016 16:10:41 GMT-0500 (Central Daylight Time)&apos; 
@@ -2923,7 +2987,8 @@ special1.toString() === &apos;Mon Jan 01 1912 00:00:00 GMT-0600 (Central Standar
 // <i>setFullYear() method:</i>
 special1.setFullYear(12);
 special1.toString() === &apos;Sun Jan 01    12 00:00:00 GMT-0600 (Central Standard Time)&grave;
-// true</pre>
+// true
+</pre>
 <!-- page 49 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-2">Section 8.2: Convert to a string format</h3>
@@ -2939,8 +3004,10 @@ Returns: &quot;Fri Apr 15 2016 07:48:48 GMT-0400 (Eastern Daylight Time)&quot;
 
 <h4>Convert to Time String</h4>
 
-<pre><b>var</b> date1 = <b>new</b> Date();
-date1.toTimeString();</pre>
+<pre>
+<b>var</b> date1 = <b>new</b> Date();
+date1.toTimeString();
+</pre>
 
 <blockquote>
 Returns: &quot;07:48:48 GMT-0400 (Eastern Daylight Time)&quot;
@@ -2948,8 +3015,10 @@ Returns: &quot;07:48:48 GMT-0400 (Eastern Daylight Time)&quot;
 
 <h4>Convert to Date String</h4>
 
-<pre><b>var</b> date1 = <b>new</b> Date();
-date1.toDateString();</pre>
+<pre>
+<b>var</b> date1 = <b>new</b> Date();
+date1.toDateString();
+</pre>
 
 <blockquote>
 Returns: &quot;Thu Apr 14 2016&quot;
@@ -2957,8 +3026,10 @@ Returns: &quot;Thu Apr 14 2016&quot;
 
 <h4>Convert to UTC String</h4>
 
-<pre><b>var</b> date1 = <b>new</b> Date ();
-date1.toUTCString ();</pre>
+<pre>
+<b>var</b> date1 = <b>new</b> Date ();
+date1.toUTCString ();
+</pre>
 
 <blockquote>
 Returns: &quot;Fri, 15 Apr 2016 11:48:48 GMT&quot;
@@ -2966,8 +3037,10 @@ Returns: &quot;Fri, 15 Apr 2016 11:48:48 GMT&quot;
 
 <h4>Convert to ISO String</h4>
 
-<pre><b>var</b> date1 = <b>new</b> Date ();
-date1.toISOString ();</pre>
+<pre>
+<b>var</b> date1 = <b>new</b> Date ();
+date1.toISOString ();
+</pre>
 
 <blockquote>
 Returns: &quot;2016-04-14T23:49:08.596Z&quot;
@@ -2975,8 +3048,10 @@ Returns: &quot;2016-04-14T23:49:08.596Z&quot;
 
 <h4>Convert to GMT String</h4>
 
-<pre><b>var</b> date1 = <b>new</b> Date ( ) ;
-date1.toGMTString ( ) ;</pre>
+<pre>
+<b>var</b> date1 = <b>new</b> Date ( ) ;
+date1.toGMTString ( ) ;
+</pre>
 
 <blockquote>
 <p>Returns: &quot;Thu, 14 Apr 2016 23:49:08 GMT&quot;
@@ -2988,8 +3063,10 @@ instead.</p>
 
 <h4>Convert to Locale Date String</h4>
 
-<pre><b>var</b> date1 = <b>new</b> Date ( ) ;
-date1.toLocaleDateString ( ) ;</pre>
+<pre>
+<b>var</b> date1 = <b>new</b> Date ( ) ;
+date1.toLocaleDateString ( ) ;
+</pre>
 
 <blockquote>
 <p>Returns: &quot;4/14/2016&quot;</p>
@@ -2998,23 +3075,31 @@ date1.toLocaleDateString ( ) ;</pre>
 <p>This function returns a locale sensitive date string based upon the
 user&apos;s location by default.</p>
 
-<pre>date1.toLocaleDateString(&lbrack;locales&lbrack;, options &rbrack;&rbrack;)</pre>
+<pre>
+date1.toLocaleDateString(&lbrack;locales&lbrack;, options &rbrack;&rbrack;)
+</pre>
 
 <p>can be used to provide specific locales but is browser implementation
 specific. For example,</p>
 
-<pre>date1.toLocaleDateString(&lbrack; &quot;zh&quot; , &quot;en-US&quot; &rbrack; );</pre>
+<pre>
+date1.toLocaleDateString(&lbrack; &quot;zh&quot; , &quot;en-US&quot; &rbrack; );
+</pre>
 
 <p>would attempt to print the string in the Chinese locale using United
 States English as a fallback. The options parameter can be used to
 provide specific formatting. For example:</p>
 
-<pre><b>var</b> options = { weekday: &apos;long&apos;, year: &apos;numeric&apos;, month: &apos;long&apos;, day: &apos;numeric&apos; }; 
-date1.toLocaleDateString(&lbrack;&rbrack;, options);</pre>
+<pre>
+<b>var</b> options = { weekday: &apos;long&apos;, year: &apos;numeric&apos;, month: &apos;long&apos;, day: &apos;numeric&apos; }; 
+date1.toLocaleDateString(&lbrack;&rbrack;, options);
+</pre>
 
 <p>would result in</p>
 
-<pre>&quot;Thursday, April 14, 2016&quot;.</pre>
+<pre>
+&quot;Thursday, April 14, 2016&quot;.
+</pre>
 
 <p>See <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString#Example:_Checking_for_support_for_locales_and_options_arguments" 
 target="_blank" rel="noreferrer noopener">the MDN</a> for more details.</p>
@@ -3038,7 +3123,8 @@ needed.</p>
 <h4>Naive approach with WRONG results</h4>
 
 <!-- page 51 -->
-<pre><b>function</b> formatDate(dayOfWeek, day, month, year) {
+<pre>
+<b>function</b> formatDate(dayOfWeek, day, month, year) {
   <b>var</b> daysOfWeek = &lbrack;&quot;Sun&quot;,&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;,&quot;Sat&quot;&rbrack;;
   <b>var</b> months = &lbrack;&quot;Jan&quot;, &quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;,quot;Sep&quot;,&quot;Oct&quot;,&quot;Nov&quot;,&quot;Dec&quot;&rbrack;;
   <b>return</b> daysOfWeek &lbrack;dayOfWeek &rbrack; &plus; &quot; &quot; &plus; months&lbrack;month&rbrack; &plus; &quot; &quot; &plus; day &plus; &quot; &quot; &plus; year;
@@ -3048,18 +3134,21 @@ needed.</p>
 console.log(&quot;Foo was born on: &quot; &plus; formatDate(birthday.getDay(), birthday.getDate(),
   birthday.getMonth(), birthday.getFullYear()));
 
-sendToBar(birthday.getTime());</pre>
+sendToBar(birthday.getTime());
+</pre>
 
 <blockquote>
 Sample output:<br/><br/>
 Foo was born on: Sat Jan 1 2000
 </blockquote>
 
-<pre>// <i>Meanwhile somewhere else&hellip;</i>
+<pre>
+// <i>Meanwhile somewhere else&hellip;</i>
 // <i>Bar lives in a country with timezone GMT - 1</i>
 <b>var</b> birthday = <b>new</b> Date(receiveFromFoo());
 console.log(&quot;Foo was born on: &quot; &plus; formatDate(birthday.getDay(), birthday.getDate(),
-  birthday.getMonth(), birthday.getFullYear()));</pre>
+  birthday.getMonth(), birthday.getFullYear()));
+</pre>
 
 <blockquote>
 Sample output:<br/><br/>
@@ -3070,7 +3159,8 @@ Foo was born on: Fri Dec 31 1999
 
 <h4>Correct approach</h4>
 
-<pre><b>function</b> formatDate(dayOfWeek, day, month, year) {
+<pre>
+<b>function</b> formatDate(dayOfWeek, day, month, year) {
   <b>var</b> daysOfWeek = &lbrack;&quot;Sun&quot;,&quot;Mon&quot;,&quot;Tue&quot;,&quot;Wed&quot;,&quot;Thu&quot;,&quot;Fri&quot;,&quot;Sat&quot;&rbrack;;
   <b>var</b> months = &lbrack;&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;,&quot;Sep&quot;,&quot;Oct&quot;,&quot;Nov&quot;,&quot;Dec&quot;&rbrack;;
   <b>return</b> daysOfWeek&lbrack;dayOfWeek&rbrack; &plus; &quot; &quot; &plus; months&lbrack;month&rbrack; &plus; &quot; &quot; &plus; day &plus; &quot; &quot; &plus; year;
@@ -3079,18 +3169,21 @@ Foo was born on: Fri Dec 31 1999
 <b>var</b> birthday = <b>new</b> Date(Date.UTC(2000,0,1));
 console.log(&quot;Foo was born on: &quot; &plus; formatDate(birthday.getUTCDay(), birthday.getUTCDate(),
   birthday.getUTCMonth(), birthday.getUTCFullYear()));
-sendToBar (birthday.getTime());</pre>
+sendToBar (birthday.getTime());
+</pre>
 
 <blockquote>
 Sample output:<br/><br/>
 Foo was born on: Sat Jan 1 2000
 </blockquote>
 
-<pre>// <i>Meanwhile somewhere else&hellip;</i>
+<pre>
+// <i>Meanwhile somewhere else&hellip;</i>
 // <i>Bar lives in a country with timezone GMT - 1</i>
 <b>var</b> birthday = <b>new</b> Date(receiveFromFoo());
 console.log(&quot;Foo was born on: &quot;&plus;formatDate(birthday.getUTCDay(), birthday.getUTCDate(),
-  birthday.getUTCMonth(), birthday.getUTCFullYear()));</pre>
+  birthday.getUTCMonth(), birthday.getUTCFullYear()));
+  </pre>
 
 <!-- page 52 -->
 <blockquote>
@@ -3105,15 +3198,19 @@ can be used. It uses the same arguments as the longest Date
 constructor. This method will return a number representing the time
 that has passed since January 1, 1970, 00:00:00 UTC.</p>
 
-<pre>console.log(Date.UTC(2000,0,31,12));</pre>
+<pre>
+console.log(Date.UTC(2000,0,31,12));
+</pre>
 
 <blockquote>
 Sample output:<br/><br/>
 949320000000
 </blockquote>
 
-<pre><b>var</b> utcDate = <b>new</b> Date(Date.UTC(2000,0,31,12));
-console.log(utcDate);</pre>
+<pre>
+<b>var</b> utcDate = <b>new</b> Date(Date.UTC(2000,0,31,12));
+console.log(utcDate);
+</pre>
 
 <blockquote>
 Sample output:<br/><br/>
@@ -3123,9 +3220,11 @@ Mon Jan 31 2000 13:00:00 GMT+0100 (West-Europa (standaardtijd))
 <p>Unsurprisingly, the difference between UTC time and local time is, in
 fact, the timezone offset converted to milliseconds.</p>
 
-<pre><b>var</b> utcDate = <b>new</b> Date ( Date.UTC(2000,0,31,12));
+<pre>
+<b>var</b> utcDate = <b>new</b> Date ( Date.UTC(2000,0,31,12));
 <b>var</b> localDate = <b>new</b> Date(2000,0,31,12);
-console.log(localDate&minus; utcDate === utcDate.getTimezoneOffset()&ast;60&ast;1000);</pre>
+console.log(localDate&minus; utcDate === utcDate.getTimezoneOffset()&ast;60&ast;1000);
+</pre>
 
 <blockquote>
 Sample output: <b>true</b>
@@ -3136,10 +3235,12 @@ Sample output: <b>true</b>
 <p>All Date object modifiers, such as ) have an equivalent takes an argument in UTC time 
 rather than in local time.</p>
 
-<pre><b>var</b> date = <b>new</b> Date();
+<pre>
+<b>var</b> date = <b>new</b> Date();
 date.setUTCFullYear (2000, 0, 31);
 date.setUTCHours ( 12 , 0 , 0 , 0);
-console.log ( date );</pre>
+console.log ( date );
+</pre>
 
 <blockquote>
 Sample output:<br/><br/>
@@ -3157,28 +3258,34 @@ amount of time that has passed since January 1, 1970, 00:00:00 UTC.
 This single number represents a single point in time, and can be
 converted to local time whenever necessary.</p>
 
-<pre><b>var</b> date = <b>new</b> Date (Date.UTC(2000,0,31,12));
+<pre>
+<b>var</b> date = <b>new</b> Date (Date.UTC(2000,0,31,12));
 <b>var</b> timestamp = date.getTime();
 // <i>Alternatively</i>
 <b>var</b> timestamp2 = Date.UTC( 2000, 0, 31, 12);
-console.log ( timestamp === timestamp2 );</pre>
+console.log ( timestamp === timestamp2 );
+</pre>
 
 <blockquote>
 Sample output: <b>true</b>
 </blockquote>
 
-<pre>// <i>And when constructing a date from it elsewhere&hellip;</i>
+<pre>
+// <i>And when constructing a date from it elsewhere&hellip;</i>
 <b>var</b> otherDate = <b>new</b> Date(timestamp);
 // <i>Represented as a universal date</i>
 console.log ( otherDate. toUTCString ( ) );
 // <i>Represented as a local date</i>
-console.log ( otherDate );</pre>
+console.log ( otherDate );
+</pre>
 
 <blockquote>
 Sample output:<br/>
-<pre>Mon, 31 Jan 2000 12:00:00 GMT
+<pre>
+Mon, 31 Jan 2000 12:00:00 GMT
 Mon Jan 31 2000 13:00:00 GMT+0100 (West-Europa (standaardtijd))
-/code&gt;</pre>
+/code&gt;
+</pre>
 </blockquote>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-4">Section 8.4: Formatting a JavaScript date</h3>
@@ -3189,7 +3296,11 @@ Mon Jan 31 2000 13:00:00 GMT+0100 (West-Europa (standaardtijd))
 target="_blank" rel="noreferrer noopener">Date.prototype.toLocalDateString()</a> 
 allows you to define the formatting of a Date in a convenient manner.</p>
 <p>It requires the following format:</p>
-<pre>dateObj.toLocaleDateString(&lbrack; locales &lbrack;, options &rbrack; &rbrack;)</pre>
+
+<pre>
+dateObj.toLocaleDateString(&lbrack; locales &lbrack;, options &rbrack; &rbrack;)
+</pre>
+
 <p>The locales parameter should be a string with a BCP 47 language tag, or an array of such strings.</p>
 <!-- page 54 -->
 <p>The options parameter should be an object with some or all of the following properties:</p>
@@ -3215,13 +3326,19 @@ allows you to define the formatting of a Date in a convenient manner.</p>
 
 <h4>How to use</h4>
 
-<pre><b>var</b> today = <b>new</b> Date().toLocaleDateString(&apos;en-GB&apos;,{
+<pre>
+<b>var</b> today = <b>new</b> Date().toLocaleDateString(&apos;en-GB&apos;,{
   day   : &apos;numeric&apos;,
   month : &apos;short&apos;,
   year  : &apos;numeric&apos;
-});</pre>
+});
+</pre>
+
 <p>Output if executed on January 24 ʰ, 2036 :</p>
-<pre>&apos;24 Jan 2036&apos;</pre>
+
+<pre>
+&apos;24 Jan 2036&apos;
+</pre>
 
 <h4>Going custom</h4>
 
@@ -3243,16 +3360,28 @@ like this:</p>
 <!-- page 55 -->
 <p>If you included that code and executed new DateObject() on January 20 ʰ, 2019, it
 would produce an object with the following properties:</p>
-<pre>day: 20
+
+<pre>
+day: 20
 dayPadded: &quot;20&quot;
 month: 1
 monthPadded: &quot;01&quot;
 monthName: &quot;January&quot;
-year: 2019</pre>
+year: 2019
+</pre>
+
 <p>To get a formatted string, you could do something like this:</p>
-<pre><b>new</b> DateObject().<b>get</b>(&lbrack;&apos;dayPadded&apos;, &apos;monthPadded&apos;, &apos;year&apos;&rbrack;);</pre>
+
+<pre>
+<b>new</b> DateObject().<b>get</b>(&lbrack;&apos;dayPadded&apos;, &apos;monthPadded&apos;, &apos;year&apos;&rbrack;);
+</pre>
+
 <p>That would produce the following output:</p>
-<pre>20-01-2016</pre>
+
+<pre>
+20-01-2016
+</pre>
+
 <p>(&ast;) <a href="http://programmers.stackexchange.com/questions/56490/what-does-nightly-builds-mean" 
 target="_blank" rel="noreferrer noopener">
 <b>According to the MDN</b></a>, &quot;modern browsers&quot; means Chrome 24+, Firefox 29+, 
@@ -3266,10 +3395,12 @@ target="_blank" rel="noreferrer noopener"><b>nightly build</b></a>.</p>
 since 1 January 1970 00:00:00 UTC. To get the number of milliseconds
 that have elapsed since that time using an instance of a Date object,
 use its getTime method.</p>
-<pre>// <i>get milliseconds using static method now of Date</i>
+<pre>
+// <i>Get milliseconds using static method now of Date</i>
 console.log(Date.now());
-// <i>get milliseconds using method getTime of Date instance</i>
-console.log((<b>new</b> Date ( ) ) .getTime ());</pre>
+// <i>Get milliseconds using method getTime of Date instance</i>
+console.log((<b>new</b> Date ( ) ) .getTime ());
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-6">Section 8.6: Get the current time and date</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
