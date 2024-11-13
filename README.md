@@ -3651,15 +3651,15 @@ and as such, it isn't equal to the result of any other nonsensical computations.
 <pre>
 (1 &ast; &quot;two&quot;) === <b>NaN</b>   // <i>false</i>
 
-<b>NaN</b> === 0;                    // <i>false</i>
-<b>NaN</b> === <b>NaN</b>;           // <i>false</i>
-Number.<b>NaN</b> === <b>NaN</b>;  // <i>false</i>
+<b>NaN</b> === 0;             // <i>false</i>
+<b>NaN</b> === <b>NaN</b>;          // <i>false</i>
+Number.<b>NaN</b> === <b>NaN</b>;   // <i>false</i>
 
 <b>NaN</b> &lt; 0;              // <i>false</i>
 <b>NaN</b> &gt; 0;              // <i>false</i>
 <b>NaN</b> &gt; 0;              // <i>false</i>
-<b>NaN</b> &gt;= <b>NaN</b>;       // <i>false</i>
-<b>NaN</b> &gt;= &apos;two&apos;;    // <i>false</i>
+<b>NaN</b> &gt;= <b>NaN</b>;           // <i>false</i>
+<b>NaN</b> &gt;= &apos;two&apos;;      // <i>false</i>
 </pre>
 
 <p>Non-equal comparisons will always return <b>true</b>:</p>
@@ -3681,11 +3681,11 @@ Number.isNaN(0 / 0);      // <i>true</i>
 Number.isNaN(&apos;str&apos; &minus; 12); // <i>true</i>
 
 Number.isNaN(24);         // <i>false</i>
-Number.isNaN(&apos;24&apos;);      // <i>false</i>
-Number.isNaN(1 / 0);     // <i>false</i>
-Number.isNaN(<b>Infinity</b>);  // <i>false</i>
+Number.isNaN(&apos;24&apos;);       // <i>false</i>
+Number.isNaN(1 / 0);      // <i>false</i>
+Number.isNaN(<b>Infinity</b>);   // <i>false</i>
 
-Number.isNaN(&apos;str&apos;);    // <i>false</i>
+Number.isNaN(&apos;str&apos;);     // <i>false</i>
 Number.isNaN(<b>undefined</b>); // <i>false</i>
 Number.isNaN({});        // <i>false</i>
 </pre>
