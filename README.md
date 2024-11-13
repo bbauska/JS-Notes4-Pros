@@ -19718,6 +19718,7 @@ special syntax but rather just a sequence of two negations. It is used
 to convert the value of any type to its appropriate <b>true</b> or
 <b>false</b> Boolean value depending on whether it is <i>truthy</i> or
 <i>falsy</i>.</p>
+
 <pre>
 !!1       // <i>true</i>
 !!0       // <i>false</i>
@@ -19725,17 +19726,20 @@ to convert the value of any type to its appropriate <b>true</b> or
 !!{}      // <i>true</i>
 !!&lbrack;&rbrack;  // <i>true</i>
 </pre>
-<P>The first negation converts any value to <b>false</b> if it is <i>truthy</i>
+
+<p>The first negation converts any value to <b>false</b> if it is <i>truthy</i>
 and to <b>true</b> if is <i>falsy</i>. The second negation then operates on a
 normal Boolean value. Together they convert any <i>truthy</i> value to
 <b>true</b> and any <i>falsy</i> value to <b>false</b>.</p>
 <p>However, many professionals consider the practice of using such syntax
 unacceptable and recommend simpler to read alternatives, even if
 they&apos;re longer to write:</p>
+
 <pre>
 x !== 0 // <i>instead of !!x in case x is a number</i>
 x != <b>null</b> // <i>instead of !!x in case x is an object, a string, or an undefined</i>
 </pre>
+
 <p>Usage of x is considered poor practice due to the following reasons:</p>
 <ol type="1">
   <li>Stylistically it may look like a distinct special syntax whereas in
@@ -19755,6 +19759,7 @@ x != <b>null</b> // <i>instead of !!x in case x is an object, a string, or an un
 appropriate types upon use. It&apos;s usually advised to do conversions
 explicitly (see other examples), but it&apos;s still worth knowing what
 conversions take place implicitly.</p>
+
 <pre>
 &quot;1&quot; + 5 === &quot;15&quot; // <i>5 got converted to string.</i>
 1 + &quot;5&quot; === &quot;15&quot; // <i>1 got converted to string.</i>
@@ -19764,7 +19769,9 @@ alert({}) // <i>alerts &quot;&lbrack;object Object&rbrack;&quot;, {} got convert
 <b>if</b> (&quot;hello&quot;) {} // <i>runs, &quot;hello&quot; got converted to boolean.</i>
 <b>new</b> Array(3) === &quot;,,&quot;; // <i>Return true. The array is converted to string - Array.toString();</i>
 </pre>
+
 <p>Some of the trickier parts:</p>
+
 <pre>
 !&quot;0&quot; === <b>false</b> // <i>&quot;0&quot; got converted to true, then reversed.</i>
 !&quot;false&quot; === <b>false</b> // <i>&quot;false&quot; converted to true, then reversed.</i>
@@ -19774,6 +19781,7 @@ alert({}) // <i>alerts &quot;&lbrack;object Object&rbrack;&quot;, {} got convert
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Boolean( ... ) will convert any data type into either <b>true</b> or <b>false</b>.</p>
 <!-- page 327 -->
+
 <pre>
 Boolean(&quot;true&quot;) === <b>true</b>
 Boolean(&quot;false&quot;) === <b>true</b>
@@ -19786,9 +19794,11 @@ Boolean(&quot;0&quot;) === <b>true</b>
 Boolean({}) === <b>true</b>
 Boolean(&lbrack;&rbrack;) === <b>true</b>
 </pre>
+
 <p>Empty strings and the number 0 will be converted to false, and all
 others will be converted to true.</p>
 <p>A shorter, but less clear, form:</p>
+
 <pre>
 !!&quot;true&quot; === <b>true</b>
 !!&quot;false&quot; === <b>true</b>
@@ -19801,6 +19811,7 @@ others will be converted to true.</p>
 !!{} === <b>true</b>
 !!&lbrack;&rbrack; === <b>true</b>
 </pre>
+
 <p>This shorter form takes advantage of implicit type conversion using
 the logical NOT operator twice, as described in
 http://stackoverflow.com/documentation/javascript/208/boolean-logic/3047/double-negation-x</p>
@@ -19824,16 +19835,21 @@ ECMAScript specification</a></p>
 <pre>
 Number(&apos;0&apos;) === 0
 </pre>
+
 <p>Number(&apos;0&apos;) will convert the string (&apos;0&apos;) into a number (0)</p>
 <p>A shorter, but less clear, form:</p>
+
 <pre>
 &plus;&apos;0&apos; === 0
 </pre>
+
 <p>The unary + operator does nothing to numbers, but converts anything
 else to a number. Interestingly, +(-12 ) === &minus;12.</p>
+
 <pre>
 parseInt(&apos;0&apos;, 10) === 0
 </pre>
+
 <p>parseInt(&apos;0&apos;, 10) will convert the string (&apos;0&apos;) into a 
 number (0), don&apos;t forget the second argument, which is radix. If not given, 
 parseInt could convert string to wrong number.</p>
@@ -19844,8 +19860,10 @@ parseInt could convert string to wrong number.</p>
 <pre>
 String(0) === &apos;0&apos;
 </pre>
+
 <p>String&lpar;0&rpar; will convert the number(0) into a string (&apos;0&apos;).</p>
 <p>A shorter, but less clear, form:</p>
+
 <pre>
 &apos;&apos; &plus; 0 === &apos;0&apos;
 </pre>
@@ -20005,15 +20023,20 @@ String(0) === &apos;0&apos;
 <p>Array.join(separator) can be used to output an array as a string, with a configurable
 separator.</p>
 <p>Default (separator = &quot;,&quot;):</p>
+
 <pre>
 &lbrack;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;&rbrack;.join() === &quot;a,b,c&quot;
 </pre>
+
 <!-- page 329 -->
 <p>With a string separator:</p>
+
 <pre>
 &lbrack;1, 2, 3, 4&rbrack;.join(&quot; + &quot; ) === &quot;1 + 2 + 3 + 4&quot;
 </pre>
+
 <p>With a blank separator:</p>
+
 <pre>
 &lbrack;&quot;B&quot;, &quot;o&quot;, &quot;b&quot;&rbrack;.join(&quot;&quot;) === &quot;Bob&quot;
 </pre>
@@ -20024,6 +20047,7 @@ separator.</p>
 function to accomplish something that you can do it with join(); But
 if you need to make something to the strings while you are converting
 the Array to String, this can be useful.</p>
+
 <pre>
 <b>var</b> arr = &lbrack;&apos;a&apos;, &apos;á&apos;, &apos;b&apos;, &apos;c&apos;&rbrack;
 <b>function</b> upper_lower (a, b, i) {
@@ -20039,8 +20063,10 @@ arr = arr.reduce(upper_lower);  // <i>&quot;a, Á,b,C&quot;</i>
 <pre>
 Boolean(0) === <b>false</b>
 </pre>
+
 <p>Boolean&lpar;0&rpar; will convert the number 0 into a boolean <b>false</b>.</p>
 <p>A shorter, but less clear, form:</p>
+
 <pre>
 !!0 === <b>false</b>
 </pre>
@@ -20048,15 +20074,20 @@ Boolean(0) === <b>false</b>
 <h3 id="ch59-10">Section 59.10: Converting a string to a boolean</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To convert a string to boolean use</p>
+
 <pre>
 Boolean(myString)
 </pre>
+
 <p>or the shorter but less clear form</p>
+
 <pre>
 !!myString
 </pre>
+
 <p>All strings except the empty string (of length zero) are evaluated to
 <b>true</b> as booleans.</p>
+
 <pre>
 Boolean(&apos;&apos;) === <b>false</b>  // <i>is true</i>
 Boolean(&quot;&quot;) === <b>false</b>  // <i>is true</i>
@@ -20077,19 +20108,25 @@ done to convert it.</p>
 methods.</p>
 <p>The floor function returns the first integer less than or equal to the
 float.</p>
+
 <pre>
 Math.floor(5.7);  // <i>5</i>
 </pre>
+
 <p>The ceil function returns the first integer greater than or equal to
 the float.</p>
+
 <pre>
 Math.ceil(5.3);  // <i>6</i>
 </pre>
+
 <p>The round function rounds the float.</p>
+
 <pre>
 Math.round(3.2);  // <i>3</i>
 Math.round(3.6);  // <i>4</i>
 </pre>
+
 <h5>Version ≥ 6</h5>
 <p>Truncation (trunc) removes the decimals from the float.</p>
 <pre>
@@ -20829,8 +20866,10 @@ run the app offline. Below example uses the cache api to do the same.</p>
 <h3 id="ch63-7">Section 63.7: Dedicated Workers and Shared Workers</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Dedicated Workers</h4>
+
 <p>A dedicated web worker is only accessible by the script that called it.</p>
 <p>Main application:</p>
+
 <pre>
 <b>var</b> worker = <b>new</b> Worker(&apos;worker.js&apos;);
 worker.addEventListener(&apos;message&apos;, <b>function</b>(msg) {
@@ -20838,14 +20877,18 @@ worker.addEventListener(&apos;message&apos;, <b>function</b>(msg) {
 });
 worker.postMessage(&lbrack;2,3&rbrack;);
 </pre>
+
 <p>worker.js:</p>
+
 <pre>
 self.addEventListener(&apos;message&apos;, <b>function</b>(msg) {
   console.log(&apos;Worker received arguments:&apos;, msg.data);
   self.postMessage(msg.data&lbrack;0&rbrack; &plus; msg.data&lbrack;1&rbrack;);
 });
 </pre>
+
 <h4>Shared Workers</h4>
+
 <p>A shared worker is accessible by multiple scripts  even if they are
 being accessed by different windows, iframes or even workers.</p>
 <p>Creating a shared worker is very similar to how to create a dedicated
@@ -20856,12 +20899,15 @@ scripts can use it to communicate with the shared worker. (Note that
 dedicated workers do this implicitly)</p>
 <!-- page 344 -->
 <p>Main application</p>
+
 <pre>
 <b>var</b> myWorker = <b>new</b> SharedWorker(&apos;worker.js&apos;);
 myWorker.port.start();  // <i>open the port connection</i>
 myWorker.port.postMessage(&lbrack;2,3&rbrack;);
 </pre>
+
 <p>worker.js</p>
+
 <pre>
 self.port.start();  // <i>open the port connection to enable two&minus;way communication</i>
 self.onconnect = <b>function</b>(e) {
@@ -20872,6 +20918,7 @@ self.onconnect = <b>function</b>(e) {
   }
 }
 </pre>
+
 <p>Note that setting up this message handler in the worker thread also
 implicitly opens the port connection back to the parent thread, so the
 call to port.start() is not actually needed, as noted above.</p>
@@ -20904,6 +20951,7 @@ call to port.start() is not actually needed, as noted above.</p>
     target="_blank" rel="noopener noreferrer">jsFiddle here</a></li>
   <li><b>Copy + Pasteable code below</b>:</li>
 </ul>
+
 <pre>
 <b>&lt;html&gt;</b>
   <b>&lt;body&gt;</b>
@@ -20962,6 +21010,7 @@ requestAnimationFrame might have a prefix on some platforms and are named
 differently, such as webkitRequestAnimationFrame. Fortunately, there&apos;s a 
 really easy way to group all the known differences that could exist down to 1 
 function:</p>
+
 <pre>
 window.requestAnimationFrame = (<b>function</b>() {
   <b>return</b> window.requestAnimationFrame &vert;&vert;
@@ -20972,6 +21021,7 @@ window.requestAnimationFrame = (<b>function</b>() {
     };
 })();
 </pre>
+
 <p>Note that the last option (which fills in when no existing support was
 found) will not return an id to be used in cancelAnimationFrame. There
 is, however an <a href="https://gist.github.com/paulirish/1579671" 
@@ -20984,6 +21034,7 @@ efficient polyfill</a> that was written which fixes this.</p>
 from when it was last called. This is the parameter you use for
 cancelAnimationFrame. The following example starts some hypothetical
 animation then pauses it after one second.</p>
+
 <pre>
 // <i>stores the id returned from each call to requestAnimationFrame</i>
 <b>var</b> requestId;
@@ -21029,6 +21080,7 @@ moment.js</a>, so users do not need to use <b>new</b>.</p>
 <p>The following is the simplest form of factory function; taking
 arguments and using them to craft a new object with the object
 literal:</p>
+
 <pre>
 <b>function</b> cowFactory(name) {
   <b>return</b> {
@@ -21041,10 +21093,12 @@ literal:</p>
 <b>var</b> daisy = cowFactory(&apos;Daisy&apos;);  // <i>create a cow named Daisy</i>
 daisy.talk();  // <i>&quot;Moo, my name is Daisy&quot;</i>
 </pre>
+
 <p>It is easy to define private properties and methods in a factory, by
 including them outside of the returned object.<br/>
 This keeps your implementation details encapsulated, so you can only
 expose the public interface to your object.</p>
+
 <pre>
 <b>function</b> cowFactory(name) {
   <b>function</b> formalName() {
@@ -21060,6 +21114,7 @@ expose the public interface to your object.</p>
 daisy.talk();  // <i>&quot;Moo, my name is Daisy the cow&quot;</i>
 daisy.formalName();  // <i>ERROR: daisy.formalName is not a function</i>
 </pre>
+
 <p>The last line will give an error because the function formalName is
 closed inside the cowFactory function. This is a closure.</p>
 <p>Factories are also a great way of applying functional programming
@@ -21074,6 +21129,7 @@ target="_blank" rel="noopener noreferrer">
 programming principle, used to assign behaviors to objects, as opposed to inheriting 
 many often unneeded behaviors.</p>
 <h4>Behaviour factories</h4>
+
 <pre>
 <b>var</b> speaker = <b>function</b>(state) {
   <b>var</b> noise = state.noise &vert;&vert; &apos;grunt&apos;;
@@ -21094,8 +21150,11 @@ many often unneeded behaviors.</p>
   };
 };
 </pre>
+
 <h4>Object factories</h4>
+
 <h5>Version ≥ 6</h5>
+
 <pre>
 <b>var</b> person = <b>function</b> (name, age) {
   <b>var</b> state = {
@@ -21120,8 +21179,11 @@ many often unneeded behaviors.</p>
   );
 };
 </pre>
+
 <h4>Usage</h4>
+
 <!-- page 350 -->
+
 <pre>
 <b>var</b> fred = person(&apos;Fred&apos;, 42);
 fred.speak();       // <i>outputs: Fred says Hello</i>
@@ -21135,6 +21197,7 @@ snowy.speak(); // <i>ERROR: snowy.speak is not a function</i>
 <h3 id="ch65-3">Section 65.3: Module and Revealing Module Patterns</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Module Pattern</h4>
+
 <p>The Module pattern is a 
 <a href="https://en.wikipedia.org/wiki/Module_pattern#Module_as_a_design_pattern" 
 target="_blank" rel="noopener noreferrer">
