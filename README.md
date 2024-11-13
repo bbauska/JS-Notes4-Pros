@@ -115,7 +115,7 @@ explicit <i>return value</i>.</p>
 <p>console.log() can be used to log variables of any kind; not only strings. Just pass
 in the variable that you want to be displayed in the console, for example:</p>
 
-<pre><b>var</b>foo = &quot;bar&quot;;
+<pre><b>var</b> foo = &quot;bar&quot;;
 console.log(foo);</pre>
 
 <p>This will log the following to the console:</p>
@@ -126,7 +126,7 @@ console.log(foo);</pre>
   <img src="./images/image003.jpg"
   title="foobar console example."
   alt="Example foobar console."
-  style="border: 2px solid #000000; width:5.95in;" />
+  style="border: 2px solid #000000; width:60%;" />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- {width="5.954861111111111in" height="1.4777777777777779in"}-->
@@ -147,7 +147,7 @@ console.log("thisVar:", thisVar, "and thatVar:", thatVar);</pre>
   <img src="./images/image004.jpg"
   title="thisVar and thatVar"
   alt="thisVar and thatVar."
-  style="border: 2px solid #000000; width:7.47in;" />
+  style="border: 2px solid #000000; width:70%;" />
 </p>
 <!-- {width="7.477777777777778in" height="0.9729166666666667in"} -->
 
