@@ -126,7 +126,7 @@ console.log(foo);</pre>
   <img src="./images/image003.jpg"
   title="foobar console example."
   alt="Example foobar console."
-  style="border: 2px solid #000000; width:60%;" />
+  style="border: 2px solid #000000; width:40%;" />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- {width="5.954861111111111in" height="1.4777777777777779in"}-->
