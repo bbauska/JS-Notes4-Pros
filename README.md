@@ -15487,7 +15487,9 @@ string representations:</p>
 &lbrack;1&rbrack;.toString() === &apos;1&apos;;
 &lbrack;1, 2&rbrack;.toString() === &apos;1,2&apos;;
 </pre>
+
 <p>The operator then attempts to convert those strings to numbers:</p>
+
 <pre>
 &plus;&lbrack;&rbrack;     // <i>0 ( === +&apos;&apos; )</i>
 &plus;&lbrack;1&rbrack;    // <i>1 ( === +&apos;1&apos; )</i>
@@ -15499,14 +15501,17 @@ string representations:</p>
 <p>The <b>void</b> operator evaluates the given expression and then returns <b>undefined</b>.</p>
 
 <h4>Syntax:</h4>
+
 <pre>
 <b>void</b> expression
 </pre>
+
 <h4>Returns:</h4>
 <ul>
   <li><b>undefined</b></li>
 </ul>
 <br/>
+
 <h4>Description</h4>
 <p>The <b>void</b> operator is often used to obtain the <b>undefined</b>
 primitive value, by means of writing void 0 or void(0). Note that <b>void</b> is an
@@ -15525,14 +15530,17 @@ writing <b>undefined</b>. In addition, it&apos;s probably safer as some
 other code could&apos;ve tampered with <b>window.undefined</b>.</p>
 <p><b>Examples:</b></p>
 <p>Returning <b>undefined</b>:</p>
+
 <pre>
 <b>function</b> foo() {
   <b>return</b> <b>void</b> 0;
 }
 console.log(foo());  // <i>undefined</i>
 </pre>
+
 <!-- page 255 -->
 <p>Changing the value of <b>undefined</b> inside a certain scope:</p>
+
 <pre>
 (<b>function</b>(<b>undefined</b>) {
   <b>var</b> str = &apos;foo&apos;;
@@ -15545,13 +15553,16 @@ console.log(foo());  // <i>undefined</i>
 <p>The unary negation (-) precedes its operand and negates it, after
 trying to convert it to number.</p>
 <p><b>Syntax:</b></p>
+
 <pre>
 -expression <b>Returns:</b> a Number.
 </pre>
+
 <p><b>Description</b></p>
 <p>The unary negation(-) can convert the same types / values as the unary plus (+) operator can.</p>
 Values that can&apos;t be converted will evaluate to <b>NaN</b> (there is no -<b>NaN</b>).</p>
 <p><b>Examples:</b></p>
+
 <pre>
 &minus;42             // <i>-42</i>
 &minus;&quot;42&quot;  // <i>-42</i>
@@ -15564,15 +15575,19 @@ Values that can&apos;t be converted will evaluate to <b>NaN</b> (there is no -<b
 &minus;{}               // <i>NaN</i>
 &minus;<b>function</b>(){} // <i>NaN</i>
 </pre>
+
 <p>Note that attempting to convert an array can result in unexpected
 return values. In the background, arrays are first converted to their
 string representations:</p>
+
 <pre>
 &lbrack;&rbrack;.toString() === &apos;&apos;;
 &lbrack;1&rbrack;.toString() === &apos;1&apos;;
 &lbrack;1, 2&rbrack;.toString() === &apos;1,2&apos;;
 </pre>
+
 <p>The operator then attempts to convert those strings to numbers:</p>
+
 <pre>
 &minus;&lbrack;&rbrack;       // <i>-0 ( === -&apos;&apos; )</i>
 &minus;&lbrack;1&rbrack;      // <i>-1 ( === -&apos;1&apos; )</i>
@@ -15583,9 +15598,11 @@ string representations:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The bitwise NOT (~) performs a NOT operation on each bit in a value.</p>
 <p><b>Syntax:</b></p>
+
 <pre>
 ~expression
 </pre>
+
 <p><b>Returns:</b></p>
 <!-- page 256 -->
 <ul>
@@ -15594,16 +15611,18 @@ string representations:</p>
 <p><b>Description</b></p>
 <p>The truth table for the NOT operation is:</p>
 <p><b>a NOT a</b></p>
+
 <pre>
 0 1
 1 0
-</pre>
 1337 (base 10) = 0000010100111001 (base2)
 ~1337 (base10) = 1111101011000110 (base2) = &minus;1338 (base 10)
 </pre>
+
 <p>A bitwise not on a number results in: &minus;(x &plus; 1).</p>
 <p><b>Examples:</b></p>
 <p><b>value (base 10) value (base 2) return (base 2) return (base 10)</b>
+
 <pre>
 2     00000010   11111100   -3<br/>
 1     00000001   11111110   -2<br/>
@@ -15617,13 +15636,16 @@ string representations:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The logical NOT (!) operator performs logical negation on an expression.</p>
 <p><b>Syntax:</b></p>
+
 <pre>
 !expression
 </pre>
+
 <p><b>Returns:</b></p>
 <ul>
   <li>a Boolean.</li>
 </ul>
+
 <p><b>Description</b></p>
 <p>The logical NOT(!) operator performs logical negation on an expression.</p>
 <p>Boolean values simply get inverted: !<b>true</b> === <b>false</b> and !<b>false</b> === <b>true</b>.<br/>
@@ -15634,7 +15656,9 @@ Non-boolean values get converted to boolean values first, then are negated.</p>
 !!1 === <b>true</b>
 !!0 === <b>false</b>
 </pre>
+
 <p>These are all equal to !<b>true</b>:</p>
+
 <pre>
 !&apos;true&apos; === !<b>new</b> Boolean(&apos;true&apos;);
 !&apos;false&apos; === !<b>new</b> Boolean(&apos;false&apos;);
@@ -15642,6 +15666,7 @@ Non-boolean values get converted to boolean values first, then are negated.</p>
 !&lbrack;&rbrack; === !<b>new</b> Boolean(&lbrack;&rbrack;);
 !{} === !<b>new</b> Boolean({});
 </pre>
+
 <!-- page 257 -->
 <p>These are all equal to !<b>false</b>:</p>
 <pre>
