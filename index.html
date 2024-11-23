@@ -77,14 +77,20 @@ the late 70's without retirement. So, would greatly appreciate any donations to 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01/02. javascript/js logos (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <img class="displayed"
   src="/images/coffeecup.jpg"
-  style="width:30%"
+  loading="lazy"
+  style="width:30%; float: left; margin-left: 3%; margin-bottom: 1em;"
   title="JavaScript coffee cup logo version"
   alt="JavaScript coffee cup logo version." />
 &nbsp;&nbsp;&nbsp;
 <img src="./images/js-logo.png"
-  style="width:20%"
+  loading="lazy"
+  style="width:20%; float: left; margin-left: 3%; margin-bottom: 1em;"
   title="JS logo"
   alt="JS logo." />
+
+  loading="lazy"
+  style="width:45%; float: left; margin-left: 3%; margin-bottom: 1em;"
+  
 <h2 id="about">About</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 01. javascript notes 4 pros logo (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -93,9 +99,11 @@ the late 70's without retirement. So, would greatly appreciate any donations to 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <img class="displayed"
   src="./images/image001.jpeg"
+  loading="lazy"
   title="JavaScript Notes 4 Professionals logo"
   alt="JavaScript Notes 4 Professionals logo."
-  style="border: 2px solid #000000; width:4in;" />
+  style="width:40%; float: left; margin-left: 3%; margin-bottom: 1em;" />
+
 <!-- As our processes become more agile,
 our coding MUST be more resilient. -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -156,11 +164,13 @@ console.log("Hello, World!");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 02. console.log('Hello, World!'); (02) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image002.jpg"
+  loading="lazy"
   title="console.log('Hello, World!');"
   alt="console.log('Hello, World!');"
-  style="border: 2px solid #000000; width:3.89in;" />
+  style="width:40%; float: left; margin-left: 3%; margin-bottom: 1em;" />
 </p>
 <!--{width="3.8916666666666666in" height="1.4236111111111112in"}-->
+
 <p>In the example above, the console.log() function prints Hello, World! to
 the console and returns <b>undefined</b> (shown above in the console
 output window). This is because () has no explicit <i>return value</i>.</p>
@@ -182,26 +192,30 @@ console.log(foo);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 03. example foobar console (02) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image003.jpg"
+  loading="lazy"
   title="foobar console example."
   alt="Example foobar console."
-  style="border: 2px solid #000000; width:5.95in;" />
+  style="width:60%; float: left; margin-left: 3%; margin-bottom: 1em;" />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- {width="5.954861111111111in" height="1.4777777777777779in"}-->
+
 <p>If you want to log two or more values, simply separate them with commas.
-Spaces will be automatically added between each argument during
-concatenation:</p>
+Spaces will be automatically added between each argument during concatenation:</p>
+
 <pre>
 var thisVar = 'first value';
 var thatVar = 'second value';
 console.log("thisVar:", thisVar, "and thatVar:", thatVar);
 </pre>
+
 <p>This will log the following to the console:</p>
 <!-- page 3 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~ 04. thisVar and thatVar, console.log (03) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image004.jpg"
+  loading="lazy"
   title="thisVar and thatVar"
   alt="thisVar and thatVar."
   style="border: 2px solid #000000; width:7.47in;" />
@@ -222,6 +236,7 @@ console.log ("%s, %s!", greet, who);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 05. greet Hello, World (03) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image005.jpg"
+  loading="lazy"
   title="greet Hello, World"
   alt="greet Hello, World."
   style="border: 2px solid #000000; width:7in;" />
@@ -252,11 +267,13 @@ console.log ( {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 06. json logging from api calls (04) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
-<p><img src="./images/image006.jpg"
+<img src="./images/image006.jpg"
+  loading="lazy"
   title="JSON logging from API call"
   alt="JSON logging from API call."
   style="border: 2px solid #000000; width:6.73in;" />
-<!--{width="6.738888888888889in" height="1.7208333333333334in"}--></p>
+<!--{width="6.738888888888889in" height="1.7208333333333334in"}-->
+</p>
 
 <h4>Logging HTML elements</h4>
 
@@ -271,23 +288,24 @@ we log the body element:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07. document.body information (04) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
-<p><img src="./images/image007.jpg"
+<img src="./images/image007.jpg"
+  loading="lazy"
   title="console.log(document.body) example"
   alt="console.log(document.body) example."
   style="border: 2px solid #000000; width:6.52in;" />
-<!--{width="6.522222222222222in" height="2.3784722222222223in"}--></p>
+<!--{width="6.522222222222222in" height="2.3784722222222223in"}-->
+</p>
 
 <h4>End Note</h4>
 <p>For more information on the capabilities of the console, see the Console topic.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch1-2">Section 1.2: Using the DOM API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>DOM stands for <b>D</b>ocument <b>O</b>bject <b>M</b>odel. It is an
-object-oriented representation of structured documents like XML and
-HTML.</p>
+<p>DOM stands for <b>D</b>ocument <b>O</b>bject <b>M</b>odel. It is an object-oriented 
+representation of structured documents like XML and HTML.</p>
 
-<p>Setting the textContent property of an Element is one way to output text
-on a web page.</p>
+<p>Setting the textContent property of an Element is one way to output text on a web 
+page.</p>
 
 <p>For example, consider the following HTML tag:</p>
 
@@ -298,17 +316,16 @@ on a web page.</p>
 <!-- page 5 -->
 <pre>document.getElementById("paragraph").textContent = "Hello, World";</pre>
 
-<p>This will select the element that with the id paragraph and set its text
-content to “Hello, World”:</p>
+<p>This will select the element that with the id paragraph and set its text content to 
+“Hello, World”:</p>
 
 <pre><b>&lt;p</b> id="paragraph"&gt;Hello, World<b>&lt;p&gt;</b></pre>
 
 <p><a href="http://jsbin.com/fuzijox/edit?html,js,console,output" 
 target="_blank" rel="noreferrer noopener">(See also this demo)</a></p>
 
-<p>You can also use JavaScript to create a new HTML element
-programmatically. For example, consider an HTML document with the
-following body:</p>
+<p>You can also use JavaScript to create a new HTML element programmatically. For 
+example, consider an HTML document with the following body:</p>
 
 <pre>
 <b>&lt;body&gt;</b>
@@ -316,8 +333,8 @@ following body:</p>
 <b>&lt;/body&gt;</b>
 </pre>
 
-<p>In our JavaScript, we create a new <b>&lt;p&gt;</b>tag with a
-textContent property of and add it at the end of the html body:</p>
+<p>In our JavaScript, we create a new <b>&lt;p&gt;</b>tag with a textContent property of 
+and add it at the end of the html body:</p>
 
 <pre>
 <b>var</b> element = document.createElement('p');
@@ -334,18 +351,17 @@ document.body.appendChild(element); //<i>add the newly created element to the DO
 <b>&lt;/body&gt;</b>
 </pre>
 
-<p>Note that in order to manipulate elements in the DOM using JavaScript,
-the JavaScript code must be run <i>after</i> the relevant element has
-been created in the document. This can be achieved by putting the
-JavaScript <b>&lt;script&gt;</b> tags <i>after</i> all of your other
-<b>&lt;body&gt;</b> content. Alternatively, you can also use
+<p>Note that in order to manipulate elements in the DOM using JavaScript, the JavaScript 
+code must be run <i>after</i> the relevant element has been created in the document. This 
+can be achieved by putting the JavaScript <b>&lt;script&gt;</b> tags <i>after</i> all of 
+your other <b>&lt;body&gt;</b> content. Alternatively, you can also use
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" 
 target="_blank" rel="noreferrer noopener">an event listener</a> to
 listen to eg.
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload" 
-target="_blank" rel="noreferrer noopener">window’s onload event</a>,
-adding your code to that event listener will delay running your code
-until after the whole content on your page has been loaded.</p>
+target="_blank" rel="noreferrer noopener">window’s onload event</a>, adding your code to 
+that event listener will delay running your code until after the whole content on your 
+page has been loaded.</p>
 
 <p>A third way to make sure all your DOM has been loaded, is
 <a href="https://stackoverflow.com/questions/779379/why-is-settimeoutfn-0-sometimes-useful" 
@@ -362,8 +378,7 @@ parameter is displayed to the user in <b>plain</b> text:</p>
 
 <pre>window.alert(message);</pre>
 
-<p>Because window is the global object, you can call also use the following
-shorthand:</p>
+<p>Because window is the global object, you can call also use the following shorthand:</p>
 
 <pre>alert(message);</pre>
 
@@ -377,12 +392,13 @@ shorthand:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 08. alert() example (06) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
-<p><img src="./images/image008.png"
+<img src="./images/image008.png"
+  loading="lazy"
   title="alert() example"
   alt="alert() example."
   style="border: 2px solid #000000; width:5.225in;" />
-<!-- {width="5.225in" height="2.3152777777777778in"} -->
 </p>
+<!-- {width="5.225in" height="2.3152777777777778in"} -->
 
 <h4>Notes</h4>
 
