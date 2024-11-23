@@ -82,12 +82,13 @@ the late 70's without retirement. So, would greatly appreciate any donations to 
   title="JavaScript coffee cup logo version"
   alt="JavaScript coffee cup logo version." />
 &nbsp;&nbsp;&nbsp;
-<img src="./images/js-logo.png"
+<img class="displayed"
+  src="./images/js-logo.png"
   loading="lazy"
   style="width:20%; float: left; margin-left: 3%; margin-bottom: 1em;"
   title="JS logo"
   alt="JS logo." />
- 
+
 <h2 id="about">About</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 01. javascript notes 4 pros logo (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -135,7 +136,7 @@ nor accurate, use at your own risk.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch1">Chapter 1: Getting started with JavaScript</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ readme.md of js-notes4-pros.org ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ index.html of js-notes4-pros.org ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch1-1">Section 1.1: Using console.log()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -269,8 +270,8 @@ console.log ( {
   title="JSON logging from API call"
   alt="JSON logging from API call."
   style="border: 2px solid #000000; width:6.73in;" />
-<!--{width="6.738888888888889in" height="1.7208333333333334in"}-->
 </p>
+<!--{width="6.738888888888889in" height="1.7208333333333334in"}-->
 
 <h4>Logging HTML elements</h4>
 
@@ -290,8 +291,8 @@ we log the body element:</p>
   title="console.log(document.body) example"
   alt="console.log(document.body) example."
   style="border: 2px solid #000000; width:6.52in;" />
-<!--{width="6.522222222222222in" height="2.3784722222222223in"}-->
 </p>
+<!--{width="6.522222222222222in" height="2.3784722222222223in"}-->
 
 <h4>End Note</h4>
 <p>For more information on the capabilities of the console, see the Console topic.</p>
@@ -432,7 +433,7 @@ better user experience. Nevertheless, it can be useful for debugging.</p>
 <b>&lt;iframe&gt;</b>
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert" 
 target="_blank" rel="noreferrer noopener">unless its sandbox attribute
-has the value allow-modal</a>.
+has the value allow-modal</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch1-4">Section 1.4: Using window.prompt()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -457,12 +458,12 @@ console.log(age); // <i>Prints the value inserted by the user</i>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 09. window.prompt() example (07) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
-<p><img src="./images/image009.png"
+<img src="./images/image009.png"
   title="window.prompt() example"
   alt="window.prompt() example."
   style="border: 2px solid #000000; width:4.603in;" />
-<!--{width="4.603472222222222in" height="1.9548611111111112in"}-->
 </p>
+<!--{width="4.603472222222222in" height="1.9548611111111112in"}-->
 
 <p>If the user clicks the <b>OK</b> button, the input value is returned.
 Otherwise, the method returns <b>null</b>.</p>
@@ -508,11 +509,12 @@ doing a dangerous operation like deleting something in a Control Panel:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 10. window.confirm example (07) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
-<p><img src="./images/image010.jpg"
+<img src="./images/image010.jpg"
   title="window.confirm, then deleteItem command"
   alt="window.confirm, then deleteItem command."
   style="border: 2px solid #000000; width:4.603in;" />
-<!--{width="4.603472222222222in" height="1.4597222222222221in"}--></p>
+</p>
+<!--{width="4.603472222222222in" height="1.4597222222222221in"}-->
 <p>If you need it for later use, you can simply store the result of the
 user’s interaction in a variable:</p>
 
@@ -537,8 +539,7 @@ user’s interaction in a variable:</p>
 	named methods.</li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch1-6">Section 1.6: Using the DOM API (with graphical text: Canvas, SVG, or
-image file)</h3>
+<h3 id="ch1-6">Section 1.6: Using the DOM API (with graphical text: Canvas, SVG, or image file)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using canvas elements</h4>
 
@@ -835,6 +836,7 @@ steps are taken:</p>
   title="Examples; Number.isNaN"
   alt="Examples; Number.isNaN."
   style="border: 2px solid #000000; width:7.486in;" />
+</p>
 <!-- (./images/image011.png){width="7.486805555555556in" height="4.891666666666667in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch3-3">Section 3.3: NaN</h3>
@@ -1286,6 +1288,7 @@ first enable the develop menu in Safari's Preferences</p>
   title="Safari console web inspector"
   alt="Safari console web inspector."
   style="border: 2px solid #000000; width:773px;" />
+</p>
 <!-- page 21 image012 -->
 
 <p>Then you can either pick "Develop-&gt;Show Error Console" from the menus
@@ -1455,10 +1458,11 @@ which allow fine-grained control over the formatting of that string:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 13. console.log "%cHello world!" (23) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
-<p><img src="./images/image013.jpg"
+<img src="./images/image013.jpg"
   title="console.log '%cHello world!"
   alt="console.log '%cHello world!"
   style="border: 2px solid #000000; width:7.477in;" />
+</p>
 <!-- (./images/image013.jpg){width="7.477777777777778in" height="0.6666666666666666in"} --></p>
 <p>It is possible to use multiple %c format specifiers:</p>
 
@@ -1491,6 +1495,7 @@ console.log("%cHello %cWorld%c!!", // <i>string to be printed</i>
   title="console.log '%cHello %cWorld%c!!'"
   alt="console.log '%cHello %cWorld%c!!'."
   style="border: 2px solid #000000; width:7.477in;" />
+</p>
 <!-- (./images/image014.jpg){width="7.477777777777778in" height="0.6395833333333333in"} -->
 <!-- page 24 -->
 
@@ -1533,6 +1538,7 @@ layers within each other:</p>
   title="console.groupCollapsed() after"
   alt="console.groupCollapsed() after."
   style="border: 2px solid #000000; width:2.1in;" />
+</p>
 <!-- ![](./images/image015.jpg){width="2.1083333333333334in" height="3.009027777777778in"} -->
 <!-- ![](./images/image016.jpg){width="2.08125in" height="3.729861111111111in"} -->
 
@@ -1662,11 +1668,12 @@ sec
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~ 17. console.log, info, debug, warn, error & trace (26) ~~~~~~~~~~~~~~~~~-->
 <p align="left">
-<p><img src="./images/image017.jpg"
+<img src="./images/image017.jpg"
   title="console.log, info, debug, warn, error & trace"
   alt="console.log, info, debug, warn, error & trace."
   style="border: 2px solid #000000; width:7.477in;" />
-<!-- (./images/image017.jpg){width="7.477777777777778in" height="1.3243055555555556in"} --></p>
+</p>
+<!-- (./images/image017.jpg){width="7.477777777777778in" height="1.3243055555555556in"} -->
 
 <p>The above image shows all the functions, with the exception of timeStamp, in Chrome 
 version 56.</p>
@@ -1773,6 +1780,7 @@ tabular format.</p>
   title="console.table example"
   alt="console.table example."
   style="border: 2px solid #000000; width:7.477in;" />
+</p>
 <!-- ![](./images/image018.jpg){width="7.477777777777778in" height="4.279166666666667in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-6">Section 5.6: Counting - console.count()</h3>
@@ -1946,7 +1954,8 @@ console.dir (myObject);
   title="console.dir - list of properties of js object"
   alt="console.dir - list of properties of js object."
   style="border: 2px solid #000000; width:7.477in;" />
-<!-- ![](./images/image019.jpg){width="7.477777777777778in" height="2.657638888888889in"} --></p>
+</p>
+<!-- ![](./images/image019.jpg){width="7.477777777777778in" height="2.657638888888889in"} -->
 
 <p>console.dirxml(object) prints an XML representation of the descendant
 elements of object if possible, or the JavaScript representation if not.
@@ -1962,11 +1971,12 @@ calling console.log().</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~ 20. console.dirxml - prints xml of descendant elements of object (31) ~~~~~~~~~~~-->
 <p align="left">
-<p><img src="./images/image020.jpg"
+<img src="./images/image020.jpg"
   title="console.dirxml - prints xml of descendant elements of object"
   alt="console.dirxml - prints xml of descendant elements of object."
   style="border: 2px solid #000000; width:7.477in;" />
-<!-- ![](./images/image020.jpg){width="7.477777777777778in" height="1.6847222222222222in"} --></p>
+</p>
+<!-- ![](./images/image020.jpg){width="7.477777777777778in" height="1.6847222222222222in"} -->
 
 <p><b>Example 2:</b></p>
 
@@ -1976,11 +1986,12 @@ calling console.log().</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~ 21. console.log(document) example (31) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
-<p><img src="./images/image021.jpg"
+<img src="./images/image021.jpg"
   title="console.log(document) example"
   alt="console.log(document) example."
   style="border: 2px solid #000000; width:7.477in;" />
-<!-- ![](./images/image021.jpg){width="7.477777777777778in" height="1.8020833333333333in"} --></p>
+</p>
+<!-- ![](./images/image021.jpg){width="7.477777777777778in" height="1.8020833333333333in"} -->
 
 <p><b>Example 3:</b></p>
 
@@ -2002,6 +2013,7 @@ console.dirxml ( myObject );
   title="console.dirxml(myObject) example"
   alt="console.dirxml(myObject) example."
   style="border: 2px solid #000000; width:6.5in;" />
+</p>
 <!-- ![](./images/image022.jpg){width="6.504166666666666in" height="2.6486111111111112in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-9">Section 5.9: Debugging with assertions - console.assert()</h3>
@@ -2016,19 +2028,23 @@ Otherwise, if the assertion is <b>true</b>, this does nothing.</p>
 <img src="./images/image023.png"
   title="assertion is false error"
   alt="assertion is false error."
-  style="border: 2px solid #000000; width:6.5in;" />
+  style="width: 6.5in;" />
+</p>
+<!--  style="border: 2px solid #000000; width:6.5in;" /> -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Multiple arguments can be provided after the assertion. These can be
 strings or other objects that will only be printed if the assertion is
 <b>false</b>:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 24. console.assert...testing assertion (33) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 24. console.assert...testing assertion (33) ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
-<p><img src="./images/image024.jpg"
+<img src="./images/image024.jpg"
   title="console.assert...testing assertion"
   alt="console.assert...testing assertion."
-  style="border: 2px solid #000000; width:6.468in;" />
-<!-- ![](./images/image024.jpg){width="6.46875in" height="1.2069444444444444in"} --></p>
+  style="width: 6.5in;" />
+</p>
+<!--  style="border: 2px solid #000000; width:6.468in;" /> -->
+<!-- ![](./images/image024.jpg){width="6.46875in" height="1.2069444444444444in"} -->
 
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/console/assert" 
 target="_blank" rel="noreferrer noopener">console.assert</a> does
