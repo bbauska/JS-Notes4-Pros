@@ -77,7 +77,7 @@ the late 70's without retirement. So, would greatly appreciate any donations to 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01/02. javascript/js logos (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <img class="displayed"
   src="/images/coffeecup.jpg"
-  style="width:40%"
+  style="width:30%"
   title="JavaScript coffee cup logo version"
   alt="JavaScript coffee cup logo version." />
 &nbsp;&nbsp;&nbsp;
@@ -91,19 +91,17 @@ the late 70's without retirement. So, would greatly appreciate any donations to 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ index.html of js-notes4-pros.org ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
-<p><img src="./images/image001.jpeg"
+<img class="displayed"
+  src="./images/image001.jpeg"
   title="JavaScript Notes 4 Professionals logo"
   alt="JavaScript Notes 4 Professionals logo."
-  style="border: 2px solid #000000; width:4in;" /></p>
+  style="border: 2px solid #000000; width:4in;" />
 <!-- As our processes become more agile,
 our coding MUST be more resilient. -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- always use curly braces around if...statements, always. Don't assume logic  -->
 <h4>Contents</h4>
 <p>See other document for Table of Contents:</p>
-
-<h4>About</h4>
 
 <p>Please feel free to share this PDF with anyone for free, latest version of this book 
 can be downloaded from:</p>
@@ -7862,6 +7860,7 @@ The recommended way (Since ES5) is to use
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find" 
 target="_blank" rel="noopener noreferrer">Array.prototype.find</a>:
 </p>
+
 <pre>
 <b>let</b> people = &lbrack;
   { name: &quot;bob&quot; },
@@ -7873,10 +7872,9 @@ target="_blank" rel="noopener noreferrer">Array.prototype.find</a>:
   <b>return</b> person.name === &quot;bob&quot;;
 });
 </pre>
-<p>
-In any version of JavaScript, a standard <b>for</b> loop can be used as
-well:
-</p>
+
+<p>In any version of JavaScript, a standard <b>for</b> loop can be used as well:</p>
+
 <pre>
 <b>for</b> (<b>var</b> i = 0; i &lt; people.length; i++) {
   <b>if</b> (people&lbrack;i&rbrack;.name === &quot;bob&quot;) {
@@ -7884,16 +7882,15 @@ well:
   }
 }
 </pre>
-<p>
-<b>FindIndex</b>
-</p>
-<p>
-The
+
+<p><b>FindIndex</b></p>
+
+<p>The
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex" 
 target="_blank" rel="noopener noreferrer">findIndex()</a> method returns
 an index in the array, if an element in the array satisfies the provided
-testing function. Otherwise -1 is returned.
-</p>
+testing function. Otherwise -1 is returned.</p>
+
 <pre>
 array = &lbrack;
   { value: 1 },
@@ -7905,136 +7902,111 @@ array = &lbrack;
 <b>var</b> index = array.findIndex(item =&gt; item.value === 3);  // <i>2</i>
 <b>var</b> index = array.findIndex(item =&gt; item.value === 12); // <i>-1</i>
 </pre>
+
 <!-- page 100 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-17">
-Section 12.17: Convert a String to an Array
-</h3>
+<h3 id="ch12-17">Section 12.17: Convert a String to an Array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The .split() will break the string into substrings on spaces (" "),
-which is equivalent to calling .split(” “).
-</p>
-<p>
-The parameter passed to .split() specifies the character, or the regular
-expression, to use for splitting the string.
-</p>
-<p>
-To split a string into an array call .split with an empty string ("").
+<p>The .split() will break the string into substrings on spaces (" "),
+which is equivalent to calling .split(” “).</p>
+
+<p>The parameter passed to .split() specifies the character, or the regular
+expression, to use for splitting the string.</p>
+
+<p>To split a string into an array call .split with an empty string ("").
 <b>Important Note:</b> This only works if all of your characters fit in
 the Unicode lower range characters, which covers most English and most
 European languages. For languages that require 3 and 4 byte Unicode
-characters, ) will separate them.
-</p>
+characters, ) will separate them.</p>
+
 <pre>
 <b>var</b> strArray = &quot;StackOverflow&quot;.split(&quot;&quot;);
 // <i>strArray = &lbrack;&quot;S&quot;, &quot;t&quot;, &quot;a&quot;, &quot;c&quot;, &quot;k&quot;, &quot;O&quot;, &quot;v&quot;, &quot;e&quot;, &quot;r&quot;, &quot;f&quot;, &quot;l&quot;, &quot;o&quot;, &quot;w&quot;&rbrack;</i>
 </pre>
-<h5>
-Version ≥ 6
-</h5>
-<p>
-Using the spread operator (…), to convert a string into an array.
-</p>
+
+<h5>Version ≥ 6</h5>
+
+<p>Using the spread operator (…), to convert a string into an array.</p>
+
 <pre>
 <b>var</b> strArray = &lbrack;&hellip;&quot;sky is blue&quot;&rbrack;;
 // <i>strArray = &lbrack;&quot;s&quot;, &quot;k&quot;, &quot;y&quot;, &quot; &quot;, &quot;i&quot;, &quot;s&quot;, &quot; &quot;, &quot;b&quot;, &quot;l&quot;, &quot;u&quot;, &quot;e&quot;&rbrack;</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-18">
-Section 12.18: Removing items from an array
-</h3>
+<h3 id="ch12-18">Section 12.18: Removing items from an array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<b>Shift</b>
-</p>
-<p>
-Use .shift to remove the first item of an array.
-</p>
-<p>
-For example:
-</p>
+<p><b>Shift</b></p>
+
+<p>Use .shift to remove the first item of an array.</p>
+
+<p>For example:</p>
+
 <pre>
 <b>var</b> array = &lbrack;1, 2, 3, 4&rbrack;;
 array.shift();
 </pre>
-<p>
-array results in:
-</p>
-<pre>
-&lbrack;2, 3, 4&rbrack;
-</pre>
-<p>
-<b>Pop</b>
-</p>
-<p>
-Further .pop is used to remove the last item from an array.
-</p>
-<p>
-For example:
-</p>
+
+<p>array results in:</p>
+
+<pre>&lbrack;2, 3, 4&rbrack;</pre>
+
+<p><b>Pop</b></p>
+
+<p>Further .pop is used to remove the last item from an array.</p>
+
+<p>For example:</p>
+
 <pre>
 <b>var</b> array = &lbrack;1, 2, 3&rbrack;;
 array.pop();
 </pre>
-<p>
-array results in:
-</p>
-<pre>
-&lbrack;1, 2&rbrack;
-</pre>
-<p>
-Both methods return the removed item;
-</p>
-<p>
-<b>Splice</b>
-</p>
+
+<p>array results in:</p>
+
+<pre>&lbrack;1, 2&rbrack;</pre>
+
+<p>Both methods return the removed item;</p>
+
+<p><b>Splice</b></p>
+
 <!-- page 101 -->
-<p>
-Use .splice() to remove a series of elements from an array..splice()
+<p>Use .splice() to remove a series of elements from an array..splice()
 accepts two parameters, the starting splice index, and an optional
 number of elements to delete. If the second parameter is left out
 .splice() will remove all elements from the starting index through the
-end of the array.
-</p>
-<p>
-For example:
-</p>
+end of the array.</p>
+
+<p>For example:</p>
+
 <pre>
 <b>var</b> array = &lbrack;1, 2, 3, 4&rbrack;;
 array.splice(1, 2);
 </pre>
-<p>
-leaves array containing:
-</p>
-<pre>
-&lbrack;1, 4&rbrack;
-</pre>
-<p>
-The return of array.splice() is a new array containing the removed
-elements. For the example above, the return would be:
-</p>
-<pre>
-&lbrack;2, 3&rbrack;
-</pre>
-<p>
-Thus, omitting the second parameter effectively splits the array into
-two arrays, with the original ending before the index specified:
-</p>
+
+<p>leaves array containing:</p>
+
+<pre>&lbrack;1, 4&rbrack;</pre>
+
+<p>The return of array.splice() is a new array containing the removed
+elements. For the example above, the return would be:</p>
+
+<pre>&lbrack;2, 3&rbrack;</pre>
+
+<p>Thus, omitting the second parameter effectively splits the array into
+two arrays, with the original ending before the index specified:</p>
+
 <pre>
 <b>var</b> array = &lbrack;1, 2, 3, 4&rbrack;;
 array.splice(2);
 </pre>
-<p>
-…leaves array containing [1, 2] and returns [3, 4].
-</p>
-<p>
-<b>Delete</b>
-</p>
-<p>
-Use <b>delete</b> to remove item from array without changing the length
-of array:
-</p>
+
+<p>…leaves array containing [1, 2] and returns [3, 4].</p>
+
+<p><b>Delete</b></p>
+
+<p>Use <b>delete</b> to remove item from array without changing the length
+of array:</p>
+
 <pre>
 <b>var</b> array = &lbrack;1, 2, 3, 4, 5&rbrack;;
 console.log(array.length);  // <i>5</i>
@@ -8042,14 +8014,13 @@ console.log(array.length);  // <i>5</i>
 console.log(array);  // <i>&lbrack;1, 2, undefined, 4, 5&rbrack;</i>
 console.log(array.length);  // <i>5</i>
 </pre>
-<p>
-<b>Array.prototype.length</b>
-</p>
-<p>
-Assigning value to length of array changes the length to given value. If
+
+<p><b>Array.prototype.length</b></p>
+
+<p>Assigning value to length of array changes the length to given value. If
 new value is less than array length items will be removed from the end
-of value.
-</p>
+of value.</p>
+
 <pre>
 array = &lbrack;1, 2, 3, 4, 5&rbrack;;
 array.length = 2;
@@ -8057,30 +8028,23 @@ console.log(array);  // <i>&lbrack;1, 2&rbrack;</i>
 var arr = &lbrack;1, 2, 3, 4&rbrack;;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-19">
-Section 12.19: Removing all elements
-</h3>
+<h3 id="ch12-19">Section 12.19: Removing all elements</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<b>Method 1</b>
-</p>
-<p>
-Creates a new array and overwrites the existing array reference with a
-new one.
-</p>
-<pre>
-arr = &lbrack;&rbrack;;
-</pre>
+<p><b>Method 1</b></p>
+
+<p>Creates a new array and overwrites the existing array reference with a
+new one.</p>
+
+<pre>arr = &lbrack;&rbrack;;</pre>
+
 <!-- page 102 -->
-<p>
-Care must be taken as this does not remove any items from the original
+<p>Care must be taken as this does not remove any items from the original
 array. The array may have been closed over when passed to a function.
 The array will remain in memory for the life of the function though you
-may not be aware of this. This is a common source of memory leaks.
-</p>
-<p>
-Example of a memory leak resulting from bad array clearing:
-</p>
+may not be aware of this. This is a common source of memory leaks.</p>
+
+<p>Example of a memory leak resulting from bad array clearing:</p>
+
 <pre>
 <b>var</b> count = 0;
 <b>function</b> addListener(arr) { // <i>arr is closed over</i>
@@ -8102,72 +8066,62 @@ while (i &gt; 0) {
 // <i>there are now 100 arrays closed over, each referencing a different array</i>
 // <i>no a single item has been deleted</i>
 </pre>
-<p>
-To prevent the risk of a memory leak use the one of the following 2
-methods to empty the array in the above example's while loop.
-</p>
-<p>
-<b>Method 2</b>
-</p>
-<p>
-Setting the length property deletes all array element from the new array
+
+<p>To prevent the risk of a memory leak use the one of the following 2
+methods to empty the array in the above example's while loop.</p>
+
+<p><b>Method 2</b></p>
+
+<p>Setting the length property deletes all array element from the new array
 length to the old array length. It is the most efficient way to remove
 and dereference all items in the array. Keeps the reference to the
-original array
-</p>
-<pre>
-arr.length = 0;
-</pre>
-<p>
-<b>Method 3</b>
-</p>
-<p>
-Similar to method 2 but returns a new array containing the removed
+original array.</p>
+
+<pre>arr.length = 0;</pre>
+
+<p><b>Method 3</b></p>
+
+<p>Similar to method 2 but returns a new array containing the removed
 items. If you do not need the items this method is inefficient as the
-new array is still created only to be immediately dereferenced.
-</p>
+new array is still created only to be immediately dereferenced.</p>
+
 <pre>
 arr.splice(0); // <i>should not use if you don&apos;t want the removed items</i>
 // <i>only use this method if you do the following</i>
 <b>var</b> keepArr = arr.splice(0); // <i>empties the array and creates a new array containing the</i> 
                                     // <i>removed items</i>
 </pre>
-<p>
-<a href="http://stackoverflow.com/questions/1232040/how-do-i-empty-an-array-in-javascript" 
-target="_blank" rel="noopener noreferrer">Related question</a>.
-</p>
+
+<p><a href="http://stackoverflow.com/questions/1232040/how-do-i-empty-an-array-in-javascript" 
+target="_blank" rel="noopener noreferrer">Related question</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-20">
-Section 12.20: Finding the minimum or maximum element
-</h3>
+<h3 id="ch12-20">Section 12.20: Finding the minimum or maximum element</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-If your array or array-like object is <i>numeric</i>, that is, if all
+<p>If your array or array-like object is <i>numeric</i>, that is, if all
 its elements are numbers, then you can use Math.min.apply or
 Math.max.apply by passing <b>null</b> as the first argument, and your
-array as the second.
-</p>
+array as the second.</p>
+
 <pre>
 <b>var</b> myArray =&lbrack;1, 2, 3, 4&rbrack;;
 Math.min.apply(<b>null</b>, myArray);  // <i>1</i>
 Math.max.apply(<b>null</b>, myArray);  // <i>4</i>
 </pre>
+
 <!-- page 103 -->
-<h5>
-Version ≥ 6
-</h5>
-<p>
-In ES6 you can use the … operator to spread an array and take the
-minimum or maximum element.
-</p>
+
+<h5>Version ≥ 6</h5>
+<p>In ES6 you can use the … operator to spread an array and take the
+minimum or maximum element.</p>
+
 <pre>
 <b>var</b> myArray = &lbrack;1, 2, 3, 4, 99, 20&rbrack;;
 <b>var</b> maxValue = Math.max(&hellip;myArray);  // <i>99</i>
 <b>var</b> minValue = Math.min(&hellip;myArray);  // <i>1</i>
 </pre>
-<p>
-The following example uses a <b>for</b> loop:
-</p>
+
+<p>The following example uses a <b>for</b> loop:</p>
+
 <pre>
 <b>var</b> maxValue = myArray&lbrack;0&rbrack;;
 <b>for</b> (<b>var</b> i = 1; i &lt; myArray.length; i++) {
@@ -8177,13 +8131,12 @@ The following example uses a <b>for</b> loop:
   }
 }
 </pre>
-<h5>
-Version ≥ 5.1
-</h5>
-<p>
-The following example uses Array.<b>prototype</b>.reduce() to find the
-minimum or maximum:
-</p>
+
+<h5>Version ≥ 5.1</h5>
+
+<p>The following example uses Array.<b>prototype</b>.reduce() to find the
+minimum or maximum:</p>
+
 <pre>
 <b>var</b> myArray = &lbrack;1, 2, 3, 4&rbrack;;
 myArray.reduce(<b>function</b>(a, b) {
@@ -8194,23 +8147,21 @@ myArray.reduce(<b>function</b>(a, b) {
 });
 // <i>4</i>
 </pre>
-<h5>
-Version ≥ 6
-</h5>
-<p>
-or using arrow functions:
-</p>
+
+<h5>Version ≥ 6</h5>
+
+<p>or using arrow functions:</p>
+
 <pre>
 myArray.reduce((a, b) =&gt; Math.min(a, b));  // <i>1</i>
 myArray.reduce((a, b) =&gt; Math.max(a, b));  // <i>4</i>
 </pre>
-<h5>
-Version ≥ 5.1
-</h5>
-<p>
-To generalize the reduce version we'd have to pass in an </i>initial
-value</i> to cover the empty list case:
-</p>
+
+<h5>Version ≥ 5.1</h5>
+
+<p>To generalize the reduce version we'd have to pass in an </i>initial
+value</i> to cover the empty list case:</p>
+
 <pre>
 <b>function</b> myMax(array) {
   <b>return</b> array.reduce(<b>function</b>(maxSoFar, element) {
@@ -8221,121 +8172,90 @@ myMax(&lbrack;3, 5&rbrack;);     // <i>5</i>
 myMax(&lbrack;&rbrack;);         // <i>-Infinity</i>
 Math.max.apply(<b>null</b>, &lbrack;&rbrack;);  // <i>-Infinity</i>
 </pre>
-<p>
-For the details on how to properly use reduce see Reducing values.
-</p>
+
+<p>For the details on how to properly use reduce see Reducing values.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-21">
-Section 12.21: Standard array initialization
-</h3>
+<h3 id="ch12-21">Section 12.21: Standard array initialization</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-There are many ways to create arrays. The most common are to use array
-literals, or the Array constructor:
-</p>
+<p>There are many ways to create arrays. The most common are to use array
+literals, or the Array constructor:</p>
+
 <!-- page 104 -->
+
 <pre>
 <b>var</b> arr = &lbrack;1, 2, 3, 4&rbrack;;
 <b>var</b> arr2 = <b>new</b> Array(1, 2, 3, 4);
 </pre>
-<p>
-If the Array constructor is used with no arguments, an empty array is
-created.
-</p>
-<pre>
-<b>var</b> arr3 = <b>new</b> Array();
-</pre>
-<p>
-results in:
-</p>
-<pre>
-&lbrack;&rbrack;
-</pre>
-<p>
-Note that if it's used with exactly one argument and that argument is a
+
+<p>If the Array constructor is used with no arguments, an empty array is
+created.</p>
+
+<pre><b>var</b> arr3 = <b>new</b> Array();</pre>
+
+<p>results in:</p>
+
+<pre>&lbrack;&rbrack;</pre>
+
+<p>Note that if it's used with exactly one argument and that argument is a
 number, an array of that length with all <b>undefined</b> values will be
-created instead:
-</p>
-<pre>
-<b>var</b> arr4 = <b>new</b> Array(4);
-</pre>
-<p>
-results in:
-</p>
-<pre>
-&lbrack;<b>undefined</b>, <b>undefined</b>, <b>undefined</b>, <b>undefined</b>&rbrack;
-</pre>
-<p>
-That does not apply if the single argument is non-numeric:
-</p>
-<pre>
-<b>var</b> arr5 = <b>new</b> Array(&quot;foo&quot;);
-</pre>
-<p>
-results in:
-</p>
-<pre>
-&lbrack;&quot;foo&quot;&rbrack;
-</pre>
-<h5>
-Version ≥ 6
-</h5>
-<p>
-Similar to an array literal, Array.of can be used to create a new Array
-instance given a number of arguments:
-</p>
-<pre>
-Array.of(21, &quot;Hello&quot;, &quot;World&quot;);
-</pre>
-<p>
-results in:
-</p>
-<pre>
-&lbrack;21, &quot;Hello&quot;, &quot;World&quot;&rbrack;
-</pre>
-<p>
-In contrast to the Array constructor, creating an array with a single
+created instead:</p>
+
+<pre><b>var</b> arr4 = <b>new</b> Array(4);</pre>
+
+<p>results in:</p>
+
+<pre>&lbrack;<b>undefined</b>, <b>undefined</b>, <b>undefined</b>, <b>undefined</b>&rbrack;</pre>
+
+<p>That does not apply if the single argument is non-numeric:</p>
+
+<pre><b>var</b> arr5 = <b>new</b> Array(&quot;foo&quot;);</pre>
+
+<p>results in:</p>
+
+<pre>&lbrack;&quot;foo&quot;&rbrack;</pre>
+
+<h5>Version ≥ 6</h5>
+
+<p>Similar to an array literal, Array.of can be used to create a new Array
+instance given a number of arguments:</p>
+
+<pre>Array.of(21, &quot;Hello&quot;, &quot;World&quot;);</pre>
+
+<p>results in:</p>
+
+<pre>&lbrack;21, &quot;Hello&quot;, &quot;World&quot;&rbrack;</pre>
+
+<p>In contrast to the Array constructor, creating an array with a single
 number such as Array.of(21) will create a new array [], rather than an
-Array with length 23.
-</p>
-<p>
-The other way to create and initialize an array would be Array.from
-</p>
-<pre>
-<b>var</b> newArray = Array.from({ length: 5 }, (&lowbar;, index) =&gt; Math.pow(index, 4));
-</pre>
-<p>
-will result:
-</p>
-<pre>
-&lbrack;0, 1, 16, 81, 256&rbrack;
-</pre>
+Array with length 23.</p>
+
+<p>The other way to create and initialize an array would be Array.from</p>
+
+<pre><b>var</b> newArray = Array.from({ length: 5 }, (&lowbar;, index) =&gt; Math.pow(index, 4));</pre>
+
+<p>will result:</p>
+
+<pre>&lbrack;0, 1, 16, 81, 256&rbrack;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-22">
-Section 12.22: Joining array elements in a string
-</h3>
+<h3 id="ch12-22">Section 12.22: Joining array elements in a string</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-To join all of an array's elements into a string, you can use the join
-method:
-</p>
+<p>To join all of an array's elements into a string, you can use the join
+method:</p>
+
 <pre>
 console.log(&lbrack;&quot;Hello&quot;, &quot; &quot;, &quot;world&quot;&rbrack;.join(&quot;&quot;));  // <i>&quot;Hello world&quot;</i>
 console.log(&lbrack;1, 800, 555, 1234&rbrack;.join(&quot;-&quot;)); // <i>&quot;1-800-555-1234&quot;</i>
 </pre>
+
 <!-- page 105 -->
-<p>
-As you can see in the second line, items that are not strings will be
-converted first.
+
+<p>As you can see in the second line, items that are not strings will be converted first.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-23">
-Section 12.23: Removing/Adding elements using splice()
-</h3>
+<h3 id="ch12-23">Section 12.23: Removing/Adding elements using splice()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The splice() method can be used to remove elements from an array. In
-this example, we remove the first 3 from the array.
-</p>
+<p>The splice() method can be used to remove elements from an array. In
+this example, we remove the first 3 from the array.</p>
+
 <pre>
 <b>var</b> values = &lbrack;1, 2, 3, 4, 5, 3&rbrack;;
 <b>var</b> i = values.indexOf(3);
@@ -8344,107 +8264,89 @@ this example, we remove the first 3 from the array.
 }
 // <i>&lbrack;1, 2, 4, 5, 3&rbrack;</i>
 </pre>
-<p>
-The splice() method can also be used to add elements to an array. In
+
+<p>The splice() method can also be used to add elements to an array. In
 this example, we will insert the numbers 6, 7, and 8 to the end of the
-array.
-</p>
+array.</p>
+
 <pre>
 <b>var</b> values = &lbrack;1, 2, 4, 5, 3&rbrack;;
 <b>var</b> i = values.length &plus; 1;
 values.splice(i, 0, 6, 7, 8);
 // <i>&lbrack;1, 2, 4, 5, 3, 6, 7, 8&rbrack;</i>
 </pre>
-<p>
-The first argument of the () method is the index at which to
+
+<p>The first argument of the () method is the index at which to
 remove/insert elements. The second argument is the number of elements to
 remove. The third argument and onwards are the values to insert into the
-array.
-</p>
+array.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-24">
-Section 12.24: The entries() method
-</h3>
+<h3 id="ch12-24">Section 12.24: The entries() method</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The entries() method returns a new Array Iterator object that contains
-the key/value pairs for each index in the array.
-</p>
-<h5>
-Version ≥ 6
-</h5>
+<p>The entries() method returns a new Array Iterator object that contains
+the key/value pairs for each index in the array.</p>
+
+<h5>Version ≥ 6</h5>
+
 <pre>
 <b>var</b> letters = &lbrack;&apos;a&apos;, &apos;b&apos;, &apos;c&apos;&rbrack;;
 <b>for</b> (<b>const</b>&lbrack;index, element&rbrack; of letters.entries()) {
   console.log(index, element);
 }
 </pre>
-<p>
-result
-</p>
+
+<p>result</p>
+
 <pre>
 0 &quot;a&quot;
 1 &quot;b&quot;
 2 &quot;c&quot;
 </pre>
-<p>
-<b>Note</b>:
+
+<p><b>Note</b>:
 <a href="http://kangax.github.io/compat-table/es6/#test-Array.prototype_methods_Array.prototype.entries" 
 target="_blank" rel="noopener noreferrer">This method is not supported
-in Internet Explorer</a>.
-</p>
-<p>
-</i>Portions of this content from by
+in Internet Explorer</a>.</p>
+
+<p></i>Portions of this content from by
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/entries$history">
 Mozilla Contributors</a> licensed by
 <a href="http://creativecommons.org/licenses/by-sa/2.5/" 
-target="_blank" rel="noopener noreferrer">CC-by-SA 2.5</a></i>
-</p>
+target="_blank" rel="noopener noreferrer">CC-by-SA 2.5</a></i></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-25">
-Section 12.25: Remove value from array
-</h3>
+<h3 id="ch12-25">Section 12.25: Remove value from array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-When you need to remove a specific value from an array, you can use the
-following one-liner to create a copy array without the given value:
-</p>
-<pre>
-array.filter(<b>function</b>(val) { <b>return</b> val !== to_remove; });
-</pre>
+<p>When you need to remove a specific value from an array, you can use the
+following one-liner to create a copy array without the given value:</p>
+
+<pre>array.filter(<b>function</b>(val) { <b>return</b> val !== to_remove; });</pre>
+
 <!-- page 106 -->
-<p>
-Or if you want to change the array itself without creating a copy (for
+
+<p>Or if you want to change the array itself without creating a copy (for
 example if you write a function that get an array as a function and
-manipulates it) you can use this snippet:
-</p>
-<pre>
-while(index = array.indexOf(3) !== -1) { array.splice(index, 1); } 
-</pre>
-<p>
-And if you need to remove just the first value found, remove the while
-loop:
-</p>
+manipulates it) you can use this snippet:</p>
+
+<pre>while(index = array.indexOf(3) !== -1) { array.splice(index, 1); }</pre>
+
+<p>And if you need to remove just the first value found, remove the while
+loop:</p>
+
 <pre>
 <b>var</b> index = array.indexOf(to_remove);
 <b>if</b>(index !== &minus;1) { array.splice(index, 1); }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-26">
-Section 12.26: Flattening Arrays
-</h3>
+<h3 id="ch12-26">Section 12.26: Flattening Arrays</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<b>2 Dimensional arrays</b>
-</p>
-<h5>
-Version ≥ 6
-</h5>
-<p>
-In ES6, we can flatten the array by the spread operator
+<p><b>2 Dimensional arrays</b></p>
+
+<h5>Version ≥ 6</h5>
+
+<p>In ES6, we can flatten the array by the spread operator
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator" 
-target="_blank" rel="noopener noreferrer">…</a>:
-</p>
+target="_blank" rel="noopener noreferrer">…</a>:</p>
+
 <pre>
 <b>function</b> flattenES6(arr) {
   <b>return</b> &lbrack;&rbrack;.concat(&hellip;arr);
@@ -8452,14 +8354,13 @@ target="_blank" rel="noopener noreferrer">…</a>:
 <b>var</b> arrL1 = &lbrack;1, 2, &lbrack;3, 4&rbrack;&rbrack;;
 console.log(flattenES6(arrL1));  // <i>&lbrack;1, 2, 3, 4&rbrack;</i>
 </pre>
-<h5>
-Version ≥ 5
-</h5>
-<p>
-In ES5, we can achieve that by
+
+<h5>Version ≥ 5</h5>
+
+<p>In ES5, we can achieve that by
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" 
-target="_blank" rel="noopener noreferrer">.apply()</a>:
-</p>
+target="_blank" rel="noopener noreferrer">.apply()</a>:</p>
+
 <pre>
 <b>function</b></p> flatten(arr) {
   <b>return</b> &lbrack;&rbrack;.concat.apply(&lbrack;&rbrack;, arr);
@@ -8467,39 +8368,33 @@ target="_blank" rel="noopener noreferrer">.apply()</a>:
 <b>var</b> arrL1 = &lbrack;1, 2, &lbrack;3, 4&rbrack;&rbrack;;
 console.log(flatten(arrL1));  // <i>&lbrack;1, 2, 3, 4&rbrack;</i>
 </pre>
-<p>
-<b>Higher Dimension Arrays</b>
-</p>
-<p>
-Given a deeply nested array like so
-</p>
-<pre>
-<b>var</b> deeplyNested = &lbrack;4, &lbrack;5, 6, &lbrack;7, 8&rbrack;, 9&rbrack;&rbrack;;
-</pre>
-<p>
-It can be flattened with this magic
-</p>
+
+<p><b>Higher Dimension Arrays</b></p>
+
+<p>Given a deeply nested array like so</p>
+
+<pre><b>var</b> deeplyNested = &lbrack;4, &lbrack;5, 6, &lbrack;7, 8&rbrack;, 9&rbrack;&rbrack;;</pre>
+
+<p>It can be flattened with this magic</p>
+
 <pre>
 console.log(String(deeplyNested).split(&apos;,&apos;).map(Number);
 &bsol;#=&gt; &lbrack;4, 5, 6, 7, 8, 9&rbrack;
 </pre>
-<p>
-Or
-</p>
+
+<p>Or</p>
+
 <pre>
 <b>const</b> flatten = deeplyNested.toString().split(&apos;,&apos;).map(Number)
 console.log(flatten);
 &bsol;#=&gt; &lbrack;4, 5, 6, 7, 8, 9&rbrack;
 </pre>
-<p>
-Both of the above methods only work when the array is made up
+
+<p>Both of the above methods only work when the array is made up
 exclusively of numbers. A multi-dimensional array of objects cannot be
-flattened by this method.
-</p>
+flattened by this method.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-27">
-Section 12.27: Append / Prepend items to Array
-</h3>
+<h3 id="ch12-27">Section 12.27: Append / Prepend items to Array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- page 107 -->
 <p>
@@ -9847,20 +9742,16 @@ Sample:
   ritable: <b>true</b>;
 }
 </pre>
-<p>
-<b>Accessor descriptors</b>-
-</p>
+
+<p><b>Accessor descriptors</b>-</p>
+
 <ul>
-<li>
-Required fields: <b>get</b> or <b>set</b> or both
-</li>
-<li>
-Optional fields: configurable, enumerable
-</li>
+  <li>Required fields: <b>get</b> or <b>set</b> or both</li>
+  <li>Optional fields: configurable, enumerable</li>
 </ul>
-<p>
-Sample:
-</p>
+
+<p>Sample:</p>
+
 <pre>
 {
   <b>get</b>: <b>function</b>() {
@@ -9869,63 +9760,47 @@ Sample:
   enumerable: <b>true</b>
 }
 </pre>
-<p>
-<b>meaning of fields and their defaults</b>
-</p>
-<p>
-configurable,enumerable and writable:
-</p>
+
+<p><b>meaning of fields and their defaults</b></p>
+
+<p>configurable,enumerable and writable:</p>
+
 <ul>
-<li>
-These keys all default to <b>false</b>.
-</li>
-<li>
-configurable is <b>true</b> if and only if the type of this property
-descriptor may be changed and if the property may be deleted from the
-corresponding object.
-</li>
-<li>
-enumerable is <b>true</b> if and only if this property shows up during
-enumeration of the properties on the corresponding object.
-</li>
-<li>
-writable is <b>true</b> if and only if the value associated with the
-property may be changed with an assignment operator.
-</li>
+  <li>These keys all default to <b>false</b>.</li>
+  <li>configurable is <b>true</b> if and only if the type of this property
+    descriptor may be changed and if the property may be deleted from the
+	corresponding object.</li>
+  <li>enumerable is <b>true</b> if and only if this property shows up during
+    enumeration of the properties on the corresponding object.</li>
+  <li>writable is <b>true</b> if and only if the value associated with the
+    property may be changed with an assignment operator.</li>
 </ul>
-<p>
-<b>get</b> and <b>set</b>:
-</p>
+
+<p><b>get</b> and <b>set</b>:</p>
+
+<p>These keys default to <b>undefined</b>.</p>
+
 <ul>
-<li>
-These keys default to <b>undefined</b>.
-<li>
-<b>get</b> is a function which serves as a getter for the property, or
-<b>undefined</b> if there is no getter. The function return will be used
-as the value of the property.
-</li>
-<li>
-<b>set</b> is a function which serves as a setter for the property, or
-<b>undefined</b> if there is no setter. The function will receive as
-only argument the new value being assigned to the property.
-</li>
+  <li><b>get</b> is a function which serves as a getter for the property, or
+    <b>undefined</b> if there is no getter. The function return will be used
+	as the value of the property.</li>
+  <li><b>set</b> is a function which serves as a setter for the property, or
+    <b>undefined</b> if there is no setter. The function will receive as
+	only argument the new value being assigned to the property.</li>
 </ul>
-<p>
-value:
-</p>
+
+<p>value:</p>
+
 <ul>
-<li>
-This key defaults to <b>undefined</b>.
-</li>
-<li>
-The value associated with the property. Can be any valid JavaScript
-value (number, object, function, etc).
-</li>
+  <li>This key defaults to <b>undefined</b>.</li>
+  <li>The value associated with the property. Can be any valid JavaScript
+    value (number, object, function, etc).</li>
 </ul>
-<p>
-Example:
-</p>
+
+<p>Example:</p>
+
 <!-- page 126 -->
+
 <pre>
 <b>var</b> obj = {propertyName1: 1}; // <i>the pair is actually (&apos;propertyName1&apos;, {value:1,</i>
                                      // <i>writable:true,</i>
@@ -9950,16 +9825,12 @@ console.log(obj.propertyName2); // <i>this will be logged every time propertyNam
 <i>its value</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch13-19">
-Section 13.19: Object.keys
-</h3>
+<h3 id="ch13-19">Section 13.19: Object.keys</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>
-Version ≥ 5
-</h5>
-<p>
-Object.keys(obj) returns an array of a given object's keys.
-</p>
+<h5>Version ≥ 5</h5>
+
+<p>Object.keys(obj) returns an array of a given object's keys.</p>
+
 <pre>
 <b>var</b> obj = {
   a: &quot;hello&quot;,
@@ -9970,34 +9841,30 @@ Object.keys(obj) returns an array of a given object's keys.
 console.log(keys);  // <i>&lbrack;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;&rbrack;</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch13-20">
-Section 13.20: Properties with special characters or reserved words
-</h3>
+<h3 id="ch13-20">Section 13.20: Properties with special characters or reserved words</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-While object property notation is usually written as , this will only
+<p>While object property notation is usually written as , this will only
 allow characters that are normally found in
 <a href="http://stackoverflow.com/questions/1661197/what-characters-are-valid-for-javascript-variable-names">
 JavaScript variable names</a>, which is mainly letters, numbers and
-underscore (_).
-</p>
-<p>
-If you need special characters, such as space, ☺, or user-provided
-content, this is possible using [] bracket notation.
-</p>
+underscore (_).</p>
+
+<p>If you need special characters, such as space, ☺, or user-provided
+content, this is possible using [] bracket notation.</p>
+
 <pre>
 myObject&lbrack;&apos;special property ☺&apos;&rbrack; = &apos;it works!&apos;
 console.log(myObject&lbrack;&apos;special property ☺&apos;&rbrack;)
 </pre>
-<p>
-<b>All-digit properties:</b>
-</p>
-<p>
-In addition to special characters, property names that are all-digits
+
+<p><b>All-digit properties:</b></p>
+
+<p>In addition to special characters, property names that are all-digits
 will require bracket notation. However, in this case the property need
-not be written as a string.
-</p>
+not be written as a string.</p>
+
 <!-- page 127 -->
+
 <pre>
 myObject&lbrack;123&rbrack; = &apos;hi!&apos; // <i>number 123 is automatically converted to a string</i>
 console.log(myObject&lbrack;&apos;123&apos;&rbrack;) // <i>notice how using string 123 produced the same result</i>
@@ -10006,22 +9873,17 @@ console.log(myObject&lbrack;120 + 3&rbrack;) // <i>arithmetic, still resulting i
 console.log(myObject&lbrack;123.0&rbrack;) // <i>this works too because 123.0 evaluates to 123</i>
 console.log(myObject&lbrack;&apos;123.0&apos;&rbrack;) // <i>this does NOT work, because &apos;123&apos; != &apos;123.0&apos;</i>
 </pre>
-<p>
-However, leading zeros are not recommended as that is interpreted as
+
+<p>However, leading zeros are not recommended as that is interpreted as
 Octal notation. (TODO, we should produce and link to an example
-describing octal, hexadecimal and exponent notation)
-</p>
-<p>
-See also: [Arrays are Objects] example.
-</p>
+describing octal, hexadecimal and exponent notation).</p>
+
+<p>See also: [Arrays are Objects] example.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch13-21">
-Section 13.21: Creating an Iterable object
-</h3>
+<h3 id="ch13-21">Section 13.21: Creating an Iterable object</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>
-Version ≥ 6
-</h5>
+<h5>Version ≥ 6</h5>
+
 <pre>
 <b>var</b>
 myIterableObject = {};
@@ -10055,28 +9917,25 @@ myIterableObject&lbrack;Symbol.iterator&rbrack; = <b>function</b> () {
   console.log(c);
 }
 </pre>
-<p>
-Console output
-</p>
+
+<p>Console output</p>
+
 <blockquote>
 One
 </blockquote>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch13-22">
-Section 13.22: Iterating over Object entries - Object.entries()
-</h3>
+<h3 id="ch13-22">Section 13.22: Iterating over Object entries - Object.entries()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>
-Version ≥ 8
-</h5>
-<p>
-The <a href="https://github.com/tc39/proposal-object-values-entries">
+<h5>Version ≥ 8</h5>
+
+<p>The <a href="https://github.com/tc39/proposal-object-values-entries">
 proposed Object.entries()</a> method returns an array of key/value pairs
 for the given object. It does not return an iterator like
 Array.<b>prototype</b>.entries(), but the Array returned
-Object.entries() can be iterated regardless
-</p>
+Object.entries() can be iterated regardless.</p>
+
 <!-- page 128 -->
+
 <pre>
 <b>const</b> obj = {
   one: 1,
@@ -10085,9 +9944,9 @@ Object.entries() can be iterated regardless
 };
 Object.entries(obj);
 </pre>
-<p>
-Results in:
-</p>
+
+<p>Results in:</p>
+
 <pre>
 &lbrack;
   &lbrack;&quot;one&quot;, 1&rbrack;,
@@ -10095,9 +9954,9 @@ Results in:
   &lbrack;&quot;three&quot;, 3&rbrack;
 &rbrack;
 </pre>
-<p>
-It is an useful way of iterating over the key/value pairs of an object:
-</p>
+
+<p>It is an useful way of iterating over the key/value pairs of an object:</p>
+
 <pre>
 <b>for</b> (<b>const</b> &lbrack;key, value &rbrack; of Object.entries(obj)) {
   console.log(key);  // <i>&quot;one&quot;, &quot;two&quot; and &quot;three&quot;</i>
@@ -10105,39 +9964,29 @@ It is an useful way of iterating over the key/value pairs of an object:
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch13-23">
-Section 13.23: Object.values()
-</h3>
+<h3 id="ch13-23">Section 13.23: Object.values()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>
-Version ≥ 8
-</h5>
-<p>
-The Object.values() method returns an array of a given object's own
+<h5>Version ≥ 8</h5>
+
+<p>The Object.values() method returns an array of a given object's own
 enumerable property values, in the same order as that provided by a
 for…in loop (the difference being that a for-in loop enumerates
-properties in the prototype chain as well).
-</p>
+properties in the prototype chain as well).</p>
+
 <pre>
 <b>var</b> obj = { 0: &apos;a&apos;, 1: &apos;b&apos;, 2: &apos;c&apos; };
 console.log(Object.values(obj));  // <i>&lbrack;&apos;a&apos;, &apos;b&apos;, &apos;c&apos;&rbrack;</i>
 </pre>
-<p>
-<b>Note:</b>
-</p>
-<p>
-For browser support, please refer to this
+
+<p><b>Note:</b></p>
+
+<p>For browser support, please refer to this
 <a href="http://kangax.github.io/compat-table/es2016plus/#test-Object.values">
-link</a>
-</p>
+link</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch14">
-Chapter 14: Arithmetic (Math)
-</h2>
+<h2 id="ch14">Chapter 14: Arithmetic (Math)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch14-1">
-Section 14.1: Constants
-</h3>
+<h3 id="ch14-1">Section 14.1: Constants</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <table>
 <table border="1" style="width:200px">
@@ -10342,14 +10191,10 @@ Value of positive infinity (∞)
 </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch14-2">
-Section 14.2: Remainder / Modulus (%)
-</h3>
+<h3 id="ch14-2">Section 14.2: Remainder / Modulus (%)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The remainder / modulus operator (%) returns the remainder after
-(integer) division.
-</p>
+<p>The remainder / modulus operator (%) returns the remainder after (integer) division.</p>
+
 <pre>
 console.log( 42 &percnt;  10); // <i>2</i>
 console.log( 42 &percnt; &minus;10); // <i>2</i>
@@ -10358,42 +10203,36 @@ console.log(&minus;42 &percnt; &minus;10); // <i>-2</i>
 console.log(&minus; 40 &percnt;  10); // <i>-0</i>
 console.log( 40 &percnt;  10); // <i>0</i>
 </pre>
-<p>
-This operator returns the remainder left over when one operand is
+
+<p>This operator returns the remainder left over when one operand is
 divided by a second operand. When the first operand is a negative value,
 the return value will always be negative, and vice versa for positive
-values.
-</p>
-<p>
-In the example above, 10 can be subtracted four times from 42 before
+values.</p>
+
+<p>In the example above, 10 can be subtracted four times from 42 before
 there is not enough left to subtract again without it changing sign. The
-remainder is thus:42 - 4 * 10 = 2.
-</p>
-<p>
-The remainder operator may be useful for the following problems:
-</p>
+remainder is thus:42 - 4 * 10 = 2.</p>
+
+<p>The remainder operator may be useful for the following problems:</p>
+
 <ol type="1" start="1">
-<li>
-Test if an integer is (not) divisible by another number:<br/>
+  <li>Test if an integer is (not) divisible by another number:<br/>
 <pre>
   x &percnt; 4 == 0  // <i>true if x is divisible by 4</i>
   x &percnt; 2 == 0  // <i>true if x is even number</i>
   x &percnt; 2 != 0  // <i>true if x is odd number</i>
-  </pre>
-<p>
-Since 0 === -0, this also works for x &lt;= -0.
-</p>
+</pre>
+<p>Since 0 === -0, this also works for x &lt;= -0.</p>
 </li>
-<li>
-Implement cyclic increment/decrement of value within [0,) interval.
-</li>
+  <li>Implement cyclic increment/decrement of value within [0,) interval.</li>
 </ol>
+
 <!-- page 130 -->
-<p>
-Suppose that we need to increment integer value from 0 to (but not
+
+<p>Suppose that we need to increment integer value from 0 to (but not
 including) n, so the next value after n-1 become 0. This can be done by
-such pseudocode:
-</p>
+such pseudocode:</p>
+
 <pre>
 <b>var</b> n = &hellip;;  // <i>given n</i>
 <b>var</b> i = 0;
@@ -10405,12 +10244,12 @@ while(<b>true</b>) {
   // <i>update something with i</i>
 }
 </pre>
-<p>
-Now generalize the above problem and suppose that we need to allow to
+
+<p>Now generalize the above problem and suppose that we need to allow to
 both increment and decrement that value from 0 to (not including) n, so
 the next value after n-1 become 0 and the previous value before 0 become
-n-1.
-</p>
+n-1.</p>
+
 <pre>
 <b>var</b> n = &hellip;;  // <i>given n</i>
 <b>var</b> i = 0;
@@ -10418,13 +10257,12 @@ n-1.
   i = (i &plus; d &plus; n) &percnt; n;  // <i>we add n to (i+d) to ensure the sum is positive</i>
 }
 </pre>
-<p>
-Now we can call delta() function passing any integer, both positive and
-negative, as delta parameter.
-</p>
-<p>
-<b>Using modulus to obtain the fractional part of a number</b>
-</p>
+
+<p>Now we can call delta() function passing any integer, both positive and
+negative, as delta parameter.</p>
+
+<p><b>Using modulus to obtain the fractional part of a number</b></p>
+
 <pre>
 <b>var</b> myNum = 10 / 4;       // <i>2.5</i>
 <b>var</b> fraction = myNum &percnt; 1; // <i>0.5</i>
@@ -10432,85 +10270,75 @@ myNum = &minus;20 / 7;              // <i>-2.857142857142857</i>
 fraction = myNum &percnt; 1;        // <i>-0.857142857142857</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch14-3">
-Section 14.3: Rounding
-</h3>
+<h3 id="ch14-3">Section 14.3: Rounding</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<b>Rounding</b>
-</p>
-<p>
-Math.round() will round the value to the closest integer using <i>half
-round up</i> to break ties.
-</p>
+<p><b>Rounding</b></p>
+
+<p>Math.round() will round the value to the closest integer using <i>half
+round up</i> to break ties.</p>
+
 <pre>
 <b>var</b> a = Math.round(2.3);  // <i>a is now 2</i>
 <b>var</b> b = Math.round(2.7);  // <i>b is now 3</i>
 <b>var</b> c = Math.round(2.5);  // <i>c is now 3</i>
 </pre>
-<p>
-But
-</p>
+
+<p>But</p>
+
 <pre>
 <b>var</b> c = Math.round(&minus;2.7);  // <i>c is now -3</i>
 <b>var</b> c = Math.round(&minus;2.5);  // <i>c is now -2</i>
 </pre>
-<p>
-Note how -2.5 is rounded to -2. This is because half-way values are
+
+<p>Note how -2.5 is rounded to -2. This is because half-way values are
 always rounded up, that is they're rounded to the integer with the next
-higher value.
-</p>
+higher value.</p>
+
 <!-- page 131 -->
-<p>
-<b>Rounding up</b>
-</p>
-<p>
-Math.ceil() will round the value up.
-</p>
+
+<p><b>Rounding up</b></p>
+
+<p>Math.ceil() will round the value up.</p>
+
 <pre>
 <b>var</b> a = Math.ceil(2.3);  // <i>a is now 3</i>
 <b>var</b> b = Math.ceil(2.7);  // <i>b is now 3</i>
 </pre>
-<p>
-ceiling a negative number will round towards zero
-</p>
-<pre>
-<b>var</b> c = Math.ceil(&minus;1.1);  // <i>c is now 1</i>
-</pre>
-<p>
-<b>Rounding down</b>
-</p>
-<p>
-Math.floor() will round the value down.
-</p>
+
+<p>ceiling a negative number will round towards zero</p>
+
+<pre><b>var</b> c = Math.ceil(&minus;1.1);  // <i>c is now 1</i></pre>
+
+<p><b>Rounding down</b></p>
+
+<p>Math.floor() will round the value down.</p>
+
 <pre>
 <b>var</b> a = Math.floor(2.3);  // <i>a is now 2</i>
 <b>var</b> b = Math.floor(2.7);  // <i>b is now 2</i>
 </pre>
-<p>
-flooring a negative number will round it away from zero.
-</p>
+
+<p>flooring a negative number will round it away from zero.</p>
+
 <pre>
 <b>var</b> c = Math.floor(&minus;1.1);  // <i>c is now -1</i>
 </pre>
-<p>
-<b>Truncating</b>
-</p>
-<p>
-<b>Caveat</b>: using bitwise operators (except &gt;&gt;&gt;) only
-applies to numbers between −2147483649 and 2147483648.
-</p>
+
+<p><b>Truncating</b></p>
+
+<p><b>Caveat</b>: using bitwise operators (except &gt;&gt;&gt;) only
+applies to numbers between −2147483649 and 2147483648.</p>
+
 <pre>
  2.3 &vert; 0;                      // <i>2 (floor)</i>
 -2.3 &vert; 0;                      // <i>-2 (ceil)</i>
 <b>NaN</b> &vert; 0;                // <i>0</i>
 </pre>
-<h5>
-Version ≥ 6
-</h5>
-<p>
-Math.trunc()
-</p>
+
+<h5>Version ≥ 6</h5>
+
+<p>Math.trunc()</p>
+
 <pre>
 Math.trunc(2.3);           // <i>2 (floor)</i>
 Math.trunc(-2.3);          // <i>-2 (ceil)</i>
@@ -10518,16 +10346,14 @@ Math.trunc(2147483648.1);  // <i>2147483648 (floor)</i>
 Math.trunc(-2147483649.1); // <i>-2147483649 (ceil)</i>
 Math.trunc(<b>NaN</b>);    // <i>NaN</i>
 </pre>
-<p>
-<b>Rounding to decimal places</b>
-</p>
-<p>
-Math.floor, Math.ceil(), and Math.round() () can be used to round to a
-number of decimal places
-</p>
-<p>
-To round to 2 decimal places:
-</p>
+
+<p><b>Rounding to decimal places</b></p>
+
+<p>Math.floor, Math.ceil(), and Math.round() () can be used to round to a
+number of decimal places.</p>
+
+<p>To round to 2 decimal places:</p>
+
 <pre>
 <b>var</b> myNum = 2/3;    // <i>0.6666666666666666</i>
 <b>var</b> multiplier = 100;
@@ -10535,9 +10361,9 @@ To round to 2 decimal places:
 <b>var</b> b = Math.ceil (myNum &ast; multiplier) / multiplier; // <i>0.67</i>
 <b>var</b> c = Math.floor(myNum &ast; multiplier) / multiplier; // <i>0.66</i>
 </pre>
-<p>
-You can also round to a number of digits:
-</p>
+
+<p>You can also round to a number of digits:</p>
+
 <pre>
 <b>var</b> myNum = 10000/3;  // <i>3333.3333333333335</i>
 <b>var</b> multiplier = 1/100;
@@ -10546,9 +10372,9 @@ You can also round to a number of digits:
 <b>var</b> c = Math.floor(myNum &ast; multiplier) / multiplier; // <i>3300</i>
 </pre>
 <!-- page 132 -->
-<p>
-As a more usable function:
-</p>
+
+<p>As a more usable function:</p>
+
 <pre>
 // <i>value is the value to round</i>
 // <i>places if positive the number of decimal places to round to</i>
@@ -16184,9 +16010,7 @@ either of the callbacks are called. Hence, a callback function may be
 called even after the original function has returned.
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch29-4">
-Section 29.4: Callbacks and `this`
-</h3>
+<h3 id="ch29-4">Section 29.4: Callbacks and `this`</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>
 Often when using a callback you want access to a specific context.
@@ -16266,21 +16090,12 @@ arguments that were passed to the event on to the function.</p>
   </li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!-- <p align="left">
-  <img src="./images/image031.png"
-  title=" "
-  alt="."
-  style="border: 2px solid #000000; width:7.197in;" />
--->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch29-5">Section 29.5: Callback using Arrow function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using arrow function as callback function can reduce lines of code.</h4>
 <p>The default syntax for arrow function is</p>
 
-<pre>
-() =&gt; {}
-</pre>
+<pre>() =&gt; {}</pre>
 
 <p>This can be used as callbacks</p>
 
@@ -16296,9 +16111,7 @@ without arrow function, the code will look like this</p>
 <p>With arrow function, it can be reduced to</p>
 <!-- page 218 -->
 
-<pre>
-&lbrack;1,2,3,4,5&rbrack;.forEach(x =&gt; console.log(x));
-</pre>
+<pre>&lbrack;1,2,3,4,5&rbrack;.forEach(x =&gt; console.log(x));</pre>
 
 <p>Here the callback function <b>function(x){console.log(x))</b> is reduced
 to <b>x=&gt;console.log(x)</b>.</p>
@@ -16364,8 +16177,7 @@ target="_blank" rel="noopener noreferrer"> Null Object pattern</a>).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch30-1">Section 30.1: Recursive setTimeout</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>To repeat a function indefinitely, <b>setTimeout</b> can be called
-recursively:</p>
+<p>To repeat a function indefinitely, <b>setTimeout</b> can be called recursively:</p>
 
 <pre>
 <b>function</b> repeatingFunc() {
