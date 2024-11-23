@@ -4851,10 +4851,9 @@ the operands are not equal or if their types do not match.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-13">Section 10.13: List of Comparison Operators</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
-<table border="1" style="width:200px">
-<thead>
-<tr>
+  <table border="1" style="width:200px">
+    <thead>
+      <tr>
 <th>
 <b>Operator</b>
 </th>
@@ -8124,7 +8123,7 @@ If the end is a negative number, end = arr.length + end.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch13">Chapter 13: Objects</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table border="1" style="width:200px">
+<table border="1" style="width:500px">
   <thead>
     <tr>
       <th><b>Property</b></th>
@@ -8133,25 +8132,15 @@ If the end is a negative number, end = arr.length + end.
   </thead>
   <tbody>
     <tr>
-      <td>
-value
-</td>
-      <td>
-The value to assign to the property.
-</td>
-</tr>
-<tr>
-      <td>
-writable
-</td>
-      <td>
-Whether the value of the property can be changed or not.
-</td>
-</tr>
-<tr>
-      <td>
-enumerable
-</td>
+      <td>value</td>
+      <td>The value to assign to the property.</td>
+    </tr>
+    <tr>
+      <td>writable</td>
+      <td>Whether the value of the property can be changed or not.</td>
+    </tr>
+    <tr>
+      <td>enumerable</td>
       <td>Whether the property will be enumerated in <b>for in</b> loops or not.</td>
     </tr>
     <tr>
@@ -9338,207 +9327,101 @@ link</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-1">Section 14.1: Constants</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table>
 <table border="1" style="width:200px">
-<thead>
-<tr>
-<th>
-<b>Constants</b>
-</th>
-<th>
-<b>Description</b>
-</th>
-<th>
-<b>Approximate</b>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-Math.E
-</td>
-<td>
-Base of natural logarithm <i>e</i>
-</td>
-<td>
-2.718
-</td>
-</tr>
-<tr>
-<td>
-Math.LN10
-</td>
-<td>
-Natural logarithm of 10
-</td>
-<td>
-2.302
-</td>
-</tr>
-<tr>
-<td>
-Math.LN2
-</td>
-<td>
-Natural logarithm of 2
-</td>
-<td>
-0.693
-</td>
-</tr>
-<tr>
-<td>
-Math.Log10E
-</td>
-<td>
-Base 10 logarithm of <i>e</i>
-</td>
-<td>
-0.434
-</td>
-</tr>
-<tr>
-<td>
-Math.LOG2E
-</td>
-<td>
-Base 2 logarithm of <i>e</i>
-</td>
-<td>
-1.442
-</td>
-</tr>
-<tr>
-<td>
-</td>
-<td>
-Pi: the ratio of circle circumference to diameter (π)
-</td>
-<td>
-3.14
-</td>
-</tr>
-<tr>
-<td>
-Math.SQRT1_2
-</td>
-<td>
-Square root of 1/2
-</td>
-<td>
-0.707
-</td>
-</tr>
-<tr>
-<td>
-Math.SQRT2
-</td>
-<td>
-Square root of 2
-</td>
-<td>
-1.414
-</td>
-</tr>
-<tr>
-<td>
-Number.EPSILON
-</td>
-<td>
-Difference between one and the smallest value greater than one
-represntable as a Number
-</td>
-<td>
-2.2204460492503130808472633361816E-16
-</td>
-</tr>
-<tr>
-<td>
-Number.MAX_SAFE_INTEGER
-</td>
-<td>
-Largest interger n such that n and n + 1 are both exactly representable
-as a Number
-</td>
-<td>
-2^53 - 1
-</td>
-</tr>
-<tr>
-<td>
-Number.MAX_VALUE
-</td>
-<td>
-Largest possitive infinite value of Number
-</td>
-<td>
-1.79E+308
-</td>
-</tr>
-<tr>
-<td>
-Number.MIN_SAFE_INTEGER
-</td>
-<td>
-Smallest integer n such that n and n - 1 are both exactly representable
-as a Number
-</td>
-<td>
--(2^53 - 1)
-</td>
-</tr>
-<tr>
-<td>
-Number.MIN_VALUE
-</td>
-<td>
-Smallest positive value for Number
-</td>
-<td>
-5E-324
-</td>
-</tr>
-<tr>
-<td>
-Number.NEGATIVE_INFINITY
-</td>
-<td>
-Value of negative infinity (-∞)
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-Number.NEGATIVE_INFINITY
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-Number.POSITIVE_INFINITY
-</td>
-<td>
-Value of positive infinity (∞)
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-<b>Infinity
-</td>
-<td>
-Value of positive infinity (∞)
-</td>
-<td>
-</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th><b>Constants</b></th>
+      <th><b>Description</b></th>
+      <th><b>Approximate</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Math.E</td>
+      <td>Base of natural logarithm <i>e</i></td>
+      <td>2.718</td>
+    </tr>
+    <tr>
+      <td>Math.LN10</td>
+      <td>Natural logarithm of 10</td>
+      <td>2.302</td>
+    </tr>
+    <tr>
+      <td>Math.LN2</td>
+      <td>Natural logarithm of 2</td>
+      <td>0.693</td>
+    </tr>
+    <tr>
+      <td>Math.Log10E</td>
+      <td>Base 10 logarithm of <i>e</i></td>
+      <td>0.434</td>
+    </tr>
+    <tr>
+      <td>Math.LOG2E</td>
+      <td>Base 2 logarithm of <i>e</i></td>
+      <td>1.442</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Pi: the ratio of circle circumference to diameter (π)</td>
+      <td>3.14</td>
+    </tr>
+    <tr>
+      <td>Math.SQRT1_2</td>
+      <td>Square root of 1/2</td>
+      <td>0.707</td>
+    </tr>
+    <tr>
+      <td>Math.SQRT2</td>
+      <td>Square root of 2</td>
+      <td>1.414</td>
+    </tr>
+    <tr>
+      <td>Number.EPSILON</td>
+      <td>Difference between one and the smallest value greater than one representable as a Number</td>
+      <td>2.2204460492503130808472633361816E-16</td>
+    </tr>
+    <tr>
+      <td>Number.MAX_SAFE_INTEGER</td>
+      <td>Largest interger n such that n and n + 1 are both exactly representable as a Number</td>
+      <td>2^53 - 1</td>
+    </tr>
+    <tr>
+      <td>Number.MAX_VALUE</td>
+      <td>Largest possitive infinite value of Number</td>
+      <td>1.79E+308</td>
+    </tr>
+    <tr>
+      <td>Number.MIN_SAFE_INTEGER</td>
+      <td>Smallest integer n such that n and n - 1 are both exactly representable as a Number</td>
+      <td>-(2^53 - 1)</td>
+    </tr>
+    <tr>
+      <td>Number.MIN_VALUE</td>
+      <td>Smallest positive value for Number</td>
+      <td>5E-324</td>
+    </tr>
+    <tr>
+      <td>Number.NEGATIVE_INFINITY</td>
+      <td>Value of negative infinity (-∞)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Number.NEGATIVE_INFINITY</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Number.POSITIVE_INFINITY</td>
+      <td>Value of positive infinity (∞)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><b>Infinity</td>
+      <td>Value of positive infinity (∞)</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-2">Section 14.2: Remainder / Modulus (%)</h3>
@@ -15669,7 +15552,7 @@ clearTimeout(timeout);  // <i>The timeout will no longer be executed</i>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch31">Chapter 31: Regular expressions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table border="1" style="width:200px">
+<table border="1" style="width:500px">
   <thead>
     <tr>
       <th>Flags</th>
@@ -16123,7 +16006,7 @@ document.cookie = name &plus; &quot;=; expires=&quot; &plus; expiry.toGMTString(
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch33">Chapter 33: Web Storage</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table border="1" style="width:200px">
+<table border="1" style="width:500px">
   <thead>
     <tr>
       <th><b>Parameter</b></th>
@@ -16173,7 +16056,7 @@ console.log(JSON.parse(localStorage.getItem(&apos;players&apos;)));
 
 <p>Mobile browsers:</p>
 
-<table border="1" style="width:200px">
+<table border="1" style="width:500px">
   <thead>
     <tr>
       <th><b>Browser</b></th>
@@ -16497,82 +16380,49 @@ item.setAttribute(&quot;data-dial-code&quot;, &quot;33&quot;);
 </pre>
 <!-- page 234 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch35">
-Chapter 35: JSON
-</h2>
+<h2 id="ch35">Chapter 35: JSON</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table border="1" style="width:200px">
-<thead>
-<tr>
-<th>
-<b>Parameter</b>
-</th>
-<th>
-<b>Details</b>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<b>JSON.parse</b>
-</td>
-<td>
-<b>Parse a JSON string</b>
-</td>
-</tr>
-<tr>
-<td>
-input(string)
-</td>
-<td>
-JSON string to be parsed.
-</td>
-</tr>
-<tr>
-<td>
-reviver(function)
-</td>
-<td>
-Presribes a transformation for the input JSON string.
-</td>
-</tr>
-<tr>
-<td>
-<b>JSON.stringify</b>
-</td>
-<td>
-<b>Serialize a serializable value</b>
-</td>
-</tr>
-<tr>
-<td>
-value(string)
-</td>
-<td>
-Value to be serialized according to the JSON specification.
-</td>
-</tr>
-<tr>
-<td>
-replacer(function or String[] or Number[])
-</td>
-<td>
-Selectively includes certain properties of the value object.
-</td>
-</tr>
-<tr>
-<td>
-space(String or Number)
-</td>
-<td>
-If a number is provided, then space number of whitespaces will be
-inserted of readability. If a string is provided, the string(first 10
-chars) will be used as whitespace.
-</td>
-</tr>
-</tbody>
+<table border="1" style="width:500px">
+  <thead>
+    <tr>
+      <th><b>Parameter</b></th>
+      <th><b>Details</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>JSON.parse</b></td>
+      <td><b>Parse a JSON string</b></td>
+    </tr>
+    <tr>
+      <td>input(string)</td>
+      <td>JSON string to be parsed.</td>
+    </tr>
+    <tr>
+      <td>reviver(function)</td>
+      <td>Presribes a transformation for the input JSON string.</td>
+    </tr>
+    <tr>
+      <td><b>JSON.stringify</b></td>
+      <td><b>Serialize a serializable value</b></td>
+    </tr>
+    <tr>
+      <td>value(string)</td>
+      <td>Value to be serialized according to the JSON specification.</td>
+    </tr>
+    <tr>
+      <td>replacer(function or String[] or Number[])</td>
+      <td>Selectively includes certain properties of the value object.</td>
+    </tr>
+    <tr>
+      <td>space(String or Number)</td>
+      <td>If a number is provided, then space number of whitespaces will be
+	    inserted of readability. If a string is provided, the string(first 10
+		chars) will be used as whitespace.</td>
+    </tr>
+  </tbody>
 </table>
+
 <p>
 JSON (JavaScript Object Notation) is a lightweight data-interchange
 format. It is easy for humans to read and write and easy for machines to
@@ -17433,7 +17283,7 @@ console.log(testEnum.One);  // <i>1 will be logged</i>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch38">Chapter 38: Map</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table border="1" style="width:200px">
+<table border="1" style="width:500px">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -17676,7 +17526,7 @@ is guaranteed.</p>
 
 <p>The following unary operators are available:</p>
 
-<table border="1" style="width:200px">
+<table border="1" style="width:500px">
   <thead>
     <tr>
       <th><b>Operator</b></th>
@@ -17726,7 +17576,7 @@ string.</p>
 
 <p>These are the possible return values from <b>typeof</b>:</p>
 
-<table border="1" style="width:200px">
+<table border="1" style="width:500px">
   <thead>
     <tr>
       <th><b>Type</b></th>
@@ -19569,7 +19419,7 @@ request.onerror = <b>function</b>() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch43">Chapter 43: Set</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table border="1" style="width:200px">
+<table border="1" style="width:500px">
   <thead>
     <tr>
       <th><b>Parameter</b></th>
@@ -19960,103 +19810,74 @@ clicks OK. (in particular, the timers which were set with setInterval()
 or setTimeout() don't tick either). The alert box only works in
 browsers, and its design cannot be modified.
 </p>
-<table border="1" style="width:200px">
-<thead>
-<tr>
-<th>
-Parameter
-</th>
-<th>
-Description
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-message
-</td>
-<td>
-Required. Specifies the text to display in the alert box, or an object
-converted into a string and displayed.
-</td>
-</tr>
-</tbody>
+
+<table border="1" style="width:500px">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>message</td>
+      <td>Required. Specifies the text to display in the alert box, or an object 
+	    converted into a string and displayed.</td>
+    </tr>
+  </tbody>
 </table>
-<p>
-<b>Return value</b>
-</p>
-<p>
-alert function doesn't return any value
-</p>
+
+<p><b>Return value</b></p>
+
+<p>alert function doesn't return any value</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch44-5">
-Section 44.5: Usage of prompt()
-</h3>
+<h3 id="ch44-5">Section 44.5: Usage of prompt()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Prompt will display a dialog to the user requesting their input. You can
+<p>Prompt will display a dialog to the user requesting their input. You can
 provide a message that will be placed above the text field. The return
-value is a string representing the input provided by the user.
-</p>
+value is a string representing the input provided by the user.</p>
+
 <pre>
 <b>var</b> name = prompt(&quot;What&apos;s your name?&quot;);
 console.log(&quot;Hello, &quot; &plus; name);
 </pre>
-<p>
-You can also pass prompt() a second parameter, which will be displayed
-as the default text in the prompt's text field.
-</p>
+
+<p>You can also pass prompt() a second parameter, which will be displayed
+as the default text in the prompt's text field.</p>
+
 <pre>
 <b>var</b> name = prompt(&apos;What<b>&bsol;</b>&apos;s your name?&apos;, &apos; Name&hellip;&apos;);
 console.log(&apos;Hello, &apos; &plus; name);
 </pre>
-<table border="0" style="width:200px">
-<thead>
-<tr>
-<th>
-Parameter
-</th>
-<th>
-Description
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-message
-</td>
-<td>
-Required. Text to display above the text field of the prompt.
-</td>
-</tr>
-<tr>
-<td>
-default
-</td>
-<td>
-Optional. Default text to display in the text field when the prompt is
-diplayed.
-</td>
-</tr>
-</tbody>
+
+<table border="0" style="width:500px">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>message</td>
+      <td>Required. Text to display above the text field of the prompt.</td>
+    </tr>
+    <tr>
+      <td>default</td>
+      <td>Optional. Default text to display in the text field when the prompt is
+	    diplayed.</td>
+    </tr>
+  </tbody>
 </table>
 <!-- page 283 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch45">
-Chapter 45: execCommand and contenteditable
-</h2>
+<h2 id="ch45">Chapter 45: execCommand and contenteditable</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table style="border: none; width:200px">
-<thead>
-<tr>
-<th>
-<b>commandId</b>
-</th>
-<th>
-<b>value</b>
-</th>
+<table style="border: none; width:500px">
+  <thead>
+    <tr>
+      <th><b>commandId</b></th>
+      <th><b>value</b></th>
 </tr>
 </thead>
 <tbody>
@@ -20340,78 +20161,61 @@ useCSS
 </table>
 <!-- page 284 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch45-1">
-Section 45.1: Listening to Changes of contenteditable
-</h3>
+<h3 id="ch45-1">Section 45.1: Listening to Changes of contenteditable</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Events that work with most form elements (e.g., change, keydown, keyup,
-keypress) do not work with contenteditable.
-</p>
-<p>
-Instead, you can listen to changes of contenteditable contents with the
+<p>Events that work with most form elements (e.g., change, keydown, keyup,
+keypress) do not work with contenteditable.</p>
+
+<p>Instead, you can listen to changes of contenteditable contents with the
 input event. Assuming contenteditableHtmlElement is a JS DOM object that
-is contenteditable:
-</p>
+is contenteditable:</p>
+
 <pre>
 contenteditableHtmlElement.addEventListener(&quot;input&quot;, <b>function</b>() {
   console.log(&quot;contenteditable element changed&quot;);
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch45-2">
-Section 45.2: Getting started
-</h3>
+<h3 id="ch45-2">Section 45.2: Getting started</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The HTML attribute contenteditable provides a simple way to turn a HTML
-element into a user-editable area
-</p>
+<p>The HTML attribute contenteditable provides a simple way to turn a HTML
+element into a user-editable area</p>
+
 <pre>
 <b>&lt;</b><b>div</b> contenteditable<b>&gt;</b>You can <b>&lt;</b><b>b</b><b>&gt;</b>edit<b>&lt;</b><b>/b</b><b>&gt;</b> me!<b>&lt;</b><b>/div</b><b>&gt;</b>
 </pre>
-<p>
-<b>Native Rich-Text editing</b>
-</p>
-<p>
-Using <b>JavaScript</b> and
+
+<p><b>Native Rich-Text editing</b></p>
+
+<p>Using <b>JavaScript</b> and
 <a href="https://w3c.github.io/editing/execCommand.html" 
 target="_blank" rel="noopener noreferrer">execCommandW3C</a> you can
 additionally pass more editing features to the currently focused
 contenteditable element (specifically at the caret position or
-selection).
-</p>
-<p>
-The execCommand function method accepts 3 arguments document.
-</p>
-<pre>
-document.execCommand(commandId, showUI, value)
-</pre>
+selection).</p>
+
+<p>The execCommand function method accepts 3 arguments document.</p>
+
+<pre>document.execCommand(commandId, showUI, value)</pre>
+
 <ul>
-<li>
-commandId String. from the list of available **<i>commandId</i>**s<br/>
-(see: <i><b>Parameters</b></i>→<i>commandId</i>)
-</li>
-<li>
-showUI Boolean (not implemented. Use <b>false</b>)
-</li>
-<li>
-value String If a command expects a command-related String
-<i><b>value</b></i>, otherwise "".<br/> (see:
-<i><b>Parameters</b></i>→<i>value</i>)
-</li>
+  <li>commandId String. from the list of available <b><i>commandId</i></b>s<br/>
+    (see: <i><b>Parameters</b></i>→<i>commandId</i>)</li>
+  <li>showUI Boolean (not implemented. Use <b>false</b>)</li>
+  <li>value String If a command expects a command-related String
+    <i><b>value</b></i>, otherwise "".<br/> (see: <i><b>Parameters</b></i>→<i>value</i>)</li>
 </ul>
-<p>
-Example using the "bold" <b>command</b> and "formatBlock" (where a
-<b>value</b> is expected):
-</p>
+
+<p>Example using the "bold" <b>command</b> and "formatBlock" (where a
+<b>value</b> is expected):</p>
+
 <pre>
 document.execCommand(&quot;bold&quot;, <b>false</b>, &quot;&quot;); // <i>Make selected text bold</i>
 document.execCommand(&quot;formatBlock&quot;, <b>false</b>, &quot;H2&quot;); // <i>Make selected text Block-level &lt;h2&gt;</i>
 </pre>
-<p>
-<b>Quick Start Example:</b>
-</p>
+
+<p><b>Quick Start Example:</b></p>
+
 <pre>
 <b>&lt;button</b>data-edit=&quot;bold&quot;<b>&gt;&lt;b&gt;</b>B<b>&lt;/b&gt;&lt;/button&gt;</b>
 <b>&lt;button</b>data-edit=&quot;italic&quot;<b>&gt;&lt;i&gt;</b>I<b>&lt;/i&gt;&lt;/button&gt;</b>
@@ -20434,32 +20238,32 @@ function edit(event) {
 }
 <b>&lt;</b><b>script</b><b>&gt;</b>
 </pre>
+
 <!-- page 285 -->
-<a href="https://jsfiddle.net/RokoCB/az7f38w7/" 
+
+<p><a href="https://jsfiddle.net/RokoCB/az7f38w7/" 
 target="_blank" rel="noopener noreferrer">jsFiddle demo</a>
 <a href="https://jsfiddle.net/RokoCB/yvshdr4q/" 
 target="_blank" rel="noopener noreferrer">Basic Rich-Text editor example
-(Modern browsers)</a>
-<p>
-<b>Final thoughts</b>
-</p>
-<p>
-Even being present for a long time (IE6), implementations and behaviors
+(Modern browsers)</a><p>
+
+<p><b>Final thoughts</b></p>
+
+<p>Even being present for a long time (IE6), implementations and behaviors
 of execCommand vary from browser to browser making "building a
 Fully-featured and cross-browser compatible WYSIWYG editor" a hard task
-to any experienced JavaScript developer.
-</p>
-<p>
-Even if not yet fully standardized you can expect pretty decent results
+to any experienced JavaScript developer.</p>
+
+<p>Even if not yet fully standardized you can expect pretty decent results
 on the newer browsers like <b>Chrome, Firefox, Edge</b>. If you need
 <i>better</i> support for other browsers and more features like
 HTMLTable editing etc. a rule of thumbs is to look for an <b>already
-existent</b> and robust <b>Rich-Text</b> editor.
-</p>
+existent</b> and robust <b>Rich-Text</b> editor.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch45-3">Section 45.3: Copy to clipboard from textarea using execCommand("copy")</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Example:</p>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
@@ -20482,23 +20286,19 @@ existent</b> and robust <b>Rich-Text</b> editor.
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<p>
-document.execCommand("copy") copies the current selection to the
-clipboard
-</p>
+
+<p>document.execCommand("copy") copies the current selection to the clipboard</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch45-4">Section 45.4: Formatting</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Users can add formatting to contenteditable documents or elements using
+<p>Users can add formatting to contenteditable documents or elements using
 their browser's features, such as common keyboard shortcuts for
 formatting ( Ctrl-B for <b>bold</b>, Ctrl-I for <i>italic</i>, etc.) or
-by dragging and dropping images, links, or markup from the clipboard.
-</p>
-<p>
-Additionally, developers can use JavaScript to apply formatting to the
-current selection (highlighted text).
-</p>
+by dragging and dropping images, links, or markup from the clipboard.</p>
+
+<p>Additionally, developers can use JavaScript to apply formatting to the
+current selection (highlighted text).</p>
+
 <pre>
 document.execCommand(&apos;bold&apos;, <b>false</b>, <b>null</b>); // <i>toggles bold formatting</i>
 document.execCommand(&apos;italic&apos;, <b>false</b>, <b>null</b>); // <i>toggles italic formatting</i>
@@ -20643,10 +20443,9 @@ Example
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch47-1">Section 47.1: Get some basic browser data and return it as a JSON object</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The following function can be used to get some basic information about
-the current browser and return it in JSON format.
-</p>
+<p>The following function can be used to get some basic information about
+the current browser and return it in JSON format.</p>
+
 <pre>
 <b>function</b> getBrowserInfo() {
   <b>var</b>
@@ -20687,38 +20486,27 @@ the current browser and return it in JSON format.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch48-1">Section 48.1: Introduction</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The BOM (Browser Object Model) contains objects that represent the
+<p>The BOM (Browser Object Model) contains objects that represent the
 current browser window and components; objects that model things like
-<i>history, device's screen,</i> etc
-</p>
-<p>
-The topmost object in BOM is the window object, which represents the
-current browser window or tab.
-</p>
+<i>history, device's screen,</i> etc.</p>
+
+<p>The topmost object in BOM is the window object, which represents the
+current browser window or tab.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 34. bom (browser object model) (290) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
-<p><img src="/images/image034.png"
+<img src="/images/image034.png"
   title="BOM (Browser Object Model)"
   alt="BOM (Browser Object Model)"
-  style="border: 2px solid #000000; width:6in;" /></p>
+  style="border: 2px solid #000000; width:6in;" />
+</p>
+
 <ul>
-<li>
-<b>Document:</b> represents current web page.
-</li>
-<li>
-<b>History:</b> represents pages in browser history.
-</li>
-<li>
-<b>Location:</b> represents URL of current page.
-</li>
-<li>
-<b>Navigator:</b> represents information about browser.
-</li>
-<li>
-<b>Screen:</b> represents device's display information.
-</li>
+  <li><b>Document:</b> represents current web page.</li>
+  <li><b>History:</b> represents pages in browser history.</li>
+  <li><b>Location:</b> represents URL of current page.</li>
+  <li><b>Navigator:</b> represents information about browser.</li>
+  <li><b>Screen:</b> represents device's display information.</li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch48-2">Section 48.2: Window Object Properties</h3>
@@ -20727,7 +20515,7 @@ current browser window or tab.
 
 <!-- page 291 -->
 
-<table border="1" style="width:200px">
+<table border="1" style="width:500px">
   <thead>
     <tr>
       <th><b>Property</b></th>
@@ -20787,9 +20575,7 @@ current browser window or tab.
 </table>
 <!-- page 291 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch48-3">
-Section 48.3: Window Object Methods
-</h3>
+<h3 id="ch48-3">Section 48.3: Window Object Methods</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The most important object in the is the window object. It helps in
 accessing information about the browser and its components. To access
@@ -20925,8 +20711,7 @@ entry points into JavaScript code, which the event loop invokes:</p>
 
 <br/>
 
-<p>
-Each turn of the event loop is responsible for many things; only some of
+<p>Each turn of the event loop is responsible for many things; only some of
 them will invoke these JavaScript tasks. For full details,
 <a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop-processing-model"
  target="_blank" rel="noopener noreferrer">see the HTML
@@ -22923,65 +22708,51 @@ identifier).
 </p>
 <!-- page 324 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch57-5">
-Section 57.5: Importing named members with aliases
-</h3>
+<h3 id="ch57-5">Section 57.5: Importing named members with aliases</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Sometimes you may encounter members that have really long member names,
+<p>Sometimes you may encounter members that have really long member names,
 such as thisIsWayTooLongOfAName(). In this case, you can import the
-member and give it a shorter name to use in your current module:
-</p>
+member and give it a shorter name to use in your current module:</p>
+
 <pre>
 import {thisIsWayTooLongOfAName as shortName} from &apos;module&apos;
 shortName()
 </pre>
-<p>
-You can import multiple long member names like this:
-</p>
+
+<p>You can import multiple long member names like this:</p>
+
 <pre>
 import {thisIsWayTooLongOfAName as shortName, thisIsAnotherLongNameThatShouldNotBeUsed as
 otherName} from &apos;module&apos;
 shortName()
 console.log(otherName)
 </pre>
-<p>
-And finally, you can mix import aliases with the normal member import:
-</p>
+
+<p>And finally, you can mix import aliases with the normal member import:</p>
+
 <pre>
 import {thisIsWayTooLongOfAName as shortName, PI} from &apos;module&apos;
 shortName()
 console.log(PI)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch57-6">
-Section 57.6: Importing with side effects
-</h3>
+<h3 id="ch57-6">Section 57.6: Importing with side effects</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Sometimes you have a module that you only want to import so its
+<p>Sometimes you have a module that you only want to import so its
 top-level code gets run. This is useful for polyfills, other globals, or
-configuration that only runs once when your module is imported.
-</p>
-<p>
-Given a file named test.js:
-</p>
-<pre>
-console.log(&apos;Initializing&hellip;&apos;)
-</pre>
-<p>
-You can use it like this:
-</p>
-<pre>
-import &apos;./test&apos;
-</pre>
-<p>
-This example will print Initializing… to the console.
-</p>
+configuration that only runs once when your module is imported.</p>
+
+<p>Given a file named test.js:</p>
+
+<pre>console.log(&apos;Initializing&hellip;&apos;)</pre>
+
+<p>You can use it like this:</p>
+
+<pre>import &apos;./test&apos;</pre>
+
+<p>This example will print Initializing… to the console.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch57-7">
-Section 57.7: Exporting multiple named members
-</h3>
+<h3 id="ch57-7">Section 57.7: Exporting multiple named members</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 <b>const</b> namedMember1 = &hellip;
@@ -22991,32 +22762,24 @@ export { namedMember1, namedMember2, namedMember3 }
 </pre>
 <!-- page 325 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch58">
-Chapter 58: Screen
-</h2>
+<h2 id="ch58">Chapter 58: Screen</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch58-1">
-Section 58.1: Getting the screen resolution
-</h3>
+<h3 id="ch58-1">Section 58.1: Getting the screen resolution</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-To get the physical size of the screen (including window chrome and
-menubar/launcher):
-</p>
+<p>To get the physical size of the screen (including window chrome and
+menubar/launcher):</p>
+
 <pre>
 <b>var</b> width = window.screen.width,
     height = window.screen.height;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch58-2">
-Section 58.2: Getting the “available” area of the screen
-</h3>
+<h3 id="ch58-2">Section 58.2: Getting the “available” area of the screen</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-To get the “available” area of the screen (i.e. not including any bars
+<p>To get the “available” area of the screen (i.e. not including any bars
 on the edges of the screen, but including window chrome and other
-windows:
-</p>
+windows:</p>
+
 <pre>
 <b>var</b> availableArea = {
   pos: {
@@ -23030,14 +22793,11 @@ windows:
 };
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch58-3">
-Section 58.3: Page width and height
-</h3>
+<h3 id="ch58-3">Section 58.3: Page width and height</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-To get current page width and height (for any browser), e.g. when
-programming responsiveness:
-</p>
+<p>To get current page width and height (for any browser), e.g. when
+programming responsiveness:</p>
+
 <pre>
 <b>function</b> pageWidth() {
   <b>return</b> window.innerWidth != <b>null</b>? window.innerWidth : document.documentElement &&
@@ -23051,46 +22811,35 @@ document.documentElement.clientHeight ? document.documentElement.clientHeight : 
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch58-4">
-Section 58.4: Window innerWidth and innerHeight Properties
-</h3>
+<h3 id="ch58-4">Section 58.4: Window innerWidth and innerHeight Properties</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Get the window height and width
-</p>
+<p>Get the window height and width</p>
+
 <pre>
 <b>var</b> width = window.innerWidth
 <b>var</b> height = window.innerHeight
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch58-5">
-Section 58.5: Getting color information about the screen
-</h3>
+<h3 id="ch58-5">Section 58.5: Getting color information about the screen</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-To determine the color and pixel depths of the screen:
-</p>
+<p>To determine the color and pixel depths of the screen:</p>
+
 <pre>
 <b>var</b> pixelDepth = window.screen.pixelDepth,
   colorDepth = window.screen.colorDepth;
 </pre>
 <!-- page 326 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch59">
-Chapter 59: Variable coercion/conversion
-</h2>
+<h2 id="ch59">Chapter 59: Variable coercion/conversion</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch59-1">
-Section 59.1: Double Negation (!!x)
-</h3>
+<h3 id="ch59-1">Section 59.1: Double Negation (!!x)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The double-negation !! is not a distinct JavaScript operator nor a
+<p>The double-negation !! is not a distinct JavaScript operator nor a
 special syntax but rather just a sequence of two negations. It is used
 to convert the value of any type to its appropriate <b>true</b> or
 <b>false</b> Boolean value depending on whether it is <i>truthy</i> or
-<i>falsy</i>.
-</p>
+<i>falsy</i>.</p>
+
 <pre>
 !!1       // <i>true</i>
 !!0       // <i>false</i>
@@ -23098,6 +22847,7 @@ to convert the value of any type to its appropriate <b>true</b> or
 !!{}      // <i>true</i>
 !!&lbrack;&rbrack;  // <i>true</i>
 </pre>
+
 <P>
 The first negation converts any value to <b>false</b> if it is
 <i>truthy</i> and to <b>true</b> if is <i>falsy</i>. The second negation
@@ -23105,18 +22855,20 @@ then operates on a normal Boolean value. Together they convert any
 <i>truthy</i> value to <b>true</b> and any <i>falsy</i> value to
 <b>false</b>.
 </p>
+
 <p>
 However, many professionals consider the practice of using such syntax
 unacceptable and recommend simpler to read alternatives, even if they're
 longer to write:
 </p>
+
 <pre>
 x !== 0 // <i>instead of !!x in case x is a number</i>
 x != <b>null</b> // <i>instead of !!x in case x is an object, a string, or an undefined</i>
 </pre>
-<p>
-Usage of x is considered poor practice due to the following reasons:
-</p>
+
+<p>Usage of x is considered poor practice due to the following reasons:</p>
+
 <ol type="1">
 <li>
 Stylistically it may look like a distinct special syntax whereas in fact
@@ -23135,16 +22887,13 @@ explicit conversion of type.
 </li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch59-2">
-Section 59.2: Implicit conversion
-</h3>
+<h3 id="ch59-2">Section 59.2: Implicit conversion</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-JavaScript will try to automatically convert variables to more
+<p>JavaScript will try to automatically convert variables to more
 appropriate types upon use. It's usually advised to do conversions
 explicitly (see other examples), but it's still worth knowing what
-conversions take place implicitly.
-</p>
+conversions take place implicitly.</p>
+
 <pre>
 &quot;1&quot; + 5 === &quot;15&quot; // <i>5 got converted to string.</i>
 1 + &quot;5&quot; === &quot;15&quot; // <i>1 got converted to string.</i>
@@ -23154,23 +22903,21 @@ alert({}) // <i>alerts &quot;&lbrack;object Object&rbrack;&quot;, {} got convert
 <b>if</b> (&quot;hello&quot;) {} // <i>runs, &quot;hello&quot; got converted to boolean.</i>
 <b>new</b> Array(3) === &quot;,,&quot;; // <i>Return true. The array is converted to string - Array.toString();</i>
 </pre>
-<p>
-Some of the trickier parts:
-</p>
+
+<p>Some of the trickier parts:</p>
+
 <pre>
 !&quot;0&quot; === <b>false</b> // <i>&quot;0&quot; got converted to true, then reversed.</i>
 !&quot;false&quot; === <b>false</b> // <i>&quot;false&quot; converted to true, then reversed.</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch59-3">
-Section 59.3: Converting to boolean
-</h3>
+<h3 id="ch59-3">Section 59.3: Converting to boolean</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Boolean( … ) will convert any data type into either <b>true</b> or
-<b>false</b>.
-</p>
+<p>Boolean( … ) will convert any data type into either <b>true</b> or
+<b>false</b>.</p>
+
 <!-- page 327 -->
+
 <pre>
 Boolean(&quot;true&quot;) === <b>true</b>
 Boolean(&quot;false&quot;) === <b>true</b>
@@ -23183,13 +22930,12 @@ Boolean(&quot;0&quot;) === <b>true</b>
 Boolean({}) === <b>true</b>
 Boolean(&lbrack;&rbrack;) === <b>true</b>
 </pre>
-<p>
-Empty strings and the number 0 will be converted to false, and all
-others will be converted to true.
-</p>
-<p>
-A shorter, but less clear, form:
-</p>
+
+<p>Empty strings and the number 0 will be converted to false, and all
+others will be converted to true.</p>
+
+<p>A shorter, but less clear, form:</p>
+
 <pre>
 !!&quot;true&quot; === <b>true</b>
 !!&quot;false&quot; === <b>true</b>
@@ -23202,16 +22948,15 @@ A shorter, but less clear, form:
 !!{} === <b>true</b>
 !!&lbrack;&rbrack; === <b>true</b>
 </pre>
-<p>
-This shorter form takes advantage of implicit type conversion using the
+
+<p>This shorter form takes advantage of implicit type conversion using the
 logical NOT operator twice, as described in
-http://stackoverflow.com/documentation/javascript/208/boolean-logic/3047/double-negation-x
-</p>
-<p>
-Here is the complete list of boolean conversions from the
+http://stackoverflow.com/documentation/javascript/208/boolean-logic/3047/double-negation-x</p>
+
+<p>Here is the complete list of boolean conversions from the
 <a href="http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf" target="_blank" rel="noopener noreferrer">
-ECMAScript specification</a>
-</p>
+ECMAScript specification</a></p>
+
 <ul>
 <li>
 if myArg of type <b>undefined</b> or <b>null</b> then Boolean(myArg) ===
@@ -23232,40 +22977,29 @@ the empty String (its length is zero); otherwise <b>true</b>
 if myArg of type symbol or object then Boolean(myArg) === <b>true</b>
 </li>
 </ul>
-<p>
-Values that get converted to <b>false</b> as booleans are called
+
+<p>Values that get converted to <b>false</b> as booleans are called
 <i>falsy</i> (and all others are called <i>truthy</i>). See Comparison
-Operations.
-</p>
+Operations.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch59-4">
-Section 59.4: Converting a string to a number
-</h3>
+<h3 id="ch59-4">Section 59.4: Converting a string to a number</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre>
-Number(&apos;0&apos;) === 0
-</pre>
-<p>
-Number('0') will convert the string ('0') into a number (0)
-</p>
-<p>
-A shorter, but less clear, form:
-</p>
-<pre>
-&plus;&apos;0&apos; === 0
-</pre>
-<p>
-The unary + operator does nothing to numbers, but converts anything else
-to a number. Interestingly, +(-12 ) === −12.
-</p>
-<pre>
-parseInt(&apos;0&apos;, 10) === 0
-</pre>
-<p>
-parseInt('0', 10) will convert the string ('0') into a number (0), don't
+<pre>Number(&apos;0&apos;) === 0</pre>
+
+<p>Number('0') will convert the string ('0') into a number (0)</p>
+
+<p>A shorter, but less clear, form:</p>
+
+<pre>&plus;&apos;0&apos; === 0</pre>
+
+<p>The unary + operator does nothing to numbers, but converts anything else
+to a number. Interestingly, +(-12 ) === −12.</p>
+
+<pre>parseInt(&apos;0&apos;, 10) === 0</pre>
+
+<p>parseInt('0', 10) will convert the string ('0') into a number (0), don't
 forget the second argument, which is radix. If not given, parseInt could
-convert string to wrong number.
-</p>
+convert string to wrong number.</p>
 <!-- page 328 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch59-5">Section 59.5: Converting a number to a string</h3>
@@ -31061,7 +30795,7 @@ final, float, short, double, native, throws, boolean, abstract,
 volatile, transient, and synchronized; it added <b>let</b> and
 yield.</p>
 
-<table border="1" style="width:200px">
+<table border="1" style="width:500px">
   <thead>
     <tr>
       <th><b>A-F</b></th>
@@ -31159,7 +30893,7 @@ eval and arguments are not reserved words but they act like it in <b>strict mode
 
 <p><b>ECMAScript 6 / ECMAScript 2015</b></p>
 
-<table border="1" style="width:200px">
+<table border="1" style="width:500px">
   <thead>
     <tr>
       <th><b>A-E</b></th>
@@ -31231,21 +30965,23 @@ eval and arguments are not reserved words but they act like it in <b>strict mode
 <p>The following are reserved as future keywords by the ECMAScript
 specification. They have no special functionality at present, but they
 might at some future time, so they cannot be used as identifiers.</p>
+
 <!-- page 461 -->
+
 <p>enum</p>
 
 <p>The following are only reserved when they are found in strict mode code:</p>
 
 <p>implements package public<br>
 interface private  `static'<br>
-<b>let</b>     protected</p>
+<b>let</b>nbsp;nbsp;nbsp;nbsp;protected</p>
 
 <p>Future reserved keywords in older standards.</p>
 
-<p>The following are reserved as future keywords by older ECMAScript specifications (ECMAScript 1 till
-3). 
+<p>The following are reserved as future keywords by older ECMAScript specifications 
+(ECMAScript 1 till 3).</p>
 
-<table border="1" style="width:200px">
+<table border="1" style="width:500px">
   <thead>
   </thead>
   <tbody>
@@ -31287,20 +31023,23 @@ as identifiers in ECMAScript.</p>
 <p>From the <a
 href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Mozilla
 Developer Network</a>.</p>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="chA-2">Section A.2: Identifiers &amp; Identifier Names</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>With regards to reserved words there is a small distinctions between the "Identifiers" used for the likes of variable or
-function names and the "Identifier Names" allowed as properties of composite data types.</p>
+<p>With regards to reserved words there is a small distinctions between the "Identifiers" 
+used for the likes of variable or function names and the "Identifier Names" allowed as 
+properties of composite data types.</p>
 
 <p>For example the following will result in an illegal syntax error:</p>
+
 <pre>
 var break = true;
 </pre>
+
 <blockquote>
 Uncaught SyntaxError: Unexpected token break
 </blockquote>
+
 <p>However the name is deemed valid as a property of an object (as of ECMAScript 5+):</p>
 
 <pre>
@@ -31313,6 +31052,7 @@ console.log(obj.break);
 <p>To quote from this answer:</p>
 
 <p>From the ECMAScript® 5.1 Language Specification:</p>
+
 <blockquote>
 Section 7.6
 
@@ -31322,6 +31062,7 @@ IdentifierName that is not a ReservedWord (see 7.6.1).
 </blockquote>
 
 <!-- page 462 -->
+
 <blockquote>
 <b>Syntax</b>
 
@@ -31330,6 +31071,7 @@ Identifier ::
 </blockquote>
 
 <p>By specification, a ReservedWord is:</p>
+
 <blockquote>
 Section 7.6.1
 
@@ -31343,8 +31085,10 @@ Keyword
 
 <p>This includes keywords, future keywords, null, and boolean literals. The full list of keywords are in Sections 7.6.1
 and literals are in Section 7.8.</p>
+
 <p>The above (Section 7.6) implies that IdentifierNames can be ReservedWords, and from the specification for object
 initializers:</p>
+
 <blockquote>
 Section 11.1.5
 
@@ -31357,6 +31101,7 @@ ObjectLiteral :
 </blockquote>
 
 <p>Where PropertyName is, by specification:</p>
+
 <blockquote>
 PropertyName :
   IdentifierName
@@ -31367,7 +31112,9 @@ PropertyName :
 <p>As you can see, a PropertyName may be an IdentifierName, thus allowing ReservedWords to be PropertyNames.
 That conclusively tells us that, by specification, it is allowed to have ReservedWords such as class and var as
 PropertyNames unquoted just like string literals or numeric literals.</p>
+
 <p>To read more, see Section 7.6 - Identifier Names and Identifiers.</p>
+
 <p><b>Note:</b> the syntax highlighter in this example has spotted the reserved word and still highlighted it. While the
 example is valid JavaScript developers can get caught out by some compiler / transpiler, linter and minifier tools
 that argue otherwise.</p>
