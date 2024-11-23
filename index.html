@@ -18363,204 +18363,122 @@ Chapter 40: Unary Operators
 Section 40.1: Overview
 </h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Unary operators are operators with only one operand. Unary operators are
+<p>Unary operators are operators with only one operand. Unary operators are
 more efficient than standard JavaScript function calls. Additionally,
 unary operators can not be overridden and therefore their functionality
-is guaranteed.
-</p>
-<p>
-The following unary operators are available:
-</p>
+is guaranteed.</p>
+
+<p>The following unary operators are available:</p>
+
 <table border="1" style="width:200px">
-<thead>
-<tr>
-<th>
-<b>Operator</b>
-</th>
-<th>
-<b>Operation</b>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<b>delete</b>
-</td>
-<td>
-The delete operator deletes a property from an object.
-</td>
-</tr>
-<tr>
-<td>
-<b>void</b>
-</td>
-<td>
-The void operator discards an expression’s return value.
-</td>
-</tr>
-<tr>
-<td>
-<b>typeof</b>
-</td>
-<td>
-The typeof operator determns the type of a given object.
-</td>
-</tr>
-<tr>
-<td>
-<b>+</b>
-</td>
-<td>
-The unary plus operator converts its operand to Number type.
-</td>
-<tr>
-<td>
-−
-</td>
-<td>
-The unary negation operator converts its operand to Number, then negates
-it.
-</td>
-</tr>
-<tr>
-<td>
-˜
-</td>
-<td>
-Bitwise NOT operator.
-</td>
-<tr>
-<td>
-!
-</td>
-<td>
-Logical NOT operator.
-</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th><b>Operator</b></th>
+      <th><b>Operation</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>delete</b></td>
+      <td>The delete operator deletes a property from an object.</td>
+    </tr>
+    <tr>
+      <td><b>void</b></td>
+      <td>The void operator discards an expression’s return value.</td>
+    </tr>
+    <tr>
+      <td><b>typeof</b></td>
+      <td>The typeof operator determns the type of a given object.</td>
+    </tr>
+    <tr>
+      <td><b>+</b></td>
+      <td>The unary plus operator converts its operand to Number type.</td>
+    <tr>
+      <td>−</td>
+      <td>The unary negation operator converts its operand to Number, then negates it.</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Bitwise NOT operator.</td>
+    <tr>
+      <td>!</td>
+      <td>Logical NOT operator.</td>
+    </tr>
+  </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch40-2">
-Section 40.2: The typeof operator
-</h3>
+<h3 id="ch40-2">Section 40.2: The typeof operator</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The <b>typeof</b> operator returns the data type of the unevaluated
-operand as a string.
-</p>
-<p>
-<b>Syntax:</b>
-</p>
-<P>
-<b>typeof</b> operand
-</p>
-<p>
-<b>Returns:</b>
-</p>
-<p>
-These are the possible return values from <b>typeof</b>:
-</p>
+<p>The <b>typeof</b> operator returns the data type of the unevaluated operand as a 
+string.</p>
+
+<p><b>Syntax:</b></p>
+
+<p><b>typeof</b> operand</p>
+
+<p><b>Returns:</b></p>
+
+<p>These are the possible return values from <b>typeof</b>:</p>
+
 <table border="1" style="width:200px">
-<thead>
-<tr>
-<th>
-<b>Type</b>
-</th>
-<th>
-<b>Return value</b>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-Undefined
-</td>
-<td>
-"undefined"
-</td>
-</tr>
-<tr>
-<td>
-Null
-</td>
-<td>
-"object"
-</td>
-</tr>
-<tr>
-<td>
-Boolean
-</td>
-<td>
-"boolean"
-</td>
-</tr>
-<tr>
-<td>
-Number
-</td>
-<td>
-"number"
-</td>
-</tr>
-<tr>
-<td>
-String
-</td>
-<td>
-"string"
-</td>
-</tr>
-<tr>
-<td>
-Symbol (ES6)
-</td>
-<td>
-"symbol"
-</td>
-</tr>
-<tr>
-<td>
-Function object
-</td>
-<td>
-"function"
-</td>
-</tr>
-<tr>
-<td>
-document.all
-</td>
-<td>
-"undefined"
-</td>
-</tr>
-<tr>
-<td>
-Any other object
-</td>
-<td>
-"object"
-</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th><b>Type</b></th>
+      <th><b>Return value</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Undefined</td>
+      <td>"undefined"</td>
+    </tr>
+    <tr>
+      <td>Null</td>
+      <td>object"</td>
+    </tr>
+   <tr>
+      <td>Boolean</td>
+      <td>"boolean"</td>
+    </tr>
+    <tr>
+      <td>Number</td>
+      <td>"number"</td>
+    </tr>
+    <tr>
+      <td>String</td>
+      <td>"string"</td>
+    </tr>
+    <tr>
+      <td>Symbol (ES6)</td>
+      <td>"symbol"</td>
+    </tr>
+    <tr>
+      <td>Function object</td>
+      <td>"function"</td>
+    </tr>
+    <tr>
+      <td>document.all</td>
+      <td>"undefined"</td>
+    </tr>
+    <tr>
+      <td>Any other object</td>
+      <td>"object"</td>
+    </tr>
+  </tbody>
 </table>
+
 <p><b>Type Return value</b></p>
-<p>
-The unusual behavior of document.all with the typeof operator with the
-<b>typeof</b> operator is from its former usage to detect legacy
-browsers.<br/> For more information, see
-<a href="http://stackoverflow.com/q/40643613/6388243" 
-target="_blank" rel="noopener noreferrer"> Why is document.all defined
-but typeof document.all returns "undefined"?</a>
-</p>
+
+<p>The unusual behavior of document.all with the typeof operator with the <b>typeof</b> 
+operator is from its former usage to detect legacy browsers.<br/> For more information, see
+<a href="http://stackoverflow.com/q/40643613/6388243" target="_blank" 
+rel="noopener noreferrer"> Why is document.all defined but typeof document.all 
+returns "undefined"?</a></p>
+
 <!-- page 252 -->
-<p>
-<b>Examples:</b>
-</p>
+
+<p><b>Examples:</b></p>
+
 <pre>
 // <i>returns &apos;number&apos;</i>
 <b>typeof</b> 3.14;
@@ -18598,64 +18516,49 @@ but typeof document.all returns "undefined"?</a>
 <b>typeof</b> Symbol.iterator;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch40-3">
-Section 40.3: The delete operator
-</h3>
+<h3 id="ch40-3">Section 40.3: The delete operator</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The <b>delete</b> operator deletes a property from an object.
-</p>
-<p>
-<b>Syntax:</b>
-</p>
+<p>The <b>delete</b> operator deletes a property from an object.</p>
+
+<p><b>Syntax:</b></p>
+
 <pre>
 <b>delete</b> object.property<br/><br/>
 <b>delete</b> object&lbrack;&apos;property&apos;&rbrack;
 </pre>
-<p>
-<b>Returns:</b>
-</p>
-<p>
-If deletion is successful, or the property did not exist:
-</p>
+
+<p><b>Returns:</b></p>
+
+<p>If deletion is successful, or the property did not exist:</p>
+
 <ul>
-<li>
-<b>true</b>
-</li>
+  <li><b>true</b></li>
 </ul>
-<p>
-If the property to be deleted is an own non-configurable property (can't
-be deleted):
-</p>
+
+<p>If the property to be deleted is an own non-configurable property (can't
+be deleted):</p>
+
 <ul>
-<li>
-<b>false</b> in non-strict mode.
-</li>
-<li>
-Throws an error in strict mode.
-</li>
+  <li><b>false</b> in non-strict mode.</li>
+  <li>Throws an error in strict mode.</li>
 </ul>
+
 <br/>
-<p>
-<b>Description</b>
-</p>
-<p>
-The <b>delete</b> operator does not directly free memory. It can
+<p><b>Description</b></p>
+
+<p>The <b>delete</b> operator does not directly free memory. It can
 indirectly free memory if the operation means all references to the
-property are gone.
-</p>
+property are gone.</p>
+
 <!-- page 253 -->
-<p>
-<b>delete</b> works on an object's properties. If a property with the
+<p><b>delete</b> works on an object's properties. If a property with the
 same name exists on the object's prototype chain, the property will be
-inherited from the prototype.
-</p>
-<p>
-<b>delete</b> does not work on variables or function names.
-</p>
-<p>
-<b>Examples:</b>
-</p>
+inherited from the prototype.</p>
+
+<p><b>delete</b> does not work on variables or function names.</p>
+
+<p><b>Examples:</b></p>
+
 <pre>
 // <i>Deleting a property</i>
 foo = 1;  // <i>a global variable is a property of &grave;window&grave;: &grave;window.foo&grave;</i>
@@ -18682,57 +18585,43 @@ console.log(foo);                      // <i>Object { } (No errors, nothing dele
 console.log(Math.PI);                  // <i>3.141592653589793 (Not deleted)</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch40-4">
-Section 40.4: The unary plus operator (+)
-</h3>
+<h3 id="ch40-4">Section 40.4: The unary plus operator (+)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The unary plus (+) precedes its operand <i>and evaluates</i> to its
+<p>The unary plus (+) precedes its operand <i>and evaluates</i> to its
 operand. It attempts to convert the operand to a number, if it isn't
-already.
-</p>
-<p>
-<b>Syntax:</b>
-</p>
+already.</p>
+
+<p><b>Syntax:</b></p>
+
 <pre>
 +expression
 </pre>
-<p>
-<b>Returns:</b>
-</p>
+
+<p><b>Returns:</b></p>
+
 <ul>
-<li>
-a Number.
-</li>
+  <li>a Number.</li>
 </ul>
+
 <br/>
-<p>
-<b>Description</b>
-</p>
-<p>
-The unary plus (+) operator is the fastest (and preferred) method of
-converting something into a number.
-</p>
-<p>
-It can convert:
-</p>
+
+<p><b>Description</b></p>
+
+<p>The unary plus (+) operator is the fastest (and preferred) method of
+converting something into a number.</p>
+
+<p>It can convert:</p>
+
 <ul>
-<li>
-string representations of integers (decimal or hexadecimal) and floats.
-</li>
-<li>
-booleans: <b>true</b>, <b>false</b>.
-</li>
-<li>
-<b>null</b>
-</li>
+  <li>string representations of integers (decimal or hexadecimal) and floats.</li>
+  <li>booleans: <b>true</b>, <b>false</b>.</li>
+  <li><b>null</b></li>
 </ul>
-<p>
-Values that can't be converted will evaluate to <b>NaN</b>.
-</p>
-<p>
-<b>Examples:</b>
-</p>
+
+<p>Values that can't be converted will evaluate to <b>NaN</b>.</p>
+
+<p><b>Examples:</b></p>
+
 <!-- page 254 -->
 <pre>
 &plus;42             // <i>42</i>
@@ -18746,91 +18635,79 @@ Values that can't be converted will evaluate to <b>NaN</b>.
 &plus;{}               // <i>NaN</i>
 &plus;<b>function</b>(){} // <i>NaN</i>
 </pre>
-<p>
-Note that attempting to convert an array can result in unexpected return
+
+<p>Note that attempting to convert an array can result in unexpected return
 values. In the background, arrays are first converted to their string
-representations:
-</p>
+representations:</p>
+
 <pre>
 &lbrack;&rbrack;.toString() === &apos;&apos;;
 &lbrack;1&rbrack;.toString() === &apos;1&apos;;
 &lbrack;1, 2&rbrack;.toString() === &apos;1,2&apos;;
 </pre>
-<p>
-The operator then attempts to convert those strings to numbers:
-</p>
+
+<p>The operator then attempts to convert those strings to numbers:</p>
+
 <pre>
 &plus;&lbrack;&rbrack;     // <i>0 ( === +&apos;&apos; )</i>
 &plus;&lbrack;1&rbrack;    // <i>1 ( === +&apos;1&apos; )</i>
 &plus;&lbrack;1, 2&rbrack; // <i>NaN ( === +&apos;1,2&apos; )</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch40-5">
-Section 40.5: The void operator
-</h3>
+<h3 id="ch40-5">Section 40.5: The void operator</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The <b>void</b> operator evaluates the given expression and then returns
-<b>undefined</b>.
-</p>
-<p>
-<b>Syntax:</b>
-</p>
+<p>The <b>void</b> operator evaluates the given expression and then returns
+<b>undefined</b>.</p>
+
+<p><b>Syntax:</b></p>
+
 <pre>
 <b>void</b> expression
 </pre>
-<p>
-<b>Returns:</b>
-</p>
+
+<p><b>Returns:</b></p>
+
 <ul>
-<li>
-<b>undefined</b>
-</li>
+  <li><b>undefined</b></li>
 </ul>
 <br/>
-<p>
-<b>Description</b>
-</p>
-<p>
-The <b>void</b> operator is often used to obtain the <b>undefined</b>
+
+<p><b>Description</b></p>
+
+<p>The <b>void</b> operator is often used to obtain the <b>undefined</b>
 primitive value, by means of writing void 0 or void(0). Note that
-<b>void</b> is an operator, not a function, so () is not required.
-</p>
-<p>
-Usually the result of a <b>void</b> expression and <b>undefined</b> can
-be used interchangeably.
-</p>
-<p>
-However, in older versions of ECMAScript, <b>window.undefined</b> could
+<b>void</b> is an operator, not a function, so () is not required.</p>
+
+<p>Usually the result of a <b>void</b> expression and <b>undefined</b> can
+be used interchangeably.</p>
+
+<p>However, in older versions of ECMAScript, <b>window.undefined</b> could
 be assigned any value, and it is still possible to use <b>undefined</b>
 as name for function parameters variables inside functions, thus
-disrupting other code that relies on the value of <b>undefined</b>.
-</p>
-<p>
-<b>void</b> will always yield the <i>true</i> <b>undefined</b> value
-though.
-</p>
-<p>
-<b>void</b> 0 is also commonly used in code minification as a shorter
+disrupting other code that relies on the value of <b>undefined</b>.</p>
+
+<p><b>void</b> will always yield the <i>true</i> <b>undefined</b> value
+though.</p>
+
+<p><b>void</b> 0 is also commonly used in code minification as a shorter
 way of writing <b>undefined</b>. In addition, it's probably safer as
-some other code could've tampered with <b>window.undefined</b>.
-</p>
-<p>
-<b>Examples:</b>
-</p>
-<p>
-Returning <b>undefined</b>:
-</p>
+some other code could've tampered with <b>window.undefined</b>.</p>
+
+<p><b>Examples:</b></p>
+
+<p>Returning <b>undefined</b>:</p>
+
 <pre>
 <b>function</b> foo() {
   <b>return</b> <b>void</b> 0;
 }
 console.log(foo());  // <i>undefined</i>
 </pre>
+
 <!-- page 255 -->
-<p>
-Changing the value of <b>undefined</b> inside a certain scope:
-</p>
+
+<p>Changing the value of <b>undefined</b> inside a certain scope:</p>
+
 <pre>
 (<b>function</b>(<b>undefined</b>) {
   <b>var</b> str = &apos;foo&apos;;
@@ -18838,33 +18715,25 @@ Changing the value of <b>undefined</b> inside a certain scope:
 })(&apos;foo&apos;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch40-6">
-Section 40.6: The unary negation operator (-)
-</h3>
+<h3 id="ch40-6">Section 40.6: The unary negation operator (-)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The unary negation (-) precedes its operand and negates it, after trying
-to convert it to number.
-</p>
-<p>
-<b>Syntax:</b>
-</p>
-<pre>
--expression <b>Returns:</b> a Number.
-</pre>
-<p>
-<b>Description</b>
-</p>
-<p>
-The unary negation(-) can convert the same types / values as the unary
-plus (+) operator can.
-</p>
-Values that can't be converted will evaluate to <b>NaN</b> (there is no
--<b>NaN</b>).
-</p>
-<p>
-<b>Examples:</b>
-</p>
+<p>The unary negation (-) precedes its operand and negates it, after trying
+to convert it to number.</p>
+
+<p><b>Syntax:</b></p>
+
+<pre>-expression <b>Returns:</b> a Number.</pre>
+
+<p><b>Description</b></p>
+
+<p>The unary negation(-) can convert the same types / values as the unary
+plus (+) operator can.</p>
+
+<p>Values that can't be converted will evaluate to <b>NaN</b> (there is no
+-<b>NaN</b>).</p>
+
+<p><b>Examples:</b></p>
+
 <pre>
 &minus;42             // <i>-42</i>
 &minus;&quot;42&quot;  // <i>-42</i>
@@ -18877,71 +18746,62 @@ Values that can't be converted will evaluate to <b>NaN</b> (there is no
 &minus;{}               // <i>NaN</i>
 &minus;<b>function</b>(){} // <i>NaN</i>
 </pre>
-<p>
-Note that attempting to convert an array can result in unexpected return
+
+<p>Note that attempting to convert an array can result in unexpected return
 values. In the background, arrays are first converted to their string
-representations:
-</p>
+representations:</p>
+
 <pre>
 &lbrack;&rbrack;.toString() === &apos;&apos;;
 &lbrack;1&rbrack;.toString() === &apos;1&apos;;
 &lbrack;1, 2&rbrack;.toString() === &apos;1,2&apos;;
 </pre>
-<p>
-The operator then attempts to convert those strings to numbers:
-</p>
+
+<p>The operator then attempts to convert those strings to numbers:</p>
+
 <pre>
 &minus;&lbrack;&rbrack;       // <i>-0 ( === -&apos;&apos; )</i>
 &minus;&lbrack;1&rbrack;      // <i>-1 ( === -&apos;1&apos; )</i>
 &minus;&lbrack;1, 2&rbrack;   // <i>NaN ( === -&apos;1,2&apos; )</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch40-7">
-Section 40.7: The bitwise NOT operator (~)
-</h3>
+<h3 id="ch40-7">Section 40.7: The bitwise NOT operator (~)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The bitwise NOT (~) performs a NOT operation on each bit in a value.
-</p>
-<p>
-<b>Syntax:</b>
-</p>
-<pre>
-~expression
-</pre>
-<p>
-<b>Returns:</b>
-</p>
+<p>The bitwise NOT (~) performs a NOT operation on each bit in a value.</p>
+
+<p><b>Syntax:</b></p>
+
+<pre>~expression</pre>
+
+<p><b>Returns:</b></p>
+
 <!-- page 256 -->
+
 <ul>
-<li>
-a Number.
-</li>
+  <li>a Number.</li>
 </ul>
-<p>
-<b>Description</b>
-</p>
-<p>
-The truth table for the NOT operation is:
-</p>
-<p>
-<b>a NOT a</b>
-</p>
+
+<p><b>Description</b></p>
+
+<p>The truth table for the NOT operation is:</p>
+
+<p><b>a NOT a</b></p>
+
 <pre>
 0 1
 1 0
 </pre>
-1337 (base 10) = 0000010100111001 (base2) ~1337 (base10) =
+
+<p>1337 (base 10) = 0000010100111001 (base2) ~1337 (base10) =
 1111101011000110 (base2) = −1338 (base 10)
 </pre>
-<p>
-A bitwise not on a number results in: −(x + 1).
-</p>
-<p>
-<b>Examples:</b>
-</p>
-<p>
-<b>value (base 10) value (base 2) return (base 2) return (base 10)</b>
+
+<p>A bitwise not on a number results in: −(x + 1).</p>
+
+<p><b>Examples:</b></p>
+
+<p><b>value (base 10) value (base 2) return (base 2) return (base 10)</b></p>
+
 <pre>
 2     00000010   11111100   -3<br/>
 1     00000001   11111110   -2<br/>
@@ -18951,50 +18811,39 @@ A bitwise not on a number results in: −(x + 1).
 -3    11111100   00000010   2
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch40-8">
-Section 40.8: The logical NOT operator (!)
-</h3>
+<h3 id="ch40-8">Section 40.8: The logical NOT operator (!)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The logical NOT (!) operator performs logical negation on an expression.
-</p>
-<p>
-<b>Syntax:</b>
-</p>
-<pre>
-!expression
-</pre>
-<p>
-<b>Returns:</b>
-</p>
+<p>The logical NOT (!) operator performs logical negation on an expression.</p>
+
+<p><b>Syntax:</b></p>
+
+<pre>!expression</pre>
+
+<p><b>Returns:</b></p>
+
 <ul>
-<li>
-a Boolean.
-</li>
+  <li>a Boolean.</li>
 </ul>
-<p>
-<b>Description</b>
-</p>
-<p>
-The logical NOT(!) operator performs logical negation on an expression.
-</p>
-<p>
-Boolean values simply get inverted: !<b>true</b> === <b>false</b> and
+
+<p><b>Description</b></p>
+
+<p>The logical NOT(!) operator performs logical negation on an expression.</p>
+
+<p>Boolean values simply get inverted: !<b>true</b> === <b>false</b> and
 !<b>false</b> === <b>true</b>.<br/> Non-boolean values get converted to
-boolean values first, then are negated.
-</p>
-<p>
-This means that a double logical NOT (!!) can be used to cast any value
-to a boolean:
-</p>
+boolean values first, then are negated.</p>
+
+<p>This means that a double logical NOT (!!) can be used to cast any value
+to a boolean:</p>
+
 <pre>
 !!&quot;FooBar&quot; === <b>true</b>
 !!1 === <b>true</b>
 !!0 === <b>false</b>
 </pre>
-<p>
-These are all equal to !<b>true</b>:
-</p>
+
+<p>These are all equal to !<b>true</b>:</p>
+
 <pre>
 !&apos;true&apos; === !<b>new</b> Boolean(&apos;true&apos;);
 !&apos;false&apos; === !<b>new</b> Boolean(&apos;false&apos;);
@@ -19002,10 +18851,11 @@ These are all equal to !<b>true</b>:
 !&lbrack;&rbrack; === !<b>new</b> Boolean(&lbrack;&rbrack;);
 !{} === !<b>new</b> Boolean({});
 </pre>
+
 <!-- page 257 -->
-<p>
-These are all equal to !<b>false</b>:
-</p>
+
+<p>These are all equal to !<b>false</b>:</p>
+
 <pre>
 !0 === !<b>new</b> Boolean(0);
 !&apos;&apos; === !<b>new</b> Boolean(&apos;&apos;);
@@ -19013,9 +18863,9 @@ These are all equal to !<b>false</b>:
 !<b>null</b> === !<b>new</b> Boolean(<b>null</b>);
 !<b>undefined</b> === !<b>new</b> Boolean(<b>undefined</b>);
 </pre>
-<p>
-<b>Examples:</b>
-</p>
+
+<p><b>Examples:</b></p>
+
 <pre>
 !<b>true</b>         // <i>false</i>
 !-1                  // <i>false</i>
@@ -19035,32 +18885,25 @@ These are all equal to !<b>false</b>:
 !0                   // <i>true</i>
 !&quot;&quot;        // <i>true</i>
 </pre>
+
 <!-- page 258 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch41">
-Chapter 41: Generators
-</h2>
+<h2 id="ch41">Chapter 41: Generators</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Generator functions (defined by the <b>function</b>* keyword) run as
+<p>Generator functions (defined by the <b>function</b>* keyword) run as
 coroutines, generating a series of values as they're requested through
-an iterator.
-</p>
+an iterator.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch41-1">
-Section 41.1: Generator Functions
-</h3>
+<h3 id="ch41-1">Section 41.1: Generator Functions</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-A <i>generator function</i> is created with a <b>function</b>*
+<p>A <i>generator function</i> is created with a <b>function</b>*
 declaration. When it is called, its body is <b>not</b> immediately
 executed. Instead, it returns a <i>generator object</i>, which can be
-used to "step through" the function's execution.
-</p>
-<p>
-A yield expression inside the function body defines a point at which
-execution can suspend and resume.
-</p>
+used to "step through" the function's execution.</p>
+
+<p> yield expression inside the function body defines a point at which
+execution can suspend and resume.</p>
+
 <pre>
 <b>function</b>&ast; nums() {
   console.log(&apos;starting&apos;);  // <i>A</i>
@@ -19082,9 +18925,9 @@ generator.next();  // <i>Executes lines E,F returning { value: 3, done: false }<
 generator.next();  // <i>Executes line G returning { value: undefined, done: true }</i>
 // <i>console: &quot;yielded 3&quot;</i>
 </pre>
-<p>
-<b>Early iteration exit</b>
-</p>
+
+<p><b>Early iteration exit</b></p>
+
 <pre>
 generator = nums();
 generator.next(); // <i>Executes lines A,B returning { value: 1, done: false }</i> 
@@ -19093,9 +18936,9 @@ generator.<b>return</b>(3); // <i>no code is executed returns { value: 3, done: 
 // <i>any further calls will return done = true</i>
 generator.next(); // <i>no code executed returns { value: undefined, done: true }</i>
 </pre>
-<p>
-<b>Throwing an error to generator function</b>
-</p>
+
+<p><b>Throwing an error to generator function</b></p>
+
 <pre>
 <b>function</b>&ast; nums() {
   <b>try</b> {
@@ -19113,16 +18956,14 @@ generator.<b>throw</b>(<b>new</b> Error(&quot;Error!!&quot;)); // <i>Executes li
 // <i>console: &quot;Error!!&quot;</i>
 generator.next();  // <i>no code executed. returns { value: undefined, done: true }</i>
 </pre>
+
 <!-- page 259 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch41-2">
-Section 41.2: Sending Values to Generator
-</h3>
+<h3 id="ch41-2">Section 41.2: Sending Values to Generator</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-It is possible to <i>send</i> a value to the generator by passing it to
-the next() method.
-</p>
+<p>It is possible to <i>send</i> a value to the generator by passing it to
+the next() method.</p>
+
 <pre>
 <b>function</b>&ast; summer() {
   <b>let</b> sum = 0, value;
@@ -19146,14 +18987,11 @@ generator.next(100);
 <b>let</b> sum = generator.next(<b>null</b>).value;  // <i>111</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch41-3">
-Section 41.3: Delegating to other Generator
-</h3>
+<h3 id="ch41-3">Section 41.3: Delegating to other Generator</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-From within a generator function, the control can be delegated to
-another generator function using yield*.
-</p>
+<p>From within a generator function, the control can be delegated to
+another generator function using yield*.</p>
+
 <pre>
 <b>function</b>&ast; g1() {
   yield 2;
@@ -19174,16 +19012,14 @@ console.log(it.next()); // <i>5</i>
 console.log(it.next()); // <i>undefined</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch41-4">
-Section 41.4: Iteration
-</h3>
+<h3 id="ch41-4">Section 41.4: Iteration</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-A generator is <i>iterable</i>. It can be looped over with a
+<p>A generator is <i>iterable</i>. It can be looped over with a
 <b>for</b>…of statement, and used in other constructs which depend on
-the iteration protocol.
-</p>
+the iteration protocol.</p>
+
 <!-- page 260 -->
+
 <pre>
 <b>function</b>&ast; range(n) {
   <b>for</b> (<b>let</b> i = 0; i &lt; n; ++i) {
@@ -19198,10 +19034,10 @@ the iteration protocol.
 <b>let</b> nums = &lbrack;&hellip;range(3)&rbrack;;  // <i>&lbrack;0, 1, 2&rbrack;</i>
 <b>let</b> max = Math.max(&hellip;range(100));  // <i>99</i>
 </pre>
-<p>
-Here is another example of use generator to custom iterable object in
-ES6. Here anonymous generator function <b>function</b>* used.
-</p>
+
+<p>Here is another example of use generator to custom iterable object in
+ES6. Here anonymous generator function <b>function</b>* used.</p>
+
 <pre>
 <b>let</b> user = {
   name: &quot;sam&quot;, totalReplies: 17, isBlocked: <b>false</b>
@@ -19218,16 +19054,13 @@ user&lbrack;Symbol.iterator&rbrack; = <b>function</b> &ast;() {
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch41-5">
-Section 41.5: Async flow with generators
-</h3>
+<h3 id="ch41-5">Section 41.5: Async flow with generators</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Generators are functions which are able to pause and then resume
+<p>Generators are functions which are able to pause and then resume
 execution. This allows to emulate async functions using external
 libraries, mainly q or co. Basically it allows to write functions that
-wait for async results in order to go on:
-</p>
+wait for async results in order to go on:</p>
+
 <pre>
 <b>function</b> someAsyncResult() {
   <b>return</b> Promise.resolve(&apos;newValue&apos;)
@@ -19237,11 +19070,11 @@ q&period;spawn(<b>function</b> &ast; () {
   console.log(result)  // <i>&apos;newValue&apos;</i>
 })
 </pre>
-<p>
-This allows to write async code as if it were synchronous. Moreover, try
+
+<p>This allows to write async code as if it were synchronous. Moreover, try
 and catch work over several async blocks. If the promise is rejected,
-the error is caught by the next catch:
-</p>
+the error is caught by the next catch:</p>
+
 <pre>
 <b>function</b> asyncError() {
   <b>return</b> <b>new</b> Promise(<b>function</b> (resolve, reject) {
@@ -19258,52 +19091,44 @@ q&period;spawn(<b>function</b> &ast; () {
   }
 })
 </pre>
-<p>
-Using co would work exactly the same but with co(<b>function</b> *
-(){…}) instead of <b>q.spawn</b>
-</p>
+
+<p>Using co would work exactly the same but with co(<b>function</b> *
+(){…}) instead of <b>q.spawn</b></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch41-6">
-Section 41.6: Iterator-Observer interface
-</h3>
+<h3 id="ch41-6">Section 41.6: Iterator-Observer interface</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-A generator is a combination of two things - an Iterator and an
-Observer.
-</p>
-<p>
-<b>Iterator</b>
-</p>
-<p>
-An iterator is something when invoked returns an iterable. An iterable
+<p>A generator is a combination of two things - an Iterator and an
+Observer.</p>
+
+<p><b>Iterator</b></p>
+
+<p>An iterator is something when invoked returns an iterable. An iterable
 is something you can iterate upon. From ES6/ES2015 onwards, all
 collections (Array, Map, Set, WeakMap, WeakSet) conform to the Iterable
-contract.
-</p>
+contract.</p>
+
 <blockquote>
 A generator(iterator) is a producer. In iteration the consumer PULLs the
 value from the producer.
 </blockquote>
-<p>
-Example:
-</p>
+
+<p>Example:</p>
+
 <pre>
 <b>function</b> &ast;gen() { yield 5; yield 6; }
 <b>let</b> a = gen();
 </pre>
-<p>
-Whenever you call <b>a.next</b>(), you're essentially pull-ing value
+
+<p>Whenever you call <b>a.next</b>(), you're essentially pull-ing value
 from the Iterator and pause the execution at yield. The next time you
 call <b>a.next</b>(), the execution resumes from the previously paused
-state.
-</p>
-<p>
-<b>Observer</b>
-</p>
-<p>
-A generator is also an observer using which you can send some values
-back into the generator.
-</p>
+state.</p>
+
+<p><b>Observer</b></p>
+
+<p>A generator is also an observer using which you can send some values
+back into the generator.</p>
+
 <pre>
 <b>function</b> &ast;gen() {
   document.write(&apos;&lt;br&gt;observer:&apos;, yield1);
@@ -19315,49 +19140,45 @@ while (!i&period;done) {
   i = a&period;next(100);
 }
 </pre>
-<p>
-Here you can see that <b>yield 1</b> is used like an expression which
+
+<p>Here you can see that <b>yield 1</b> is used like an expression which
 evaluates to some value. The value it evaluates to is the value sent as
-an argument to the <b>a.next</b> function call.
-</p>
-<p>
-So, for the first time <b>i.value</b> will be the first value yielded
+an argument to the <b>a.next</b> function call.</p>
+
+<p>So, for the first time <b>i.value</b> will be the first value yielded
 (1), and when continuing the iteration to the next state, we send a
-value back to the generator using a.next(100).
-</p>
-<p>
-<b>Doing async with Generators</b>
-</p>
-<p>
-Generators are widely used with spawn (from taskJS or co) function,
+value back to the generator using a.next(100).</p>
+
+<p><b>Doing async with Generators</b></p>
+
+<p>Generators are widely used with spawn (from taskJS or co) function,
 where the function takes in a generator and allows us to write
 asynchronous code in a synchronous fashion. This does NOT mean that
 async code is converted to sync code / executed synchronously. It means
 that we can write code that looks like sync but internally it is still
-async.
-</p>
+async.</p>
+
 <blockquote>
 Sync is BLOCKING; Async is WAITING. Writing code that blocks is easy.
 When PULLing, value appears in the assignment position. When PUSHing,
 value appears in the argument position of the callback.
 </blockquote>
-<p>
-When you use iterators, you PULL the value from the producer. When you
+
+<p>When you use iterators, you PULL the value from the producer. When you
 use callbacks, the producer PUSHes the value to the argument position of
-the callback.
-</p>
+the callback.</p>
+
 <pre>
 <b>var</b> i = a&period;next()  // <i>PULL</i>
 dosomething(&hellip;, v =&gt; {&hellip;})  // <i>PUSH</i>
 </pre>
-<p>
-Here, you pull the value from } is the callback and a value is PUSHed
-into the argument position v of the callback function.
-</p>
-<p>
-Using this pull-push mechanism, we can write async programming like
-this,
-</p>
+
+<p>Here, you pull the value from } is the callback and a value is PUSHed
+into the argument position v of the callback function.</p>
+
+<p>Using this pull-push mechanism, we can write async programming like
+this,</p>
+
 <pre>
 <b>let</b> delay = t =&gt; <b>new</b> Promise(r =&gt; setTimeout(r, t));
 spawn(<b>function</b>&ast;() {
@@ -19369,45 +19190,35 @@ spawn(<b>function</b>&ast;() {
   console.log(y);  // <i>2</i>
 });
 </pre>
-<p>
-So, looking at the above code, we are writing async code that looks like
+
+<p>So, looking at the above code, we are writing async code that looks like
 it's blocking (the yield statements wait for 100ms and then continue
 execution), but it's actually waiting. The pause and resume property of
-generator allows us to do this amazing trick.
-</p>
-<p>
-<b>How does it work ?</b>
-</p>
-<p>
-The spawn function uses yield promise to PULL the promise state from the
+generator allows us to do this amazing trick.</p>
+
+<p><b>How does it work ?</b></p>
+
+<p>The spawn function uses yield promise to PULL the promise state from the
 generator, waits till the promise is resolved, and PUSHes the resolved
-value back to the generator so it can consume it.
-</p>
-<p>
-<b>Use it now</b>
-</p>
-<p>
-So, with generators and spawn function, you can clean up all your async
+value back to the generator so it can consume it.</p>
+
+<p><b>Use it now</b></p>
+
+<p>So, with generators and spawn function, you can clean up all your async
 code in NodeJS to look and feel like it's synchronous. This will make
-debugging easy. Also the code will look neat.
-</p>
-<p>
-This feature is coming to future versions of JavaScript - as
+debugging easy. Also the code will look neat.</p>
+
+<p>This feature is coming to future versions of JavaScript - as
 async…await. But you can use them today in ES2015/ES6 using the spawn
-function defined in the libraries - taskjs, co, or bluebird
-</p>
+function defined in the libraries - taskjs, co, or bluebird</p>
+
 <!-- page 263 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch42">
-Chapter 42: Promises
-</h2>
+<h2 id="ch42">Chapter 42: Promises</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch42-1">
-Section 42.1: Introduction
-</h3>
+<h3 id="ch42-1">Section 42.1: Introduction</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-A
+<p>A
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" 
 target="_blank" rel="noopener noreferrer">Promise</a> object represents
 an operation which <i>has produced or will eventually produce</i> a
@@ -19415,42 +19226,31 @@ value. Promises provide a robust way to wrap the (possibly pending)
 result of asynchronous work, mitigating the problem of deeply nested
 callbacks (known as
 "<a href="http://callbackhell.com/" target="_blank" rel="noopener noreferrer">callback
-hell</a>").
-</p>
-<p>
-<b>States and control flow</b>
-</p>
-<p>
-A promise can be in one of three states:
-</p>
+hell</a>").</p>
+
+<p><b>States and control flow</b></p>
+
+<p>A promise can be in one of three states:</p>
+
 <ul>
-<li>
-<i>pending</i> The underlying operation has not yet completed, and the
-promise is <i>pending</i> fulfillment.
-</li>
-<li>
-<i>fulfilled</i> The operation has finished, and the promise is
-<i>fulfilled</i> with a <i>value</i>. This is analogous to returning a
-value from a synchronous function.
-</li>
-<li>
-<i>rejected</i> An error has occurred during the operation, and the
-promise is <i>rejected</i> with a <i>reason</i>. This is analogous to
-throwing an error in a synchronous function.
-</li>
+  <li><i>pending</i> The underlying operation has not yet completed, and the promise is 
+    <i>pending</i> fulfillment.</li>
+  <li><i>fulfilled</i> The operation has finished, and the promise is <i>fulfilled</i> 
+    with a <i>value</i>. This is analogous to returning a value from a synchronous function.</li>
+  <li><i>rejected</i> An error has occurred during the operation, and the promise is 
+    <i>rejected</i> with a <i>reason</i>. This is analogous to throwing an error in a 
+	synchronous function.</li>
 </ul>
-<p>
-A promise is said to be <i>settled</i> (or <i>resolved</i>) when it is
-either fulfilled or rejected. Once a promise is settled, it becomes
-immutable, and its state cannot change. The
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then" 
+
+<p>A promise is said to be <i>settled</i> (or <i>resolved</i>) when it is either fulfilled 
+or rejected. Once a promise is settled, it becomes immutable, and its state cannot change. 
+The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then" 
 target="_blank" rel="noopener noreferrer"> then</a> and
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch" 
 target="_blank" rel="noopener noreferrer"> <b>catch</b></a> methods of a
 promise can be used to attach callbacks that execute when it is settled.
 These callbacks are invoked with the fulfillment value and rejection
-reason, respectively.
-</p>
+reason, respectively.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 32.  (xxx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
@@ -19459,9 +19259,9 @@ reason, respectively.
   alt="."
   style="border: 2px solid #000000; width:7.47in;" />
 <!-- {width="7.477777777777778in" height="1.9819444444444445in"} -->
-<p>
-<b>Example</b>
-</p>
+
+<p><b>Example</b></p>
+
 <pre>
 <b>const</b> promise = <b>new</b> Promise((resolve, reject) =&gt;{ 
   // <i>Perform some work (possibly asynchronous)</i>
@@ -19479,15 +19279,17 @@ reason, respectively.
   }
 });
 </pre>
-<p>
-The
+
+<p>The
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then" 
 target="_blank" rel="noopener noreferrer"> then</a> and
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch" 
 target="_blank" rel="noopener noreferrer"> <b>catch</b></a> methods can
 be used to attach fulfillment and rejection callbacks:
 </p>
+
 <!-- page 264 -->
+
 <pre>
 promise.then(value =&gt; {
   // <i>Work has completed successfully,</i>
@@ -19497,46 +19299,38 @@ promise.then(value =&gt; {
   // <i>promise has been rejected with &quot;reason&quot;</i>
 });
 </pre>
-<p>
-<b>Note:</b> Calling promise.then( ) and promise.catch(…) on the same
+
+<p><b>Note:</b> Calling promise.then( ) and promise.catch(…) on the same
 promise might result in an Uncaught exception <b>in</b> Promise if an
 error occurs, either while executing the promise or inside one of the
 callbacks, so the preferred way would be to attach the next listener on
-the promise returned by the previous then / <b>catch</b>.
-</p>
-<p>
-Alternatively, both callbacks can be attached in a single call to
+the promise returned by the previous then / <b>catch</b>.</p>
+
+<p>Alternatively, both callbacks can be attached in a single call to
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then" 
-target="_blank" rel="noopener noreferrer"> then</a>:
-</p>
-<pre>
-promise.then(onFulfilled, onRejected);
-</pre>
-<p>
-Attaching callbacks to a promise that has already been settled will
+target="_blank" rel="noopener noreferrer"> then</a>:</p>
+
+<pre>promise.then(onFulfilled, onRejected);</pre>
+
+<p>Attaching callbacks to a promise that has already been settled will
 immediately place them in the
 <a href="http://stackoverflow.com/a/25933985/5931915" 
 target="_blank" rel="noopener noreferrer"> microtask queue</a>, and they
 will be invoked "as soon as possible" (i.e.  immediately after the
 currently executing script). It is not necessary to check the state of
 the promise before attaching callbacks, unlike with many other
-event-emitting implementations.
-</p>
-<p>
-<a href="https://jsfiddle.net/SO_AMK/sy8s7a3a/" 
-target="_blank" rel="noopener noreferrer">Live demo</a>
-</p>
+event-emitting implementations.</p>
+
+<p><a href="https://jsfiddle.net/SO_AMK/sy8s7a3a/" 
+target="_blank" rel="noopener noreferrer">Live demo</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch43-2">
-Section 42.2: Promise chaining
-</h3>
+<h3 id="ch43-2">Section 42.2: Promise chaining</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The
+<p>The
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then" 
 target="_blank" rel="noopener noreferrer"> then</a> method of a promise
-returns a new promise.
-</p>
+returns a new promise.</p>
+
 <pre>
 <b>const</b> promise = <b>new</b> Promise(resolve =&gt; setTimeout(resolve, 5000));
 promise
@@ -19546,14 +19340,14 @@ promise
   // <i>the new promise to resolve with this value</i>
   .then(value =&gt; { <i>/&ast; value === 2 &ast;/</i> });
 </pre>
-<p>
-Returning a
+
+<p>Returning a
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" 
 target="_blank" rel="noopener noreferrer"> Promise</a> from a
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then" 
 target="_blank" rel="noopener noreferrer"> then</a> callback will append
-it to the promise chain.
-</p>
+it to the promise chain.</p>
+
 <pre>
 <b>function</b> wait(millis) {
   <b>return</b> <b>new</b> Promise(resolve =&gt; setTimeout(esolve, millis));
@@ -19561,8 +19355,8 @@ it to the promise chain.
 <b>const</b> p = wait(5000).then(() =&gt; wait(4000)).then(() =&gt; wait(1000));
 p&period;then(() =&gt; { <i>/&ast; 10 seconds have passed &ast;/</i> });
 </pre>
-<p>
-A
+
+<p>A
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch" 
 target="_blank" rel="noopener noreferrer"> <b>catch</b></a> allows a
 rejected promise to recover, similar to how <b>catch</b> in a
@@ -19586,21 +19380,22 @@ target="_blank" rel="noopener noreferrer"> <b>catch</b></a> or reject
 handlers in the middle of the chain, a
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch" 
 target="_blank" rel="noopener noreferrer"><b>catch</b></a> at the end
-will capture any rejection in the chain:
-</p>
+will capture any rejection in the chain:</p>
+
 <pre>
 p&period;<b>catch</b>(() =&gt; Promise.reject(&apos;oh yes&apos;))
   .then(console.log.bind(console))  // <i>won&apos;t be called</i>
   .<b>catch</b>(console.error.bind(console)); // <i>outputs &quot;oh yes&quot;</i>
 </pre>
+
 <!-- page 265 -->
-<p>
-On certain occasions, you may want to "branch" the execution of the
+
+<p>On certain occasions, you may want to "branch" the execution of the
 functions. You can do it by returning different promises from a function
 depending on the condition. Later in the code, you can merge all of
 these branches into one to call other functions on them and/or to handle
-all errors in one place.
-</p>
+all errors in one place.</p>
+
 <pre>
 promise
   .then(result =&gt; {
@@ -19619,32 +19414,28 @@ promise
     console.error(err);
   });
 </pre>
-<p>
-Thus, the execution order of the functions look like:
-</p>
+
+<p>Thus, the execution order of the functions look like:</p>
+
 <pre>
 promise &dash;&dash;&gt; handlerFn1 &dash;&gt; handlerFn2 &dash;&dash;&gt; handlerFn5 &sim;&sim;&gt; .<b>catch</b>()
          &vert;                            &Hat;
          V                            &vert;
          -&dash;&gt;handlerFn3 &dash;&gt; handlerFn4 &dash;&Hat;
 </pre>
-<p>
-The single <b>catch</b> will get the error on whichever branch it may
-occur.
-</p>
+
+<p>The single <b>catch</b> will get the error on whichever branch it may occur.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch42-3">
-Section 42.3: Waiting for multiple concurrent promises
-</h3>
+<h3 id="ch42-3">Section 42.3: Waiting for multiple concurrent promises</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The
+<p>The 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all" 
 target="_blank" rel="noopener noreferrer"> Promise.all()</a> static
 method accepts an iterable (e.g. an Array) of promises and returns a new
 promise, which resolves when <b>all</b> promises in the iterable have
 resolved, or rejects if <b>at least one</b> of the promises in the
-iterable have rejected.
-</p>
+iterable have rejected.</p>
+
 <pre>
 // <i>wait &quot;millis&quot; ms, then resolve with &quot;value&quot;</i>
 <b>function</b> resolve(value, milliseconds) {
@@ -19666,10 +19457,11 @@ Promise.all(&lbrack;
 &rbrack;).then(values =&gt; console.log(values))  // <i>does not output anything</i>
 .<b>catch</b>(reason =&gt;console.log(reason)); // <i>outputs &quot;Error!&quot; after 6 seconds.</i>
 </pre>
+
 <!-- page 266 -->
-<p>
-Non-promise values in the iterable are "promisified".
-</p>
+
+<p>Non-promise values in the iterable are "promisified".</p>
+
 <pre>
 Promise.all(&lbrack;
   resolve(1, 5000),
@@ -19678,10 +19470,10 @@ Promise.all(&lbrack;
 &rbrack;)
 .then(values =&gt; console.log(values));  // <i>outputs &quot;&lbrack;1, 2, { hello: 3 }&rbrack;&quot; after 6 seconds</i>
 </pre>
-<p>
-Destructuring assignment can help to retrieve results from multiple
-promises.
-</p>
+
+<p>Destructuring assignment can help to retrieve results from multiple
+promises.</p>
+
 <pre>
 Promise.all(&lbrack;
   resolve(1, 5000),
@@ -19695,38 +19487,30 @@ Promise.all(&lbrack;
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch42-4">
-Section 42.4: Reduce an array to chained promises
-</h3>
+<h3 id="ch42-4">Section 42.4: Reduce an array to chained promises</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-This design pattern is useful for generating a sequence of asynchronous
-actions from a list of elements.
-</p>
-<p>
-There are two variants:
-</p>
+<p>This design pattern is useful for generating a sequence of asynchronous
+actions from a list of elements.</p>
+
+<p>There are two variants:</p>
+
 <ul>
-<li>
-the "then" reduction, which builds a chain that continues as long as the
-chain experiences success.
-</li>
-<li>
-the "catch" reduction, which builds a chain that continues as long as
-the chain experiences error.
-</li>
+  <li>the "then" reduction, which builds a chain that continues as long as the
+    chain experiences success.</li>
+  <li>the "catch" reduction, which builds a chain that continues as long as
+    the chain experiences error.</li>
 </ul>
-<p>
-<b>The "then" reduction</b>
-</p>
-<p>
-This variant of the pattern builds a
+
+<p><b>The "then" reduction</b></p>
+
+<p>This variant of the pattern builds a
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then" 
 target="_blank" rel="noopener noreferrer">.then()</a> chain , and might
 be used for chaining animations, or making a sequence of dependent HTTP
-requests.
-</p>
-<pre>&lbrack;1, 3, 5, 7, 9&rbrack;.reduce((seq, n) =&gt; {
+requests.</p>
+
+<pre>
+&lbrack;1, 3, 5, 7, 9&rbrack;.reduce((seq, n) =&gt; {
   <b>return</b> seq.then(() =&gt; {
     console.log(n);
     <b>return</b> <b>new</b> Promise(res =&gt; setTimeout(res, 1000));
@@ -19737,53 +19521,38 @@ requests.
 );
 // <i>will log 1, 3, 5, 7, 9, &apos;done&apos; in 1s intervals</i>
 </pre>
-<p>
-Explanation:
-</p>
+
+<p>Explanation:</p>
+
 <ol type="1">
-<li>
-We call
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce" 
-    target="_blank" rel="noopener noreferrer"> .reduce()</a> On a source
-array, and provie
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve" 
-    target="_blank" rel="noopener noreferrer">Promise.resolve()</a> as
-an initial value.
-</li>
-<li>
-Every element reduced will add a
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then" 
-    target="_blank" rel="noopener noreferrer"> .then()</a> to the inital
-value.
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce" 
-    target="_blank" rel="noopener noreferrer"> reduce()'s product will
-be Promise.resolve().then(…).then(…).
-</li>
-<li>
-We manually append a
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then" 
-    target="_blank" rel="noopener noreferrer"> .then(successHandler,
-errorHandler)</a> after the reduce, to execute successHandler once all
-the previous steps have resolved. If any step was to fail, then
-errorHandler would execute.
-</li>
+  <li>We call
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce" 
+    target="_blank" rel="noopener noreferrer"> .reduce()</a> On a source array, and provie
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve" 
+    target="_blank" rel="noopener noreferrer">Promise.resolve()</a> as an initial value.</li>
+  <li>Every element reduced will add a
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then" 
+    target="_blank" rel="noopener noreferrer"> .then()</a> to the inital value.</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce" 
+    target="_blank" rel="noopener noreferrer"> reduce()'s product will be Promise.resolve().then(…).then(…).</li>
+  <li>We manually append a
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then" 
+    target="_blank" rel="noopener noreferrer"> .then(successHandler, errorHandler)</a> after 
+	the reduce, to execute successHandler once all the previous steps have resolved. If any step was to 
+	fail, then errorHandler would execute.</li>
 </ol>
+
 <br/>
-<p>
-Note: The "then" reduction is a sequential counterpart of Promise.all().
-</p>
-<p>
-<b>The "catch" reduction</b>
-</p>
-<p>
-This variant of the pattern builds a
+<p>Note: The "then" reduction is a sequential counterpart of Promise.all().</p>
+
+<p><b>The "catch" reduction</b></p>
+
+<p>This variant of the pattern builds a
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch" 
 target="_blank" rel="noopener noreferrer"> .catch()</a> chain and might
 be used for sequentially probing a set of web servers for some mirrored
-resource until a working server is found.
-</p>
+resource until a working server is found.</p>
+
 <pre>
 <b>var</b> working_resource = 5; // <i>one of the values from the source array</i>
 &lbrack;1, 3, 5, 7, 9&rbrack;.reduce((seq, n) =&gt; {
@@ -19801,9 +19570,9 @@ resource until a working server is found.
 );
 // <i>will log 1, 3, 5, &apos;success at 5&apos; at 1s intervals</i>
 </pre>
-<p>
-Explanation:
-</p>
+
+<p>Explanation:</p>
+
 <ol type="1">
 <li>
 We call
@@ -19831,23 +19600,18 @@ errorHandler would execute.
 </li>
 </ol>
 <br/>
-<p>
-Note: The "catch" reduction is a sequential counterpart of , but not
-currently in native ECMAScript).
-</p>
+<p>Note: The "catch" reduction is a sequential counterpart of , but not
+currently in native ECMAScript).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch42-5">
-Section 42.5: Waiting for the first of multiple concurrent promises
-</h3>
+<h3 id="ch42-5">Section 42.5: Waiting for the first of multiple concurrent promises</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The
+<p>The
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race" 
 target="_blank" rel="noopener noreferrer"> Promise.race()</a> static
 method accepts an iterable of Promises and returns a new Promise which
 resolves or rejects as soon as the <b>first</b> of the promises in the
-iterable has resolved or rejected.
-</p>
+iterable has resolved or rejected.</p>
+
 <pre>
 // <i>wait &quot;milliseconds&quot; milliseconds, then resolve with &quot;value&quot;</i>
 <b>function</b> resolve(value, milliseconds) {
@@ -19871,20 +19635,15 @@ Promise.race(&lbrack;
 .<b>catch</b>(error =&gt; console.log(error.message)); // <i>outputs &quot;bad things!&quot; after 1 second</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch42-6">
-Section 42.6: "Promisifying" functions with callbacks
-</h3>
+<h3 id="ch42-6">Section 42.6: "Promisifying" functions with callbacks</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Given a function that accepts a Node-style callback,
-</p>
-<pre>
-fooFn(options, <b>function</b> callback(err, result) {&hellip;});
-</pre>
-<p>
-you can promisify it <i>(convert it to a promise-based function)</i>
-like this:
-</p>
+<p>Given a function that accepts a Node-style callback,</p>
+
+<pre>fooFn(options, <b>function</b> callback(err, result) {&hellip;});</pre>
+
+<p>you can promisify it <i>(convert it to a promise-based function)</i>
+like this:</p>
+
 <pre>
 <b>function</b> promiseFooFn(options) {
   <b>return</b> <b>new</b> Promise((resolve, reject) =&gt;
@@ -19895,9 +19654,9 @@ like this:
   );
 }
 </pre>
-<p>
-This function can then be used as follows:
-</p>
+
+<p>This function can then be used as follows:</p>
+
 <pre>
 promiseFooFn(options).then(result =&gt; {
   // <i>success!</i>
@@ -19905,10 +19664,10 @@ promiseFooFn(options).then(result =&gt; {
   // <i>error!</i>
 });
 </pre>
-<p>
-In a more generic way, here's how to promisify any given callback-style
-function:
-</p>
+
+<p>In a more generic way, here's how to promisify any given callback-style
+function:</p>
+
 <pre>
 <b>function</b> promisify(func) {
   <b>return</b> <b>function</b>(&hellip;args) {
@@ -19918,9 +19677,9 @@ function:
   }
 }
 </pre>
-<p>
-This can be used like this:
-</p>
+
+<p>This can be used like this:</p>
+
 <pre>
 <b>const</b> fs = require(&apos;fs&apos;);
 <b>const</b> promisedStat = promisify(fs.stat.ind(fs));
@@ -19929,15 +19688,13 @@ promisedStat(&apos;/foo/bar&apos;)
   .<b>catch</b>(err =&gt; console.log(&apos;ERROR&apos;, err));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch42-7">
-Section 42.7: Error Handling
-</h3>
+<h3 id="ch42-7">Section 42.7: Error Handling</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Errors thrown from promises are handled by the second parameter (reject)
-passed to then or by the handler passed to <b>catch</b>:
-</p>
+<p>Errors thrown from promises are handled by the second parameter (reject)
+passed to then or by the handler passed to <b>catch</b>:</p>
+
 <!-- page 269 -->
+
 <pre>
 throwErrorAsync()
   .then(<b>null</b>, error =&gt; { <i>/&ast; handle error here &ast;/</i> });
@@ -19945,42 +19702,41 @@ throwErrorAsync()
 throwErrorAsync()
   .<b>catch</b>(error =&gt; { <i>/&ast; handle error here &ast;/</i> });
 </pre>
-<p>
-<b>Chaining</b>
-</p>
-<p>
-If you have a promise chain then an error will cause resolve handlers to
-be skipped:
-</p>
+
+<p><b>Chaining</b></p>
+
+<p>If you have a promise chain then an error will cause resolve handlers to
+be skipped:</p>
+
 <pre>
 throwErrorAsync()
   .then(() =&gt; { <i>/&ast; never called &ast;/</i> })
   .<b>catch</b>(error =&gt; { <i>/&ast; handle error here &ast;/</i> });
 </pre>
-<p>
-The same applies to your then functions. If a resolve handler throws an
-exception then the next reject handler will be invoked:
-</p>
+
+<p>The same applies to your then functions. If a resolve handler throws an
+exception then the next reject handler will be invoked:</p>
+
 <pre>
 doSomethingAsync()
   .then(result =&gt; { throwErrorSync(); })
   .then(() =&gt; { <i>/&ast; never called &ast;/</i> })
   .<b>catch</b>(error =&gt; { <i>/&ast; handle error from throwErrorSync() &ast;/</i> });
 </pre>
-<p>
-An error handler returns a new promise, allowing you to continue a
+
+<p>An error handler returns a new promise, allowing you to continue a
 promise chain. The promise returned by the error handler is resolved
-with the value returned by the handler:
-</p>
+with the value returned by the handler:</p>
+
 <pre>
 throwErrorAsync()
   .<b>catch</b>(error =&gt; { <i>/&ast; handle error here &ast;/</i>; <b>return</b>result; })
   .then(result =&gt; { <i>/&ast; handle result here &ast;/</i> });
 </pre>
-<p>
-You can let an error cascade down a promise chain by re-throwing the
-error:
-</p>
+
+<p>You can let an error cascade down a promise chain by re-throwing the
+error:</p>
+
 <pre>
 throwErrorAsync()
   .<b>catch</b>(error =&gt; {
@@ -19990,35 +19746,34 @@ throwErrorAsync()
     .then(() =&gt; { <i>/&ast; will not be called if there&apos;s an error &ast;/</i> })
     .<b>catch</b>(error =&gt; { <i>/&ast; will get called with the same error &ast;/</i> });
 </pre>
-<p>
-It is possible to throw an exception that is not handled by the promise
-by wrapping the <b>throw</b> statement inside a setTimeout callback:
-</p>
+
+<p>It is possible to throw an exception that is not handled by the promise
+by wrapping the <b>throw</b> statement inside a setTimeout callback:</p>
+
 <pre>
 <b>new</b> Promise((resolve, reject) =&gt; {
   setTimeout(() =&gt; { <b>throw</b> <b>new</b> Error(); });
 });
 </pre>
-<p>
-This works because promises cannot handle exceptions thrown
-asynchronously.
-</p>
-<p>
-<b>Unhandled rejections</b>
-</p>
-<p>
-An error will be silently ignored if a promise doesn't have a
-<b>catch</b> block or reject handler:
-</p>
+
+<p>This works because promises cannot handle exceptions thrown
+asynchronously.</p>
+
+<p><b>Unhandled rejections</b></p>
+
+<p>An error will be silently ignored if a promise doesn't have a
+<b>catch</b> block or reject handler:</p>
+
 <pre>
 throwErrorAsync()
   .then(() =&gt; { <i>/&ast; will not be called &ast;/</i> });
 // <i>error silently ignored</i>
 </pre>
-<p>
-To prevent this, always use a <b>catch</b> block:
-</p>
+
+<p>To prevent this, always use a <b>catch</b> block:</p>
+
 <!-- page 270 -->
+
 <pre>
 throwErrorAsync()
   .then(() =&gt; { <i>/&ast; will not be called &ast;/</i> })
@@ -20027,22 +19782,20 @@ throwErrorAsync()
 throwErrorAsync()
   .then(() =&gt; { <i>/&ast; will not be called &ast;/</i> }, error =&gt; { <i>/&ast; handle error&ast;/</i> });
 </pre>
-<p>
-Alternatively, subscribe to the
+
+<p>Alternatively, subscribe to the
 <a href="https://developer.mozilla.org/en-US/docs/Web/Events/unhandledrejection" 
 target="_blank" rel="noopener noreferrer"> unhandledrejection</a> event
-to catch any unhandled rejected promises:
-</p>
-<pre>
-window.addEventListener(&apos;unhandledrejection&apos;, event =&gt; {});
-</pre>
-<p>
-Some promises can handle their rejection later than their creation time.
+to catch any unhandled rejected promises:</p>
+
+<pre>window.addEventListener(&apos;unhandledrejection&apos;, event =&gt; {});</pre>
+
+<p>Some promises can handle their rejection later than their creation time.
 The
 <a href="https://developer.mozilla.org/en-US/docs/Web/Events/rejectionhandled" 
 target="_blank" rel="noopener noreferrer">rejectionhandled</a> event
-gets fired whenever such a promise is handled:
-</p>
+gets fired whenever such a promise is handled:</p>
+
 <pre>
 window.addEventListener(&apos;unhandledrejection&apos;, event =&gt; console.log(&apos;unhandled&apos;));
 window.addEventListener(&apos;rejectionhandled&apos;, event =&gt; console.log(&apos;handled&apos;));
@@ -20052,48 +19805,41 @@ setTimeout() =&gt; p&period;<b>catch</b>(console.log), 1000);
 
 // <i>Will print &apos;unhandled&apos;, and after one second &apos;test&apos; and &apos;handled&apos;</i>
 </pre>
-<p>
-The event argument contains information about the rejection.event.reason
+
+<p>The event argument contains information about the rejection.event.reason
 is the error object and event.promise is the promise object that caused
-the event.
-</p>
-<p>
-In Nodejs the rejectionhandled and unhandledrejection events are called
+the event.</p>
+
+<p>In Nodejs the rejectionhandled and unhandledrejection events are called
 <a href="https://nodejs.org/api/process.html#process_event_rejectionhandled" 
 target="_blank" rel="noopener noreferrer">rejectionHandled</a> and
 <a href="https://nodejs.org/api/process.html#process_event_unhandledrejection" 
 target="_blank" rel="noopener noreferrer">unhandledRejection</a> on
-process, respectively, and have a different signature:
-</p>
+process, respectively, and have a different signature:</p>
+
 <pre>
 process.on(&apos;rejectionHandled&apos;, (reason, promise) =&gt;{});
 process.on(&apos;unhandledRejection&apos;, (reason, promise) =&gt;{});
 </pre>
-<p>
-The reason argument is the error object and the promise argument is a
-reference to the promise object that caused the event to fire.
-</p>
-<p>
-Usage of these unhandledrejection and rejectionhandled events should be
+
+<p>The reason argument is the error object and the promise argument is a
+reference to the promise object that caused the event to fire.</p>
+
+<p>Usage of these unhandledrejection and rejectionhandled events should be
 considered for debugging purposes only. Typically, all promises should
-handle their rejections.
-</p>
-<p>
-<b>Note:</b> Currently, only Chrome 49+ and Node.js support
-unhandledrejection and rejectionhandled events.
-</p>
-<p>
-<b>Caveats</b><br/> <b>Chaining with fulfill and reject</b>
-</p>
-<p>
-The then(fulfill, reject) function (with both parameters not
+handle their rejections.</p>
+
+<p><b>Note:</b> Currently, only Chrome 49+ and Node.js support
+unhandledrejection and rejectionhandled events.</p>
+
+<p><b>Caveats</b><br/> <b>Chaining with fulfill and reject</b></p>
+
+<p>The then(fulfill, reject) function (with both parameters not
 <b>null</b>) has unique and complex behavior, and shouldn't be used
-unless you know exactly how it works.
-</p>
-<P>
-The function works as expected if given <b>null</b> for one of the
-inputs:
-</p>
+unless you know exactly how it works.</p>
+
+<p>The function works as expected if given <b>null</b> for one of the inputs:</p>
+
 <pre>
 // <i>the following calls are equivalent</i>
 promise.then(fulfill, <b>null</b>)
@@ -20102,10 +19848,11 @@ promise.then(fulfill)
 promise.then(<b>null</b>, reject)
 promise.<b>catch</b>(reject)
 </pre>
-<p>
-However, it adopts unique behavior when both inputs are given:
-</p>
+
+<p>However, it adopts unique behavior when both inputs are given:</p>
+
 <!-- page 271 -->
+
 <pre>
 // <i>the following calls are not equivalent!</i>
 promise.then(fulfill, reject)
@@ -20114,38 +19861,37 @@ promise.then(fulfill).<b>catch</b>(reject)
 promise.then(fulfill, reject)
 promise.<b>catch</b>(reject).then(fulfill)
 </pre>
-<p>
-The then(fulfill, reject) function looks like it is shortcut for
+
+<p>The then(fulfill, reject) function looks like it is shortcut for
 then(fulfill).<b>catch</b>(reject), but it is not, and will cause
 problems if used interchangeably. One such problem is that the reject
 handler does not handle errors from the fulfill handler. Here is what
-will happen:
+will happen:</p>
+
 <pre>
 Promise.resolve() // <i>previous promise is fulfilled</i>
   .then(() =&gt;{ <b>throw</b> <b>new</b> Error(); }, // <i>error in the fulfill handler</i>
     error =&gt;{ <i>/&ast; this is not called! &ast;/</i> });
 </pre>
-<p>
-The above code will result in a rejected promise because the error is
+
+<p>The above code will result in a rejected promise because the error is
 propagated. Compare it to the following code, which results in a
-fulfilled promise:
-</p>
+fulfilled promise:</p>
+
 <pre>
 Promise.resolve() // <i>previous promise is fulfilled</i>
   .then(() =&gt;{ <b>throw</b> <b>new</b> Error(); }) // <i>error in the fulfill handler</i>
     .<b>catch</b>(error =&gt;{ <i>/&ast; handle error &ast;/</i> });
 </pre>
-<p>
-A similar problem exists when using then(fulfill, reject)
+
+<p>A similar problem exists when using then(fulfill, reject)
 interchangeably with catch(reject).then(fulfill), except with
-propagating fulfilled promises instead of rejected promises.
-</p>
-<p>
-<b>Synchronously throwing from function that should return a promise</b>
-</p>
-<p>
-Imagine a function like this:
-</p>
+propagating fulfilled promises instead of rejected promises.</p>
+
+<p><b>Synchronously throwing from function that should return a promise</b></p>
+
+<p>Imagine a function like this:</p>
+
 <pre>
 <b>function</b> foo(arg) {
   <b>if</b> (arg === &apos;unexepectedValue&apos;) {
@@ -20156,35 +19902,34 @@ Imagine a function like this:
   )
 }
 </pre>
-<p>
-If such function is used in the <b>middle</b> of a promise chain, then
-apparently there is no problem:
-</p>
+
+<p>If such function is used in the <b>middle</b> of a promise chain, then
+apparently there is no problem:</p>
+
 <pre>
 makeSomethingAsync().
   .then(() =&gt; foo(&apos;unexpectedValue&apos;))
   .<b>catch</b>(err =&gt; console.log(err)) // <i>&lt;&dash;&dash; Error: UnexpectedValue will be caught here</i>
 </pre>
-<p>
-However, if the same function is called outside of a promise chain, then
+
+<p>However, if the same function is called outside of a promise chain, then
 the error will not be handled by it and will be thrown to the
-application:
-</p>
+application:</p>
+
 <pre>
 foo(&apos;unexpectedValue&apos;) // <i>&lt;&dash;&dash; error will be thrown, so the application will crash</i>
   .then(makeSomethingAsync) // <i>&lt;&dash;&dash; will not run</i>
   .<b>catch</b>(err =&gt; console.log(err)) // <i>&lt;&dash;&dash; will not catch</i>
 </pre>
-<p>
-There are 2 possible workarounds:
-</p>
-<p>
-<b>Return a rejected promise with the error</b>
-</p>
+
+<p>There are 2 possible workarounds:</p>
+
+<p><b>Return a rejected promise with the error</b></p>
+
 <!-- page 272 -->
-<p>
-Instead of throwing, do as follows:
-</p>
+
+<p>Instead of throwing, do as follows:</p>
+
 <pre>
 <b>function</b> foo(arg) {
   <b>if</b> (arg === &apos;unexepectedValue&apos;) {
@@ -20195,13 +19940,12 @@ Instead of throwing, do as follows:
   )
 }
 </pre>
-<p>
-<b>Wrap your function into a promise chain</b>
-</p>
-<p>
-Your <b>throw</b> statement will be properly caught when it is already
-inside a promise chain:
-</p>
+
+<p><b>Wrap your function into a promise chain</b></p>
+
+<p>Your <b>throw</b> statement will be properly caught when it is already
+inside a promise chain:</p>
+
 <pre>
 <b>function</b> foo(arg) {
   <b>return</b> Promise.resolve()
@@ -20216,14 +19960,11 @@ inside a promise chain:
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch42-8">
-Section 42.8: Reconciling synchronous and asynchronous operations
-</h3>
+<h3 id="ch42-8">Section 42.8: Reconciling synchronous and asynchronous operations</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-In some cases you may want to wrap a synchronous operation inside a
-promise to prevent repetition in code branches. Take this example:
-</p>
+<p>In some cases you may want to wrap a synchronous operation inside a
+promise to prevent repetition in code branches. Take this example:</p>
+
 <pre>
 <b>if</b> (result) { // <i>if we already have a result</i>
   processResult(result); // <i>process it</i>
@@ -20231,28 +19972,28 @@ promise to prevent repetition in code branches. Take this example:
   fetchResult().then(processResult);
 }
 </pre>
-<p>
-The synchronous and asynchronous branches of the above code can be
+
+<p>The synchronous and asynchronous branches of the above code can be
 reconciled by redundantly wrapping the synchronous operation inside a
-promise:
-</p>
+promise:</p>
+
 <pre>
 <b>var</b> fetch = result
   ? Promise.resolve(result)
   : fetchResult();
 fetch.then(processResult);
 </pre>
-<p>
-When caching the result of an asynchronous call, it is preferable to
+
+<p>When caching the result of an asynchronous call, it is preferable to
 cache the promise rather than the result itself. This ensures that only
 one asynchronous operation is required to resolve multiple parallel
-requests.
-</p>
-<p>
-Care should be taken to invalidate cached values when error conditions
-are encountered.
-</p>
+requests.</p>
+
+<p>Care should be taken to invalidate cached values when error conditions
+are encountered.</p>
+
 <!-- page 273 -->
+
 <pre>
 // <i>A resource that is not expected to change frequently</i>
 <b>var</b> planets = &apos;http://swapi.co/api/planets/&apos;;
@@ -21674,123 +21415,69 @@ current browser window or tab.
 </li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch48-2">
-Section 48.2: Window Object Properties
-</h3>
+<h3 id="ch48-2">Section 48.2: Window Object Properties</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The Window Object contains the following properties.
-</p>
+<p>The Window Object contains the following properties.</p>
+
 <!-- page 291 -->
+
 <table border="1" style="width:200px">
-<thead>
-<tr>
-<th>
-<b>Property</b>
-</th>
-<th>
-<b>Description</b>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-window.closed
-</td>
-<td>
-Whether the window has been closed
-</td>
-</tr>
-<tr>
-<td>
-window.length
-</td>
-<td>
-Number of <b>&lt;iframe&gt;</b> elements in window
-</td>
-</tr>
-<tr>
-<td>
-window.name
-</td>
-<td>
-Gets or sets the name of the window
-</td>
-</tr>
-<tr>
-<td>
-window.innerHeight
-</td>
-<td>
-Height of window
-</td>
-</tr>
-<tr>
-<td>
-window.innerWidth
-</td>
-<td>
-Width of window
-</td>
-</tr>
-<tr>
-<td>
-window.screenX
-</td>
-<td>
-X-coordinate of pointer, relative to top left corner of screen
-</td>
-</tr>
-<tr>
-<td>
-window.screenY
-</td>
-<td>
-Y-coordinate of pointer, relative to top left corner of screen
-</td>
-</tr>
-<tr>
-<td>
-window.location
-</td>
-<td>
-Current URL of window object (or local file path)
-</td>
-</tr>
-<tr>
-<td>
-window.history
-</td>
-<td>
-Reference to history object for browser window or tab
-</td>
-</tr>
-<tr>
-<td>
-window.screen
-</td>
-<td>
-Reference to screen object
-</td>
-</tr>
-<tr>
-<td>
-window.pageXOffset
-</td>
-<td>
-Distance document has been scrolled horizontally
-</td>
-</tr>
-<tr>
-<td>
-window.pageYOffset
-</td>
-<td>
-Distance document has been scrolled vertically
-</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th><b>Property</b></th>
+      <th><b>Description</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>window.closed</td>
+      <td>Whether the window has been closed</td>
+    </tr>
+    <tr>
+      <td>window.length</td>
+      <td>Number of <b>&lt;iframe&gt;</b> elements in window</td>
+    </tr>
+    <tr>
+      <td>window.name</td>
+      <td>Gets or sets the name of the window</td>
+    </tr>
+    <tr>
+      <td>window.innerHeight</td>
+      <td>Height of window</td>
+    </tr>
+    <tr>
+      <td>window.innerWidth</td>
+      <td>Width of window</td>
+    </tr>
+    <tr>
+      <td>window.screenX</td>
+      <td>X-coordinate of pointer, relative to top left corner of screen</td>
+    </tr>
+    <tr>
+      <td>window.screenY</td>
+      <td>Y-coordinate of pointer, relative to top left corner of screen</td>
+    </tr>
+    <tr>
+      <td>window.location</td>
+      <td>Current URL of window object (or local file path)</td>
+    </tr>
+    <tr>
+      <td>window.history</td>
+      <td>Reference to history object for browser window or tab</td>
+    </tr>
+    <tr>
+      <td>window.screen</td>
+      <td>Reference to screen object</td>
+    </tr>
+    <tr>
+      <td>window.pageXOffset</td>
+      <td>Distance document has been scrolled horizontally</td>
+    </tr>
+    <tr>
+      <td>window.pageYOffset</td>
+      <td>Distance document has been scrolled vertically</td>
+    </tr>
+  </tbody>
 </table>
 <!-- page 291 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21798,161 +21485,94 @@ Distance document has been scrolled vertically
 Section 48.3: Window Object Methods
 </h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The most important object in the is the window object. It helps in
+<p>The most important object in the is the window object. It helps in
 accessing information about the browser and its components. To access
-these features, it has various methods and properties.
-</p>
+these features, it has various methods and properties.</p>
+
 <table border="1" style="width:200px">
-<thead>
-<tr>
-<th>
-Method
-</th>
-<th>
-Description
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-window.alert()
-</td>
-<td>
-Creates dialog box with message and an OK button
-</td>
-</tr>
-<tr>
-<td>
-window.blur()
-</td>
-<td>
-Remove focus from window
-</td>
-</tr>
-<tr>
-<td>
-window.close()
-</td>
-<td>
-Closes a browser window
-</td>
-</tr>
-<tr>
-<td>
-window.confirm()
-</td>
-<td>
-Creates dialog box with message, an OK button and a cancel button
-</td>
-</tr>
-<tr>
-<td>
-window.getComputedStyle()
-</td>
-<td>
-Get CSS styles applied to an element
-</td>
-</tr>
-<tr>
-<td>
-window.moveto(x,y)
-</td>
-<td>
-Move a window's left and top edget to supplied coordinates
-</td>
-</tr>
-<tr>
-<td>
-window.open
-</td>
-<td>
-Opens new browser window with URL specified as parameter
-</td>
-</tr>
-<tr>
-<td>
-window.print()
-</td>
-<td>
-Tells browser that user wants to print conents of current page
-</td>
-</tr>
-<tr>
-<td>
-window.prompt()
-</td>
-<td>
-Creates dialog box for retrieving user input
-</td>
-</tr>
-<tr>
-<td>
-window.scrollBy()
-</td>
-<td>
-Scrolls the document by the specified number of pixels
-</td>
-</tr>
-<tr>
-<td>
-window.scrollTo()
-</td>
-<td>
-Scrolls the document to the specified coordinates
-</td>
-</tr>
-<tr>
-<td>
-window.setInterval()
-</td>
-<td>
-Do something repeatedly at specified intervals
-</td>
-</tr>
-<tr>
-<td>
-window.setTimeout()
-</td>
-<td>
-Do something after a specified amount of time
-</td>
-</tr>
-<tr>
-<td>
-window.stop()
-</td>
-<td>
-Stop window from loading
-</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>window.alert()</td>
+      <td>Creates dialog box with message and an OK button</td>
+    </tr>
+    <tr>
+      <td>window.blur()</td>
+      <td>Remove focus from window</td>
+    </tr>
+    <tr>
+      <td>window.close()</td>
+      <td>Closes a browser window</td>
+    </tr>
+    <tr>
+      <td>window.confirm()</td>
+      <td>Creates dialog box with message, an OK button and a cancel button</td>
+    </tr>
+    <tr>
+      <td>window.getComputedStyle()</td>
+      <td>Get CSS styles applied to an element</td>
+    </tr>
+    <tr>
+      <td>window.moveto(x,y)</td>
+      <td>Move a window's left and top edget to supplied coordinates</td>
+    </tr>
+    <tr>
+      <td>window.open</td>
+      <td>Opens new browser window with URL specified as parameter</td>
+    </tr>
+    <tr>
+      <td>window.print()</td>
+      <td>Tells browser that user wants to print conents of current page</td>
+    </tr>
+    <tr>
+      <td>window.prompt()</td>
+      <td>Creates dialog box for retrieving user input</td>
+    </tr>
+    <tr>
+      <td>window.scrollBy()</td>
+      <td>Scrolls the document by the specified number of pixels</td>
+    </tr>
+    <tr>
+      <td>window.scrollTo()</td>
+      <td>Scrolls the document to the specified coordinates</td>
+    </tr>
+    <tr>
+      <td>window.setInterval()</td>
+      <td>Do something repeatedly at specified intervals</td>
+    </tr>
+    <tr>
+      <td>window.setTimeout()</td>
+      <td>Do something after a specified amount of time</td>
+    </tr>
+    <tr>
+      <td>window.stop()</td>
+      <td>Stop window from loading</td>
+    </tr>
+  </tbody>
 </table>
 <!-- page 292 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch49">
-Chapter 49: The Event Loop
-</h2>
+<h2 id="ch49">Chapter 49: The Event Loop</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch49-1">
-Section 49.1: The event loop in a web browser
-</h3>
+<h3 id="ch49-1">Section 49.1: The event loop in a web browser</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The vast majority of modern JavaScript environments work according to an
+<p>The vast majority of modern JavaScript environments work according to an
 <i>event loop</i>. This is a common concept in computer programming
 which essentially means that your program continually waits for new
 things to happen, and when they do, reacts to them. The <i>host
 environment</i> calls into your program, spawning a "turn" or "tick" or
 "task" in the event loop, which then <i>runs to completion</i>. When
 that turn has finished, the host environment waits for something else to
-happen, before all this starts.
-</p>
-<p>
-A simple example of this is in the browser. Consider the following
-example:
-</p>
+happen, before all this starts.</p>
+
+<p>A simple example of this is in the browser. Consider the following
+example:</p>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 <b>&lt;title&gt;</b>Event loop example<b>&lt;/title&gt;</b>
@@ -21970,151 +21590,115 @@ console.log(&quot;setTimeout callback log 2&quot;);
 In this example, the host environment is the web browser.
 <b>&lt;script&gt;</b>
 </pre>
+
 <ol type="1">
-<li>
-The HTML parser will first execute the <b>&gt;</b>. It will run to
-completion.
-</li>
-<li>
-The call to
-<a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout" 
-     target="_blank" rel="noopener noreferrer"> setTimeout</a> tells the
-browser that, after 100 milliseconds, it should enqueue a
-<a href="https://html.spec.whatwg.org/multipage/webappapis.html#concept-task" 
-     target="_blank" rel="noopener noreferrer">task</a> to perform the
-given action.
-</li>
-<li>
-In the meantime, the event loop is then responsible for continually
-checking if there's something else to do: for example, rendering the web
-page.
-</li>
-<li>
-After 100 milliseconds, if the event loop is not busy for some other
-reason, it will see the task that setTimeout enqueues, and run the
-function, logging those two statements.
-</li>
-<li>
-At any time, if someone clicks on the body, the browser will post a task
-to the event loop to run the click handler function. The event loop, as
-it goes around continually checking what to do, will see this, and run
-that function.
-</li>
+  <li>The HTML parser will first execute the <b>&gt;</b>. It will run to completion.</li>
+  <li>The call to <a href="https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout" 
+     target="_blank" rel="noopener noreferrer"> setTimeout</a> tells the browser that, 
+	 after 100 milliseconds, it should enqueue a <a href="https://html.spec.whatwg.org/multipage/webappapis.html#concept-task" 
+	 target="_blank" rel="noopener noreferrer">task</a> to perform the given action.</li>
+  <li>In the meantime, the event loop is then responsible for continually checking if there's 
+    something else to do: for example, rendering the web page.</li>
+  <li>After 100 milliseconds, if the event loop is not busy for some other reason, it will see 
+    the task that setTimeout enqueues, and run the function, logging those two statements.</li>
+  <li>At any time, if someone clicks on the body, the browser will post a task to the event 
+    loop to run the click handler function. The event loop, as it goes around continually 
+	checking what to do, will see this, and run that function.</li>
 </ol>
+
 <br/>
-<p>
-You can see how in this example there are several different types of
-entry points into JavaScript code, which the event loop invokes:
-</p>
+
+<p>You can see how in this example there are several different types of
+entry points into JavaScript code, which the event loop invokes:</p>
+
 <ul>
-<li>
-The <b>&lt;script&gt;</b> element is invoked immediately
-</li>
-<li>
-The setTimeout task is posted to the event loop and run once
-</li>
-<li>
-The click handler task can be posted many times and run each time
-</li>
+  <li>The <b>&lt;script&gt;</b> element is invoked immediately</li>
+  <li>The setTimeout task is posted to the event loop and run once</li>
+  <li>The click handler task can be posted many times and run each time</li>
 </ul>
+
 <br/>
+
 <p>
 Each turn of the event loop is responsible for many things; only some of
 them will invoke these JavaScript tasks. For full details,
 <a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop-processing-model"
  target="_blank" rel="noopener noreferrer">see the HTML
-specification</a>
-</p>
-<p>
-One last thing: what do we mean by saying that each event loop task
+specification</a></p>
+
+<p>One last thing: what do we mean by saying that each event loop task
 "runs to completion"? We mean that it is not generally possible to
 interrupt a block of code that is queued to run as a task, and it is
 never possible to run code interleaved with another block of code. For
 example, even if you clicked at the perfect time, you could never get
 the above code to log "onclick" in between the two 1/2"s. This is due to
 the way the taskposting works; it is cooperative and queue-based,
-instead of preemptive.
-</p>
+instead of preemptive.</p>
+
 <!-- page 293 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch49-2">
-Section 49.2: Asynchronous operations and the event loop
-</h3>
+<h3 id="ch49-2">Section 49.2: Asynchronous operations and the event loop</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Many interesting operations in common JavaScript programming
+<p>Many interesting operations in common JavaScript programming
 environments are asynchronous. For example, in the browser we see things
-like
-</p>
+like</p>
+
 <pre>
 window.setTimeout(() =&gt; {
   console.log(&quot;this happens later&quot;);
 }, 100);
 </pre>
-<p>
-and in Node.js we see things like
-</p>
+
+<p>and in Node.js we see things like</p>
+
 <pre>
 fs.readFile(&quot;file.txt&quot;, (err, data) =&gt; {
   console.log(&quot;data&quot;);
 });
 </pre>
-<p>
-How does this fit with the event loop?
-</p>
-<p>
-How this works is that when these statements execute, they tell the
+
+<p>How does this fit with the event loop?</p>
+
+<p>How this works is that when these statements execute, they tell the
 <i>host environment</i> (i.e., the browser or Node.js runtime,
 respectively) to go off and do something, probably in another thread.
 When the host environment is done doing that thing (respectively,
 waiting 100 milliseconds or reading the file file.txt) it will post a
 task to the event loop, saying "call the callback I was given earlier
-with these arguments".
-</p>
-<p>
-The event loop is then busy doing its thing: rendering the webpage,
+with these arguments".</p>
+
+<p>The event loop is then busy doing its thing: rendering the webpage,
 listening for user input, and continually looking for posted tasks. When
 it sees these posted tasks to call the callbacks, it will call back into
-JavaScript. That's how you get asynchronous behavior!
-</p>
+JavaScript. That's how you get asynchronous behavior!</p>
+
 <!-- page 294 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch50">
-Chapter 50: Strict mode
-</h2>
+<h2 id="ch50">Chapter 50: Strict mode</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch50-1">
-Section 50.1: For entire scripts
-</h3>
+<h3 id="ch50-1">Section 50.1: For entire scripts</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Strict mode can be applied on entire scripts by placing the statement
-</p>
+<p>Strict mode can be applied on entire scripts by placing the statement</p>
+
 <pre>
 &quot;use strict&quot;; 
 // <i>strict mode now applies for the rest of the script</i>
 </pre>
-<p>
-Strict mode is only enabled in scripts where you define "use strict".
+
+<p>Strict mode is only enabled in scripts where you define "use strict".
 You can combine scripts with and without strict mode, because the strict
-state is not shared among different scripts.
-</p>
-<h5>
-Version ≥ 6
-</h5>
-<p>
-<b>Note:</b> All code written inside ES2015+ modules and classes are
-strict by default.
-</p>
+state is not shared among different scripts.</p>
+
+<h5>Version ≥ 6</h5>
+
+<p><b>Note:</b> All code written inside ES2015+ modules and classes are
+strict by default.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch50-2">
-Section 50.2: For functions
-</h3>
+<h3 id="ch50-2">Section 50.2: For functions</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Strict mode can also be applied to single functions by prepending the
-"use strict"; statement at the beginning of the function declaration.
-</p>
+<p>Strict mode can also be applied to single functions by prepending the
+"use strict"; statement at the beginning of the function declaration.</p>
+
 <pre>
 <b>function</b> strict() {
   &quot;use strict&quot;;
@@ -22127,28 +21711,23 @@ Strict mode can also be applied to single functions by prepending the
   // <i>but not here</i>
 }
 </pre>
-<p>
-Strict mode will also apply to any inner scoped functions.
-</p>
+
+<p>Strict mode will also apply to any inner scoped functions.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch50-3">
-Section 50.3: Changes to properties
-</h3>
+<h3 id="ch50-3">Section 50.3: Changes to properties</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Strict mode also prevents you from deleting undeletable properties.
-</p>
+<p>Strict mode also prevents you from deleting undeletable properties.</p>
+
 <pre>
 &quot;use strict&quot;;
 <b>delete</b> Object.<b>prototype</b>;  // <i>throws a TypeError</i>
 </pre>
-<p>
-The above statement would simply be ignored if you don't use strict
-mode, however now you know why it does not execute as expected.
-</p>
-<p>
-It also prevents you from extending a non-extensible property.
-</p>
+
+<p>The above statement would simply be ignored if you don't use strict
+mode, however now you know why it does not execute as expected.</p>
+
+<p>It also prevents you from extending a non-extensible property.</p>
+
 <pre>
 <b>var</b> myObject = {name: &quot;My Name&quot;}
 Object.preventExtensions(myObject);
@@ -22161,58 +21740,53 @@ Object.preventExtensions(myObject);
   }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch50-4">
-Section 50.4: Changes to global properties
-</h3>
+<h3 id="ch50-4">Section 50.4: Changes to global properties</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-In a non-strict-mode scope, when a variable is assigned without being
+<p>In a non-strict-mode scope, when a variable is assigned without being
 initialized with the <b>var</b>, <b>const</b> or the <b>let</b> keyword,
-it is automatically declared in the global scope:
-</p>
+it is automatically declared in the global scope:</p>
+
 <pre>
 a = 12;
 console.log(a);  // <i>12</i>
 </pre>
-<p>
-In strict mode however, any access to an undeclared variable will throw
-a reference error:
-</p>
+
+<p>In strict mode however, any access to an undeclared variable will throw
+a reference error:</p>
+
 <pre>
 &quot;use strict&quot;;
 a = 12;  // <i>ReferenceError: a is not defined</i>
 console.log(a);
 </pre>
-<p>
-This is useful because JavaScript has a number of possible events that
+
+<p>This is useful because JavaScript has a number of possible events that
 are sometimes unexpected. In non-strictmode, these events often lead
 developers to believe they are bugs or unexpected behavior, thus by
 enabling strictmode, any errors that are thrown enforces them to know
-exactly what is being done.
-</p>
+exactly what is being done.</p>
+
 <pre>
 &quot;use strict&quot;;
                        // <i>Assuming a global variable mistypedVariable exists</i>
 mistypedVaraible = 17; // <i>this line throws a ReferenceError due to the</i>
                        // <i>misspelling of variable</i>
 </pre>
-<p>
-This code in strict mode displays one possible scenario: it throws a
+
+<p>This code in strict mode displays one possible scenario: it throws a
 reference error which points to the assignment's line number, allowing
-the developer to immediately detect the mistype in the variable's name.
-</p>
-<p>
-In non-strict-mode, besides the fact that no error is thrown and the
+the developer to immediately detect the mistype in the variable's name.</p>
+
+<p>In non-strict-mode, besides the fact that no error is thrown and the
 assignment is successfully made, the mistypedVaraible will be
 automatically declared in the global scope as a global variable. This
 implies that the developer needs to look up manually this specific
-assignment in the code.
-</p>
-<p>
-Furthermore, by forcing declaration of variables, the developer cannot
+assignment in the code.</p>
+
+<p>Furthermore, by forcing declaration of variables, the developer cannot
 accidentally declare global variables inside functions. In
-non-strict-mode:
-</p>
+non-strict-mode:</p>
+
 <pre>
 <b>function</b> foo() {
   a = &quot;bar&quot;;  // <i>variable is automatically declared in the global scope</i>
@@ -22220,9 +21794,9 @@ non-strict-mode:
 foo();
 console.log(a);  // <i>&gt;&gt;bar</i>
 </pre>
-<p>
-In strict mode, it is necessary to explicitly declare the variable:
-</p>
+
+<p>In strict mode, it is necessary to explicitly declare the variable:</p>
+
 <pre>
 <b>function</b> strict_scope() {
   &quot;use strict&quot;;
@@ -22231,11 +21805,12 @@ In strict mode, it is necessary to explicitly declare the variable:
 strict_scope();
 console.log(a);  // <i>&gt;&gt; &quot;ReferenceError: a is not defined&quot;</i>
 </pre>
-<p>
-The variable can also be declared outside and after a function, allowing
-it to be used, for instance, in the global scope:
-</p>
+
+<p>The variable can also be declared outside and after a function, allowing
+it to be used, for instance, in the global scope:</p>
+
 <!-- page 296 -->
+
 <pre>
 <b>function</b> strict_scope() {
   &quot;use strict&quot;;
@@ -22246,28 +21821,21 @@ strict_scope();
 console.log(a);  // <i>&gt;&gt; bar</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch50-5">
-Section 50.5: Duplicate Parameters
-</h3>
+<h3 id="ch50-5">Section 50.5: Duplicate Parameters</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Strict mode does not allow you to use duplicate function parameter
-names.
-</p>
+<p>Strict mode does not allow you to use duplicate function parameter names.</p>
+
 <pre>
 <b>function</b> foo(bar, bar) {}  // <i>No error. bar is set to the final argument when called</i>
 &quot;use strict&quot;;
 <b>function</b>foo(bar, bar) {};  // <i>SyntaxError: duplicate formal argument bar</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch50-5">
-Section 50.6: Function scoping in strict mode
-</h3>
+<h3 id="ch50-5">Section 50.6: Function scoping in strict mode</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-In Strict Mode, functions declared in a local block are inaccessible
-outside the block.
-</p>
+<p>In Strict Mode, functions declared in a local block are inaccessible
+outside the block.</p>
+
 <pre>
 &quot;use strict&quot;;
 {
@@ -22276,22 +21844,18 @@ outside the block.
 }
 f();  // <i>ReferenceError: f is not defined</i>
 </pre>
-<p>
-Scope-wise, function declarations in Strict Mode have the same kind of
-binding as <b>let</b> or <b>const</b>.
-</p>
+
+<p>Scope-wise, function declarations in Strict Mode have the same kind of
+binding as <b>let</b> or <b>const</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch50-7">
-Section 50.7: Behaviour of a function's arguments list
-</h3>
+<h3 id="ch50-7">Section 50.7: Behaviour of a function's arguments list</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-arguments object behave different in <i>strict</i> and <i>non strict</i>
+<p>arguments object behave different in <i>strict</i> and <i>non strict</i>
 mode. In <i>non-strict</i> mode, the argument object will reflect the
 changes in the value of the parameters which are present, however in
 <i>strict</i> mode any changes to the value of the parameter will not be
-reflected in the argument object.
-</p>
+reflected in the argument object.</p>
+
 <pre>
 <b>function</b> add(a, b) {
   console.log(arguments&lbrack;0&rbrack;, arguments&lbrack;1&rbrack;);  // <i>Prints : 1,2</i>
@@ -22300,11 +21864,11 @@ reflected in the argument object.
 }
 add(1, 2);
 </pre>
-<p>
-For the above code, the arguments object is changed when we change the
+
+<p>For the above code, the arguments object is changed when we change the
 value of the parameters. However, for <i>strict</i> mode, the same will
-not be reflected.
-</p>
+not be reflected.</p>
+
 <pre>
 <b>function</b> add(a, b) {
   &apos;use strict&apos;;
@@ -22313,16 +21877,16 @@ not be reflected.
   console.log(arguments&lbrack;0&rbrack;, arguments&lbrack;1&rbrack;);  // <i>Prints : 1,2</i>
 }
 </pre>
+
 <!-- page 297 -->
-<p>
-It's worth noting that, if any one of the parameters is
+
+<p>It's worth noting that, if any one of the parameters is
 <b>undefined</b>, and we try to change the value of the parameter in
 both <i>strict-mode</i> or <i>non-strict</i> mode the arguments object
-remains unchanged.
-</p>
-<p>
-<b>Strict mode</b>
-</p>
+remains unchanged.</p>
+
+<p><b>Strict mode</b></p>
+
 <pre>
 <b>function</b> add(a, b) {
   &apos;use strict&apos;;
@@ -22339,9 +21903,9 @@ add(1)
 // <i>1, undefined</i>
 // <i>1, undefined</i>
 </pre>
-<p>
-<b>Non-Strict Mode</b>
-</p>
+
+<p><b>Non-Strict Mode</b></p>
+
 <pre>
 <b>function</b> add(a, b) {
   console.log(arguments&lbrack;0&rbrack;, arguments&lbrack;1&rbrack;);
@@ -22356,113 +21920,92 @@ add(1);
 // <i>5, undefined</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch50-8">
-Section 50.8: Non-Simple parameter lists
-</h3>
+<h3 id="ch50-8">Section 50.8: Non-Simple parameter lists</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 <b>function</b> a(x = 5) {
   &quot;use strict&quot;;
 }
 </pre>
-<p>
-is invalid JavaScript and will throw a SyntaxError because you cannot
+
+<p>is invalid JavaScript and will throw a SyntaxError because you cannot
 use the directive "use strict" in a function with Non-Simple Parameter
-list like the one above - default assignment x = 5
-</p>
-<p>
-Non-Simple parameters include -
-</p>
+list like the one above - default assignment x = 5</p>
+
+<p>Non-Simple parameters include -</p>
+
 <ul>
-<li>
-Default assignment
-</li>
+  <li>Default assignment</li>
 </ul>
+
 <br/> <!-- page 298 -->
+
 <pre>
 <b>function</b> a(x = 1) {
   &quot;use strict&quot;;
 }
 </pre>
+
 <ul>
-<li>
-Destructuring
-</li>
+  <li>Destructuring</li>
 </ul>
 <br/>
+
 <pre>
 <b>function</b> a({ x }) {
   &quot;use strict&quot;;
 }
 </pre>
+
 <ul>
-<li>
-Rest params
-</li>
+  <li>Rest params</li>
 </ul>
+
 <br/>
+
 <pre>
 <b>function</b> a(&hellip;args) {
   &quot;use strict&quot;;
 }
 </pre>
+
 <!-- thru 50.8 -->
+
 <!-- page 299 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch51">
-Chapter 51: Custom Elements
-</h2>
+<h2 id="ch51">Chapter 51: Custom Elements</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <table border="1" style="width:200px">
-<thead>
-<tr>
-<th>
-<b>Parameter</b>
-</th>
-<th>
-<b>Details</b>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-name
-</td>
-<td>
-The name of the new custom element.
-</td>
-</tr>
-<tr>
-<td>
-options.extends
-</td>
-<td>
-The name of the native element being extended, if any.
-</td>
-</tr>
-<tr>
-<td>
-options.prototype
-</td>
-<td>
-The custom prototype to use for the custom element, if any.
-</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th><b>Parameter</b></th>
+      <th><b>Details</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name</td>
+      <td>The name of the new custom element.</td>
+    </tr>
+    <tr>
+      <td>options.extends</td>
+      <td>The name of the native element being extended, if any.</td>
+    </tr>
+    <tr>
+      <td>options.prototype</td>
+      <td>The custom prototype to use for the custom element, if any.</td>
+    </tr>
+  </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch51-1">
-Section 51.1: Extending Native Elements
-</h3>
+<h3 id="ch51-1">Section 51.1: Extending Native Elements</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-It's possible to extent native elements, but their descendants don't get
+<p>It's possible to extent native elements, but their descendants don't get
 to have their own tag names. Instead, the is attribute is used to
 specify which subclass an element is supposed to use. For example,
 here's an extension of the <b>&lt;img&gt;</b> element which logs a
-message to the console when it's loaded.
-</p>
+message to the console when it's loaded.</p>
+
 <pre>
 <b>const prototype</b> = Object.create(HTMLImageElement.<b>prototype</b>);
 <b>prototype</b>.createdCallback = <b>function</b>() {
@@ -22474,14 +22017,11 @@ document.registerElement(&apos;ex-image&apos;, {extends: &apos;img&apos;, <b>pro
 <b>&lt;img</b> is=&quot;ex-image&quot; src=&quot;http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png&quot;<b>/&gt;</b>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch51-2">
-Section 51.2: Registering New Elements
-</h3>
+<h3 id="ch51-2">Section 51.2: Registering New Elements</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Defines <b>&lt;initially-hidden&gt;</b> custom element which hides its
-contents until a specified number of seconds have elapsed.
-</p>
+<p>Defines <b>&lt;initially-hidden&gt;</b> custom element which hides its
+contents until a specified number of seconds have elapsed.</p>
+
 <pre>
 <b>const</b> InitiallyHiddenElement = document.registerElement(&apos;initially-hidden&apos;, class extends
 HTMLElement {
@@ -22505,29 +22045,25 @@ HTMLElement {
 <b>&lt;initially-hidden</b> for=&quot;2&quot;<b>&gt;</b>Hello<b>&lt;/initially-hidden&gt;</b>
 <b>&lt;initially-hidden</b> for=&quot;5&quot;<b>&gt;</b>World<b>&lt;/initially-hidden&gt;</b>
 </pre>
+
 <!-- page 300 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch52">
-Chapter 52: Data Manipulation
-</h2>
+<h2 id="ch52">Chapter 52: Data Manipulation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch52-1">
-Section 52.1: Format numbers as money
-</h3>
+<h3 id="ch52-1">Section 52.1: Format numbers as money</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Fast and short way to format value of type Number as money,
-e.g. 1234567.90 =&gt; "1,234,567.89":
-</p>
+<p>Fast and short way to format value of type Number as money,
+e.g. 1234567.90 =&gt; "1,234,567.89":</p>
+
 <pre>
 <b>var</b> num = 1234567.89,
   formatted;
 formatted = num.toFixed(2).replace(/&bsol;d(?=(&bsol;d{3})+&bsol;&period;)/g</i>, &apos;&dollar;&,&apos;); // <i>&quot;1,234,567.89&quot;</i>
 </pre>
-<p>
-More advanced variant with support of any number of decimals [0 .. n],
-variable size of number groups [0 .. x] and different delimiter types:
-</p>
+
+<p>More advanced variant with support of any number of decimals [0 .. n],
+variable size of number groups [0 .. x] and different delimiter types:</p>
+
 <pre>
 <i>/&ast;&ast;</i>
  &ast; Number.prototype.format(n, x, s, c)</i>
@@ -22548,23 +22084,20 @@ Number.<b>prototype</b>.format = <b>function</b>(n, x, s, c) {
 123456789..format(2);               // <i>&quot;123,456,789.00&quot;</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch52-2">
-Section 52.2: Extract extension from file name
-</h3>
+<h3 id="ch52-2">Section 52.2: Extract extension from file name</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Fast and short way to extract extension from file name in JavaScript
-will be:
-</p>
+<p>Fast and short way to extract extension from file name in JavaScript
+will be:</p>
+
 <pre>
 <b>function</b> get_extension(filename) {
   <b>return</b>filename.slice((filename.lastIndexOf(&apos;.&apos;) &minus; 1 &gt;&gt;&gt; 0) &plus; 2);
 }
 </pre>
-<p>
-It works correctly both with names having no extension (e.g. myfile) or
-starting with .dot(e.g. .htaccess):
-</p>
+
+<p>It works correctly both with names having no extension (e.g. myfile) or
+starting with .dot(e.g. .htaccess):</p>
+
 <pre>
 get_extension(&apos;&apos;)                          // <i>&quot;&quot;</i>
 get_extension(&apos;name&apos;)                      // <i>&quot;&quot;</i>
@@ -22572,9 +22105,9 @@ get_extension(&apos;name.txt&apos;)                  // <i>&quot;txt&quot;</i>
 get_extension(&apos;.htpasswd&apos;)                 // <i>&quot;&quot;</i>
 get_extension(&apos;name.with.many.dots.myext&apos;) // <i>&quot;myext&quot;</i>
 </pre>
-<p>
-The following solution may extract file extensions from full path:
-</p>
+
+<p>The following solution may extract file extensions from full path:</p>
+
 <pre>
 <b>function</b> get_extension(path) {
   <b>var</b> basename = path.split(/&lbrack;&bsol;&bsol;/&rbrack;/).pop(), // <i>extract file name from full path &hellip;</i>
@@ -22587,9 +22120,7 @@ The following solution may extract file extensions from full path:
 get_extension(&apos;/path/to/file.ext&apos;); // <i>&quot;ext&quot;</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch52-3">
-Section 52.3: Set object property given its string name
-</h3>
+<h3 id="ch52-3">Section 52.3: Set object property given its string name</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 <b>function</b> assign(obj, prop, value) {
@@ -22619,25 +22150,18 @@ assign(obj, propName, &apos;Value&apos;);
 </pre>
 <!-- page 302 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch53">
-Chapter 53: Binary Data
-</h2>
+<h2 id="ch53">Chapter 53: Binary Data</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch53-1">
-Section 53.1: Getting binary representation of an image file
-</h3>
+<h3 id="ch53-1">Section 53.1: Getting binary representation of an image file</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-This example is inspired by
+<p>This example is inspired by
 <a href="http://stackoverflow.com/q/38334315/2271269" 
- target="_blank" rel="noopener noreferrer">this question</a>.
-</p>
-<p>
-We'll assume you know how to
+ target="_blank" rel="noopener noreferrer">this question</a>.</p>
+ 
+<p>We'll assume you know how to
 <a href="http://www.html5rocks.com/en/tutorials/file/dndfiles/" 
-target="_blank" rel="noopener noreferrer">load a file using the File
-API</a>.
-</p>
+target="_blank" rel="noopener noreferrer">load a file using the File API</a>.</p>
+
 <pre>
 // <i>preliminary code to handle getting local file and finally printing to console</i>
 // <i>the results of our function ArrayBufferToBinary().</i>
@@ -22649,10 +22173,10 @@ reader.onload = <b>function</b>(event) {
 };
 reader.readAsArrayBuffer(file);  // <i>gets an ArrayBuffer of the file</i>
 </pre>
-<p>
-Now we perform the actual conversion of the file data into 1's and 0's
-using a DataView:
-</p>
+
+<p>Now we perform the actual conversion of the file data into 1's and 0's
+using a DataView:</p>
+
 <pre>
 <b>function</b> ArrayBufferToBinary(buffer) {
   // <i>Convert an array buffer to a string bit-representation: 0 1 1 0 0 0&hellip;</i>
@@ -22664,33 +22188,30 @@ using a DataView:
   <b>return</b> response;
 }
 </pre>
-<p>
-DataViews let you read/write numeric data; getInt8 converts the data
+
+<p>DataViews let you read/write numeric data; getInt8 converts the data
 from the byte position - here 0, the value passed in - in the
 ArrayBuffer to signed 8-bit integer representation, and toString(2)
 converts the 8-bit integer to binary representation format (i.e. a
-string of 1's and 0's).
-</p>
-<p>
-Files are saved as bytes. The 'magic' offset value is obtained by noting
+string of 1's and 0's).</p>
+
+<p>Files are saved as bytes. The 'magic' offset value is obtained by noting
 we are taking files stored as bytes i.e. as 8-bit integers and reading
 it in 8-bit integer representation. If we were trying to read our
 byte-saved (i.e. 8 bits) files to 32-bit integers, we would note that
-32/8 = 4 is the number of byte spaces, which is our byte offset value.
-</p>
-<p>
-For this task, DataViews are overkill. They are typically used in cases
+32/8 = 4 is the number of byte spaces, which is our byte offset value.</p>
+
+<p>For this task, DataViews are overkill. They are typically used in cases
 where endianness or heterogeneity of data are encountered (e.g. in
 reading PDF files, which have headers encoded in different bases and we
 would like to meaningfully extract that value). Because we just want a
 textual representation, we do not care about heterogeneity as there is
-never a need to.
-</p>
-<p>
-A much better - and shorter - solution can be found using an UInt8Array
+never a need to.</p>
+
+<p>A much better - and shorter - solution can be found using an UInt8Array
 typed array, which treats the entire ArrayBuffer as composed of unsigned
-8-bit integers:
-</p>
+8-bit integers:</p>
+
 <pre>
 <b>function</b> ArrayBufferToBinary(buffer) {
   <b>var</b> uint8 = <b>new</b> Uint8Array(buffer);
@@ -22698,21 +22219,18 @@ typed array, which treats the entire ArrayBuffer as composed of unsigned
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch53-2">
-Section 53.2: Converting between Blobs and ArrayBuers
-</h3>
+<h3 id="ch53-2">Section 53.2: Converting between Blobs and ArrayBuers</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-JavaScript has two primary ways to represent binary data in the browser.
+<p>JavaScript has two primary ways to represent binary data in the browser.
 ArrayBuffers/TypedArrays contain mutable (though still fixed-length)
 binary data which you can directly manipulate. Blobs contain immutable
 binary data which can only be accessed through the asynchronous File
-interface.
-</p>
+interface.</p>
+
 <!-- page 303 -->
-<p>
-<b>Convert a Blob to an ArrayBuffer (asynchronous)</b>
-</p>
+
+<p><b>Convert a Blob to an ArrayBuffer (asynchronous)</b></p>
+
 <pre>
 <b>var</b> blob = <b>new</b> Blob(&lbrack;&quot;<b>&bsol;x</b>01<b>&bsol;x</b>02<b>&bsol;x</b>03<b>&bsol;x</b>04&quot;&rbrack;),
   fileReader = <b>new</b> FileReader(),
@@ -22723,12 +22241,11 @@ fileReader.onload = <b>function</b>() {
 };
 fileReader.readAsArrayBuffer(blob);
 </pre>
-<h5>
-Version ≥ 6
-</h5>
-<p>
-<b>Convert a Blob to an ArrayBuffer using a Promise (asynchronous)</b>
-</p>
+
+<h5>Version ≥ 6</h5>
+
+<p><b>Convert a Blob to an ArrayBuffer using a Promise (asynchronous)</b></p>
+
 <pre>
 <b>var</b> blob = <b>new</b> Blob(&lbrack;&quot;<b>&bsol;x</b>01<b>&bsol;x</b>02<b>&bsol;x</b>03<b>&bsol;x</b>&quot;04&rbrack;);
 <b>var</b> arrayPromise = <b>new</b> Promise(<b>function</b>(resolve) {
@@ -22742,24 +22259,21 @@ arrayPromise.then(<b>function</b>(array) {
   console.log(&quot;Array contains&quot;, array.byteLength, &quot;bytes.&quot;);
 });
 </pre>
-<p>
-<b>Convert an ArrayBuffer or typed array to a Blob</b>
-</p>
+
+<p><b>Convert an ArrayBuffer or typed array to a Blob</b></p>
+
 <pre>
 <b>var</b> array = <b>new</b> Uint8Array(&lbrack;0x04, 0x06, 0x07, 0x08&rbrack;);
 <b>var</b> blob = <b>new</b> Blob(&lbrack;array&rbrack;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch53-3">
-Section 53.3: Manipulating ArrayBuffers with DataViews
-</h3>
+<h3 id="ch53-3">Section 53.3: Manipulating ArrayBuffers with DataViews</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-DataViews provide methods to read and write individual values from an
+<p>DataViews provide methods to read and write individual values from an
 ArrayBuffer, instead of viewing the entire thing as an array of a single
 type. Here we set two bytes individually then interpret them together as
-a 16-bit unsigned integer, first big-endian then little-endian.
-</p>
+a 16-bit unsigned integer, first big-endian then little-endian.</p>
+
 <pre>
 <b>var</b> buffer = <b>new</b> ArrayBuffer(2);
 <b>var</b> view = <b>new</b> DataView(buffer);
@@ -22769,9 +22283,7 @@ console.log(view.getUint16(0, <b>false</b>)); // <i>65281</i>
 console.log(view.getUint16(0, <b>true</b>));  // <i>511</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch53-4">
-Section 53.4: Creating a TypedArray from a Base64 string
-</h3>
+<h3 id="ch53-4">Section 53.4: Creating a TypedArray from a Base64 string</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 <b>var</b> data =
@@ -22785,17 +22297,14 @@ Section 53.4: Creating a TypedArray from a Base64 string
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch53-5">
-Section 53.5: Using TypedArrays
-</h3>
+<h3 id="ch53-5">Section 53.5: Using TypedArrays</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-TypedArrays are a set of types providing different views into
+<p>TypedArrays are a set of types providing different views into
 fixed-length mutable binary ArrayBuffers. For the most part, they act
 like Arrays that coerce all assigned values to a given numeric type. You
 can pass an ArrayBuffer instance to a TypedArray constructor to create a
-new view of its data.
-</p>
+new view of its data.</p>
+
 <pre>
 <b>var</b> buffer = <b>new</b> ArrayBuffer(8);
 <b>var</b> byteView = <b>new</b> int8Array(buffer);
@@ -22808,10 +22317,10 @@ byteView&lbrack;2&rbrack; = 0x04;
 byteView&lbrack;3&rbrack; = 0x08;
 console.log(floatView);  // <i>&lbrack;6.64421383e-316&rbrack;</i>
 </pre>
-<p>
-ArrayBuffers can be copied using the .slice(…) method, either directly
-or through a TypedArray view.
-</p>
+
+<p>ArrayBuffers can be copied using the .slice(…) method, either directly
+or through a TypedArray view.</p>
+
 <pre>
 <b>var</b> byteView2 = byteView.slice();
 <b>var</b> floatView2 = <b>new</b> Float64Array(byteView2.buffer);
@@ -22820,14 +22329,11 @@ console.log(floatView);  // <i>&lbrack;6.64421383e-316&rbrack;</i>
 console.log(floatView2); // <i>&lbrack;7.06327456e-304&rbrack;</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch53-6">
-Section 53.6: Iterating through an arrayBuffer
-</h3>
+<h3 id="ch53-6">Section 53.6: Iterating through an arrayBuffer</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-For a convenient way to iterate through an arrayBuffer, you can create a
-simple iterator that implements the DataView methods under the hood:
-</p>
+<p>For a convenient way to iterate through an arrayBuffer, you can create a
+simple iterator that implements the DataView methods under the hood:</p>
+
 <pre>
 <b>var</b> ArrayBufferCursor = <b>function</b>() {
   <b>var</b> ArrayBufferCursor = <b>function</b>(arrayBuffer) {
@@ -22877,53 +22383,44 @@ ArrayBufferCursor.<b>prototype</b>.next = <b>function</b>(type) {
   <b>return</b> ArrayBufferCursor;
 });
 </pre>
-<p>
-You can then create an iterator like this:
-</p>
+
+<p>You can then create an iterator like this:</p>
+
 <pre><b>var</b> cursor = <b>new</b> ArrayBufferCursor(arrayBuffer);</pre>
-<p>
-You can use the hasNext to check if there's still items
-</p>
+
+<p>You can use the hasNext to check if there's still items</p>
+
 <pre>
 <b>for</b>(;cursor.hasNext();) {
   // <i>There&apos;s still items to process</i>
 }
 </pre>
-<p>
-You can use the next method to take the next value:
-</p>
+
+<p>You can use the next method to take the next value:</p>
+
 <pre><b>var</b> nextValue = cursor.next(&apos;Float&apos;);</pre>
-<p>
-With such an iterator, writing your own parser to process binary data
-becomes pretty easy.
-</p>
+
+<p>With such an iterator, writing your own parser to process binary data
+becomes pretty easy.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch54">
-Chapter 54: Template Literals
-</h2>
+<h2 id="ch54">Chapter 54: Template Literals</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Template literals are a type of string literal that allows values to be
+<p>Template literals are a type of string literal that allows values to be
 interpolated, and optionally the interpolation and construction
-behaviour to be controlled using a "tag" function.
-</p>
+behaviour to be controlled using a "tag" function.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch54-1">
-Section 54.1: Basic interpolation and multiline strings
-</h3>
+<h3 id="ch54-1">Section 54.1: Basic interpolation and multiline strings</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Template literals are a special type of string literal that can be used
+<p>Template literals are a special type of string literal that can be used
 instead of the standard '…' or "…". They are declared by quoting the
 string with backticks instead of the standard single or double quotes:
-`…`.
-</p>
-<p>
-Template literals can contain line breaks and arbitrary expressions can
+`…`.</p>
+
+<p>Template literals can contain line breaks and arbitrary expressions can
 be embedded using the ${ expression } substitution syntax. By default,
 the values of these substitution expressions are concatenated directly
-into the string where they appear.
-</p>
+into the string where they appear.</p>
+
 <pre>
 <b>const</b> name = &quot;John&quot;;
 <b>const</b> score = 74;
@@ -22933,21 +22430,17 @@ Game Over!
 John&apos;s score was 740.
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch54-2">
-Section 54.2: Tagged strings
-</h3>
+<h3 id="ch54-2">Section 54.2: Tagged strings</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-A function identified immediately before a template literal is used to
+<p>A function identified immediately before a template literal is used to
 interpret it, in what is called a <b>tagged template literal</b>. The
 tag function can return a string, but it can also return any other type
-of value.
-</p>
-<p>
-The first argument to the tag function, strings, is an Array of each
+of value.</p>
+
+<p>The first argument to the tag function, strings, is an Array of each
 constant piece of the literal. The remaining arguments, …substitutions,
-contain the evaluated values of each ${} substitution expression.
-</p>
+contain the evaluated values of each ${} substitution expression.</p>
+
 <pre>
 <b>function</b> settings(strings, &hellip;substitutions) {
   <b>const</b> result = <b>new</b> Map();
@@ -22963,12 +22456,12 @@ contain the evaluated values of each ${} substitution expression.
 &grave;;
 Map {&quot;label&quot; =&gt; &quot;Content&quot;, &quot;servers&quot; =&gt; 17, &quot;hostname&quot; =&gt; &quot;stackoverflow.com&quot;}
 </pre>
-<p>
-The strings Array has a special .raw property referencing a parallel
+
+<p>The strings Array has a special .raw property referencing a parallel
 Array of the same constant pieces of the template literal but
 <i>exactly</i> as they appear in the source code, without any
-backslash-escapes being replaced.
-</p>
+backslash-escapes being replaced.</p>
+
 <pre>
 <b>function</b> example(strings, &hellip;substitutions) {
   console.log(&apos;strings:&apos;, strings);
@@ -22979,18 +22472,14 @@ strings: &lbrack;&quot;Hello &quot;, &quot;&period;&bsol;n&bsol;How are you?&quo
 substitutions: &lbrack;&quot;world&quot;&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch54-3">
-Section 54.3: Raw strings
-</h3>
+<h3 id="ch54-3">Section 54.3: Raw strings</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The tag function can be used with template literals to access a version
-of their contents without interpreting any backslash escape sequences.
-</p>
-<p>
-String .raw`\n` will contain a backslash and the lowercase letter n,
-while `\n` or `\n` would contain a single newline character instead.
-</p>
+<p>The tag function can be used with template literals to access a version
+of their contents without interpreting any backslash escape sequences.</p>
+
+<p>String .raw`\n` will contain a backslash and the lowercase letter n,
+while `\n` or `\n` would contain a single newline character instead.</p>
+
 <pre>
 <b>const</b> patternString = String.raw&grave;Welcome, (&bsol;w)!&grave;;
 <b>const</b> pattern = <b>new</b> RegExp(patternString);
@@ -23001,12 +22490,11 @@ pattern.exec(message);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch54-4">Section 54.4: Templating HTML With Template Strings</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-You can create an HTML`…` template string tag function to automatically
+<p>You can create an HTML`…` template string tag function to automatically
 encodes interpolated values. (This requires that interpolated values are
 only used as text, and <b>may not be safe if interpolated values are
-used in code</b> such as scripts or styles.)
-</p>
+used in code</b> such as scripts or styles.)</p>
+
 <pre>
 class HTMLString extends String {
   static escape(text) {
@@ -23045,19 +22533,14 @@ document.body.innerHTML = HTML`
 </pre>
 <!-- ![](./images/image036.png){width="7.486805555555556in" height="5.666666666666667in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch54-5">
-Section 54.5: Introduction
-</h3>
+<h3 id="ch54-5">Section 54.5: Introduction</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Template Literals act like strings with special features. They are
-enclosed by by the back-tick `` and can be spanned across multiple
-lines.
-</p>
-<p>
-Template Literals can contain embedded expressions too. These
-expressions are indicated by a $ sign and curly braces {}
-</p>
+<p>Template Literals act like strings with special features. They are
+enclosed by by the back-tick `` and can be spanned across multiple lines.</p>
+
+<p>Template Literals can contain embedded expressions too. These
+expressions are indicated by a $ sign and curly braces {}</p>
+
 <pre>
 // <i>A single line Template Literal</i>
 <b>var</b> aLiteral = &grave;single line string data&grave;;
@@ -23072,108 +22555,62 @@ expressions are indicated by a $ sign and curly braces {}
 <b>var</b> aString = &quot;single line string data&quot;
 console.log(aString === aLiteral)  // <i>Returns true</i>
 </pre>
-<p>
-There are many other features of String Literals such as Tagged Template
-Literals and Raw property. These are demonstrated in other examples.
-</p>
+
+<p>There are many other features of String Literals such as Tagged Template
+Literals and Raw property. These are demonstrated in other examples.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch55">
-Chapter 55: Fetch
-</h2>
+<h2 id="ch55">Chapter 55: Fetch</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <table border="1" style="width:200px">
-<thead>
-<tr>
-<th>
-<b>Options</b>
-</th>
-<th>
-<b>Details</b>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-method
-</td>
-<td>
-The HTTP method to use for the request. ex:
-GET,POST,PUT,DELETE,HEAD.Defaults to GET.
-</td>
-</tr>
-<tr>
-<td>
-headers
-</td>
-<td>
-A Headers object containg additional HTTP headers to include in the
-request.
-</td>
-</tr>
-<tr>
-<td>
-body
-</td>
-<td>
-The request payload, can be a string or a FormData object. Defaults to
-<b>undefined</b>
-</td>
-</tr>
-<tr>
-<td>
-cache
-</td>
-<td>
-The caching mode. <b>default</b>, reload, no-cache.
-</td>
-</tr>
-<tr>
-<td>
-referrer
-</td>
-<td>
-The referrer of the request.
-</td>
-</tr>
-<tr>
-<td>
-mode
-</td>
-<td>
-cors, no-cors, same-origin. Defaults to no-cors.
-</td>
-</tr>
-<tr>
-<td>
-credentials
-</td>
-<td>
-omit, same-origin, include. Defaults to omit.
-</td>
-</tr>
-<tr>
-<td>
-redirect
-</td>
-<td>
-follow, error, manual. Default to follow.
-</td>
-</tr>
-<tr>
-<td>
-integrity
-</td>
-<td>
-Associated integrity metadata. Defaults to empty string.
-</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th><b>Options</b></th>
+      <th><b>Details</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+	  <td>method</td>
+      <td>The HTTP method to use for the request. ex: GET,POST,PUT,DELETE,HEAD.
+	  Defaults to GET.</td>
+    </tr>
+    <tr>
+      <td>headers</td>
+      <td>A Headers object containg additional HTTP headers to include in the request.</td>
+    </tr>
+    <tr>
+      <td>body</td>
+      <td>The request payload, can be a string or a FormData object. Defaults to
+	    <b>undefined</b></td>
+    </tr>
+    <tr>
+      <td>cache</td>
+      <td>The caching mode. <b>default</b>, reload, no-cache.</td>
+    </tr>
+    <tr>
+      <td>referrer</td>
+      <td>The referrer of the request.</td>
+    </tr>
+    <tr>
+      <td>mode</td>
+      <td>cors, no-cors, same-origin. Defaults to no-cors.</td>
+    </tr>
+    <tr>
+      <td>credentials</td>
+      <td>omit, same-origin, include. Defaults to omit.</td>
+    </tr>
+    <tr>
+      <td>redirect</td>
+      <td>follow, error, manual. Default to follow.</td>
+    </tr>
+    <tr>
+      <td>integrity</td>
+      <td>Associated integrity metadata. Defaults to empty string.</td>
+    </tr>
+  </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch55-1">
-Section 55.1: Getting JSON data
-</h3>
+<h3 id="ch55-1">Section 55.1: Getting JSON data</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // <i>get some data from stackoverflow</i>
@@ -23184,9 +22621,7 @@ flow&quot;)
   .<b>catch</b>(err =&gt; console.log(err));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch55-2">
-Section 55.2: Set Request Headers
-</h3>
+<h3 id="ch55-2">Section 55.2: Set Request Headers</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 fetch(&apos;/example.json&apos;, {
@@ -23197,13 +22632,10 @@ fetch(&apos;/example.json&apos;, {
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch55-3">
-Section 55.3: POST Data
-</h3>
+<h3 id="ch55-3">Section 55.3: POST Data</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Posting form data
-</p>
+<p>Posting form data</p>
+
 <pre>
 fetch(&grave;/example/submit&grave;, {
   method: &apos;POST&apos;,
@@ -23220,14 +22652,11 @@ fetch(&grave;/example/submit.json&grave;, {
 </pre>
 <!-- page 310 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch55-4">
-Section 55.4: Send cookies
-</h3>
+<h3 id="ch55-4">Section 55.4: Send cookies</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The fetch function does not send cookies by default. There are two
-possible ways to send cookies:
-</p>
+<p>The fetch function does not send cookies by default. There are two
+possible ways to send cookies:</p>
+
 <ol type="1">
 <li>
 Only send cookies if the URL is on the same origin as the calling
@@ -23239,6 +22668,7 @@ fetch(&apos;/login&apos;, {
   credentials: &apos;same-origin&apos;
 })
 </pre>
+
 <ol type="1" start="2">
 <li>
 Always send cookies, even for cross-origin calls.
@@ -23250,15 +22680,12 @@ fetch(&apos;https://otherdomain.com/login&apos;, {
 })
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch55-5">
-Section 55.5: GlobalFetch
-</h3>
+<h3 id="ch55-5">Section 55.5: GlobalFetch</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The <a href="https://fetch.spec.whatwg.org/#globalfetch" 
+<p>The <a href="https://fetch.spec.whatwg.org/#globalfetch" 
 target="_blank" rel="noopener noreferrer">GlobalFetch</a> interface
-exposes the fetch function, which can be used to request resources.
-</p>
+exposes the fetch function, which can be used to request resources.</p>
+
 <pre>
 fetch(&apos;/path/to/resource.json&apos;)
   .then(response =&gt; {
@@ -23271,18 +22698,14 @@ fetch(&apos;/path/to/resource.json&apos;)
     console.log(json);
   });
 </pre>
-<p>
-The resolved value is a
+
+<p>The resolved value is a
 <a href="https://fetch.spec.whatwg.org/#response-class" 
 target="_blank" rel="noopener noreferrer">Response</a> Object. This
 Object contains the body of the response, as well as its status and
-headers.
-</p>
+headers.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch55-6">
-Section 55.6: Using Fetch to Display Questions from the Stack Overflow
-API
-</h3>
+<h3 id="ch55-6">Section 55.6: Using Fetch to Display Questions from the Stack Overflow API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 <b>const</b> url =
@@ -23303,20 +22726,15 @@ responseData.then(({items, has_more, quota_max, quota_remaining}) =&gt; {
 </pre>
 <!-- page 311 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch56">
-Chapter 56: Scope
-</h2>
+<h2 id="ch56">Chapter 56: Scope</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch56-1">
-Section 56.1: Closures
-</h3>
+<h3 id="ch56-1">Section 56.1: Closures</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-When a function is declared, variables in the context of its
+<p>When a function is declared, variables in the context of its
 <i>declaration</i> are captured in its scope. For example, in the code
 below, the variable x is bound to a value in the outer scope, and then
-the reference to x is captured in the context of bar:
-</p>
+the reference to x is captured in the context of bar:</p>
+
 <pre>
 <b>var</b> x = 4;  // <i>declaration in outer scope</i>
 <b>function</b> bar() {
@@ -23324,14 +22742,15 @@ the reference to x is captured in the context of bar:
 }
 bar();  // <i>prints 4 to console</i>
 </pre>
+
 <blockquote>
 Sample output: 4
 </blockquote>
-<p>
-This concept of "capturing" scope is interesting because we can use and
+
+<p>This concept of "capturing" scope is interesting because we can use and
 modify variables from an outer scope even after the outer scope exits.
-For example, consider the following:
-</p>
+For example, consider the following:</p>
+
 <pre>
 <b>function</b> foo() {
   <b>var</b> x = 4;  // <i>declaration in outer scope</i>
@@ -23344,23 +22763,22 @@ For example, consider the following:
 <b>var</b> barWithX = foo();
 barWithX();  // <i>we can still access x</i>
 </pre>
+
 <blockquote>
 Sample output: 4
 </blockquote>
-<p>
-In the above example, when foo is called, its context is captured in the
+
+<p>In the above example, when foo is called, its context is captured in the
 function bar. So even after it returns, bar can still access and modify
 the variable x. The function foo, whose context is captured in another
-function, is said to be a <i>closure</i>.
-</p>
-<p>
-<b>Private data</b>
-</p>
-<p>
-This lets us do some interesting things, such as defining "private"
+function, is said to be a <i>closure</i>.</p>
+
+<p><b>Private data</b></p>
+
+<p>This lets us do some interesting things, such as defining "private"
 variables that are visible only to a specific function or set of
-functions. A contrived (but popular) example:
-</p>
+functions. A contrived (but popular) example:</p>
+
 <pre>
 <b>function</b> makeCounter() {
   <b>var</b> counter = 0;
@@ -23379,22 +22797,21 @@ a&period;increment();
 console.log(a&period;value());
 console.log(b&period;value());
 </pre>
+
 <blockquote>
 Sample output:   10
 </blockquote>
-<p>
-When makeCounter() is called, a snapshot of the context of that function
+
+<p>When makeCounter() is called, a snapshot of the context of that function
 is saved. All code inside makeCountre() will use that snapshot in their
 execution. Two calls of makeCounter() will thus create two different
-snapshots, with their own copy of counter.
-</p>
-<p>
-<b>Immediately-invoked function expressions (IIFE)</b>
-</p>
-<p>
-Closures are also used to prevent global namespace pollution, often
-through the use of immediately-invoked function expressions.
-</p>
+snapshots, with their own copy of counter.</p>
+
+<p><b>Immediately-invoked function expressions (IIFE)</b></p>
+
+<p>Closures are also used to prevent global namespace pollution, often
+through the use of immediately-invoked function expressions.</p>
+
 <p>
 <i>Immediately-invoked function expressions</i> (or, perhaps more
 intuitively, <i>self-executing anonymous functions</i>) are essentially
