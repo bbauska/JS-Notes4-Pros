@@ -199,7 +199,7 @@ console.log("thisVar:", thisVar, "and thatVar:", thatVar);
 <p>This will log the following to the console:</p>
 <!-- page 3 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 04. thisVar and thatVar, console.log (03) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~ 04. thisVar and thatVar, console.log (03) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image004.jpg"
   title="thisVar and thatVar"
@@ -207,12 +207,16 @@ console.log("thisVar:", thisVar, "and thatVar:", thatVar);
   style="border: 2px solid #000000; width:7.47in;" />
 </p>
 <!-- {width="7.477777777777778in" height="0.9729166666666667in"} -->
+
 <h4>Placeholders</h4>
+
 <p>You can use console.log() in combination with placeholders:</p>
+
 <pre>
 <b>var</b> greet = "Hello", who = "World";
 console.log ("%s, %s!", greet, who);
 </pre>
+
 <p>This will log the following to the console:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 05. greet Hello, World (03) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -222,10 +226,14 @@ console.log ("%s, %s!", greet, who);
   alt="greet Hello, World."
   style="border: 2px solid #000000; width:7in;" />
 </p>
+
 <!--{width="6.990972222222222in" height="1.4868055555555555in"}-->
+
 <h4>Logging Objects</h4>
+
 <p>Below we see the result of logging an object. This is often useful for
 logging JSON responses from API calls.</p>
+
 <pre>
 console.log ( { 
   'Email': '', 
@@ -261,11 +269,11 @@ we log the body element:</p>
 
 <p>This will log the following to the console:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07. document.body information (04) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 07. document.body information (04) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <p><img src="./images/image007.jpg"
-  title=" "
-  alt="."
+  title="console.log(document.body) example"
+  alt="console.log(document.body) example."
   style="border: 2px solid #000000; width:6.52in;" />
 <!--{width="6.522222222222222in" height="2.3784722222222223in"}--></p>
 
@@ -283,7 +291,7 @@ on a web page.</p>
 
 <p>For example, consider the following HTML tag:</p>
 
-<pre><b><p</b> id="paragraph"<b>&gt;</p&gt;</b></pre>
+<pre><b>&lt;p</b> id="paragraph"<b>&gt;&lt;/p&gt;</b></pre>
 
 <p>To change its textContent property, we can run the following JavaScript:</p>
 
@@ -367,11 +375,11 @@ shorthand:</p>
 
 <p>In Chrome, that would produce a pop-up like this:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 08.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 08. alert() example (06) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <p><img src="./images/image008.png"
-  title=" "
-  alt="."
+  title="alert() example"
+  alt="alert() example."
   style="border: 2px solid #000000; width:5.225in;" />
 <!--{width="5.225in" height="2.3152777777777778in"}-->
 </p>
@@ -434,11 +442,11 @@ console.log(age); // <i>Prints the value inserted by the user</i>
 </pre>
 <!-- page 7 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 09.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 09. window.prompt() example (07) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <p><img src="./images/image009.png"
-  title=" "
-  alt="."
+  title="window.prompt() example"
+  alt="window.prompt() example."
   style="border: 2px solid #000000; width:4.603in;" />
 <!--{width="4.603472222222222in" height="1.9548611111111112in"}-->
 </p>
@@ -485,11 +493,11 @@ doing a dangerous operation like deleting something in a Control Panel:</p>
 
 <p>The output of that code would look like this in the browser:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 10.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 10. window.confirm example (07) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <p><img src="./images/image010.jpg"
-  title=" "
-  alt="."
+  title="window.confirm, then deleteItem command"
+  alt="window.confirm, then deleteItem command."
   style="border: 2px solid #000000; width:4.603in;" />
 <!--{width="4.603472222222222in" height="1.4597222222222221in"}--></p>
 <p>If you need it for later use, you can simply store the result of the
@@ -631,7 +639,7 @@ value of a variable, we log it to the console or use
 window.alert():</p>
 
 <pre>
-console.log(number1); // <i>3</i>
+console.log(number1);  // <i>3</i>
 window.alert(number1); // <i>3</i>
 </pre>
 
@@ -738,14 +746,12 @@ a === <b>null</b>; // true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre><b>window.isNaN</b></pre>
 
-<p>The global function () can be used to check if a certain value
-or expression evaluates to <b>NaN</b>. This function (in short)
-first checks if the value is a number, if not tries to convert it (&amp;ast;), and
-then checks if the resulting value is <b>NaN</b>. For this reason, <b>this
-testing method may cause confusion</b>.</p>
+<p>The global function () can be used to check if a certain value or expression evaluates 
+to <b>NaN</b>. This function (in short) first checks if the value is a number, if not 
+tries to convert it (&ast;), and then checks if the resulting value is <b>NaN</b>. 
+For this reason, <b>this testing method may cause confusion</b>.</p>
 
-<p>(&amp;ast;) The "conversion" method is not that simple, see
-<a
+<p>(&ast;) The "conversion" method is not that simple, see <a
 href="http://www.ecma-international.org/ecma-262/6.0/#sec-isnan-number"
 target="_blank" rel="noreferrer noopener">ECMA-262 18.2.3</a>
 for a detailed explanation of the algorithm.</p>
@@ -766,12 +772,12 @@ isNaN("45.3");        // <i>false: string representing a number, converted to 45
 isNaN("1.2e3");       // <i>false: string representing a number, converted to 1.2e3</i>
 isNaN("Infinity");    // <i>false: string representing a number, converted to Infinity</i>
 isNaN(<b>new</b> Date);      // <i>false: Date object, converted to milliseconds since epoch</i>
-isNaN("10$&lt;/span&gt;"); // <i>true : conversion fails, the dollar sign is not a digit</i>
-isNaN(”hello”); // <i>true : conversion fails, no digits at all</i> 
-isNaN(<b>undefined</b>); // <i>true : converted to NaN</i>
-isNaN(); // <i>true : converted to NaN (implicitly undefined)</i>
-isNaN(<b>function</b>(){}); // <i>true : conversion fails</i> 
-isNaN({}); // <i>true : conversion fails</i> isNaN([1, 2]); // <i>true : converted to “1, 2”, which can’t be converted to a number</i>
+isNaN("10$&lt;/span&gt;");  // <i>true : conversion fails, the dollar sign is not a digit</i>
+isNaN(”hello”);     // <i>true : conversion fails, no digits at all</i> 
+isNaN(<b>undefined</b>);   // <i>true : converted to NaN</i>
+isNaN();            // <i>true : converted to NaN (implicitly undefined)</i>
+isNaN(<b>function</b>(){});  // <i>true : conversion fails</i> 
+isNaN({});          // <i>true : conversion fails</i> isNaN([1, 2]); // <i>true : converted to “1, 2”, which can’t be converted to a number</i>
 </pre>
 
 <!-- page 13 -->
@@ -810,7 +816,7 @@ steps are taken:</p>
 
 <p>Some examples:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 11. examples: Number.isNaN (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 11. examples: Number.isNaN (13) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image011.png"
   title="Examples; Number.isNaN"
@@ -840,8 +846,7 @@ window.hasOwnProperty('NaN'); // <i>true</i>
 
 <pre><b>typeof</b> <b>NaN</b>; // <i>'number'</i></pre>
 
-<p>Don't check for <b>NaN</b> using the equality operator. See isNaN
-instead.</p>
+<p>Don't check for <b>NaN</b> using the equality operator. See isNaN instead.</p>
 
 <pre>
 <b>NaN</b> == <b>NaN</b>  // <i>false</i>
@@ -908,7 +913,9 @@ from the function call
     </ul>
   </li>
 </ul>
+
 <!-- page 15 -->
+
 <p><b>undefined</b> is also a property of the global window object.</p>
 
 <pre>
@@ -919,42 +926,39 @@ window.hasOwnProperty('undefined'); // <i>true</i>
 
 <h5>Version &lt; 5</h5>
 
-<p>Before ECMAScript 5 you could actually change the value of the
-window.<b>undefined</b> property to any other value potentially breaking
-everything.</p>
+<p>Before ECMAScript 5 you could actually change the value of the window.<b>undefined</b> 
+property to any other value potentially breaking everything.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch3-5">Section 3.5: Infinity and -Infinity</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 1 / 0; // <i>Infinity</i>
-// <i>Wait! WHAAAT?</i>
+       // <i>Wait! WHAAAT?</i>
 </pre>
 
-<p><b>Infinity</b> is a property of the global object (therefore a global
-variable) that represents mathematical infinity. It is a reference to
-Number.POSITIVE_INFINITY</p>
+<p><b>Infinity</b> is a property of the global object (therefore a global variable) that 
+represents mathematical infinity. It is a reference to Number.POSITIVE_INFINITY</p>
 
-<p>It is greater than any other value, and you can get it by dividing by 0
-or by evaluating the expression of a number that’s so big that
-overflows. This actually means there is no division by 0 errors in
-JavaScript, there is Infinity!</p>
+<p>It is greater than any other value, and you can get it by dividing by 0 or by 
+evaluating the expression of a number that’s so big that overflows. This actually 
+means there is no division by 0 errors in JavaScript, there is Infinity!</p>
 
-<p>There is also <b>-Infinity</b> which is mathematical negative infinity,
-and it’s lower than any other value.</p>
+<p>There is also <b>-Infinity</b> which is mathematical negative infinity, and it’s 
+lower than any other value.</p>
 
-<p>To get <b>-Infinity</b> you negate <b>Infinity</b>, or get a reference
-to it in <b>Number.NEGATIVE_INFINITY</b>.</p>
+<p>To get <b>-Infinity</b> you negate <b>Infinity</b>, or get a reference to it in 
+<b>Number.NEGATIVE_INFINITY</b>.</p>
 
 <pre>
-- <b>Infinity</b>; // <i>-Infinity</i>
+-<b>Infinity</b>; // <i>-Infinity</i>
 </pre>
 
 <p>Now let’s have some fun with examples:</p>
 
 <pre>
-<b>Infinity</b> > 123192310293;  // <i>true</i>
+<b>Infinity</b> > 123192310293;    // <i>true</i>
 <b>-Infinity</b> &lt; -123192310293;  // <i>true</i>
-1 / 0;  // <i>Infinity</i>
+1 / 0;                             // <i>Infinity</i>
 Math.pow(123123123, 9123192391023); // <i>Infinity</i>
 Number.MAX_VALUE &ast; 2;  // <i>Infinity</i>
 23 / <b>Infinity;</b>  // <i>0</i>
@@ -1025,8 +1029,7 @@ dividing by zero is not possible.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch3-8">Section 3.8: Math library functions that return NaN</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Generally, Math functions that are given non-numeric arguments will
-return NaN.</p>
+<p>Generally, Math functions that are given non-numeric arguments will return NaN.</p>
 
 <pre>Math.floor("a")</pre>
 
@@ -1153,7 +1156,6 @@ are used in the above example to ignore the remaining <i>HTML</i> text
 <h2 id="ch5">Chapter 5: Console</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- page 19 -->
-<p>
 <p>The information displayed by a
 <a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console" 
  target="_blank" rel="noopener noreferrer"> debugging/web console</a> is
@@ -1163,260 +1165,176 @@ made available through the multiple
 Javascript object</a> that can be consulted through property, the
 methods displayed are generally the following (taken from Chromium's
 output):</p>
+
 <ul>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/console/assert" 
-    target="_blank" rel="noreferrer noopener">assert</a>
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/clear" 
-    target="_blank" rel="noreferrer noopener">clear</a>
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/count" 
-    target="_blank" rel="noreferrer noopener">count</a>
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/console#console.debug(...)" 
-    target="_blank" rel="noreferrer noopener">debug</a>
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/dir" 
-    target="_blank" rel="noreferrer noopener">dir</a>
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/dirxml" 
-    target="_blank" rel="noreferrer noopener">dirxml</a>
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/error" 
-    target="_blank" rel="noreferrer noopener">error</a>
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/group" 
-    target="_blank" rel="noreferrer noopener">group</a>
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/groupCollapsed" 
-    target="_blank" rel="noreferrer noopener">groupCollapsed</a>
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/groupEnd" 
-    target="_blank" rel="noreferrer noopener">groupEnd</a>
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/info" 
-    target="_blank" rel="noreferrer noopener">info</a>
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/log" 
-    target="_blank" rel="noreferrer noopener">log</a>
-</li>
-<li>
-markTimeline
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/profile" 
-    target="_blank" rel="noreferrer noopener">profile</a>
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/profileEnd" 
-    target="_blank" rel="noreferrer noopener">profileEnd</a>
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/table" 
-    target="_blank" rel="noreferrer noopener">table</a>
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/time" 
-    target="_blank" rel="noreferrer noopener">time</a>
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/timeEnd" 
-    target="_blank" rel="noreferrer noopener">timeEnd</a>
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/timeStamp" 
-    target="_blank" rel="noreferrer noopener">timeStamp</a>
-</li>
-<li>
-timeline
-</li>
-<li>
-timelineEnd
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/trace" 
-    target="_blank" rel="noreferrer noopener">trace</a>
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/warn" 
-    target="_blank" rel="noreferrer noopener">warn</a>
-</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/console/assert" 
+    target="_blank" rel="noreferrer noopener">assert</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/clear" 
+    target="_blank" rel="noreferrer noopener">clear</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/count" 
+    target="_blank" rel="noreferrer noopener">count</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/console#console.debug(...)" 
+    target="_blank" rel="noreferrer noopener">debug</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/dir" 
+    target="_blank" rel="noreferrer noopener">dir</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/dirxml" 
+    target="_blank" rel="noreferrer noopener">dirxml</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/error" 
+    target="_blank" rel="noreferrer noopener">error</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/group" 
+    target="_blank" rel="noreferrer noopener">group</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/groupCollapsed" 
+    target="_blank" rel="noreferrer noopener">groupCollapsed</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/groupEnd" 
+    target="_blank" rel="noreferrer noopener">groupEnd</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/info" 
+    target="_blank" rel="noreferrer noopener">info</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/log" 
+    target="_blank" rel="noreferrer noopener">log</a></li>
+  <li>markTimeline</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/profile" 
+    target="_blank" rel="noreferrer noopener">profile</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/profileEnd" 
+    target="_blank" rel="noreferrer noopener">profileEnd</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/table" 
+    target="_blank" rel="noreferrer noopener">table</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/time" 
+    target="_blank" rel="noreferrer noopener">time</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/timeEnd" 
+    target="_blank" rel="noreferrer noopener">timeEnd</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/timeStamp" 
+    target="_blank" rel="noreferrer noopener">timeStamp</a></li>
+  <li>timeline</li>
+  <li>timelineEnd</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/trace" 
+    target="_blank" rel="noreferrer noopener">trace</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/warn" 
+    target="_blank" rel="noreferrer noopener">warn</a></li>
 </ul>
-<h4>
-Opening the Console
-</h4>
-<p>
-In most current browsers, the JavaScript Console has been integrated as
-a tab within Developer Tools. The shortcut keys listed below will open
-Developer Tools, it might be necessary to switch to the right tab after
-that.
-</p>
-<h4>
-Chrome
-</h4>
-<p>
-Opening the “Console” panel of Chrome’s <b>DevTools</b>:
-</p>
+
+<h4>Opening the Console</h4>
+
+<p>In most current browsers, the JavaScript Console has been integrated as a tab within 
+Developer Tools. The shortcut keys listed below will open Developer Tools, it might be 
+necessary to switch to the right tab after that.</p>
+
+<h4>Chrome</h4>
+
+<p>Opening the “Console” panel of Chrome’s <b>DevTools</b>:</p>
+
 <ul>
-<li>
-Windows / Linux: any of the following options.
-<ul>
-<li>
-Ctrl + Shift + J
-</li>
-<li>
-Ctrl + Shift + I , then click on the “Web Console” tab <b>or</b> press
-ESC to toggle the console on and off
-</li>
-<li>
-F12 , then click on the “Console” tab <b>or</b> press ESC to toggle the
-console on and off
-</li>
+  <li>Windows / Linux: any of the following options.
+    <ul>
+      <li>Ctrl + Shift + J</li>
+      <li>Ctrl + Shift + I , then click on the “Web Console” tab <b>or</b> press
+	    ESC to toggle the console on and off</li>
+      <li>F12 , then click on the “Console” tab <b>or</b> press ESC to toggle the
+	    console on and off</li>
+    </ul>
+  </li>
+  <li>Mac OS: Cmd + Opt + J</li>
 </ul>
-</li>
-<li>
-Mac OS: Cmd + Opt + J
-</li>
-</ul>
-<h4>
-Firefox
-</h4>
+
+<h4>Firefox</h4>
+
 <!-- page 20 -->
-<p>
-Opening the “Console” panel in Firefox’s <b>Developer Tools</b>:
-</p>
+
+<p>Opening the “Console” panel in Firefox’s <b>Developer Tools</b>:</p>
+
 <ul>
-<li>
-Windows / Linux: any of the following options.
+  <li>Windows / Linux: any of the following options.
+    <ul>
+      <li>Ctrl + Shift + K</li>
+      <li>Ctrl + Shift + I, then click on the “Web Console” tab <b>or</b> press
+	    ESC to toggle the console on and off</li>
+      <li>F12, then click on the “Web Console” tab <b>or</b> press ESC to toggle
+	    the console on and off</li>
+    </ul>
+  </li>
+  <li>Mac OS: Cmd + Opt + K</li>
+</ul>
+
+<h4>Edge and Internet Explorer</h4>
+
+<p>Opening the “Console” panel in the <b>F12 Developer Tools</b>:</p>
+
 <ul>
-<li>
-Ctrl + Shift + K
-</li>
-<li>
-Ctrl + Shift + I , then click on the “Web Console” tab <b>or</b> press
-ESC to toggle the console on and off
-</li>
-<li>
-F12 , then click on the “Web Console” tab <b>or</b> press ESC to toggle
-the console on and off
-</li>
+  <li>F12 , then click on the “Console” tab</li>
 </ul>
-<pre><code>&lt;/li&gt;</code></pre>
-<li>
-Mac OS: Cmd + Opt + K
-</li>
-</ul>
-<h4>
-Edge and Internet Explorer
-</h4>
-<p>
-Opening the “Console” panel in the <b>F12 Developer Tools</b>:
-</p>
-<ul>
-<li>
-F12 , then click on the “Console” tab
-</li>
-</ul>
-<h4>
-Safari
-</h4>
-<p>
-Opening the “Console” panel in Safari’s <b>Web Inspector</b> you must
-first enable the develop menu in Safari's Preferences
-</p>
+
+<h4>Safari</h4>
+
+<p>Opening the “Console” panel in Safari’s <b>Web Inspector</b> you must
+first enable the develop menu in Safari's Preferences</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 12.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 12. safari console web inspector (21) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center">
 <img src="./images/image012.png"
-  title=""
-  alt="."
+  title="Safari console web inspector"
+  alt="Safari console web inspector."
   style="border: 2px solid #000000; width:773px;" />
 <!-- page 21 image012 -->
-<p>
-Then you can either pick "Develop-&gt;Show Error Console" from the menus
-or press ⌘ + Option + C
-</p>
-<h4>
-Opera
-</h4>
-<p>
-Opening the “Console” in opera:
-</p>
+
+<p>Then you can either pick "Develop-&gt;Show Error Console" from the menus
+or press ⌘ + Option + C</p>
+
+<h4>Opera</h4>
+
+<p>Opening the “Console” in opera:</p>
+
 <ul>
-<li>
-Ctrl + Shift + I ,then click on the “Console” tab
-</li>
+  <li>Ctrl + Shift + I ,then click on the “Console” tab</li>
 </ul>
-<h4>
-Compatibility
-</h4>
-<p>
-When using or emulating Internet Explorer 8 or earlier versions (e.g.
+
+<h4>Compatibility</h4>
+
+<p>When using or emulating Internet Explorer 8 or earlier versions (e.g.
 through Compatibility View / Enterprise Mode) the console will
 <b>only</b> be defined when the Developer Tools are active, so
 console.log () statements can cause an exception and prevent code from
 executing. To mitigate this, you can check to see if the console is
-available before you log:
-</p>
+available before you log:</p>
+
 <pre>
 <b>if</b> (<b>typeof</b> window.console !== &apos;undefined&apos;)
 {
   console.log(&quot;Hello World&quot;);
 }
 </pre>
-<p>
-Or at the start of your script you can identify if the console is
+
+<p>Or at the start of your script you can identify if the console is
 available and if not, define a null function to catch all of your
-references and prevent exceptions.
-</p>
+references and prevent exceptions.</p>
+
 <!-- page 22 -->
+
 <pre>
 <b>if</b> (!window.console)
 {
   console = {log: <b>function</b>() {}};
 }
 </pre>
-<p>
-Note this second example will stop <b>all</b> console logs even if the
-developer window has been opened.
-</p>
-<p>
-Using this second example will preclude use of other functions such as
-console.dir(obj) unless that is specifically added.
-</p>
-<p>
-A browser's debugging console or
+
+<p>Note this second example will stop <b>all</b> console logs even if the
+developer window has been opened.</p>
+
+<p>Using this second example will preclude use of other functions such as
+console.dir(obj) unless that is specifically added.</p>
+
+<p>A browser's debugging console or
 <a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console" 
 target="_blank" rel="noreferrer noopener">web console</a> is generally
 used by developers to identify errors, understand flow of execution, log
 data and for many other purpose at runtime. This information is accessed
 through the
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Console" 
-target="_blank" rel="noreferrer noopener">console</a> object.
-</p>
+target="_blank" rel="noreferrer noopener">console</a> object.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch5-1">
-Section 5.1: Measuring time - console.time()
-</h3>
+<h3 id="ch5-1">Section 5.1: Measuring time - console.time()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-console.time() can be used to measure how long a task in your code takes
-to run.
-</p>
-<p>
-Calling
+<p>console.time() can be used to measure how long a task in your code takes to run.</p>
+
+<p>Calling
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/timeEnd" 
 target="_blank" rel="noreferrer noopener">console.time([label])</a>
 starts a new timer. When
@@ -1425,11 +1343,10 @@ target="_blank" rel="noreferrer noopener">console.timeEnd([label])</a>
 is called, the elapsed time, in milliseconds, Since the original .time()
 call is calculated and logged. Because of this behavior, you can call
 .timeEnd() multiple times with the same label to log the elapsed time
-since the original .time() call was made.
-</p>
-<p>
-<b>Example 1:</b>
-</p>
+since the original .time() call was made.</p>
+
+<p><b>Example 1:</b></p>
+
 <pre>
 console.time(&apos;response in&apos;);
 
@@ -1439,16 +1356,16 @@ console.timeEnd(&apos;response in&apos;);
 alert(&apos;One more time&apos;);
 console.timeEnd(&apos;response in&apos;);
 </pre>
-<p>
-will output:
-</p>
+
+<p>will output:</p>
+
 <pre>
 response <b>in</b>: 774.967ms
 response <b>in</b>: 1402.199ms
 </pre>
-<p>
-<b>Example 2:</b>
-</p>
+
+<p><b>Example 2:</b></p>
+
 <pre><b>var</b> elms = document.getElementsByTagName(&apos;&ast;&apos;); // <i>select all elements on the page</i>
 console.time(&apos;Loop time&apos;);
 
@@ -1459,22 +1376,17 @@ console.time(&apos;Loop time&apos;);
 } 
 console.timeEnd(&apos;Loop time&apos;);
 </pre>
-<p>
-will output:
-</p>
-<pre>
-Loop time: 40.716ms
-</pre>
+
+<p>will output:</p>
+
+<pre>Loop time: 40.716ms</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch5-2">
-Section 5.2: Formatting console output
-</h3>
+<h3 id="ch5-2">Section 5.2: Formatting console output</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- page 23 -->
-<p>
-Many of the console's print methods can also handle C-like string
-formatting, using % tokens:
-</p>
+
+<p>Many of the console's print methods can also handle C-like string
+formatting, using % tokens:</p>
 
 <pre>console.log(&apos;%s has %d points&apos;,&apos;Sam&apos;, 100);</pre>
 
@@ -1528,11 +1440,11 @@ which allow fine-grained control over the formatting of that string:</p>
 
 <p>Displays:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 13.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 13. console.log "%cHello world!" (23) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <p><img src="./images/image013.jpg"
-  title=" "
-  alt="."
+  title="console.log '%cHello world!"
+  alt="console.log '%cHello world!"
   style="border: 2px solid #000000; width:7.477in;" />
 <!-- (./images/image013.jpg){width="7.477777777777778in" height="0.6666666666666666in"} --></p>
 <p>It is possible to use multiple %c format specifiers:</p>
@@ -1560,185 +1472,163 @@ console.log("%cHello %cWorld%c!!", // <i>string to be printed</i>
 
 <p>Displays:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 14.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~ 14. console.log '%cHello %cWorld%c!!' (23) ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image014.jpg"
-  title=" "
-  alt="."
+  title="console.log '%cHello %cWorld%c!!'"
+  alt="console.log '%cHello %cWorld%c!!'."
   style="border: 2px solid #000000; width:7.477in;" />
 <!-- (./images/image014.jpg){width="7.477777777777778in" height="0.6395833333333333in"} -->
 <!-- page 24 -->
-<h4>
-Using groups to indent output
-</h4>
-<p>
-Output can be indented and enclosed in a collapsible group in the
-debugging console with the following methods:
-</p>
+
+<h4>Using groups to indent output</h4>
+
+<p>Output can be indented and enclosed in a collapsible group in the debugging console 
+with the following methods:</p>
+
 <ul>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/groupCollapsed" 
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/groupCollapsed" 
     target="_blank" rel="noreferrer noopener">console.groupCollapsed()</a>:
-creates a collapsed group of entries that can be expanded through the
-disclosure button in order to reveal all the entries performed after
-this method is invoked;
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/group" 
+	creates a collapsed group of entries that can be expanded through the
+	disclosure button in order to reveal all the entries performed after
+	this method is invoked;</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/group" 
     target="_blank" rel="noreferrer noopener">console.group()</a>:
-creates an expanded group of entries that can be collapsed in order to
-hide the entries after this method is invoked.
-</li>
+	creates an expanded group of entries that can be collapsed in order to
+	hide the entries after this method is invoked.</li>
 </ul>
-<p>
-The indentation can be removed for posterior entries by using the
-following method:
-</p>
+
+<p>The indentation can be removed for posterior entries by using the following method:</p>
+
 <ul>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/groupEnd" 
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/groupEnd" 
     target="_blank" rel="noreferrer noopener">console.groupEnd()</a>:
-exits the current group, allowing newer entries to be printed in the
-parent group after this method is invoked.
-</li>
+	exits the current group, allowing newer entries to be printed in the
+	parent group after this method is invoked.</li>
 </ul>
-<p>
-Groups can be cascaded to allow multiple indented output or collapsible
-layers within each other:
-</p>
+
+<p>Groups can be cascaded to allow multiple indented output or collapsible
+layers within each other:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 15/16.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~ 15/16. console.groupCollapsed() before/after (24) ~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center">
 <img src="./images/image015.jpg"
-  title=" "
-  alt="."
+  title="console.groupCollapsed() before"
+  alt="console.groupCollapsed() before."
   style="border: 2px solid #000000; width:2.1in;" />      
 <img src="./images/image016.jpg"
-  title=" "
-  alt="."
+  title="console.groupCollapsed() after"
+  alt="console.groupCollapsed() after."
   style="border: 2px solid #000000; width:2.1in;" />
 <!-- ![](./images/image015.jpg){width="2.1083333333333334in" height="3.009027777777778in"} -->
 <!-- ![](./images/image016.jpg){width="2.08125in" height="3.729861111111111in"} -->
-<p align="center">
-= Collapsed group expanded =&gt;
-</p>
+
+<p align="center">= Collapsed group expanded =&gt;</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch5-3">
-Section 5.3: Printing to a browser's debugging console
-</h3>
+<h3 id="ch5-3">Section 5.3: Printing to a browser's debugging console</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-A browser's debugging console can be used in order to print simple
+<p>A browser's debugging console can be used in order to print simple
 messages. This debugging or
 <a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console" 
 target="_blank" rel="noreferrer noopener">web console</a> can be
 directly opened in the browser (F12 key in most browsers see
 <i>Remarks</i> below for further information) and the log method of the
-console JavaScript object can be invoked by typing the following:
-</p>
+console JavaScript object can be invoked by typing the following:</p>
+
 <pre>console.log('My message');</pre>
-<p>
-Then, by pressing Enter, this will display “My message” in the debugging
-console.
-<p>
-console.log() can be called with any number of arguments and variables
+
+<p>Then, by pressing Enter, this will display “My message” in the debugging
+console.<p>
+
+<p>console.log() can be called with any number of arguments and variables
 available in the current scope. Multiple arguments will be printed in
-one line with a small space between them.
-</p>
+one line with a small space between them.</p>
+
 <pre>
 <b>var</b> obj = {test: 1};
 console.log(&lbrack;'string'&rbrack;, 1, obj, window);
 </pre>
-<p>
-The log method will display the following in the debugging console:
-</p>
+
+<p>The log method will display the following in the debugging console:</p>
+
 <pre>&lbrack;'string'&rbrack; 1 Object { test: 1 } Window { /&ast; <i>truncated</i> &ast;/ }</pre>
-<p>
-Beside plain strings, console.log() can handle other types, like arrays,
-objects, dates, functions, etc.:
-</p>
+
+<p>Beside plain strings, console.log() can handle other types, like arrays,
+objects, dates, functions, etc.:</p>
+
 <pre>
 console.log(&lbrack;0, 3, 32, 'a string' &rbrack;);
 console.log({key1: 'value', key2: 'another value'});
 </pre>
-<p>
-Displays:
-</p>
+
+<p>Displays:</p>
+
 <pre>
 Array &lbrack;0, 3, 32, 'a string'&rbrack;
 Object { key1: 'value', key2: 'another value'}
 </pre>
-<p>
-Nested objects may be collapsed:
-</p>
+
+<p>Nested objects may be collapsed:</p>
+
 <pre>console.log({ key1: 'val', key2: &lbrack;'one', 'two'&rbrack;, key3: { a: 1, b: 2 } });</pre>
-<p>
-Displays:
-</p>
+
+<p>Displays:</p>
+
 <pre>Object { key1: 'val', key2: Array &lbrack;2&rbrack;, key3: Object }</pre>
-<p>
-Certain types such as Date objects and <b>function</b>s may be displayed
-differently:
-</p>
+
+<p>Certain types such as Date objects and <b>function</b>s may be displayed differently:</p>
+
 <pre>
 console.log(<b>new</b> Date(0));
 console.log(<b>function</b> test(a, b) { <b>return</b> c; });
 </pre>
-<p>
-Displays:
-</p>
+
+<p>Displays:</p>
+
 <pre>
 Wed Dec 31 1969 19:00:00 GMT &minus; 0500 (Eastern Standard Time)
 <b>function</b> test (a , b) { <b>return</b> c; }
 </pre>
-<h4>
-Other print methods
-</h4>
-<p>
-In addition to the log method, modern browsers also support similar
-methods:
-</p>
+
+<h4>Other print methods</h4>
+
+<p>In addition to the log method, modern browsers also support similar methods:</p>
+
 <ul>
-<li>
-<a href="https://developer.mozilla.org/es/docs/Web/API/Console/info" 
+  <li><a href="https://developer.mozilla.org/es/docs/Web/API/Console/info" 
     target="_blank" rel="noreferrer noopener"> console.info</a> - small
-informative icon (ⓘ) appears on the left side of the printed string(s)
-or object(s).
-</li>
-<li>
-&lt;a href=“a
-href=”https://developer.mozilla.org/en-US/docs/Web/API/Console/warning”
-target=“_blank” rel=“noreferrer noopener”&gt; console.warn</a> - small
-warning icon (!) appears on the left side. In some browsers, the
-background of the log is yellow.
-</li>
-<li>
-&lt;a href=“a
-href=”https://developer.mozilla.org/en-US/docs/Web/API/Console/error”
-target=“_blank” rel=“noreferrer noopener”&gt; console.error</a> - small
-times icon (⊗) appears on the left side. In some browsers, the
-background of the log is red.
-</li>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/timeStamp" 
-    target="_blank" rel="noreferrer noopener">console.timeStamp</a> -
-outputs the current time and a specified string, but is non-standard:
-</li>
+	informative icon (ⓘ) appears on the left side of the printed string(s)
+	or object(s).</li>
+  <li>&lt;a href=“a
+    href=”https://developer.mozilla.org/en-US/docs/Web/API/Console/warning”
+	target=“_blank” rel=“noreferrer noopener”&gt; console.warn</a> - small
+	warning icon (!) appears on the left side. In some browsers, the
+	background of the log is yellow.</li>
+  <li>&lt;a href=“a
+    href=”https://developer.mozilla.org/en-US/docs/Web/API/Console/error”
+	target=“_blank” rel=“noreferrer noopener”&gt; console.error</a> - small
+	times icon (⊗) appears on the left side. In some browsers, the
+	background of the log is red.</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/timeStamp" 
+    target="_blank" rel="noreferrer noopener">console.timeStamp</a> - outputs the 
+	current time and a specified string, but is non-standard:</li>
 </ul>
+
 <pre>console.timeStamp('msg');</pre>
-<h4>
-Displays:
-</h4>
+
+<p>Displays:</p>
+
 <pre>00:00:00.001 msg</pre>
+
 <ul>
-<li>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/trace" 
-    target="_blank" rel="noreferrer noopener">console.trace</a> -
-outputs the current stack trace or displays the same output as the log
-method if invoked in the global scope.
-</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/trace" 
+    target="_blank" rel="noreferrer noopener">console.trace</a> - outputs the current 
+	stack trace or displays the same output as the log method if invoked in the global 
+	scope.</li>
 </ul>
+
 <!-- page 26 -->
+
 <pre>
 <b>function</b> sec () {
   first();
@@ -1748,41 +1638,35 @@ method if invoked in the global scope.
 }
 sec ();
 </pre>
-<h4>
-Displays:
-</h4>
+
+<p>Displays:</p>
+
 <pre>
 first
 sec
 (anonymous <b>function</b>)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 17.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~ 17. console.log, info, debug, warn, error & trace (26) ~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <p><img src="./images/image017.jpg"
-  title=" "
-  alt="."
+  title="console.log, info, debug, warn, error & trace"
+  alt="console.log, info, debug, warn, error & trace."
   style="border: 2px solid #000000; width:7.477in;" />
 <!-- (./images/image017.jpg){width="7.477777777777778in" height="1.3243055555555556in"} --></p>
-<p>
-The above image shows all the functions, with the exception of
-timeStamp, in Chrome version 56.
-</p>
-<p>
-These methods behave similarly to the log method and in different
-debugging consoles may render in different colors or formats.
-</p>
-<p>
-In certain debuggers, the individual objects information can be further
-expanded by clicking the printed text or a small triangle (►) which
-refers to the respective object properties. These collapsing object
-properties can be open or closed on log. See the for additional
-information on this.
-</p>
+
+<p>The above image shows all the functions, with the exception of timeStamp, in Chrome 
+version 56.</p>
+
+<p>These methods behave similarly to the log method and in different debugging consoles 
+may render in different colors or formats.</p>
+
+<p>In certain debuggers, the individual objects information can be further expanded by 
+clicking the printed text or a small triangle (►) which refers to the respective object 
+properties. These collapsing object properties can be open or closed on log. See the 
+for additional information on this.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch5-4">
-Section 5.4: Including a stack trace when logging console.trace()
-</h3>
+<h3 id="ch5-4">Section 5.4: Including a stack trace when logging console.trace()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 <b>function</b> foo(){
@@ -1791,54 +1675,52 @@ Section 5.4: Including a stack trace when logging console.trace()
 
 foo();
 </pre>
-<p>
-Will display this in the console:
-</p>
+
+<p>Will display this in the console:</p>
+
 <pre>
 My log statement VM696:1
   foo            @ VM696:1
   (anonymous <b>function</b>) @ (program):1
 </pre>
-<p>
-Note: Where available it's also useful to know that the same stack trace
+
+<p>Note: Where available it's also useful to know that the same stack trace
 is accessible as a property of the Error object. This can be useful for
-post-processing and gathering automated feedback.
-</p>
+post-processing and gathering automated feedback.</p>
+
 <pre>
 <b>var</b> e = <b>new</b> Error ('foo');
 console.log(e&period;stack);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch5-5">
-Section 5.5: Tabulating values - console.table()
-</h3>
+<h3 id="ch5-5">Section 5.5: Tabulating values - console.table()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-In most environments, () can be used to display objects and arrays in a
-tabular format.
-</p>
-<p>
-<b>For example:</b>
-</p>
+<p>In most environments, () can be used to display objects and arrays in a
+tabular format.</p>
+
+<p><b>For example:</b></p>
+
 <!-- page 27 -->
 <pre>console.table(&lbrack;&apos;Hello&apos;,&apos;world&apos;&rbrack;);</pre>
-<p>
-displays like:
-</p>
+
+<p>displays like:</p>
+
 <pre>
 <b>(index) value</b>
 0       &quot;Hello&quot;
 1       &quot;world&quot;
 </pre>
+
 <pre>console.table({foo: &apos;bar&apos;, bar: &apos;baz&apos;});</pre>
-<p>
-displays like:
-</p>
+
+<p>displays like:</p>
+
 <pre>
 <b>(index) value</b>
 &quot;foo&quot;   &quot;bar&quot;
 &quot;bar&quot;   &quot;baz&quot;
 </pre>
+
 <pre>
 <b>var</b> personArr = &lbrack;
 { 
@@ -1867,42 +1749,36 @@ displays like:
 &rbrack;;
   console.table(personArr, &lbrack;&apos;name&apos;, &apos;personId&apos;&rbrack;);
 </pre>
-<p>
-displays like:
-</p>
+
+<p>displays like:</p>
+
 <!-- page 28 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 18.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 18. console.table() example (28) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image018.jpg"
-  title=" "
-  alt="."
+  title="console.table example"
+  alt="console.table example."
   style="border: 2px solid #000000; width:7.477in;" />
 <!-- ![](./images/image018.jpg){width="7.477777777777778in" height="4.279166666666667in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch5-6">
-Section 5.6: Counting - console.count()
-</h3>
+<h3 id="ch5-6">Section 5.6: Counting - console.count()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/count" 
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/count" 
 target="_blank" rel="noreferrer noopener">console.count([obj])</a>
 places a counter on the object's value provided as argument. Each time
 this method is invoked, the counter is increased (with the exception of
 the empty string ''). A label together with a number is displayed in the
-debugging console according to the following format:
-</p>
-<pre>
-&lbrack;label&rbrack;: X
-</pre>
-<p>
-label represents the value of the object passed as argument and X
-represents the counter's value.
-</p>
-<p>
-An object's value is always considered, even if variables are provided
-as arguments:
-</p>
+debugging console according to the following format:</p>
+
+<pre>&lbrack;label&rbrack;: X</pre>
+
+<p>label represents the value of the object passed as argument and X
+represents the counter's value.</p>
+
+<p>An object's value is always considered, even if variables are provided
+as arguments:</p>
+
 <pre>
 <b>var</b> o1 = 1, o2 = &apos;2&apos;, o3 = &quot;&quot;;
 console.count(o1);
@@ -1913,9 +1789,9 @@ console.count(1);
 console.count(&apos;2&apos;);
 console.count(&apos;&apos;);
 </pre>
-<p>
-Displays:
-</p>
+
+<p>Displays:</p>
+
 <pre>
 1: 1
 2: 1
@@ -1924,26 +1800,26 @@ Displays:
 2: 2
 : 1
 </pre>
-<p>
-Strings with numbers are converted to Number objects:
-</p>
+
+<p>Strings with numbers are converted to Number objects:</p>
+
 <!-- page 29 -->
+
 <pre>
 console.count(42.3);
 console.count(Number(&apos;42.3&apos;));
 console.count(&apos;42.3&apos;);
 </pre>
-<p>
-Displays:
-</p>
+
+<p>Displays:</p>
 <pre>
 42.3: 1
 42.3: 2
 42.3: 3
 </pre>
-<p>
-Functions point always to the global Function object:
-</p>
+
+<p>Functions point always to the global Function object:</p>
+
 <pre>
 console.count(console.constructor);
 console.count(<b>function</b>(){});
@@ -1952,9 +1828,9 @@ console.count(Object);
 console.count(fn1);
 console.count(Number);
 </pre>
-<p>
-Displays:
-</p>
+
+<p>Displays:</p>
+
 <pre>
 &lbrack;object Function&rbrack;: 1
 &lbrack;object Function&rbrack;: 2
@@ -1962,10 +1838,10 @@ Displays:
 &lbrack;object Function&rbrack;: 4
 &lbrack;object Function&rbrack;: 5
 </pre>
-<p>
-Certain objects get specific counters associated to the type of object
-they refer to:
-</p>
+
+<p>Certain objects get specific counters associated to the type of object
+they refer to:</p>
+
 <pre>
 console.count(<b>undefined</b>);
 console.count(document.Batman);
@@ -1986,9 +1862,9 @@ console.&lowbar;&lowbar;proto&lowbar;&lowbar;.constructor.<b>prototype</b>);
 console.count(Object.getPrototypeOf(console));
 console.count(<b>null</b>);
 </pre>
-<p>
-Displays:
-</p>
+
+<p>Displays:</p>
+
 <pre>
 <b>undefined</b>: 1
 <b>undefined</b>: 2
@@ -2007,14 +1883,15 @@ Displays:
 &lbrack;object Object&rbrack;: 5
 <b>null</b>: 1
 </pre>
+
 <!-- page 30 -->
-<p>
-<b>Empty string or absence of argument</b>
-</p>
-<p>
-If no argument is provided while <b>sequentially inputting the count
+
+<p><b>Empty string or absence of argument</b></p>
+
+<p>If no argument is provided while <b>sequentially inputting the count
 method in the debugging console</b>, an empty string is assumed as
-parameter, i.e.:
+parameter, i.e.:</p>
+
 <pre>
 &gt; console.count();
   : 1
@@ -2024,27 +1901,20 @@ parameter, i.e.:
   : 3
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch5-7">
-Section 5.7: Clearing the console - console.clear()
-</h3>
+<h3 id="ch5-7">Section 5.7: Clearing the console - console.clear()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-You can clear the console window using the () method. This removes all
+<p>You can clear the console window using the () method. This removes all
 previously printed messages in the console and may print a message like
-"Console was cleared" in some environments.
-</p>
+"Console was cleared" in some environments.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch5-8">
-Section 5.8: Displaying objects and XML interactively console.dir(),
-console.dirxml()
-</h3>
+<h3 id="ch5-8">Section 5.8: Displaying objects and XML interactively console.dir(),
+console.dirxml()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-console.dir(object) displays an interactive list of the properties of
+<p>console.dir(object) displays an interactive list of the properties of
 the specified JavaScript object. The output is presented as a
 hierarchical listing with disclosure triangles that let you see the
-contents of child objects.
-</p>
+contents of child objects.</p>
+
 <pre>
 <b>var</b> myObject = {
   &quot;foo&quot; : {
@@ -2054,59 +1924,53 @@ contents of child objects.
 
 console.dir (myObject);
 </pre>
-<p>
-displays:
-</p>
+
+<p>displays:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 19.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~ 19. console.dir - list of properties of js object (30) ~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
-<p><img src="./images/image019.jpg"
-  title=" "
-  alt="."
+<img src="./images/image019.jpg"
+  title="console.dir - list of properties of js object"
+  alt="console.dir - list of properties of js object."
   style="border: 2px solid #000000; width:7.477in;" />
 <!-- ![](./images/image019.jpg){width="7.477777777777778in" height="2.657638888888889in"} --></p>
-<p>
-console.dirxml(object) prints an XML representation of the descendant
+
+<p>console.dirxml(object) prints an XML representation of the descendant
 elements of object if possible, or the JavaScript representation if not.
 Calling console.dirxml() on HTML and XML elements is equivalent to
-calling console.log().
-</p>
+calling console.log().</p>
+
 <!-- page 31 -->
-<p>
-<b>Example 1:</b>
-</p>
+<p><b>Example 1:</b></p>
+
 <pre>console.dirxml ( document )</pre>
-<p>
-displays:
-</p>
+
+<p>displays:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 20.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~ 20. console.dirxml - prints xml of descendant elements of object (31) ~~~~~~~~~~~-->
 <p align="left">
 <p><img src="./images/image020.jpg"
-  title=" "
-  alt="."
+  title="console.dirxml - prints xml of descendant elements of object"
+  alt="console.dirxml - prints xml of descendant elements of object."
   style="border: 2px solid #000000; width:7.477in;" />
 <!-- ![](./images/image020.jpg){width="7.477777777777778in" height="1.6847222222222222in"} --></p>
-<p>
-<b>Example 2:</b>
-</p>
-<pre>
-console.log(document)
-</pre>
-<p>
-displays:
-</p>
+
+<p><b>Example 2:</b></p>
+
+<pre>console.log(document)</pre>
+
+<p>displays:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 21.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~ 21. console.log(document) example (31) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <p><img src="./images/image021.jpg"
-  title=" "
-  alt="."
+  title="console.log(document) example"
+  alt="console.log(document) example."
   style="border: 2px solid #000000; width:7.477in;" />
 <!-- ![](./images/image021.jpg){width="7.477777777777778in" height="1.8020833333333333in"} --></p>
-<p>
-<b>Example 3:</b>
-</p>
+
+<p><b>Example 3:</b></p>
+
 <pre>
 <b>var</b> myObject = {
   &quot;foo&quot;:{
@@ -2116,111 +1980,98 @@ displays:
 
 console.dirxml ( myObject );
 </pre>
-<p>
-displays:
-</p>
+
+<p>displays:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 22.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~ 22. console.dirxml(myObject) example (32) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image022.jpg"
-  title=" "
-  alt="."
+  title="console.dirxml(myObject) example"
+  alt="console.dirxml(myObject) example."
   style="border: 2px solid #000000; width:6.5in;" />
 <!-- ![](./images/image022.jpg){width="6.504166666666666in" height="2.6486111111111112in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch5-9">Section 5.9: Debugging with assertions - console.assert()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Writes an error message to the console if the assertion is <b>false</b>.
-Otherwise, if the assertion is <b>true</b>, this does nothing.
-</p>
+<p>Writes an error message to the console if the assertion is <b>false</b>.
+Otherwise, if the assertion is <b>true</b>, this does nothing.</p>
+
 <pre>console.assert ( &apos;one&apos; === 1 );</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 23.  (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 23. assertion is false error (33) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image023.png"
-  title=" "
-  alt="."
+  title="assertion is false error"
+  alt="assertion is false error."
   style="border: 2px solid #000000; width:6.5in;" />
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Multiple arguments can be provided after the assertion. These can be
+<p>Multiple arguments can be provided after the assertion. These can be
 strings or other objects that will only be printed if the assertion is
-<b>false</b>:
-</p>
+<b>false</b>:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 24. console.assert...testing assertion (xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 24. console.assert...testing assertion (33) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <p><img src="./images/image024.jpg"
-  title=" "
-  alt="."
+  title="console.assert...testing assertion"
+  alt="console.assert...testing assertion."
   style="border: 2px solid #000000; width:6.468in;" />
 <!-- ![](./images/image024.jpg){width="6.46875in" height="1.2069444444444444in"} --></p>
-<p>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/console/assert" 
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/console/assert" 
 target="_blank" rel="noreferrer noopener">console.assert</a> does
 <i>not</i> throw an AssertionError (except in Node.js), meaning that
 this method is incompatible with most testing frameworks and that code
-execution will not break on a failed assertion.
-</p>
+execution will not break on a failed assertion.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch6">Chapter 6: Datatypes in JavaScript</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-1">Section 6.1: typeof</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<b>typeof</b> is the 'official' function that one uses to get the type
+<p><b>typeof</b> is the 'official' function that one uses to get the type
 in JavaScript, however in certain cases it might yield some unexpected
 results …</p>
 
 <ol type="1" start="1">
-<li><b>Strings</b><br/> <b>typeof</b> "String" or <b>typeof</b>
-Date(2011,01,01)
-<blockquote>
-"string"
-</blockquote>
-</li>
-<li>
-<b>Numbers</b><br/> <b>typeof</b> 42
-<blockquote>
-"number"
-</blockquote>
-</li>
-<li>
-<b>Bool</b><br/> <b>typeof</b> <b>true</b> (valid values <b>true</b> and
-<b>false</b>)
-<blockquote>
-"boolean"
-</blockquote>
-</li>
-<li>
-<b>Object</b><br/> <b>typeof</b> {} or <b>typeof</b> [] or <b>typeof</b>
-<b>null</b> or <b>typeof</b> /aaa/ or <b>typeof</b> Error()
-<blockquote>
-"object"
-</blockquote>
-</li>
+  <li><b>Strings</b><br/> <b>typeof</b> "String" or <b>typeof</b>
+    Date(2011,01,01)
+  <blockquote>
+  "string"
+  </blockquote>
+  </li>
+  <li><b>Numbers</b><br/> <b>typeof</b> 42
+  <blockquote>
+  "number"
+  </blockquote>
+  </li>
+  <li><b>Bool</b><br/> <b>typeof</b> <b>true</b> (valid values <b>true</b> and
+    <b>false</b>)
+  <blockquote>
+  "boolean"
+  </blockquote>
+  </li>
+  <li><b>Object</b><br/> <b>typeof</b> {} or <b>typeof</b> [] or <b>typeof</b>
+    <b>null</b> or <b>typeof</b> /aaa/ or <b>typeof</b> Error()
+  <blockquote>
+  "object"
+  </blockquote>
+  </li>
   <li><b>Function</b><br/> <b>typeof</b> <b>function</b>(){}
-<blockquote>
-"function"
-</blockquote>
-</li>
-<li>
-<b>Undefined</b><br/> <b>var</b> var1; <b>typeof</b> var1
-<blockquote>
-"undefined"
-</blockquote>
-</li>
+  <blockquote>
+  "function"
+  </blockquote>
+  </li>
+  <li><b>Undefined</b><br/> <b>var</b> var1; <b>typeof</b> var1
+  <blockquote>
+  "undefined"
+  </blockquote>
+  </li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch6-2">
-Section 6.2: Finding an object's class
-</h3>
+<h3 id="ch6-2">Section 6.2: Finding an object's class</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-To find whether an object was constructed by a certain constructor or
-one inheriting from it, you can use the <b>instanceof</b> command:
-</p>
+<p>To find whether an object was constructed by a certain constructor or
+one inheriting from it, you can use the <b>instanceof</b> command:</p>
+
 <pre>
 //<i>We want this function to take the sum of the numbers passed to it</i>
 //<i>It can be called as sum(1, 2, 3) or sum(&lbrack;1, 2, 3&rbrack;) and should give 6</i>
@@ -2237,20 +2088,20 @@ console.log(sum (1, 2, 3))   //<i>6</i>
 console.log(sum (&lbrack;1, 2, 3&rbrack;)) //<i>6</i>
 console.log(sum (4))         //<i>4</i>
 </pre>
-<p>
-Note that primitive values are not considered instances of any class:
-</p>
+
+<p>Note that primitive values are not considered instances of any class:</p>
+
 <pre>
 console.log(2 <b>instanceof</b> Number)          //<i>false</i>
 console.log(&apos;abc&apos; <b>instanceof</b> String)      //<i>false</i>
 console.log(<b>true</b> <b>instanceof</b> Boolean)     //<i>false</i>
 console.log(Symbol() <b>instanceof</b> Symbol)  //<i>false</i>
 </pre>
-<p>
-Every value in JavaScript besides <b>null</b> and <b>undefined</b> also
+
+<p>Every value in JavaScript besides <b>null</b> and <b>undefined</b> also
 has a constructor property storing the function that was used to
-construct it. This even works with primitives.
-</p>
+construct it. This even works with primitives.</p>
+
 <pre>
 //<i>Whereas instanceof also catches instances of subclasses,</i>
 //<i>using obj.constructor does not</i>
@@ -2266,154 +2117,130 @@ console.log(isNumber(&apos;abc&apos;), isNumber(&lbrack;&rbrack;), isNumber(() =
 console.log(isNumber(0), isNumber(Number(&apos;10.1&apos;)), isNumber(<b>NaN</b>)) // <i>true true true</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch6-3">
-Section 6.3: Getting object type by constructor name
-</h3>
+<h3 id="ch6-3">Section 6.3: Getting object type by constructor name</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-When one with <b>typeof</b> operator one gets type object it falls into
-somewhat wast category…
-</p>
-<p>
-In practice you might need to narrow it down to what sort of 'object' it
+<p>When one with <b>typeof</b> operator one gets type object it falls into
+somewhat wast category…</p>
+
+<p>In practice you might need to narrow it down to what sort of 'object' it
 actually is and one way to do it is to use object constructor name to
 get what flavor of object it actually is:
-Object.<b>prototype</b>.toString.call(yourObject)
-</p>
+Object.<b>prototype</b>.toString.call(yourObject)</p>
+
 <ol type="1" start="1">
-<li>
-<b>String</b><br/> Object.<b>prototype</b>.toString.call("String")<br/>
-<blockquote>
-"[object String]"
-</blockquote>
-</li>
-<li>
-<b>Number</b><br/> Object.<b>prototype</b>.toString.call(42)<br/>
-<blockquote>
-"[object Number]"
-</blockquote>
-</li>
-<li>
-<b>Bool</b><br/> Object.<b>prototype</b>.toString.call(<b>true</b>)<br/>
-<blockquote>
-"[object Boolean]"
-</blockquote>
-</li>
-<li>
-<b>Object</b><br/> Object.<b>prototype</b>.toString.call(Object())
-or<br/> Object.<b>prototype</b>.toString.call({})<br/>
-<blockquote>
-"[object Object]"
-</blockquote>
-</li>
-<li>
-<b>Function</b><br/>
-Object.<b>prototype</b>.toString.call(<b>function</b>(){})<br/>
-<blockquote>
-"[object Function]"
-</blockquote>
-</li>
-<li>
-<b>Date</b><br/> Object.<b>prototype</b>.toString.call(<b>new</b>
-Date(2015,10,21))<br/>
-<blockquote>
-"[object Date]"
-</blockquote>
-</li>
-<li>
-<b>Regex</b><br/> Object.<b>prototype</b>.toString.call(<b>new</b>
-RegExp()) or<br/>
-Object.<b>prototype</b>.toString.call(/<i>foo/</i>);<br/>
-<blockquote>
-"[object.RegExp]"
-</blockquote>
-</li>
-<li>
-<b>Array</b><br/> Object.<b>prototype</b>.toString.call([]);<br/>
-<blockquote>
-"[object Array]"
-</blockquote>
-</li>
-<li>
-<b>Null</b><br/>
-Object.<b>prototype</b>.toString.call(<b>null</b>);<br/>
-<blockquote>
-"[object Null]"
-</blockquote>
-</li>
-<li>
-<b>Undefined</b><br/>
-Object.<b>prototype</b>.toString.call(<b>undefined</b>);<br/>
-<blockquote>
-"[object Undefined]"
-</blockquote>
-</li>
-<li>
-<b>Error</b><br/> Object.<b>prototype</b>.toString.call(Error());<br/>
-<blockquote>
-"[object Error]"
-</blockquote>
-</li>
+  <li><b>String</b><br/> Object.<b>prototype</b>.toString.call("String")<br/>
+  <blockquote>
+  "[object String]"
+  </blockquote>
+  </li>
+  <li><b>Number</b><br/> Object.<b>prototype</b>.toString.call(42)<br/>
+  <blockquote>
+  "[object Number]"
+  </blockquote>
+  </li>
+  <li><b>Bool</b><br/> Object.<b>prototype</b>.toString.call(<b>true</b>)<br/>
+  <blockquote>
+  "[object Boolean]"
+  </blockquote>
+  </li>
+  <li><b>Object</b><br/> Object.<b>prototype</b>.toString.call(Object())
+    or<br/> Object.<b>prototype</b>.toString.call({})<br/>
+  <blockquote>
+  "[object Object]"
+  </blockquote>
+  </li>
+  <li><b>Function</b><br/>
+    Object.<b>prototype</b>.toString.call(<b>function</b>(){})<br/>
+  <blockquote>
+  "[object Function]"
+  </blockquote>
+  </li>
+  <li><b>Date</b><br/> Object.<b>prototype</b>.toString.call(<b>new</b>
+    Date(2015,10,21))<br/>
+  <blockquote>
+  "[object Date]"
+  </blockquote>
+  </li>
+  <li><b>Regex</b><br/> Object.<b>prototype</b>.toString.call(<b>new</b>
+  RegExp()) or<br/>
+  Object.<b>prototype</b>.toString.call(/<i>foo/</i>);<br/>
+  <blockquote>
+  "[object.RegExp]"
+  </blockquote>
+  </li>
+  <li><b>Array</b><br/> Object.<b>prototype</b>.toString.call([]);<br/>
+  <blockquote>
+  "[object Array]"
+  </blockquote>
+  </li>
+  <li><b>Null</b><br/>
+    Object.<b>prototype</b>.toString.call(<b>null</b>);<br/>
+  <blockquote>
+  "[object Null]"
+  </blockquote>
+  </li>
+  <li><b>Undefined</b><br/>
+    Object.<b>prototype</b>.toString.call(<b>undefined</b>);<br/>
+  <blockquote>
+  "[object Undefined]"
+  </blockquote>
+  </li>
+  <li><b>Error</b><br/> Object.<b>prototype</b>.toString.call(Error());<br/>
+  <blockquote>
+  "[object Error]"
+  </blockquote>
+  </li>
 </ol>
 <!-- page 37 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch7">
-Chapter 7: Strings
-</h2>
+<h2 id="ch7">Chapter 7: Strings</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch7-1">
-Section 7.1: Basic Info and String Concatenation
-</h3>
+<h3 id="ch7-1">Section 7.1: Basic Info and String Concatenation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Strings in JavaScript can be enclosed in Single quotes 'hello', Double
+<p>Strings in JavaScript can be enclosed in Single quotes 'hello', Double
 quotes "Hello" and (from ES2015, ES6) in Template Literals
-(<i>backticks</i>) `hello`.
-</p>
+(<i>backticks</i>) `hello`.</p>
+
 <pre>
 <b>var</b> hello = &quot;Hello&quot;;
 <b>var</b> world = &apos;world&apos;;
 <b>var</b> helloW = &grave;Hello World&grave;; // <i>ES2015 / ES6</i>
 </pre>
-<p>
-String can be created from other types using the String() function.
-</p>
+
+<p>String can be created from other types using the String() function.</p>
+
 <pre>
 <b>var</b> intString = String(32); // <i>&quot;32&quot;</i>
 <b>var</b> booleanString = String(<b>true</b>); // <i>&quot;true&quot;</i>
 <b>var</b> nullString = String(<b>null</b>); // <i>&quot;null&quot;</i>
 </pre>
-<p>
-Or, toString() can be used to convert Numbers, Booleans or Objects to
-Strings.
-</p>
+
+<p>Or, toString() can be used to convert Numbers, Booleans or Objects to Strings.</p>
+
 <pre>
 <b>var</b> intString = (5232).toString(); // <i>&quot;5232&quot;</i>
 <b>var</b> booleanString = (<b>false</b>).toString(); // <i>&quot;false&quot;</i>
 <b>var</b> objString = ({}).toString(); // <i>&quot;&lbrack;object Object&rbrack;&quot;</i>
 </pre>
-<p>
-Strings also can be created by using String.fromCharCode method.
-</p>
-<pre>
-String.fromCharCode(104,101,108,108,111)  // <i>&quot;hello&quot;</i>
-</pre>
-<p>
-Creating a String object using <b>new</b> keyword is allowed, but is not
-recommended as it behaves like Objects unlike primitive strings.
-</p>
+
+<p>Strings also can be created by using String.fromCharCode method.</p>
+
+<pre>String.fromCharCode(104,101,108,108,111)  // <i>&quot;hello&quot;</i></pre>
+
+<p>Creating a String object using <b>new</b> keyword is allowed, but is not
+recommended as it behaves like Objects unlike primitive strings.</p>
+
 <pre>
 <b>var</b> objectString = <b>new</b> String(&quot;Yes, I am a String object&quot;);
 <b>typeof</b> objectString; // <i>&quot;object&quot;</i>
 <b>typeof</b> objectString.valueOf(); // <i>&quot;string&quot;</i>
 </pre>
-<p>
-<b>Concatenating Strings</b>
-</p>
-<p>
-String concatenation can be done with the + concatenation operator, or
-with the built-in concat() method on the String object prototype.
-</p>
+
+<p><b>Concatenating Strings</b></p>
+
+<p>String concatenation can be done with the + concatenation operator, or
+with the built-in concat() method on the String object prototype.</p>
+
 <pre>
 <b>var</b> foo = &quot;Foo&quot;;
 <b>var</b> bar = &quot;Bar&quot;;
@@ -2422,83 +2249,72 @@ console.log(foo &plus; &quot; &quot;&plus; bar);  // <i>=&gt;&quot;Foo Bar&quot;
 foo.concat(bar)               // <i>=&gt;&quot;FooBar&quot;</i>
 &quot;a&quot;.concat(&quot;b&quot;, &quot; &quot;, &quot;d&quot;) // <i>=&gt;&quot;ab d&quot;</i>
 </pre>
-<p>
-Strings can be concatenated with non-string variables but will
-type-convert the non-string variables into strings.
-</p>
+
+<p>Strings can be concatenated with non-string variables but will
+type-convert the non-string variables into strings.</p>
+
 <pre>
 <b>var</b> string = &quot;string&quot;;
 <b>var</b> number = 32;
 <b>var</b> boolean = <b>true</b>;
 console.log(string &plus; number &plus; boolean); // <i>&quot;string32true&quot;</i>
 </pre>
-<p>
-<b>String Templates</b>
-</p>
+
+<p><b>String Templates</b></p>
+
 <!-- page 38 -->
-<h5>
-Version ≥ 6
-</h5>
-<p>
-Strings can be created using template literals (<i>backticks</i>)
-`hello`.
-</p>
-<pre>
-<b>var</b> greeting = &grave;Hello&grave;;
-</pre>
-<p>
-With template literals, you can do string interpolation using
-${variable} inside template literals:
-</p>
+
+<h5>Version ≥ 6</h5>
+
+<p>Strings can be created using template literals (<i>backticks</i>) `hello`.</p>
+
+<pre><b>var</b> greeting = &grave;Hello&grave;;</pre>
+
+<p>With template literals, you can do string interpolation using
+${variable} inside template literals:</p>
+
 <pre>
 <b>var</b> place = &grave;World&grave;; 
 <b>var</b> greet = &grave;Hello &dollar;{place}!&grave;
 console.log(greet); // <i>&quot;Hello World!&quot;</i>
 </pre>
-<p>
-You can use String.raw to get backslashes to be in the string without
-modification.
-</p>
+
+<p>You can use String.raw to get backslashes to be in the string without modification.</p>
+
 <pre>
 &grave;a&bsol;&bsol;b&grave; // <i>= a&bsol;b</i>
 String.raw&grave;a&bsol;&bsol;b&grave;  // <i>= a&bsol;&bsol;b</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch7-2">
-Section 7.2: Reverse String
-</h3>
+<h3 id="ch7-2">Section 7.2: Reverse String</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The most "popular" way of reversing a string in JavaScript is the
-following code fragment, which is quite common:
-</p>
+<p>The most "popular" way of reversing a string in JavaScript is the
+following code fragment, which is quite common:</p>
+
 <pre>
 <b>function</b> reverseString (str) {
   <b>return</b> str.split(&apos;&apos;).reverse().join(&apos;&apos;);
 }
 reverseString(&apos;string&apos;);   // <i>&quot;gnirts&quot;</i>
 </pre>
-<p>
-However, this will work only so long as the string being reversed does
+
+<p>However, this will work only so long as the string being reversed does
 not contain surrogate pairs. Astral symbols, i.e. characters outside of
 the basic multilingual plane, may be represented by two code units, and
 will lead this naive technique to produce wrong results. Moreover,
 characters with combining marks (e.g. diaeresis) will appear on the
 logical "next" character instead of the original one it was combined
-with.
-</p>
-<pre>
-&apos;?????.&apos;.split(&apos;&apos;).reverse().join(&apos;&apos;);  // <i>fails</i>
-</pre>
-<p>
-While the method will work fine for most languages, a truly accurate,
+with.</p>
+
+<pre>&apos;?????.&apos;.split(&apos;&apos;).reverse().join(&apos;&apos;);  // <i>fails</i></pre>
+
+<p>While the method will work fine for most languages, a truly accurate,
 encoding respecting algorithm for string reversal is slightly more
 involved. One such implementation is a tiny library called
 <a href="https://github.com/mathiasbynens/esreverwhich" 
 target="_blank" rel="noreferrer noopener">Esrever</a> uses regular
 expressions for matching combining marks and surrogate pairs in order to
-perform the reversing perfectly.
-</p>
+perform the reversing perfectly.</p>
 
 <p><b>Explanation</b></p>
 
@@ -2695,9 +2511,7 @@ class=““special”“&gt; where \” will be &lt;p class=“special”&gt;.<
 do not require you to escape ' and ". These use backticks (`) instead of
 single or double quotes.</p>
 
-<pre>
-<b>var</b> x = &grave;&quot;Escaping &quot; and &apos; can become very annoying&grave;;
-</pre>
+<pre><b>var</b> x = &grave;&quot;Escaping &quot; and &apos; can become very annoying&grave;;</pre>
 
 <!-- page 41 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
