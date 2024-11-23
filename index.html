@@ -4226,72 +4226,59 @@ Of course, the test above does not validate that cb is in fact a
 Section 10.4: Null and Undefined
 </h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<b>The differences between null and undefined</b>
-</p>
-<p>
-null</b> and <b>undefined</b> share abstract equality == but not strict
-equality ===,
-</p>
+<p><b>The differences between null and undefined</b></p>
+
+<p>null</b> and <b>undefined</b> share abstract equality == but not strict
+equality ===,</p>
+
 <pre>
 <b>null</b> == <b>undefined</b>  // <i>true</i>
 <b>null</b> === <b>undefined</b> // <i>false</i>
 </pre>
-<p>
-They represent slightly different things:
-</p>
+
+<p>They represent slightly different things:</p>
+
 <ul>
-<li>
-<b>undefined</b> represents the <i>absence of a value</i>, such as
-before an identifier/Object property has been created or in the period
-between identifier/Function parameter creation and it's first set, if
-any.
-</li>
-<li>
-<b>null</b> represents the <i><b>intentional</b> absence of a value</i>
-for an identifier or property which has already been created.
-</li>
+  <li><b>undefined</b> represents the <i>absence of a value</i>, such as before an 
+    identifier/Object property has been created or in the period between identifier/Function 
+	parameter creation and it's first set, if any.</li>
+  <li><b>null</b> represents the <i><b>intentional</b> absence of a value</i> for an 
+    identifier or property which has already been created.</li>
 </ul>
-<p>
-They are different types of syntax:
-</p>
+
+<p>They are different types of syntax:</p>
+
 <ul>
-<li>
-<b>undefined</b> is a <i>property of the global Object</i>, usually
-immutable in the global scope. This means anywhere you can define an
-identifier other than in the global namespace could hide
-<b>undefined</b> from that scope (although things can still <b>be
-undefined</b>)
-</li>
-<li>
-<b>null</b> is a <i>word literal</i>, so it's meaning can never be
-changed and attempting to do so will throw an <i>Error</i>.
-</li>
+  <li><b>undefined</b> is a <i>property of the global Object</i>, usually immutable in 
+    the global scope. This means anywhere you can define an identifier other than in the 
+	global namespace could hide <b>undefined</b> from that scope (although things can 
+	still <b>be undefined</b>)</li>
+  <li><b>null</b> is a <i>word literal</i>, so it's meaning can never be changed and 
+    attempting to do so will throw an <i>Error</i>.</li>
 </ul>
-<p>
-<b>The similarities between null and undefined</b>
-</p>
-<p>
-<b>null</b> and <b>undefined</b> are both falsy.
-</p>
+
+<p><b>The similarities between null and undefined</b></p>
+
+<p><b>null</b> and <b>undefined</b> are both falsy.</p>
+
 <pre>
 <b>if</b> (<b>null</b>) console.log(&quot;won&apos;t be logged&quot;);
 <b>if</b> (<b>undefined</b>) console.log(&quot;won&apos;t be logged&quot;);
 </pre>
-<p>
-Neither <b>null</b> or <b>undefined</b> equal <b>false</b> (see
+
+<p>Neither <b>null</b> or <b>undefined</b> equal <b>false</b> (see
 <a href="http://stackoverflow.com/q/19277458/220060" 
-target="_blank" rel="noopener noreferrer">this question</a>).
-</p>
+target="_blank" rel="noopener noreferrer">this question</a>).</p>
+
 <pre>
 <b>false</b> == <b>undefined</b>  // <i>false</i>
 <b>false</b> == <b>null</b>       // <i>false</i>
 <b>false</b> === <b>undefined</b> // <i>false</i>
 <b>false</b> === <b>null</b>      // <i>false</i>
 </pre>
-<p>
-<b>Using undefined</b>
-</p>
+
+<p><b>Using undefined</b></p>
+
 <ul>
 <li>
 If the current scope can't be trusted, use something which evaluates to
@@ -11433,81 +11420,69 @@ b &ast;= a;
 <p>
 b will now be 15
 </p>
-<p>
-This is functionally the same as
-</p>
-<pre>
-b = b &ast; a;
-</pre>
-<p>
-<b>Divide by</b>
-</p>
+
+<p>This is functionally the same as</p>
+
+<pre>b = b &ast; a;</pre>
+
+<p><b>Divide by</b></p>
+
 <pre>
 </b>var</b> a = 3,
 b = 15;
 b /= a;
 </pre>
-<p>
-b will now be 5
-</p>
-<p>
-This is functionally the same as
-</p>
-<pre>
-b = b / a;
-</pre>
-<h5>
-Version ≥ 7
-</h5>
-<p>
-<b>Raised to the power of</b>
-</p>
+
+<p>b will now be 5</p>
+
+<p>This is functionally the same as</p>
+
+<pre>b = b / a;</pre>
+
+<h5>Version ≥ 7</h5>
+
+<p><b>Raised to the power of</b></p>
+
 <pre>
 <b>var</b> a = 3,
 b = 15;
 b &ast;&ast;= a;
 </pre>
-<p>
-b will now be 3375
-</p>
-<p>
-This is functionally the same as
-</p>
-<pre>
-b = b &ast;&ast; a;
-</pre>
+
+<p>b will now be 3375</p>
+
+<p>This is functionally the same as</p>
+
+<pre>b = b &ast;&ast; a;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch17-7">
-Section 17.7: Assignment
-</h3>
+<h3 id="ch17-7">Section 17.7: Assignment</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-To assign a value to a previously declared variable, use the assignment
-operator, =:
-</p>
+<p>To assign a value to a previously declared variable, use the assignment
+operator, =:</p>
+
 <pre>
 a = 6;
 b = &quot;Foo&quot;;
 </pre>
-<p>
-As an alternative to independent declaration and assignment, it is
-possible to perform both steps in one statement:
-</p>
+
+<p>As an alternative to independent declaration and assignment, it is
+possible to perform both steps in one statement:</p>
 <pre>
 <b>var</b> a = 6;
 <b>let</b> b = &quot;Foo&quot;;
 </pre>
-<p>
-It is in this syntax that global variables may be declared without a
+
+<p>It is in this syntax that global variables may be declared without a
 keyword; if one were to declare a bare variable without an assignment
 immediately afterword, the interpreter would not be able to
-differentiate global declarations a; from references to variables a;.
-</p>
+differentiate global declarations a; from references to variables a;.</p>
+
 <pre>
 c = 5;
 c = &quot;Now the value is a String.&quot;;
 myNewGlobal;  // <i>ReferenceError</i>
 </pre>
+
 <p>
 Note, however, that the above syntax is generally discouraged and is not
 strict-mode compliant. This is to avoid the scenario in which a
@@ -12580,15 +12555,14 @@ logSomeThings(&apos;hello&apos;, &apos;world&apos;);
 Note that you can convert arguments to an actual Array if need-be; see:
 Converting Array-like Objects to Arrays
 </p>
-<h5>
-Version ≥ 6
-</h5>
-<p>
-From ES6, the function can be declared with its last parameter using the
+
+<h5>Version ≥ 6</h5>
+
+<p>From ES6, the function can be declared with its last parameter using the
 <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/rest_parameters" 
 target="_blank" rel="noopener noreferrer"> rest operator</a> (…). This
-creates an Array which holds the arguments from that point onwards
-</p>
+creates an Array which holds the arguments from that point onwards</p>
+
 <pre>
 <b>function</b> personLogsSomeThings(person, &hellip;msg) {
   msg.forEach(arg =&gt; {
@@ -12599,22 +12573,22 @@ personLogsSomeThings(&apos;John&apos;, &apos;hello&apos;, &apos;world&apos;);
 // <i>logs &quot;John says hello&quot;</i>
 // <i>logs &quot;John says world&quot;</i>
 </pre>
-<p>
-Functions can also be called with similar way, the
+
+<p>Functions can also be called with similar way, the
 <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Spread_operator" 
-target="_blank" rel="noopener noreferrer">spread syntax</a>
-</p>
+target="_blank" rel="noopener noreferrer">spread syntax</a></p>
+
 <pre>
 <b>const</b> logArguments = (&hellip;args) =&gt; console.log(args)
 <b>const</b> list = &lbrack;1, 2, 3&rbrack;
 logArguments(&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &hellip;list)
 // <i>output: Array &lbrack; &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, 1, 2, 3 &rbrack;</i>
 </pre>
-<p>
-This syntax can be used to insert arbitrary number of arguments to any
+
+<p>This syntax can be used to insert arbitrary number of arguments to any
 position, and can be used with any iterable(apply accepts only
-array-like objects).
-</p>
+array-like objects).</p>
+
 <pre>
 <b>const</b> logArguments = (&hellip;args) =&gt; console.log(args)
 <b>function</b> &ast;generateNumbers() {
@@ -12625,91 +12599,82 @@ array-like objects).
 logArguments(&apos;a&apos;, &hellip;generateNumbers(), &hellip;&apos;pqr&apos;, &apos;b&apos;)
 // <i>output: Array &lbrack; &quot;a&quot;, 6, 5, 4, &quot;p&quot;, &quot;q&quot;, &quot;r&quot;, &quot;b&quot; &rbrack;</i>
 </pre>
+
 <!-- page 172 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch19-7">
-Section 19.7: Anonymous Function
-</h3>
+<h3 id="ch19-7">Section 19.7: Anonymous Function</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<b>Defining an Anonymous Function</b>
-</p>
-<p>
-When a function is defined, you often give it a name and then invoke it
-using that name, like so:
-</p>
+<p><b>Defining an Anonymous Function</b></p>
+
+<p>When a function is defined, you often give it a name and then invoke it
+using that name, like so:</p>
+
 <pre>
 foo();
 <b>function</b> foo() {
   // <i>&hellip;</i>
 }
 </pre>
-<p>
-When you define a function this way, the JavaScript runtime stores your
+
+<p>When you define a function this way, the JavaScript runtime stores your
 function in memory and then creates a reference to that function, using
 the name you've assigned it. That name is then accessible within the
 current scope. This can be a very convenient way to create a function,
 but JavaScript does not require you to assign a name to a function. The
-following is also perfectly legal:
-</p>
+following is also perfectly legal:</p>
+
 <pre>
 <b>function</b>() {
   // <i>&hellip;</i>
 }
 </pre>
-<p>
-When a function is defined without a name, it's known as an anonymous
+
+<p>When a function is defined without a name, it's known as an anonymous
 function. The function is stored in memory, but the runtime doesn't
 automatically create a reference to it for you. At first glance, it may
 appear as if such a thing would have no use, but there are several
-scenarios where anonymous functions are very convenient.
-</p>
-<p>
-<b>Assigning an Anonymous Function to a Variable</b>
-</p>
-<p>
-A very common use of anonymous functions is to assign them to a
-variable:
-</p>
+scenarios where anonymous functions are very convenient.</p>
+
+<p><b>Assigning an Anonymous Function to a Variable</b></p>
+
+<p>A very common use of anonymous functions is to assign them to a
+variable:</p>
+
 <pre>
 <b>var</b> foo = <b>function</b>(){ /&ast;&hellip;&ast;/ };
 foo();
 </pre>
-<p>
-This use of anonymous functions is covered in more detail in Functions
-as a variable
-</p>
-<p>
-<b>Supplying an Anonymous Function as a Parameter to Another
-Function</b>
-</p>
-<p>
-Some functions may accept a reference to a function as a parameter.
+
+<p>This use of anonymous functions is covered in more detail in Functions
+as a variable</p>
+
+<p><b>Supplying an Anonymous Function as a Parameter to Another
+Function</b></p>
+
+<p>Some functions may accept a reference to a function as a parameter.
 These are sometimes referred to as "dependency injections" or
 "callbacks", because it allows the function your calling to "call back"
 to your code, giving you an opportunity to change the way the called
 function behaves. For example, the Array object's map function allows
 you to iterate over each element of an array, then build a new array by
-applying a transform function to each element.
-</p>
+applying a transform function to each element.</p>
+
 <pre>
 <b>var</b> nums = &lbrack;0, 1, 2&rbrack;;
 <b>var</b> doubledNums = nums.map( <b>function</b>(element){ <b>return</b> element &ast; 2; }); // <i>&lbrack;0,2,4&rbrack;</i>
 </pre>
-<p>
-It would be tedious, sloppy and unnecessary to create a named function,
+
+<p>It would be tedious, sloppy and unnecessary to create a named function,
 which would clutter your scope with a function only needed in this one
 place and break the natural flow and reading of your code (a colleague
 would have to leave this code to find your function to understand what's
-going on).
-</p>
-<p>
-<b>Returning an Anonymous Function From Another Function</b>
-</p>
-<p>
-Sometimes it's useful to return a function as the result of another
-function. For example:
-</p>
+going on).</p>
+
+<p><b>Returning an Anonymous Function From Another Function</b></p>
+
+<p>Sometimes it's useful to return a function as the result of another
+function. For example:</p>
+
 <!-- page 173 -->
 <pre>
 <b>var</b> hash = getHashFunction( &apos;sha1&apos; );
@@ -12719,11 +12684,10 @@ function. For example:
   <b>else if</b> ( algorithm === &apos;md5&apos; ) <b>return function</b>( value ){ /&ast;&hellip;&ast;/ };
 }
 </pre>
-<p>
-<b>Immediately Invoking an Anonymous Function</b>
-</p>
-<p>
-Unlike many other languages, scoping in JavaScript is function-level,
+
+<p><b>Immediately Invoking an Anonymous Function</b></p>
+
+<p>Unlike many other languages, scoping in JavaScript is function-level,
 not block-level. (See Function Scoping ). In some cases, however, it's
 necessary to create a new scope. For example, it's common to create a
 new scope when adding code via a <b>&gt;</b> tag, rather than allowing
@@ -12732,8 +12696,8 @@ other scripts colliding with your variable names). A common method to
 handle this situation is to define a new anonymous function and then
 immediately invoke it, safely hiding you variables within the scope of
 the anonymous function and without making your code accessible to
-third-parties via a leaked function name. For example:
-</p>
+third-parties via a leaked function name. For example:</p>
+
 <pre>
 &lt;!&minus;&minus; My Script &minus;&minus;&gt;
 <b>&lt;script&gt;</b>
@@ -12755,16 +12719,15 @@ initialize();
 }()) // &lt;&minus;&minus; the parentheses invokes the function immediately
 <b>&lt;/script&gt;</b>
 </pre>
-<p>
-<b>Self-Referential Anonymous Functions</b>
-</p>
-<p>
-Sometimes it's useful for an anonymous function to be able to refer to
+
+<p><b>Self-Referential Anonymous Functions</b></p>
+
+<p>Sometimes it's useful for an anonymous function to be able to refer to
 itself. For example, the function may need to recursively call itself or
 add properties to itself. If the function is anonymous, though, this can
 be very difficult as it requires knowledge of the variable that the
-function has been assigned to. This is the less than ideal solution:
-</p>
+function has been assigned to. This is the less than ideal solution:</p>
+
 <pre>
 <b>var</b> foo = <b>function</b>(callAgain) {
   console.log( &apos;Whassup?&apos; );
@@ -12785,16 +12748,15 @@ bar(<b>true</b>);
 // <i>Whassup?</i>
 // <i>Bad.</i>
 </pre>
+
 <!-- page 174 -->
-<p>
-The intent here was for the anonymous function to recursively call
+<p>The intent here was for the anonymous function to recursively call
 itself, but when the value of foo changes, you end up with a potentially
-difficult to trace bug.
-</p>
-<p>
-Instead, we can give the anonymous function a reference to itself by
-giving it a private name, like so:
-</p>
+difficult to trace bug.</p>
+
+<p>Instead, we can give the anonymous function a reference to itself by
+giving it a private name, like so:</p>
+
 <pre>
 <b>var</b> foo = <b>function</b> myself(callAgain) {
   console.log( &apos;Whassup?&apos; );
@@ -12815,20 +12777,17 @@ bar(<b>true</b>);
 // <i>Whassup?</i>
 // <i>Whassup?</i>
 </pre>
-<p>
-Note that the function name is scoped to itself. The name has not eaked
-into the outer scope:
-</p>
-<pre>
-myself(<b>false</b>); // <i>ReferenceError: myself is not defined</i>
-</pre>
-<p>
-This technique is especially useful when dealing with recursive
-anonymous functions as callback parameters:
-</p>
-<h5>
-Version ≥ 5
-</h5>
+
+<p>Note that the function name is scoped to itself. The name has not eaked
+into the outer scope:</p>
+
+<pre>myself(<b>false</b>); // <i>ReferenceError: myself is not defined</i></pre>
+
+<p>This technique is especially useful when dealing with recursive
+anonymous functions as callback parameters:</p>
+
+<h5>Version ≥ 5</h5>
+
 <pre>
 // <i>Calculate the Fibonacci value for each number in an array:</i>
 <b>var</b> fib = <b>false</b>,
@@ -12840,14 +12799,11 @@ Version ≥ 5
 // <i>fib = false (the anonymous function name did not overwrite our fib variable)</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch19-8">
-Section 19.8: Default parameters
-</h3>
+<h3 id="ch19-8">Section 19.8: Default parameters</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Before ECMAScript 2015 (ES6), a parameter's default value could be
-assigned in the following way:
-</p>
+<p>Before ECMAScript 2015 (ES6), a parameter's default value could be
+assigned in the following way:</p>
+
 <pre>
 <b>function</b> printMsg(msg) {
 msg = <b>typeof</b> msg !== &apos;undefined&apos; ? // <i>if a value was provided</i>
@@ -12856,13 +12812,12 @@ msg = <b>typeof</b> msg !== &apos;undefined&apos; ? // <i>if a value was provide
 console.log(msg); 
 }
 </pre>
-<p>
-ES6 provided a new syntax where the condition and reassignment depicted
-above is no longer necessary:
-</p>
-<h5>
-Version ≥ 6
-</h5>
+
+<p>ES6 provided a new syntax where the condition and reassignment depicted
+above is no longer necessary:</p>
+
+<h5>Version ≥ 6</h5>
+
 <pre>
 <b>function</b> printMsg(msg=&apos;Default value for msg.&apos;) {
   console.log(msg);
@@ -12871,15 +12826,14 @@ printMsg();  // <i>-&amp;quot;Default value for msg.&quot;</i>
 printMsg(<b>undefined</b>);  // <i>-&amp;quot;Default value for msg.&quot;</i>
 printMsg(&apos;Now my msg in different!&apos;); // <i>-&amp;quot;Now my msg in different!&quot;</i>
 </pre>
-<p>
-This also shows that if a parameter is missing when the function is
+
+<p>This also shows that if a parameter is missing when the function is
 invoked, its value is kept as <b>undefined</b>, as it can be confirmed
 by explicitly providing it in the following example (using an arrow
-function):
-</p>
-<h5>
-Version ≥ 6
-</h5>
+function):</p>
+
+<h5>Version ≥ 6</h5>
+
 <pre>
 <b>let</b> param_check = (p = &apos;str&apos;) =&gt; console.log(p &plus; &apos; is of type: &apos; &plus; <b>typeof</b> p);
 param_check();  // <i>-&amp;quot;str is of type: string&quot;</i>
@@ -12887,17 +12841,15 @@ param_check(<b>undefined</b>);  // <i>-&amp;quot;str is of type: string&quot;</i
 param_check(1);  // <i>-&amp;quot;1 is of type: number&quot;</i>
 param_check(<b>this</b>);  // <i>-&amp;quot;&lbrack;object Window&rbrack; is of type: object&quot;</i>
 </pre>
-<p>
-<b>Functions/variables as default values and reusing parameters</b>
-</p>
-<p>
-The default parameters' values are not restricted to numbers, strings or
+
+<p><b>Functions/variables as default values and reusing parameters</b></p>
+
+<p>The default parameters' values are not restricted to numbers, strings or
 simple objects. A function can also be set as the default value callback
-= function(){}:
-</p>
-<h5>
-Version ≥ 6
-</h5>
+= function(){}:</p>
+
+<h5>Version ≥ 6</h5>
+
 <pre>
 <b>function</b> foo(callback = <b>function</b>(){ console.log(&apos;default&apos;); }) {
   callback();
@@ -12909,50 +12861,40 @@ foo(<b>function</b>() {
 foo();
 // <i>default</i>
 </pre>
-<p>
-There are certain characteristics of the operations that can be
-performed through default values:
-</p>
+
+<p>There are certain characteristics of the operations that can be
+performed through default values:</p>
+
 <ul>
-<li>
-A previously declared parameter can be reused as a default value for the
-upcoming parameters' values.
-</li>
-<li>
-Inline operations are allowed when assigning a default value to a
-parameter.
-</li>
-<li>
-Variables existing in the same scope of the function being declared can
-be used in its default values.
-</li>
-<li>
-Functions can be invoked in order to provide their return value into a
-default value.
-</li>
+  <li>A previously declared parameter can be reused as a default value for the
+    upcoming parameters' values.</li>
+  <li>Inline operations are allowed when assigning a default value to a
+    parameter.</li>
+  <li>Variables existing in the same scope of the function being declared can
+    be used in its default values.</li>
+  <li>Functions can be invoked in order to provide their return value into a
+    default value.</li>
 </ul>
-<h5>
-Version ≥ 6
-</h5>
+
+<h5>Version ≥ 6</h5>
+
 <pre>
 <b>let</b> zero = 0; 
 <b>function</b> multiply(x) { <b>return</b> x &ast; 2;}
 <b>function</b> add(a = 1 + zero, b = a, c = b + a, d = multiply(c)) {
   console.log((a + b + c), d);
 }
-add(1);                 // <i>4, 4</i>
-add(3);                 // <i>12, 12</i>
-add(2, 7);              // <i>18, 18</i>
-add(1, 2, 5);           // <i>8, 10</i>
-add(1, 2, 5, 10);       // <i>8, 20</i>
+add(1);           // <i>4, 4</i>
+add(3);           // <i>12, 12</i>
+add(2, 7);        // <i>18, 18</i>
+add(1, 2, 5);     // <i>8, 10</i>
+add(1, 2, 5, 10); // <i>8, 20</i>
 </pre>
-<p>
-<b>Reusing the function's return value in a new invocation's default
-value:</b>
-</p>
-<h5>
-Version ≥ 6
-</h5>
+
+<p><b>Reusing the function's return value in a new invocation's default value:</b></p>
+
+<h5>Version ≥ 6</h5>
+
 <pre>
 <b>let</b> array = &lbrack;1&rbrack;;  // <i>meaningless: this will be overshadowed in the function&apos;s scope</i>
 <b>function</b> add(value, array = &lbrack;&rbrack;) {
@@ -12963,17 +12905,15 @@ add(5);     // <i>&lbrack;5&rbrack;</i>
 add(6);     // <i>&lbrack;6&rbrack;, not &lbrack;5, 6&rbrack;</i>
 add(6, add(5));  // <i>&lbrack;5, 6&rbrack;</i>
 </pre>
-<p>
-<b>arguments value and length when lacking parameters in invocation</b>
-</p>
-<p>
-The arguments array object only retains the parameters whose values are
+
+<p><b>arguments value and length when lacking parameters in invocation</b></p>
+
+<p>The arguments array object only retains the parameters whose values are
 not default, i.e. those that are explicitly provided when the function
-is invoked:
-</p>
-<h5>
-Version ≥ 6
-</h5>
+is invoked:</p>
+
+<h5>Version ≥ 6</h5>
+
 <pre>
 <b>function</b> foo(a = 1, b = a &plus; 1) {
   console.info(arguments.length, arguments);
@@ -12984,20 +12924,16 @@ foo(4);  // <i>info: 1 &gt;&amp;lbrack;4&rbrack; &vert; log: 4, 5</i>
 foo(5, 6);  // <i>info: 2 &gt;&amp;lbrack;5, 6&rbrack; &vert; log: 5, 6</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch19-9">
-Section 19.9: Call and apply
-</h3>
+<h3 id="ch19-9">Section 19.9: Call and apply</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Functions have two built-in methods that allow the programmer to supply
-arguments and the <b>this</b> variable differently: call and apply.
-</p>
-<p>
-This is useful, because functions that operate on one object (the object
+<p>Functions have two built-in methods that allow the programmer to supply
+arguments and the <b>this</b> variable differently: call and apply.</p>
+
+<p>This is useful, because functions that operate on one object (the object
 that they are a property of) can be repurposed to operate on another,
 compatible object. Additionally, arguments can be given in one shot as
-arrays, similar to the spread (…) operator in ES6.
-</p>
+arrays, similar to the spread (…) operator in ES6.</p>
+
 <pre>
 <b>let</b> obj = {
   a: 1,
@@ -13018,6 +12954,7 @@ obj.<b>set</b>.apply(myObj, &lbrack;5, 4&rbrack;); // <i>same as above; note the
 
 console.log(myObj); // <i>prints { a: 3, b: 5 }</i>
 </pre>
+
 <h5>Version ≥ 5</h5>
 
 <p><b>bind</b> <b>()</b> in addition to call() and apply</p>
@@ -13056,6 +12993,7 @@ student2.sayName(&quot;student2&quot;);  // <i>outputs &quot;student2:Ravi&quot;
 <p>Similar to currying, partial application is used to reduce the number of
 arguments passed to a function. Unlike currying, the number need not go
 down by one.</p>
+
 <p>Example:</p>
 
 <p>This function …</p>
@@ -13079,6 +13017,7 @@ and then add 10 to the passed value;</p>
 <b>var</b> multiplyTwoThenAddTen = factory(2, 10);
 multiplyTwoThenAddTen(10);  // <i>30</i>
 </pre>
+
 <!-- page 178 -->
 <p>The "application" part of partial application simply means fixing parameters of a function.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -17085,20 +17024,16 @@ lower redundancy. AJAX allows the user to communicate with external
 resources without reloading the webpage.
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch36-1">
-Section 36.1: Sending and Receiving JSON Data via POST
-</h3>
+<h3 id="ch36-1">Section 36.1: Sending and Receiving JSON Data via POST</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>
-Version ≥ 6
-</h5>
-<p>
-Fetch request promises initially return Response objects. These will
+<h5>Version ≥ 6</h5>
+
+<p>Fetch request promises initially return Response objects. These will
 provide response header information, but they don't directly include the
 response body, which may not have even loaded yet. Methods on the
 Response object such as .json() can be used to wait for the response
-body to load, then parse it.
-</p>
+body to load, then parse it.</p>
+
 <pre>
 <b>const</b> requestData = {
   method: &apos;getUsers&apos;
@@ -17121,14 +17056,11 @@ usersPromise.then(users =&gt; {
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch36-2">
-Section 36.2: Add an AJAX preloader
-</h3>
+<h3 id="ch36-2">Section 36.2: Add an AJAX preloader</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Here's a way to show a GIF preloader while an AJAX call is executing. We
-need to prepare our add and remove preloader functions:
-</p>
+<p>Here's a way to show a GIF preloader while an AJAX call is executing. We
+need to prepare our add and remove preloader functions:</p>
+
 <pre>
 <b>function</b> addPreloader() {
   // <i>if the preloader doesn&apos;t already exist, add one to the page</i>
@@ -17146,29 +17078,23 @@ preloader.remove();
   }
 }
 </pre>
+
 <!-- page 241 -->
-<p>
-Now we're going to look at where to use these functions.
-</p>
-<pre>
-<b>var</b> request = <b>new</b> XMLHttpRequest();
-</pre>
-<p>
-Inside the onreadystatechange function you should have an if statement
+
+<p>Now we're going to look at where to use these functions.</p>
+
+<pre><b>var</b> request = <b>new</b> XMLHttpRequest();</pre>
+
+<p>Inside the onreadystatechange function you should have an if statement
 with condition: request.readyState == 4<br/> &amp;&amp; request.status
-== 200.
-</p></li>
-</ol></li>
-</ol></li>
-</ol>
-<p>
-If <b>true</b>: the request is finished and response is ready that's
-where we'll use removePreloader().
-</p>
-<p>
-Else if <b>false</b>: the request is still in progress, in this case
-we'll run the function addPreloader()
-</p>
+== 200.</p>
+
+<p>If <b>true</b>: the request is finished and response is ready that's
+where we'll use removePreloader().</p>
+
+<p>Else if <b>false</b>: the request is still in progress, in this case
+we'll run the function addPreloader()</p>
+
 <pre>
 xmlhttp.onreadystatechange = <b>function</b>() {
   <b>if</b>(request.readyState == 4 && request.status == 200) {
@@ -17183,25 +17109,21 @@ xmlhttp.open(&apos;GET&apos;, your_file.php, <b>true</b>);
 xmlhttp.send();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch36-3">
-Section 36.3: Displaying the top JavaScript questions of the month from
-Stack Overflow's API
-</h3>
+<h3 id="ch36-3">Section 36.3: Displaying the top JavaScript questions of the month from
+Stack Overflow's API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-We can make an AJAX request to
+<p>We can make an AJAX request to
 <a href="http://api.stackexchange.com/docs" 
 target="_blank" rel="noopener noreferrer">Stack Exchange's API</a> to
 retrieve a list of the top JavaScript questions for the month, then
 present them as a list of links. If the request fails or the returns an
-API error, our promise error handling displays the error instead.
-</p>
-<h5>
-Version ≥ 6
-</h5>
-<a href="http://plume-pine.hyperweb.space/hot-javascript.html" 
-target="_blank" rel="noopener noreferrer">View live results on
-HyperWeb</a>.
+API error, our promise error handling displays the error instead.</p>
+
+<h5>Version ≥ 6</h5>
+
+<p><a href="http://plume-pine.hyperweb.space/hot-javascript.html" 
+target="_blank" rel="noopener noreferrer">View live results on HyperWeb</a>.</p>
+
 <pre>
 <b>const</b> url =
   &apos;http://api.stackexchange.com/2.2/questions?site=stackoverflow&apos; &plus;
@@ -17229,15 +17151,12 @@ fetch(url).then(response =&gt; response.json()).then(data =&gt; {
 </pre>
 <!-- page 242 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch36-4">
-Section 36.4: Using GET with parameters
-</h3>
+<h3 id="ch36-4">Section 36.4: Using GET with parameters</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-This function runs an AJAX call using GET allowing us to send
+<p>This function runs an AJAX call using GET allowing us to send
 <b>parameters</b> (object) to a <b>file</b> (string) and launch a
-<b>callback</b> (function) when the request has been ended.
-</p>
+<b>callback</b> (function) when the request has been ended.</p>
+
 <pre>
 <b>function</b> ajax(file, params, callback) {
   <b>var</b> url = file &plus; &apos;?&apos;;
@@ -17260,18 +17179,18 @@ This function runs an AJAX call using GET allowing us to send
   xmlhttp.send();
 }
 </pre>
-<p>
-Here's how we use it:
-</p>
+
+<p>Here's how we use it:</p>
+
 <pre>
 ajax(&apos;cars.php&apos;, {type:&quot;Volvo&quot;, model:&quot;300&quot;, color:&quot;purple&quot;}, <b>function</b>(response) {
 // <i>add here the code to be executed when data comes back to this page</i>
 // <i>for example console.log(response) will show the AJAX response in console</i>
 });
 </pre>
-<p>
-And the following shows how to retrieve the url parameters in cars.php:
-</p>
+
+<p>And the following shows how to retrieve the url parameters in cars.php:</p>
+
 <pre>
 <b>if</b>(isset(&dollar;&lowbar;REQUEST&lbrack;&apos;type&apos;&rbrack;, &dollar;&lowbar;REQUEST&lbrack;&apos;model&apos;&rbrack;, &dollar;&lowbar;REQUEST&lbrack;&apos;color&apos;&rbrack;)) { 
   // <i>they are set, we can use them !</i>
@@ -17281,25 +17200,22 @@ And the following shows how to retrieve the url parameters in cars.php:
   echo &dollar;response;
   }
 </pre>
-<p>
-If you had console.log(response) in callback function the result in
-console would have been:
-</p>
+
+<p>If you had console.log(response) in callback function the result in
+console would have been:</p>
+
 <blockquote>
 The color of your car is purple. It is a Volvo model 300!
 </blockquote>
 <!-- page 243 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch36-5">
-Section 36.5: Check if a file exists via a HEAD request
-</h3>
+<h3 id="ch36-5">Section 36.5: Check if a file exists via a HEAD request</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-This function executes an AJAX request using the HEAD method allowing us
+<p>This function executes an AJAX request using the HEAD method allowing us
 to <b>check whether a file exists in the directory</b> given as an
 argument. It also enables us to <b>launch a callback for each case</b>
-(success, failure).
-</p>
+(success, failure).</p>
+
 <pre>
 <b>function</b> fileExists(dir, successCallback, errorCallback) {
   <b>var</b> xhttp = <b>new</b> XMLHttpRequest;
@@ -17313,9 +17229,7 @@ argument. It also enables us to <b>launch a callback for each case</b>
 };
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch36-6">
-Section 36.6: Using GET and no parameters
-</h3>
+<h3 id="ch36-6">Section 36.6: Using GET and no parameters</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 <b>var</b> xhttp = <b>new</b> XMLHttpRequest();
@@ -17327,22 +17241,18 @@ xhttp.onreadystatechange = <b>function</b>() {
 xhttp.open(&quot;GET&quot;, &quot;ajax_info.txt&quot;, <b>true</b>);
 xhttp.send();
 </pre>
-<h5>
-Version ≥ 6
-</h5>
-<p>
-The fetch API is a newer promise-based way to make asynchronous HTTP
-requests.
-</p>
+
+<h5>Version ≥ 6</h5>
+
+<p>The fetch API is a newer promise-based way to make asynchronous HTTP requests.</p>
+
 <pre>
 fetch(&apos;/&apos;).then(response =&gt; response.text()).then(text =&gt; {
   console.log(&quot;The home page is &quot; &plus; text.length &plus; &quot; characters long.&quot;);
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch36-7">
-Section 36.7: Listening to AJAX events at a global level
-</h3>
+<h3 id="ch36-7">Section 36.7: Listening to AJAX events at a global level</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // <i>Store a reference to the native method</i>
@@ -17357,21 +17267,15 @@ XMLHttpRequest.<b>prototype</b>.open = <b>function</b>() {
 </pre>
 <!-- page 244 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch37">
-Chapter 37: Enumerations
-</h2>
+<h2 id="ch37">Chapter 37: Enumerations</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch37-1">
-Section 37.1: Enum definition using Object.freeze()
-</h3>
+<h3 id="ch37-1">Section 37.1: Enum definition using Object.freeze()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>
-Version ≥ 5.1
-</h5>
-<p>
-JavaScript does not directly support enumerators but the functionality
-of an enum can be mimicked.
-</p>
+<h5>Version ≥ 5.1</h5>
+
+<p>JavaScript does not directly support enumerators but the functionality
+of an enum can be mimicked.</p>
+
 <pre>
 // <i> Prevent the enum from being changed</i>
 <b>const</b> TestEnum = Object.freeze({
@@ -17390,26 +17294,22 @@ of an enum can be mimicked.
     console.log(&quot;222&quot;);
 }
 </pre>
-<p>
-The above enumeration definition, can also be written as follows:
-</p>
+
+<p>The above enumeration definition, can also be written as follows:</p>
+
 <pre>
 <b>var</b> TestEnum = { One: 1, Two: 2, Three: 3 }
 Object.freeze(TestEnum);
 </pre>
-<p>
-After that you can define a variable and print like before.
-</p>
+
+<p>After that you can define a variable and print like before.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch37-2">
-Section 37.2: Alternate definition
-</h3>
+<h3 id="ch37-2">Section 37.2: Alternate definition</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The Object.freeze() method is available since version 5.1. For older
+<p>The Object.freeze() method is available since version 5.1. For older
 versions, you can use the following code (note that it also works in
-versions 5.1 and later):
-</p>
+versions 5.1 and later):</p>
+
 <pre>
 <b>var</b> ColorsEnum = {
   WHITE: 0,
@@ -17420,15 +17320,12 @@ versions 5.1 and later):
 <b>var</b> currentColor = ColorsEnum.GRAY;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch37-3">
-Section 37.3: Printing an enum variable
-</h3>
+<h3 id="ch37-3">Section 37.3: Printing an enum variable</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-After defining an enum using any of the above ways and setting a
+<p>After defining an enum using any of the above ways and setting a
 variable, you can print both the variable's value as well as the
-corresponding name from the enum for the value. Here's an example:
-</p>
+corresponding name from the enum for the value. Here's an example:</p>
+
 <pre>
 // <i> Define the enum</i>
 <b>var</b> ColorsEnum = { WHITE: 0, GRAY: 1, BLACK: 2 }
@@ -17446,18 +17343,15 @@ Object.freeze(ColorsEnum);
 </pre>
 <!-- page 245 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch37-4">
-Section 37.4: Implementing Enums Using Symbols
-</h3>
+<h3 id="ch37-4">Section 37.4: Implementing Enums Using Symbols</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-As ES6 introduced
+<p>As ES6 introduced
 <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Symbol" 
 target="_blank" rel="noopener noreferrer"><b>Symbols</b></a>, which are
 both <b>unique and immutable primitive values</b> that may be used as
 the key of an Object property, instead of using strings as possible
-values for an enum, it's possible to use symbols.
-</p>
+values for an enum, it's possible to use symbols.</p>
+
 <pre>
 // <i> Simple symbol</i>
 <b>const</b> newSymbol = Symbol();
@@ -17483,27 +17377,22 @@ yetAnotherSymbol === anotherSymbol; // <i> false</i>
 describe(Regnum_Vegetabile);
 // <i> Vegetable kingdom</i>
 </pre>
-<p>
-The <a href="http://www.2ality.com/2014/12/es6-symbols.html" 
+
+<p>The <a href="http://www.2ality.com/2014/12/es6-symbols.html" 
 target="_blank" rel="noopener noreferrer">Symbols in ECMAScript 6</a>
-article covers this new primitive type more in detail.
-</p>
+article covers this new primitive type more in detail.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch37-5">
-Section 37.5: Automatic Enumeration Value
-</h3>
+<h3 id="ch37-5">Section 37.5: Automatic Enumeration Value</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>
-Version ≥ 5.1
-</h5>
-<p>
-This Example demonstrates how to automatically assign a value to each
+<h5>Version ≥ 5.1</h5>
+
+<p>This Example demonstrates how to automatically assign a value to each
 entry in an enum list. This will prevent two enums from having the same
 value by mistake. NOTE:
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze" 
 target="_blank" rel="noopener noreferrer"> Object.freeze browser
-support</a>
-</p>
+support</a></p>
+
 <pre>
 <b>var</b> testEnum = <b>function</b>() {
   // <i>Initializes the enumerations</i>
@@ -17530,106 +17419,68 @@ console.log(testEnum.One);  // <i>1 will be logged</i>
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch38">
-Chapter 38: Map
-</h2>
+<h2 id="ch38">Chapter 38: Map</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <table border="1" style="width:200px">
-<thead>
-<tr>
-<th>
-Parameter
-</th>
-<th>
-Details
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-Iterable
-</td>
-<td>
-Any iterable object (for example an array) containing [key, value]
-pairs.
-</td>
-</tr>
-<tr>
-<td>
-key
-</td>
-<td>
-The key of an element.
-</td>
-</tr>
-<tr>
-<td>
-value
-</td>
-<td>
-The value assigned to the key
-</td>
-</tr>
-<tr>
-<td>
-callback
-</td>
-<td>
-Callback function called with three parameters: value, key and the map.
-</td>
-</tr>
-<tr>
-<td>
-thisArg
-</td>
-<td>
-Value which will be used as this when executing callback.
-</td>
-</tr>
-</tfoot>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Iterable</td>
+      <td>Any iterable object (for example an array) containing [key, value]pairs.</td>
+    </tr>
+    <tr>
+      <td>key</td>
+      <td>The key of an element.</td>
+    </tr>
+    <tr>
+      <td>value</td>
+      <td>The value assigned to the key</td>
+    </tr>
+    <tr>
+      <td>callback</td>
+      <td>Callback function called with three parameters: value, key and the map.</td>
+    </tr>
+    <tr>
+      <td>thisArg</td>
+      <td>Value which will be used as this when executing callback.</td>
+    </tr>
+  </tfoot>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch38-1">
-Section 38.1: Creating a Map
-</h3>
+<h3 id="ch38-1">Section 38.1: Creating a Map</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-A Map is a basic mapping of keys to values. Maps are different from
+<p>A Map is a basic mapping of keys to values. Maps are different from
 objects in that their keys can be anything (primitive values as well as
 objects), not just strings and symbols. Iteration over Maps is also
 always done in the order the items were inserted into the Map, whereas
-the order is undefined when iterating over keys in an object.
-</p>
-<p>
-To create a Map, use the Map constructor:
-</p>
-<pre>
-<b>const</b> map = <b>new</b> Map();
-</pre>
-<p>
-It has an optional parameter, which can be any iterable object (for
+the order is undefined when iterating over keys in an object.</p>
+
+<p>To create a Map, use the Map constructor:</p>
+
+<pre><b>const</b> map = <b>new</b> Map();</pre>
+
+<p>It has an optional parameter, which can be any iterable object (for
 example an array) which contains arrays of two elements first is the
-key, the seconds is the value. For example:
-</p>
+key, the seconds is the value. For example:</p>
+
 <pre>
 <b>const</b> map = <b>new</b> Map(&lbrack;&lbrack;<b>new</b> Date(), {foo: &quot;bar&quot;}&rbrack;, &lbrack;document.body, &quot;body&quot;&rbrack;&rbrack;);
 // <i>&Hat;key &Hat;value &Hat;key &Hat;value</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch38-2">
-Section 38.2: Clearing a Map
-</h3>
+<h3 id="ch38-2">Section 38.2: Clearing a Map</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-To remove all elements from a Map, use the .clear() method:
-</p>
-<pre>
-map.clear();
-</pre>
-<p>
-Example:
-</p>
+<p>To remove all elements from a Map, use the .clear() method:</p>
+
+<pre>map.clear();</pre>
+
+<p>Example:</p>
+
 <pre>
 <b>const</b> map = <b>new</b> Map(&lbrack;&lbrack;1, 2&rbrack;, &lbrack;3, 4&rbrack;&rbrack;);
 console.log(map.size);  // <i>2</i>
@@ -17638,63 +17489,53 @@ console.log(map.size);  // <i>0</i>
 console.log(map.<b>get</b>(1));  // <i>undefined</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch38-3">
-Section 38.3: Removing an element from a Map
-</h3>
+<h3 id="ch38-3">Section 38.3: Removing an element from a Map</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-To remove an element from a map use the .delete() method.
-</p>
-<pre>
-map.<b>delete</b>(key);
-</pre>
-<p>
-Example:
-</p>
+<p>To remove an element from a map use the .delete() method.</p>
+
+<pre>map.<b>delete</b>(key);</pre>
+
+<p>Example:</p>
+
 <pre>
 <b>const</b> map = <b>new</b> Map(&lbrack;&lbrack;1, 2&rbrack;,&lbrack;3, 4&rbrack;&rbrack;);
 console.log(map.<b>get</b>(3));  // <i>4</i>
 map.<b>delete</b>(3);
 console.log(map.<b>get</b>(3));  // <i>undefined</i>
 </pre>
+
 <!-- page 248 -->
-<p>
-This method returns <b>true</b> if the element existed and has been
-removed, otherwise <b>false</b>:
-</p>
+
+<p>This method returns <b>true</b> if the element existed and has been
+removed, otherwise <b>false</b>:</p>
+
 <pre>
 <b>const</b> map = <b>new</b> Map(&lbrack;&lbrack;1, 2&rbrack;, &lbrack;3, 4&rbrack;&rbrack;);
 console.log(map.<b>delete</b>(1));  // <i>true</i>
 console.log(map.<b>delete</b>(7));  // <i>false</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch38-4">
-Section 38.4: Checking if a key exists in a Map
-</h3>
+<h3 id="ch38-4">Section 38.4: Checking if a key exists in a Map</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-To check if a key exists in a Map, use the .has() method:
-</p>
-<pre>
-map.has(key);
-</pre>
-<p>
-Example:
-</p>
+<p>To check if a key exists in a Map, use the .has() method:</p>
+
+<pre>map.has(key);</pre>
+
+<p>Example:</p>
+
 <pre>
 <b>const</b> map = <b>new</b> Map(&lbrack;&lbrack;1, 2&rbrack;, &lbrack;3, 4&rbrack;&rbrack;);
 console.log(map.has(1));  // <i>true</i>
 console.log(map.has(2));  // <i>false</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch38-5">
-Section 38.5: Iterating Maps
-</h3>
+<h3 id="ch38-5">Section 38.5: Iterating Maps</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Map has three methods which returns iterators: .keys(), .values() and
-.entries() is the default Map iterator, and contains [key, value] pairs.
-<pre> <b>const</b> map = </b>new</b> Map(&lbrack;&lbrack;1, 2&rbrack;, &lbrack;3, 4&rbrack;&rbrack;);
+<p>Map has three methods which returns iterators: .keys(), .values() and
+.entries() is the default Map iterator, and contains [key, value] pairs.</p>
+
+<pre>
+<b>const</b> map = </b>new</b> Map(&lbrack;&lbrack;1, 2&rbrack;, &lbrack;3, 4&rbrack;&rbrack;);
 <b>for</b> (</b>const</b> &lbrack;key, value&rbrack; of map) {
   console.log(&grave;key: &dollar;{key}, value: &dollar;{value}&grave;);
 // <i>logs:</i>
@@ -17708,15 +17549,14 @@ Map has three methods which returns iterators: .keys(), .values() and
   console.log(value);  // <i>logs 2 and 4</i>
 }
 </pre>
-<p>
-Map also has .forEach() method. The first parameter is a callback
+
+<p>Map also has .forEach() method. The first parameter is a callback
 function, which will be called for each element in the map, and the
 second parameter is the value which will be used as <b>this</b> when
-executing the callback function.
-</p>
-<p>
-The callback function has three arguments: value, key, and the map
-</p>
+executing the callback function.</p>
+
+<p>The callback function has three arguments: value, key, and the map</p>
+
 <pre>
 <b>const</b> map = <b>new</b> Map(&lbrack;&lbrack;1, 2&rbrack;, &lbrack;3, 4&rbrack;&rbrack;);
 map.forEach((value, key, theMap) =&gt; console.log(&grave;key: &dollar;{key}, value: &dollar;{value}&grave;));
@@ -17725,117 +17565,85 @@ map.forEach((value, key, theMap) =&gt; console.log(&grave;key: &dollar;{key}, va
 // <i>key: 3, value: 4</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch38-6">
-Section 38.6: Getting and setting elements
-</h3>
+<h3 id="ch38-6">Section 38.6: Getting and setting elements</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Use <b>get</b>(key) to get value by key and .<b>set</b>(key, value) to
-assign a value to a key.
-</p>
-<p>
-If the element with the specified key doesn't exist in the map, .get()
-returns <b>undefined</b>.
-</p>
+<p>Use <b>get</b>(key) to get value by key and .<b>set</b>(key, value) to
+assign a value to a key.</p>
+
+<p>If the element with the specified key doesn't exist in the map, .get()
+returns <b>undefined</b>.</p>
+
 <!-- page 249 -->
-<p>
+
+<pre>
 .<b>set</b>() method returns the map object, so you can chain
 .<b>set</b>() calls.
-<pre>
 <b>const</b> map = <b>new</b> Map();
 console.log(map.<b>get</b>(1));  // <i>undefined</i>
 map.<b>set</b>(1, 2).<b>set</b>(3, 4);
 console.log(map.<b>get</b>(1));  // <i>2</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch38-7">
-Section 38.7: Getting the number of elements of a Map
-</h3>
+<h3 id="ch38-7">Section 38.7: Getting the number of elements of a Map</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-To get the numbers of elements of a Map, use the .size property:
-</p>
+<p>To get the numbers of elements of a Map, use the .size property:</p>
+
 <pre>
 <b>const</b> map = <b>new</b> Map(&lbrack;&lbrack;1, 2&rbrack;, &lbrack;3,4&rbrack;&rbrack;);
 console.log(map.size);  // <i>2</i>
 </pre>
 <!-- page 250 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch39">
-Chapter 39: Timestamps
-</h2>
+<h2 id="ch39">Chapter 39: Timestamps</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch39-1">
-Section 39.1: High-resolution timestamps
-</h3>
+<h3 id="ch39-1">Section 39.1: High-resolution timestamps</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now" 
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now" 
 target="_blank" rel="noopener noreferrer"> performance.now()</a> returns
 a precise timestamp: The number of milliseconds, including microseconds,
-since the current web page started to load.
-</p>
-<p>
-More generally, it returns the time elapsed since the
+since the current web page started to load.</p>
+
+<p>More generally, it returns the time elapsed since the
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/navigationStart" 
-target="_blank" rel="noopener noreferrer">performanceTiming.navigationStart</a>
-</p>
-<pre>
-t = performance.now();
-</pre>
-<p>
-For example, in a web browser's main context, performance.now() returns
+target="_blank" rel="noopener noreferrer">performanceTiming.navigationStart</a></p>
+
+<pre>t = performance.now();</pre>
+
+<p>For example, in a web browser's main context, performance.now() returns
 6288.319 if the web page began to load 6288 milliseconds and 319
-microseconds ago.
-</p>
+microseconds ago.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch39-2">
-Section 39.2: Get Timestamp in Seconds
-</h3>
+<h3 id="ch39-2">Section 39.2: Get Timestamp in Seconds</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-To get the timestamp in seconds=
-</p>
-<pre>
-Math.floor((<b>new</b> Date().getTime()) / 1000)
-</pre>
+<p>To get the timestamp in seconds=</p>
+
+<pre>Math.floor((<b>new</b> Date().getTime()) / 1000)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch39-3">
-Section 39.3: Low-resolution timestamps
-</h3>
+<h3 id="ch39-3">Section 39.3: Low-resolution timestamps</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now" 
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now" 
 target="_blank" rel="noopener noreferrer">Date.now()]() returns the
 number of whole milliseconds that have elapsed since 1 January 1970
-00:00:00 UTC.
-</p>
-<pre>
-t = Date.now();
-</pre>
-<p>
-For example, Date.now() returns 1461069314 if it was called on 19 April
-2016 at 12:35:14 GMT.
-</p>
+00:00:00 UTC.</p>
+
+<pre>t = Date.now();</pre>
+
+<p>For example, Date.now() returns 1461069314 if it was called on 19 April
+2016 at 12:35:14 GMT.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch39-4">
-Section 39.4: Support for legacy browsers
-</h3>
+<h3 id="ch39-4">Section 39.4: Support for legacy browsers</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-In older browsers where Data.now() is unavailable, use
+<p>In older browsers where Data.now() is unavailable, use
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime" 
 target="_blank" rel="noopener noreferrer"> (new Date()).getTime()</a>
-instead:
-</p>
-<pre>
-t = (<b>new</b> Date()).getTime();
-</pre>
-<p>
-Or, to provide a Date.now() function for use in older browsers,
+instead:</p>
+
+<pre>t = (<b>new</b> Date()).getTime();</pre>
+
+<p>Or, to provide a Date.now() function for use in older browsers,
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now#Polyfill"
-target="_blank" rel="noopener noreferrer"> use this polyfill</a>
-</p>
+target="_blank" rel="noopener noreferrer"> use this polyfill</a></p>
+
 <pre>
 <b>if</b> (!Date.now) {
   Date.now = <b>function</b> now() {
@@ -17845,13 +17653,9 @@ target="_blank" rel="noopener noreferrer"> use this polyfill</a>
 </pre>
 <!-- page 251 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch40">
-Chapter 40: Unary Operators
-</h2>
+<h2 id="ch40">Chapter 40: Unary Operators</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch40-1">
-Section 40.1: Overview
-</h3>
+<h3 id="ch40-1">Section 40.1: Overview</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Unary operators are operators with only one operand. Unary operators are
 more efficient than standard JavaScript function calls. Additionally,
