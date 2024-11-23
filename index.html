@@ -33473,54 +33473,388 @@ which you cannot use as variables, labels, or function names.</b></p>
 	  <td><b>this</b></td>
 	</tr>
 	<tr>
-	  <td><b>const</b></td> import <b>throw</b>
-      <td>continue</b>in <b>throws</b>
-debugger<b>instanceoftransient</b> <b>default</b> <b>int</b> <b>true</b>
-<b>delete</b> <b>interface</b> <b>try</b> do <b>long</b> <b>typeof</b>
-<b>double</b> <b>native</b> <b>var</b> <b>else</b> <b>new</b>
-<b>void</b> enum <b>null</b> <b>volatile</b> export <b>package</b> while
-extends <b>private</b> with <b>false</b> protected <b>ECMAScript 5 /
-5.1</b> There was no change since <i>ECMAScript 3</i>.</p>
+	  <td><b>const</b></td>
+	  <td>import</td>
+	  <td><b>throw</b></td>
+	</tr>
+	<tr>
+      <td><b>continue</b></td>
+	  <td>in</td>
+	  <td>throws</td>
+	</tr>
+	<tr>
+	  <td>debugger</td>
+	  <td><b>instanceof</b></td>
+	  <td>transient</td>
+	</tr>
+	<tr>
+	  <td><b>default</b></td>
+	  <td>int</td>
+	  <td>true</td>
+	</tr>
+	<tr>
+      <td><b>delete</b></td>
+	  <td>interface</td>
+	  <td><b>try</b></td>
+	</tr>
+	<tr>
+	  <td>do</td>
+	  <td>long</td>
+	  <td><b>typeof</b></td>
+	</tr>
+	<tr>
+      <td>double</td>
+	  <td>native</td>
+	  <td><b>var</b></td>
+	</tr>
+	<tr>
+	  <td><b>else</b></td>
+	  <td><b>new</b></td>
+      <td><b>void</b></td>
+	</tr>
+	<tr>
+	  <td>enum</td>
+	  <td>null</td>
+	  <td>volatile</td>
+	</tr>
+	<tr>
+	  <td>export</td>
+	  <td><b>package</b></td>
+	  <td>while</td>
+	</tr>
+	<tr>
+      <td>extends</td>
+	  <td><b>private</b></td>
+	  <td>with</td>
+	</tr>
+	<tr>
+	  <td><b>false</b></td>
+	  <td>protected</td>
+	  <td></td>
+	</tr>
+  </tbody>
+</table>
+
+<p><b>ECMAScript 5 / 5.1</b></p>
+
+<p>There was no change since <i>ECMAScript 3</i>.</p>
+
 <p><i>ECMAScript 5</i> removed int, byte, char, <b>goto</b>, long,
 final, float, short, double, native, throws, boolean, abstract,
 volatile, transient, and synchronized; it added <b>let</b> and
 yield.</p>
-<div class="line-block"><b><i>A</i></b> <b><i>F</i></b> |
-<b><i>F</i></b> <b><i>P</i></b> | <b><i>P</i></b> | | | <b><i>Z</i></b>
-|<br />
-<b>break</b> | <b>finally</b> | public |<br />
-<b>case</b> | <b>for</b> | <b>return</b> |<br />
-<b>catch</b> | <b>function</b> | <b>static</b> |<br />
-class | if | super |</div>
-<p><b>const</b> implements<b>switch continue</b>import <b>this</b>
-debuggerin <b>throw</b> <b>default</b> <b>instanceoftrue</b><br />
-<b>delete</b> interface <b>try</b> do <b>let</b> <b>typeof</b>
-<b>else</b> <b>new</b> <b>var</b> enum <b>null</b> <b>void</b> export
-package while extends private with <b>false</b> protected <b>yield</b>
-implements, <b>let</b>, private, public, interface, package, protected,
-<b>static</b>, and yield are <b>disallowed in strict mode only</b>. eval
-and arguments are not reserved words but they act like it in <b>strict
-mode</b>. <b>ECMAScript 6 / ECMAScript 2015</b> | <b><i>A</i></b>
-<b><i>E E</i></b> <b><i>R</i></b> | <b><i>S</i></b> | | |
-<b><i>Z</i></b> | | <b>break</b> export | super | | <b>case</b> extends
-| <b>switch</b> | | <b>catch finally</b> | <b>this</b> | | class
-<b>for</b> | <b>throw</b> | | <b>const function</b> | <b>try</b> | |
-<b>continue</b>if | <b>typeof</b> | | debuggerimport | <b>var</b> | |
-<b>default</b> in | <b>void</b> | <b>delete instanceof</b>while do
-<b>new</b> with <b>else return</b> yield Future reserved keywords The
-following are reserved as future keywords by the ECMAScript
+
+<table border="1" style="width:200px">
+  <thead>
+    <tr>
+      <th><b>A-F</b></th>
+      <th><b>F-P</b></th>
+      <th><b>P-Z</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>break</b></td>
+      <td><b>finally</b></td>
+	  <td>public</td>
+	</tr>
+	<tr>
+      <td><b>case</b></td>
+      <td><b>for</b></td>
+	  <td><b>return</b></td>
+	</tr>
+	<tr>
+	  <td><b>catch</b></td>
+      <td><b>function</b></td>
+      <td><b>static</b></td>
+	</tr>
+	<tr>
+      <td>class</td>
+	  <td>if</td>
+      <td>super</td>
+	</tr>
+	<tr>
+	  <td><b>const</b></td>
+	  <td>implements</td>
+	  <td><b>switch</td>
+	</tr>
+	<tr>
+	  <td><b>continue</b></td>
+	  <td>import</td>
+	  <td><b>this</b></td>
+	</tr>
+	<tr>
+	  <td>debugger</td>
+	  <td>in</td>
+	  <td><b>throw</b></td>
+	</tr>
+	<tr>
+	  <td><b>default</b></td>
+	  <td><b>instanceof</td>
+	  <td>true</td>
+	</tr>
+	<tr>
+	  <td><b>delete</b></td>
+	  <td>interface</td>
+	  <td><b>try</b></td>
+	</tr>
+	<tr>
+	  <td>do</td>
+	  <td><b>let</b></td>
+	  <td><b>typeof</b></td>
+	</tr>
+	<tr>
+      <td><b>else</b></td>
+	  <td><b>new</b></td>
+	  <td><b>var</b></td>
+	</tr>
+	<tr>
+	  <td>enum</td>
+	  <td><b>null</b></td>
+	  <td><b>void</b></td>
+	</tr>
+	<tr>
+	  <td>export</td>
+	  <td>package</td>
+	  <td>while</td>
+	</tr>
+	<tr>
+	  <td>extends</td>
+	  <td>private</td>
+	  <td>with</td>
+	</tr>
+	<tr>
+	  <td><b>false</b></td>
+	  <td>protected</td>
+	  <td><b>yield</b></td>
+	</tr>
+  </tbody>
+</table>
+
+<blockquote>
+implements, <b>let</b>, private, public, interface, package, protected, <b>static</b>, 
+and yield are <b>disallowed in strict mode only</b>.
+</blockquote>
+
+<blockquote>
+eval and arguments are not reserved words but they act like it in <b>strict mode</b>.
+</blockquote>
+
+<p><b>ECMAScript 6 / ECMAScript 2015</b></p>
+
+<table border="1" style="width:200px">
+  <thead>
+    <tr>
+      <th><b>A-E</b></th>
+      <th><b>E-R</b></th>
+      <th><b>S-Z</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>break</b></td>
+      <td>export</td>
+	  <td>super</td>
+	</tr>
+	<tr>
+	  <td><b>case</b><td>
+	  <td>extends<td>
+	  <td><b>switch</b></td>
+	</tr>
+	<tr>
+	  <td><b>catch</b></td>
+	  <td><b>finally</b></td>
+	  <td><b>this</b></td>
+	</tr>
+	<tr>
+	  <td>class</td>
+	  <td><b>for</b></td>
+	  <td><b>throw</b></td>
+	</tr>
+	<tr>
+	  <td><b>const</b></td>
+	  <td><b>function</b></td>
+	  <td><b>try</b></td>
+	</tr>
+	<tr>
+	  <td><b>continue</b></td>
+	  <td>if</td>
+	  <td><b>typeof</b></td>
+	</tr>
+	<tr>
+	  <td>debugger</td>
+	  <td>import</td>
+	  <td><b>var</b></td>
+	</tr>
+	<tr>
+	  <td><b>default</b></td>
+	  <td>in</td>
+      <td><b>void</b></td>
+	</tr>
+	<tr>
+	  <td><b>delete</b></td>
+	  <td><b>instanceof</b></td>
+	  <td>while</td>
+	</tr>
+	<tr>
+	  <td>do</td>
+	  <td><b>new</b></td>
+	  <td>with</td>
+	</tr>
+	<tr>
+	  <td><b>else</b></td>
+	  <td><b>return</b></td>
+	  <td>yield</td>
+	</tr>
+  </tbody>
+</table>
+
+<p>Future reserved keywords</p>
+
+<p>The following are reserved as future keywords by the ECMAScript
 specification. They have no special functionality at present, but they
-might at some future time, so they cannot be used as identifiers. enum
-The following are only reserved when they are found in strict mode code:
-implementspackage public interface private `static' <b>let</b> protected
-Future reserved keywords in older standards The following are reserved
-as future keywords by older ECMAScript specifications (ECMAScript 1 till
-3). abstractfloat short boolean <b>goto</b> synchronized byte
-<b>instanceof</b>throws char int transient double long volatile final
-native Additionally, the literals null, true, and false cannot be used
-as identifiers in ECMAScript. From the <a
+might at some future time, so they cannot be used as identifiers.</p>
+<!-- page 461 -->
+<p>enum</p>
+
+<p>The following are only reserved when they are found in strict mode code:</p>
+
+<p>implements package public<br>
+interface private  `static'<br>
+<b>let</b>     protected</p>
+
+<p>Future reserved keywords in older standards.</p>
+
+<p>The following are reserved as future keywords by older ECMAScript specifications (ECMAScript 1 till
+3). 
+
+<table border="1" style="width:200px">
+  <thead>
+  </thead>
+  <tbody>
+    <tr>
+      <td>abstract</td>
+	  <td>float</td>
+	  <td>short</td>
+	</tr>
+	<tr>
+	  <td>boolean</td>
+	  <td><b>goto</b></td>
+	  <td>synchronized</td>
+	</tr>
+	<tr>
+	  <td>byte</td>
+      <td><b>instanceof</b></td>
+	  <td>throws</td>
+	</tr>
+	<tr>
+	  <td>char</td>
+	  <td>int</td>
+	  <td>transient</td>
+	</tr>
+	<tr>
+	  <td>double</td>
+	  <td>long</td>
+	  <td>volatile</td>
+	</tr>
+	<tr>
+	  <td>final</td>
+	  <td>native</td>
+	</tr>
+  </tbody>
+</table>
+
+<p>Additionally, the literals null, true, and false cannot be used
+as identifiers in ECMAScript.</p>
+
+<p>From the <a
 href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Mozilla
 Developer Network</a>.</p>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="chA-2">Section A.2: Identifiers &amp; Identifier Names</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>With regards to reserved words there is a small distinctions between the "Identifiers" used for the likes of variable or
+function names and the "Identifier Names" allowed as properties of composite data types.</p>
+
+<p>For example the following will result in an illegal syntax error:</p>
+<pre>
+var break = true;
+</pre>
+<blockquote>
+Uncaught SyntaxError: Unexpected token break
+</blockquote>
+<p>However the name is deemed valid as a property of an object (as of ECMAScript 5+):</p>
+
+<pre>
+var obj = {
+  break: true
+};
+console.log(obj.break);
+</pre>
+
+<p>To quote from this answer:</p>
+
+<p>From the ECMAScript® 5.1 Language Specification:</p>
+<blockquote>
+Section 7.6
+
+Identifier Names are tokens that are interpreted according to the grammar given in the “Identifiers”
+section of chapter 5 of the Unicode standard, with some small modifications. An Identifier is an
+IdentifierName that is not a ReservedWord (see 7.6.1).
+</blockquote>
+
+<!-- page 462 -->
+<blockquote>
+<b>Syntax</b>
+
+Identifier ::
+  IdentifierName but not ReservedWord
+</blockquote>
+
+<p>By specification, a ReservedWord is:</p>
+<blockquote>
+Section 7.6.1
+
+A reserved word is an IdentifierName that cannot be used as an Identifier.
+ReservedWord ::
+Keyword
+  FutureReservedWord
+  NullLiteral
+  BooleanLiteral
+</blockquote>
+
+<p>This includes keywords, future keywords, null, and boolean literals. The full list of keywords are in Sections 7.6.1
+and literals are in Section 7.8.</p>
+<p>The above (Section 7.6) implies that IdentifierNames can be ReservedWords, and from the specification for object
+initializers:</p>
+<blockquote>
+Section 11.1.5
+
+<b>Syntax</b>
+
+ObjectLiteral :
+  { }
+  { PropertyNameAndValueList }
+  { PropertyNameAndValueList , }
+</blockquote>
+
+<p>Where PropertyName is, by specification:</p>
+<blockquote>
+PropertyName :
+  IdentifierName
+  StringLiteral
+  NumericLiteral
+</blockquote>
+
+<p>As you can see, a PropertyName may be an IdentifierName, thus allowing ReservedWords to be PropertyNames.
+That conclusively tells us that, by specification, it is allowed to have ReservedWords such as class and var as
+PropertyNames unquoted just like string literals or numeric literals.</p>
+<p>To read more, see Section 7.6 - Identifier Names and Identifiers.</p>
+<p><b>Note:</b> the syntax highlighter in this example has spotted the reserved word and still highlighted it. While the
+example is valid JavaScript developers can get caught out by some compiler / transpiler, linter and minifier tools
+that argue otherwise.</p>
+
 </body>
 </html>
 <!-- the end -->
