@@ -30,7 +30,7 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <title>CSS Notes 4 Pros</title>
+  <title>JS Notes 4 Pros</title>
   <link rel="stylesheet" type="text/css" href="/css/styles.css">
 </head>
 <body>
@@ -75,18 +75,16 @@ the late 70's without retirement. So, would greatly appreciate any donations to 
 @brianbauska@gmail.com or @Brian-Bauska with Venmo.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 01/02. javascript/js logos (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center" width="100%">
-<img src="./images/image001.jpg"
-  style="width:20%"
+<img class="displayed"
+  src="/images/coffeecup.jpg"
+  style="width:40%"
   title="JavaScript coffee cup logo version"
   alt="JavaScript coffee cup logo version." />
 &nbsp;&nbsp;&nbsp;
-<img src="./images/image002.jpg"
+<img src="./images/js-logo.png"
   style="width:20%"
   title="JS logo"
   alt="JS logo." />
-</p>
-
 <h2 id="about">About</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 01. javascript notes 4 pros logo (01) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -26894,29 +26892,21 @@ the exact object that is being created.
 <!-- {width="7.486805555555556in" height="4.045138888888889in"} -->
 <!-- page 355 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch66">
-Chapter 66: Detecting browser
-</h2>
+<h2 id="ch66">Chapter 66: Detecting browser</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Browsers, as they have evolved, offered more features to JavaScript. But
+<p>Browsers, as they have evolved, offered more features to JavaScript. But
 often these features are not available in all browsers. Sometimes they
 may be available in one browser, but yet to be released on other
 browsers. Other times, these features are implemented differently by
 different browsers. Browser detection becomes important to ensure that
 the application you develop runs smoothly across different browsers and
-devices.
-</p>
+devices.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch66-1">
-Section 66.1: Feature Detection Method
-</h3>
+<h3 id="ch66-1">Section 66.1: Feature Detection Method</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-This method looks for the existence of browser specific things. This
-would be more difficult to spoof, but is not guaranteed to be future
-proof.
-</p>
+<p>This method looks for the existence of browser specific things. This
+would be more difficult to spoof, but is not guaranteed to be future proof.</p>
+
 <pre>
 // <i>Opera 8.0+</i>
 <b>var</b> isOpera = (!!window.opr && !!opr.addons) &vert;&vert; !!window.opera &vert;&vert; navigator.userAgent.indexOf(&apos;
@@ -26934,68 +26924,47 @@ OPR/&apos;) &gt;= 0;
 // <i>Blink engine detection</i>
 <b>var</b> isBlink = (isChrome &vert;&vert; isOpera) && !!window.CSS;
 </pre>
-<p>
-Successfully tested in:
-</p>
+
+<p>Successfully tested in:</p>
+
 <ul>
-<li>
-Firefox 0.8 - 44
-</li>
-<li>
-Chrome 1.0 - 48
-</li>
-<li>
-Opera 8.0 - 34
-</li>
-<li>
-Safari 3.0 - 9.0.3
-</li>
-<li>
-IE 6 - 11
-</li>
-<li>
-Edge - 20-25
-</li>
+  <li>Firefox 0.8 - 44</li>
+  <li>Chrome 1.0 - 48</li>
+  <li>Opera 8.0 - 34</li>
+  <li>Safari 3.0 - 9.0.3</li>
+  <li>IE 6 - 11</li>
+  <li>Edge - 20-25</li>
 </ul>
-<p>
-Credit to
-<a href="http://stackoverflow.com/a/9851769/6194193" target="_blank" rel="noopener noreferrer">Rob
-W</a>
-</p>
+
+<p>Credit to
+<a href="http://stackoverflow.com/a/9851769/6194193" target="_blank" rel="noopener noreferrer">Rob W</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch66-2">
-Section 66.2: User Agent Detection
-</h3>
+<h3 id="ch66-2">Section 66.2: User Agent Detection</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-This method gets the user agent and parses it to find the browser. The
+<p>This method gets the user agent and parses it to find the browser. The
 browser name and version are extracted from the user agent through a
 regex. Based on these two, the <b>&lt;browser</b>
-name<b>&gt;&lt;version&gt;</b> is returned.
-</p>
-<p>
-The four conditional blocks following the user agent matching code are
+name<b>&gt;&lt;version&gt;</b> is returned.</p>
+
+<p>The four conditional blocks following the user agent matching code are
 meant to account for differences in the user agents of different
 browsers. For example, in case of opera,
 <a href="https://stackoverflow.com/a/17436191/5894241" target="_blank" rel="noopener noreferrer">
 since it uses Chrome rendering engine</a>, there is an additional step
-of ignoring that part.
-</p>
-<p>
-Note that this method can be easily spoofed by a user.
-</p>
+of ignoring that part.</p>
+
+<p>Note that this method can be easily spoofed by a user.</p>
 <!-- page 356 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 40.  (356) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~ 40. user agent function navigator.sayswho (356) ~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image040.png"
-  title="."
-  alt="."
+  title="User agent detection using function navigator.sayswho."
+  alt="User agent detection using function navigator.sayswho"
   style="border: 2px solid #000000; width:5.5in;" />
-<p>
-Credit to <a href="http://stackoverflow.com/a/2401861/6194193" 
-target="_blank" rel="noopener noreferrer">kennebec</a>
-</p>
+  
+<p>Credit to <a href="http://stackoverflow.com/a/2401861/6194193" 
+target="_blank" rel="noopener noreferrer">kennebec</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch66-3">
 Section 66.3: Library Method
@@ -30739,15 +30708,15 @@ developer experience. Combine with language dynamic features for optimal results
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch93-1">Section 93.1: Fluent API capturing construction of HTML articles with JS</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 42/43.  (4xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 42/43. js class/list example (4xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image042.png"
-  title="."
-  alt="."
+  title="JS class Item, Section, List and Article."
+  alt="JS class Item, Section, List and Article"
   style="border: 2px solid #000000; width:7.48in;" />
 <img src="./images/image043.png"
-  title="."
-  alt="."
+  title="JS list(text), addParagraph(text), and addListItem(text)."
+  alt="JS list(text), addParagraph(text), and addListItem(text)"
   style="border: 2px solid #000000; width:7.48in;" />
 
 <p>This allows the consumer of the API to have a nice-looking article
