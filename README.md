@@ -27739,9 +27739,7 @@ of composite data types.</p>
 
 <p>For example the following will result in an illegal syntax error:</p>
 
-<pre>
-<b>var break = true;</b>
-</pre>
+<pre><b>var break = true;</b></pre>
 
 <blockquote>
 Uncaught SyntaxError: Unexpected token break
@@ -27749,12 +27747,10 @@ Uncaught SyntaxError: Unexpected token break
 
 <p>However the name is deemed valid as a property of an object (as of ECMAScript 5+):</p>
 
-<pre>
-<b>var</b> obj = {
+<pre><b>var</b> obj = {
   <b>break: true</b>
 };
-console.log(obj.<b>break</b>);
-</pre>
+console.log(obj.<b>break</b>);</pre>
 
 <p>To quote from <a href="https://stackoverflow.com/questions/40209367/do-reserved-words-need-to-be-quoted-when-set-as-property-names-of-javascript-obj/40210179#40210179">
 this answer</a>:</p>
@@ -27785,13 +27781,11 @@ Section 7.6.1
 <br><br>
 A reserved word is an IdentifierName that cannot be used as an Identifier.
 <br>&nbsp;
-<pre>
-ReservedWord ::
+<pre>ReservedWord ::
 &nbsp;&nbsp;Keywords
 &nbsp;&nbsp;FutureReservedWord
 &nbsp;&nbsp;NullLiteral
-&nbsp;&nbsp;BooleanLiteral
-</pre>
+&nbsp;&nbsp;BooleanLiteral</pre>
 </blockquote>
 &nbsp;<br>
 <p>This includes keywords, future keywords, <b>null</b>, and boolean literals. The full list of keywords are
