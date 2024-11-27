@@ -27783,14 +27783,16 @@ Section 7.6.1
 <br><br>
 A reserved word is an IdentifierName that cannot be used as an Identifier.
 <br>&nbsp;
-ReservedWord ::
-  Keywords
-  FutureReservedWord
-  NullLiteral
-  BooleanLiteral
+<pre>
+ReservedWord ::<br>
+&nbsp;&nbsp;Keywords
+&nbsp;&nbsp;FutureReservedWord
+&nbsp;&nbsp;NullLiteral
+&nbsp;&nbsp;BooleanLiteral
+</pre>
 </blockquote>
 &nbsp;<br>
-<p>This inclused keywords, future keywords, <b>null</b>, and boolean literals. The full list of keywords are
+<p>This includes keywords, future keywords, <b>null</b>, and boolean literals. The full list of keywords are
 in <a href="https://262.ecma-international.org/5.1/#sec-7.6.1">Section 7.6.1</a> and literals are in 
 <a href="https://262.ecma-international.org/5.1/#sec-7.8">Section 7.8</a>.</p>
 
@@ -27799,19 +27801,24 @@ in <a href="https://262.ecma-international.org/5.1/#sec-7.6.1">Section 7.6.1</a>
 
 <blockquote>
 Section 11.1.5<br>
+<br>
 <b>Syntax</b>
 <br>
+<pre>
 ObjectLiteral :<br>
-  { }<br>
-  { PropertyNameAndValueList }<br>
-  { PropertyNameAndValueList , }<br>
+&nbsp;&nbsp;{ }<br>
+&nbsp;&nbsp;{ PropertyNameAndValueList }<br>
+&nbsp;&nbsp;{ PropertyNameAndValueList , }<br>
+</pre>
 </blockquote>
 <p>Where PropertyName is, by specification:</p>
 <blockquote>
+<pre>
 PropertyName :<br>
-  IdentifierName<br>
-  StringLiteral<br>
-  NumericLiteral
+&nbsp;&nbsp;IdentifierName<br>
+&nbsp;&nbsp;StringLiteral<br>
+&nbsp;&nbsp;NumericLiteral
+</pre>
 </blockquote>
 <p>As you can see, a PropertyName may be an IdentifierName, thus allowing ReservedWords to be PropertyNames.
 That conclusively tells us that, by specification, it is allowed to have ReservedWords such as class and var as
@@ -27819,7 +27826,7 @@ PropertyNames unquoted just like string literals or numeric literals.</p>
 
 <p>To read more, see <a href="https://262.ecma-international.org/5.1/#sec-7.6">Section 7.6</a> - Identifier Names and Identifiers.</p>
 
-<p><b>Note:</b> the syntax highlighter in this example has spotted the reserved word and still highlighted it. While the
+<p><b><i>Note:</i></b> the syntax highlighter in this example has spotted the reserved word and still highlighted it. While the
 example is valid JavaScript developers can get caught out by some compiler / transpiler, linter and minifier tools
 that argue otherwise.</p>
   
