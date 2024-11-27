@@ -27786,17 +27786,21 @@ Section 11.1.5<br>
 <br>
 <b>Syntax</b>
 <br>
-<pre>ObjectLiteral :
+<pre>
+ObjectLiteral :
 &nbsp;&nbsp;{ }
 &nbsp;&nbsp;{ PropertyNameAndValueList }
-&nbsp;&nbsp;{ PropertyNameAndValueList , }</pre>
+&nbsp;&nbsp;{ PropertyNameAndValueList , }
+</pre>
 </blockquote>
 <p>Where PropertyName is, by specification:</p>
+
 <blockquote>
-<pre>PropertyName :
-&nbsp;&nbsp;IdentifierName
-&nbsp;&nbsp;StringLiteral
-&nbsp;&nbsp;NumericLiteral</pre>
+<pre>PropertyName :<br>
+&nbsp;&nbsp;IdentifierName<br>
+&nbsp;&nbsp;StringLiteral<br>
+&nbsp;&nbsp;NumericLiteral
+</pre>
 </blockquote>
 <p>As you can see, a PropertyName may be an IdentifierName, thus allowing ReservedWords to be PropertyNames.
 That conclusively tells us that, by specification, it is allowed to have ReservedWords such as class and var as
