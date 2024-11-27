@@ -27756,8 +27756,10 @@ IdentifierName that is not a ReservedWord(see <a href="https://262.ecma-internat
 <blockquote>
 <b>Syntax</b>
 <br>
-<pre>Identifier::
-&nbsp;&nbsp;IdentifierName but not ReservedWord</pre>
+<pre>
+Identifier::
+&nbsp;&nbsp;IdentifierName but not ReservedWord
+</pre>
 </blockquote>
 <!-- page 462 -->
 <p>By specification, a ReservedWord is:</p>
@@ -27773,7 +27775,7 @@ A reserved word is an IdentifierName that cannot be used as an Identifier.
 &nbsp;&nbsp;NullLiteral
 &nbsp;&nbsp;BooleanLiteral</pre>
 </blockquote>
-&nbsp;<br>
+
 <p>This includes keywords, future keywords, <b>null</b>, and boolean literals. The full list of keywords are
 in <a href="https://262.ecma-international.org/5.1/#sec-7.6.1">Section 7.6.1</a> and literals are in 
 <a href="https://262.ecma-international.org/5.1/#sec-7.8">Section 7.8</a>.</p>
@@ -27785,7 +27787,6 @@ in <a href="https://262.ecma-international.org/5.1/#sec-7.6.1">Section 7.6.1</a>
 Section 11.1.5<br>
 <br>
 <b>Syntax</b>
-<br>
 <pre>
 ObjectLiteral :
 &nbsp;&nbsp;{ }
@@ -27793,12 +27794,14 @@ ObjectLiteral :
 &nbsp;&nbsp;{ PropertyNameAndValueList , }
 </pre>
 </blockquote>
+
 <p>Where PropertyName is, by specification:</p>
 
 <blockquote>
-<pre>PropertyName :<br>
-&nbsp;&nbsp;IdentifierName<br>
-&nbsp;&nbsp;StringLiteral<br>
+<pre>
+PropertyName :
+&nbsp;&nbsp;IdentifierName
+&nbsp;&nbsp;StringLiteral
 &nbsp;&nbsp;NumericLiteral
 </pre>
 </blockquote>
