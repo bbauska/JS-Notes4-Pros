@@ -26713,7 +26713,7 @@ block.</p>
 }
 </pre>
 
-<p>Here&apos;s a jsPerf benchmark showing the difference:
+<p>Here&apos;s a jsPerf benchmark showing the difference:1
 <a href="https://jsperf.com/try-catch-deoptimization">try-catch-deoptimization</a>. 
 In the current version of most browsers, there shouldn&apos;t be much difference if any, but in
 less recent versions of Chrome and Firefox, or IE, the version that
@@ -27064,15 +27064,16 @@ array always processes better even if it&apos;s doing extra statement.</p>
 </pre>
 <!-- page 454 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 55.  (454) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~ 55. functions f1, f1 & perform() (454) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image055.png"
-  title="."
-  alt="."
-  style="border: 2px solid #000000; width:7in;" />
+  title="Functions f1(), f2(), &amp; perform()."
+  alt="Functions f1(), f2(), &amp; perform()."
+  style="border: 2px solid #000000; width:7.072in;" />
 <!-- {width="7.486805555555556in" height="7.072222222222222in"} -->
 <p>This is the result for Chrome and Firefox.</p>
-<table border="1" style="width:200px">
+
+<table border="0" style="width:200px">
   <thead>
     <tr>
       <th></th>
@@ -27133,7 +27134,7 @@ object and avoids allocation of a new object, and excessive GC hits.
 <b>var</b> i, a, b, len;
 a = {x: 0, y: 0}
 <b>function</b> test2(a) {
-  <b>return</b> {x: a&period;x &ast; 10, y : a&period;x &ast; 10};
+  <b>return</b> {x : a&period;x &ast; 10, y : a&period;x &ast; 10};
 }
 <b>function</b> test3(a) {
   a&period;x = a&period;x &ast; 10;
@@ -27199,7 +27200,6 @@ local_variable, this time only needing to check the local scope.</p>
 small type for your values, it will be able to optimize the executed code.</p>
 <p>In this example, we&apos;ll use this trivial function summing the elements
 of an array and outputting the time it took:</p>
-
 <pre>
 // <i>summing properties</i>
 <b>var</b> sum = (
@@ -27214,37 +27214,28 @@ of an array and outputting the time it took:</p>
     <b>return</b> sum;
 })(arr);
 </pre>
-
 <p>Let&apos;s make an array and sum the elements:</p>
-
 <pre>
 <b>var</b>    N = 12345,
               arr = &lbrack;&rbrack;;
 <b>for</b> (<b>var</b> i = 0; i &lt; N; i++) arr&lbrack;i&rbrack; = Math.random();
 </pre>
-
 <p>Result:</p>
-
 <pre>
 Summing took 384416 nanoseconds
 </pre>
-
 <p>Now, let&apos;s do the same but with only integers:</p>
-
 <pre>
-<b>var</b> N = 12345, 
-  arr = &lbrack;&rbrack;;
+<b>var</b>      N = 12345,
+         arr = &lbrack;&rbrack;;
 <b>for</b> (<b>var</b> i = 0; i &lt; N; i++) arr&lbrack;i&rbrack; = Math.round(1000 &ast; Math.random());
 </pre>
-
 <p>Result:</p>
 <!-- page 457 -->
 <pre>
 Summing took 180520 nanoseconds
 </pre>
-
 <h4>Summing integers took half the time here.</h4>
-
 <p>Engines don&apos;t use the same types you have in JavaScript. As you
 probably know, all numbers in JavaScript are IEEE754 double precision
 floating point numbers, there&apos;s no specific available representation
@@ -27259,9 +27250,9 @@ data intensive applications.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch105-1">Section 105.1: Drawback of creating true private method</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>One drawback of creating private method in JavaScript is
-memory-inefficient because a copy of the private method will be
-created every time a new instance is created. See this simple example.</p>
+<p>One drawback of creating private method in JavaScript is memory-inefficient because a 
+copy of the private method will be created every time a new instance is created. See this 
+simple example.</p>
 <pre>
 <b>function</b> contact(first, last) {
   <b>this</b>.firstName = first;
@@ -27307,9 +27298,9 @@ you cannot use as variables, labels, or function names.</b></p>
 <table border="1" style="width:200px">
   <thead>
     <tr>
-      <th><b>A-E</b></th>
-      <th><b>E-R</b></th>
-      <th><b>S-Z</b></th>
+      <th><b><i>A-E</b></i></th>
+      <th><b><i>E-R</b></i></th>
+      <th><b><i>S-Z</i></b></th>
     </tr>
   </thead>
   <tbody>
@@ -27385,9 +27376,9 @@ you cannot use as variables, labels, or function names.</b></p>
 <table border="1" style="width:200px">
   <thead>
     <tr>
-      <th><b>A-F</b></th>
-      <th><b>F-P</b></th>
-      <th><b>P-Z</b></th>
+      <th><b><i>A-F</i></b></th>
+      <th><b><i>F-P</i></b></th>
+      <th><b><i>P-Z</i></b></th>
     </tr>
   </thead>
   <tbody>
@@ -27505,9 +27496,9 @@ and synchronized; it added <b>let</b> and yield.</p>
 <table border="1" style="width:200px">
   <thead>
     <tr>
-      <th><b>A-F</b></th>
-      <th><b>F-P</b></th>
-      <th><b>P-Z</b></th>
+      <th><b><i>A-F</i></b></th>
+      <th><b><i>F-P</i></b></th>
+      <th><b><i>P-Z</i></b></th>
     </tr>
   </thead>
   <tbody>
@@ -27586,8 +27577,8 @@ and synchronized; it added <b>let</b> and yield.</p>
 </table>
 
 <blockquote>
-implements, <b>let</b>, private, public, interface, package, protected,
-<b>static</b>, and yield are <b>disallowed in strict mode only</b>.
+implements, interface, <b>let</b>, package, private, protected, public, <b>static</b>, 
+and <b>yield</b> are <b>disallowed in strict mode only</b>.
 </blockquote>
 
 <blockquote>
@@ -27599,9 +27590,9 @@ eval and arguments are not reserved words but they act like it in <b>strict mode
 <table border="1" style="width:200px">
   <thead>
     <tr>
-      <th><b>A-E</b></th>
-      <th><b>E-R</b></th>
-      <th><b>S-Z</b></th>
+      <th><b><i>A-E</i></b></th>
+      <th><b><i>E-R</i></b></th>
+      <th><b><i>S-Z</i></b></th>
     </tr>
   </thead>
   <tbody>
@@ -27789,10 +27780,10 @@ Identifier::
 
 <blockquote>
 Section 7.6.1
-&nbsp;<br>
+<br><br>
 A reserved word is an IdentifierName that cannot be used as an Identifier.
 <br>&nbsp;
-RservedWord ::
+ReservedWord ::
   Keywords
   FutureReservedWord
   NullLiteral
@@ -27807,19 +27798,19 @@ in <a href="https://262.ecma-international.org/5.1/#sec-7.6.1">Section 7.6.1</a>
 <a href="https://262.ecma-international.org/5.1/#sec-11.1.5">object initializers</a>:</p>
 
 <blockquote>
-Section 11.1.5
+Section 11.1.5<br>
 <b>Syntax</b>
 <br>
-ObjectLiteral :
-  { }
-  { PropertyNameAndValueList }
-  { PropertyNameAndValueList , }
+ObjectLiteral :<br>
+  { }<br>
+  { PropertyNameAndValueList }<br>
+  { PropertyNameAndValueList , }<br>
 </blockquote>
 <p>Where PropertyName is, by specification:</p>
 <blockquote>
-PropertyName :
-  IdentifierName
-  StringLiteral
+PropertyName :<br>
+  IdentifierName<br>
+  StringLiteral<br>
   NumericLiteral
 </blockquote>
 <p>As you can see, a PropertyName may be an IdentifierName, thus allowing ReservedWords to be PropertyNames.
