@@ -27596,6 +27596,7 @@ eval and arguments are not reserved words but they act like it in <b>strict mode
 
 
 <b>ECMAScript 6 / ECMAScript 2015</b>
+
 <table border="1" style="width:200px">
   <thead>
     <tr>
@@ -27660,6 +27661,8 @@ eval and arguments are not reserved words but they act like it in <b>strict mode
       <td><b>return</b></td>
       <td>yield</td>
     </tr>
+  </tbody>
+</table>
 
 <p>Future reserved keywords</p>
 
@@ -27671,22 +27674,71 @@ might at some future time, so they cannot be used as identifiers.</p>
 
 <p>The following are only reserved when they are found in strict mode code:</p>
 
-| implements | package | public |
-| interface  | private | &grave;static&apos; |
-| <b>let</b> | protected | |
+<table>
+<table style="width: 500px;" border="1">
+  <tbody>
+    <tr>
+      <td>implements</td>
+      <td>package</td>
+      <td>public</td>
+    </tr>
+    <tr>
+      <td>interface</td>
+      <td>private</td>
+      <td>&grave;static&apos;</td>
+    </tr>
+    <tr>
+      <td><b>let</b></td>
+      <td>protected</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Future reserved keywords in older standards</p>
 
 <p>The following are reserved as future keywords by older ECMAScript specifications (ECMAScript 1 till 3).</p>
 
-| abstract | float       | short |
-| boolean  | <b>goto</b> | synchronized |
-| byte     | <b>instanceof</b> | throws |
-| char     | int               | transient |
-| double   | long              | volatile |
-| final    | native | |
+<table>
+<table style="width: 500px;" border="1">
+  <tbody>
+    <tr>
+      <td>abstract</td>
+      <td>float</td>
+      <td>short</td>
+    </tr>
+    <tr>
+      <td>boolean</td>
+      <td><b>goto</b></td>
+      <td>synchronized</td>
+    </tr>
+    <tr>
+      <td>byte</td>
+      <td><b>instanceof</b></td>
+      <td>throws</td>
+    </tr>
+    <tr>
+      <td>char</td>
+      <td>int</td>
+      <td>transient</td>
+    </tr>
+    <tr>
+      <td>double</td>
+      <td>long</td>
+      <td>volitile</td>
+    </tr>
+    <tr>
+      <td>final</td>
+      <td>native</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>Additionally, the literals null, true, and false cannot be used as
-identifiers in ECMAScript.</p>
+<p>Additionally, the literals null, true, and false CANNOT be used as identifiers in 
+ECMAScript.</p>
 
-<p>From the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Mozilla Developer Network</a>.</p>
+<p>From the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">
+Mozilla Developer Network</a>.</p>
+
+<p><small><small>the end...</small></small></p>
