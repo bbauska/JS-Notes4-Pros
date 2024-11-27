@@ -27282,7 +27282,7 @@ created every time a new instance is created. See this simple example.</p>
 formatPhoneNumber method</p>
 <pre>
 <b>var</b> rob = <b>new</b> contact(&apos;Rob&apos;, &apos;Sanderson&apos;);
-<b>var</b> don = <b>new</b> contact(&apos;Donald&apos;, &apos;Trump&apos;);
+<b>var</b> don = <b>new</b> contact(&apos;Donald&apos;, &apos;Drumpf&apos;);
 <b>var</b> andy = <b>new</b> contact(&apos;Andy&apos;, &apos;Whitehall&apos;);
 </pre>
 <p>Thus, would be great to avoid using private method only if it&apos;s
@@ -27297,8 +27297,8 @@ they have changed in different versions of the language.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="chA-1">Section A.1: Reserved Keywords</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>JavaScript has a predefined collection of <i>reserved keywords</i> which
-you cannot use as variables, labels, or function names.</h4>
+<p><b>JavaScript has a predefined collection of <i>reserved keywords</i> which
+you cannot use as variables, labels, or function names.</b></p>
 
 <h4>ECMAScript 1</h4>
 
@@ -27350,7 +27350,7 @@ you cannot use as variables, labels, or function names.</h4>
     </tr>
     <tr>
       <td><b>default</b></td>
-      <td>in</td>
+      <td>import</td>
       <td><b>var</b></td>
     </tr>
     <tr>
@@ -27393,21 +27393,21 @@ you cannot use as variables, labels, or function names.</h4>
   <tbody>
     <tr>
       <td><b>abstract</b></td>
-      <td>final</td>
+      <td><b>final</b></td>
       <td><b>public</b></td>
     </tr>
     <tr>
-      <td>boolean</td>
+      <td><b>boolean</b></td>
       <td><b>finally</b></td>
       <td><b>return</b></td>
     </tr>
     <tr>
       <td><b>break</b></td>
-      <td>float</td>
-      <td>short</td>
+      <td><b>float</b></td>
+      <td><b>short</b></td>
     </tr>
     <tr>
-      <td>byte</td>
+      <td><b>byte</b></td>
       <td><b>for</b></td>
       <td><b>static</b></td>
     </tr>
@@ -27428,12 +27428,12 @@ you cannot use as variables, labels, or function names.</h4>
     </tr>
     <tr>
       <td>class</td>
-      <td>implements</td>
+      <td><b>implements</b></td>
       <td><b>this</b></td>
     </tr>
     <tr>
       <td><b>const</b></td>
-      <td><b>import</b></td>
+      <td>import</td>
       <td><b>throw</b></td>
     </tr>
     <tr>
@@ -27442,7 +27442,7 @@ you cannot use as variables, labels, or function names.</h4>
       <td><b>throws</b></td>
     </tr>
     <tr>
-      <td><b>debugger</b></td>
+      <td>debugger</td>
       <td><b>instanceof</b></td>
       <td><b>transient</b></td>
     </tr>
@@ -27457,7 +27457,7 @@ you cannot use as variables, labels, or function names.</h4>
       <td><b>try</b></td>
     </tr>
     <tr>
-      <td><b>do</b></td>
+      <td>do</td>
       <td><b>long</b></td>
       <td><b>typeof</b></td>
     </tr>
@@ -27472,23 +27472,23 @@ you cannot use as variables, labels, or function names.</h4>
       <td><b>void</b></td>
     </tr>
     <tr>
-      <td><b>enum</b></td>
+      <td>enum</td>
       <td><b>null</b></td>
       <td><b>volatile</b></td>
     </tr>
     <tr>
-      <td><b>export</b></td>
+      <td>export</td>
       <td><b>package</b></td>
-      <td><b>while</b></td>
+      <td>while</td>
     </tr>
     <tr>
-      <td><b>extends</b></td>
+      <td>extends</td>
       <td><b>private</b></td>
-      <td><b>with</b></td>
+      <td>with</td>
     </tr>
     <tr>
       <td><b>false</b></td>
-      <td><b>protected</b></td>
+      <td>protected</td>
       <td></td>
     </tr>
   </thead>
@@ -27593,7 +27593,6 @@ implements, <b>let</b>, private, public, interface, package, protected,
 <blockquote>
 eval and arguments are not reserved words but they act like it in <b>strict mode</b>.
 </blockquote>
-
 
 <b>ECMAScript 6 / ECMAScript 2015</b>
 
@@ -27740,5 +27739,97 @@ ECMAScript.</p>
 
 <p>From the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">
 Mozilla Developer Network</a>.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="chA-2">Section A.2: Identifiers &amp; Identifier Names</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>With regards to reserved words there is a small distinction between the <i>"Identifiers"</i> used
+for the likes of variables or function names and the <i>"Identifier Names"</i> allowed as properties
+of composite data types.</p>
 
+<p>For example the following will result in an illegal syntax error:</p>
+
+<pre>
+<b>var break = true;</b>
+</pre>
+
+<blockquote>
+Uncaught SyntaxError: Unexpected token break
+</blockquote>
+
+<p>However the name is deemed valid as a property of an object (as of ECMAScript 5+):</p>
+
+<pre>
+<b>var</b> obj = {
+  <b>break: true</b>
+};
+console.log(obj.<b>break</b>);
+</pre>
+
+<p>To quote from <a href="https://stackoverflow.com/questions/40209367/do-reserved-words-need-to-be-quoted-when-set-as-property-names-of-javascript-obj/40210179#40210179">
+this answer</a>:</p>
+
+<p>From the <a href="https://262.ecma-international.org/5.1/">ECMAScript 5.1 Language Specification:</p>
+
+<blockquote>
+Section 7.6
+
+Identifier Names are tokens that are interpreted according to the grammar given in the "Identifiers"
+section of chapter 5 of the Unicode standard, with some small modifications.  An Identifier is an
+IdentifierName that is not a ReservedWord(see <a href="https://262.ecma-international.org/5.1/#sec-7.6.1">7.6.1</a>).
+</blockquote>
+
+<blockquote>
+<b>Syntax</b>
+
+Identifier::
+  IdentifierName but not ReservedWord
+</blockquote>
+<!-- page 462 -->
+<p>By specification, a ReservedWord is:</p>
+
+<blockquote>
+Section 7.6.1
+&nbsp;<br>
+A reserved word is an IdentifierName that cannot be used as an Identifier.
+<br>&nbsp;
+RservedWord ::
+  Keywords
+  FutureReservedWord
+  NullLiteral
+  BooleanLiteral
+</blockquote>
+&nbsp;<br>
+<p>This inclused keywords, future keywords, <b>null</b>, and boolean literals. The full list of keywords are
+in <a href="https://262.ecma-international.org/5.1/#sec-7.6.1">Section 7.6.1</a> and literals are in 
+<a href="https://262.ecma-international.org/5.1/#sec-7.8">Section 7.8</a>.</p>
+
+<p>The above (Section 7.6) implies that IdentifierNames can be ReservedWords, and from the specification for 
+<a href="https://262.ecma-international.org/5.1/#sec-11.1.5">object initializers</a>:</p>
+
+<blockquote>
+Section 11.1.5
+<b>Syntax</b>
+<br>
+ObjectLiteral :
+  { }
+  { PropertyNameAndValueList }
+  { PropertyNameAndValueList , }
+</blockquote>
+<p>Where PropertyName is, by specification:</p>
+<blockquote>
+PropertyName :
+  IdentifierName
+  StringLiteral
+  NumericLiteral
+</blockquote>
+<p>As you can see, a PropertyName may be an IdentifierName, thus allowing ReservedWords to be PropertyNames.
+That conclusively tells us that, by specification, it is allowed to have ReservedWords such as class and var as
+PropertyNames unquoted just like string literals or numeric literals.</p>
+
+<p>To read more, see <a href="https://262.ecma-international.org/5.1/#sec-7.6">Section 7.6</a> - Identifier Names and Identifiers.</p>
+
+<p><b>Note:</b> the syntax highlighter in this example has spotted the reserved word and still highlighted it. While the
+example is valid JavaScript developers can get caught out by some compiler / transpiler, linter and minifier tools
+that argue otherwise.</p>
+  
 <p><small><small>the end...</small></small></p>
