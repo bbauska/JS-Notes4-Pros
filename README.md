@@ -27215,26 +27215,18 @@ of an array and outputting the time it took:</p>
 })(arr);
 </pre>
 <p>Let&apos;s make an array and sum the elements:</p>
-<pre>
-<b>var</b>    N = 12345,
+<pre><b>var</b>    N = 12345,
               arr = &lbrack;&rbrack;;
-<b>for</b> (<b>var</b> i = 0; i &lt; N; i++) arr&lbrack;i&rbrack; = Math.random();
-</pre>
+<b>for</b> (<b>var</b> i = 0; i &lt; N; i++) arr&lbrack;i&rbrack; = Math.random();</pre>
 <p>Result:</p>
-<pre>
-Summing took 384416 nanoseconds
-</pre>
+<pre>Summing took 384416 nanoseconds</pre>
 <p>Now, let&apos;s do the same but with only integers:</p>
-<pre>
-<b>var</b>      N = 12345,
+<pre><b>var</b>      N = 12345,
          arr = &lbrack;&rbrack;;
-<b>for</b> (<b>var</b> i = 0; i &lt; N; i++) arr&lbrack;i&rbrack; = Math.round(1000 &ast; Math.random());
-</pre>
+<b>for</b> (<b>var</b> i = 0; i &lt; N; i++) arr&lbrack;i&rbrack; = Math.round(1000 &ast; Math.random());</pre>
 <p>Result:</p>
 <!-- page 457 -->
-<pre>
-Summing took 180520 nanoseconds
-</pre>
+<pre>Summing took 180520 nanoseconds</pre>
 <h4>Summing integers took half the time here.</h4>
 <p>Engines don&apos;t use the same types you have in JavaScript. As you
 probably know, all numbers in JavaScript are IEEE754 double precision
@@ -27253,8 +27245,7 @@ data intensive applications.</p>
 <p>One drawback of creating private method in JavaScript is memory-inefficient because a 
 copy of the private method will be created every time a new instance is created. See this 
 simple example.</p>
-<pre>
-<b>function</b> contact(first, last) {
+<pre><b>function</b> contact(first, last) {
   <b>this</b>.firstName = first;
   <b>this</b>.lastName = last;
   <b>this</b>.mobile;
@@ -27267,15 +27258,12 @@ simple example.</p>
   <b>this</b>.setMobileNumber = <b>function</b>(number) {
     <b>this</b>.mobile = formatPhoneNumber(number);
   };
-}
-</pre>
+}</pre>
 <p>When you create few instances, they all have a copy of
 formatPhoneNumber method</p>
-<pre>
-<b>var</b> rob = <b>new</b> contact(&apos;Rob&apos;, &apos;Sanderson&apos;);
+<pre><b>var</b> rob = <b>new</b> contact(&apos;Rob&apos;, &apos;Sanderson&apos;);
 <b>var</b> don = <b>new</b> contact(&apos;Donald&apos;, &apos;Drumpf&apos;);
-<b>var</b> andy = <b>new</b> contact(&apos;Andy&apos;, &apos;Whitehall&apos;);
-</pre>
+<b>var</b> andy = <b>new</b> contact(&apos;Andy&apos;, &apos;Whitehall&apos;);</pre>
 <p>Thus, would be great to avoid using private method only if it&apos;s
 necessary.</p>
 <!-- page 459 -->
@@ -27768,10 +27756,8 @@ IdentifierName that is not a ReservedWord(see <a href="https://262.ecma-internat
 <blockquote>
 <b>Syntax</b>
 <br>
-<pre>
-Identifier::
-&nbsp;&nbsp;IdentifierName but not ReservedWord
-</pre>
+<pre>Identifier::
+&nbsp;&nbsp;IdentifierName but not ReservedWord</pre>
 </blockquote>
 <!-- page 462 -->
 <p>By specification, a ReservedWord is:</p>
@@ -27800,21 +27786,17 @@ Section 11.1.5<br>
 <br>
 <b>Syntax</b>
 <br>
-<pre>
-ObjectLiteral :
+<pre>ObjectLiteral :
 &nbsp;&nbsp;{ }
 &nbsp;&nbsp;{ PropertyNameAndValueList }
-&nbsp;&nbsp;{ PropertyNameAndValueList , }
-</pre>
+&nbsp;&nbsp;{ PropertyNameAndValueList , }</pre>
 </blockquote>
 <p>Where PropertyName is, by specification:</p>
 <blockquote>
-<pre>
-PropertyName :
+<pre>PropertyName :
 &nbsp;&nbsp;IdentifierName
 &nbsp;&nbsp;StringLiteral
-&nbsp;&nbsp;NumericLiteral
-</pre>
+&nbsp;&nbsp;NumericLiteral</pre>
 </blockquote>
 <p>As you can see, a PropertyName may be an IdentifierName, thus allowing ReservedWords to be PropertyNames.
 That conclusively tells us that, by specification, it is allowed to have ReservedWords such as class and var as
