@@ -27771,9 +27771,11 @@ IdentifierName that is not a ReservedWord(see <a href="https://262.ecma-internat
 
 <blockquote>
 <b>Syntax</b>
-
+<br>
+<pre>
 Identifier::
-  IdentifierName but not ReservedWord
+&nbsp;&nbsp;IdentifierName but not ReservedWord
+</pre>
 </blockquote>
 <!-- page 462 -->
 <p>By specification, a ReservedWord is:</p>
@@ -27784,7 +27786,7 @@ Section 7.6.1
 A reserved word is an IdentifierName that cannot be used as an Identifier.
 <br>&nbsp;
 <pre>
-ReservedWord ::<br>
+ReservedWord ::
 &nbsp;&nbsp;Keywords
 &nbsp;&nbsp;FutureReservedWord
 &nbsp;&nbsp;NullLiteral
@@ -27805,18 +27807,18 @@ Section 11.1.5<br>
 <b>Syntax</b>
 <br>
 <pre>
-ObjectLiteral :<br>
-&nbsp;&nbsp;{ }<br>
-&nbsp;&nbsp;{ PropertyNameAndValueList }<br>
-&nbsp;&nbsp;{ PropertyNameAndValueList , }<br>
+ObjectLiteral :
+&nbsp;&nbsp;{ }
+&nbsp;&nbsp;{ PropertyNameAndValueList }
+&nbsp;&nbsp;{ PropertyNameAndValueList , }
 </pre>
 </blockquote>
 <p>Where PropertyName is, by specification:</p>
 <blockquote>
 <pre>
-PropertyName :<br>
-&nbsp;&nbsp;IdentifierName<br>
-&nbsp;&nbsp;StringLiteral<br>
+PropertyName :
+&nbsp;&nbsp;IdentifierName
+&nbsp;&nbsp;StringLiteral
 &nbsp;&nbsp;NumericLiteral
 </pre>
 </blockquote>
