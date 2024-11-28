@@ -20561,9 +20561,7 @@ providing a result:</p>
 <p>If the arrow function&apos;s body consists only of an object literal, this
 object literal has to be enclosed in parentheses:</p>
 
-<pre>
-(bar =&gt; ({ baz: 1 }))();  // <i>-&bsol;Object {baz: 1}</i>
-</pre>
+<pre>(bar =&gt; ({ baz: 1 }))();  // <i>-&bsol;Object {baz: 1}</i></pre>
 
 <p>The extra parentheses indicate that the opening and closing brackets
 are part of the object literal, i.e. they are not delimiters of the
@@ -20575,7 +20573,8 @@ function body.</p>
 target="_blank" rel="noopener noreferrer">
 lexically scoped</a>; this means that their <b>this</b> Binding is bound to the context 
 of the surrounding scope. That is to say, whatever <b>this</b> refers to can be preserved 
-by using an arrow function. Take a look at the following example. The class Cow has a method 
+by using an arrow function.</p>
+<p>Take a look at the following example. The class Cow has a method 
 that allows for it to print out the sound it makes after 1 second.</p>
 <!-- page 338 -->
 
