@@ -100,8 +100,7 @@ the late 70's without retirement. So, would greatly appreciate any donations to 
   alt="JavaScript Notes 4 Professionals logo."
   style="width:40%;" />
 
-<!-- As our processes become more agile,
-our coding MUST be more resilient. -->
+<!-- As our processes become more agile, our coding MUST be more resilient. -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- always use curly braces around if...statements, always. Don't assume logic  -->
 <h4>Contents</h4>
@@ -154,12 +153,12 @@ suite of logging methods. The most common of these methods is ().</p>
 <p>This will log the following to the console:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 02. console.log('Hello, World!'); (02) ~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<img class="displayed" 
-  src="./images/image002.jpg"
+<p align="left"
+<img src="./images/image002.jpg"
   loading="lazy"
   title="console.log('Hello, World!');"
   alt="console.log('Hello, World!');"
-  style="width:40%; float: left; margin-left: 3%; margin-bottom: 1em;" />
+  style="width:40%;" />
 <!--{width="3.8916666666666666in" height="1.4236111111111112in"}-->
 
 <p>In the example above, the console.log() function prints Hello, World! to
@@ -186,7 +185,7 @@ console.log(foo);
   loading="lazy"
   title="foobar console example"
   alt="Example foobar console."
-  style="width:5.95in;" />
+  style="width:3.0in;" />
 </p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- {width="5.954861111111111in" height="1.4777777777777779in"}-->
@@ -230,7 +229,7 @@ console.log ("%s, %s!", greet, who);
   loading="lazy"
   title="greet Hello, World"
   alt="greet Hello, World."
-  style="width:7in;" />
+  style="width:4in;" />
 </p>
 
 <!--{width="6.990972222222222in" height="1.4868055555555555in"}-->
@@ -283,7 +282,7 @@ we log the body element:</p>
   loading="lazy"
   title="console.log(document.body) example"
   alt="console.log(document.body) example."
-  style="border: 2px solid #000000; width:6.52in;" />
+  style="width:6.52in;" />
 </p>
 <!--{width="6.522222222222222in" height="2.3784722222222223in"}-->
 
@@ -387,7 +386,7 @@ parameter is displayed to the user in <b>plain</b> text:</p>
   loading="lazy"
   title="alert() example"
   alt="alert() example."
-  style="border: 2px solid #000000; width:5.225in;" />
+  style="width:4.25in;" />
 </p>
 <!-- {width="5.225in" height="2.3152777777777778in"} -->
 
@@ -454,7 +453,7 @@ console.log(age); // <i>Prints the value inserted by the user</i>
 <img src="./images/image009.png"
   title="window.prompt() example"
   alt="window.prompt() example."
-  style="border: 2px solid #000000; width:4.603in;" />
+  style="width:4.0in;" />
 </p>
 <!--{width="4.603472222222222in" height="1.9548611111111112in"}-->
 
@@ -505,7 +504,7 @@ doing a dangerous operation like deleting something in a Control Panel:</p>
 <img src="./images/image010.jpg"
   title="window.confirm, then deleteItem command"
   alt="window.confirm, then deleteItem command."
-  style="border: 2px solid #000000; width:4.603in;" />
+  style="width:4.0in;" />
 </p>
 <!--{width="4.603472222222222in" height="1.4597222222222221in"}-->
 <p>If you need it for later use, you can simply store the result of the
@@ -828,7 +827,7 @@ steps are taken:</p>
 <img src="./images/image011.png"
   title="Examples; Number.isNaN"
   alt="Examples; Number.isNaN."
-  style="border: 2px solid #000000; width:4.0in;" />
+  style="width:7.0in; height:4.5in;" />
 </p>
 <!-- (./images/image011.png){width="7.486805555555556in" height="4.891666666666667in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -16762,7 +16761,7 @@ is guaranteed.</p>
       <td>The unary negation operator converts its operand to Number, then negates it.</td>
     </tr>
     <tr>
-      <td></td>
+      <td>~</td>
       <td>Bitwise NOT operator.</td>
     <tr>
       <td>!</td>
@@ -16777,14 +16776,16 @@ is guaranteed.</p>
 string.</p>
 
 <p><b>Syntax:</b></p>
-
-<p><b>typeof</b> operand</p>
-
+<pre><b>typeof</b> operand</pre>
 <p><b>Returns:</b></p>
 
 <p>These are the possible return values from <b>typeof</b>:</p>
 
-<table border="1" style="width:500px">
+<table style="width: 200px;>
+  <colgroup>
+    <col span="1" style="width: 100px;">
+	<col span="1" style="width: 100px;">
+  </colgroup>
   <thead>
     <tr>
       <th><b>Type</b></th>
@@ -16793,12 +16794,12 @@ string.</p>
   </thead>
   <tbody>
     <tr>
-      <td>Undefined</td>
-      <td>"undefined"</td>
+      <td style="background-color: #777">Undefined</td>
+      <td style="background-color: #aaa">"undefined"</td>
     </tr>
     <tr>
       <td>Null</td>
-      <td>object"</td>
+      <td>"object"</td>
     </tr>
    <tr>
       <td>Boolean</td>
@@ -16831,8 +16832,6 @@ string.</p>
   </tbody>
 </table>
 
-<p><b>Type Return value</b></p>
-
 <p>The unusual behavior of document.all with the typeof operator with the <b>typeof</b> 
 operator is from its former usage to detect legacy browsers.<br/> For more information, see
 <a href="http://stackoverflow.com/q/40643613/6388243" target="_blank" 
@@ -16848,23 +16847,28 @@ returns "undefined"?</a></p>
 <b>typeof</b> 3.14;
 <b>typeof</b> <b>Infinity</b>;
 <b>typeof</b> <b>NaN</b>;  // <i>&quot;Not-a-Number&quot; is a &quot;number&quot;</i>
+<br>
 // <i>returns &apos;string&apos;</i>
 <b>typeof</b> &quot;&quot;;
 <b>typeof</b> &quot;bla&quot;;
 <b>typeof</b> (<b>typeof</b> 1); // <i>typeof always returns a string</i>
+<br>
 // <i>returns &apos;boolean&apos;</i>
 <b>typeof</b> <b>true</b>;
 <b>typeof</b> <b>false</b>;
+<br>
 // <i>returns &apos;undefined&apos;</i>
 <b>typeof</b> <b>undefined</b>;
 <b>typeof</b> declaredButUndefinedVariable;
 <b>typeof</b> undeclaredVariable;
 <b>typeof</b> <b>void</b> 0;
 <b>typeof</b> document.all  // <i>see above</i>
+<br>
 // <i>returns &apos;function&apos;</i>
 <b>typeof</b> <b>function</b>(){};
 <b>typeof</b> class C {};
 <b>typeof</b> Math.sin;
+<br>
 // <i>returns &apos;object&apos;</i>
 <b>typeof</b> { <i>/&ast;&lt;&hellip;&gt;&ast;/</i>};
 <b>typeof</b> <b>null</b>;
@@ -16875,6 +16879,7 @@ returns "undefined"?</a></p>
 <b>typeof</b> <b>new</b> Boolean(<b>true</b>);   // <i>Don&apos;t use!</i>
 <b>typeof</b> <b>new</b> Number(1);              // <i>Don&apos;t use!</i>
 <b>typeof</b> <b>new</b>String(&quot;abc&quot;); // <i>Don&apos;t use!</i>
+<br>
 // <i>returns &apos;symbol&apos;</i>
 <b>typeof</b> Symbol();
 <b>typeof</b> Symbol.iterator;
@@ -16885,7 +16890,6 @@ returns "undefined"?</a></p>
 <p>The <b>delete</b> operator deletes a property from an object.</p>
 
 <p><b>Syntax:</b></p>
-
 <pre>
 <b>delete</b> object.property<br/><br/>
 <b>delete</b> object&lbrack;&apos;property&apos;&rbrack;
@@ -16925,28 +16929,33 @@ inherited from the prototype.</p>
 
 <pre>
 // <i>Deleting a property</i>
-foo = 1;  // <i>a global variable is a property of &grave;window&grave;: &grave;window.foo&grave;</i>
-<b>delete</b> foo;  // <i>true</i>
-console.log(foo);   // <i>Uncaught ReferenceError: foo is not defined</i>
+foo = 1;              // <i>a global variable is a property of &grave;window&grave;: &grave;window.foo&grave;</i>
+<b>delete</b> foo;         // <i>true</i>
+console.log(foo);     // <i>Uncaught ReferenceError: foo is not defined</i>
+<br>
 // <i>Deleting a variable</i>
 <b>var</b> foo = 1;
-<b>delete</b> foo;    // <i>false</i>
+<b>delete</b> foo;           // <i>false</i>
 console.log(foo);     // <i>1 (Not deleted)</i>
+<br>
 // <i>Deleting a function</i>
 <b>function</b> foo(){ };
 <b>delete</b> foo;             // <i>false</i>
 console.log(foo);              // <i>function foo(){ } (Not deleted)</i>
+<br>
 // <i>Deleting a property</i>
 <b>var</b> foo = { bar: &quot;42&quot; };
 <b>delete</b> foo.bar;                 // <i>true</i>
-console.log(foo);                      // <i>Object { } (Deleted bar)</i>
+console.log(foo);           // <i>Object { } (Deleted bar)</i>
+<br>
 // <i>Deleting a property that does not exist</i>
 <b>var</b> foo = { };
 <b>delete</b> foo.bar;                 // <i>true</i>
-console.log(foo);                      // <i>Object { } (No errors, nothing deleted)</i>
+console.log(foo);           // <i>Object { } (No errors, nothing deleted)</i>
+<br>
 // <i>Deleting a non-configurable property of a predefined object</i>
-<b>delete</b> Math.PI;                 // <i>false ()</i>
-console.log(Math.PI);                  // <i>3.141592653589793 (Not deleted)</i>
+<b>delete</b> Math.PI;      // <i>false ()</i>
+console.log(Math.PI);    // <i>3.141592653589793 (Not deleted)</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch40-4">Section 40.4: The unary plus operator (+)</h3>
@@ -16957,17 +16966,13 @@ already.</p>
 
 <p><b>Syntax:</b></p>
 
-<pre>
-+expression
-</pre>
+<pre>+expression</pre>
 
 <p><b>Returns:</b></p>
 
 <ul>
   <li>a Number.</li>
 </ul>
-
-<br/>
 
 <p><b>Description</b></p>
 
@@ -16988,15 +16993,15 @@ converting something into a number.</p>
 
 <!-- page 254 -->
 <pre>
-&plus;42             // <i>42</i>
-&plus;&quot;42&quot; // <i>42</i>
-&plus;<b>true</b>    // <i>1</i>
-&plus;<b>false</b>   // <i>0</i>
-&plus;<b>null</b>    // <i>0</i>
-&plus;<b>undefined</b> // <i>NaN</i>
-&plus;<b>NaN</b>       // <i>NaN</i>
-&plus;&quot;foo&quot;  // <i>NaN</i>
-&plus;{}               // <i>NaN</i>
+&plus;42        // <i>42</i>
+&plus;&quot;42&quot;          // <i>42</i>
+&plus;<b>true</b>        // <i>1</i>
+&plus;<b>false</b>       // <i>0</i>
+&plus;<b>null</b>        // <i>0</i>
+&plus;<b>undefined</b>    // <i>NaN</i>
+&plus;<b>NaN</b>          // <i>NaN</i>
+&plus;&quot;foo&quot;     // <i>NaN</i>
+&plus;{}             // <i>NaN</i>
 &plus;<b>function</b>(){} // <i>NaN</i>
 </pre>
 
@@ -17025,16 +17030,13 @@ representations:</p>
 
 <p><b>Syntax:</b></p>
 
-<pre>
-<b>void</b> expression
-</pre>
+<pre><b>void</b> expression</pre>
 
 <p><b>Returns:</b></p>
 
 <ul>
   <li><b>undefined</b></li>
 </ul>
-<br/>
 
 <p><b>Description</b></p>
 
@@ -28021,7 +28023,7 @@ abstract your error handling.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch98">Chapter 98: Global error handling in browsers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table border="1" style="width:200px">
+<table border="1" style="width:700px">
   <thead>
     <tr>
       <th><b>Parameter</b></th>
@@ -28164,51 +28166,49 @@ document.querySelectorAll.</p>
       <td>15+</td>
     </tr>
     <tr>
-<pre><code>&lt;tr&gt;
-  &lt;td&gt;Chrome&lt;/td&gt;
-  &lt;td&gt;22&amp;plus;&lt;/td&gt;
-  &lt;td&gt;✔&lt;/td&gt;
-  &lt;td&gt;✔&lt;/td&gt;
-  &lt;td&gt;✔&lt;/td&gt;
-  &lt;td&gt;✔&lt;/td&gt;
-  &lt;td&gt;✔&lt;/td&gt;
-  &lt;td&gt;✔&lt;/td&gt;
-  &lt;td&gt;✔&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-  &lt;td&gt;Firefox&lt;/td&gt;
-  &lt;td&gt;39&amp;plus;&lt;/td&gt;
-  &lt;td&gt;✔&lt;/td&gt;
-  &lt;td&gt;✔&lt;/td&gt;
-  &lt;td&gt;✔&lt;/td&gt;
-  &lt;td&gt;×&lt;/td&gt;
-  &lt;td&gt;×&lt;/td&gt;
-  &lt;td&gt;×&lt;/td&gt;
-  &lt;td&gt;×&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-  &lt;td&gt;IE&lt;/td&gt;
-  &lt;td&gt;11&lt;/td&gt;
-  &lt;td&gt;11&lt;/td&gt;
-  &lt;td&gt;11&lt;/td&gt;
-  &lt;td&gt;11&lt;/td&gt;
-  &lt;td&gt;11&lt;/td&gt;
-  &lt;td&gt;11&lt;/td&gt;
-  &lt;td&gt;11&lt;/td&gt;
-  &lt;td&gt;11&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-  &lt;td&gt;Safari&lt;/td&gt;
-  &lt;td&gt;6.1&amp;plus;&lt;/td&gt;
-  &lt;td&gt;4&amp;plus;&lt;/td&gt;
-  &lt;td&gt;4&amp;plus;&lt;/td&gt;
-  &lt;td&gt;4&amp;plus;&lt;/td&gt;
-  &lt;td&gt;4&amp;plus;&lt;/td&gt;
-  &lt;td&gt;4&amp;plus;&lt;/td&gt;
-  &lt;td&gt;4&amp;plus;&lt;/td&gt;
-  &lt;td&gt;4&amp;plus;&lt;/td&gt;
-&lt;/tr&gt;</code></pre>
-  </tr>
+      <td>Chrome</td>
+      <td>22+</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+    </tr>
+    <tr>
+      <td>Firefox</td>
+      <td>39+</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td>×</td>
+      <td>×</td>
+      <td>×</td>
+      <td>×</td>
+    </tr>
+    <tr>
+      <td>IE</td>
+      <td>11</td>
+      <td>11</td>
+      <td>11</td>
+      <td>11</td>
+      <td>11</td>
+      <td>11</td>
+      <td>11</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>Safari</td>
+      <td>6.1+</td>
+      <td>4+</td>
+      <td>4+</td>
+      <td>4+</td>
+      <td>4+</td>
+      <td>4+</td>
+      <td>4+</td>
+      <td>4+</td>
+    </tr>
   </tbody>
 </table>
 
@@ -28307,7 +28307,7 @@ examine a variable in a loop exactly at 5th iteration.</p>
 <img src="./images/image047.jpg"
   title="Set breakpoint at 5th iteration"
   alt="Set breakpoint at 5th iteration."
-  style="border: 2px solid #000000; width:4.2in;" />
+  style="width:4.2in;" />
 </p>
 <!-- ![](./images/image047.jpg){width="4.288194444444445in" height="0.8736111111111111in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -28421,9 +28421,9 @@ breakpoints.</p>
 <!--~~~~~~~~~~~~~~~~~~~~ 48. pause icon, two small vertical slashes (438) ~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image048.jpg"
-  title="Two small vertical slashes; pause icon"
-  alt="Two small vertical slashes; pause icon."
-  style="border: 2px solid #000000; width:.2in;" />
+  title="Pause, two small vertical slashes"
+  alt="Pause, two small vertical slashes."
+  style="width:.2in;" />
 </p>
 <!-- ![](./images/image048.jpg){width="0.225in" height="0.225in"} --></p>
 
@@ -28440,11 +28440,11 @@ the Elements tab and select "Break on…".</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Clicking the</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 49. small arrow (419) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~ 49. inspect, small arrow pointing northwest (419) ~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image049.jpg"
-  title="Small arrow"
-  alt="Small arrow."
+  title="Inspect, small arrow pointing northwest"
+  alt="Inspect, small arrow pointing northwest."
   style="width:0.2in;" />
 </p>
 
@@ -28486,58 +28486,51 @@ first line.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch99-8">Section 99.8: Stepping through code</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Once you've paused execution on a breakpoint, you may want to follow
-execution line-by-line to observe what happens. Open your browser's
-Developer Tools and look for the Execution Control icons. (This example
-uses the icons in Google Chrome, but they'll be similar in other
-browsers.)</p>
+<p>Once you've paused execution on a breakpoint, you may want to follow execution 
+line-by-line to observe what happens. Open your browser's Developer Tools and look for 
+the Execution Control icons. (This example uses the icons in Google Chrome, but they'll 
+be similar in other browsers.)</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 50. right arrow (439) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 50. resume, right arrow (439) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image050.jpg"
-  title="Right arrow"
-  alt="Right arrow."
+  title="Right arrow, resume"
+  alt="Right arrow, resume."
   style="width:0.2in;" />
 </p>
-
 <!-- ![](./images/image050.jpg){width="0.21597222222222223in" height="0.19791666666666666in"} -->
-
 <p><b>Resume:</b> Unpause execution. Shorcut: F8 (Chrome, Firefox)</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 51. clockwise arrow around dot (439) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~ 51. step over, clockwise arrow around dot (439) ~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image051.jpg"
-  title="Step over icon. Clockwise arrow around dot"
-  alt="Step over icon. Clockwise arrow around dot."
+  title="Step over, clockwise arrow around dot, step over"
+  alt="Step over, clockwise arrow around dot, step over."
   style="width:0.2in;" />
 </p>
-
 <!-- ![](./images/image051.jpg){width="0.2611111111111111in" height="0.18888888888888888in"} -->
-
 <p><b>Step Over:</b> Run the next line of code. If that line contains a
 function call, run the whole function and move to the next line, rather
 than jumping to wherever the function is defined. Shortcut : F10
 (Chrome, Firefox, IE/Edge), (Safari).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 52. step into icon (439) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~ 52. step into, arrow pointing down to dot (439) ~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image052.jpg"
-  title="Step into icon"
-  alt="Step into icon."
+  title="Step into, arrow pointing down to dot"
+  alt="Step into, arrow pointing down to dot."
   style="width:0.19in;" />
 </p>
-
 <!-- ![](./images/image052.jpg){width="0.19791666666666666in" height="0.20694444444444443in"} -->
-
 <p><b>Step Into:</b> Run the next line of code. If that line contains a
 function call, jump into the function and pause there. Shortcut : F11
 (Chrome, Firefox, IE/Edge), F7 (Safari).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 53. step out icon (439) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~ 53. step out, dot with arrow pointing up (439) ~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image053.jpg"
-  title="Step out icon"
-  alt="Step out icon."
+  title="Step out, dot with arrow pointing up"
+  alt="Step out, dot with arrow pointing up."
   style="width:0.19in;" />
 </p>
 
@@ -29501,7 +29494,7 @@ better even if it's doing extra statement.</p>
 <img src="./images/image055.png"
   title="Functions f2 and perform"
   alt="Functions f2 and perform."
-  style="border: 2px solid #000000; width:7in;" />
+  style="width:7in;" />
 </p>
 
 <!-- {width="7.486805555555556in" height="7.072222222222222in"} -->
