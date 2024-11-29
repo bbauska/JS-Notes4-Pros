@@ -129,7 +129,7 @@ property of their respective company owners.</p>
 <p>The information presented in this book is not guaranteed to be correct
 nor accurate, use at your own risk.</p>
 <p>Please send feedback and corrections to [web@petercv.com].</p>
-<!--page 2-->
+<!-- page 1-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch1">Chapter 1: Getting started with JavaScript</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1130,17 +1130,17 @@ ignored:</p>
 
 <p>These facts have also been exploited to allow a page to call itself
 first as HTML and secondly as JavaScript. For example:</p>
-
 <pre>
-&lt;!-&dash;
+<p style="color: black; font-weight: 400">&lt;!-&dash;
  self.postMessage('reached JS "file"');
 /&ast;
 &dash;-&gt;
+</p>
 <b>&lt;!DOCTYPE html&gt;</b>
 <b>&lt;script&gt;</b>
 var w1 = new Worker('#1');
 w1.onmessage = function (e) {
-  console.log(e.data); // 'reached JS "file"
+  console.log(e.data); // <i>'reached JS "file"'</i>
 };
 <b>&lt;/script&gt;</b>
 &lt;!-&dash;
@@ -1281,8 +1281,9 @@ target="_blank" rel="noreferrer noopener">
   src="./images/image012.png"
   title="Safari console web inspector"
   alt="Safari console web inspector."
-  style="border: 2px solid #000000; width:773px;" /></a>
-<!-- page 21 image012 -->
+  style="border: 2px solid #000000; width:500px;" /></a>
+<!-- width: 773px; -->
+<!-- page 21 -->
 
 <p>Then you can either pick "Develop-&gt;Show Error Console" from the menus
 or press ⌘ + Option + C</p>
@@ -1522,7 +1523,7 @@ with the following methods:</p>
 layers within each other:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~ 15/16. console.groupCollapsed() before/after (24) ~~~~~~~~~~~~~~~~~~~~~-->
-<p align="center">
+<div class="img-container">
 <img class="displayed"
   src="./images/image015.jpg"
   title="console.groupCollapsed() before"
@@ -1533,7 +1534,7 @@ layers within each other:</p>
   title="console.groupCollapsed() after"
   alt="console.groupCollapsed() after."
   style="border: 2px solid #000000; width:2.1in;" />
-</p>
+</div>
 
 <!-- ![](./images/image015.jpg){width="2.1083333333333334in" height="3.009027777777778in"} -->
 <!-- ![](./images/image016.jpg){width="2.08125in" height="3.729861111111111in"} -->
@@ -1563,6 +1564,7 @@ console.log(&lbrack;'string'&rbrack;, 1, obj, window);
 </pre>
 
 <p>The log method will display the following in the debugging console:</p>
+<!-- page 25 -->
 
 <pre>&lbrack;'string'&rbrack; 1 Object { test: 1 } Window { /&ast; <i>truncated</i> &ast;/ }</pre>
 
@@ -2000,6 +2002,7 @@ console.dirxml ( myObject );
 </pre>
 
 <p>displays:</p>
+<!-- page 32 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~ 22. console.dirxml(myObject) example (32) ~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
@@ -2045,6 +2048,7 @@ target="_blank" rel="noreferrer noopener">console.assert</a> does
 <i>not</i> throw an AssertionError (except in Node.js), meaning that
 this method is incompatible with most testing frameworks and that code
 execution will not break on a failed assertion.</p>
+<!-- page 33 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch6">Chapter 6: Datatypes in JavaScript</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2096,6 +2100,7 @@ results …</p>
   </blockquote>
   </li>
 </ol>
+<!-- page 34 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch6-2">Section 6.2: Finding an object's class</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2159,66 +2164,68 @@ Object.<b>prototype</b>.toString.call(yourObject)</p>
 
 <ol type="1" start="1">
   <li><b>String</b><br/> Object.<b>prototype</b>.toString.call("String")<br/>
-  <blockquote>
-  "[object String]"
-  </blockquote>
+    <blockquote>
+    "[object String]"
+    </blockquote>
   </li>
+<!-- page 35 -->
   <li><b>Number</b><br/> Object.<b>prototype</b>.toString.call(42)<br/>
-  <blockquote>
-  "[object Number]"
-  </blockquote>
+    <blockquote>
+    "[object Number]"
+    </blockquote>
   </li>
   <li><b>Bool</b><br/> Object.<b>prototype</b>.toString.call(<b>true</b>)<br/>
-  <blockquote>
-  "[object Boolean]"
-  </blockquote>
+    <blockquote>
+    "[object Boolean]"
+    </blockquote>
   </li>
   <li><b>Object</b><br/> Object.<b>prototype</b>.toString.call(Object())
-    or<br/> Object.<b>prototype</b>.toString.call({})<br/>
-  <blockquote>
-  "[object Object]"
-  </blockquote>
+      or<br/> Object.<b>prototype</b>.toString.call({})<br/>
+    <blockquote>
+    "[object Object]"
+    </blockquote>
   </li>
   <li><b>Function</b><br/>
-    Object.<b>prototype</b>.toString.call(<b>function</b>(){})<br/>
-  <blockquote>
-  "[object Function]"
-  </blockquote>
+      Object.<b>prototype</b>.toString.call(<b>function</b>(){})<br/>
+    <blockquote>
+    "[object Function]"
+    </blockquote>
   </li>
   <li><b>Date</b><br/> Object.<b>prototype</b>.toString.call(<b>new</b>
-    Date(2015,10,21))<br/>
-  <blockquote>
-  "[object Date]"
-  </blockquote>
+      Date(2015,10,21))<br/>
+    <blockquote>
+    "[object Date]"
+    </blockquote>
   </li>
   <li><b>Regex</b><br/> Object.<b>prototype</b>.toString.call(<b>new</b>
-  RegExp()) or<br/>
-  Object.<b>prototype</b>.toString.call(/<i>foo/</i>);<br/>
-  <blockquote>
-  "[object.RegExp]"
-  </blockquote>
+    RegExp()) or<br/>
+    Object.<b>prototype</b>.toString.call(/<i>foo/</i>);<br/>
+    <blockquote>
+    "[object.RegExp]"
+    </blockquote>
   </li>
   <li><b>Array</b><br/> Object.<b>prototype</b>.toString.call([]);<br/>
-  <blockquote>
-  "[object Array]"
-  </blockquote>
+    <blockquote>
+    "[object Array]"
+    </blockquote>
   </li>
   <li><b>Null</b><br/>
     Object.<b>prototype</b>.toString.call(<b>null</b>);<br/>
-  <blockquote>
-  "[object Null]"
-  </blockquote>
+<!-- page 36 -->
+    <blockquote>
+    "[object Null]"
+    </blockquote>
   </li>
   <li><b>Undefined</b><br/>
     Object.<b>prototype</b>.toString.call(<b>undefined</b>);<br/>
-  <blockquote>
-  "[object Undefined]"
-  </blockquote>
+    <blockquote>
+    "[object Undefined]"
+    </blockquote>
   </li>
   <li><b>Error</b><br/> Object.<b>prototype</b>.toString.call(Error());<br/>
-  <blockquote>
-  "[object Error]"
-  </blockquote>
+    <blockquote>
+    "[object Error]"
+    </blockquote>
   </li>
 </ol>
 <!-- page 37 -->
@@ -3160,7 +3167,7 @@ date1.toISOString ();
 <blockquote>
 Returns: "2016-04-14T23:49:08.596Z"
 </blockquote>
-
+<!-- page 50 -->
 <p><b>Convert to GMT String</b></p>
 
 <pre>
@@ -3351,10 +3358,11 @@ console.log ( date );
 </pre>
 
 <blockquote>
-Sample output:<br/><br/> Mon Jan 31 2000 13:00:00 GMT+0100 (West-Europa
+Sample output:<br/><br/>
+Mon Jan 31 2000 13:00:00 GMT+0100 (West-Europa
 (standaardtijd))
 </blockquote>
-
+<!-- page 53 -->
 <p>The other UTC-specific modifiers are .setUTCMonth(), .setUTCDate() (for
 the day of the month), setUTCMinutes(), .setUTCSeconds() and
 .setUTCMilliseconds().</p>
@@ -3413,8 +3421,6 @@ allows you to define the formatting of a Date in a convenient manner.</p>
 <p>The locales parameter should be a string with a BCP 47 language tag, or
 an array of such strings.</p>
 
-<!-- page 54 -->
-
 <p>The options parameter should be an object with some or all of the
 following properties:</p>
 
@@ -3423,6 +3429,7 @@ following properties:</p>
     default is "best fit"</li>
   <li><b>timeZone</b>:the only value implementations must recognize is "UTC";
     the default is the runtime's default time zone</li>
+<!-- page 54 -->
   <li><b>hour12</b>:possible values are <b>true</b> and <b>false</b>; the
     default is locale dependent</li>
   <li><b>formatMatcher</b>:possible values are "basic" and "best fit"; the
