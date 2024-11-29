@@ -1131,11 +1131,10 @@ ignored:</p>
 <p>These facts have also been exploited to allow a page to call itself
 first as HTML and secondly as JavaScript. For example:</p>
 <pre>
-<p style="color: black; font-weight: 400">&lt;!-&dash;
+<div style="color: black; font-weight: 200">&lt;!-&dash;
  self.postMessage('reached JS "file"');
 /&ast;
-&dash;-&gt;
-</p>
+&dash;-&gt;</div>
 <b>&lt;!DOCTYPE html&gt;</b>
 <b>&lt;script&gt;</b>
 var w1 = new Worker('#1');
