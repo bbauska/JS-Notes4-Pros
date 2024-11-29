@@ -13398,11 +13398,9 @@ totally private, and we can't reach the agent topSecret.</p>
 
 <h4>Define all methods inside the constructor</h4>
 
-<p>
-The idea here is simply to define all our methods and members inside the
+<p>The idea here is simply to define all our methods and members inside the
 constructor and use the closure to access private members without
-assigning them to <b>this</b>.
-</p>
+assigning them to <b>this</b>.</p>
 
 <!-- page 198 -->
 <pre>
@@ -13815,12 +13813,9 @@ the DOM is loaded.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Start by defining a Foo function that we'll use as a constructor.</p>
 
-<pre>
-<b>function</b> Foo (){}
-</pre>
+<pre><b>function</b> Foo (){}</pre>
 
-<p>By editing Foo.prototype, we can define properties and methods that will
-be shared by all instances of Foo.</p>
+<p>By editing Foo.prototype, we can define properties and methods that will be shared by all instances of Foo.</p>
 
 <pre>
 Foo.<b>prototype</b>.bar = <b>function</b>() {
@@ -13828,8 +13823,7 @@ Foo.<b>prototype</b>.bar = <b>function</b>() {
 };
 </pre>
 
-<p>We can then create an instance using the <b>new</b> keyword, and call
-the method.</p>
+<p>We can then create an instance using the <b>new</b> keyword, and call the method.</p>
 
 <pre>
 <b>var</b> foo = <b>new</b> Foo();
@@ -13859,20 +13853,15 @@ console.log(foo.style);  // <i>&apos;italic&apos;</i>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Suppose we have a plain object called <b>prototype</b>:</p>
 
-<pre>
-<b>var prototype</b> = { foo: &apos;foo&apos;, bar: <b>function</b> () { <b>return this</b>.foo; } };
-</pre>
+<pre><b>var prototype</b> = { foo: &apos;foo&apos;, bar: <b>function</b> () { <b>return this</b>.foo; } };</pre>
 
 <p>Now we want another object called obj that inherits from
 <b>prototype</b>, which is the same as saying that <b>prototype</b> is
 the prototype of obj</p>
 
-<pre>
-<b>var</b> obj = Object.create(<b>prototype</b>);
-</pre>
+<pre><b>var</b> obj = Object.create(<b>prototype</b>);</pre>
 
-<p>Now all the properties and methods from <b>prototype</b> will be
-available to obj</p>
+<p>Now all the properties and methods from <b>prototype</b> will be available to obj</p>
 
 <!-- page 207 -->
 <pre>
@@ -13899,9 +13888,7 @@ console.log(obj.foo);
 
 <p>Console output</p>
 
-<pre>
-&quot;bar&quot;
-</pre>
+<pre>&quot;bar&quot;</pre>
 
 <p>Object.<b>prototype</b> is the prototype of every object, so it's
 strongly recommended you don't mess with it, especially if you use any
@@ -13982,17 +13969,13 @@ with Foo.<b>prototype</b> as it's prototype.</p>
 
 <p>You can find a reference to its constructor on every object</p>
 
-<pre>
-console.log(foo.constructor);
-</pre>
+<pre>console.log(foo.constructor);</pre>
 
 <blockquote>
 function Foo(id, name) { …
 </blockquote>
 
-<pre>
-console.log({ }.constructor);
-</pre>
+<pre>console.log({ }.constructor);</pre>
 
 <blockquote>
 function Object() {[native code]}
@@ -14001,17 +13984,13 @@ function Object() {[native code]}
 <p>And also check if an object is an instance of a given class with the
 <b>instanceof</b> operator</p>
 
-<pre>
-console.log(foo <b>instanceof</b> Foo);
-</pre>
+<pre>console.log(foo <b>instanceof</b> Foo);</pre>
 
 <blockquote>
 true
 </blockquote>
 
-<pre>
-console.log(foo <b>instanceof</b> Object);
-</pre>
+<pre>console.log(foo <b>instanceof</b> Object);</pre>
 
 <blockquote>
 true
@@ -14021,8 +14000,7 @@ true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>Version ≥ 5</h5>
 
-<p>
-With ES5+, the function can be used to create an Object with any other
+<p>With ES5+, the function can be used to create an Object with any other
 Object as it's prototype.</p>
 
 <!-- page 209 -->
@@ -14178,12 +14156,12 @@ line. Use of the semicolon is optional but does help by clearly denoting
 the end of the chain.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 29. example syntax conventions (211) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
 <img src="./images/image029.png"
-  title=" "
+  title="Syntax conventions"
   alt="Syntax conventions."
-  style="border: 2px solid #000000; width:7.486in;" />
+  style="width:55%;" />
+<!--  style="width:7.486in;" -->
 
 <h4>A bad syntax</h4>
 
