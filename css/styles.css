@@ -23,6 +23,9 @@ img.displayed {
   align-items: center;
   float: left;
 }
+.lighter {
+    font-weight: 100;
+  }
 
 font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", 
   "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
