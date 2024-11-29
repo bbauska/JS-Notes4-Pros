@@ -779,12 +779,12 @@ isNaN("45.3");        // <i>false: string representing a number, converted to 45
 isNaN("1.2e3");       // <i>false: string representing a number, converted to 1.2e3</i>
 isNaN("Infinity");    // <i>false: string representing a number, converted to Infinity</i>
 isNaN(<b>new</b> Date);      // <i>false: Date object, converted to milliseconds since epoch</i>
-isNaN("10$&lt;/span&gt;");  // <i>true : conversion fails, the dollar sign is not a digit</i>
-isNaN(”hello”);     // <i>true : conversion fails, no digits at all</i> 
-isNaN(<b>undefined</b>);   // <i>true : converted to NaN</i>
-isNaN();            // <i>true : converted to NaN (implicitly undefined)</i>
-isNaN(<b>function</b>(){});  // <i>true : conversion fails</i> 
-isNaN({});          // <i>true : conversion fails</i> isNaN([1, 2]); // <i>true : converted to “1, 2”, which can’t be converted to a number</i>
+isNaN("10$&lt;&gt;");      // <i>true : conversion fails, the dollar sign is not a digit</i>
+isNaN(”hello”);       // <i>true : conversion fails, no digits at all</i> 
+isNaN(<b>undefined</b>);     // <i>true : converted to NaN</i>
+isNaN();              // <i>true : converted to NaN (implicitly undefined)</i>
+isNaN(<b>function</b>(){});   // <i>true : conversion fails</i> 
+isNaN({});            // <i>true : conversion fails</i> isNaN([1, 2]); // <i>true : converted to “1, 2”, which can’t be converted to a number</i>
 </pre>
 
 <!-- page 13 -->
@@ -828,7 +828,7 @@ steps are taken:</p>
 <img src="./images/image011.png"
   title="Examples; Number.isNaN"
   alt="Examples; Number.isNaN."
-  style="border: 2px solid #000000; width:7.486in;" />
+  style="border: 2px solid #000000; width:4.0in;" />
 </p>
 <!-- (./images/image011.png){width="7.486805555555556in" height="4.891666666666667in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
