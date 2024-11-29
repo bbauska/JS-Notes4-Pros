@@ -775,7 +775,7 @@ target="_blank" rel="noreferrer noopener">ECMA-262 20.1.2.4</a>:</p>
   <img src="./images/image011.png"
   title="Examples; Number.isNaN"
   alt="Examples; Number.isNaN."
-  style="width:6in; height:"4.0in"" />
+  style="width:7in; height:4.5in"" />
 <!-- (./images/image011.png){width="7.486805555555556in" height="4.891666666666667in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch3-3">Section 3.3: NaN</h3>
