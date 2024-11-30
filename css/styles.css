@@ -59,9 +59,6 @@ a.three:link {color:#ffff00;}
 a.three:visited {color:#000;}
 a.three:hover {background:#ee7;}
 
-div {
-  float: left; }
-
 h1 { font-size: 21px;
      font-family: Inter, Georgia, BahnSchrift, sans-serif, Consolas; }
 h2 { font-size: 18px;
