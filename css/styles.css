@@ -28,11 +28,30 @@ img.displayed {
   font-weight: 100;
 }
 
-blockquote {
-  margin: 15px 0 30px;
-  padding-left: 15px;
-  border-left: 5px solid #1371b8;
+blockquote{    
+    font-size: 15px;  /* 35px; */
+    line-height:52px;  /* 52px; */
+    margin: 14px 0;  /* 28px */
+    overflow: hidden;
+    padding: 0 0 0 26px;  /* 0 0 0 26px; */
+    font-weight: 100;  /* 100 */
+    color: #cc6b39;  /* moderate orange */
+    position: relative;
 }
+blockquote:before {
+    content: "";
+    border-left: 2px solid #39348f;  /* dark moderate blue */
+    position: absolute;
+    bottom: 7px;  /* 14px; */
+    top: 7px; /* 13px; */
+    left: 15px;  /* 0 */
+}
+
+/* blockquote { */
+/*  margin: 15px 0 30px; */
+/*  padding-left: 15px; */
+/*  border-left: 5px solid #1371b8; */
+/* } */
 
 font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", 
   "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
