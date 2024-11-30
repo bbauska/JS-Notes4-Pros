@@ -4422,10 +4422,9 @@ Object.<b>prototype</b>.toString() otherwise. This comparison is
 returning <b>true</b> because [].join() returns ’’ which, coerced into
 0, is equal to false.
 <a href="http://www.ecma-international.org/ecma-262/5.1/" 
-target="_blank" rel="noopener noreferrer">ToNumber.</p>
+target="_blank" rel="noopener noreferrer">ToNumber</a>.</p>
 
-<p>Beware though, all objects are truthy and Array is an instance of
-Object:</p>
+<p>Beware though, all objects are truthy and Array is an instance of Object:</p>
 
 <pre>
 // <i>Internally this is evaluated as ToBoolean(&lbrack;&rbrack;) === true ? &apos;truthy&apos; : &apos;falsy&apos;</i>
@@ -4609,8 +4608,7 @@ Otherwise the algorithm returns <b>false</b>.</p>
 
 <ul>
   <li><a href="https://en.wikipedia.org/wiki/Symmetric_relation" 
-    target="_blank" rel="noopener noreferrer">Symmetry</a>: x == y is
-<b>true</b> if, and only if, y == x is <b>true</b>, for any values x and y.</li>
+    target="_blank" rel="noopener noreferrer">Symmetry</a>: x == y is <b>true</b> if, and only if, y == x is <b>true</b>, for any values x and y.</li>
 </ul>
 
 <p>But is not an
@@ -7958,7 +7956,9 @@ Note, only string wrappers can have own enumerable properties
 </blockquote>
 
 <!-- page 116 -->
+
 <p>Use it as reducer: (merges an array to an object)</p>
+
 <pre><b>return</b> users.reduce((result, user) =&bsol;Object.assign({}, {&lbrack;user.id&rbrack;: user})</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch13-6">Section 13.6: Object rest/spread (…)</h3>
@@ -16322,8 +16322,7 @@ article covers this new primitive type more in detail.</p>
 entry in an enum list. This will prevent two enums from having the same
 value by mistake. NOTE:
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze" 
-target="_blank" rel="noopener noreferrer"> Object.freeze browser
-support</a></p>
+target="_blank" rel="noopener noreferrer"> Object.freeze browser support</a></p>
 
 <pre>
 <b>var</b> testEnum = <b>function</b>() {
@@ -16531,7 +16530,7 @@ console.log(map.size);  // <i>2</i>
 <h3 id="ch39-1">Section 39.1: High-resolution timestamps</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now" 
-target="_blank" rel="noopener noreferrer"> performance.now()</a> returns
+target="_blank" rel="noopener noreferrer">performance.now()</a> returns
 a precise timestamp: The number of milliseconds, including microseconds,
 since the current web page started to load.</p>
 
@@ -16554,27 +16553,25 @@ microseconds ago.</p>
 <h3 id="ch39-3">Section 39.3: Low-resolution timestamps</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now" 
-target="_blank" rel="noopener noreferrer">Date.now()]() returns the
-number of whole milliseconds that have elapsed since 1 January 1970
-00:00:00 UTC.</p>
+target="_blank" rel="noopener noreferrer">Date.now()]()</a> returns the
+number of whole milliseconds that have elapsed since 1 January 1970 00:00:00 UTC.</p>
 
 <pre>t = Date.now();</pre>
 
-<p>For example, Date.now() returns 1461069314 if it was called on 19 April
-2016 at 12:35:14 GMT.</p>
+<p>For example, Date.now() returns 1461069314 if it was called on 19 April 2016 at 
+12:35:14 GMT.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch39-4">Section 39.4: Support for legacy browsers</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>In older browsers where Data.now() is unavailable, use
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime" 
-target="_blank" rel="noopener noreferrer"> (new Date()).getTime()</a>
-instead:</p>
+target="_blank" rel="noopener noreferrer"> (new Date()).getTime()</a> instead:</p>
 
 <pre>t = (<b>new</b> Date()).getTime();</pre>
 
 <p>Or, to provide a Date.now() function for use in older browsers,
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now#Polyfill"
-target="_blank" rel="noopener noreferrer"> use this polyfill</a></p>
+target="_blank" rel="noopener noreferrer">use this polyfill</a></p>
 
 <pre>
 <b>if</b> (!Date.now) {
@@ -17486,7 +17483,7 @@ reason, respectively.</p>
 <img src="/images/image032.jpg"
   title="GIMP - Gnu Image Manipulation Program"
   alt="GIMP - Gnu Image Manipulation Program."
-  style="border: 2px solid #000000; width:7.47in;" />
+  style="width:7.47in;" />
 <!-- {width="7.477777777777778in" height="1.9819444444444445in"} -->
 
 <p><b>Example</b></p>
@@ -17761,9 +17758,9 @@ requests.</p>
     target="_blank" rel="noopener noreferrer">Promise.resolve()</a> as an initial value.</li>
   <li>Every element reduced will add a
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then" 
-    target="_blank" rel="noopener noreferrer"> .then()</a> to the inital value.</li>
+    target="_blank" rel="noopener noreferrer"> .then()</a> to the initial value.</li>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce" 
-    target="_blank" rel="noopener noreferrer"> reduce()'s product will be Promise.resolve().then(…).then(…).</li>
+    target="_blank" rel="noopener noreferrer"> reduce()'s</a> product will be Promise.resolve().then(…).then(…).</li>
   <li>We manually append a
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then" 
     target="_blank" rel="noopener noreferrer"> .then(successHandler, errorHandler)</a> after 
@@ -18311,7 +18308,7 @@ resolved.then(value =&gt; {
 </pre>
 
 <!-- page 274 -->
-<p>The
+<p>The 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject" 
 target="_blank" rel="noopener noreferrer"> Promise.reject</a> static
 method returns a promise which immediately rejects with the given reason.</p>
@@ -18871,7 +18868,7 @@ as the default text in the prompt's text field.</p>
 console.log(&apos;Hello, &apos; &plus; name);
 </pre>
 
-<table border="0" style="width:500px">
+<table border="1" style="width:500px">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -18894,291 +18891,166 @@ console.log(&apos;Hello, &apos; &plus; name);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch45">Chapter 45: execCommand and contenteditable</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table style="border: none; width:500px">
+<table style="border: none; width:550px">
   <thead>
     <tr>
       <th><b>commandId</b></th>
       <th><b>value</b></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<b>⋮inline formatting commands</b>
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-backColor
-</td>
-<td>
-Color value String
-</td>
-</tr>
-<tr>
-<td>
-bold
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-createLink
-</td>
-<td>
-URL String
-</td>
-</tr>
-<tr>
-<td>
-fontName
-</td>
-<td>
-Font family name
-</td>
-</tr>
-<tr>
-<td>
-fontSize
-</td>
-<td>
-"1", "2", "3", "4", "5", "6", "7"
-</td>
-</tr>
-<tr>
-<td>
-foreColor
-</td>
-<td>
-Color value String
-</td>
-</tr>
-<tr>
-<td>
-strikeThrough
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-superscript
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-unlink
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-<b>⋮Block formatting commands</b>
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-delete
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-formatBlock
-</td>
-<td>
-"address","dd","div","dt","h1","h2","h3","h4","h5","h6","p","pre"
-</td>
-</tr>
-<tr>
-<td>
-forwardDelete
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-insertHorizontalRule
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-insertHTML
-</td>
-<td>
-HTML String
-</td>
-</tr>
-<tr>
-<td>
-insertImage
-</td>
-<td>
-URL String
-</td>
-</tr>
-<tr>
-<td>
-insertLineBreak
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-insertOrderedList
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-insertParagraph
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-insertText
-</td>
-<td>
-Text string
-</td>
-</tr>
-<tr>
-<td>
-insertUnorderedList
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-JustifyCenter
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-JustifyFull
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-JustifyLeft
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-JustifyRight
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-outdent
-</td>
-<td>
-</tr>
-<tr>
-<td>
-<b>⋮Clipboard commands</b>
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-copy
-</td>
-<td>
-Currently Selected String
-</td>
-</tr>
-<tr>
-<td>
-cut
-</td>
-<td>
-Currently Selected String
-</td>
-</tr>
-<tr>
-<td>
-paste
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-<b>⋮Miscellaneous commands</b>
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-defaultParagraphSeparator
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-redo
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-selectAll
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-styleWithCSS
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-undo
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-useCSS
-</td>
-<td>
-</td>
-</tr>
-</tbody>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>⋮inline formatting commands</b></td>
+      <td></td></tr>
+    <tr>
+      <td>backColor</td>
+      <td>Color value String</td>
+    </tr>
+    <tr>
+      <td>bold</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>createLink</td>
+      <td>URL String</td>
+    </tr>
+    <tr>
+      <td>fontName</td>
+      <td>Font family name</td>
+    </tr>
+    <tr>
+      <td>fontSize</td>
+      <td>"1", "2", "3", "4", "5", "6", "7"</td>
+    </tr>
+    <tr>
+      <td>foreColor</td>
+      <td>Color value String</td>
+    </tr>
+    <tr>
+      <td>strikeThrough</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>superscript</td>
+      <td></td>
+	</tr>
+    <tr>
+      <td>unlink</td>
+      <td></td>
+	</tr>
+    <tr>
+      <td><b>⋮Block formatting commands</b></td>
+      <td></td>
+	</tr>
+    <tr>
+      <td>delete</td>
+      <td></td>
+	</tr>
+    <tr>
+      <td>formatBlock</td>
+      <td>"address","dd","div","dt","h1","h2","h3","h4","h5","h6","p","pre"</td>
+    </tr>
+    <tr>
+      <td>forwardDelete</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>insertHorizontalRule</td>
+      <td></td>
+	</tr>
+    <tr>
+      <td>insertHTML</td>
+      <td>HTML String</td>
+    </tr>
+    <tr>
+      <td>insertImage</td>
+      <td>URL String</td>
+    </tr>
+    <tr>
+      <td>insertLineBreak</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>insertOrderedList</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>insertParagraph</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>insertText</td>
+      <td>Text string</td>
+    </tr>
+    <tr>
+      <td>insertUnorderedList</td>
+      <td></td>
+	</tr>
+    <tr>
+      <td>JustifyCenter</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>JustifyFull</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>JustifyLeft</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>JustifyRight</td>
+      <td></td>
+	</tr>
+    <tr>
+      <td>outdent</td>
+      <td></td>
+	</tr>
+    <tr>
+      <td><b>⋮Clipboard commands</b></td>
+      <td></td>
+	</tr>
+    <tr>
+      <td>copy</td>
+      <td>Currently Selected String</td>
+    </tr>
+    <tr>
+      <td>cut</td>
+      <td>Currently Selected String</td>
+    </tr>
+    <tr>
+      <td>paste</td>
+      <td></td>
+	</tr>
+    <tr>
+      <td><b>⋮Miscellaneous commands</b></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>defaultParagraphSeparator</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>redo</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>selectAll</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>styleWithCSS</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>undo</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>useCSS</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 <!-- page 284 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -19331,97 +19203,72 @@ document.execCommand(&apos;underline&apos;, <b>false</b>, <b>null</b>); // <i>to
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- page 287 -->
 <table border="1" style="width:200px">
-<thead>
-<tr>
-<th>
-<b>Parameter</b>
-</th>
-<th>
-<b>Details</b>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-domain
-</td>
-<td>
-The domain you want to update to
-</td>
-</tr>
-<tr>
-<td>
-title
-</td>
-<td>
-The title to update to
-</td>
-</tr>
-<tr>
-<td>
-path
-</td>
-<td>
-The path to update to
-</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th><b>Parameter</b></th>
+      <th><b>Details</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>domain</td>
+      <td>The domain you want to update to</td>
+    </tr>
+    <tr>
+      <td>title</td>
+      <td>The title to update to</td>
+    </tr>
+    <tr>
+      <td>path</td>
+      <td>The path to update to</td>
+    </tr>
+  </tbody>
 </table>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch46-1">Section 46.1: history.pushState()
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Syntax:</p>
-<pre>
-history.pushState(state object, title, url)
-</pre>
-<p>
+
+<pre>history.pushState(state object, title, url)</pre>
+
 <p>This method allows to ADD histories entries. For more reference,
 Please have a look on this document:
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API#The_pushState()_method" 
 target="_blank" rel="noopener noreferrer">pushState() method</a></p>
-<p>
-<b>Example:</b>
-</p>
+
+<p><b>Example:</b></p>
+
 <pre>
 window.history.pushState(&quot;http://example.ca&quot;, &quot;Sample Title&quot;, &quot;/example/path.html&quot;);
 </pre>
-<p>
-This example inserts a new record into the history, address bar, and
-page title.
-</p>
-<p>
-Note this is different from the (). Which updates the current history
-entry, rather than adding a new one.
-</p>
+
+<p>This example inserts a new record into the history, address bar, and page title.</p>
+
+<p>Note this is different from the (). Which updates the current history
+entry, rather than adding a new one.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch46-2">Section 46.2: history.replaceState()</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<b>Syntax:</b>
-</p>
-<pre>
-history.replaceState(data, title &lbrack;, url &rbrack;)
-</pre>
-<p>
-This method modifies the current history entry instead of creating a new
-one. Mainly used when we want to update URL of the current history
-entry.
-</p>
+<p><b>Syntax:</b></p>
+
+<pre>history.replaceState(data, title &lbrack;, url &rbrack;)</pre>
+
+<p>This method modifies the current history entry instead of creating a new
+one. Mainly used when we want to update URL of the current history entry.</p>
+
 <pre>
 window.history.replaceState(&quot;http://example.ca&quot;, &quot;Sample Title&quot;, &quot;/example/path.html&quot;);
 </pre>
-<p>
-This example replaces the current history, address bar, and page title.
-</p>
-<p>
-Note this is different from the history.pushState(). Which inserts a new
-history entry, rather than replacing the current one.
-</p>
+
+<p>This example replaces the current history, address bar, and page title.</p>
+
+<p>Note this is different from the history.pushState(). Which inserts a new
+history entry, rather than replacing the current one.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch46-3">Section 46.3: Load a specific URL from the history list</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><b>go() method</b></p>
+
 <p>The go() method loads a specific URL from the history list. The
 parameter can either be a number which goes to the URL within the
 specific position (-1 goes back one page, 1 goes forward one page), or a
@@ -19433,9 +19280,8 @@ Syntax
 </blockquote>
 
 <!-- page 288 -->
-<pre>
-history.go(number&vert;URL)
-</pre>
+
+<pre>history.go(number&vert;URL)</pre>
 
 <blockquote>
 Example
@@ -19458,6 +19304,7 @@ Example
   <b>&lt;/body&gt;</b>
 <b>&lt;/html&gt;</b>
 </pre>
+
 <!-- page 289 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch47">Chapter 47: Navigator Object</h2>
@@ -19501,6 +19348,7 @@ the current browser and return it in JSON format.</p>
 <b>return</b> json &plus; &quot;}&rbrack;&quot;;
 };
 </pre>
+
 <!-- page 290 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch48">Chapter 48: BOM (Browser Object Model)</h2>
@@ -19735,8 +19583,7 @@ entry points into JavaScript code, which the event loop invokes:</p>
 <p>Each turn of the event loop is responsible for many things; only some of
 them will invoke these JavaScript tasks. For full details,
 <a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop-processing-model"
- target="_blank" rel="noopener noreferrer">see the HTML
-specification</a></p>
+ target="_blank" rel="noopener noreferrer">see the HTML specification</a></p>
 
 <p>One last thing: what do we mean by saying that each event loop task
 "runs to completion"? We mean that it is not generally possible to
@@ -21008,7 +20855,7 @@ foo = <b>function</b>(a, b) {
 </pre>
 
 <p>When declaring <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function" 
-target="_blank" rel="noopener noreferrer"> function statements</a>, a different 
+target="_blank" rel="noopener noreferrer">function statements</a>, a different 
 scenario occurs. Unlike function statements, function declarations are hoisted to 
 the top of their scope. Consider the following code:</p>
 
@@ -21114,8 +20961,7 @@ y = 4;
 <p><b>var</b> is available in all versions of JavaScript, while <b>let</b>
 and <b>const</b> are part of ECMAScript 6 and
 <a href="http://caniuse.com/#search=block%20level" 
-target="_blank" rel="noopener noreferrer">only available in some newer
-browsers</a>.</p>
+target="_blank" rel="noopener noreferrer">only available in some newer browsers</a>.</p>
 
 <p><b>var</b> is scoped to the containing function or the global space,
 depending when it is declared:</p>
@@ -22776,7 +22622,7 @@ included in your page via a <b>&lt;script&gt;</b> tag.</p>
 
 <p>This is the service worker code and is executed in the
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope" 
-target="_blank" rel="noopener noreferrer"> ServiceWorker Global Scope</a>.</p>
+target="_blank" rel="noopener noreferrer">ServiceWorker Global Scope</a>.</p>
 
 <pre>
 self.addEventListener(&apos;fetch&apos;, <b>function</b>(event) {
@@ -23092,7 +22938,7 @@ window.requestAnimationFrame = (<b>function</b>() {
 <p>Note that the last option (which fills in when no existing support was
 found) will not return an id to be used in cancelAnimationFrame. There
 is, however an <a href="https://gist.github.com/paulirish/1579671" 
-target="_blank" rel="noopener noreferrer"> efficient polyfill</a> that
+target="_blank" rel="noopener noreferrer">efficient polyfill</a> that
 was written which fixes this.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch64-3">Section 64.3: Cancelling an Animation</h3>
@@ -23689,8 +23535,7 @@ and translate them into the <b>target</b> language of JavaScript.</p>
 <p><b>Examples</b></p>
 
 <p><b>ES6/ES2015 to ES5 (via
-<a href="https://babeljs.io/" target="_blank" rel="noopener noreferrer">
-Babel</a>)</b>:</p>
+<a href="https://babeljs.io/" target="_blank" rel="noopener noreferrer">Babel</a>)</b>:</p>
 
 <p>This ES2015 syntax</p>
 
@@ -23734,8 +23579,7 @@ Advanced settings can also be set in relation to the transpiler.</p>
 
 <p>For <b>ES6/ES2016-to-ES5 transpiling</b>, the most prominent transpiler
 being used is
-<a href="https://babeljs.io/" target="_blank" rel="noopener noreferrer">
-Babel</a>.</p>
+<a href="https://babeljs.io/" target="_blank" rel="noopener noreferrer">Babel</a>.</p>
 
 <p><b>Why should I transpile?</b></p>
 
@@ -23755,15 +23599,14 @@ Babel</a>.</p>
 target="_blank" rel="noopener noreferrer">Browser support for ES6</a> is
 growing, but to be sure your code will work on environments that don't
 fully support it, you can use <a href="https://babeljs.io/" 
-target="_blank" rel="noopener noreferrer"> Babel</a>, the ES6/7 to ES5
+target="_blank" rel="noopener noreferrer">Babel</a>, the ES6/7 to ES5
 transpiler, <a href="https://babeljs.io/repl/" 
 target="_blank" rel="noopener noreferrer">try it out!</a></p>
 
 <p>If you would like to use ES6/7 in your projects without having to worry
 about compatibility, you can use
 <a href="https://nodejs.org/en/">Node</a> and
-<a href="https://babeljs.io/docs/usage/cli/" target="_blank" rel="noopener noreferrer">Babel
-CLI</a></p>
+<a href="https://babeljs.io/docs/usage/cli/" target="_blank" rel="noopener noreferrer">Babel CLI</a></p>
 
 <p><b>Quick setup of a project with Babel for ES6/7 support</b></p>
 
@@ -24576,8 +24419,7 @@ console.log(object);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><b>What is
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage" 
-target="_blank" rel="noopener noreferrer">.postMessage()</a>, when and
-why do we use it</b></p>
+target="_blank" rel="noopener noreferrer">.postMessage()</a>, when and why do we use it</b></p>
 
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage" 
 target="_blank" rel="noopener noreferrer"><b>postMessage</a> method is a
@@ -24655,7 +24497,7 @@ target="_blank" rel="noopener noreferrer"> JSON.stringify()</a> and
 target="_blank" rel="noopener noreferrer"> JSON.parse()</a> methods can
 be used. A
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Transferable" 
-target="_blank" rel="noopener noreferrer"> Transfarable Object</a> can
+target="_blank" rel="noopener noreferrer"> Transferable Object</a> can
 be given as the third optional parameter of the
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage" 
 target="_blank" rel="noopener noreferrer">
@@ -24721,8 +24563,7 @@ validations, the message can be processed.</p>
 </pre>
 
 <p><a href="https://jsfiddle.net/ozzan/6gjstodk/" 
-target="_blank" rel="noopener noreferrer">Click here for a JS Fiddle
-showcasing its usage.</p>
+target="_blank" rel="noopener noreferrer">Click here for a JS Fiddle showcasing its usage</a>.</p>
 
 <!-- page 378/379 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -26671,7 +26512,7 @@ downloadCSV(string);
 
 <p>Source reference;
 <a href="https://github.com/mholt/PapaParse/issues/175">
-&lt;https://github.com/mholt/PapaParse/issues/175&gt;</p>
+&lt;https://github.com/mholt/PapaParse/issues/175&gt;</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch90">Chapter 90: Notifications API</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -28636,31 +28477,21 @@ detects errors and potential problems in JavaScript code.</p>
 <p>To lint your JavaScript you have two options.</p>
 
 <ol type="1" start="1">
-<li>
-Go to <a href="http://jshint.com/">JSHint.com</a> and paste your code in
-there on line text editor
-</li>
-<li>
-Install <a href="http://jshint.com/install/">JSHint in your IDE</a>.
-<ul>
-<li>
-Atom:
-<a href="https://github.com/AtomLinter/linter-jshint">linter-jshint</a>
-(must have <a href="https://github.com/steelbrain/linter">Linter</a>
-plugin installed)
-</li>
-<li>
-Sublime Text: <a href="https://github.com/victorporof/Sublime-JSHint">
-JSHint Gutter</a> and/or
-<a href="https://github.com/SublimeLinter/SublimeLinter-for-ST2">Sublime
-Linter</a>
-</li>
-<li>
-Vim: <a href="https://github.com/walm/jshint.vim">jshint.vim</a> or
-<a href="https://github.com/Shutnik/jshint2.vim">jshint2.vim</a>
-</li>
-</ul>
-<pre><code>&lt;/li&gt;</code></pre>
+  <li>Go to <a href="http://jshint.com/">JSHint.com</a> and paste your code in there on 
+    line text editor</li>
+  <li>Install <a href="http://jshint.com/install/">JSHint in your IDE</a>.
+    <ul>
+      <li>Atom: <a href="https://github.com/AtomLinter/linter-jshint">linter-jshint</a>
+	    (must have <a href="https://github.com/steelbrain/linter">Linter</a> plugin installed)
+      </li>
+      <li>Sublime Text: <a href="https://github.com/victorporof/Sublime-JSHint">
+	    JSHint Gutter</a> and/or <a href="https://github.com/SublimeLinter/SublimeLinter-for-ST2">
+		  Sublime Linter</a></li>
+      <li>Vim: <a href="https://github.com/walm/jshint.vim">jshint.vim</a> or 
+	    <a href="https://github.com/Shutnik/jshint2.vim">jshint2.vim</a></li>
+    </ul>
+  </li>
+  <pre><code>&lt;/li&gt;</code></pre>
 </ol>
 
 <p>A benefit of adding it to your IDE is that you can create a JSON
@@ -28719,6 +28550,7 @@ projects.</p>
 globalVariable = &apos;in-another-file.js&apos;;
 <i>/&ast; jshint +W117 &ast;/</i>
 </pre>
+
 <p><a href="http://jshint.com/docs/options/">More configuration options</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch102-2">Section 102.2: ESLint / JSCS</h3>
