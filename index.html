@@ -437,7 +437,7 @@ has the value allow-modal</a>.</p>
 
 <ul>
   <li><b>text</b>: The text displayed in the prompt box.</li>
-  <li><b>default</b>): A default value for the input field (optional).</li>
+  <li><b>default</b>: A default value for the input field (optional).</li>
 </ul>
 
 <p><b>Examples</b></p>
@@ -778,11 +778,11 @@ isNaN("45.3");        // <i>false: string representing a number, converted to 45
 isNaN("1.2e3");       // <i>false: string representing a number, converted to 1.2e3</i>
 isNaN("Infinity");    // <i>false: string representing a number, converted to Infinity</i>
 isNaN(<b>new</b> Date);      // <i>false: Date object, converted to milliseconds since epoch</i>
-isNaN("10$&lt;&gt;");      // <i>true : conversion fails, the dollar sign is not a digit</i>
+isNaN("10$&lt;&gt;");       // <i>true : conversion fails, the dollar sign is not a digit</i>
 isNaN(”hello”);       // <i>true : conversion fails, no digits at all</i> 
 isNaN(<b>undefined</b>);     // <i>true : converted to NaN</i>
 isNaN();              // <i>true : converted to NaN (implicitly undefined)</i>
-isNaN(<b>function</b>(){});   // <i>true : conversion fails</i> 
+isNaN(<b>function</b>(){});  // <i>true : conversion fails</i> 
 isNaN({});            // <i>true : conversion fails</i> isNaN([1, 2]); // <i>true : converted to “1, 2”, which can’t be converted to a number</i>
 </pre>
 
@@ -1131,10 +1131,10 @@ ignored:</p>
 <p>These facts have also been exploited to allow a page to call itself
 first as HTML and secondly as JavaScript. For example:</p>
 <pre>
-<div style="color: black; font-weight: 200">&lt;!-&dash;
+<span color="#7a7a7a" class="lighter">&lt;!-&dash;
  self.postMessage('reached JS "file"');
 /&ast;
-&dash;-&gt;</div>
+&dash;-&gt;</span>
 <b>&lt;!DOCTYPE html&gt;</b>
 <b>&lt;script&gt;</b>
 var w1 = new Worker('#1');
@@ -2354,7 +2354,7 @@ perform the reversing perfectly.</p>
 
 <p><b>Explanation</b></p>
 
-<table border="1" style="width:500px">
+<table border="1" style="width:7500px">
   <thead>
     <tr>
       <th>Section</th>
@@ -2522,7 +2522,7 @@ HTML representations within a String, since HTML strings make large use
 of quotations i.e. in attributes:</p>
 
 <pre>
-<b>var</b> content = &quot;&lt;p class=<b>&bsol;&quot;special&bsol;&quot;&gt;</b>Hello World!&lt;/p&gt;; // <i>valid String</i>
+<b>var</b> content = &quot;&lt;p class=<b>&bsol;&quot;special&bsol;&quot;&gt;</b>Hello World!&lt;/p&gt;;       // <i>valid String</i>
 <b>var</b> hello   = &apos;&lt;p class=&quot;special&quot;&gt;I<b>&bsol;&apos;</b>d like to say &quot;Hi&quot;&lt;/p&gt;&apos;; // <i>valid String</i>
 </pre>
 
@@ -2530,7 +2530,7 @@ of quotations i.e. in attributes:</p>
 quote and " (or ") as double quotes.</p>
 
 <pre>
-<b>var</b> hi = &quot;&lt;p class=&apos;special&apos;&gt;I&apos;d like to say &quot;Hi&quot;&lt;/p&gt;&quot;; // <i>valid String</i>
+<b>var</b> hi = &quot;&lt;p class=&apos;special&apos;&gt;I&apos;d like to say &quot;Hi&quot;&lt;/p&gt;&quot;;     // <i>valid String</i>
 <b>var</b> hello = &apos;&lt;p class=&quot;special&quot;&gt;I&apos;d like to say &quot;Hi&quot;&lt;/p&gt;&apos;; // <i>valid String</i>
 </pre>
 
@@ -2570,7 +2570,7 @@ about the number of:</p>
     charactersNoSpaces: val.replace(<i>/&bsol;s+/g</i>, &apos;&apos;).length,
     characters        : val.length,
     words             : wom ? wom.length : 0,
-    lines             : val.split(<i>/&bsol;&bsol;r&ast;&bsol;n/</i>).length
+    lines             : val.split(<i>/&bsol;r&ast;&bsol;n/</i>).length
   };
 }
 // <i>Use like:</i>
@@ -2860,7 +2860,7 @@ the following order:</p>
 
 <p><b>Parameter Meaning</b></p>
 
-<table border="1" style="width:200px">
+<table border="1" style="width:500px">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -2960,7 +2960,7 @@ repeat n times the string myString:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch8">Chapter 8: Date</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table border="1" style="width:200px">
+<table border="1" style="width:750px">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -3053,9 +3053,11 @@ Date.prototype.toISOString() was used to show the date and time in UTC
 now.toString() === &apos;Mon Apr 11 2016 16:10:41 GMT-0500 (Central Daylight Time)&apos; 
 // <i>true</i>
 // <i>well, at the time of this writing, anyway</i>
+
 // <i>Creates a Date object at the Unix Epoch (i.e., &apos;1970-01-01T00:00:00.000Z&apos;)</i>
 <b>var</b> epoch = <b>new</b> Date(0);
 epoch.toISOString() === &apos;1970-01-01T00:00:00.000Z&apos; // <i>true</i>
+
 // <i>Creates a Date object with the date and time 2,012 milliseconds</i>
 // <i>after the Unix Epoch (i.e., &apos;1970-01-01T00:00:02.012Z&apos;).</i>
 <b>var</b> ms = <b>new</b> Date(2012);
@@ -3065,18 +3067,21 @@ date2012.toISOString() === &apos;1970-01-01T00:00:02.012Z&apos; // <i>true</i>
 <b>var</b> one = <b>new</b> Date(2012, 1);
 one.toString() === &apos;Wed Feb 01 2012 00:00:00 GMT-0600 (Central Standard Time)&apos;
 // <i>true</i>
+
 // <i>Creates a Date object with the first day of the year 2012 in the local</i>
 // <i>timezone.</i>
 // <i>(Months are zero-based)</i>
 <b>var</b> zero = <b>new</b> Date(2012, 0);
 zero.toString() === &apos;Sun Jan 01 2012 00:00:00 GMT-0600 (Central Standard Time)&apos;
 // <i>true</i>
+
 // <i>Creates a Date object with the first day of the year 2012, in UTC.</i>
 <b>var</b> utc = <b>new</b> Date(Date.UTC(2012, 0));
 utc.toString() === &apos;Sat Dec 31 2011 18:00:00 GMT-0600 (Central Standard Time)&apos;
 // <i>true</i>
 utc.toISOString() === &apos;2012-01-01T00:00:00.000Z&apos;
 // <i>true</i>
+
 // <i>Parses a string into a Date object (ISO 8601 format added in ECMAScript 5.1)</i>
 // <i>Implementations should assumed UTC because of ISO 8601 format and Z designation</i>
 <b>var</b> iso = <b>new</b> Date(&apos;2012-01-01T00:00:00.000Z&apos;);
@@ -3085,6 +3090,7 @@ iso.toISOString() === &apos;2012-01-01T00:00:00.000Z&apos; <i>// true</i>
 <b>var</b> local = <b>new</b> Date(&apos;Sun, 01 Jan 2012 00:00:00 -0600&apos;);
 local.toString() === &apos;Sun Jan 01 2012 00:00:00 GMT-0600 (Central Standard Time)&apos;
 // <i>true</i>
+
 // <i>Parses a string in no particular format, most of the time. Note that parsing</i>
 // <i>logic in these cases is very implementation-dependent, and therefore can vary</i>
 // <i>across browsers and versions.</i>
@@ -3092,16 +3098,19 @@ local.toString() === &apos;Sun Jan 01 2012 00:00:00 GMT-0600 (Central Standard T
 anything.toString() === &apos;Mon Nov 12 2012 00:00:00 GMT-0600 (Central Standard Time)&apos;
 // <i>true, in Chrome 49 64-bit on Windows 10 in the en-US locale. Other versions in
 // other locales may get a different result.</i>
+
 // <i>Rolls values outside of a specified range to the next value.</i>
 <b>var</b> rollover = <b>new</b> Date(2012, 12, 32, 25, 62, 62, 1023);
 rollover.toString() === &apos;Sat Feb 02 2013 02:03:03 GMT-0600 (Central Standard Time)&apos;
 // <i>true; note that the month rolled over to Feb; first the month rolled over to</i>
 // <i>Jan based on the month 12 (11 being December), then again because of the day 32</i>
 // <i>(January having 31 days).</i>
+
 // <i>Special dates for years in the range 0-99</i>
 <b>var</b> special1 = <b>new</b> Date(12, 0);
 special1.toString() === &apos;Mon Jan 01 1912 00:00:00 GMT-0600 (Central Standard Time)&grave;
 // true
+
 // If you actually wanted to set the year to the year 12 CE, you&apos;d need to use the
 // <i>setFullYear() method:</i>
 special1.setFullYear(12);
@@ -20804,10 +20813,10 @@ const title = "Hello World";
 const iconSrc = "/images/logo.png";
 const names = &lbrack;&quot;John&quot;, &quot;Jane&quot;, &quot;Joe&quot;, &quot;Jill&quot;&rbrack;;
 document.body.innerHTML = HTML`
-  <h1><img src="&dollar;{iconSrc}" /&gt; &dollar;{title}</h1>
-  <ul> &dollar;(names.map(name =&gt; HTML `
-    <li>?&dollar;{name}</li>
-  </ul>
+  &lt;h1&gt;&lt;img src="&dollar;{iconSrc}" /&gt; &dollar;{title}&lt;/h1&gt;
+  &lt;ul&gt; &dollar;(names.map(name =&gt; HTML `
+    &lt;li&gt;&dollar;{name}&lt;/li&gt;
+  &lt;/ul&gt;
   `)} 
 `;
 </pre>
@@ -20842,7 +20851,7 @@ Literals and Raw property. These are demonstrated in other examples.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch55">Chapter 55: Fetch</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table border="1" style="width:200px">
+<table border="1" style="width:500px">
   <thead>
     <tr>
       <th><b>Options</b></th>
@@ -21266,7 +21275,7 @@ y = 4;
 <img src="/images/image037.jpg"
   title="The page at www.w3schools.com says: NaN"
   alt="The page at www.w3schools.com says: NaN"
-  style="border: 2px solid #000000; width:4in;" />
+  style="width:4in;" />
 </p>
 
 <!-- {width="4.090277777777778in" height="2.1534722222222222in"} -->
@@ -22138,7 +22147,7 @@ convert string to wrong number.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch59-6">Section 59.6: Primitive to Primitive conversion table</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table border="1" style="width:200px">
+<table border="1" style="width:500px">
   <thead>
     <tr>
       <th><b>Value</b></th>
@@ -22632,7 +22641,7 @@ console.log(userId)    // <i>10</i>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch61">Chapter 61: WebSockets</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table border="1" style="width:200px">
+<table border="1" style="width:500px">
   <thead>
     <tr>
       <th><b>Parameter</b></th>
@@ -22660,8 +22669,8 @@ console.log(userId)    // <i>10</i>
 <p>The goal WebSocket is to provide a mechanism for browser-based
 applications that need two-way communication with servers that does not
 rely on opening multiple HTTP connections.
-(<a href="https://tools.ietf.org/html/rfc6455" 
-target="_blank" rel="noopener noreferrer"> RFC 6455)</p>
+<a href="https://tools.ietf.org/html/rfc6455" 
+target="_blank" rel="noopener noreferrer">(RFC 6455)</a></p>
 
 <p>WebSocket works over HTTP protocol.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -23213,7 +23222,7 @@ call to port.start() is not actually needed, as noted above.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch64">Chapter 64: requestAnimationFrame</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table border="1" style="width:200px">
+<table border="1" style="width:500px">
   <thead>
     <tr>
       <th>Parameter</th>
@@ -29835,7 +29844,7 @@ which you cannot use as variables, labels, or function names.</b></p>
     </tr>
     <tr>
 	  <td>byte</td>
-	  <td<b>for</b></td>
+	  <td><b>for</b></td>
       <td><b>static</b></td>
 	</tr>
 	<tr>
@@ -29930,7 +29939,7 @@ final, float, short, double, native, throws, boolean, abstract,
 volatile, transient, and synchronized; it added <b>let</b> and
 yield.</p>
 
-<table border="1" style="width:500px">
+<table border="1" style="width: 200px">
   <thead>
     <tr>
       <th><b>A-F</b></th>
@@ -30028,7 +30037,7 @@ eval and arguments are not reserved words but they act like it in <b>strict mode
 
 <p><b>ECMAScript 6 / ECMAScript 2015</b></p>
 
-<table border="1" style="width:500px">
+<table border="1" style="width:200px">
   <thead>
     <tr>
       <th><b>A-E</b></th>
@@ -30043,8 +30052,8 @@ eval and arguments are not reserved words but they act like it in <b>strict mode
 	  <td>super</td>
 	</tr>
 	<tr>
-	  <td><b>case</b><td>
-	  <td>extends<td>
+	  <td><b>case</b></td>
+	  <td>extends</td>
 	  <td><b>switch</b></td>
 	</tr>
 	<tr>
@@ -30106,9 +30115,29 @@ might at some future time, so they cannot be used as identifiers.</p>
 <p>enum</p>
 
 <p>The following are only reserved when they are found in strict mode code:</p>
-
+<table border="1" style="width:200px;">
+  <thead>
+  </thead>
+  <tbody>
+    <tr>
+	  <td>implements</td>
+	  <td>package</td>
+	  <td>public</td>
+	</tr>
+	<tr>
+	  <td>interface</td>
+	  <td>private</td>
+	  <td>`static'</td>
+	</tr>
+	<tr>
+	  <td><b>let</b></td>
+	  <td>protected</td>
+	</tr>
+  </tbody>
+ </table>
+ 
 <p>implements package public<br>
-interface private  `static'<br>
+interface private  `static'br>
 <b>let</b>nbsp;nbsp;nbsp;nbsp;protected</p>
 
 <p>Future reserved keywords in older standards.</p>
@@ -30116,7 +30145,7 @@ interface private  `static'<br>
 <p>The following are reserved as future keywords by older ECMAScript specifications 
 (ECMAScript 1 till 3).</p>
 
-<table border="1" style="width:500px">
+<table border="1" style="width:200px">
   <thead>
   </thead>
   <tbody>
