@@ -2354,7 +2354,7 @@ perform the reversing perfectly.</p>
 
 <p><b>Explanation</b></p>
 
-<table border="1" style="width:7500px">
+<table border="1" style="width:700px">
   <thead>
     <tr>
       <th>Section</th>
@@ -2404,7 +2404,7 @@ perform the reversing perfectly.</p>
 }
 console.log(reverseString(&apos;stackoverflow&apos;));  // <i>&quot;wolfrevokcats&quot;</i>
 console.log(reverseString(1337));             // <i>&quot;7331&quot;</i>
-console.log(reverseString(&lbrack;1, 2, 3&rbrack;));       // <i>&quot;3,2,1&quot;</i>
+console.log(reverseString(&lbrack;1, 2, 3&rbrack;));        // <i>&quot;3,2,1&quot;</i>
 </pre>
 
 <p><b>Custom reverse() function</b></p>
@@ -2827,7 +2827,7 @@ than () if you simply need to test for existence of a substring.</p>
 <pre>
 <b>var</b> string = &quot;Hello, World!&quot;;
 console.log( string.includes(&quot;Hello&quot;) ); // <i>true</i>
-console.log( string.includes(&quot;foo&quot;));   // <i>false</i>
+console.log( string.includes(&quot;foo&quot;));    // <i>false</i>
 </pre>
 
 <!-- page 45 -->
@@ -3117,6 +3117,7 @@ special1.setFullYear(12);
 special1.toString() === &apos;Sun Jan 01    12 00:00:00 GMT-0600 (Central Standard Time)&grave;
 // true
 </pre>
+
 <!-- page 49 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch8-2">Section 8.2: Convert to a string format</h3>
@@ -3175,7 +3176,9 @@ date1.toISOString ();
 <blockquote>
 Returns: "2016-04-14T23:49:08.596Z"
 </blockquote>
+
 <!-- page 50 -->
+
 <p><b>Convert to GMT String</b></p>
 
 <pre>
@@ -3184,7 +3187,6 @@ date1.toGMTString ( ) ;
 </pre>
 
 <blockquote>
-<p>
 Returns: "Thu, 14 Apr 2016 23:49:08 GMT"
 </blockquote>
 
@@ -3199,7 +3201,7 @@ date1.toLocaleDateString ( ) ;
 </pre>
 
 <blockquote>
-<p>Returns: "4/14/2016"</p>
+Returns: "4/14/2016"
 </blockquote>
 
 <p>This function returns a locale sensitive date string based upon the
@@ -3266,7 +3268,7 @@ sendToBar(birthday.getTime());
 </pre>
 
 <blockquote>
-Sample output:<br/><br/> Foo was born on: Sat Jan 1 2000
+Sample output:<br/>Foo was born on: Sat Jan 1 2000
 </blockquote>
 
 <pre>
@@ -3276,8 +3278,9 @@ Sample output:<br/><br/> Foo was born on: Sat Jan 1 2000
 console.log(&quot;Foo was born on: &quot; &plus; formatDate(birthday.getDay(), birthday.getDate(),
   birthday.getMonth(), birthday.getFullYear()));
 </pre>
+
 <blockquote>
-Sample output:<br/><br/> Foo was born on: Fri Dec 31 1999
+Sample output:<br/>Foo was born on: Fri Dec 31 1999
 </blockquote>
 
 <p>And thus, Bar would always believe Foo was born on the last day of 1999.</p>
@@ -3298,7 +3301,7 @@ sendToBar (birthday.getTime());
 </pre>
 
 <blockquote>
-Sample output:<br/><br/> Foo was born on: Sat Jan 1 2000
+Sample output:<br/>Foo was born on: Sat Jan 1 2000
 </blockquote>
 
 <pre>
@@ -3312,7 +3315,7 @@ console.log(&quot;Foo was born on: &quot;&plus;formatDate(birthday.getUTCDay(), 
 <!-- page 52 -->
 
 <blockquote>
-Sample output:<br/><br/> Foo was born on: Sat Jan 1 2000
+Sample output:<br/>Foo was born on: Sat Jan 1 2000
 </blockquote>
 
 <p><b>Creating a Date from UTC</b></p>
@@ -3327,7 +3330,7 @@ console.log(Date.UTC(2000,0,31,12));
 </pre>
 
 <blockquote>
-Sample output:<br/><br/> 949320000000
+Sample output:<br/>949320000000
 </blockquote>
 
 <pre>
@@ -3336,7 +3339,7 @@ console.log(utcDate);
 </pre>
 
 <blockquote>
-Sample output:<br/><br/> Mon Jan 31 2000 13:00:00 GMT+0100 (West-Europa
+Sample output:<br/>Mon Jan 31 2000 13:00:00 GMT+0100 (West-Europa
 (standaardtijd))
 </blockquote>
 
@@ -3366,11 +3369,13 @@ console.log ( date );
 </pre>
 
 <blockquote>
-Sample output:<br/><br/>
+Sample output:<br/>
 Mon Jan 31 2000 13:00:00 GMT+0100 (West-Europa
 (standaardtijd))
 </blockquote>
+
 <!-- page 53 -->
+
 <p>The other UTC-specific modifiers are .setUTCMonth(), .setUTCDate() (for
 the day of the month), setUTCMinutes(), .setUTCSeconds() and
 .setUTCMilliseconds().</p>
@@ -3398,6 +3403,7 @@ Sample output: <b>true</b>
 <pre>
 // <i>And when constructing a date from it elsewhere&hellip;</i>
 <b>var</b> otherDate = <b>new</b> Date(timestamp);
+
 // <i>Represented as a universal date</i>
 console.log ( otherDate. toUTCString ( ) );
 // <i>Represented as a local date</i>
@@ -3405,7 +3411,7 @@ console.log ( otherDate );
 </pre>
 
 <blockquote>
-Sample output:<br/>
+Sample output:
 <pre>
 Mon, 31 Jan 2000 12:00:00 GMT
 Mon Jan 31 2000 13:00:00 GMT+0100 (West-Europa (standaardtijd))
@@ -3483,6 +3489,8 @@ Date object that looks like this:</p>
   title="DateObject function"
   alt="DateObject function."
   style="border: 2px solid #000000; width:7.48in;" />
+</p>
+<p align="left">
 <img src="./images/image025b.png"
   title="DateObject function, pg2"
   alt="DateObject function, pg2."
@@ -5267,6 +5275,7 @@ representing each separate condition. Example:</p>
   }
 };
 </pre>
+
 <!-- page 79 -->
 
 <p>The above object can be used as follows:</p>
@@ -5302,9 +5311,7 @@ x == 10 && alert(&quot;x is 10&quot;)
 x == 10 &vert;&vert; alert(&quot;x is not 10&quot;)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch12">
-Chapter 12: Arrays
-</h2>
+<h2 id="ch12">Chapter 12: Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-1">Section 12.1: Converting Array-like Objects to Arrays</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6552,9 +6559,7 @@ clone1 = Array.<b>prototype</b>.slice.call(arrayToClone);
 clone2 = &lbrack;&rbrack;.slice.call(arrayToClone);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-12">
-Section 12.12: Concatenating Arrays
-</h3>
+<h3 id="ch12-12">Section 12.12: Concatenating Arrays</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>
 <b>Two Arrays</b>
