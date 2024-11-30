@@ -3884,8 +3884,8 @@ operators which will not perform any implicit type conversions.</p>
 <p>Further reference to this topic can be found here:</p>
 
 <p><a href="http://stackoverflow.com/questions/359494/does-it-matter-which-equals-operator-vs-i-use-in-javascript-comparisons" 
-target="_blank" rel="noopener noreferrer"> Which equals operator (== vs
-===) should be used in JavaScript comparisons?</a>.</p>
+target="_blank" rel="noopener noreferrer"> Which equals operator (== vs ===) should be 
+used in JavaScript comparisons?</a>.</p>
 
 <p>Abstract Equality (==)</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5994,9 +5994,9 @@ dates.sort(<b>function</b>(a, b) {
     executed</li>
 </ol>
 
-<p>These three components are separated from each other by a ; symbol.
-Content for each of these three components is optional, which means that
-the following is the most minimal <b>for</b> loop possible:</p>
+<p>These three components are separated from each other by a ; symbol. Content for each 
+of these three components is optional, which means that the following is the most minimal 
+<b>for</b> loop possible:</p>
 
 <pre>
 <b>for</b>(;;) {
@@ -6004,14 +6004,13 @@ the following is the most minimal <b>for</b> loop possible:</p>
 }
 </pre>
 
-<p>Of course, you will need to include an <b>if</b>(condition ===
-<b>true</b>) { <b>break</b>; } or an <b>if</b>(condition ===
-<b>true</b>) { <b>return</b>; } somewhere inside that <b>for</b>−loop to
-get it to stop running.</p>
+<p>Of course, you will need to include an <b>if</b>(condition === <b>true</b>) 
+{ <b>break</b>; } or an <b>if</b>(condition === <b>true</b>) { <b>return</b>; } 
+somewhere inside that <b>for</b>−loop to get it to stop running.</p>
 
-<p>Usually, though, the initialization is used to declare an index, the
-condition is used to compare that index with a minimum or maximum value,
-and the afterthought is used to increment the index:</p>
+<p>Usually, though, the initialization is used to declare an index, the condition 
+is used to compare that index with a minimum or maximum value, and the afterthought 
+is used to increment the index:</p>
 
 <pre>
 <b>for</b> (<b>var</b> i = 0, length = 10; i &lt; length; i++) {
@@ -6191,8 +6190,8 @@ iteration presented below.</p>
 
 <!-- page 91 -->
 
-<p>In all versions of JavaScript, it is possible to iterate through the
-indices of an array using a traditional C-style <b>for</b> loop.</p>
+<p>In all versions of JavaScript, it is possible to iterate through the indices of an 
+array using a traditional C-style <b>for</b> loop.</p>
 
 <pre>
 <b>var</b> myArray = &lbrack;1, 2, 3, 4&rbrack;;
@@ -6270,8 +6269,8 @@ iterates until we return <b>true</b>.</p>
 
 <p><b>Libraries</b><p>
 
-<p>Finally, many utility libraries also have their own foreach variation.
-Three of the most popular ones are these:</p>
+<p>Finally, many utility libraries also have their own foreach variation. Three of the 
+most popular ones are these:</p>
 
 <p><a href="http://api.jquery.com/jquery.each/" target="_blank" rel="noopener noreferrer">
 <b>jQuery.each</b>()</a>, in
@@ -6454,25 +6453,18 @@ compareArrays(a, b);  // <i>throws RangeError: Maximum call stack size exceeded<
 compare non array items {a: 0} === {a: 0} is <b>false</b>
 </blockquote>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-10">
-Section 12.10: Reversing arrays
-</h3>
+<h3 id="ch12-10">Section 12.10: Reversing arrays</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-.reverse . is used to reverse the order of items inside an array.
-</p>
-<p>
-Example for .reverse:
-</p>
-<pre>
-&lbrack;1, 2, 3, 4&rbrack;.reverse();
-</pre>
-<p>
-Results in:
-</p>
-<pre>
-&lbrack;4, 3, 2, 1&rbrack;
-</pre>
+<p>.reverse . is used to reverse the order of items inside an array.</p>
+
+<p>Example for .reverse:</p>
+
+<pre>&lbrack;1, 2, 3, 4&rbrack;.reverse();</pre>
+
+<p>Results in:</p>
+
+<pre>&lbrack;4, 3, 2, 1&rbrack;</pre>
+
 <blockquote>
 <b>Note</b>: Please note that .reverse(Array.<b>prototype</b>.reverse)
 will reverse the array <i>in place</i>. Instead of returning a reversed
@@ -6484,9 +6476,9 @@ console.log(arr2);  // <i>&lbrack;33, 22, 11&rbrack;</i>
 console.log(arr1);  // <i>&lbrack;33, 22, 11&rbrack;</i>
 </pre>
 </blockquote>
-<p>
-You can also reverse an array 'deeply' by:
-</p>
+
+<p>You can also reverse an array 'deeply' by:</p>
+
 <pre>
 <b>function</b> deepReverse(arr) {
   arr.reverse().forEach(elem =&gt; {
@@ -6497,62 +6489,53 @@ You can also reverse an array 'deeply' by:
   <b>return</b> arr;
 }
 </pre>
-<p>
-Example for deepReverse:
-</p>
+
+<p>Example for deepReverse:</p>
+
 <pre>
 <b>var</b> arr = &lbrack;1, 2, 3, &lbrack;1, 2, 3, &lbrack;&apos;a&apos;, &apos;b&apos;, &apos;c&apos;&rbrack;&rbrack;&rbrack;;
 deepReverse(arr);
 </pre>
+
 <!-- page ~95 -->
-<p>
-Results in:
-</p>
-<pre>
-arr // <i>-&gt; lbrack;&lbrack;&lbrack;&apos;c&apos;,&apos;b&apos;,&apos;a&apos;&rbrack;, 3, 2, 1&rbrack;, 3, 2, 1&rbrack;</i>
-</pre>
+
+<p>Results in:</p>
+
+<pre>arr // <i>-&gt; lbrack;&lbrack;&lbrack;&apos;c&apos;,&apos;b&apos;,&apos;a&apos;&rbrack;, 3, 2, 1&rbrack;, 3, 2, 1&rbrack;</i></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-11">
-Section 12.11: Shallow cloning an array
-</h3>
+<h3 id="ch12-11">Section 12.11: Shallow cloning an array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Sometimes, you need to work with an array while ensuring you don't
+<p>Sometimes, you need to work with an array while ensuring you don't
 modify the original. Instead of a clone method, arrays have a slice
 method that lets you perform a shallow copy of any part of an array.
 Keep in mind that this only clones the first level. This works well with
-primitive types, like numbers and strings, but not objects.
-</p>
-<p>
-To shallow-clone an array (i.e. have a new array instance but with the
-same elements), you can use the following one-liner:
-</p>
-<pre>
-<b>var</b> clone = arrayToClone.slice();
-</pre>
-<p>
-This calls the built-in JavaScript Array.<b>prototype</b>.slice method.
+primitive types, like numbers and strings, but not objects.</p>
+
+<p>To shallow-clone an array (i.e. have a new array instance but with the
+same elements), you can use the following one-liner:</p>
+
+<pre><b>var</b> clone = arrayToClone.slice();</pre>
+
+<p>This calls the built-in JavaScript Array.<b>prototype</b>.slice method.
 If you pass arguments to slice, you can get more complicated behaviors
 that create shallow clones of only part of an array, but for our
 purposes just calling slice() will create a shallow copy of the entire
-array.
-</p>
-<p>
-All method used to convert array like objects to array are applicable to
-clone an array:
-</p>
-<h5>
-Version ≥ 6
-</h5>
+array.</p>
+
+<p>All method used to convert array like objects to array are applicable to
+clone an array:</p>
+
+<h5>Version ≥ 6</h5>
+
 <pre>
 arrayToClone = &lbrack;1, 2, 3, 4, 5&rbrack;;
 clone1 = Array.from(arrayToClone);
 clone2 = Array.of(&hellip;arrayToClone);
 clone3 = &lbrack;&hellip;arrayToClone&rbrack;  // <i>the shortest way</i>
 </pre>
-<h5>
-Version ≤ 5.1
-</h5>
+
+<h5>Version ≤ 5.1</h5>
+
 <pre>
 arrayToClone = &lbrack; 1, 2, 3, 4, 5&rbrack;;
 clone1 = Array.<b>prototype</b>.slice.call(arrayToClone);
@@ -6561,156 +6544,122 @@ clone2 = &lbrack;&rbrack;.slice.call(arrayToClone);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-12">Section 12.12: Concatenating Arrays</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<b>Two Arrays</b>
-</p>
+<p><b>Two Arrays</b></p>
+
 <pre>
 <b>var</b> array1 = &lbrack;1, 2&rbrack;;
 <b>var</b> array2 = &lbrack;3, 4, 5&rbrack;;
 </pre>
-<h5>
-Version ≥ 3
-</h5>
-<pre>
-<b>var</b> array3 = array1.concat(array2);  // <i>returns a new array</i>
-</pre>
-<h5>
-Version ≥ 6
-</h5>
-<pre>
-<b>var</b> array3 = &lbrack;&hellip;array1, &hellip;array2&rbrack;
-</pre>
-<p>
-Results in a new Array:
-</p>
-<pre>
-&lbrack;1, 2, 3, 4, 5&rbrack;
-</pre>
-<p>
-<b>Multiple Arrays</b>
-</p>
+
+<h5>Version ≥ 3</h5>
+
+<pre><b>var</b> array3 = array1.concat(array2);  // <i>returns a new array</i></pre>
+
+<h5>Version ≥ 6</h5>
+
+<pre><b>var</b> array3 = &lbrack;&hellip;array1, &hellip;array2&rbrack;</pre>
+
+<p>Results in a new Array:</p>
+
+<pre>&lbrack;1, 2, 3, 4, 5&rbrack;</pre>
+
+<p><b>Multiple Arrays</b></p>
+
 <pre>
 <b>var</b> array1 = &lbrack;&quot;a&quot;, &quot;b&quot;&rbrack;,
     array2 = &lbrack;&quot;c&quot;, &quot;d&quot;&rbrack;,
     array3 = &lbrack;&quot;e&quot;, &quot;f&quot;&rbrack;,
     array4 = &lbrack;&quot;g&quot;, &quot;h&quot;&rbrack;;
 </pre>
+
 <!-- page 96 -->
-<h5>
-Version ≥ 3
-</h5>
-<p>
-Provide more Array arguments to array.concat().
-</p>
-<pre>
-<b>var</b> arrConc = array1.concat(array2, array3, array4);
-</pre>
-<h5>
-Version ≥ 6
-</h5>
-<p>
-Provide more arguments to []
-</p>
-<pre>
-<b>var</b> arrConc = &lbrack;&hellip;array1, &hellip;array2, &hellip;array3, &hellip;array4&rbrack;
-</pre>
-<p>
-Results in a new Array:
-</p>
-<pre>
-&lbrack;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;, &quot;g&quot;, &quot;h&quot;&rbrack;
-</pre>
-<p>
-<b>Without Copying the First Array</b>
-</p>
+
+<h5>Version ≥ 3</h5>
+
+<p>Provide more Array arguments to array.concat().</p>
+
+<pre><b>var</b> arrConc = array1.concat(array2, array3, array4);</pre>
+
+<h5>Version ≥ 6</h5>
+
+<p>Provide more arguments to []</p>
+
+<pre><b>var</b> arrConc = &lbrack;&hellip;array1, &hellip;array2, &hellip;array3, &hellip;array4&rbrack;</pre>
+
+<p>Results in a new Array:</p>
+
+<pre>&lbrack;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;, &quot;g&quot;, &quot;h&quot;&rbrack;</pre>
+
+<p><b>Without Copying the First Array</b></p>
+
 <pre>
 <b>var</b> longArray = &lbrack;1, 2, 3, 4, 5, 6, 7, 8&rbrack;,
   shortArray = &lbrack;9, 10&rbrack;;
 </pre>
-<h5>
-Version ≥ 3
-</h5>
-<p>
-Provide the elements of shortArray as parameters to push using
-Function.<b>prototype</b>.apply
-</p>
-<pre>
-longArray.push.apply(longArray, shortArray);
-</pre>
-<h5>
-Version ≥ 6
-</h5>
-<p>
-Use the spread operator to pass the elements of shortArray as separate
-arguments to push
-</p>
-<pre>
-longArray.push(&hellip;shortArray)
-</pre>
-<p>
-The value of longArray is now:
-</p>
-<pre>
-&lbrack;1, 2, 3, 4, 5, 6, 7, 8, 9, 10&rbrack;
-</pre>
-<p>
-Note that if the second array is too long (&gt;100,000 entries), you may
+
+<h5>Version ≥ 3</h5>
+
+<p>Provide the elements of shortArray as parameters to push using 
+Function.<b>prototype</b>.apply</p>
+
+<pre>longArray.push.apply(longArray, shortArray);</pre>
+
+<h5>Version ≥ 6</h5>
+
+<p>Use the spread operator to pass the elements of shortArray as separate
+arguments to push.</p>
+
+<pre>longArray.push(&hellip;shortArray)</pre>
+
+<p>The value of longArray is now:</p>
+
+<pre>&lbrack;1, 2, 3, 4, 5, 6, 7, 8, 9, 10&rbrack;</pre>
+
+<p>Note that if the second array is too long (&gt;100,000 entries), you may
 get a stack overflow error (because of how apply works). To be safe, you
-can iterate instead:
-</p>
+can iterate instead:</p>
+
 <pre>
 shortArray.forEach(<b>function</b> (elem) {
   longArray.push(elem);
 });
 </pre>
-<p>
-<b>Array and non-array values</b>
-</p>
-<pre>
-<b>var</b> array = &lbrack;&quot;a&quot;, &quot;b&quot;&rbrack;;
-</pre>
-<h5>
-Version ≥ 3
-</h5>
-<pre>
-<b>var</b> arrConc = array.concat(&quot;c&quot;, &quot;d&quot;);
-</pre>
-<h5>
-Version ≥ 6
-</h5>
-<pre>
-<b>var</b> arrConc = &lbrack;&hellip;array, &quot;c&quot;, &quot;d&quot;&rbrack;
-</pre>
-<p>
-Results in a new Array:
-</p>
-<pre>
-&lbrack;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;&rbrack;
-</pre>
-<p>
-You can also mix arrays with non-arrays
-</p>
+
+<p><b>Array and non-array values</b></p>
+
+<pre><b>var</b> array = &lbrack;&quot;a&quot;, &quot;b&quot;&rbrack;;</pre>
+
+<h5>Version ≥ 3</h5>
+
+<pre><b>var</b> arrConc = array.concat(&quot;c&quot;, &quot;d&quot;);</pre>
+
+<h5>Version ≥ 6</h5>
+
+<pre><b>var</b> arrConc = &lbrack;&hellip;array, &quot;c&quot;, &quot;d&quot;&rbrack;</pre>
+
+<p>Results in a new Array:</p>
+
+<pre>&lbrack;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;&rbrack;</pre>
+
+<p>You can also mix arrays with non-arrays</p>
+
 <!-- page 97 -->
+
 <pre>
 <b>var</b> arr1 = &lbrack;&quot;a&quot;, &quot;b&quot;&rbrack;;
 <b>var</b> arr2 = &lbrack;&quot;e&quot;, &quot;f&quot;&rbrack;;
 <b>var</b> arrConc = arr1.concat(&quot;c&quot;, &quot;d&quot;, arr2);
 </pre>
-<p>
-Results in a new Array:
-</p>
-<pre>
-&lbrack;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;&rbrack;
-</pre>
+
+<p>Results in a new Array:</p>
+
+<pre>&lbrack;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;&rbrack;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-13">
-Section 12.13: Merge two array as key value pair
-</h3>
+<h3 id="ch12-13">Section 12.13: Merge two array as key value pair</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-When we have two separate array and we want to make key value pair from
-that two array, we can use array's reduce function like below:
-</p>
+<p>When we have two separate array and we want to make key value pair from
+that two array, we can use array's reduce function like below:</p>
+
 <pre>
 <b>var</b> columns = &lbrack;&quot;Date&quot;, &quot;Number&quot;, &quot;Size&quot;, &quot;Location&quot;, &quot;Age&quot;&rbrack;;
 <b>var</b> rows = &lbrack;&quot;2001&quot;, &quot;5&quot;, &quot;Big&quot;, &quot;Sydney&quot;, &quot;25&quot;&rbrack;;
@@ -6720,9 +6669,9 @@ that two array, we can use array's reduce function like below:
 }, {})
 console.log(result);
 </pre>
-<p>
-Output:
-</p>
+
+<p>Output:</p>
+
 <pre>
 {
   Date: &quot;2001&quot;,
@@ -6733,52 +6682,47 @@ Output:
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-14">
-Section 12.14: Array spread / rest
-</h3>
+<h3 id="ch12-14">Section 12.14: Array spread / rest</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<b>Spread operator</b>
-</p>
-<h5>
-Version ≥ 6
-</h5>
-<p>
-With ES6, you can use spreads to separate individual elements into a
-comma-separated syntax:
-</p>
+<p><b>Spread operator</b></p>
+
+<h5>Version ≥ 6</h5>
+
+<p>With ES6, you can use spreads to separate individual elements into a
+comma-separated syntax:</p>
+
 <pre>
 <b>let</b> arr = &lbrack;1, 2, 3, &hellip;&lbrack;4, 5, 6&rbrack;&rbrack;; // <i>&lbrack;1, 2, 3, 4, 5, 6&rbrack;</i>
 // <i>in ES &lt; 6, the operations above are equivalent to</i>
 arr = &lbrack;1, 2, 3&rbrack;;
 arr.push(4, 5, 6);
 </pre>
-<p>
-The spread operator also acts upon strings, separating each individual
+
+<p>The spread operator also acts upon strings, separating each individual
 character into a new string element. Therefore, using an array function
 for converting these into integers, the array created above is
-equivalent to the one below:
-</p>
+equivalent to the one below:</p>
+
 <pre>
 <b>let</b> arr = &lbrack;1, 2, 3, &hellip;&lbrack;&hellip;&quot;456&quot;&rbrack;.map(x=&gt;parseInt(x))&rbrack;; // <i>&lbrack;1, 2, 3, 4, 5, 6&rbrack;</i>
 </pre>
-<p>
-Or, using a single string, this could be simplified to:
-</p>
+
+<p>Or, using a single string, this could be simplified to:</p>
+
 <pre>
 <b>let</b> arr = &lbrack;&hellip;&quot;123456&quot;&rbrack;.map(x=&gt;parseInt(x)); // <i>&lbrack;1, 2, 3, 4, 5, 6&rbrack;</i>
 </pre>
+
 <!-- page 98 -->
-<p>
-If the mapping is not performed then:
-</p>
+
+<p>If the mapping is not performed then:</p>
+
 <pre>
 <b>let</b> arr = &lbrack;&hellip;&quot;123456&quot;&rbrack;;  // <i>&lbrack;&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;&rbrack;</i>
 </pre>
-<p>
-The spread operator can also be used to spread arguments into a
-function:
-</p>
+
+<p>The spread operator can also be used to spread arguments into a function:</p>
+
 <pre>
 <b>function</b> myFunction(a, b, c) { }
 <b>let</b> args = &lbrack;0, 1, 2&rbrack;;
@@ -6786,109 +6730,80 @@ myFunction(&hellip;args);
 // <i>in ES &lt; 6, this would be equivalent to:</i>
 myFunction.apply(<b>null</b>, args);
 </pre>
-<p>
-<b>Rest operator</b>
-</p>
-<p>
-The rest operator does the opposite of the spread operator by coalescing
-several elements into a single one
-</p>
+
+<p><b>Rest operator</b></p>
+
+<p>The rest operator does the opposite of the spread operator by coalescing
+several elements into a single one.</p>
+
 <pre>
 &lbrack;a, b, &hellip;rest&rbrack; = &lbrack;1, 2, 3, 4, 5, 6&rbrack;; // <i>rest is assigned &lbrack;3, 4, 5, 6&rbrack;</i> Collect arguments of a function:
 </pre>
-<p>
-Collect arguments of a function:
-</p>
+
+<p>Collect arguments of a function:</p>
+
 <pre>
 <b>function</b> myFunction(a, b, &hellip;rest) { console.log(rest); }
 myFunction(0, 1, 2, 3, 4, 5, 6);  // <i>rest is &lbrack;2, 3, 4, 5, 6&rbrack;</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-15">
-Section 12.15: Filtering values
-</h3>
+<h3 id="ch12-15">Section 12.15: Filtering values</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The filter() method creates an array filled with all array elements that
-pass a test provided as a function.
-</p>
-<h5>
-Version ≥ 5.1
-</h5>
+<p>The filter() method creates an array filled with all array elements that
+pass a test provided as a function.</p>
+
+<h5>Version ≥ 5.1</h5>
+
 <pre>
 &lbrack;1, 2, 3, 4, 5&rbrack;.filter(<b>function</b>(value, index, arr) {
   <b>return</b> value &gt; 2;
 });
 </pre>
-<h5>
-Version ≥ 6
-</h5>
-<pre>
-&lbrack;1, 2, 3, 4, 5&rbrack;.filter(value =&gt; value &gt; 2);
-</pre>
-<p>
-Results in a new array:
-</p>
-<pre>
-&lbrack;3, 4, 5&rbrack;
-</pre>
-<p>
-<b>Filter falsy values</b>
-</p>
-<h5>
-Version ≥ 5.1
-</h5>
+
+<h5>Version ≥ 6</h5>
+
+<pre>&lbrack;1, 2, 3, 4, 5&rbrack;.filter(value =&gt; value &gt; 2);</pre>
+
+<p>Results in a new array:</p>
+
+<pre>&lbrack;3, 4, 5&rbrack;</pre>
+
+<p><b>Filter falsy values</b></p>
+
+<h5>Version ≥ 5.1</h5>
+
 <pre>
 <b>var</b> filtered = &lbrack; 0, <b>undefined</b>, {}, <b>null</b>, &apos;&apos;, <b>true</b>, 5&rbrack;.filter(Boolean);
 </pre>
-<p>
-Since Boolean is a native JavaScript function/constructor that takes
+
+<p>Since Boolean is a native JavaScript function/constructor that takes
 [one optional parameter] and the filter method also takes a function and
 passes it the current array item as parameter, you could read it like
-the following:
-</p>
+the following:</p>
+
 <ol type="1" start="1">
-<li>
-Boolean (0) returns false
-</li>
-<li>
-Boolean(<b>undefined</b>) returns false
-<li>
-Boolean({}) returns <b>true</b> which means push it to the returned
-array
-</li>
-<li>
-Boolean (<b>null</b> returns false
-</li>
-<li>
-Boolean ('') returns false
-</li>
-<li>
-Boolean (<b>true</b> returns <b>true</b> which means push it to the
-returned array
-</li>
-<li>
-Boolean (5) returns <b>true</b> which means push it to the returned
-array
-</li>
+  <li>Boolean (0) returns false</li>
+  <li>Boolean(<b>undefined</b>) returns false<li>
+  <li>Boolean({}) returns <b>true</b> which means push it to the returned array</li>
+  <li>Boolean (<b>null</b> returns false</li>
+  <li>Boolean ('') returns false</li>
+  <li>Boolean (<b>true</b> returns <b>true</b> which means push it to the returned array</li>
+  <li>Boolean (5) returns <b>true</b> which means push it to the returned array</li>
 </ol>
+
 <!-- page 99 -->
-<p>
-so the overall process will result
-</p>
-<pre>
-&lbrack; {}, <b>true</b>, 5 &rbrack;
-</pre>
-<p>
-<b>Another simple example</b>
-</p>
-<p>
-This example utilises the same concept of passing a function that takes
-one argument
-</p>
-<h5>
-Version ≥ 5.1
-</h5>
+
+<p>so the overall process will result</p>
+
+<pre>&lbrack; {}, <b>true</b>, 5 &rbrack;</pre>
+
+<p><b>Another simple example</b></p>
+
+<p>This example utilises the same concept of passing a function that takes
+one argument.</p>
+
+<h5>Version ≥ 5.1</h5>
+
 <pre>
 <b>function</b> startsWithLetterA(str) {
   <b>if</b>(str && str&lbrack;0&rbrack;.toLowerCase() == &apos;a&apos;) {
@@ -6904,15 +6819,11 @@ item as a parameter, you could read it like the following&apos;;
 // <i>&lbrack;&quot;a&quot;, &quot;and&quot;, &quot;also&quot;, &quot;a&quot;, &quot;and&quot;, &quot;array&quot;, &quot;as&quot;&rbrack;</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-16">
-Section 12.16: Searching an Array
-</h3>
+<h3 id="ch12-16">Section 12.16: Searching an Array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The recommended way (Since ES5) is to use
+<p>The recommended way (Since ES5) is to use 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find" 
-target="_blank" rel="noopener noreferrer">Array.prototype.find</a>:
-</p>
+target="_blank" rel="noopener noreferrer">Array.prototype.find</a>:</p>
 
 <pre>
 <b>let</b> people = &lbrack;
@@ -8377,6 +8288,7 @@ its object, by using different programmatical methods. Those different
 methods will be discussed deeply below.</p>
 
 <!-- page 121 -->
+
 <p><i><b>Methods of retrieving properties:</b></i></p>
 
 <p>Properties from an object could be retrieved by the following methods,</p>
@@ -8419,6 +8331,7 @@ console.log(props);  // <i>&lbrack;&quot;a&quot;&rbrack;</i>
     target="_blank" rel="noopener noreferrer">for..in</a> loop and
   <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty" 
     target="_blank" rel="noopener noreferrer">Object.prototype.hasOwnProperty()</a> function.</p>
+
 <pre>
 // <i>Ex 1 : Simple data</i>
 <b>var</b> x = { a : 10 , b : 3} , props;
@@ -8435,7 +8348,9 @@ props = Object.keys(x);
 console.log(props);  // <i>&lbrack;&quot;a&quot;&rbrack;</i>
 </pre>
   </li>
+
 <!-- page 122 -->
+
   <li><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames">
     Object.getOwnProperties()</a> function<br/></p>
   <p>This function will retrieve both enumerable and non enumerable, own
@@ -8881,12 +8796,12 @@ link</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch14-1">Section 14.1: Constants</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<table border="1" style="width:200px">
+<table border="1" style="width:550px">
   <thead>
     <tr>
-      <th><b>Constants</b></th>
-      <th><b>Description</b></th>
-      <th><b>Approximate</b></th>
+      <th style="width:100"><b>Constants</b></th>
+      <th style="width:300"><b>Description</b></th>
+      <th style="width:150"><b>Approximate</b></th>
     </tr>
   </thead>
   <tbody>
