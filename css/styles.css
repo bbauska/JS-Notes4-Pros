@@ -29,13 +29,13 @@ img.displayed {
 }
 
 blockquote{    
-    font-size: 15px;  /* 35px; */
-    line-height:52px;  /* 52px; */
+    font-size: 13px;  /* 35px; */
+    line-height:32px;  /* 52px; */
     margin: 14px 0;  /* 28px */
     overflow: hidden;
-    padding: 0 0 0 26px;  /* 0 0 0 26px; */
-    font-weight: 100;  /* 100 */
-    color: #cc6b39;  /* moderate orange */
+    padding: 0 0 0 13px;  /* 0 0 0 26px; */
+    font-weight: 500;  /* 100 */
+    color: #000000;  /* cc6b39; moderate orange */
     position: relative;
 }
 blockquote:before {
