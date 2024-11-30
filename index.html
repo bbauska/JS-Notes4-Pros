@@ -20973,6 +20973,8 @@ function, is said to be a <i>closure</i>.</p>
 variables that are visible only to a specific function or set of
 functions. A contrived (but popular) example:</p>
 
+<!-- page 312 -->
+
 <pre>
 <b>function</b> makeCounter() {
   <b>var</b> counter = 0;
@@ -21011,20 +21013,18 @@ through the use of immediately-invoked function expressions.</p>
 intuitively, <i>self-executing anonymous functions</i>) are essentially
 closures that are called right after declaration. The general idea with
 IIFE's is to invoke the side-effect of creating a separate context that
-is accessible only to the code within the IIFE.
-</p>
-<p>
-Suppose we want to be able to reference jQuery with $. Consider the
-naive method, without using an IIFE:
-</p>
+is accessible only to the code within the IIFE.</p>
+
+<p>Suppose we want to be able to reference jQuery with $. Consider the
+naive method, without using an IIFE:</p>
+
 <pre>
 <b>var</b> &dollar; = jQuery;
 // <i>we&apos;ve just polluted the global namespace by assigning window.&dollar; to jQuery</i>
 </pre>
-<p>
-In the following example, an IIFE is used to ensure that the $ is bound
-to jQuery only in the context created by the closure:
-</p>
+
+<p>In the following example, an IIFE is used to ensure that the $ is bound
+to jQuery only in the context created by the closure:</p>
 
 <pre>
 (<b>function</b> (&dollar;) {
@@ -21033,9 +21033,9 @@ to jQuery only in the context created by the closure:
 // <i>but window.&dollar; binding doesn&apos;t exist, so no pollution</i>
 </pre>
 
-<p>See <a href="http://stackoverflow.com/a/111111/2209007" 
-target="_blank" rel="noopener noreferrer">the canonical answer on
-Stackoverflow</a> for more information on closures.</p>
+<p>See <a href="http://stackoverflow.com/a/111111/2209007" target="_blank" 
+rel="noopener noreferrer">the canonical answer on Stackoverflow</a> for more 
+information on closures.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch56-2">Section 56.2: Hoisting</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21111,6 +21111,8 @@ console.log(foo(2, 3));  // <i>→ 6</i>
 
 <p>Here are some examples of what is and what isn't hoisting:</p>
 
+<!-- page 314 -->
+
 <pre>
 // <i>Valid code:</i>
 foo();
@@ -21173,6 +21175,8 @@ y = 4;
 </pre>
 
 <p>This will give you an output of NaN.</p>
+
+<!-- page 315 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 37. www.w3schools.com says NaN (315) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
@@ -21239,6 +21243,8 @@ console.log(i);  // <i>&gt;&gt; &quot;ReferenceError: i is not defined&quot;</i>
 console.log(j);  // <i>&gt;&gt; &quot;ReferenceError: j is not defined&quot;</i>
 </pre>
 
+<!-- page 316 -->
+
 <p>Note that i and j are only declared in the <b>for</b> loop and are
 therefore undeclared outside of it.</p>
 
@@ -21288,8 +21294,7 @@ TypeError: Identifier x has already been declared
 TypeError: Identifier y has already been declared
 </blockquote>
 
-<p>However variables declared with let can be reused (not re-declared) in a
-nested block.</p>
+<p>However variables declared with let can be reused (not re-declared) in a nested block.</p>
 
 <pre>
 <b>let</b> i = 5;
@@ -21300,9 +21305,9 @@ nested block.</p>
 console.log(i);   // <i>&gt;&gt; 5</i>
 </pre>
 
-<p>Within the block the outer i can be accessed, but if the within block
-has a <b>let</b> declaration for i, the outer i can not be accessed and
-will throw a ReferenceError if used before the second is declared.</p>
+<p>Within the block the outer i can be accessed, but if the within block has a <b>let</b> 
+declaration for i, the outer i can not be accessed and will throw a ReferenceError if 
+used before the second is declared.</p>
 
 <pre>
 <b>let</b> i = 5;
@@ -21311,6 +21316,8 @@ will throw a ReferenceError if used before the second is declared.</p>
   <b>let</b> i;
 }
 </pre>
+
+<!-- page 317 -->
 
 <blockquote>
 ReferenceError: i is not defined
@@ -21332,32 +21339,29 @@ console.log(y);  // <i>&gt;&gt; &quot;ReferenceError: &grave;y&grave; is not def
 <b>let</b> y = 7;
 </pre>
 
-<p>The area between the start of a block and a <b>let</b> or <b>const</b>
-declaration is known as the
+<p>The area between the start of a block and a <b>let</b> or <b>const</b> declaration is 
+known as the 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let" 
-target="_blank" rel="noopener noreferrer">Temporal Dead Zone</a>, and
-any references to the variable in this area will cause a ReferenceError.
-This happens even if the
+target="_blank" rel="noopener noreferrer">Temporal Dead Zone</a>, and any references to 
+the variable in this area will cause a ReferenceError. This happens even if the
 <a href="http://stackoverflow.com/questions/41451181/does-let-override-a-global-declaration-and-throws-a-referenceerror" 
-target="_blank" rel="noopener noreferrer">variable is assigned before
-being declared</a>:</p>
+target="_blank" rel="noopener noreferrer">variable is assigned before being declared</a>:</p>
 
 <pre>
 y=7;  // <i>&gt;&gt; &quot;ReferenceError: &grave;y&grave; is not defined&quot;</i>
 <b>let</b> y;
 </pre>
 
-<p>In non-strict-mode, assigning a value to a variable without any
-declaration, automatically declares the variable in the global scope. In
-this case, instead of y being automatically declared in the global
-scope, <b>let</b> reserves the variable's name (y) and does not allow
-any access or assignment to it before the line where it is
+<p>In non-strict-mode, assigning a value to a variable without any declaration, 
+automatically declares the variable in the global scope. In this case, instead of y 
+being automatically declared in the global scope, <b>let</b> reserves the variable's 
+name (y) and does not allow any access or assignment to it before the line where it is
 declared/initialized.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch56-4">Section 56.4: Apply and Call syntax and invocation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The apply and call methods in every function allow it to provide a
-custom value for <b>this</b>.</p>
+<p>The apply and call methods in every function allow it to provide a custom value for 
+<b>this</b>.</p>
 
 <pre>
 <b>function</b> print() {
@@ -21367,13 +21371,13 @@ print.apply({ toPrint: &quot;Foo&quot; });  // <i>&gt;&gt; &quot;Foo&quot;</i>
 print.call({ toPrint: &quot;Foo&quot; });   // <i>&gt;&gt; &quot;Foo&quot;</i>
 </pre>
 
-<p>You might notice that the syntax for both the invocations used above are
-the same. i.e. The signature looks similar.</p>
+<p>You might notice that the syntax for both the invocations used above are the same. i.e. 
+The signature looks similar.</p>
 
-<p>But there is a small difference in their usage, since we are dealing
-with functions and changing their scopes, we still need to maintain the
-original arguments passed to the function. Both apply and call support
-passing arguments to the target function as follows:</p>
+<p>But there is a small difference in their usage, since we are dealing with functions 
+and changing their scopes, we still need to maintain the original arguments passed to 
+the function. Both apply and call support passing arguments to the target function as 
+follows:</p>
 
 <pre>
 <b>function</b> speak() {
@@ -21387,14 +21391,12 @@ speak.call(person, &quot;I&quot;, &quot;&lt;3&quot;, &quot;Javascript&quot;); //
 
 <!-- page 318 -->
 
-<p>Notice that apply allows you to pass an Array or the arguments object
-(array-like) as the list of arguments, whereas, call needs you to pass
-each argument separately.</p>
+<p>Notice that apply allows you to pass an Array or the arguments object (array-like) as 
+the list of arguments, whereas, call needs you to pass each argument separately.</p>
 
-<p>These two methods give you the freedom to get as fancy as you want, like
-implementing a poor version of the ECMAScript's native bind to create a
-function that will always be called as a method of an object from an
-original function.</p>
+<p>These two methods give you the freedom to get as fancy as you want, like implementing 
+a poor version of the ECMAScript's native bind to create a function that will always be 
+called as a method of an object from an original function.</p>
 
 <pre>
 <b>function</b> bind (func, obj) {
@@ -21428,13 +21430,11 @@ printObj();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>Version ≥ 6</h5>
 
-<p>When using arrow functions <b>this</b> takes the value from the
-enclosing execution context's <b>this</b> (that is, <b>this</b> in arrow
-functions has lexical scope rather than the usual dynamic scope). In
-global code (code that doesn't belong to any function) it would be the
-global object. And it keeps that way, even if you invoke the function
-declared with the arrow notation from any of the others methods here
-described.</p>
+<p>When using arrow functions <b>this</b> takes the value from the enclosing execution 
+context's <b>this</b> (that is, <b>this</b> in arrow functions has lexical scope rather 
+than the usual dynamic scope). In global code (code that doesn't belong to any function) 
+it would be the global object. And it keeps that way, even if you invoke the function
+declared with the arrow notation from any of the others methods here described.</p>
 
 <pre>
 <b>var</b> globalThis = <b>this</b>; // <i>&quot;window&quot; in a browser, or &quot;global&quot; in Node.js</i>
@@ -21444,8 +21444,8 @@ console.log(foo() === globalThis);  // <i>true</i>
 console.log(foo.call(obj) === globalThis);  // <i>true</i>
 </pre>
 
-<p>See how <b>this</b> inherits the context rather than referring to the
-object the method was called on.</p>
+<p>See how <b>this</b> inherits the context rather than referring to the object the 
+method was called on.</p>
 
 <!-- page 319 -->
 
@@ -21467,10 +21467,9 @@ console.log(fn2() === globalThis); // <i>true</i>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch56-6">Section 56.6: Bound invocation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The bind method of every function allows you to create new version of
-that function with the context strictly bound to a specific object. It
-is especially useful to force a function to be called as a method of an
-object.</p>
+<p>The bind method of every function allows you to create new version of that function 
+with the context strictly bound to a specific object. It is especially useful to force 
+a function to be called as a method of an object.</p>
 
 <pre>
 <b>var</b> obj = { foo: &apos;bar&apos; };
@@ -21489,8 +21488,8 @@ bar
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch56-7">Section 56.7: Method invocation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Invoking a function as a method of an object the value of <b>this</b>
-will be that object.</p>
+<p>Invoking a function as a method of an object the value of <b>this</b> will be that 
+object.</p>
 
 <pre>
 <b>var</b> obj = {
@@ -21512,12 +21511,11 @@ Foo
 </blockquote>
 
 <!-- page 320 -->
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch56-8">Section 56.8: Anonymous invocation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Invoking a function as an anonymous function, <b>this</b> will be the
-global object (self in the browser).</p>
+<p>Invoking a function as an anonymous function, <b>this</b> will be the global object 
+(self in the browser).</p>
 
 <pre>
 <b>function</b> func() {
@@ -21528,8 +21526,8 @@ func() === window;  // <i>true</i>
 
 <h5>Version = 5</h5>
 
-<p>In ECMAScript 5's strict mode, <b>this</b> will be <b>undefined</b> if
-the function is invoked anonymously.</p>
+<p>In ECMAScript 5's strict mode, <b>this</b> will be <b>undefined</b> if the function 
+is invoked anonymously.</p>
 
 <pre>
 (<b>function</b> () {
@@ -21538,7 +21536,7 @@ the function is invoked anonymously.</p>
 }())
 </pre>
 
-<p>This will output</p>
+<p>This will output;</p>
 
 <blockquote>
 <b>undefined</b>
@@ -21546,8 +21544,8 @@ the function is invoked anonymously.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch56-9">Section 56.9: Constructor invocation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>When a function is invoked as a constructor with the <b>new</b> keyword
-<b>this</b> takes the value of the object being constructed.</p>
+<p>When a function is invoked as a constructor with the <b>new</b> keyword <b>this</b> 
+takes the value of the object being constructed.</p>
 
 <pre>
 <b>function</b> Obj(name) {
@@ -21565,10 +21563,9 @@ console.log(obj);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch56-10">Section 56.10: Using let in loops instead of var (click handlers example)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Let's say we need to add a button for each piece of loadedData array
-(for instance, each button should be a slider showing the data; for the
-sake of simplicity, we'll just alert a message). One may try something
-like this:</p>
+<p>Let's say we need to add a button for each piece of loadedData array (for instance, 
+each button should be a slider showing the data; for the sake of simplicity, we'll just 
+alert a message). One may try something like this:</p>
 
 <pre>
 <b>for</b>(<b>var</b> i = 0; i &lt; loadedData.length; i++)
@@ -21585,9 +21582,9 @@ like this:</p>
 TypeError: loadedData[i] is undefined
 </blockquote>
 
-<p>error. This is because the scope of i is the global scope (or a function
-scope) and after the loop, i == 3. What we need is not to "remember the
-state of i". This can be done using <b>let</b>:</p>
+<p>error. This is because the scope of i is the global scope (or a function scope) and 
+after the loop, i == 3. What we need is not to "remember the state of i". This can be 
+done using <b>let</b>:</p>
 
 <pre>
 <b>for</b>(<b>let</b> i = 0; i &lt; loadedData.length; i++)
@@ -21607,7 +21604,7 @@ state of i". This can be done using <b>let</b>:</p>
 </pre>
 
 <p><a href="https://jsfiddle.net/fvgqu7a2/2/" target="_blank" rel="noopener noreferrer">
-A fiddle to illustrate this</a></p>
+A fiddle to illustrate this</a>.</p>
 
 <!-- page 322 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21615,11 +21612,10 @@ A fiddle to illustrate this</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch57-1">Section 57.1: Defining a module</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>In ECMAScript 6, when using the module syntax (import/export), each file
-becomes its own module with a private namespace. Top-level functions and
-variables do not pollute the global namespace. To expose functions,
-classes, and variables for other modules to import, you can use the
-export keyword.</p>
+<p>In ECMAScript 6, when using the module syntax (import/export), each file becomes its 
+own module with a private namespace. Top-level functions and variables do not pollute the 
+global namespace. To expose functions, classes, and variables for other modules to import, 
+you can use the export keyword.</p>
 
 <pre>
 // <i>not exported</i>
@@ -21639,15 +21635,13 @@ export class MyClass {
 }
 </pre>
 
-<p>Note: ES5 JavaScript files loaded via <b>&gt;</b> tags will remain the
-same when not using import/export.</p>
+<p>Note: ES5 JavaScript files loaded via <b>&gt;</b> tags will remain the same when not 
+using import/export.</p>
 
-<p>Only the values which are explicitly exported will be available outside
-of the module. Everything else can be considered private or
-inaccessible.</p>
+<p>Only the values which are explicitly exported will be available outside of the module. 
+Everything else can be considered private or inaccessible.</p>
 
-<p>Importing this module would yield (assuming the previous code block is
-in my-module.js):</p>
+<p>Importing this module would yield (assuming the previous code block is in my-module.js):</p>
 
 <pre>
 import &ast; as myModule from &apos;./my-module.js&apos;;
@@ -21679,18 +21673,17 @@ import circleArea from &apos;./circle&apos;;
 console.log(circleArea(4));
 </pre>
 
-<p>Note that a <i>default export</i> is implicitly equivalent to a named
-export with the name <b>default</b>, and the imported binding
-(circleArea above) is simply an alias. The previous module can be
-written like.</p>
+<p>Note that a <i>default export</i> is implicitly equivalent to a named export with the 
+name <b>default</b>, and the imported binding (circleArea above) is simply an alias. The 
+previous module can be written like.</p>
 
 <pre>
 import { <b>default</b> as circleArea } from &apos;./circle&apos;;
 console.log(circleArea(4));
 </pre>
 
-<p>You can only have one default export per module. The name of the default
-export can be omitted.</p>
+<p>You can only have one default export per module. The name of the default export can be 
+omitted.</p>
 
 <pre>
 // <i>named export: must have a name</i>
@@ -21703,8 +21696,8 @@ export <b>default</b> <b>function</b> (radius) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch57-3">Section 57.3: Importing named members from another module</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Given that the module from the Defining a Module section exists in the
-file test.js, you can import from that module and use its exported members:</p>
+<p>Given that the module from the Defining a Module section exists in the file test.js, 
+you can import from that module and use its exported members:</p>
 
 <pre>
 import {doSomething, MyClass, PI} from &apos;./test&apos;
@@ -21714,8 +21707,8 @@ mine.test()
 console.log(PI)
 </pre>
 
-<p>The somethingPrivate() method was not exported from the test module, so
-attempting to import it will fail:</p>
+<p>The somethingPrivate() method was not exported from the test module, so attempting to 
+import it will fail:</p>
 
 <pre>
 import {somethingPrivate} from &apos;./test&apos;
@@ -21736,20 +21729,19 @@ test.doSomething()
 Non-exported members are not available, just as they are not available
 with named member imports.</p>
 
-<p><b>Note:</b> The path to the module './test' is resolved by the
+<p><b>Note:</b> The path to the module './test' is resolved by the 
 <a href="https://whatwg.github.io/loader/" target="_blank" rel="noopener noreferrer">
-<i>loader</i></a> and is not covered by the ECMAScript specification -
-this could be a string to any resource (a path - relative or absolute -
-on a filesystem, a URL to a network resource, or any other string
-identifier).</p>
+<i>loader</i></a> and is not covered by the ECMAScript specification - this could be a 
+string to any resource (a path - relative or absolute - on a filesystem, a URL to a 
+network resource, or any other string identifier).</p>
 
 <!-- page 324 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch57-5">Section 57.5: Importing named members with aliases</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Sometimes you may encounter members that have really long member names,
-such as thisIsWayTooLongOfAName(). In this case, you can import the
-member and give it a shorter name to use in your current module:</p>
+<p>Sometimes you may encounter members that have really long member names, such as 
+thisIsWayTooLongOfAName(). In this case, you can import the member and give it a 
+shorter name to use in your current module:</p>
 
 <pre>
 import {thisIsWayTooLongOfAName as shortName} from &apos;module&apos;
@@ -21797,14 +21789,14 @@ configuration that only runs once when your module is imported.</p>
 <b>const</b> namedMember3 = &hellip;
 export { namedMember1, namedMember2, namedMember3 }
 </pre>
+
 <!-- page 325 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch58">Chapter 58: Screen</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch58-1">Section 58.1: Getting the screen resolution</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>To get the physical size of the screen (including window chrome and
-menubar/launcher):</p>
+<p>To get the physical size of the screen (including window chrome and menubar/launcher):</p>
 
 <pre>
 <b>var</b> width = window.screen.width,
@@ -21813,9 +21805,8 @@ menubar/launcher):</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch58-2">Section 58.2: Getting the “available” area of the screen</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>To get the “available” area of the screen (i.e. not including any bars
-on the edges of the screen, but including window chrome and other
-windows:</p>
+<p>To get the “available” area of the screen (i.e. not including any bars on the edges of 
+the screen, but including window chrome and other windows:</p>
 
 <pre>
 <b>var</b> availableArea = {
@@ -21832,8 +21823,8 @@ windows:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch58-3">Section 58.3: Page width and height</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>To get current page width and height (for any browser), e.g. when
-programming responsiveness:</p>
+<p>To get current page width and height (for any browser), e.g. when programming 
+responsiveness:</p>
 
 <pre>
 <b>function</b> pageWidth() {
@@ -21865,17 +21856,17 @@ document.documentElement.clientHeight ? document.documentElement.clientHeight : 
 <b>var</b> pixelDepth = window.screen.pixelDepth,
   colorDepth = window.screen.colorDepth;
 </pre>
+
 <!-- page 326 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch59">Chapter 59: Variable coercion/conversion</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch59-1">Section 59.1: Double Negation (!!x)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The double-negation !! is not a distinct JavaScript operator nor a
-special syntax but rather just a sequence of two negations. It is used
-to convert the value of any type to its appropriate <b>true</b> or
-<b>false</b> Boolean value depending on whether it is <i>truthy</i> or
-<i>falsy</i>.</p>
+<p>The double-negation !! is not a distinct JavaScript operator nor a special syntax but 
+rather just a sequence of two negations. It is used to convert the value of any type to 
+its appropriate <b>true</b> or <b>false</b> Boolean value depending on whether it is 
+<i>truthy</i> or <i>falsy</i>.</p>
 
 <pre>
 !!1       // <i>true</i>
@@ -21885,19 +21876,13 @@ to convert the value of any type to its appropriate <b>true</b> or
 !!&lbrack;&rbrack;  // <i>true</i>
 </pre>
 
-<P>
-The first negation converts any value to <b>false</b> if it is
-<i>truthy</i> and to <b>true</b> if is <i>falsy</i>. The second negation
-then operates on a normal Boolean value. Together they convert any
-<i>truthy</i> value to <b>true</b> and any <i>falsy</i> value to
-<b>false</b>.
-</p>
+<p>The first negation converts any value to <b>false</b> if it is <i>truthy</i> and to 
+<b>true</b> if is <i>falsy</i>. The second negation then operates on a normal Boolean 
+value. Together they convert any <i>truthy</i> value to <b>true</b> and any <i>falsy</i> 
+value to <b>false</b>.</p>
 
-<p>
-However, many professionals consider the practice of using such syntax
-unacceptable and recommend simpler to read alternatives, even if they're
-longer to write:
-</p>
+<p>However, many professionals consider the practice of using such syntax unacceptable 
+and recommend simpler to read alternatives, even if they're longer to write:</p>
 
 <pre>
 x !== 0 // <i>instead of !!x in case x is a number</i>
@@ -21907,29 +21892,20 @@ x != <b>null</b> // <i>instead of !!x in case x is an object, a string, or an un
 <p>Usage of x is considered poor practice due to the following reasons:</p>
 
 <ol type="1">
-<li>
-Stylistically it may look like a distinct special syntax whereas in fact
-it is not doing anything other than two consecutive negations with
-implicit type conversion.
-</li>
-<li>
-It is better to provide information about types of values stored in
-variables and properties through the code. For example, x !== 0 says
-that x is probably a number, whereas !!x does not convery any such
-advantage to the readers of the code.
-</li>
-<li>
-Usage of Boolean(x) allows for similar functionality, and is a more
-explicit conversion of type.
-</li>
+  <li>Stylistically it may look like a distinct special syntax whereas in fact it is not 
+    doing anything other than two consecutive negations with implicit type conversion.</li>
+  <li>It is better to provide information about types of values stored in variables and 
+    properties through the code. For example, x !== 0 says that x is probably a number, 
+	whereas !!x does not convery any such advantage to the readers of the code.</li>
+  <li>Usage of Boolean(x) allows for similar functionality, and is a more explicit 
+    conversion of type.</li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch59-2">Section 59.2: Implicit conversion</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript will try to automatically convert variables to more
-appropriate types upon use. It's usually advised to do conversions
-explicitly (see other examples), but it's still worth knowing what
-conversions take place implicitly.</p>
+<p>JavaScript will try to automatically convert variables to more appropriate types upon 
+use. It's usually advised to do conversions explicitly (see other examples), but it's 
+still worth knowing what conversions take place implicitly.</p>
 
 <pre>
 &quot;1&quot; + 5 === &quot;15&quot; // <i>5 got converted to string.</i>
@@ -21950,8 +21926,7 @@ alert({}) // <i>alerts &quot;&lbrack;object Object&rbrack;&quot;, {} got convert
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch59-3">Section 59.3: Converting to boolean</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Boolean( … ) will convert any data type into either <b>true</b> or
-<b>false</b>.</p>
+<p>Boolean( … ) will convert any data type into either <b>true</b> or <b>false</b>.</p>
 
 <!-- page 327 -->
 
@@ -21968,8 +21943,8 @@ Boolean({}) === <b>true</b>
 Boolean(&lbrack;&rbrack;) === <b>true</b>
 </pre>
 
-<p>Empty strings and the number 0 will be converted to false, and all
-others will be converted to true.</p>
+<p>Empty strings and the number 0 will be converted to false, and all others will be 
+converted to true.</p>
 
 <p>A shorter, but less clear, form:</p>
 
@@ -21986,8 +21961,8 @@ others will be converted to true.</p>
 !!&lbrack;&rbrack; === <b>true</b>
 </pre>
 
-<p>This shorter form takes advantage of implicit type conversion using the
-logical NOT operator twice, as described in
+<p>This shorter form takes advantage of implicit type conversion using the logical NOT 
+operator twice, as described in
 http://stackoverflow.com/documentation/javascript/208/boolean-logic/3047/double-negation-x</p>
 
 <p>Here is the complete list of boolean conversions from the
@@ -21995,24 +21970,13 @@ http://stackoverflow.com/documentation/javascript/208/boolean-logic/3047/double-
 ECMAScript specification</a></p>
 
 <ul>
-<li>
-if myArg of type <b>undefined</b> or <b>null</b> then Boolean(myArg) ===
-<b>false</b>
-</li>
-<li>
-if myArg of type boolean then Boolean(myArg) === myArg
-</li>
-<li>
-if myArg of type number then Boolean(myArg) === <b>false</b> if myArg is
-+0, ‑0, or <b>NaN</b>; otherwise <b>true</b>
-</li>
-<li>
-if myArg of type string then Boolean(myArg) === <b>false</b> if myArg is
-the empty String (its length is zero); otherwise <b>true</b>
-</li>
-<li>
-if myArg of type symbol or object then Boolean(myArg) === <b>true</b>
-</li>
+  <li>if myArg of type <b>undefined</b> or <b>null</b> then Boolean(myArg) === <b>false</b></li>
+  <li>if myArg of type boolean then Boolean(myArg) === myArg</li>
+  <li>if myArg of type number then Boolean(myArg) === <b>false</b> if myArg is
+    +0, ‑0, or <b>NaN</b>; otherwise <b>true</b></li>
+  <li>if myArg of type string then Boolean(myArg) === <b>false</b> if myArg is the empty 
+    String (its length is zero); otherwise <b>true</b></li>
+  <li>if myArg of type symbol or object then Boolean(myArg) === <b>true</b></li>
 </ul>
 
 <p>Values that get converted to <b>false</b> as booleans are called
@@ -22029,14 +21993,15 @@ Operations.</p>
 
 <pre>&plus;&apos;0&apos; === 0</pre>
 
-<p>The unary + operator does nothing to numbers, but converts anything else
-to a number. Interestingly, +(-12 ) === −12.</p>
+<p>The unary + operator does nothing to numbers, but converts anything else to a number. 
+Interestingly, +(-12 ) === −12.</p>
 
 <pre>parseInt(&apos;0&apos;, 10) === 0</pre>
 
-<p>parseInt('0', 10) will convert the string ('0') into a number (0), don't
-forget the second argument, which is radix. If not given, parseInt could
-convert string to wrong number.</p>
+<p>parseInt('0', 10) will convert the string ('0') into a number (0), don't forget the 
+second argument, which is radix. If not given, parseInt could convert string to wrong 
+number.</p>
+
 <!-- page 328 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch59-5">Section 59.5: Converting a number to a string</h3>
@@ -22271,6 +22236,7 @@ Boolean(&apos;any_nonempty_string&apos;) === <b>true</b> // <i>is true</i>
 <p>In JavaScript, all numbers are internally represented as floats. This
 means that simply using your integer as a float is all that must be done
 to convert it.</p>
+
 <!-- page 330 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch59-12">Section 59.12: Float to Integer</h3>
@@ -22374,6 +22340,7 @@ hand-side of the expression.</p>
 // <i>Is equivalent to</i>
 <b>let</b> p = person.hasOwnProperty(&apos;phone&apos;) ? person.phone : &apos;123-456-789&apos;; // <i>&apos;123-456-789&apos;</i>
 </pre>
+
 <!-- page 332 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch60-2">Section 60.2: Destructuring function arguments</h3>
@@ -26424,9 +26391,7 @@ presented as numeric value 1 and <b>false</b> as 0.</p>
 
 <p><b>can be re-written as</b></p>
 
-<pre>
-<b>if</b> (&bsol;~items.indexOf(&apos;a&apos;)) {}
-</pre>
+<pre><b>if</b> (&bsol;~items.indexOf(&apos;a&apos;)) {}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch86-5">Section 86.5: ~ Decimal</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -26525,14 +26490,12 @@ element.style.getPropertyValue(&quot;&dash;&dash;var&quot;)
 <b>let</b> text = sel.toString();
 onsole.log(text);  // <i>logs what the user selected</i>
 </pre>
-<p>
-Alternatively, since the toString member function is called
+
+<p>Alternatively, since the toString member function is called
 automatically by some functions when converting the object to a string,
-you don't always have to call it yourself.
-</p>
-<pre>
-console.log(document.getSelection());
-</pre>
+you don't always have to call it yourself.</p>
+
+<pre>console.log(document.getSelection());</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch88-2">Section 88.2: Deselect everything that is selected</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -27210,6 +27173,7 @@ height="6.270138888888889in"} --></p>
 <!-- page 420 -->
 
 <p>And now you're done! You can use your imported key in WebCrypto API.</p>
+
 <!-- page 421 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch95">Chapter 95: Security issues</h2>
@@ -27483,12 +27447,13 @@ XSS.&quot;
     creates a new execution context</a>, creating a <b>performance hit</b>.</li>
   <li>Properly escape " and \ in user data before putting it in JSON. If you just escape 
     the ", than this will happen:
-<pre>Hello! &bsol;&bsol;&quot;});alert(1);({</pre>
-<p>Will be converted to:</p>
-<pre>&quot;Hello! <b>&bsol;&bsol;&quot;</b>});alert(1);({&quot;</pre>
-<p>Oops. Remember to escape both the \ and ", or just use JSON.parse.</p>
-</li>
+    <pre>Hello! &bsol;&bsol;&quot;});alert(1);({</pre>
+    <p>Will be converted to:</p>
+    <pre>&quot;Hello! <b>&bsol;&bsol;&quot;</b>});alert(1);({&quot;</pre>
+    <p>Oops. Remember to escape both the \ and ", or just use JSON.parse.</p>
+  </li>
 </ul>
+
 <!-- page 426 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch96">Chapter 96: Same Origin Policy &amp; CrossOrigin Communication</h2>
@@ -27515,59 +27480,59 @@ response back to the sender window using postMessage() again.</p>
 <p><b>Example of Window communicating with a children frame</b></p>
 
 <ul>
-  <li>Content of http:// <i>main-site.com/index.html</i>:
-<pre>
-<i>&lt;!&dash;&dash; &hellip; &dash;&dash;;&gt;</i>
-<b>&lt;iframe</b> id=&quot;frame-id&quot; src=&quot;http://other-site.com/index.html&quot;<b>&gt;&lt;/iframe&gt;</b>
-<b>&lt;script</b> src=&quot;main_site_script.js&quot;<b>&gt;&lt;/script&gt;</b>
-<i>&lt;!&dash;&dash; &hellip; &dash;&dash;&gt;</i>
-</pre>
-</li>
+  <li>Content of http:// <i>main-site.com/index.html
+    <pre>
+      <i>&lt;!&dash;&dash; &hellip; &dash;&dash;;&gt;</i>
+      <b>&lt;iframe</b> id=&quot;frame-id&quot; src=&quot;http://other-site.com/index.html&quot;<b>&gt;&lt;/iframe&gt;</b>
+      <b>&lt;script</b> src=&quot;main_site_script.js&quot;<b>&gt;&lt;/script&gt;</b>
+      <i>&lt;!&dash;&dash; &hellip; &dash;&dash;&gt;</i>
+    </pre>
+  </li>
   <li>Content of http:// <i>other-site.com/index.html</i>:
-<pre>
-<i>&lt;!&dash;&dash; &hellip; &dash;&dash;&gt;</i>
-<b>&lt;</b><b>script</b> src=&quot;other_site_script.js&quot;<b>&gt;</b><b>&lt;</b><b>/src</b><b>&gt;</b>
-<i>&lt;!&bsol; &hellip; &amp;gt;</i>
-</pre>
-</li>
+    <pre>
+      <i>&lt;!&dash;&dash; &hellip; &dash;&dash;&gt;</i>
+      <b>&lt;</b><b>script</b> src=&quot;other_site_script.js&quot;<b>&gt;</b><b>&lt;</b><b>/src</b><b>&gt;</b>
+      <i>&lt;!&bsol; &hellip; &amp;gt;</i>
+      </pre>
+  </li>
   <li>Content of main_site_script.js:
-<pre>
-// <i>Get the &lt;iframe&gt;&apos;s window</i>
-<b>var</b> frameWindow = document.getElementById(&apos;frame-id&apos;).contentWindow;
-&nbsp;
-// <i>Add a listener for a response</i>
-window.addEventListener(&apos;message&apos;, <b>function</b>(evt) {
-&nbsp;
-  // <i>IMPORTANT: Check the origin of the data!</i>
-  <b>if</b> (event.origin.indexOf(&apos;http://other-site.com&apos;) == 0) {
-&nbsp;
-    // <i>Check the response</i>
-    console.log(evt.data);
-    <i>/&ast; &hellip; &ast;/</i>
-  }
-});
-&nbsp;
-// <i>Send a message to the frame&apos;s window</i>
-frameWindow.postMessage(<i>/&ast; any obj or var &ast;/</i>, &apos;&ast;&apos;);
-</pre>
-</li>
+    <pre>
+      // <i>Get the &lt;iframe&gt;&apos;s window</i>
+      <b>var</b> frameWindow = document.getElementById(&apos;frame-id&apos;).contentWindow;
+      &nbsp;
+      // <i>Add a listener for a response</i>
+      window.addEventListener(&apos;message&apos;, <b>function</b>(evt) {
+        &nbsp;
+        // <i>IMPORTANT: Check the origin of the data!</i>
+        <b>if</b> (event.origin.indexOf(&apos;http://other-site.com&apos;) == 0) {
+          &nbsp;
+          // <i>Check the response</i>
+          console.log(evt.data);
+          <i>/&ast; &hellip; &ast;/</i>
+        }
+      });
+      &nbsp;
+      // <i>Send a message to the frame&apos;s window</i>
+      frameWindow.postMessage(<i>/&ast; any obj or var &ast;/</i>, &apos;&ast;&apos;);
+    </pre>
+  </li>
   <li>Content of other_site_script.js:
-<pre>
-window.addEventListener(&apos;message&apos;, <b>function</b>(evt) {
-&nbsp;
-  // <i>IMPORTANT: Check the origin of the data!</i>
-  <b>if</b> (event.origin.indexOf(&apos;http://main-site.com&apos;) == 0) {
-&nbsp;
-    // <i>Read and elaborate the received data</i>
-    console.log(evt.data);
-    <i>/&ast; &hellip; &ast;/</i>
-&nbsp;
-    // <i>Send a response back to the main window</i>
-    window.parent.postMessage(<i>/&ast; any obj or var &ast;/</i>, &apos;&ast;&apos;);
-  }
-});
-</pre>
-</li>
+    <pre>
+    window.addEventListener(&apos;message&apos;, <b>function</b>(evt) {
+    &nbsp;
+    // <i>IMPORTANT: Check the origin of the data!</i>
+      <b>if</b> (event.origin.indexOf(&apos;http://main-site.com&apos;) == 0) {
+        &nbsp;
+        // <i>Read and elaborate the received data</i>
+        console.log(evt.data);
+        <i>/&ast; &hellip; &ast;/</i>
+        &nbsp;
+        // <i>Send a response back to the main window</i>
+        window.parent.postMessage(<i>/&ast; any obj or var &ast;/</i>, &apos;&ast;&apos;);
+      }
+    });
+    </pre>
+  </li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch96-2">Section 96.2: Ways to circumvent Same-Origin Policy</h3>
@@ -27621,15 +27586,16 @@ console.log(obj.example_field);
 <b>&lt;</b><b>script</b> src=&quot;http://example.com/api/endpoint.js?callback=myfunc&quot;<b>&gt;</b><b>&lt;</b><b>/script</b><b>&gt;</b>
 </pre>
 
-<p>The contents of
-http://<i>example.com/api/endpoint.js?callback=myfunc</i> might look
+<p>The contents of http://<i>example.com/api/endpoint.js?callback=myfunc</i> might look
 like this:</p>
 
 <!-- page 428 -->
+
 <pre>myfunc({&quot;example_field&quot;:<b>true</b>})</pre>
 
 <p>The function always has to be defined first, otherwise it won't be defined when the 
 external script loads.</p>
+
 <!-- page 429 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch97">Chapter 97: Error Handling</h2>
@@ -27702,36 +27668,21 @@ Caught error: Invalid something
 <p>There are six specific core error constructors in JavaScript:</p>
 
 <ul>
-<li>
-<b>EvalError</b> - creates an instance representing an error that occurs
-regarding the global function eval().
-</li>
-<li>
-<b>InternalError</b> - creates an instance representing an error that
-occurs when an internal error in the JavaScript engine is thrown. E.g.
-"too much recursion". (Supported only by <b>Mozilla Firefox</b>).
-</li>
-<li>
-<b>RangeError</b> - creates an instance representing an error that
-occurs when a numeric variable or parameter is outside of its valid
-range.
-</li>
-<li>
-<b>ReferenceError</b> - creates an instance representing an error that
-occurs when dereferencing an invalid reference.
-</li>
-<li>
-<b>SyntaxError</b> - creates an instance representing a syntax error
-that occurs while parsing code in eval().
-</li>
-<li>
-<b>TypeError</b> - creates an instance representing an error that occurs
-when a variable or parameter is not of a valid type.
-</li>
-<li>
-<b>URIError</b> - creates an instance representing an error that occurs
-when encodeURI() or decodeURI() are passed invalid parameters.
-</li>
+  <li><b>EvalError</b> - creates an instance representing an error that occurs regarding 
+    the global function eval().</li>
+  <li><b>InternalError</b> - creates an instance representing an error that occurs when 
+    an internal error in the JavaScript engine is thrown. E.g. "too much recursion". 
+	(Supported only by <b>Mozilla Firefox</b>).</li>
+  <li><b>RangeError</b> - creates an instance representing an error that occurs when a 
+    numeric variable or parameter is outside of its valid range.</li>
+  <li><b>ReferenceError</b> - creates an instance representing an error that occurs when 
+    dereferencing an invalid reference.</li>
+  <li><b>SyntaxError</b> - creates an instance representing a syntax error that occurs 
+    while parsing code in eval().</li>
+  <li><b>TypeError</b> - creates an instance representing an error that occurs when a 
+    variable or parameter is not of a valid type.</li>
+  <li><b>URIError</b> - creates an instance representing an error that occurs when 
+    encodeURI() or decodeURI() are passed invalid parameters.</li>
 </ul>
 
 <p>If you are implementing error handling mechanism you can check which
@@ -30080,9 +30031,7 @@ properties of composite data types.</p>
 
 <p>For example the following will result in an illegal syntax error:</p>
 
-<pre>
-var break = true;
-</pre>
+<pre>var break = true;</pre>
 
 <blockquote>
 Uncaught SyntaxError: Unexpected token break
