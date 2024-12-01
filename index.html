@@ -6356,59 +6356,49 @@ not needed.</i></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch12-8">Section 12.8: Removing duplicate elements</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-From ES5.1 onwards, you can use the native method
+<p>From ES5.1 onwards, you can use the native method
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" 
 target="_blank" rel="noopener noreferrer"><b>Array.prototype.filter</b></a>
 to loop through an array and leave only entries that pass a given
-callback function.
-</p>
-<p>
-In the following example, our callback checks if the given value occurs
+callback function.</p>
+
+<p>In the following example, our callback checks if the given value occurs
 in the array. If it does, it is a duplicate and will not be copied to
-the resulting array.
-</p>
-<h5>
-Version ≥ 5.1
-</h5>
+the resulting array.</p>
+
+<h5>Version ≥ 5.1</h5>
+
 <pre>
 <b>var</b> uniqueArray = &lbrack;&apos;a&apos;, 1, &apos;a&apos;, 2, &apos;1&apos;, 1&rbrack;.filter(<b>function</b>(value, index, self) { 
   <b>return</b> self.indexOf(value) === index;
 }); // <i>returns &lbrack;&apos;a&apos;, 1, 2, &apos;1&apos;&rbrack;</i>
 </pre>
-<p>
-If your environment supports ES6, you can also use the
+
+<p>If your environment supports ES6, you can also use the
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set" 
 target="_blank" rel="noopener noreferrer">Set</a> object. This object
 lets you store unique values of any type, whether primitive values or
-object references:
-</p>
-<h5>
-Version ≥ 6
-</h5>
-<pre>
-<b>var</b> uniqueArray = &lbrack;&hellip; <b>new</b> Set(&lbrack;&apos;a&apos;, 1, &apos;a&apos;, 2, &apos;1&apos;, 1&rbrack;)&rbrack;;
-</pre>
+object references:</p>
+
+<h5>Version ≥ 6</h5>
+
+<pre><b>var</b> uniqueArray = &lbrack;&hellip; <b>new</b> Set(&lbrack;&apos;a&apos;, 1, &apos;a&apos;, 2, &apos;1&apos;, 1&rbrack;)&rbrack;;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-9">
-Section 12.9: Array comparison
-</h3>
+<h3 id="ch12-9">Section 12.9: Array comparison</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-For simple array comparison you can use JSON stringify and compare the
-output strings:
-</p>
-<pre>
-JSON.stringify(array1) === JSON.stringify(array2)
-</pre>
+<p>For simple array comparison you can use JSON stringify and compare the
+output strings:</p>
+
+<pre>JSON.stringify(array1) === JSON.stringify(array2)</pre>
+
 <blockquote>
 <b>Note:</b> that this will only work if both objects are JSON
 serializable and do not contain cyclic references. It may throw
 TypeError: Converting circular structure to JSON
 </blockquote>
-<p>
-You can use a recursive function to compare arrays.
-</p>
+
+<p>You can use a recursive function to compare arrays.</p>
+
 <pre>
 <b>function</b> compareArrays(array1, array2) {
   <b>var</b> i, isA1, isA2;
@@ -6433,19 +6423,21 @@ You can use a recursive function to compare arrays.
   <b>return</b> <b>true</b>;  // <i>must be equal</i>
 }
 </pre>
+
 <!-- page 94 -->
-<p>
-<b>WARNING:</b> Using the above function is dangerous and should be
+
+<p><b>WARNING:</b> Using the above function is dangerous and should be
 wrapped in a <b>try</b> <b>catch</b> if you suspect there is a chance
 the array has cyclic references (a reference to an array that contains a
-reference to itself)
-</p>
+reference to itself).</p>
+
 <pre>
 a = &lbrack;0&rbrack;;
 a&lbrack;1&rbrack; = a;
 b = &lbrack;0, a&rbrack;;
 compareArrays(a, b);  // <i>throws RangeError: Maximum call stack size exceeded</i>
 </pre>
+
 <blockquote>
 <b>Note:</b> The function uses the strict equality operator === to
 compare non array items {a: 0} === {a: 0} is <b>false</b>
@@ -7359,51 +7351,40 @@ flattened by this method.</p>
 <h3 id="ch12-27">Section 12.27: Append / Prepend items to Array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- page 107 -->
-<p>
-<b>Unshift</b>
-</p>
-<p>
-Use .unshift to add one or more items in the beginning of an array.
-</p>
-<p>
-For example:
-</p>
+
+<p><b>Unshift</b></p>
+
+<p>Use .unshift to add one or more items in the beginning of an array.</p>
+
+<p>For example:</p>
+
 <pre>
 <b>var</b> array = &lbrack;3, 4, 5, 6&rbrack;;
 array.unshift(1, 2);
 </pre>
-<p>
-array results in:
-</p>
-<pre>
-&lbrack;1, 2, 3, 4, 5, 6&rbrack;
-</pre>
-<p>
-<b>Push</b>
-</p>
-<p>
-Further is used to add items after the last currently existent item.
-</p>
-<p>
-For example:
-</p>
+
+<p>array results in:</p>
+
+<pre>&lbrack;1, 2, 3, 4, 5, 6&rbrack;</pre>
+
+<p><b>Push</b></p>
+
+<p>Further is used to add items after the last currently existent item.</p>
+
+<p>For example:</p>
+
 <pre>
 <b>var</b> array = &lbrack;1, 2, 3&rbrack;;
 array.push(4, 5, 6);
 </pre>
-<p>
-array results in:
-</p>
-<pre>
-&lbrack;1, 2, 3, 4, 5, 6&rbrack;
-</pre>
-<p>
-Both methods return the new array length.
-</p>
+
+<p>array results in:</p>
+
+<pre>&lbrack;1, 2, 3, 4, 5, 6&rbrack;</pre>
+
+<p>Both methods return the new array length.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-28">
-Section 12.28: Object keys and values to array
-</h3>
+<h3 id="ch12-28">Section 12.28: Object keys and values to array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 <b>var</b> object = {
@@ -7417,9 +7398,9 @@ Section 12.28: Object keys and values to array
   array.push(&lbrack;people, object&lbrack;people&rbrack;&rbrack;);
 }
 </pre>
-<p>
-Now array is
-</p>
+
+<p>Now array is;</p>
+
 <pre>
 &lbrack;
   &lbrack;&quot;key1&quot;, 10&rbrack;,
@@ -7429,49 +7410,46 @@ Now array is
 &rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-29">
-Section 12.29: Logical connective of values
-</h3>
+<h3 id="ch12-29">Section 12.29: Logical connective of values</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>
-Version ≥ 5.1
-</h5>
-<p>
-some and . every . allow a logical connective of Array values.
-</p>
-<p>
-While .some combines the return values with OR, .every combines them
-with AND.
-</p>
-<p>
-Examples for .some
-</p>
-<pre
+<h5>Version ≥ 5.1</h5>
+
+<p>.some and .every allow a logical connective of Array values.</p>
+
+<p>While .some combines the return values with OR, .every combines them with AND.</p>
+
+<p>Examples for .some</p>
+
+<pre>
 &lbrack;<b>false</b>, <b>false</b>&rbrack;.some(<b>function</b>(value) {
   <b>return</b> value;
 });
 // <i>Result: false</i>
+
 &lbrack;<b>false</b>, <b>true</b>&rbrack;.some(<b>function</b>(value) {
   <b>return</b> value;
 });
 // <i>Result: true</i>
+
 &lbrack; <b>true</b>, <b>true</b>&rbrack;.some(<b>function</b>(value) {
   <b>return</b> value;
 });
 // <i>Result: true</i>
 </pre>
-<p>
-And examples for .every
-</p>
+
+<p>And examples for .every</p>
+
 <pre>
 &lbrack;<b>false</b>, <b>false</b>&rbrack;.every(<b>function</b>(value) {
   <b>return</b> value;
 });
 // <i>Result: false</i>
+
 &lbrack; <b>false</b>, <b>true</b>&rbrack;.every(<b>function</b>(value) {
   <b>return</b> value;
 });
 // <i>Result: false</i>
+
 &lbrack; <b>true</b>, <b>true</b>&rbrack;.every(<b>function</b>(value) {
   <b>return</b> value;
 });
@@ -7479,34 +7457,30 @@ And examples for .every
 </pre>
 <!-- thru 12.29 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-30">
-Section 12.30: Checking if an object is an Array
-</h3>
+<h3 id="ch12-30">Section 12.30: Checking if an object is an Array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Array.isArray (obj) returns <b>true</b> if the object is an Array,
-otherwise </b>false</b>.
-</p>
+<p>Array.isArray (obj) returns <b>true</b> if the object is an Array,
+otherwise </b>false</b>.</p>
+
 <pre>
 Array.isArray(&lbrack;&rbrack;)       // <i>true</i>
 Array.isArray(&lbrack;1,2,3&rbrack;)  // <i>true</i>
 Array.isArray({})                     // <i>false</i>
 Array.isArray(1)                      // <i>false</i>
 </pre>
-<p>
-In most cases you can <b>instanceof</b> to check if an object is an
-Array.
-</p>
+
+<p>In most cases you can <b>instanceof</b> to check if an object is an Array.</p>
+
 <pre>
 &lbrack;&rbrack; <b>instanceof</b> Array;  // <i>true</i>
 {} <b>instanceof</b> Array;                // <i>false</i>
 </pre>
-<p>
-Array.isArray has the an advantage over using a <b>instanceof</b> check
+
+<p>Array.isArray has the an advantage over using a <b>instanceof</b> check
 in that it will still return <b>true</b> even if the prototype of the
 array has been changed and will return <b>false</b> if a non-arrays
-prototype was changed to the Array prototype.
-</p>
+prototype was changed to the Array prototype.</p>
+
 <!-- page 109 -->
 <pre>
 <b>var</b> arr = &lbrack;&rbrack;;
@@ -7515,22 +7489,16 @@ Array.isArray(arr);  // <i>true</i>
 arr <b>instanceof</b> Array;  // <i>false</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-31">
-Section 12.31: Insert an item into an array at a specific index
-</h3>
+<h3 id="ch12-31">Section 12.31: Insert an item into an array at a specific index</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Simple item insertion can be done with
+<p>Simple item insertion can be done with
 <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/splice" 
-target="_blank" rel="noopener noreferrer">
-Array.<b>prototype</b>.splice</a> method:
-</p>
-<pre>
-arr.splice(index, 0, item);
-</pre>
-<p>
-More advanced variant with multiple arguments and chaining support:
-</p>
+target="_blank" rel="noopener noreferrer">Array.<b>prototype</b>.splice</a> method:</p>
+
+<pre>arr.splice(index, 0, item);</pre>
+
+<p>More advanced variant with multiple arguments and chaining support:</p>
+
 <pre>
 / <i>&ast; Syntax:</i>
   <i>array.insert(index, value1, value2, &hellip;, valueN) &ast;/</i>
@@ -7543,9 +7511,9 @@ Array.<b>prototype</b>.insert = <b>function</b>(index) {
 
 &lbrack;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;&rbrack;.insert(2, &quot;X&quot;, &quot;Y&quot;, &quot;Z&quot;).slice(1, 6);  // <i>&lbrack;&quot;b&quot;, &quot;X&quot;, &quot;Y&quot;, &quot;Z&quot;, &quot;c&quot;&rbrack;</i>
 </pre>
-<p>
-And with array-type arguments merging and chaining support:
-</p>
+
+<p>And with array-type arguments merging and chaining support:</p>
+
 <pre>
 /<i>&ast; Syntax:</i>
   <i>array.insert(index, value1, value2, &hellip;, valueN) &ast;/</i>
@@ -7559,13 +7527,10 @@ Array.<b>prototype</b>.insert = <b>function</b>(index) {
 &lbrack;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;&rbrack;.insert(2, &quot;V&quot;, &lbrack;&quot;W&quot;, &quot;X&quot;, &quot;Y&quot;rbrack;, &quot;Z&quot;).join(&quot;-&quot;); // <i>&quot;a-b-V-W-X-Y-Z-c-d&quot;</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-32">
-Section 12.32: Sorting multidimensional array
-</h3>
+<h3 id="ch12-32">Section 12.32: Sorting multidimensional array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Given the following array
-</p>
+<p>Given the following array</p>
+
 <pre>
 <b>var</b> array = &lbrack;
   &lbrack;&quot;key1&quot;, 10&rbrack;,
@@ -7574,24 +7539,23 @@ Given the following array
   &lbrack;&quot;key4&quot;, 20&rbrack;
 &rbrack;;
 </pre>
-<p>
-You can sort it sort it by number(second index)
-</p>
+
+<p>You can sort it sort it by number(second index)</p>
+
 <pre>
 array.sort(<b>function</b>(a, b) {
   <b>return</b> a&lbrack;1&rbrack; &minus; b&lbrack;1&rbrack;;
 })
 </pre>
+
 <!-- page 110 -->
-<h5>
-Version ≥ 6
-</h5>
-<pre>
-array.sort((a, b) =&gt; a&lbrack;1&rbrack; &minus; b&lbrack;1&rbrack;);
-</pre>
-<p>
-This will output
-</p>
+
+<h5>Version ≥ 6</h5>
+
+<pre>array.sort((a, b) =&gt; a&lbrack;1&rbrack; &minus; b&lbrack;1&rbrack;);</pre>
+
+<p>This will output</p>
+
 <pre>
 &lbrack;
   &lbrack;&quot;key2&quot;, 3&rbrack;,
@@ -7600,33 +7564,26 @@ This will output
   &lbrack;&quot;key3&quot;, 40&rbrack;
 &rbrack;
 </pre>
-<p>
-Be aware that the sort method operates on the array <i>in place</i>. It
+
+<p>Be aware that the sort method operates on the array <i>in place</i>. It
 changes the array. Most other array methods return a new array, leaving
 the original one intact. This is especially important to note if you use
 a functional programming style and expect functions to not have
-side-effects.
-</p>
+side-effects.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-33">
-Section 12.33: Test all array items for equality
-</h3>
+<h3 id="ch12-33">Section 12.33: Test all array items for equality</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The .every method tests if all array elements pass a provided predicate
-test.
-</p>
-<p>
-To test all objects for equality, you can use the following code
-snippets.
-</p>
+<p>The .every method tests if all array elements pass a provided predicate test.</p>
+
+<p>To test all objects for equality, you can use the following code snippets.</p>
+
 <pre>
 &lbrack;1, 2, 1&rbrack;.every(<b>function</b>(item, i, list) { <b>return</b> item === list&lbrack;0&rbrack;; }); // <i>false</i>
 &lbrack;1, 1, 1&rbrack;.every(<b>function</b>(item, i, list) { <b>return</b> item === list&lbrack;0&rbrack;; }); // <i>true</i>
 </pre>
-<h5>
-Version ≥ 6
-</h5>
+
+<h5>Version ≥ 6</h5>
+
 <pre>
 &lbrack;1, 1, 1&rbrack;.every((item, i, list) =&gt; item === list&lbrack;0&rbrack;); // <i>true</i>
 </pre>
@@ -7641,51 +7598,41 @@ The following code snippets test for property equality
 data.every(<b>function</b>(item, i, list) { <b>return</b> item === list&lbrack;0&rbrack;; }); // <i>false</i>
 data.every(<b>function</b>(item, i, list) { <b>return</b> item.name === list&lbrack;0&rbrack;.name; }); // <i>true</i>
 </pre>
-<h5>
-Version ≥ 6
-</h5>
-<pre>
-data.every((item, i, list) =&gt; item.name === list&lbrack;0&rbrack;.name);  // <i>true</i>
-</pre>
+
+<h5>Version ≥ 6</h5>
+
+<pre>data.every((item, i, list) =&gt; item.name === list&lbrack;0&rbrack;.name);  // <i>true</i></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-34">
-Section 12.34: Copy part of an Array
-</h3>
+<h3 id="ch12-34">Section 12.34: Copy part of an Array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-The slice() method returns a copy of a portion of an array.
-</p>
-It takes two parameters, arr.slice([begin[, end]]):
-</p>
-<p>
-<b>begin</b>
-</p>
-<p>
-Zero-based index which is the beginning of extraction.
-</p>
-<p>
-<b>end</b>
-</p>
-<p>
-Zero-based index which is the end of extraction, slicing up to this
-index but it's not included.
-</p>
-<p>
-If the end is a negative number, end = arr.length + end.
-</p>
-<p>
-<b>Example 1</b>
-</p>
+<p>The slice() method returns a copy of a portion of an array.</p>
+
+<p>It takes two parameters, arr.slice([begin[, end]]):</p>
+
+<p><b>begin</b></p>
+
+<p>Zero-based index which is the beginning of extraction.</p>
+
+<p><b>end</b></p>
+
+<p>Zero-based index which is the end of extraction, slicing up to this
+index but it's not included.</p>
+
+<p>If the end is a negative number, end = arr.length + end.</p>
+
+<p><b>Example 1</b></p>
+
 <!-- page 111 -->
+
 <pre>
 // <i>Let&apos;s say we have this Array of Alphabets</i>
 <b>var</b> arr = &lbrack;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;&hellip;&rbrack;;
 // <i>I want an Array of the first two Alphabets</i>
 <b>var</b> newArr = arr.slice(0, 2);  // <i>newArr === &lbrack;&quot;a&quot;, &quot;b&quot;&rbrack;</i>
 </pre>
-<p>
-<b>Example 2</b>
-</p>
+
+<p><b>Example 2</b></p>
+
 <pre>
 // <i>Let&apos;s say we have this Array of Numbers</i>
 // <i>and I don&apos;t know it&apos;s end</i>
@@ -7899,7 +7846,7 @@ Object.keys(obj).map(<b>function</b>(key) {
 // <i>outputs: 0, 1, 2</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch12-35">Section 13.5: Object.assign</h3>
+<h3 id="ch13-5">Section 13.5: Object.assign</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign" 
@@ -10290,6 +10237,7 @@ b = a &Hat; b;
 a = a &Hat; b;
 console.log(&quot;a = &quot; &plus; a &plus; &quot;; b = &quot; &plus; b); // <i>a is now 22 and b is now 11</i>
 </pre>
+
 <!-- page 150 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch15-2">Section 15.2: Shift Operators</h3>
@@ -10955,13 +10903,11 @@ is true or false:</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch18-5">Section 18.5: "continue" a loop</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-<b>Continuing a "for" Loop</b>
-</p>
-<p>
-When you put the <b>continue</b> keyword in a for loop, execution jumps
-to the update expression (i in the example):
-</p>
+<p><b>Continuing a "for" Loop</b></p>
+
+<p>When you put the <b>continue</b> keyword in a for loop, execution jumps
+to the update expression (i in the example):</p>
+
 <pre>
 <b>for</b> (<b>var</b> i = 0; i &lt; 3; i++) {
   <b>if</b> (i === 1) {
@@ -10970,19 +10916,18 @@ to the update expression (i in the example):
   console.log(i);
 }
 </pre>
-<p>
-Expected output:
-</p>
+
+<p>Expected output:</p>
+
 <blockquote>
 0<br/> 2
 </blockquote>
-<p>
-<b>Continuing a While Loop</b>
-</p>
-<p>
-When you <b>continue</b> in a while loop, execution jumps to the
-condition (i &lt; 3 in the example):
-</p>
+
+<p><b>Continuing a While Loop</b></p>
+
+<p>When you <b>continue</b> in a while loop, execution jumps to the
+condition (i &lt; 3 in the example):</p>
+
 <pre>
 <b>var</b> i = 0;
 while (i &lt; 3) {
@@ -10994,20 +10939,17 @@ while (i &lt; 3) {
   i++;
 }
 </pre>
-<p>
-Expected output:
-</p>
+
+<p>Expected output:</p>
+
 <blockquote>
 0<br/> 2
 </blockquote>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch18-6">
-Section 18.6: Break specific nested loops
-</h3>
+<h3 id="ch18-6">Section 18.6: Break specific nested loops</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-We can name our loops and break the specific one when necessary.
-</p>
+<p>We can name our loops and break the specific one when necessary.</p>
+
 <pre>
 outerloop:
 <b>for</b> (<b>var</b> i = 0;i&lt;3;i++) {
@@ -11021,9 +10963,9 @@ outerloop:
   }
 }
 </pre>
-<p>
-Output:
-</p>
+
+<p>Output:</p>
+
 <pre>
 0
 0
@@ -11031,9 +10973,7 @@ Output:
 1
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch18-7">
-Section 18.7: "do … while" loop
-</h3>
+<h3 id="ch18-7">Section 18.7: "do … while" loop</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 <b>var</b> availableName;
@@ -11041,22 +10981,18 @@ Section 18.7: "do … while" loop
   availableName = getRandomName();
 } while (isNameUsed(name));
 </pre>
-<p>
-A <b>do</b> while loop is guaranteed to run at least once as it's
+
+<p>A <b>do</b> while loop is guaranteed to run at least once as it's
 condition is only checked at the end of an iteration. A traditional
 while loop may run zero or more times as its condition is checked at the
-beginning of an iteration.
-</p>
+beginning of an iteration.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch18-8">
-Section 18.8: Break and continue labels
-</h3>
+<h3 id="ch18-8">Section 18.8: Break and continue labels</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Break and continue statements can be followed by an optional label which
+<p>Break and continue statements can be followed by an optional label which
 works like some kind of a goto statement, resumes execution from the
-label referenced position
-</p>
+label referenced position.</p>
+
 <pre>
 <b>for</b>(<b>var</b> i = 0; i &lt; 5; i++) {
   nextLoop2Iteration:
@@ -11066,7 +11002,9 @@ label referenced position
   }
 }
 </pre>
+
 <!-- page 162 -->
+
 <blockquote>
 <i><b>i=0 j=0 skips rest of j values</b></i><br/> 1 0<br/> <i><b>i=1 j=1
 skips rest of j values</b></i><br/> 2 0<br/> 2 1 <i><b>i=2 j=2 skips
@@ -11074,32 +11012,25 @@ rest of j values</b></i><br/> 3 0<br/> 3 1<br/> 3 2<br/> <i><b>i=3 j=3
 skips rest of j values</b></i><br/> 4 0<br/> 4 1<br/> 4 2<br/> 4 3<br/>
 <i><b>i=4 j=4 does not log and loops are done</b></i>
 </blockquote>
+
 <!-- page 163 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ch19">
-Chapter 19: Functions
-</h2>
+<h2 id="ch19">Chapter 19: Functions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-Functions in JavaScript provide organized, reusable code to perform a
+<p>Functions in JavaScript provide organized, reusable code to perform a
 set of actions. Functions simplify the coding process, prevent redundant
 logic, and make code easier to follow. This topic describes the
 declaration and utilization of functions, arguments, parameters, return
-statements and scope in JavaScript.
-</p>
+statements and scope in JavaScript.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch19-1">
-Section 19.1: Function Scoping
-</h3>
+<h3 id="ch19-1">Section 19.1: Function Scoping</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>
-When you define a function, it creates a <i>scope</i>.
-</p>
-<p>
-Everything defined within the function is not accessible by code outside
+<p>When you define a function, it creates a <i>scope</i>.</p>
+
+<p>Everything defined within the function is not accessible by code outside
 the function. Only code within this scope can see the entities defined
-inside the scope.
-</p>
+inside the scope.</p>
+
 <pre>
 <b>function</b> foo() {
   <b>var</b> a = &apos;hello&apos;;
@@ -11107,9 +11038,9 @@ inside the scope.
 }
 console.log(a);    // <i>reference error</i>
 </pre>
-<p>
-Nested functions are possible in JavaScript and the same rules apply.
-</p>
+
+<p>Nested functions are possible in JavaScript and the same rules apply.</p>
+
 <pre>
 <b>function</b> foo() {
   <b>var</b> a = &apos;hello&apos;;
@@ -11124,14 +11055,14 @@ Nested functions are possible in JavaScript and the same rules apply.
 console.log(a);  // <i>reference error</i>
 console.log(b);  // <i>reference error</i>
 </pre>
-<p>
-When JavaScript tries to resolve a reference or variable, it starts
+
+<p>When JavaScript tries to resolve a reference or variable, it starts
 looking for it in the current scope. If it cannot find that declaration
 in the current scope, it climbs up one scope to look for it. This
 process repeats until the declaration has been found. If the JavaScript
 parser reaches the global scope and still cannot find the reference, a
-reference error will be thrown.
-</p>
+reference error will be thrown.</p>
+
 <pre>
 <b>var</b> a = &apos;hello&apos;;
 <b>function</b> foo() {
@@ -11145,11 +11076,11 @@ reference error will be thrown.
   }
 }
 </pre>
-<p>
-This climbing behavior can also mean that one reference may "shadow"
+
+<p>This climbing behavior can also mean that one reference may "shadow"
 over a similarly named reference in the outer scope since it gets seen
-first.
-</p>
+first.</p>
+
 <pre>
 <b>var</b> a = &apos;hello&apos;;
 <b>function</b> foo() {
@@ -11159,15 +11090,14 @@ first.
   }
 }
 </pre>
-<h5>
-Version ≥ 6
-</h5>
-<p>
-The way JavaScript resolves scoping also applies to the <b>const</b>
+
+<h5>Version ≥ 6</h5>
+
+<p>The way JavaScript resolves scoping also applies to the <b>const</b>
 keyword. Declaring a variable with the <b>const</b> keyword implies that
 you are not allowed to reassign the value, but declaring it in a
-function will create a new scope and with that a new variable.
-</p>
+function will create a new scope and with that a new variable.</p>
+
 <pre>
 <b>function</b> foo () {
   <b>const</b> a = <b>true</b>;
@@ -17550,7 +17480,7 @@ event-emitting implementations.</p>
 <p><a href="https://jsfiddle.net/SO_AMK/sy8s7a3a/" 
 target="_blank" rel="noopener noreferrer">Live demo</a></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch43-2">Section 42.2: Promise chaining</h3>
+<h3 id="ch42-2">Section 42.2: Promise chaining</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then" 
@@ -19790,7 +19720,7 @@ console.log(a);  // <i>&gt;&gt; bar</i>
 <b>function</b>foo(bar, bar) {};  // <i>SyntaxError: duplicate formal argument bar</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch50-5">Section 50.6: Function scoping in strict mode</h3>
+<h3 id="ch50-6">Section 50.6: Function scoping in strict mode</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>In Strict Mode, functions declared in a local block are inaccessible
 outside the block.</p>
@@ -20107,6 +20037,7 @@ assign(obj, propName, &apos;Value&apos;);
 // <i>}</i>
 // <i>}</i>
 </pre>
+
 <!-- page 302 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch53">Chapter 53: Binary Data</h2>
@@ -20610,6 +20541,7 @@ fetch(&grave;/example/submit.json&grave;, {
   })
 });
 </pre>
+
 <!-- page 310 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch55-4">Section 55.4: Send cookies</h3>
@@ -21373,7 +21305,7 @@ A fiddle to illustrate this</a>.</p>
 
 <!-- page 322 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch57">Chapter 57: Modules</h2>
+<h2 id="ch57">Chapter 57: Modules</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch57-1">Section 57.1: Defining a module</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -23671,9 +23603,9 @@ target="_blank" rel="noopener noreferrer">Webpack</a></p>
 
 <!-- page 361 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch69">Chapter 69: Automatic Semicolon Insertion - ASI</h2>
+<h2 id="ch69">Chapter 69: Automatic Semicolon Insertion - ASI</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch68-1">Section 69.1: Avoid semicolon insertion on return statements</h3>
+<h3 id="ch69-1">Section 69.1: Avoid semicolon insertion on return statements</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The JavaScript coding convention is to place the starting bracket of
 blocks on the same line of their declaration:</p>
@@ -25723,7 +25655,7 @@ async <b>function</b> getFriendPosts(user) {
 await will wait for <i>all</i> promises to be complete. Promise.all
 combines them into a single promise, but they are done in parallel.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch82">Chapter 82: Async Iterators</h3>
+<h2 id="ch82">Chapter 82: Async Iterators</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>An async function is one that returns a promise. await yields to the caller until 
 the promise resolves and then continues with the result.</p>
@@ -28646,7 +28578,7 @@ a = b = 0;
 <p>This will make sure that both a and b will be local variables.</p>
 <!-- page 448 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch104">Chapter 104: Performance Tips</h3>
+<h2 id="ch104">Chapter 104: Performance Tips</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JavaScript, like any language, requires us to be judicious in the use of
 certain language features. Overuse of some features can decrease
