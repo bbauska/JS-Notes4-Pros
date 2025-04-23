@@ -6,6 +6,7 @@ title: |
 author: "bbauska"
 date last editted: "11/05/2024 Tue 11+am"
 date last editted: "11/22/2024 Fri 3+pm"
+date last editted: "4/23/2024 Wed 4+pm"
 ---
 
 &#128169;
@@ -19102,7 +19103,7 @@ y = 4;
 <p align="left">
   <img src="/images/image037.jpg"
   title="The page at www.w3schools.com says: NaN"
-  alt="The page at www.w3schools.com says: NaN"
+  alt="The page at www.w3schools.com says: NaN."
   style="border: 2px solid #000000; width:4in;" />
 <!-- {width="4.090277777777778in" height="2.1534722222222222in"} -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21334,7 +21335,7 @@ NavigationNs.pagination.prototype = function() {
 <!-- <p align="left">
   <img src="/images/image038.png"
   title=""
-  alt=""
+  alt="."
   style="border: 2px solid #000000; width:5.5in;" />
 -->
 <!-- ![](./images/image038.png){width="7.486805555555556in" height="7.459722222222222in"} -->
@@ -21476,7 +21477,7 @@ specify the exact object that is being created.</p>
 <p align="left">
   <img src="./images/image039.png"
   title="Abstract Factory Pattern: used to define specific instances or classes without
-    having to specify the exact object being created."
+    having to specify the exact object being created"
   alt="Abstract Factory Pattern: used to define specific instances or classes without
     having to specify the exact object being created."
   style="border: 2px solid #000000; width:5.5in;" />
@@ -21543,7 +21544,7 @@ of ignoring that part.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 40.  (356) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image040.png"
-  title="."
+  title=""
   alt="."
   style="border: 2px solid #000000; width:5.5in;" />
 <p>Credit to <a href="http://stackoverflow.com/a/2401861/6194193" 
@@ -24822,11 +24823,11 @@ features for optimal results.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 42/43.  (4xx) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
   <img src="./images/image042.png"
-  title="."
+  title=""
   alt="."
   style="border: 2px solid #000000; width:7.48in;" />
 <img src="./images/image043.png"
-  title="."
+  title=""
   alt="."
   style="border: 2px solid #000000; width:7.48in;" />
 <!--
@@ -27061,10 +27062,50 @@ array always processes better even if it&apos;s doing extra statement.</p>
 <b>function</b> f1() {
   <b>var</b> P = <b>function</b>() {
     <b>this</b>.value = 1
-};
-<b>var</b> big_array = <b>new</b> Array(10000000).fill(1).map((x, index) =&gt; {
+  };
+  <b>var</b> big_array = <b>new</b> Array(10000000).fill(1).map((x, index) =&gt; {
 </pre>
 <!-- page 454 -->
+<!-- 
+  p = new P();
+  if (index > 5000000) {
+    p.x = "some string";
+  }
+  return p;
+  });
+  big_array.reduce((sum, p) => sum + p.value;
+  }
+  
+function f2() {
+  var P = function () {
+    this.value = 1;
+	this.x = null;
+  };
+  var big_array = new Array(10000000).fill(1).map((x, index) => {
+    p = new P();
+	if (index > 5000000) {
+	  p.x = "some string";
+	}
+	return p;
+  });
+  big_array.reduce((sum, p) => sum + p.value, 0);
+}
+
+(function perform() {
+  var start = performance.now();
+  f1();
+  var duration = performance.new() - start;
+  
+  console.log('duraction of f1 ' + duration);
+  
+  start = performance.new();
+  f2();
+  duration = performance.now() - start;
+  
+  console.log('duration of f2 ' + duration);
+})()
+end of image/code 
+-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~ 55. functions f1, f2 & perform() (454) ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
