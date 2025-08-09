@@ -1,3 +1,4 @@
+/* add line numbers to all 'pre' tag items */
 (function() {
     var pre = document.getElementsByTagName('pre'),
         pl = pre.length;
