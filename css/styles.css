@@ -18,8 +18,7 @@ img.displayed {
 .border {
   border-width: 1px;
   border-color: #778899;  /* dark grayish blue */
-  border-style: solid; 
-}
+  border-style: solid; }
 .img-container {
   display: block;
   text-align: center;
@@ -27,39 +26,16 @@ img.displayed {
 .lighter {
   font-weight: 100;
 }
-
-blockquote{    
-    font-size: 13px;  /* 35px; */
-    line-height:32px;  /* 52px; */
-    margin: 14px 0;  /* 28px */
-    overflow: hidden;
-    padding: 0 0 0 13px;  /* 0 0 0 26px; */
-    font-weight: 500;  /* 100 */
-    color: #000000;  /* cc6b39; moderate orange */
-    position: relative;
-}
-blockquote:before {
-    content: "";
-    border-left: 2px solid #39348f;  /* dark moderate blue */
-    position: absolute;
-    bottom: 7px;  /* 14px; */
-    top: 7px; /* 13px; */
-    left: 15px;  /* 0 */
-}
-
-/* blockquote { */
-/*  margin: 15px 0 30px; */
-/*  padding-left: 15px; */
-/*  border-left: 5px solid #1371b8; */
-/* } */
+/*
 
 font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", 
   "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-
-p { font-size: 13px;
-    font-family: Bahnschrift, Inter, Helvetic, sans-serif;
-    text-align: left; 
-    margin-left: 5px; }
+p { 
+  font-size: 15px;
+  font-family: Bahnschrift, Inter, Helvetic, sans-serif;
+  text-align: left; 
+  margin-left: 10px;
+}
 p.em1 {
   margin-left: 1em; }
 p.em2 {
@@ -71,18 +47,34 @@ p.em4 {
 
 /* background: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%); */
 background: linear-gradient(34deg, #5cc0fb 0%, transparent 48.18%, #83d8ff 56.429%, rgba(134,252,212,0.36) 100%);
-
+/* unvisited link */
+a:link {
+  color: #000000;  /* black */
+  background: #add8e6;  /* lightblue */
+}
+/* visited link */
+a:visited {
+  background: #ffea00;  /* bright yellow */
+  color: #000000;  /* black */
+}
+/* mouse over link */
+a:hover {
+  background: #76ff76;  /* ffffed very light yellow, was black */
+  color: #006700;  /* dark green, hotpink */
+}
+/* selected link */
+a:active {
+  color: #00008b;  /* darkblue */
+  background: #ffea00;  /* bright yellow */
+}
 a {
   text-decoration: none; 
 }
 a[href]:hover {
-  color: #000000;  /* black */
-  background-color: #ffff00;  /* pure (or mostly pure) yellow */
+  color: #000000;
+  background-color: #76ff76;  /* #76ff76 #ffff00 yellow */
   text-decoration: underline; 
 }
-a.three:link {color:#ffff00;}
-a.three:visited {color:#000;}
-a.three:hover {background:#ee7;}
 
 h1 { font-size: 21px;
      font-family: Inter, Georgia, BahnSchrift, sans-serif, Consolas; }
@@ -149,25 +141,6 @@ details[open] > summary {
   background-color: #ffff00;  /* pure (or mostly pure) yellow */
 }
 
-pre, code {
-  font-family: monospace, monospace;
-  font-size: 11px;
-  margin-left: 10px;
-  }
-pre {
-  overflow: auto;
-}
-pre > code {
-  display: block;
-  margin-left: 10px;
-  padding: .2rem;
-  word-wrap: normal;
-}
-pre[href]:hover {
-  text-decoration: none;
-  }
-pre:hover, pre:focust { width: min-content; }
-
 /* line numbers */
   .editor {
     display: inline-flex;
@@ -207,15 +180,6 @@ textarea {
 }
 /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~**/
 /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ from js-programs ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~**/
-img.displayed {
-  display: block;
-  margin: 0 auto;
-}
-.border {
-  border-width: 1px;
-  border-color: #778899;  /* dark grayish blue */
-  border-style: solid; }
-
 ol,ul li { 
   line-height: 130%;
 }
@@ -238,83 +202,11 @@ blockquote p {
   display: inline;
 }
 
-p { 
-  font-size: 15px;
-  font-family: Bahnschrift, Inter, Helvetic, sans-serif;
-  text-align: left; 
-  margin-left: 10px;
-}
-
-/* unvisited link */
-a:link {
-  color: #000000;  /* black */
-  background: #add8e6;  /* lightblue */
-}
-/* visited link */
-a:visited {
-  background: #ffea00;  /* bright yellow */
-  color: #000000;  /* black */
-}
-/* mouse over link */
-a:hover {
-  background: #76ff76;  /* ffffed very light yellow, was black */
-  color: #006700;  /* dark green, hotpink */
-}
-/* selected link */
-a:active {
-  color: #00008b;  /* darkblue */
-  background: #ffea00;  /* bright yellow */
-}
-a {
-  text-decoration: none; 
-}
-a[href]:hover {
-  color: #000000;
-  background-color: #76ff76;  /* #76ff76 #ffff00 yellow */
-  text-decoration: underline; 
-}
-
 div {
   float: left; 
 }
 
-h2,h3,h4,h5,h6 {
-  margin-left: 10px;
-  font-family: Bahnschrift, Inter, Helvetic, sans-serif, Consolas; 
-  text-align: left;
-}
-h1 { 
-  font-size: 25px;
-  font-family: Bahnschrift, Inter, Helvetic, sans-serif, Consolas;
-  text-align: center;
-}
-h2 { 
-  font-size: 18px;
-}
-h3 { 
-  font-size: 17px;
-}
-h4 { 
-  font-size: 13px;
-}
-h5 { 
-  font-size: 12px;
-}
-h6 { 
-  font-size: 10px;
-}
-
 background: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%)
-
-body {
-  font-family: Bahnschrift, Inter, Helvetic, sans-serif;
-  font-size: 1.2rem;
-  background-color: #eee;  /* very light gray */
-  color: #000000;  /* black */
-  text-align: left;
-/*  margin-left: 10px; */
-  margin: 0 auto;
-}
 
 #myBtn {
   display: none;
