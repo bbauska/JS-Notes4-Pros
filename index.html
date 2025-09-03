@@ -2539,16 +2539,13 @@ jsFiddle example</a>.</p>
 <pre>&quot;   some whitespaced string   &quot;.trim();  // <i>&quot;some whitespaced string&quot;</i></pre>
 
 <p>Many JavaScript engines, but
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft#Browser_compatibility" 
-target="_blank" rel="noreferrer noopener">not Internet Explorer</a>,
-have implemented non-standard trimLeft and trimRight methods. There is a
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft#Browser_compatibility" target="_blank" rel="noreferrer noopener">not Internet Explorer</a>, have 
+implemented non-standard trimLeft and trimRight methods. There is a 
 <a href="https://github.com/sebmarkbage/ecmascript-string-left-right-trim" 
-target="_blank" rel="noreferrer noopener">proposal</a>, currently at
-Stage 1 of the process, for standardised trimStart and trimEnd methods,
-aliased to trimLeft and trimRight for compatibility.</p>
+target="_blank" rel="noreferrer noopener">proposal</a>, currently at Stage 1 of the process, 
+for standardised trimStart and trimEnd methods, aliased to trimLeft and trimRight for compatibility.</p>
 
-<pre>
-// <i>Stage 1 proposal</i>
+<pre>// <i>Stage 1 proposal</i>
 &quot;    this is me    &quot;.trimStart();  // <i>&quot;this is me    &quot;</i>
 &quot;    this is me    &quot;.trimEnd();  // <i>&quot;    this is me&quot;</i>
 // <i>Non-standard methods, but currently implemented by most engines</i>
@@ -2791,24 +2788,20 @@ replacement|replaceFunction )</a></p>
 <p>replace() will return a string that has all occurrences of substrings
 matching the
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp" 
-target="_blank" rel="noreferrer noopener">RegExp</a> regexp or string
-substring with a string replacement or the returned value of
-replaceFunction.</p>
+target="_blank" rel="noreferrer noopener">RegExp</a> regexp or string substring with a string 
+replacement or the returned value of replaceFunction.</p>
 
-<p>Note that this does not modify the string in place, but returns the
-string with replacements.</p>
+<p>Note that this does not modify the string in place, but returns the string with replacements.</p>
 
-<pre>
-<b>var</b> string = &quot;Hello, World!&quot;;
+<pre><b>var</b> string = &quot;Hello, World!&quot;;
 string = string.replace( &quot;Hello&quot;, &quot;Bye&quot; );
 console.log( string ); // <i>&quot;Bye, World!&quot;</i>
 string = string.replace( <i>/W.{3}d/g</i>, &quot;Universe&quot; );
 console.log( string ); // <i>&quot;Bye, Universe!&quot;</i>
 </pre>
 
-<p>replaceFunction can be used for conditional replacements for regular
-expression objects (i.e., with use with regexp). The parameters are in
-the following order:</p>
+<p>replaceFunction can be used for conditional replacements for regular expression objects 
+(i.e., with use with regexp). The parameters are in the following order:</p>
 
 <p><b>Parameter Meaning</b></p>
 
@@ -3376,8 +3369,7 @@ Mon Jan 31 2000 13:00:00 GMT+0100 (West-Europa (standaardtijd))
 <p><b>Formatting a JavaScript date in modern browsers</b></p>
 
 <p>In modern browsers (*),
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString" 
-target="_blank" rel="noreferrer noopener">Date.prototype.toLocalDateString()</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString" target="_blank" rel="noreferrer noopener">Date.prototype.toLocalDateString()</a>
 allows you to define the formatting of a Date in a convenient manner.</p>
 
 <p>It requires the following format:</p>
@@ -3835,8 +3827,7 @@ operators which will not perform any implicit type conversions.</p>
 
 <p>Further reference to this topic can be found here:</p>
 
-<p><a href="http://stackoverflow.com/questions/359494/does-it-matter-which-equals-operator-vs-i-use-in-javascript-comparisons" 
-target="_blank" rel="noopener noreferrer"> Which equals operator (== vs ===) should be 
+<p><a href="http://stackoverflow.com/questions/359494/does-it-matter-which-equals-operator-vs-i-use-in-javascript-comparisons" target="_blank" rel="noopener noreferrer"> Which equals operator (== vs ===) should be 
 used in JavaScript comparisons?</a>.</p>
 
 <p>Abstract Equality (==)</p>
@@ -3846,17 +3837,15 @@ used in JavaScript comparisons?</a>.</p>
 <p><b>NaN</b> ("<b>N</b>ot <b>a</b> <b>N</b>umber") is a special value
 defined by the
 <a href="https://ieeexplore.ieee.org/document/8766229" target="_blank" rel="noopener noreferrer">
-<i>IEEE Standard for Floating-Point Arithmetic</i></a>, which is used
-when a non-numeric value is provided but a number is expected (1 *
-“two”), or when a calculation doesn't have a valid number result ((-1)).</p>
+<i>IEEE Standard for Floating-Point Arithmetic</i></a>, which is used when a non-numeric 
+value is provided but a number is expected (1 &ast; “two”), or when a calculation doesn't 
+have a valid number result ((-1)).</p>
 
-<p>Any equality or relational comparisons with <b>NaN</b> returns
-<b>false</b>, even comparing it with itself. Because, <b>NaN</b> is
-supposed to denote the result of a nonsensical computation, and as such,
-it isn’t equal to the result of any other nonsensical computations.</p>
+<p>Any equality or relational comparisons with <b>NaN</b> returns <b>false</b>, even comparing 
+it with itself. Because, <b>NaN</b> is supposed to denote the result of a nonsensical 
+computation, and as such, it isn’t equal to the result of any other nonsensical computations.</p>
 
-<pre>
-(1 &ast; &quot;two&quot;) === <b>NaN</b>   // <i>false</i>
+<pre>(1 &ast; &quot;two&quot;) === <b>NaN</b>   // <i>false</i>
 
 <b>NaN</b> === 0;                    // <i>false</i>
 <b>NaN</b> === <b>NaN</b>;           // <i>false</i>
@@ -3871,8 +3860,7 @@ Number.<b>NaN</b> === <b>NaN</b>;  // <i>false</i>
 
 <p>Non-equal comparisons will always return <b>true</b>:</p>
 
-<pre>
-<b>NaN</b> !== 0;   // <i>true</i>
+<pre><b>NaN</b> !== 0;   // <i>true</i>
 <b>NaN</b> !== <b>NaN</b>; // <i>true</i>
 </pre>
 
@@ -3880,11 +3868,9 @@ Number.<b>NaN</b> === <b>NaN</b>;  // <i>false</i>
 
 <h5>Version ≥ 6</h5>
 
-<p>You can test a value or expression for <b>NaN</b> by using the function
-Number.isNaN():</p>
+<p>You can test a value or expression for <b>NaN</b> by using the function Number.isNaN():</p>
 
-<pre>
-Number.isNaN(<b>NaN</b>);        // <i>true</i>
+<pre>Number.isNaN(<b>NaN</b>);        // <i>true</i>
 Number.isNaN(0 / 0);      // <i>true</i>
 Number.isNaN(&apos;str&apos; &minus; 12); // <i>true</i>
 
@@ -3899,19 +3885,16 @@ Number.isNaN({});        // <i>false</i>
 </pre>
 
 <!-- page 62 -->
-
 <h5>Version &lt; 6</h5>
 
 <p>You can check if a value is <b>NaN</b> by comparing it with itself:</p>
 
-<pre>
-value !== value;  // <i>true for NaN, false for any other value</i>
+<pre>value !== value;  // <i>true for NaN, false for any other value</i>
 </pre>
 
 <p>You can use the following polyfill for Number.isNaN():</p>
 
-<pre>
-Number.isNaN = Number.isNaN &vert;&vert; <b>function</b>(value) {
+<pre>Number.isNaN = Number.isNaN &vert;&vert; <b>function</b>(value) {
   <b>return</b> value !== value;
 }
 </pre>
@@ -3920,8 +3903,7 @@ Number.isNaN = Number.isNaN &vert;&vert; <b>function</b>(value) {
 for <b>NaN</b>, but also for any value or expression that cannot be
 coerced into a number:</p>
 
-<pre>
-isNaN (<b>NaN</b>);       // <i>true</i>
+<pre>isNaN (<b>NaN</b>);       // <i>true</i>
 isNaN(0/0);       // <i>true</i>
 isNaN(&apos;str&apos;&minus; 12); // <i>true</i>
 
@@ -3939,8 +3921,7 @@ ECMAScript 6, can be invoked with Object.is. Unlike the == and ===
 comparison, using Object.is() will treat <b>NaN</b> as identical with
 itself (and -0 as note identical with +0):</p>
 
-<pre>
-Object.is(<b>NaN, NaN</b>)      // <i>true</i>
+<pre>Object.is(<b>NaN, NaN</b>)      // <i>true</i>
 Object.is(+0, 0)         // <i>false</i>
 
 <b>NaN</b> === <b>NaN</b>              // <i>false</i>
@@ -3953,8 +3934,7 @@ Object.is(+0, 0)         // <i>false</i>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is#Polyfill_for_non-ES6_browsers" 
 target="_blank" rel="noopener noreferrer">MDN</a>):</p>
 
-<pre>
-<b>if</b> (!Object.is) {
+<pre><b>if</b> (!Object.is) {
   Object.is = <b>function</b>(x, y) {
     // <i>SameValue algorithm</i>
     <b>if</b> (x === y) { // <i>Steps 1-5, 7-10</i>
@@ -3974,28 +3954,24 @@ target="_blank" rel="noopener noreferrer">MDN</a>):</p>
 "NaN", and most importantly (though perhaps unintuitively):</p>
 
 <!-- page 63 -->
-
 <pre><b>typeof</b>(<b>NaN</b>) === &quot;number&quot;;  // <i>true</i></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-3">Section 10.3: Short-circuiting in boolean operators</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The and-operator (&amp;&amp;) and the or-operator (||) employ
-short-circuiting to prevent unnecessary work if the outcome of the
-operation does not change with the extra work.</p>
+<p>The and-operator (&amp;&amp;) and the or-operator (||) employ short-circuiting to prevent 
+unnecessary work if the outcome of the operation does not change with the extra work.</p>
 
-<p>In x &amp;&amp; y, y will not be evaluated if x evaluates to
-<b>false</b>, because the whole expression is guaranteed to be
-<b>false</b>.</p>
+<p>In x &amp;&amp; y, y will not be evaluated if x evaluates to <b>false</b>, because the whole 
+expression is guaranteed to be <b>false</b>.</p>
 
-<p>In x || y, y will not be evaluated if x evaluated to <b>true</b>,
-because the whole expression is guaranteed to be <b>true</b>.</p>
+<p>In x || y, y will not be evaluated if x evaluated to <b>true</b>, because the whole 
+expression is guaranteed to be <b>true</b>.</p>
 
 <p><b>Example with functions</b></p>
 
 <p>Take the following two functions:</p>
 
-<pre>
-<b>function</b> T() {  // <i>True</i>
+<pre><b>function</b> T() {  // <i>True</i>
   console.log(&quot;T&quot;);
   <b>return</b> <b>true</b>;
 }
@@ -4049,16 +4025,14 @@ because the whole expression is guaranteed to be <b>true</b>.</p>
 
 <p><b>Short-circuiting to prevent errors</b></p>
 
-<pre>
-<b>var</b> obj; // <i>object has value of undefined</i>
+<pre><b>var</b> obj; // <i>object has value of undefined</i>
 <b>if</b>(obj.property){ }// <i>TypeError: Cannot read property &apos;property&apos; of undefined</i>
 <b>if</b>(obj.property && obj !== <b>undefined</b>){}// <i>Line A TypeError: Cannot read property &apos;property&apos; of 
 undefined</i>
 </pre>
 
-<p>Line A: if you reverse the order the first conditional statement will
-prevent the error on the second by not executing it if it would throw
-the error.</p>
+<p>Line A: if you reverse the order the first conditional statement will prevent the error on 
+the second by not executing it if it would throw the error.</p>
 
 <pre><b>if</b> (obj !== <b>undefined</b> && obj.property ) {}; // <i>no error thrown</i></pre>
 
@@ -4069,14 +4043,12 @@ the error.</p>
 
 <p><b>Short-circuiting to provide a default value</b></p>
 
-<p>The || operator can be used to select either a "truthy" value, or the
-default value.</p>
+<p>The || operator can be used to select either a "truthy" value, or the default value.</p>
 
-<p>For example, this can be used to ensure that a nullable value is
-converted to a non-nullable value:</p>
+<p>For example, this can be used to ensure that a nullable value is converted to a non-nullable 
+value:</p>
 
-<pre>
-<b>var</b> nullableObj = <b>null</b>;
+<pre><b>var</b> nullableObj = <b>null</b>;
 <b>var</b> obj = nullableObj &vert;&vert; {}; // <i>this selects {}</i>
 
 <b>var</b> nullableObj2 = {x : 5};
@@ -4085,24 +4057,20 @@ converted to a non-nullable value:</p>
 
 <p>Or to return the first truthy value</p>
 
-<pre>
-<b>var</b> truthyValue = {x : 10};
+<pre><b>var</b> truthyValue = {x : 10};
 <b>return</b> truthyValue &vert;&vert; {}; // <i>will return {x: 10}</i>
 </pre>
 
 <p>The same can be used to fall back multiple times:</p>
 
-<pre>
-envVariable &vert;&vert; configValue &vert;&vert; defaultConstValue // <i>select the first &quot;truthy&quot; of these</i>
+<pre>envVariable &vert;&vert; configValue &vert;&vert; defaultConstValue // <i>select the first &quot;truthy&quot; of these</i>
 </pre>
 
 <p><b>Short-circuiting to call an optional function</b></p>
 
-<p>The &amp;&amp; operator can be used to evaluate a callback, only if it
-is passed:</p>
+<p>The &amp;&amp; operator can be used to evaluate a callback, only if it is passed:</p>
 
-<pre>
-<b>function</b> myMethod (cb){
+<pre><b>function</b> myMethod (cb){
   // <i>This can be simplified</i>
   <b>if</b> (cb) {
     cb();
@@ -4114,15 +4082,14 @@ is passed:</p>
 
 <!-- page 65 -->
 
-<p>Of course, the test above does not validate that cb is in fact a
-<b>function</b> and not just an Object/Array/String/Number.</p>
+<p>Of course, the test above does not validate that cb is in fact a <b>function</b> and not just 
+an Object/Array/String/Number.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-4">Section 10.4: Null and Undefined</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><b>The differences between null and undefined</b></p>
 
-<p>null</b> and <b>undefined</b> share abstract equality == but not strict
-equality ===,</p>
+<p>null</b> and <b>undefined</b> share abstract equality == but not strict equality ===,</p>
 
 <pre>
 <b>null</b> == <b>undefined</b>  // <i>true</i>
@@ -4154,8 +4121,7 @@ equality ===,</p>
 
 <p><b>null</b> and <b>undefined</b> are both falsy.</p>
 
-<pre>
-<b>if</b> (<b>null</b>) console.log(&quot;won&apos;t be logged&quot;);
+<pre><b>if</b> (<b>null</b>) console.log(&quot;won&apos;t be logged&quot;);
 <b>if</b> (<b>undefined</b>) console.log(&quot;won&apos;t be logged&quot;);
 </pre>
 
@@ -4163,8 +4129,7 @@ equality ===,</p>
 <a href="http://stackoverflow.com/q/19277458/220060" 
 target="_blank" rel="noopener noreferrer">this question</a>).</p>
 
-<pre>
-<b>false</b> == <b>undefined</b>  // <i>false</i>
+<pre><b>false</b> == <b>undefined</b>  // <i>false</i>
 <b>false</b> == <b>null</b>       // <i>false</i>
 <b>false</b> === <b>undefined</b> // <i>false</i>
 <b>false</b> === <b>null</b>      // <i>false</i>
@@ -4189,13 +4154,11 @@ target="_blank" rel="noopener noreferrer">this question</a>).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- page 66 -->
 
-<p>Operands of the abstract equality operator are compared <i>after</i>
-being converted to a common type. How this conversion happens is based
-on the specification of the operator:</p>
+<p>Operands of the abstract equality operator are compared <i>after</i> being converted to 
+a common type. How this conversion happens is based on the specification of the operator:</p>
 
 <p><a href="https://tc39.github.io/ecma262/#sec-abstract-equality-comparison" 
-target="_blank" rel="noopener noreferrer">Specification for the ==
-operator:</a></p>
+target="_blank" rel="noopener noreferrer">Specification for the == operator:</a></p>
 
 <blockquote>
 <b>7.2.13 Abstract Equality Comparison</b> The comparison x == y, where
@@ -4225,8 +4188,7 @@ comparison is performed as follows:
 
 <p><b>Examples:</b></p>
 
-<pre>
-1 == 1;                      // <i>true</i>
+<pre>1 == 1;                      // <i>true</i>
 1 == <b>true</b>;                  // <i>true (operand converted to number: true =&bsol;1)</i>
 1 == &apos;1&apos;;                   // <i>true (operand converted to number: &apos;1&apos; =&bsol;1 )</i>
 1 == &apos;1.00&apos;;                // <i>true</i>
@@ -4241,8 +4203,7 @@ comparison is performed as follows:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-6">Section 10.6: Logic Operators with Booleans</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre>
-<b>var</b> x = <b>true</b>,
+<pre><b>var</b> x = <b>true</b>,
    y = <b>false</b>;
 </pre>
 
@@ -4270,8 +4231,8 @@ be evaluated if x evaluates to <b>true</b>.</p>
 
 <p><b>NOT</b></p>
 
-<p>This operator will return false if the expression on the right evaluates
-to true, and return true if the expression on the right evaluates to false.</p>
+<p>This operator will return false if the expression on the right evaluates to true, and 
+return true if the expression on the right evaluates to false.</p>
 
 <pre>!x;</pre>
 
@@ -4279,22 +4240,18 @@ to true, and return true if the expression on the right evaluates to false.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-7">Section 10.7: Automatic Type Conversions</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Beware that numbers can accidentally be converted to strings or NaN (Not
-a Number).</p>
+<p>Beware that numbers can accidentally be converted to strings or NaN (Not a Number).</p>
 
-<p>JavaScript is loosely typed. A variable can contain different data
-types, and a variable can change its data type:</p>
+<p>JavaScript is loosely typed. A variable can contain different data types, and a 
+variable can change its data type:</p>
 
-<pre>
-<b>var</b> x = &quot;Hello&quot;;   // <i>typeof x is a string</i>
+<pre><b>var</b> x = &quot;Hello&quot;;   // <i>typeof x is a string</i>
 x = 5;                  // <i>changes typeof x to a number</i>
 </pre>
 
-<p>When doing mathematical operations, JavaScript can convert numbers to
-strings:</p>
+<p>When doing mathematical operations, JavaScript can convert numbers to strings:</p>
 
-<pre>
-<b>var</b> x = 5 + 7;   // <i>x.valueOf() is 12, typeof x is a number</i>
+<pre><b>var</b> x = 5 + 7;   // <i>x.valueOf() is 12, typeof x is a number</i>
 <b>var</b> x = 5 + &quot;7&quot;; // <i>x.valueOf() is 57, typeof x is a string</i>
 <b>var</b> x = &quot;5&quot; + 7; // <i>x.valueOf() is 57, typeof x is a string</i>
 <b>var</b> x = 5 - 7;   // <i>x.valueOf() is -2, typeof x is a number</i>
@@ -4303,19 +4260,17 @@ strings:</p>
 <b>var</b> x = 5 - &quot;x&quot;; // <i>x.valueOf() is NaN, typeof x is a number</i>
 </pre>
 
-<p>Subtracting a string from a string, does not generate an error but
-returns NaN (Not a Number):</p>
+<p>Subtracting a string from a string, does not generate an error but returns NaN (Not a 
+Number):</p>
 
 <pre>&quot;Hello&quot; &minus; &quot;Dolly&quot; // <i>returns NaN</i></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-8">Section 10.8: Logic Operators with Non-boolean values (boolean coercion)</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Logical OR (||), reading left to right, will evaluate to the first
-<i>truthy</i> value. If no <i>truthy</i> value is found, the last value
-is returned.</p>
+<p>Logical OR (||), reading left to right, will evaluate to the first <i>truthy</i> value. 
+If no <i>truthy</i> value is found, the last value is returned.</p>
 
-<pre>
-<b>var</b> a = &apos;hello&apos; &vert;&vert; &apos;&apos;; // <i>a = &apos;hello&apos;</i>
+<pre><b>var</b> a = &apos;hello&apos; &vert;&vert; &apos;&apos;; // <i>a = &apos;hello&apos;</i>
 <b>var</b> b = &apos;&apos; &vert;&vert; &lbrack;&rbrack;; // <i>b = &lbrack;&rbrack;</i>
 <b>var</b> c = &apos;&apos; &vert;&vert; <b>undefined</b>; // <i>c = undefined</i>
 <b>var</b> d = 1 &vert;&vert; 5; // <i>d = 1</i>
@@ -4324,14 +4279,12 @@ is returned.</p>
 <b>var</b> g = &apos;&apos; &vert;&vert; &apos;yay&apos; &vert;&vert; &apos;boo&apos;; // <i>g = &apos;yay&apos;</i>
 </pre>
 
-<p>Logical AND (&amp;&amp;), reading left to right, will evaluate to the
-first <i>falsy</i> value. If no <i>falsey</i> value is found, the last
-value is returned.</p>
+<p>Logical AND (&amp;&amp;), reading left to right, will evaluate to the first <i>falsy</i> 
+value. If no <i>falsey</i> value is found, the last value is returned.</p>
 
 <!-- page 68 -->
 
-<pre>
-<b>var</b> a = &apos;hello&apos; && &apos;&apos;; // <i>a = &apos;&apos;</i>
+<pre><b>var</b> a = &apos;hello&apos; && &apos;&apos;; // <i>a = &apos;&apos;</i>
 <b>var</b> b = &apos;&apos; && &lbrack;&rbrack;;  // <i>b = &apos;&apos;</i>
 <b>var</b> c = <b>undefined</b> && 0;  // <i>c = undefined</i>
 <b>var</b> d = 1 && 5; // <i>d = 5</i>
@@ -4340,11 +4293,9 @@ value is returned.</p>
 <b>var</b> g = &apos;bye&apos; && <b>undefined</b> && &apos;adios&apos;; // <i>g = undefined</i>
 </pre>
 
-<p>This trick can be used, for example, to set a default value to a
-function argument (prior to ES6).</p>
+<p>This trick can be used, for example, to set a default value to a function argument (prior to ES6).</p>
 
-<pre>
-<b>var</b>
+<pre><b>var</b>
 <b>var</b> foo = <b>function</b> (val) {
   // <i>if val evaluates to falsey, &apos;default&apos; will be returned instead.</i>
   <b>return</b> val &vert;&vert; &apos;default&apos;;
@@ -4357,29 +4308,23 @@ console.log(foo(0));                  // <i>default</i>
 console.log(foo(<b>undefined</b>));   // <i>default</i>
 </pre>
 
-<p>Just keep in mind that for arguments, 0 and (to a lesser extent) the
-empty string are also often valid values that should be able to be
-explicitly passed and override a default, which, with this pattern, they
-won’t (because they are <i>falsy</i>).</p>
+<p>Just keep in mind that for arguments, 0 and (to a lesser extent) the empty string are also 
+often valid values that should be able to be explicitly passed and override a default, which, 
+with this pattern, they won’t (because they are <i>falsy</i>).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch10-9">Section 10.9: Empty Array</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre>
-/<i>&ast; ToNumber(ToPrimitive(&lbrack;&rbrack;)) == ToNumber(false)</i> &ast;/
+<pre>/<i>&ast; ToNumber(ToPrimitive(&lbrack;&rbrack;)) == ToNumber(false)</i> &ast;/
 &lbrack;&rbrack; == <b>false</b>; // <i>true</i>
 </pre>
 
-<p>When [].toString() is executed it calls [].join() if it exists, or
-Object.<b>prototype</b>.toString() otherwise. This comparison is
-returning <b>true</b> because [].join() returns ’’ which, coerced into
-0, is equal to false.
-<a href="http://www.ecma-international.org/ecma-262/5.1/" 
+<p>When [].toString() is executed it calls [].join() if it exists, or Object.<b>prototype</b>.toString() otherwise. This comparison is returning <b>true</b> because [].join() returns ’’ which, coerced 
+into 0, is equal to false. <a href="http://www.ecma-international.org/ecma-262/5.1/" 
 target="_blank" rel="noopener noreferrer">ToNumber</a>.</p>
 
 <p>Beware though, all objects are truthy and Array is an instance of Object:</p>
 
-<pre>
-// <i>Internally this is evaluated as ToBoolean(&lbrack;&rbrack;) === true ? &apos;truthy&apos; : &apos;falsy&apos;</i>
+<pre>// <i>Internally this is evaluated as ToBoolean(&lbrack;&rbrack;) === true ? &apos;truthy&apos; : &apos;falsy&apos;</i>
 &lbrack;&rbrack; ? &apos;truthy&apos; : &apos;falsy&apos;; // <i>&apos;truthy&apos;</i>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4390,8 +4335,7 @@ target="_blank" rel="noopener noreferrer">ToNumber</a>.</p>
 <p><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-samevalue" 
 target="_blank" rel="noopener noreferrer"><b>SameValue</b></a></p>
 
-<p>It returns <b>true</b> if both operands belong to the same Type and are
-the same value.</p>
+<p>It returns <b>true</b> if both operands belong to the same Type and are the same value.</p>
 
 <p>Note: the value of an object is a reference.</p>
 
@@ -4399,8 +4343,7 @@ the same value.</p>
 
 <p>Examples:</p>
 
-<pre>
-Object.is(1, 1);            // <i>true</i>
+<pre>Object.is(1, 1);            // <i>true</i>
 Object.is(&plus;0, &minus;0);          // false</i>
 Object.is(<b>NaN</b>, <b>NaN</b>);        // <i>true</i>
 Object.is(<b>true</b>, &quot;true&quot;);   // <i>false</i>
@@ -4436,8 +4379,8 @@ target="_blank" rel="noopener noreferrer">SameValueZero</a></p>
 <p>You can use this comparison algorithm via (ECMAScript 7).</p>
 
 <p>Examples:</p>
-<pre>
-&lbrack;1&rbrack;.includes(1); // <i>true</i>
+
+<pre>&lbrack;1&rbrack;.includes(1); // <i>true</i>
 &lbrack;&plus;0&rbrack;.includes(&minus;0); // <i>true</i>
 &lbrack;<b>NaN</b>&rbrack;.includes(<b>NaN</b>); // <i>true</i>
 &lbrack;<b>true</b>&rbrack;.includes(&quot;true&quot;); // <i>false</i>
@@ -4466,8 +4409,7 @@ target="_blank" rel="noopener noreferrer">equivalence relation</a>:</p>
 </ul>
 
 <p><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-strict-equality-comparison" 
-target="_blank" rel="noopener noreferrer"><b>Strict Equality
-Comparison</b></a></p>
+target="_blank" rel="noopener noreferrer"><b>Strict Equality Comparison</b></a></p>
 
 <p>It behaves like SameValue, but</p>
 
@@ -4482,8 +4424,7 @@ Comparison</b></a></p>
 
 <p>Examples:</p>
 
-<pre>
-1 === 1;                              // <i>true</i>
+<pre>1 === 1;                              // <i>true</i>
 &plus;0 === &minus;0;                       // <i>true</i>
 <b>NaN</b> === <b>NaN</b>;              // <i>false</i>
 <b>true</b> === &quot;true&quot;;     // <i>false</i>
@@ -4519,11 +4460,9 @@ because</p>
 </ul>
 
 <p><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-abstract-equality-comparison" 
-target="_blank" rel="noopener noreferrer"><b>Abstract Equality
-Comparison</b></a></p>
+target="_blank" rel="noopener noreferrer"><b>Abstract Equality Comparison</b></a></p>
 
-<p>If both operands belong to the same Type, it behaves like the Strict
-Equality Comparison.</p>
+<p>If both operands belong to the same Type, it behaves like the Strict Equality Comparison.</p>
 
 <p>Otherwise, it coerces them as follows:</p>
 
@@ -4536,8 +4475,8 @@ Equality Comparison.</p>
     coerced to a primitive</li>
 </ul>
 
-<p>If there was a coercion, the coerced values are compared recursively.
-Otherwise the algorithm returns <b>false</b>.</p>
+<p>If there was a coercion, the coerced values are compared recursively. Otherwise the 
+algorithm returns <b>false</b>.</p>
 
 <p>You can use this comparison algorithm via the == operator (ECMAScript 1).</p>
 
@@ -4545,8 +4484,7 @@ Otherwise the algorithm returns <b>false</b>.</p>
 
 <p>Examples:</p>
 
-<pre>
-1 == 1;               // <i>true</i>
+<pre>1 == 1;               // <i>true</i>
 &plus;0 == &minus;0;            // <i>true</i>
 <b>NaN</b> == <b>NaN</b>;          // <i>false</i>
 <b>true</b> == &quot;true&quot;;      // <i>false</i>
@@ -28454,26 +28392,21 @@ for getting started.</p>
 }
 </pre>
 
-<p>A sample configuration file where ALL rules are set to off, with
-descriptions for what they do can be found
-<a href="https://gist.github.com/cletusw/e01a85e399ab563b1236">here</a>.</p>
+<p>A sample configuration file where ALL rules are set to off, with descriptions for what 
+they do can be found <a href="https://gist.github.com/cletusw/e01a85e399ab563b1236">here</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch102-3">Section 102.3: JSLint</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><a href="http://www.jslint.com/">JSLint</a> is the trunk from which
-JSHint branched. JSLint takes a much more opinionated stance on how to
-write JavaScript code, pushing you towards only using the parts
-<a href="http://crockford.com/">Douglas Crockford</a> deems to be its
-"good parts", and away from any code that Crockford believes to have a
+<p><a href="http://www.jslint.com/">JSLint</a> is the trunk from which JSHint branched. 
+JSLint takes a much more opinionated stance on how to write JavaScript code, pushing you 
+towards only using the parts <a href="http://crockford.com/">Douglas Crockford</a> 
+deems to be its "good parts", and away from any code that Crockford believes to have a 
 better solution. The following StackOverflow thread may help you decide
-<a href="http://stackoverflow.com/a/6803574/6194193">which linter is
-right for you</a>. While there are differences (here are some brief
-comparisons between it and
-<a href="http://www.slant.co/versus/8627/8626/%7Ejshint_vs_jslint">JSHint</a>
-/
-<a href="http://www.slant.co/versus/8628/8626/%7Eeslint_vs_jslint">ESLint</a>)
-each option is extremely customizable.
-</p>
+<a href="http://stackoverflow.com/a/6803574/6194193">which linter is right for you</a>. 
+While there are differences (here are some brief comparisons between it and
+<a href="http://www.slant.co/versus/8627/8626/%7Ejshint_vs_jslint">JSHint</a> / 
+<a href="http://www.slant.co/versus/8628/8626/%7Eeslint_vs_jslint">ESLint</a>) each option 
+is extremely customizable.</p>
 
 <p>For a more information about configuring JSLint check out
 <a href="https://www.npmjs.com/package/jslint"> NPM</a> or
@@ -28484,8 +28417,8 @@ each option is extremely customizable.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch103-1">Section 103.1: Chaining assignments in var declarations</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Chaining assignments as part of a <b>var</b> declaration will create
-global variables unintentionally.</p>
+<p>Chaining assignments as part of a <b>var</b> declaration will create global variables 
+unintentionally.</p>
 
 <pre>For example:
 &nbsp;
@@ -28502,9 +28435,8 @@ console.log(&apos;b: &apos; &plus; b);
 &apos;b: 0&apos;
 </pre>
 
-<p>In the above example, a is local but b becomes global. This is because
-of the right to left evaluation of the = operator. So the above code
-actually evaluated as</p>
+<p>In the above example, a is local but b becomes global. This is because of the right to 
+left evaluation of the = operator. So the above code actually evaluated as</p>
 
 <pre><b>var</b> a = (b = 0);</pre>
 
@@ -28523,19 +28455,19 @@ a = b = 0;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch104">Chapter 104: Performance Tips</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript, like any language, requires us to be judicious in the use of
-certain language features. Overuse of some features can decrease
-performance, while some techniques can be used to increase performance.</p>
+<p>JavaScript, like any language, requires us to be judicious in the use of certain language 
+features. Overuse of some features can decrease performance, while some techniques can be 
+used to increase performance.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch104-1">Section 104.1: Avoid try/catch in performance-critical functions</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Some JavaScript engines (for example, the current version of Node.js and
-older versions of Chrome before Ignition+turbofan) don't run the
-optimizer on functions that contain a try/catch block.</p>
+<p>Some JavaScript engines (for example, the current version of Node.js and older versions of 
+Chrome before Ignition+turbofan) don't run the optimizer on functions that contain a try/catch 
+block.</p>
 
-<p>If you need to handle exceptions in performance-critical code, it can be
-faster in some cases to keep the try/catch in a separate function. For
-example, this function will not be optimized by some implementations:</p>
+<p>If you need to handle exceptions in performance-critical code, it can be faster in some 
+cases to keep the try/catch in a separate function. For example, this function will not be 
+optimized by some implementations:</p>
 
 <pre><b>function</b> myPerformanceCriticalFunction() {
   <b>try</b> {
@@ -28546,9 +28478,8 @@ example, this function will not be optimized by some implementations:</p>
 }
 </pre>
 
-<p>However, you can refactor to move the slow code into a separate function
-(that <i>can</i> be optimized) and call it from inside the <b>try</b>
-block.</p>
+<p>However, you can refactor to move the slow code into a separate function (that <i>can</i> be 
+optimized) and call it from inside the <b>try</b> block.</p>
 
 <pre>// <i>This function can be optimized</i>
 <b>function</b> doCalculations() {
@@ -28565,35 +28496,31 @@ block.</p>
 </pre>
 
 <p>Here's a jsPerf benchmark showing the difference:
-<a href="https://jsperf.com/try-catch-deoptimization">try-catch-deoptimization</a>.
-In the current version of most browsers, there shouldn't be much
-difference if any, but in less recent versions of Chrome and Firefox, or
-IE, the version that calls a helper function inside the try/catch is
-likely to be faster.</p>
+<a href="https://jsperf.com/try-catch-deoptimization">try-catch-deoptimization</a>. In the 
+current version of most browsers, there shouldn't be much difference if any, but in less 
+recent versions of Chrome and Firefox, or IE, the version that calls a helper function 
+inside the try/catch is likely to be faster.</p>
 
-<p>Note that optimizations like this should be made carefully and with
-actual evidence based on profiling your code. As JavaScript engines get
-better, it could end up hurting performance instead of helping, or
-making no difference at all (but complicating the code for no reason).
-Whether it helps, hurts, or makes no difference can depend on a lot of
-factors, so always measure the effects on your code. That's true of all
-optimizations, but especially microoptimizations like this that depend
-on low-level details of the compiler/runtime.</p>
+<p>Note that optimizations like this should be made carefully and with actual evidence based 
+on profiling your code. As JavaScript engines get better, it could end up hurting performance 
+instead of helping, or making no difference at all (but complicating the code for no reason).
+Whether it helps, hurts, or makes no difference can depend on a lot of factors, so always 
+measure the effects on your code. That's true of all optimizations, but especially 
+microoptimizations like this that depend on low-level details of the compiler/runtime.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch104-2">Section 104.2: Limit DOM Updates</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>A common mistake seen in JavaScript when run in a browser environment is
-updating the DOM more often than necessary.</p>
+<p>A common mistake seen in JavaScript when run in a browser environment is updating the 
+DOM more often than necessary.</p>
 
-<p>The issue here is that every update in the DOM interface causes the
-browser to re-render the screen. If an update changes the layout of an
-element in the page, the entire page layout needs to be re-computed, and
-this is very performance-heavy even in the simplest of cases. The
-process of re-drawing a page is known as <i>reflow</i> and can cause a
-browser to run slowly or even become unresponsive.</p>
+<p>The issue here is that every update in the DOM interface causes the browser to re-render 
+the screen. If an update changes the layout of an element in the page, the entire page layout 
+needs to be re-computed, and this is very performance-heavy even in the simplest of cases. 
+The process of re-drawing a page is known as <i>reflow</i> and can cause a browser to run 
+slowly or even become unresponsive.</p>
 
-<p>The consequence of updating the document too frequently is illustrated
-with the following example of adding items to a list.</p>
+<p>The consequence of updating the document too frequently is illustrated with the following 
+example of adding items to a list.</p>
 
 <p>Consider the following document containing a <b>&lt;ul&gt;</b> element:</p>
 
@@ -28605,8 +28532,8 @@ with the following example of adding items to a list.</p>
 <b>&lt;</b><b>/html</b><b>&gt;</b>
 </pre>
 
-<p>We add 5000 items to the list looping 5000 times (you can try this with
-a larger number on a powerful computer to increase the effect).</p>
+<p>We add 5000 items to the list looping 5000 times (you can try this with a larger number on 
+a powerful computer to increase the effect).</p>
 
 <pre><b>var</b> list = document.getElementById(&quot;list&quot;);
 <b>for</b>(<b>var</b> i = 1; i &lt;= 5000; i++) {
@@ -28614,8 +28541,8 @@ a larger number on a powerful computer to increase the effect).</p>
 }
 </pre>
 
-<p>In this case, the performance can be improved by batching all 5000
-changes in one single DOM update.</p>
+<p>In this case, the performance can be improved by batching all 5000 changes in one single 
+DOM update.</p>
 
 <pre><b>var</b> list = document.getElementById(&quot;list&quot;);
 <b>var</b> html = &quot;&quot;;
@@ -28627,10 +28554,9 @@ list.innerHTML = html;  // <i>update once</i>
 
 <p>The function
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment">
-document.createDocumentFragment()</a> can be used as a lightweight
-container for the HTML created by the loop. This method is slightly
-faster than modifying the container element's innerHTML property (as
-shown below).</p>
+document.createDocumentFragment()</a> can be used as a lightweight container for the HTML 
+created by the loop. This method is slightly faster than modifying the container element's 
+innerHTML property (as shown below).</p>
 
 <pre><b>var</b> list = document.getElementById(&quot;list&quot;);
 <b>var</b> fragment = document.createDocumentFragment();
@@ -28645,53 +28571,42 @@ list.appendChild(fragment);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch104-3">Section 104.3: Benchmarking your code - measuring execution time</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Most performance tips are very dependent of the current state of JS
-engines and are expected to be only relevant at a given time. The
-fundamental law of performance optimization is that you must first
-measure before trying to optimize, and measure again after a presumed
-optimization.</p>
+<p>Most performance tips are very dependent of the current state of JS engines and are expected 
+to be only relevant at a given time. The fundamental law of performance optimization is that you 
+must first measure before trying to optimize, and measure again after a presumed optimization.</p>
 
-<p>To measure code execution time, you can use different time measurement
-tools like:</p>
+<p>To measure code execution time, you can use different time measurement tools like:</p>
 
 <!-- page 450 -->
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance">Performance</a>
-interface that represents timing-related performance information for the
-given page (only available in browsers).</p>
+interface that represents timing-related performance information for the given page (only 
+available in browsers).</p>
 
 <p><a href="https://nodejs.org/api/process.html#process_process_hrtime_time">process.hrtime</a>
-on Node.js gives you timing information as [seconds, nanoseconds]
-tuples. Called without argument it returns an arbitrary time but called
-with a previously returned value as argument it returns the difference
-between the two executions.</p>
+on Node.js gives you timing information as [seconds, nanoseconds] tuples. Called without argument 
+it returns an arbitrary time but called with a previously returned value as argument it returns 
+the difference between the two executions.</p>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/time">Console
-timers</a>("labelName") starts a timer you can use to track how long an
-operation takes. You give each timer a unique label name, and may have
-up to 10,000 timers running on a given page. When you call
-console.timeEnd("labelName") with the same name, the browser will finish
-the timer for given name and output the time in milliseconds, that
-elapsed since the timer was started. The strings passed to time() and
-timeEnd() must match otherwise the timer will not finish.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console/time">Console timers</a>
+("labelName") starts a timer you can use to track how long an operation takes. You give each 
+timer a unique label name, and may have up to 10,000 timers running on a given page. When you 
+call console.timeEnd("labelName") with the same name, the browser will finish the timer for 
+given name and output the time in milliseconds, that elapsed since the timer was started. The 
+strings passed to time() and timeEnd() must match otherwise the timer will not finish.</p>
 
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now">
-Date.now</a> function Date.now() returns current
-<a href="http://www.unixtimestamp.com/">Timestamp</a> in milliseconds,
-which is a
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>
-representation of time since 1 January 1970 00:00:00 UTC until now. The
-method now() is a static method of Date, therefore you always use it as
-Date.now().</p>
+Date.now</a> function Date.now() returns current <a href="http://www.unixtimestamp.com/">
+Timestamp</a> in milliseconds, which is a
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">
+Number</a> representation of time since 1 January 1970 00:00:00 UTC until now. The method 
+<mark>now()</mark> is a static method of Date, therefore you always use it as Date.now().</p>
 
-<p><b>Example 1</b> using: performance.now()</p>
+<p><b>Example 1</b> using: <mark>performance.now()</mark></p>
 
-<p>In this example we are going to calculate the elapsed time for the
-execution of our function, and we are going to use the
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now">
-Performance.now()</a> method that returns a
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMHighResTimeStamp">
-DOMHighResTimeStamp</a>, measured in milliseconds, accurate to one
-thousandth of a millisecond.</p>
+<p>In this example we are going to calculate the elapsed time for the execution of our function, 
+and we are going to use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now">
+Performance.now()</a> method that returns a 
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMHighResTimeStamp">DOMHighResTimeStamp</a>, measured in milliseconds, accurate to one thousandth of a millisecond.</p>
 
 <pre><b>let</b> startTime, endTime;
 &nbsp;
@@ -28717,16 +28632,16 @@ console.debug(&apos;Elapsed time:&apos;, (endTime &minus; startTime));
 <pre>Elapsed time: 0.10000000009313226</pre>
 
 <p>Usage of
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now">performance.now()</a>
-has the highest precision in browsers with accuracy to one thousandth of
-a millisecond, but the lowest
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now">
+<mark>performance.now()</mark></a> has the highest precision in browsers with accuracy to one 
+thousandth of a millisecond, but the lowest
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now#Browser_compatibility">
 compatibility</a>.</p>
 
 <p><b>Example 2</b> using: Date.now()</p>
 
-<p>In this example we are going to calculate the elapsed time for the
-initialization of a big array (1 million values), and Date.now() method</p>
+<p>In this example we are going to calculate the elapsed time for the initialization of a big 
+array (1 million values), and <mark>Date.now()</mark> method</p>
 
 <pre><b>let</b> t0 = Date.now(); // <i>stores current Timestamp in milliseconds since 1 January 1970 00:00:00 UTC</i>
 <b>let</b> arr = &lbrack;&rbrack;; // <i>store empty array</i>
@@ -28740,9 +28655,7 @@ console.log(Date.now() &minus; t0); // <i>print elapsed time between stored t0 a
 <p><b>Example 3</b> using: console.time("label") &amp;
 console.timeEnd("label")</p>
 
-<p>In this example we are doing the same task as in Example 2, but we are
-going to use the console.time("label") &amp; console.timeEnd("label")
-methods</p>
+<p>In this example we are doing the same task as in Example 2, but we are going to use the  console.time("label") &amp; console.timeEnd("label") methods</p>
 
 <pre>console.time(&quot;t&quot;);  // <i>start new timer for label name: &quot;t&quot;</i>
 <b>let</b> arr = &lbrack;&rbrack;; // <i>store empty array</i>
@@ -28768,15 +28681,13 @@ console.log(&grave;Operation took &dollar;{diff&lbrack;0&rbrack; &ast; 1e9 &plus
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch104-4">Section 104.4: Use a memoizer for heavy-computing functions</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>If you are building a function that may be heavy on the processor
-(either clientside or serverside) you may want to consider a
-<b>memoizer</b> which is a <i>cache of previous function executions and
-their returned values</i>. This allows you to check if the parameters of
-a function were passed before. Remember, pure functions are those that
-given an input, return a corresponding unique output and don't cause
-side-effects outside their scope so, you should not add memoizers to
-functions that are unpredictable or depend on external resources (like
-AJAX calls or randomly returned values).</p>
+<p>If you are building a function that may be heavy on the processor (either clientside or 
+serverside) you may want to consider a <b>memoizer</b> which is a <i>cache of previous function 
+executions and their returned values</i>. This allows you to check if the parameters of a 
+function were passed before. Remember, pure functions are those that given an input, return a 
+corresponding unique output and don't cause side-effects outside their scope so, you should not 
+add memoizers to functions that are unpredictable or depend on external resources (like AJAX 
+calls or randomly returned values).</p>
 
 <p>Let's say I have a recursive factorial function:</p>
 
@@ -28785,17 +28696,13 @@ AJAX calls or randomly returned values).</p>
 }
 </pre>
 
-<p>
-If I pass small values from 1 to 100 for example, there would be no
-problem, but once we start going deeper, we might blow up the call stack
-or make the process a bit painful for the JavaScript engine we're doing
-this in, especially if the engine doesn't count with tail-call
-optimization (although Douglas Crockford says that native ES6 has
-tail-call optimization included).</p>
+<p>If I pass small values from 1 to 100 for example, there would be no problem, but once we start 
+going deeper, we might blow up the call stack or make the process a bit painful for the JavaScript 
+engine we're doing this in, especially if the engine doesn't count with tail-call optimization 
+(although Douglas Crockford says that native ES6 has tail-call optimization included).</p>
 
-<p>We could hard code our own dictionary from 1 to god-knows-what number
-with their corresponding factorials but, I'm not sure if I advise that!
-Let's create a memoizer, shall we?</p>
+<p>We could hard code our own dictionary from 1 to god-knows-what number with their corresponding 
+factorials but, I'm not sure if I advise that! Let's create a memoizer, shall we?</p>
 
 <!-- page 452 -->
 <pre><b>var</b> fact = (<b>function</b>() {
@@ -28841,7 +28748,6 @@ Let's create a memoizer, shall we?</p>
   alt="fact(100) = 100! factorial."
   style="border: 2px solid #000000; width:4.25in;" />
 </p>
-
 <!-- {width="4.252083333333333in" height="0.9909722222222223in"} -->
 
 <p>Now that I start to reflect on what I did, if I were to increment from 1 instead of 
@@ -28879,11 +28785,10 @@ var, and the other things you already know.</p>
 }
 </pre>
 
-<p>Now notice that this will work for multiple arguments but won't be of much use in 
-object-oriented methods I think, you may need an extra object for dependencies. Also, 
-func.apply(null, args) can be replaced with func(….args) since array destructuring will 
-send them separately instead of as an array form. Also, just for reference, passing an 
-array as an argument to func won't work unlessFunction.<b>prototype</b>.apply as I did.</p>
+<p>Now notice that this will work for multiple arguments but won't be of much use in object-
+oriented methods I think, you may need an extra object for dependencies. Also, func.apply(null, args) 
+can be replaced with func(….args) since array destructuring will send them separately instead of 
+as an array form. Also, just for reference, passing an array as an argument to func won't work  unlessFunction.<b>prototype</b>.apply as I did.</p>
 
 <p>To use the above method you just:</p>
 
@@ -28906,7 +28811,7 @@ structures. Some tip from
 </p>
 
 <blockquote>
-Fortunately, the objects and properties are often "predictable", and in
+Fortunately, the objects and properties are often "predictable", and in 
 such cases their underlying structure can also be predictable. JITs can
 rely on this to make predictable accesses faster.
 </blockquote>
@@ -28919,10 +28824,9 @@ cycle. However all compilers have different optimizers, and the
 performance increase can be different, but overall it's good practice to
 define all properties in a constructor, even when their value is not yet known.</p>
 
-<p>Time for some testing. In my test, I'm creating a big array of some
-class instances with a for loop. Within the loop, I'm assigning the same
-string to all object's "x" property before array initialization. If
-constructor initializes "x" property with null, array always processes
+<p>Time for some testing. In my test, I'm creating a big array of some class instances with a 
+for loop. Within the loop, I'm assigning the same string to all object's "x" property before 
+array initialization. If constructor initializes "x" property with null, array always processes
 better even if it's doing extra statement.</p>
 
 <p>This is code:</p>
@@ -28935,7 +28839,6 @@ better even if it's doing extra statement.</p>
 </pre>
 
 <!-- page 454 -->
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 55. functions f2 and perform (454) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="left">
@@ -28946,7 +28849,6 @@ better even if it's doing extra statement.</p>
 </p>
 
 <!-- {width="7.486805555555556in" height="7.072222222222222in"} -->
-
 <p>This is the result for Chrome and Firefox.</p>
 
 <table border="1" style="width:200px">
@@ -28997,12 +28899,11 @@ a = {x: 0, y: 0}
 
 <p>Loop B is 4 (400%) times faster than Loop A</p>
 
-<p>It is very inefficient to create a new object in performance code. Loop
-A calls function test() which returns a new object every call. The
-created object is discarded every iteration, Loop B calls test1() that
-requires the object returns to be supplied. It thus uses the same object
-and avoids allocation of a new object, and excessive GC hits. (GC were
-not included in the performance test)</p>
+<p>It is very inefficient to create a new object in performance code. Loop A calls function 
+<mark>test()</mark> which returns a new object every call. The created object is discarded every 
+iteration, Loop B calls test1() that requires the object returns to be supplied. It thus uses 
+the same object and avoids allocation of a new object, and excessive GC hits. (GC were not 
+included in the performance test)</p>
 
 <p><b>Example B</b></p>
 
@@ -29028,16 +28929,14 @@ a = {x: 0, y: 0}
 
 <p>Loop B is 5 (500%) times faster than loop A</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="ch104-7">Section 104.7: Prefer local variables to globals, attributes, and
-indexed values</h3>
+<h3 id="ch104-7">Section 104.7: Prefer local variables to globals, attributes, and indexed values</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript engines first look for variables within the local scope
-before extending their search to larger scopes. If the variable is an
-indexed value in an array, or an attribute in an associative array, it
-will first look for the parent array before it finds the contents.</p>
+<p>JavaScript engines first look for variables within the local scope before extending their 
+search to larger scopes. If the variable is an indexed value in an array, or an attribute in 
+an associative array, it will first look for the parent array before it finds the contents.</p>
 
-<p>This has implications when working with performance-critical code. Take
-for instance a common <b>for</b> loop:</p>
+<p>This has implications when working with performance-critical code. Take for instance a 
+common <b>for</b> loop:</p>
 
 <pre><b>var</b> global_variable = 0;
 <b>function</b> foo() {
@@ -29049,10 +28948,10 @@ for instance a common <b>for</b> loop:</p>
 </pre>
 
 <!-- page 456 -->
-<p>For every iteration in <b>for</b> loop, the engine will lookup items,
-lookup the length attribute within items, lookup items again, lookup the
-value at index i of items, and then finally lookup global_variable,
-first trying the local scope before checking the global scope.</p>
+<p>For every iteration in <b>for</b> loop, the engine will lookup items, lookup the length 
+attribute within items, lookup items again, lookup the value at index i of items, and then 
+finally lookup global_variable, first trying the local scope before checking the global 
+scope.</p>
 
 <p>A performant rewrite of the above function is:</p>
 
@@ -29065,17 +28964,17 @@ first trying the local scope before checking the global scope.</p>
 }
 </pre>
 
-<p>For every iteration in the rewritten <b>for</b> loop, the engine will
-lookup li, lookup items, lookup the value at index i, and lookup
-local_variable, this time only needing to check the local scope.</p>
+<p>For every iteration in the rewritten <b>for</b> loop, the engine will lookup li, lookup 
+items, lookup the value at index i, and lookup local_variable, this time only needing to 
+check the local scope.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch104-8">Section 104.8: Be consistent in use of Numbers</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>If the engine is able to correctly predict you're using a specific small
-type for your values, it will be able to optimize the executed code.</p>
+<p>If the engine is able to correctly predict you're using a specific small type for your 
+values, it will be able to optimize the executed code.</p>
 
-<p>In this example, we'll use this trivial function summing the elements of
-an array and outputting the time it took:</p>
+<p>In this example, we'll use this trivial function summing the elements of an array and 
+outputting the time it took:</p>
 
 <pre>// <i>summing properties</i>
 <b>var</b> sum = (
@@ -29116,24 +29015,22 @@ an array and outputting the time it took:</p>
 
 <p><b>Summing integers took half the time here.</b></p>
 
-<p>Engines don't use the same types you have in JavaScript. As you probably
-know, all numbers in JavaScript are IEEE754 double precision floating
-point numbers, there's no specific available representation for
-integers. But engines, when they can predict you only use integers, can
-use a more compact and faster to use representation, for example, short
-integers.</p>
+<p>Engines don't use the same types you have in JavaScript. As you probably know, all numbers in 
+JavaScript are IEEE754 double precision floating point numbers, there's no specific available 
+representation for integers. But engines, when they can predict you only use integers, can use 
+a more compact and faster to use representation, for example, short integers.</p>
 
-<p>This kind of optimization is especially important for computation or
-data intensive applications.</p>
+<p>This kind of optimization is especially important for computation or data intensive 
+applications.</p>
 <!-- page 458 -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ch105">Chapter 105: Memory efficiency</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="ch105-1">Section 105.1: Drawback of creating true private method</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>One drawback of creating private method in JavaScript is
-memory-inefficient because a copy of the private method will be created
-every time a new instance is created. See this simple example.</p>
+<p>One drawback of creating private method in JavaScript is memory-inefficient because a 
+copy of the private method will be created every time a new instance is created. See this 
+simple example.</p>
 
 <pre><b>function</b> contact(first, last) {
   <b>this</b>.firstName = first;
@@ -29151,8 +29048,7 @@ every time a new instance is created. See this simple example.</p>
 }
 </pre>
 
-<p>When you create few instances, they all have a copy of formatPhoneNumber
-method.</p>
+<p>When you create few instances, they all have a copy of formatPhoneNumber method.</p>
 
 <pre><b>var</b> rob = <b>new</b> contact(&apos;Rob&apos;, &apos;Sanderson&apos;);
 <b>var</b> don = <b>new</b> contact(&apos;Donald&apos;, &apos;Trump&apos;);
@@ -29164,14 +29060,14 @@ method.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="chA">Appendix A: Reserved Keywords</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Certain words - so-called <i>keywords</i> - are treated specially in
-JavaScript. There's a plethora of different kinds of keywords, and they
-have changed in different versions of the language.</p>
+<p>Certain words - so-called <i>keywords</i> - are treated specially in JavaScript. There's 
+a plethora of different kinds of keywords, and they have changed in different versions of the 
+language.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="chA-1">Section A.1: Reserved Keywords</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>JavaScript has a predefined collection of <i>reserved keywords</i>
-which you cannot use as variables, labels, or function names.</b></p>
+<p><b>JavaScript has a predefined collection of <i>reserved keywords</i> which you cannot 
+use as variables, labels, or function names.</b></p>
 
 <p><b>ECMAScript 1</b></p>
 
@@ -29371,10 +29267,9 @@ which you cannot use as variables, labels, or function names.</b></p>
 
 <p>There was no change since <i>ECMAScript 3</i>.</p>
 
-<p><i>ECMAScript 5</i> removed int, byte, char, <b>goto</b>, long,
-final, float, short, double, native, throws, boolean, abstract,
-volatile, transient, and synchronized; it added <b>let</b> and
-yield.</p>
+<p><i>ECMAScript 5</i> removed int, byte, char, <b>goto</b>, long, final, float, short, double, 
+native, throws, boolean, abstract, volatile, transient, and synchronized; it added <b>let</b> 
+and yield.</p>
 
 <table border="1" style="width: 200px">
   <thead>
@@ -29543,15 +29438,14 @@ eval and arguments are not reserved words but they act like it in <b>strict mode
 
 <p>Future reserved keywords</p>
 
-<p>The following are reserved as future keywords by the ECMAScript
-specification. They have no special functionality at present, but they
-might at some future time, so they cannot be used as identifiers.</p>
+<p>The following are reserved as future keywords by the ECMAScript specification. They have no special  functionality at present, but they might at some future time, so they cannot be used as identifiers.</p>
 
 <!-- page 461 -->
 
 <p>enum</p>
 
 <p>The following are only reserved when they are found in strict mode code:</p>
+
 <table border="1" style="width:200px;">
   <thead>
   </thead>
@@ -29575,6 +29469,7 @@ might at some future time, so they cannot be used as identifiers.</p>
  
 <p>implements package public<br>
 interface private  `static'br>
+
 <b>let</b>nbsp;nbsp;nbsp;nbsp;protected</p>
 
 <p>Future reserved keywords in older standards.</p>
@@ -29618,12 +29513,11 @@ interface private  `static'br>
   </tbody>
 </table>
 
-<p>Additionally, the literals null, true, and false cannot be used
-as identifiers in ECMAScript.</p>
+<p>Additionally, the literals null, true, and false cannot be used as identifiers in ECMAScript.</p>
 
-<p>From the <a
-href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">Mozilla
-Developer Network</a>.</p>
+<p>From the 
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar">
+Mozilla Developer Network</a>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="chA-2">Section A.2: Identifiers &amp; Identifier Names</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -29681,11 +29575,11 @@ Keyword
   BooleanLiteral
 </blockquote>
 
-<p>This includes keywords, future keywords, null, and boolean literals. The full list of keywords are in Sections 7.6.1
-and literals are in Section 7.8.</p>
+<p>This includes keywords, future keywords, null, and boolean literals. The full list of 
+keywords are in Sections 7.6.1 and literals are in Section 7.8.</p>
 
-<p>The above (Section 7.6) implies that IdentifierNames can be ReservedWords, and from the specification for object
-initializers:</p>
+<p>The above (Section 7.6) implies that IdentifierNames can be ReservedWords, and from 
+the specification for object initializers:</p>
 
 <blockquote>
 Section 11.1.5
@@ -29714,10 +29608,9 @@ literals or numeric literals.</p>
 
 <p>To read more, see Section 7.6 - Identifier Names and Identifiers.</p>
 
-<p><b>Note:</b> the syntax highlighter in this example has spotted the reserved word 
-and still highlighted it. While the example is valid JavaScript developers can get 
-caught out by some compiler / transpiler, linter and minifier tools that argue 
-otherwise.</p>
+<p><b>Note:</b> the syntax highlighter in this example has spotted the reserved word and 
+still highlighted it. While the example is valid JavaScript developers can get caught out 
+by some compiler / transpiler, linter and minifier tools that argue otherwise.</p>
 
 </body>
 </html>
