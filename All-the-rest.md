@@ -10711,48 +10711,19 @@ closure.
 Methods can be defined in classes to perform a function and optionally
 return a result. They can receive arguments from the caller.
 
-class
-
-Something
-
-{
-
-constructor
-
-(
-
-data
-
-)
-
-{
-
-**this**
-
-.
-
-data
-
-=
-
-data
-
+class Something {
+  constructor (
+    data 
+  )
+  {
+  **this**.data = data 
 }
-
-doSomething
-
-(
-
-text
-
+doSomething (
+  text
 )
-
 {
-
 **return**
-
 {
-
 data
 
 :
