@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: 
+
+Sitemap: https://github.com/bbauska/JS-Notes4-Pros
